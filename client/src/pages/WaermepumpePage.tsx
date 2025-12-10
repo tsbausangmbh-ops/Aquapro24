@@ -21,7 +21,7 @@ import {
   TrendingDown,
   Star
 } from "lucide-react";
-import heatPumpImage1 from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
+import heatPumpImage1 from "@assets/stock_images/black_outdoor_heat_p_c697bf31.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
 
 const services = [
