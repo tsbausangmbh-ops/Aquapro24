@@ -20,12 +20,10 @@ import {
 } from "lucide-react";
 
 const milestones = [
-  { year: "1985", title: "Gründung", description: "Gründung des Meisterbetriebs in München-Schwabing durch Hans Müller senior" },
-  { year: "1995", title: "Erweiterung", description: "Übernahme der zweiten Generation und Ausbau des Heizungsbereichs" },
-  { year: "2005", title: "Wachstum", description: "Erweiterung auf 15 Mitarbeiter und Eröffnung des Lagers in Garching" },
-  { year: "2015", title: "Innovation", description: "Spezialisierung auf Wärmepumpen und erneuerbare Energien" },
-  { year: "2020", title: "Digital", description: "Einführung des 24/7 Online-Buchungssystems und Chat-Beratung" },
-  { year: "2024", title: "Heute", description: "Über 20 Fachkräfte und mehr als 2.800 zufriedene Kunden in München" },
+  { year: "20+", title: "Jahre Meistertechnik", description: "Unser Sanitär- und Heizungsmeister bringt über 20 Jahre Erfahrung im Handwerk mit" },
+  { year: "25+", title: "Jahre Führungserfahrung", description: "Unser Geschäftsführer verfügt über 25 Jahre Erfahrung in der Unternehmensführung" },
+  { year: "2024", title: "Die Vision", description: "Zusammenschluss von Meistertechnik und Management zu einem starken Team" },
+  { year: "Heute", title: "Gemeinsam stark", description: "Geballte Kompetenz für Ihre Sanitär- und Heizungsprojekte in München" },
 ];
 
 const values = [
@@ -52,20 +50,18 @@ const values = [
 ];
 
 const teamMembers = [
-  { name: "Thomas Müller", role: "Geschäftsführer", experience: "25 Jahre", specialty: "Sanitär & Heizung" },
-  { name: "Stefan Weber", role: "Meister Sanitär", experience: "18 Jahre", specialty: "Badsanierung" },
-  { name: "Michael Schmidt", role: "Meister Heizung", experience: "15 Jahre", specialty: "Wärmepumpen" },
-  { name: "Andreas Bauer", role: "Techniker", experience: "12 Jahre", specialty: "Notdienst" },
+  { name: "Geschäftsführung", role: "Management & Strategie", experience: "25 Jahre", specialty: "Unternehmensführung" },
+  { name: "Sanitär- & Heizungsmeister", role: "Technische Leitung", experience: "20 Jahre", specialty: "Sanitär & Heizung" },
 ];
 
 export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | Münchner Heizung & Sanitär | Meisterbetrieb seit 1985"
-        description="Lernen Sie uns kennen: Meisterbetrieb seit 1985 mit über 20 Fachkräften. Familienunternehmen in dritter Generation. Über 2.800 zufriedene Kunden in München."
+        title="Über uns | Münchner Heizung & Sanitär | Meisterbetrieb"
+        description="Lernen Sie uns kennen: Geballte Meistertechnik trifft auf erfahrene Unternehmensführung. 20 Jahre Sanitär- und Heizungserfahrung, 25 Jahre Managementerfahrung."
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns, Meisterbetrieb München, Sanitär Familienunternehmen, Heizung München Geschichte"
+        keywords="Über uns, Meisterbetrieb München, Sanitär Heizung Team, Fachbetrieb München"
       />
       <Header />
       <main>
@@ -75,19 +71,20 @@ export default function UeberUnsPage() {
               <div className="space-y-6">
                 <Badge variant="secondary" className="gap-1">
                   <Award className="w-3 h-3" />
-                  Meisterbetrieb seit 1985
+                  Meisterbetrieb mit Vision
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Über uns - Ihr Partner für Sanitär & Heizung
+                  Über uns - Meistertechnik trifft Management
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  <strong>Familienunternehmen in dritter Generation.</strong> Was 1985 als kleine 
-                  Werkstatt in Schwabing begann, ist heute einer der führenden Sanitär- und 
-                  Heizungsbetriebe in München.
+                  <strong>Eine Vision, zwei Experten, ein Ziel.</strong> Unser Sanitär- und 
+                  Heizungsmeister mit über 20 Jahren Erfahrung im Handwerk hat sich mit einem 
+                  erfahrenen Geschäftsführer zusammengeschlossen.
                 </p>
                 <p className="text-muted-foreground">
-                  Über 2.800 zufriedene Kunden vertrauen auf unsere Arbeit. Unser Erfolgsgeheimnis? 
-                  Ehrliche Beratung, faire Preise und Handwerksarbeit, die hält.
+                  25 Jahre Führungserfahrung treffen auf geballte Meistertechnik. Das Ergebnis: 
+                  Ein Fachbetrieb, der höchste handwerkliche Qualität mit professionellem 
+                  Service und transparenter Kommunikation verbindet.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
@@ -107,8 +104,8 @@ export default function UeberUnsPage() {
                 <Card className="bg-primary text-primary-foreground">
                   <CardContent className="p-6 text-center">
                     <Calendar className="w-8 h-8 mx-auto mb-2" />
-                    <div className="text-3xl font-bold">39</div>
-                    <div className="text-sm opacity-90">Jahre Erfahrung</div>
+                    <div className="text-3xl font-bold">45+</div>
+                    <div className="text-sm opacity-90">Jahre Erfahrung gesamt</div>
                   </CardContent>
                 </Card>
                 <Card className="bg-secondary text-secondary-foreground">
@@ -140,9 +137,9 @@ export default function UeberUnsPage() {
         <section className="py-10 lg:py-14">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Unsere Geschichte</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Unsere Stärken</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Von der kleinen Werkstatt zum modernen Meisterbetrieb - eine Erfolgsgeschichte aus München
+                Die perfekte Kombination aus handwerklicher Meisterschaft und professioneller Unternehmensführung
               </p>
             </div>
             <div className="relative">
