@@ -109,7 +109,7 @@ export default function SanitaerPage() {
       <Header />
       
       <main className="flex-1">
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
+        <section className="relative py-10 md:py-14 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -212,7 +212,7 @@ export default function SanitaerPage() {
           subtitle="Diese Situationen kennen viele - lesen Sie, wie wir helfen konnten"
         />
 
-        <section className="py-16 md:py-20">
+        <section className="py-10 md:py-12">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -240,7 +240,7 @@ export default function SanitaerPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section className="py-10 md:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -286,7 +286,7 @@ export default function SanitaerPage() {
         </section>
 
         {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="py-16 md:py-20">
+        <section className="py-10 md:py-12">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Professionelle Sanitärinstallation in München - Ihr Meisterbetrieb
@@ -343,7 +343,7 @@ export default function SanitaerPage() {
           subtitle="Hier finden Sie Antworten auf die wichtigsten Fragen unserer Kunden in München"
         />
 
-        <section className="py-16 md:py-20 bg-secondary text-secondary-foreground">
+        <section className="py-10 md:py-8 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Sanitär-Problem in München? Wir helfen sofort!

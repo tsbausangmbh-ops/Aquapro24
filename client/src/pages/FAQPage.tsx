@@ -136,7 +136,7 @@ export default function FAQPage() {
       />
       <Header />
       <main>
-        <section className="relative py-16 lg:py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
+        <section className="relative py-10 lg:py-8 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">

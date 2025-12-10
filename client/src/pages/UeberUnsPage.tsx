@@ -98,7 +98,7 @@ export default function UeberUnsPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-24">
+        <section className="relative py-10 lg:py-14">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -153,7 +153,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
@@ -168,7 +168,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Story Section */}
-        <section className="py-16 lg:py-20">
+        <section className="py-10 lg:py-12">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
@@ -208,7 +208,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-16 lg:py-20 bg-secondary/5">
+        <section className="py-10 lg:py-8 bg-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <Badge variant="secondary" className="mb-4">Unsere Werte</Badge>
@@ -235,7 +235,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Differentiators Section */}
-        <section className="py-16 lg:py-20">
+        <section className="py-10 lg:py-12">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -269,7 +269,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 lg:py-20 bg-muted/30">
+        <section className="py-10 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <Badge variant="secondary" className="mb-4">Kundenstimmen</Badge>
@@ -305,7 +305,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 lg:py-20 bg-primary text-primary-foreground">
+        <section className="py-10 lg:py-8 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Bereit für einen Handwerker, dem Sie vertrauen können?

@@ -9,7 +9,7 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="py-12 lg:py-20">
+      <main className="py-8 lg:py-12">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <Button variant="ghost" className="mb-6 gap-2" asChild>
             <Link href="/">
