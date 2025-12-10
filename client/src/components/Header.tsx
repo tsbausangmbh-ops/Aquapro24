@@ -12,7 +12,7 @@ export default function Header() {
 
   const servicePages = [
     { label: "Sanitär", href: "/sanitaer" },
-    { label: "Bad", href: "/bad" },
+    { label: "Badsanierung", href: "/bad" },
     { label: "Heizung", href: "/heizung" },
     { label: "Wärmepumpe", href: "/waermepumpe" },
     { label: "Haustechnik", href: "/haustechnik" },
