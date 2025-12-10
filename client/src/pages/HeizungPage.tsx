@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
+import FAQ from "@/components/FAQ";
+import ServiceAreas from "@/components/ServiceAreas";
+import NLPSection from "@/components/NLPSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +12,6 @@ import {
   Phone, 
   CheckCircle2, 
   Flame, 
-  Wrench, 
   Clock,
   ShieldCheck,
   Star,
@@ -48,9 +51,44 @@ const benefits = [
   "Wartungsverträge"
 ];
 
+const faqItems = [
+  {
+    question: "Wie schnell kommen Sie bei einem Heizungsausfall in München?",
+    answer: "Bei einem Heizungsnotfall sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen. Unser 24/7 Notdienst ist auch an Wochenenden und Feiertagen erreichbar - besonders wichtig in kalten Winternächten."
+  },
+  {
+    question: "Was kostet eine neue Heizung in München?",
+    answer: "Die Kosten variieren je nach System und Größe. Eine neue Gasheizung beginnt ab ca. 6.000€, Wärmepumpen ab ca. 15.000€. Wir beraten Sie zu Fördermöglichkeiten, die bis zu 40% der Kosten abdecken können."
+  },
+  {
+    question: "Lohnt sich der Austausch meiner alten Heizung?",
+    answer: "Heizungen über 15-20 Jahre sollten geprüft werden. Moderne Systeme sparen bis zu 30% Energie. Wir erstellen Ihnen eine kostenlose Wirtschaftlichkeitsberechnung - oft amortisiert sich die Investition in 5-8 Jahren."
+  },
+  {
+    question: "Welche Heizung ist die beste für mein Haus?",
+    answer: "Das hängt von vielen Faktoren ab: Gebäudegröße, Dämmung, vorhandene Anschlüsse, Budget. Wir beraten Sie neutral zu allen Optionen - Gas, Wärmepumpe, Pellets oder Hybrid - und finden die optimale Lösung."
+  },
+  {
+    question: "Wie oft sollte die Heizung gewartet werden?",
+    answer: "Mindestens einmal jährlich vor der Heizperiode. Regelmäßige Wartung erhält die Effizienz, senkt Verbrauch und beugt teuren Reparaturen vor. Wir bieten günstige Wartungsverträge mit Priorität im Notfall."
+  }
+];
+
 export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Heizung München | 24h Notdienst | Installation & Reparatur | AquaPro24"
+        description="Heizungsinstallation, Wartung und Reparatur in München. 24/7 Notdienst bei Heizungsausfall. Alle Marken, Festpreise, Förderberatung. Meisterbetrieb."
+        canonical="https://aquapro24.de/heizung"
+        keywords="Heizung München, Heizungsnotdienst, Heizungsinstallation, Heizungswartung, Gasheizung, Heizungsreparatur München"
+        serviceSchema={{
+          name: "Heizungsservice München",
+          description: "Professionelle Heizungsinstallation, Wartung und 24/7 Notdienst in München",
+          serviceType: "HVAC",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+        }}
+      />
       <Header />
       <main>
         <section className="relative py-20 lg:py-28 bg-gradient-to-br from-primary/10 to-background">
@@ -65,11 +103,16 @@ export default function HeizungPage() {
                   Heizung - Wärme für Ihr Zuhause
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige Wärme in Ihrem Zuhause - zuverlässig, effizient und energiesparend.
+                  <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
+                  unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.
+                </p>
+                <p className="text-muted-foreground">
+                  Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige 
+                  Wärme in Ihrem Zuhause - zuverlässig, effizient und mit 24/7 Notdienst.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789">
+                    <a href="tel:+4989123456789" data-testid="button-call-heizung">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -111,10 +154,30 @@ export default function HeizungPage() {
           </div>
         </section>
 
+        <NLPSection
+          problemTitle="Diese Sorgen kennen wir"
+          problems={[
+            "Die Heizung macht komische Geräusche und wird nicht mehr richtig warm",
+            "Die Energiekosten steigen jedes Jahr weiter an",
+            "Die alte Heizung könnte jeden Moment ausfallen",
+            "Niemand erklärt verständlich, was repariert werden muss",
+            "Angst vor hohen Reparaturkosten ohne Vorwarnung"
+          ]}
+          solutionTitle="So helfen wir Ihnen"
+          solutions={[
+            "24/7 Notdienst - auch nachts und am Wochenende erreichbar",
+            "Ehrliche Diagnose und transparente Preise vor Arbeitsbeginn",
+            "Alle Heizungsmarken - Viessmann, Vaillant, Buderus, Wolf und mehr",
+            "Förderberatung für bis zu 40% Zuschuss bei Heizungstausch",
+            "Wartungsverträge für sorgenfreie Heizperioden"
+          ]}
+          futureState="...Ihre Heizung läuft zuverlässig, Ihre Energiekosten sind gesunken und Sie haben einen vertrauenswürdigen Partner, der sich um alles kümmert. Bei uns ist das kein Wunschtraum - das ist Standard."
+        />
+
         <section className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Unsere Heizungs-Leistungen</h2>
+              <h2 className="text-3xl font-bold mb-4">Unsere Heizungs-Leistungen in München</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Neuinstallation bis zur Reparatur - wir sind Ihr zuverlässiger Partner für alle Heizungsfragen.
               </p>
@@ -146,17 +209,29 @@ export default function HeizungPage() {
           </div>
         </section>
 
+        <ServiceAreas 
+          serviceName="Heizungsservice" 
+          highlightAreas={["Pasing", "Laim", "Neuhausen"]}
+        />
+
+        <FAQ 
+          items={faqItems}
+          title="Häufige Fragen zum Heizungsservice"
+          subtitle="Antworten auf die wichtigsten Heizungsfragen unserer Münchner Kunden"
+        />
+
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-primary mx-auto" />
               <h2 className="text-3xl font-bold">Heizung defekt? Wir helfen sofort!</h2>
               <p className="text-muted-foreground">
-                Unser 24/7 Notdienst ist für Sie da. Rufen Sie uns an und wir kümmern uns schnellstmöglich um Ihre Heizung.
+                Unser 24/7 Notdienst ist für Sie da. Rufen Sie uns an und wir kümmern uns 
+                schnellstmöglich um Ihre Heizung. In München und Umgebung meist innerhalb einer Stunde vor Ort.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789">
+                  <a href="tel:+4989123456789" data-testid="button-call-heizung-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

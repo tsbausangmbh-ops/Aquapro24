@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
+import FAQ from "@/components/FAQ";
+import ServiceAreas from "@/components/ServiceAreas";
+import NLPSection from "@/components/NLPSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -47,9 +51,44 @@ const benefits = [
   "Termintreue garantiert"
 ];
 
+const faqItems = [
+  {
+    question: "Wie lange dauert eine komplette Badsanierung in München?",
+    answer: "Eine Standard-Badsanierung dauert in der Regel 2-3 Wochen. Bei aufwändigeren Projekten kann es auch 4 Wochen dauern. Wir erstellen Ihnen einen genauen Zeitplan und halten uns daran."
+  },
+  {
+    question: "Was kostet eine Badsanierung in München?",
+    answer: "Die Kosten hängen von Größe und Ausstattung ab. Ein Standard-Bad (6-8m²) beginnt ab ca. 8.000€. Wir erstellen Ihnen ein detailliertes Festpreisangebot nach der kostenlosen Beratung vor Ort."
+  },
+  {
+    question: "Bieten Sie auch barrierefreie Badsanierung an?",
+    answer: "Ja, wir sind spezialisiert auf barrierefreie und seniorengerechte Bäder. Bodengleiche Duschen, Haltegriffe, erhöhte WCs - wir beraten Sie zu allen Möglichkeiten und Förderprogrammen."
+  },
+  {
+    question: "Kann ich während der Badsanierung in meiner Wohnung bleiben?",
+    answer: "In den meisten Fällen ja. Wir richten ein provisorisches WC ein und arbeiten zügig, damit die Einschränkungen minimal bleiben. Bei Bedarf planen wir Etappen ein."
+  },
+  {
+    question: "Übernehmen Sie auch die Entsorgung der alten Sanitärobjekte?",
+    answer: "Selbstverständlich! Die fachgerechte Entsorgung aller Altmaterialien ist in unserem Angebot enthalten. Sie müssen sich um nichts kümmern."
+  }
+];
+
 export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Badsanierung München | Komplettumbau zum Festpreis | AquaPro24"
+        description="Professionelle Badsanierung in München. Komplettumbau, Modernisierung, barrierefrei. Kostenlose Beratung, 3D-Planung, 5 Jahre Garantie. Meisterbetrieb."
+        canonical="https://aquapro24.de/bad"
+        keywords="Badsanierung München, Bad renovieren, Badezimmer sanieren, Komplettbad, barrierefreies Bad, Badumbau München"
+        serviceSchema={{
+          name: "Badsanierung München",
+          description: "Komplette Badsanierung und Badmodernisierung in München - alles aus einer Hand",
+          serviceType: "Bathroom Renovation",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+        }}
+      />
       <Header />
       <main>
         <section className="relative py-20 lg:py-28 bg-gradient-to-br from-secondary/10 to-background">
@@ -64,11 +103,17 @@ export default function BadPage() {
                   Ihr Traumbad wird Wirklichkeit
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Von der kompletten Badsanierung bis zur Teilmodernisierung - wir verwandeln Ihr Badezimmer in eine Wohlfühloase. Professionell, termingerecht und zum Festpreis.
+                  <strong>Veraltetes Bad? Unpraktische Aufteilung? Zu wenig Stauraum?</strong> Wir 
+                  verstehen, wie frustrierend das tägliche Bad-Erlebnis sein kann, wenn nichts mehr passt.
+                </p>
+                <p className="text-muted-foreground">
+                  Von der kompletten Badsanierung bis zur Teilmodernisierung - wir verwandeln Ihr 
+                  Badezimmer in eine Wohlfühloase. Stellen Sie sich vor: Jeden Morgen starten Sie 
+                  entspannt in einem Bad, das genau Ihren Wünschen entspricht.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789">
+                    <a href="tel:+4989123456789" data-testid="button-call-bad">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt beraten lassen
                     </a>
@@ -110,10 +155,30 @@ export default function BadPage() {
           </div>
         </section>
 
+        <NLPSection
+          problemTitle="Diese Probleme kennen viele Münchner"
+          problems={[
+            "Das alte Bad ist in die Jahre gekommen und wirkt trist",
+            "Zu wenig Platz und unpraktische Aufteilung",
+            "Schimmel in Ecken und Fugen trotz regelmäßiger Reinigung",
+            "Hohe Heizkosten durch schlechte Dämmung",
+            "Einstieg in die Badewanne wird beschwerlich"
+          ]}
+          solutionTitle="Ihre Vorteile mit AquaPro24"
+          solutions={[
+            "Komplette Badsanierung aus einer Hand - keine 5 verschiedenen Handwerker",
+            "Kostenlose 3D-Visualisierung Ihres neuen Bades",
+            "Festpreisgarantie ohne Nachforderungen",
+            "Modernste Materialien für jahrelange Freude",
+            "Barrierefreie Lösungen für alle Generationen"
+          ]}
+          futureState="...Sie betreten jeden Morgen Ihr neues Traumbad. Alles ist genau so, wie Sie es sich vorgestellt haben - modern, funktional und einladend. Ihre Investition zahlt sich jeden Tag aus und steigert gleichzeitig den Wert Ihrer Immobilie."
+        />
+
         <section className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Unsere Bad-Leistungen</h2>
+              <h2 className="text-3xl font-bold mb-4">Unsere Bad-Leistungen in München</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Kompetente Beratung, professionelle Ausführung und erstklassiger Service - alles aus einer Hand.
               </p>
@@ -145,17 +210,30 @@ export default function BadPage() {
           </div>
         </section>
 
+        <ServiceAreas 
+          serviceName="Badsanierung" 
+          highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
+        />
+
+        <FAQ 
+          items={faqItems}
+          title="Häufige Fragen zur Badsanierung"
+          subtitle="Alles, was Sie über Badsanierung in München wissen müssen"
+        />
+
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-secondary mx-auto" />
               <h2 className="text-3xl font-bold">Bereit für Ihr neues Bad?</h2>
               <p className="text-muted-foreground">
-                Lassen Sie sich unverbindlich beraten. Wir kommen zu Ihnen, nehmen Maß und erstellen ein individuelles Angebot - kostenlos und ohne Verpflichtung.
+                Lassen Sie sich unverbindlich beraten. Wir kommen zu Ihnen, nehmen Maß und erstellen 
+                ein individuelles Angebot - kostenlos und ohne Verpflichtung. Über 300 Bäder in 
+                München bereits erfolgreich saniert.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789">
+                  <a href="tel:+4989123456789" data-testid="button-call-bad-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

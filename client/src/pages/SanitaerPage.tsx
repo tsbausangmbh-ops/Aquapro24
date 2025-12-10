@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
+import FAQ from "@/components/FAQ";
+import ServiceAreas from "@/components/ServiceAreas";
+import NLPSection from "@/components/NLPSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -60,8 +64,43 @@ export default function SanitaerPage() {
     "2 Jahre Gewährleistung auf alle Arbeiten"
   ];
 
+  const faqItems = [
+    {
+      question: "Wie schnell können Sie bei einem Wasserrohrbruch in München vor Ort sein?",
+      answer: "Bei einem Notfall wie Wasserrohrbruch sind wir in der Regel innerhalb von 30-45 Minuten bei Ihnen in München. Unser 24/7 Notdienst steht rund um die Uhr bereit - auch an Wochenenden und Feiertagen."
+    },
+    {
+      question: "Was kostet eine Sanitärinstallation in München?",
+      answer: "Die Kosten hängen vom Umfang der Arbeiten ab. Kleine Reparaturen beginnen ab 89€, größere Installationen werden nach Aufwand berechnet. Wir bieten Ihnen vorab einen transparenten Festpreis - ohne versteckte Kosten."
+    },
+    {
+      question: "Arbeiten Sie auch mit Markenarmaturen wie Grohe oder Hansgrohe?",
+      answer: "Ja, wir installieren und reparieren Armaturen aller führenden Hersteller wie Grohe, Hansgrohe, Geberit, Villeroy & Boch und viele weitere. Wir beraten Sie gerne zur passenden Auswahl."
+    },
+    {
+      question: "Bieten Sie auch Wartungsverträge für Sanitäranlagen an?",
+      answer: "Ja, wir bieten maßgeschneiderte Wartungsverträge für private Haushalte und Gewerbe. Regelmäßige Wartung beugt teuren Schäden vor und erhält den Wert Ihrer Sanitäranlagen."
+    },
+    {
+      question: "Können Sie auch verstopfte Abflüsse reinigen?",
+      answer: "Selbstverständlich! Wir beseitigen Verstopfungen in Waschbecken, Duschen, WCs und Abwasserleitungen. Mit professioneller Ausrüstung lösen wir auch hartnäckige Verstopfungen schnell und sauber."
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Sanitärinstallation München | 24h Notdienst | AquaPro24"
+        description="Professionelle Sanitärinstallation in München. Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. 24/7 Notdienst, Festpreise, Meisterbetrieb seit 1985."
+        canonical="https://aquapro24.de/sanitaer"
+        keywords="Sanitär München, Wasserinstallation, Klempner München, Rohrreinigung, Sanitärnotdienst, Wasserleitungen, Armaturen"
+        serviceSchema={{
+          name: "Sanitärinstallation München",
+          description: "Professionelle Sanitärinstallation und Wasserinstallation in München und Umgebung",
+          serviceType: "Plumbing",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+        }}
+      />
       <Header />
       
       <main className="flex-1">
@@ -70,15 +109,19 @@ export default function SanitaerPage() {
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4">
                 <Droplets className="w-3 h-3 mr-1" />
-                Sanitär-Fachbetrieb
+                Sanitär-Fachbetrieb München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Sanitärinstallation & Wasserinstallation München
               </h1>
+              <p className="text-lg text-muted-foreground mb-4">
+                <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
+                Situationen und wissen, wie stressig sie sein können.
+              </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Ihr Experte für alle Sanitärarbeiten in München und Umgebung. Von der Wasserleitung 
-                bis zur kompletten Sanitärinstallation - wir bieten Ihnen professionelle Lösungen 
-                für Ihr Zuhause.
+                Als Münchner Meisterbetrieb mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
+                schnell, sauber und zum Festpreis. Stellen Sie sich vor: In wenigen Stunden ist alles 
+                repariert und Sie können sich wieder auf die wichtigen Dinge konzentrieren.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
@@ -97,15 +140,35 @@ export default function SanitaerPage() {
           </div>
         </section>
 
+        <NLPSection
+          problemTitle="Kennen Sie diese Probleme?"
+          problems={[
+            "Der Wasserhahn tropft seit Wochen und die Wasserrechnung steigt",
+            "Der Abfluss ist verstopft und nichts hilft mehr",
+            "Sie warten ewig auf Handwerkertermine",
+            "Unklare Preise und böse Überraschungen auf der Rechnung",
+            "Handwerker, die keine Rücksicht auf Ihre Wohnung nehmen"
+          ]}
+          solutionTitle="So lösen wir das für Sie"
+          solutions={[
+            "Schnelle Terminvergabe - oft noch am selben Tag",
+            "Transparente Festpreise vor Arbeitsbeginn",
+            "Saubere Arbeit mit Schutzmaterialien für Ihre Böden",
+            "Meisterqualität mit 2 Jahren Gewährleistung",
+            "Pünktlichkeit und Zuverlässigkeit garantiert"
+          ]}
+          futureState="...Ihr Sanitärproblem ist gelöst, die Arbeit wurde sauber und professionell erledigt, und Sie haben einen fairen Preis bezahlt. So arbeiten wir - Tag für Tag für unsere Münchner Kunden."
+        />
+
         <section className="py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Unsere Sanitär-Leistungen
+                Unsere Sanitär-Leistungen in München
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Vom kleinen Reparaturauftrag bis zur kompletten Neuinstallation - 
-                wir sind Ihr zuverlässiger Partner für alle Sanitärarbeiten.
+                wir sind Ihr zuverlässiger Partner für alle Sanitärarbeiten in München.
               </p>
             </div>
 
@@ -130,7 +193,7 @@ export default function SanitaerPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Warum Münchner Sanitär?
+                  Warum Münchner uns vertrauen
                 </h2>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -170,14 +233,25 @@ export default function SanitaerPage() {
           </div>
         </section>
 
+        <ServiceAreas 
+          serviceName="Sanitärinstallation" 
+          highlightAreas={["Schwabing", "Maxvorstadt", "Haidhausen"]}
+        />
+
+        <FAQ 
+          items={faqItems}
+          title="Häufige Fragen zur Sanitärinstallation"
+          subtitle="Hier finden Sie Antworten auf die wichtigsten Fragen unserer Kunden in München"
+        />
+
         <section className="py-16 md:py-20 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Sanitär-Problem? Wir helfen sofort!
+              Sanitär-Problem in München? Wir helfen sofort!
             </h2>
             <p className="text-secondary-foreground/80 mb-8 max-w-2xl mx-auto">
               Ob tropfender Wasserhahn, verstopfter Abfluss oder neue Sanitärinstallation - 
-              rufen Sie uns an und wir kümmern uns darum.
+              rufen Sie uns an und wir kümmern uns darum. Über 847 zufriedene Kunden in München.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="outline" className="bg-background text-foreground" asChild>

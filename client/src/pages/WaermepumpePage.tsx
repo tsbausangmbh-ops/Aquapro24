@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
+import FAQ from "@/components/FAQ";
+import ServiceAreas from "@/components/ServiceAreas";
+import NLPSection from "@/components/NLPSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,10 +12,8 @@ import {
   Phone, 
   CheckCircle2, 
   Leaf, 
-  Wrench, 
   Clock,
   ShieldCheck,
-  Star,
   ArrowRight,
   Zap,
   TrendingDown
@@ -49,9 +51,44 @@ const benefits = [
   "Zertifizierter Fachbetrieb"
 ];
 
+const faqItems = [
+  {
+    question: "Lohnt sich eine Wärmepumpe in München?",
+    answer: "Ja, Wärmepumpen sind in München sehr effizient. Mit bis zu 70% staatlicher Förderung und 50% Heizkosten-Ersparnis amortisiert sich die Investition oft in 7-10 Jahren. Das milde bayerische Klima begünstigt zudem die Effizienz."
+  },
+  {
+    question: "Welche Förderung gibt es für Wärmepumpen 2024/2025?",
+    answer: "Aktuell erhalten Sie bis zu 70% Förderung durch BAFA und KfW. Die Grundförderung beträgt 30%, plus Boni für Einkommensgruppen (30%), Geschwindigkeitsbonus (20%) und Effizienzbonus (5%). Wir helfen bei der Antragstellung."
+  },
+  {
+    question: "Funktioniert eine Wärmepumpe auch bei Minusgraden?",
+    answer: "Moderne Luft-Wasser-Wärmepumpen arbeiten effizient bis -20°C. In München mit durchschnittlich milden Wintern sind sie daher bestens geeignet. Bei Bedarf empfehlen wir Hybrid-Systeme für extreme Kältephasen."
+  },
+  {
+    question: "Wie lange dauert die Installation einer Wärmepumpe?",
+    answer: "Eine Luft-Wasser-Wärmepumpe wird in der Regel in 2-3 Tagen installiert. Erdwärmepumpen benötigen wegen der Bohrungen 1-2 Wochen. Wir planen alles so, dass Ihr Heizungsbetrieb minimal unterbrochen wird."
+  },
+  {
+    question: "Ist mein Haus für eine Wärmepumpe geeignet?",
+    answer: "Die meisten Gebäude sind geeignet. Ideal sind gut gedämmte Häuser mit Fußbodenheizung. Aber auch Altbauten mit Heizkörpern können oft umgerüstet werden. Wir prüfen Ihr Gebäude kostenlos und beraten ehrlich."
+  }
+];
+
 export default function WaermepumpePage() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Wärmepumpe München | Bis 70% Förderung | Installation & Beratung | AquaPro24"
+        description="Wärmepumpe in München installieren lassen. Bis zu 70% Förderung, 50% Heizkosten sparen. Luft-Wasser & Erdwärme. Kostenlose Beratung, Festpreis, Meisterbetrieb."
+        canonical="https://aquapro24.de/waermepumpe"
+        keywords="Wärmepumpe München, Luft-Wasser-Wärmepumpe, Erdwärmepumpe, Wärmepumpe Förderung, Heizungstausch München"
+        serviceSchema={{
+          name: "Wärmepumpen-Installation München",
+          description: "Installation und Wartung von Wärmepumpen in München mit Förderberatung",
+          serviceType: "Heat Pump Installation",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+        }}
+      />
       <Header />
       <main>
         <section className="relative py-20 lg:py-28 bg-gradient-to-br from-accent/10 to-background">
@@ -66,11 +103,16 @@ export default function WaermepumpePage() {
                   Wärmepumpe - Heizen mit Zukunft
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Nachhaltig, effizient und förderfähig. Mit einer Wärmepumpe sparen Sie Heizkosten und schonen die Umwelt. Wir beraten, planen und installieren.
+                  <strong>Steigende Gaspreise? Sorge um CO2-Steuer?</strong> Die Abhängigkeit von 
+                  fossilen Brennstoffen belastet Geldbeutel und Gewissen gleichermaßen.
+                </p>
+                <p className="text-muted-foreground">
+                  Mit einer Wärmepumpe sparen Sie bis zu 50% Heizkosten und heizen klimaneutral. 
+                  Dank staatlicher Förderung von bis zu 70% ist der Umstieg jetzt besonders attraktiv.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789">
+                    <a href="tel:+4989123456789" data-testid="button-call-waermepumpe">
                       <Phone className="w-5 h-5 mr-2" />
                       Kostenlose Beratung
                     </a>
@@ -112,10 +154,30 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
+        <NLPSection
+          problemTitle="Diese Bedenken hören wir oft"
+          problems={[
+            "Die Gaspreise steigen und steigen - wo soll das enden?",
+            "Die CO2-Steuer macht Heizen immer teurer",
+            "Unsicherheit über die richtige Heizungstechnik für die Zukunft",
+            "Angst vor hohen Investitionskosten",
+            "Zweifel, ob das eigene Haus überhaupt geeignet ist"
+          ]}
+          solutionTitle="So machen wir Ihnen den Umstieg leicht"
+          solutions={[
+            "Kostenlose Vor-Ort-Analyse: Ist Ihr Haus geeignet?",
+            "Förderberatung: Wir holen bis zu 70% der Kosten zurück",
+            "Festpreisangebot ohne versteckte Kosten",
+            "Komplette Abwicklung von Planung bis Inbetriebnahme",
+            "5 Jahre Gewährleistung und optionale Wartungsverträge"
+          ]}
+          futureState="...Ihre neue Wärmepumpe läuft leise im Garten, Sie heizen klimaneutral und Ihre Heizkosten sind um die Hälfte gesunken. Jeden Monat sparen Sie Geld und tun etwas für die Umwelt. Mit AquaPro24 wird diese Vision Realität."
+        />
+
         <section className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Wärmepumpen-Leistungen</h2>
+              <h2 className="text-3xl font-bold mb-4">Wärmepumpen-Leistungen in München</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung über die Installation bis zur Wartung - wir begleiten Sie auf dem Weg zur klimafreundlichen Heizung.
               </p>
@@ -175,17 +237,29 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
+        <ServiceAreas 
+          serviceName="Wärmepumpen-Installation" 
+          highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
+        />
+
+        <FAQ 
+          items={faqItems}
+          title="Häufige Fragen zu Wärmepumpen"
+          subtitle="Alles, was Sie über Wärmepumpen in München wissen sollten"
+        />
+
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-accent mx-auto" />
               <h2 className="text-3xl font-bold">Jetzt auf Wärmepumpe umsteigen!</h2>
               <p className="text-muted-foreground">
-                Nutzen Sie die attraktiven Förderprogramme. Wir beraten Sie kostenlos und unverbindlich zu Ihren Möglichkeiten.
+                Nutzen Sie die attraktiven Förderprogramme. Wir beraten Sie kostenlos und 
+                unverbindlich zu Ihren Möglichkeiten. Über 150 Wärmepumpen in München installiert.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789">
+                  <a href="tel:+4989123456789" data-testid="button-call-waermepumpe-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

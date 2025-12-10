@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
+import FAQ from "@/components/FAQ";
+import ServiceAreas from "@/components/ServiceAreas";
+import NLPSection from "@/components/NLPSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +12,6 @@ import {
   Phone, 
   CheckCircle2, 
   Settings, 
-  Wrench, 
   Clock,
   ShieldCheck,
   Star,
@@ -42,16 +45,51 @@ const services = [
 
 const benefits = [
   "Komplettservice Haustechnik",
-  "Zertifizierte Meisterbetrieb",
+  "Zertifizierter Meisterbetrieb",
   "Modernste Technik",
   "Energieberatung inklusive",
   "Smart Home Integration",
   "Wartungsverträge"
 ];
 
+const faqItems = [
+  {
+    question: "Was umfasst Haustechnik alles?",
+    answer: "Haustechnik umfasst alle technischen Systeme in Ihrem Gebäude: Wasserinstallation, Gasanlagen, Heizung, Lüftung, und zunehmend auch Smart-Home-Systeme. Als Komplettanbieter decken wir alle Bereiche ab."
+  },
+  {
+    question: "Bieten Sie auch Komplettlösungen für Neubauten an?",
+    answer: "Ja, wir planen und realisieren die komplette Haustechnik für Neubauten - von den ersten Entwürfen bis zur Abnahme. Ein Ansprechpartner für alles spart Zeit, Geld und Nerven."
+  },
+  {
+    question: "Wie funktioniert eine kontrollierte Wohnraumlüftung?",
+    answer: "Eine KWL tauscht verbrauchte Luft automatisch gegen frische Außenluft aus. Die Wärmerückgewinnung nutzt die Wärme der Abluft, um die Frischluft zu erwärmen. So sparen Sie Heizkosten und haben immer frische Luft."
+  },
+  {
+    question: "Was kostet eine Smart-Home-Nachrüstung?",
+    answer: "Eine Basis-Ausstattung mit intelligenter Heizungssteuerung beginnt ab ca. 500€. Komplette Systeme mit Licht, Beschattung und Sicherheit liegen je nach Umfang bei 2.000-10.000€. Wir beraten Sie zu sinnvollen Einstiegsmöglichkeiten."
+  },
+  {
+    question: "Arbeiten Sie auch an Gasinstallationen?",
+    answer: "Ja, wir sind zertifiziert für alle Gasarbeiten. Von der Gasleitung über Gasgeräte bis zur vorgeschriebenen Sicherheitsprüfung - alles aus einer Hand und nach aktuellen Sicherheitsstandards."
+  }
+];
+
 export default function HaustechnikPage() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | AquaPro24"
+        description="Komplette Haustechnik in München. Wasserinstallation, Gasanlagen, Lüftungstechnik, Smart Home. Meisterbetrieb, Festpreise, Komplettservice aus einer Hand."
+        canonical="https://aquapro24.de/haustechnik"
+        keywords="Haustechnik München, Wasserinstallation, Gasinstallation, Lüftungstechnik, Smart Home, Gebäudetechnik München"
+        serviceSchema={{
+          name: "Haustechnik München",
+          description: "Komplettservice für Haustechnik in München - Wasser, Gas, Lüftung und Smart Home",
+          serviceType: "Building Services Engineering",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+        }}
+      />
       <Header />
       <main>
         <section className="relative py-20 lg:py-28 bg-gradient-to-br from-secondary/10 to-background">
@@ -66,11 +104,16 @@ export default function HaustechnikPage() {
                   Haustechnik - Alles aus einer Hand
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Von der Wasserinstallation über Gastechnik bis zur intelligenten Haussteuerung. Wir sind Ihr Komplettanbieter für moderne Haustechnik.
+                  <strong>Mehrere Handwerker koordinieren? Unterschiedliche Ansprechpartner?</strong> Das 
+                  kostet Zeit, Nerven und oft auch mehr Geld als nötig.
+                </p>
+                <p className="text-muted-foreground">
+                  Von der Wasserinstallation über Gastechnik bis zur intelligenten Haussteuerung - wir 
+                  sind Ihr Komplettanbieter für moderne Haustechnik in München. Ein Anruf, ein Partner, alles erledigt.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789">
+                    <a href="tel:+4989123456789" data-testid="button-call-haustechnik">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt anfragen
                     </a>
@@ -112,10 +155,30 @@ export default function HaustechnikPage() {
           </div>
         </section>
 
+        <NLPSection
+          problemTitle="Typische Haustechnik-Herausforderungen"
+          problems={[
+            "Verschiedene Handwerker für verschiedene Gewerke koordinieren",
+            "Keiner fühlt sich für Schnittstellenprobleme verantwortlich",
+            "Unklare Zuständigkeiten bei Problemen",
+            "Unterschiedliche Termine und Wartezeiten",
+            "Keine ganzheitliche Beratung zur Energieeffizienz"
+          ]}
+          solutionTitle="Der AquaPro24 Komplettservice"
+          solutions={[
+            "Ein Ansprechpartner für alle Haustechnik-Gewerke",
+            "Koordinierte Planung und Ausführung aus einer Hand",
+            "Garantierte Schnittstellenverantwortung",
+            "Ganzheitliche Energieberatung inklusive",
+            "Smart-Home-Integration für maximalen Komfort"
+          ]}
+          futureState="...Ihre gesamte Haustechnik funktioniert perfekt zusammen, Sie haben einen Ansprechpartner für alles und Ihr Zuhause arbeitet intelligent für Sie. Wasserversorgung, Heizung und Lüftung spielen optimal zusammen - und Sie genießen einfach den Komfort."
+        />
+
         <section className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Haustechnik-Leistungen</h2>
+              <h2 className="text-3xl font-bold mb-4">Haustechnik-Leistungen in München</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Moderne Haustechnik für Komfort, Sicherheit und Energieeffizienz in Ihrem Zuhause.
               </p>
@@ -175,17 +238,29 @@ export default function HaustechnikPage() {
           </div>
         </section>
 
+        <ServiceAreas 
+          serviceName="Haustechnik-Service" 
+          highlightAreas={["Maxvorstadt", "Schwabing", "Neuhausen"]}
+        />
+
+        <FAQ 
+          items={faqItems}
+          title="Häufige Fragen zur Haustechnik"
+          subtitle="Antworten auf die wichtigsten Fragen unserer Münchner Kunden"
+        />
+
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-secondary mx-auto" />
               <h2 className="text-3xl font-bold">Ihr Projekt - unsere Expertise</h2>
               <p className="text-muted-foreground">
-                Ob Neubau, Sanierung oder Modernisierung - wir planen und realisieren Ihre Haustechnik professionell und termingerecht.
+                Ob Neubau, Sanierung oder Modernisierung - wir planen und realisieren Ihre 
+                Haustechnik professionell und termingerecht. Über 1.500 Projekte in München erfolgreich umgesetzt.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789">
+                  <a href="tel:+4989123456789" data-testid="button-call-haustechnik-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>
