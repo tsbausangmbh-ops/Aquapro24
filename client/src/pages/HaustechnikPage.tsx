@@ -265,6 +265,52 @@ export default function HaustechnikPage() {
           </div>
         </section>
 
+        {/* Ausführlicher Text-Bereich für SEO */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Haustechnik in München - Alles aus einer Hand für Ihr Zuhause
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Moderne Haustechnik umfasst weit mehr als nur Heizung und Sanitär. Von der Wasserinstallation über die 
+                Gastechnik bis zur intelligenten Haussteuerung - die technischen Systeme in Ihrem Zuhause werden immer 
+                komplexer und vernetzter. Als Komplettanbieter für Haustechnik in München bieten wir Ihnen alle Leistungen 
+                aus einer Hand.
+              </p>
+              <p>
+                Der Vorteil für Sie: Ein einziger Ansprechpartner, der Ihr Projekt von Anfang bis Ende koordiniert. Keine 
+                Terminabstimmung zwischen verschiedenen Gewerken, keine Schuldzuweisungen wenn etwas nicht passt, keine 
+                doppelten Anfahrten. Das spart Zeit, Nerven und häufig auch Geld.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Wasserinstallation nach neuesten Standards</h3>
+              <p>
+                Sauberes Trinkwasser und zuverlässige Abwasserentsorgung sind die Grundlage jedes Haushalts. Wir planen und 
+                installieren Wasserleitungen nach den neuesten hygienischen Standards, vom Hausanschluss bis zur letzten 
+                Armatur. Auch Regenwassernutzung und Zirkulationssysteme für Warmwasser gehören zu unserem Leistungsspektrum.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Gasinstallation mit Sicherheit</h3>
+              <p>
+                Gasinstallationen erfordern höchste Sorgfalt und Fachkenntnis. Unsere zertifizierten Gasinstallateure planen 
+                und realisieren Gasleitungen, installieren Gasgeräte und führen die vorgeschriebenen Sicherheitsprüfungen durch. 
+                Ihre Sicherheit steht bei uns an erster Stelle.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Kontrollierte Wohnraumlüftung</h3>
+              <p>
+                Eine kontrollierte Wohnraumlüftung (KWL) sorgt für frische Luft bei geschlossenen Fenstern - ideal für 
+                Allergiker und lärmbelastete Standorte. Die integrierte Wärmerückgewinnung nutzt die Wärme der Abluft und 
+                spart so Heizkosten. Pollenfilter halten Allergene draußen.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Smart Home Integration</h3>
+              <p>
+                Steuern Sie Heizung, Lüftung und Warmwasser intelligent per App - von überall. Unsere Smart-Home-Lösungen 
+                passen sich Ihrem Alltag an und sparen automatisch Energie. Ob Einzelgeräte oder komplette Vernetzung: 
+                Wir beraten Sie zu sinnvollen Einstiegsmöglichkeiten.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <ServiceAreas 
           serviceName="Haustechnik-Service" 
           highlightAreas={["Maxvorstadt", "Schwabing", "Neuhausen"]}

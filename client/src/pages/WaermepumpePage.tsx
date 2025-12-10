@@ -266,6 +266,54 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
+        {/* Ausführlicher Text-Bereich für SEO */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Wärmepumpe in München - Klimaneutral heizen und bis zu 50% sparen
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Die Wärmepumpe ist die Heizung der Zukunft - und diese Zukunft beginnt jetzt. Als zertifizierter Fachbetrieb 
+                haben wir bereits über 150 Wärmepumpen in München und Umgebung installiert. Unsere Kunden sparen durchschnittlich 
+                50% ihrer Heizkosten und heizen dabei vollständig klimaneutral.
+              </p>
+              <p>
+                Das Prinzip ist einfach: Die Wärmepumpe nutzt kostenlose Umweltenergie - aus der Luft oder aus dem Erdreich - 
+                und wandelt sie in Heizwärme um. Mit einer Kilowattstunde Strom erzeugen moderne Wärmepumpen bis zu fünf 
+                Kilowattstunden Wärme. Das ist nicht nur gut für die Umwelt, sondern auch für Ihren Geldbeutel.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Bis zu 70% staatliche Förderung</h3>
+              <p>
+                Die Bundesregierung fördert den Umstieg auf klimafreundliche Heizsysteme großzügig. Die Grundförderung beträgt 
+                30%, dazu kommen Boni für bestimmte Einkommensgruppen (bis 30%), ein Geschwindigkeitsbonus (20%) und ein 
+                Effizienzbonus (5%). Wir übernehmen die komplette Antragstellung bei BAFA und KfW für Sie - kostenlos.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Luft-Wasser oder Erdwärme?</h3>
+              <p>
+                Die Luft-Wasser-Wärmepumpe ist der Klassiker für Bestandsgebäude: schnell installiert (2-3 Tage), keine 
+                aufwändigen Erdarbeiten, günstigere Anschaffungskosten. Sie arbeitet effizient bis etwa -20°C - für Münchner 
+                Verhältnisse mehr als ausreichend.
+              </p>
+              <p>
+                Die Erdwärmepumpe bietet noch höhere Effizienz, weil die Erdtemperatur ganzjährig konstant bei etwa 10°C liegt. 
+                Sie benötigt Erdkollektoren oder Tiefenbohrungen, ist aber dafür extrem leise und besonders effizient. Ideal 
+                für Neubauten oder größere Grundstücke.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Ist mein Haus geeignet?</h3>
+              <p>
+                Die meisten Gebäude sind für Wärmepumpen geeignet - auch Altbauten. Ideal sind gut gedämmte Häuser mit 
+                Fußbodenheizung, aber auch mit Heizkörpern funktioniert es oft gut. Wir prüfen Ihr Gebäude kostenlos und 
+                ehrlich: Wenn eine Wärmepumpe bei Ihnen nicht sinnvoll ist, sagen wir Ihnen das direkt.
+              </p>
+              <p>
+                Nutzen Sie jetzt die attraktiven Förderungen und steigen Sie auf klimafreundliches Heizen um. Wir beraten 
+                Sie kostenlos und unverbindlich zu Ihren Möglichkeiten.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <ServiceAreas 
           serviceName="Wärmepumpen-Installation" 
           highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}

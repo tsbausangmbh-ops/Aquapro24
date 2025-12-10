@@ -236,6 +236,50 @@ export default function HeizungPage() {
           </div>
         </section>
 
+        {/* Ausführlicher Text-Bereich für SEO */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Heizungsservice in München - Ihr zuverlässiger Partner für wohlige Wärme
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Eine funktionierende Heizung ist in den kalten Münchner Wintern unverzichtbar. Als Meisterbetrieb mit über 
+                20 Jahren Erfahrung sind wir Ihr verlässlicher Partner für alle Heizungsfragen - von der Wartung über die 
+                Reparatur bis zur kompletten Neuinstallation.
+              </p>
+              <p>
+                Unser 24/7-Notdienst steht Ihnen rund um die Uhr zur Verfügung. Bei einem Heizungsausfall sind wir in der 
+                Regel innerhalb von 45-60 Minuten bei Ihnen - auch nachts, am Wochenende und an Feiertagen. Denn wir wissen: 
+                Ohne Heizung wird es schnell ungemütlich und im schlimmsten Fall können Wasserleitungen einfrieren.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Alle Heizungsmarken - ein Ansprechpartner</h3>
+              <p>
+                Egal ob Viessmann, Vaillant, Buderus, Wolf, Junkers oder andere Hersteller - wir kennen alle Systeme und haben 
+                die häufigsten Ersatzteile direkt dabei. Das bedeutet für Sie: schnelle Reparatur, oft noch am selben Tag, 
+                ohne lange Wartezeiten auf Ersatzteile.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Regelmäßige Wartung spart Geld</h3>
+              <p>
+                Eine jährliche Heizungswartung kostet zwischen 150-200€ - und spart Ihnen langfristig ein Vielfaches. Denn 
+                eine gut gewartete Heizung verbraucht bis zu 15% weniger Energie, läuft zuverlässiger und hält länger. 
+                Unsere Wartungsverträge beinhalten bevorzugte Termine bei Notfällen und vergünstigte Reparaturen.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Heizungsmodernisierung mit Förderung</h3>
+              <p>
+                Ist Ihre Heizung älter als 15-20 Jahre? Dann lohnt sich oft ein Austausch gegen ein modernes, effizientes 
+                System. Wir beraten Sie neutral zu allen Optionen - Gasbrennwert, Wärmepumpe, Pellets oder Hybrid - und 
+                helfen bei der Beantragung von Fördergeldern. Bis zu 40% der Investitionskosten können durch staatliche 
+                Förderung gedeckt werden.
+              </p>
+              <p>
+                Kontaktieren Sie uns für eine kostenlose Erstberatung. Wir prüfen Ihre aktuelle Situation, zeigen Einsparpotenziale 
+                auf und erstellen ein unverbindliches Angebot - transparent, fair und ohne versteckte Kosten.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <ServiceAreas 
           serviceName="Heizungsservice" 
           highlightAreas={["Pasing", "Laim", "Neuhausen"]}

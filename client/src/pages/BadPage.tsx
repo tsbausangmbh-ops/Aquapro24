@@ -237,6 +237,54 @@ export default function BadPage() {
           </div>
         </section>
 
+        {/* Ausführlicher Text-Bereich für SEO */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Badsanierung in München - Vom Altbad zum Traumbad
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Eine Badsanierung ist mehr als nur eine Renovierung - es ist die Verwandlung eines der wichtigsten Räume in Ihrem 
+                Zuhause. Als Münchner Meisterbetrieb haben wir bereits über 500 Bäder komplett saniert und wissen genau, worauf 
+                es ankommt: präzise Planung, hochwertige Materialien und handwerkliche Perfektion.
+              </p>
+              <p>
+                Unser Versprechen an Sie: Ihr neues Bad wird in 2-4 Wochen fertig sein - termingerecht, im Budget und genau so, 
+                wie Sie es sich vorgestellt haben. Dafür sorgen wir mit einem durchdachten Ablaufplan und der Koordination aller 
+                Gewerke aus einer Hand.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Der Ablauf Ihrer Badsanierung</h3>
+              <p>
+                Alles beginnt mit einer kostenlosen Beratung vor Ort. Wir nehmen Maß, besprechen Ihre Wünsche und zeigen Ihnen 
+                Möglichkeiten auf, die Sie vielleicht noch gar nicht kannten. Anschließend erstellen wir eine 3D-Visualisierung 
+                Ihres neuen Bades - so können Sie vorab sehen, wie alles aussehen wird, und eventuelle Änderungen direkt am 
+                Bildschirm vornehmen.
+              </p>
+              <p>
+                Nach Freigabe des Entwurfs erstellen wir ein verbindliches Festpreisangebot. Dieser Preis gilt - ohne versteckte 
+                Kosten, ohne Nachforderungen. Erst wenn Sie vollständig überzeugt sind, beginnen wir mit der Umsetzung.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Warum eine professionelle Badsanierung sich lohnt</h3>
+              <p>
+                Ein modernes Bad steigert nicht nur Ihre Lebensqualität, sondern auch den Wert Ihrer Immobilie um durchschnittlich 
+                5-10%. Besonders barrierefreie Bäder sind zukunftssicher und werden mit KfW-Förderungen unterstützt. Wir beraten 
+                Sie gerne zu allen Fördermöglichkeiten.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Alles aus einer Hand</h3>
+              <p>
+                Bei uns müssen Sie nicht fünf verschiedene Handwerker koordinieren. Wir übernehmen alles: Demontage, Rohinstallation, 
+                Elektrik, Fliesen, Sanitärmontage und Malerarbeiten. Ein Ansprechpartner, ein Termin, ein Festpreis. Das spart Ihnen 
+                Zeit, Nerven und häufig auch Geld.
+              </p>
+              <p>
+                Auf alle unsere Arbeiten geben wir 5 Jahre Gewährleistung - damit Sie lange Freude an Ihrem neuen Bad haben. Und 
+                sollte doch einmal etwas sein: Wir sind schnell zur Stelle und beheben das Problem.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <ServiceAreas 
           serviceName="Badsanierung" 
           highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}

@@ -285,6 +285,53 @@ export default function SanitaerPage() {
           </div>
         </section>
 
+        {/* Ausführlicher Text-Bereich für SEO */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Professionelle Sanitärinstallation in München - Ihr Meisterbetrieb
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Als Münchner Meisterbetrieb für Sanitärinstallation sind wir seit über 20 Jahren Ihr zuverlässiger Partner 
+                für alle Arbeiten rund um Wasser, Abwasser und Sanitäranlagen. Ob Sie einen tropfenden Wasserhahn reparieren 
+                lassen möchten, eine komplett neue Wasserinstallation benötigen oder mitten in der Nacht einen Rohrbruch haben - 
+                wir sind für Sie da.
+              </p>
+              <p>
+                Unsere ausgebildeten Sanitärfachkräfte arbeiten nach den höchsten handwerklichen Standards und verwenden 
+                ausschließlich hochwertige Markenprodukte von Herstellern wie Grohe, Hansgrohe, Geberit und Villeroy & Boch. 
+                Das bedeutet für Sie: langlebige Qualität, die jahrzehntelang funktioniert.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Was uns von anderen Sanitärbetrieben unterscheidet</h3>
+              <p>
+                Bei uns bekommen Sie keine bösen Überraschungen. Bevor wir mit der Arbeit beginnen, analysieren wir das Problem 
+                gründlich und nennen Ihnen einen verbindlichen Festpreis. Dieser Preis gilt - auch wenn die Arbeit länger dauert 
+                als geplant. Zusätzlich achten wir penibel auf Sauberkeit: Wir legen Schutzfolien aus, tragen Überschuhe und 
+                hinterlassen Ihre Wohnung so sauber, wie wir sie vorgefunden haben.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Unser Leistungsspektrum im Bereich Sanitär</h3>
+              <p>
+                Wir decken das gesamte Spektrum der Sanitärtechnik ab: Von der Installation neuer Wasserleitungen über die 
+                Montage von Sanitärobjekten wie WCs, Waschbecken, Duschen und Badewannen bis hin zur professionellen 
+                Rohrreinigung und Abflussentstopfung. Auch die regelmäßige Wartung Ihrer Sanitäranlagen gehört zu unserem 
+                Service - denn Vorsorge ist günstiger als Reparatur.
+              </p>
+              <p>
+                Für Notfälle wie Rohrbrüche oder schwere Wasserschäden bieten wir einen 24/7-Notdienst an. In der Regel sind 
+                wir innerhalb von 30-45 Minuten bei Ihnen in München und stoppen den Schaden, bevor er größer wird. Unsere 
+                Notdienst-Pauschale ist transparent und fair - ohne versteckte Kosten.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Unsere Garantie für Sie</h3>
+              <p>
+                Auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Sollte in dieser Zeit etwas mit unserer Arbeit 
+                nicht stimmen, kommen wir kostenlos zurück und beheben das Problem. Denn wir stehen zu unserer Arbeit - 
+                mit unserem guten Namen und mit unserer Garantie.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <ServiceAreas 
           serviceName="Sanitärinstallation" 
           highlightAreas={["Schwabing", "Maxvorstadt", "Haidhausen"]}
