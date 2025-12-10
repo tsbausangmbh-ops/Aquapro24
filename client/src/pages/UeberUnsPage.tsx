@@ -25,11 +25,10 @@ import plumberImage from "@assets/stock_images/professional_plumber_d341c4fe.jpg
 import familyImage from "@assets/stock_images/happy_homeowner_fami_71ca925e.jpg";
 
 const milestones = [
-  { year: "2002", title: "Meisterprüfung bestanden", description: "Unser Sanitär- und Heizungsmeister beginnt seine Karriere im Handwerk - der Grundstein für 22 Jahre Erfahrung" },
-  { year: "1998", title: "Kaufmännische Laufbahn", description: "Unser Geschäftsführer startet seine Karriere im Management - heute über 26 Jahre Erfahrung" },
-  { year: "2024", title: "Die Vision entsteht", description: "Zwei Experten mit einer gemeinsamen Vision: Meistertechnik und professionelles Management vereinen" },
-  { year: "2024", title: "Der Zusammenschluss", description: "Gründung unseres Fachbetriebs - geballte Kompetenz für Sanitär und Heizung in München" },
-  { year: "Heute", title: "Ihr Partner", description: "48 Jahre Erfahrung vereint: Höchste handwerkliche Qualität und professioneller Service aus einer Hand" },
+  { id: 1, year: "1998", title: "Kaufmännische Laufbahn", description: "Unser Geschäftsführer startet seine Karriere im Management - heute über 26 Jahre Erfahrung" },
+  { id: 2, year: "2002", title: "Meisterprüfung bestanden", description: "Unser Sanitär- und Heizungsmeister beginnt seine Karriere im Handwerk - der Grundstein für 22 Jahre Erfahrung" },
+  { id: 3, year: "2024", title: "Gemeinsame Vision", description: "Zwei Experten bündeln ihre Stärken: 48 Jahre geballte Erfahrung für Ihr Sanitär- und Heizungsprojekt" },
+  { id: 4, year: "Heute", title: "Ihr starker Partner", description: "Meisterqualität, transparente Preise und professioneller Service - alles aus einer Hand in München" },
 ];
 
 const values = [
@@ -156,7 +155,7 @@ export default function UeberUnsPage() {
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" />
               <div className="space-y-8">
                 {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className={`flex items-center gap-4 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  <div key={milestone.id} className={`flex items-center gap-4 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                       <Card className="inline-block">
                         <CardContent className="p-4">
