@@ -21,7 +21,7 @@ import {
   TrendingDown,
   Star
 } from "lucide-react";
-import heatPumpImage1 from "@assets/stock_images/heat_pump_installati_77424237.jpg";
+import heatPumpImage1 from "@assets/stock_images/white_air_source_hea_b16aec35.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
 import heatPumpImage3 from "@assets/stock_images/modern_white_heat_pu_786e8fed.jpg";
 
