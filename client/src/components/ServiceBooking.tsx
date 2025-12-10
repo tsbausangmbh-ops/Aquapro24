@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -190,6 +190,26 @@ export default function ServiceBooking({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  // Reset state when serviceType changes (e.g., navigating between pages)
+  useEffect(() => {
+    setStep(1);
+    setFormData({
+      service: "",
+      heizungstyp: "",
+      heizungsalter: "",
+      dringlichkeit: "",
+      preferredDate: "",
+      preferredTime: "",
+      name: "",
+      phone: "",
+      email: "",
+      street: "",
+      zipCity: "",
+      message: ""
+    });
+    setIsSuccess(false);
+  }, [serviceType]);
 
   const config = serviceConfigs[serviceType];
 
