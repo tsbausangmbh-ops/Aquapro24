@@ -42,7 +42,7 @@ const pricingCategories = [
       { service: "Komplettes Bad (groß)", price: "ab 22.000€" },
       { service: "Dusche erneuern", price: "ab 2.900€" },
       { service: "Badewanne einbauen", price: "ab 1.800€" },
-      { service: "Barrierefreies Bad", price: "ab 12.000€" },
+      { service: "Barrierefreies Bad", price: "ab 20.000€" },
     ]
   },
   {
