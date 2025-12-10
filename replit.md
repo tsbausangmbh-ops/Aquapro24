@@ -41,6 +41,10 @@ Preferred communication style: Simple, everyday language.
   - `CustomerStories.tsx`: 10 emotional success stories (2 per service) following problem/emotion/solution/result pattern, with specific savings amounts and timeframes
   - `TrustSignals.tsx`: Social proof (compact/detailed variants) with Meisterbetrieb authority, customer stats (2.847+), ratings (4.9/5), response times
 - **Service Pages**: 5 dedicated pages (Sanitär, Bad, Heizung, Wärmepumpe, Haustechnik) with unique SEO, customer stories, and NLP triggers per page
+- **Informational Pages**: 3 additional pages for company information and customer education
+  - `UeberUnsPage.tsx`: Company history, team introduction, values, and timeline milestones
+  - `FAQPage.tsx`: Pricing overview (4 categories) and frequently asked questions with accordion
+  - `RatgeberPage.tsx`: Educational guides with detailed articles (Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpe)
 
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)
