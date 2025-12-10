@@ -156,7 +156,7 @@ export default function DatenschutzPage() {
                 Datenschutzerklärung umzusetzen.
               </p>
               <p className="text-muted-foreground">
-                Stand: Dezember 2024
+                Stand: 2025
               </p>
             </section>
           </div>

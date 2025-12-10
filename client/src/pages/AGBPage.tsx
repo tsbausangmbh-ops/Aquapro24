@@ -23,7 +23,8 @@ export default function AGBPage() {
                 (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der 
                 Münchner Heizung & Sanitär GmbH (nachfolgend "Auftragnehmer") und dem Kunden 
                 (nachfolgend "Auftraggeber") über Sanitär-, Heizungs- und Installationsarbeiten sowie 
-                damit verbundene Dienstleistungen.
+                damit verbundene Dienstleistungen. Diese AGB gelten sowohl für Privatkunden (Verbraucher) 
+                als auch für Geschäftskunden (B2B).
               </p>
               <p className="text-muted-foreground mb-4">
                 (2) Abweichende Bedingungen des Auftraggebers werden nicht Vertragsbestandteil, es sei 
@@ -201,7 +202,7 @@ export default function AGBPage() {
                 dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt.
               </p>
               <p className="text-muted-foreground">
-                Stand: Dezember 2024
+                Stand: 2025
               </p>
             </section>
           </div>
