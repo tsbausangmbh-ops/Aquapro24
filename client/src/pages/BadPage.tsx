@@ -25,24 +25,24 @@ import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.j
 
 const services = [
   {
-    title: "Badsanierung komplett",
-    description: "Komplettumbau Ihres Badezimmers nach Ihren Wünschen - von der Planung bis zur Fertigstellung.",
-    features: ["Fliesenarbeiten", "Sanitärinstallation", "Elektrik", "Beleuchtung"]
+    title: "Komplettsanierung",
+    description: "Alles aus einer Hand: Abriss, Rohre, Fliesen, Sanitär, Elektrik - in nur 2-4 Wochen zum Traumbad.",
+    features: ["Ab 8.900€", "2-4 Wochen", "Festpreis", "5 Jahre Garantie"]
   },
   {
-    title: "Badmodernisierung",
-    description: "Teilsanierung und Modernisierung bestehender Bäder für mehr Komfort und Ästhetik.",
-    features: ["Neue Armaturen", "WC-Austausch", "Dusche erneuern", "Barrierefreiheit"]
+    title: "Teilsanierung",
+    description: "Gezielt modernisieren: Dusche erneuern, WC tauschen oder neue Armaturen - schnell und sauber.",
+    features: ["Ab 2.500€", "1-5 Tage", "Minimal-Umbau", "Sofort nutzbar"]
   },
   {
-    title: "Sanitärobjekte",
-    description: "Installation und Austausch aller Sanitärobjekte - WC, Waschbecken, Dusche, Badewanne.",
-    features: ["WC & Bidet", "Waschtische", "Duschen", "Badewannen"]
+    title: "Barrierefreies Bad",
+    description: "Sicher und komfortabel: Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen - für alle Generationen.",
+    features: ["KfW-Förderung", "Zukunftssicher", "Mehr Bewegungsfreiheit", "Stolperfrei"]
   },
   {
-    title: "Armaturen & Zubehör",
-    description: "Hochwertige Armaturen und Badaccessoires für Ihr Traumbad.",
-    features: ["Thermostatarmaturen", "Unterputzarmaturen", "Handtuchhalter", "Spiegel"]
+    title: "Luxusbad Premium",
+    description: "Exklusive Materialien, Markenarmaturen und smarte Technik für höchste Ansprüche.",
+    features: ["Designermarken", "Freistehende Wanne", "Regendusche XXL", "Smart Home"]
   }
 ];
 
@@ -104,16 +104,16 @@ export default function BadPage() {
                   Badsanierung München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Ihr Traumbad wird Wirklichkeit
+                  Badsanierung vom Meisterbetrieb
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  <strong>Veraltetes Bad? Unpraktische Aufteilung? Zu wenig Stauraum?</strong> Wir 
-                  verstehen, wie frustrierend das tägliche Bad-Erlebnis sein kann, wenn nichts mehr passt.
+                  <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
+                  ohne versteckte Kosten, ohne böse Überraschungen.
                 </p>
                 <p className="text-muted-foreground">
-                  Von der kompletten Badsanierung bis zur Teilmodernisierung - wir verwandeln Ihr 
-                  Badezimmer in eine Wohlfühloase. Stellen Sie sich vor: Jeden Morgen starten Sie 
-                  entspannt in einem Bad, das genau Ihren Wünschen entspricht.
+                  Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
+                  Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Meisterbetrieb. 
+                  Sie lehnen sich zurück und freuen sich auf Ihr Traumbad.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>

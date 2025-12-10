@@ -27,23 +27,23 @@ import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.j
 const services = [
   {
     title: "Luft-Wasser-Wärmepumpe",
-    description: "Die beliebteste Lösung - nutzt die Außenluft als Wärmequelle, einfache Installation.",
-    features: ["Geringe Kosten", "Schnelle Montage", "Förderbar", "Effizient"]
+    description: "Ihr Einstieg in klimaneutrales Heizen. Nutzt kostenlose Umgebungsluft und ist in nur 2-3 Tagen installiert.",
+    features: ["Ab 12.000€", "2-3 Tage Montage", "Bis 70% Förderung", "Ideal für Bestand"]
   },
   {
     title: "Erdwärmepumpe",
-    description: "Höchste Effizienz durch konstante Erdwärme - ideal für Neubauten und große Objekte.",
-    features: ["Höchste Effizienz", "Konstante Leistung", "Langlebig", "Leise"]
+    description: "Maximum an Effizienz. Konstante Erdtemperatur garantiert höchste Leistung - auch bei -20°C außen.",
+    features: ["COP bis 5.0", "Extrem leise", "30+ Jahre Lebensdauer", "Auch zum Kühlen"]
   },
   {
     title: "Wärmepumpen-Wartung",
-    description: "Regelmäßige Wartung für optimale Leistung und lange Lebensdauer Ihrer Wärmepumpe.",
-    features: ["Jahrescheck", "Kältemittelprüfung", "Filterreinigung", "Effizienzoptimierung"]
+    description: "Volle Leistung, minimaler Verbrauch. Jährliche Wartung sichert Effizienz und Herstellergarantie.",
+    features: ["Ab 249€/Jahr", "Inkl. Kältemittel", "Störungsfreier Betrieb", "Garantieerhalt"]
   },
   {
-    title: "Förderberatung",
-    description: "Wir unterstützen Sie bei der Beantragung staatlicher Förderungen - bis zu 70% Zuschuss möglich.",
-    features: ["BAFA-Förderung", "KfW-Kredit", "Antragsstellung", "Dokumentation"]
+    title: "Förderberatung & Antrag",
+    description: "Wir holen das Maximum für Sie raus. Komplette Antragstellung bei BAFA und KfW inklusive.",
+    features: ["Kostenlos", "Bis 70% Zuschuss", "Alle Formulare", "Schnelle Bearbeitung"]
   }
 ];
 
@@ -105,15 +105,16 @@ export default function WaermepumpePage() {
                   Wärmepumpe München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Wärmepumpe - Heizen mit Zukunft
+                  Wärmepumpe vom Meisterbetrieb
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  <strong>Steigende Gaspreise? Sorge um CO2-Steuer?</strong> Die Abhängigkeit von 
-                  fossilen Brennstoffen belastet Geldbeutel und Gewissen gleichermaßen.
+                  <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
+                  klimaneutral und sparen Sie dabei bis zu 50% Ihrer Heizkosten.
                 </p>
                 <p className="text-muted-foreground">
-                  Mit einer Wärmepumpe sparen Sie bis zu 50% Heizkosten und heizen klimaneutral. 
-                  Dank staatlicher Förderung von bis zu 70% ist der Umstieg jetzt besonders attraktiv.
+                  Jetzt ist der beste Zeitpunkt: Bis zu 70% staatliche Förderung, fachgerechte 
+                  Installation durch unseren Meisterbetrieb und ein verbindlicher Festpreis ohne 
+                  Überraschungen. Wir kümmern uns um alles - von der Beratung bis zur Förderantragstellung.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>

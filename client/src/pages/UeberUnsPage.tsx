@@ -20,10 +20,11 @@ import {
 } from "lucide-react";
 
 const milestones = [
-  { year: "20+", title: "Jahre Meistertechnik", description: "Unser Sanitär- und Heizungsmeister bringt über 20 Jahre Erfahrung im Handwerk mit" },
-  { year: "25+", title: "Jahre Führungserfahrung", description: "Unser Geschäftsführer verfügt über 25 Jahre Erfahrung in der Unternehmensführung" },
-  { year: "2024", title: "Die Vision", description: "Zusammenschluss von Meistertechnik und Management zu einem starken Team" },
-  { year: "Heute", title: "Gemeinsam stark", description: "Geballte Kompetenz für Ihre Sanitär- und Heizungsprojekte in München" },
+  { year: "2000", title: "Der Anfang", description: "Unser Sanitär- und Heizungsmeister beginnt seine Karriere im Handwerk - der Grundstein für 20+ Jahre Erfahrung" },
+  { year: "1999", title: "Führungserfahrung", description: "Unser Geschäftsführer startet seine Laufbahn im Management - heute über 25 Jahre Erfahrung" },
+  { year: "2024", title: "Die Vision entsteht", description: "Zwei Experten mit einer gemeinsamen Vision: Meistertechnik und professionelles Management vereinen" },
+  { year: "2024", title: "Der Zusammenschluss", description: "Gründung unseres Fachbetriebs - geballte Kompetenz für Sanitär und Heizung in München" },
+  { year: "Heute", title: "Ihr Partner", description: "Höchste handwerkliche Qualität, transparente Preise und professioneller Service aus einer Hand" },
 ];
 
 const values = [
@@ -137,9 +138,9 @@ export default function UeberUnsPage() {
         <section className="py-10 lg:py-14">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Unsere Stärken</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Unsere Geschichte</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Die perfekte Kombination aus handwerklicher Meisterschaft und professioneller Unternehmensführung
+                Wie aus einer gemeinsamen Vision ein starkes Team wurde
               </p>
             </div>
             <div className="relative">
