@@ -16,15 +16,20 @@ import {
   CheckCircle2,
   Star,
   MapPin,
-  Calendar
+  Calendar,
+  AlertTriangle,
+  ArrowRight,
+  ThumbsUp
 } from "lucide-react";
+import plumberImage from "@assets/stock_images/professional_plumber_d341c4fe.jpg";
+import familyImage from "@assets/stock_images/happy_homeowner_fami_71ca925e.jpg";
 
 const milestones = [
-  { year: "2000", title: "Der Anfang", description: "Unser Sanitär- und Heizungsmeister beginnt seine Karriere im Handwerk - der Grundstein für 20+ Jahre Erfahrung" },
-  { year: "1999", title: "Führungserfahrung", description: "Unser Geschäftsführer startet seine Laufbahn im Management - heute über 25 Jahre Erfahrung" },
+  { year: "2002", title: "Meisterprüfung bestanden", description: "Unser Sanitär- und Heizungsmeister beginnt seine Karriere im Handwerk - der Grundstein für 22 Jahre Erfahrung" },
+  { year: "1998", title: "Kaufmännische Laufbahn", description: "Unser Geschäftsführer startet seine Karriere im Management - heute über 26 Jahre Erfahrung" },
   { year: "2024", title: "Die Vision entsteht", description: "Zwei Experten mit einer gemeinsamen Vision: Meistertechnik und professionelles Management vereinen" },
   { year: "2024", title: "Der Zusammenschluss", description: "Gründung unseres Fachbetriebs - geballte Kompetenz für Sanitär und Heizung in München" },
-  { year: "Heute", title: "Ihr Partner", description: "Höchste handwerkliche Qualität, transparente Preise und professioneller Service aus einer Hand" },
+  { year: "Heute", title: "Ihr Partner", description: "48 Jahre Erfahrung vereint: Höchste handwerkliche Qualität und professioneller Service aus einer Hand" },
 ];
 
 const values = [
@@ -51,8 +56,8 @@ const values = [
 ];
 
 const teamMembers = [
-  { name: "Geschäftsführung", role: "Management & Strategie", experience: "25 Jahre", specialty: "Unternehmensführung" },
-  { name: "Sanitär- & Heizungsmeister", role: "Technische Leitung", experience: "20 Jahre", specialty: "Sanitär & Heizung" },
+  { name: "Geschäftsführung", role: "Management & Strategie", experience: "26 Jahre", specialty: "Unternehmensführung" },
+  { name: "Sanitär- & Heizungsmeister", role: "Technische Leitung", experience: "22 Jahre", specialty: "Sanitär & Heizung" },
 ];
 
 export default function UeberUnsPage() {
@@ -79,11 +84,11 @@ export default function UeberUnsPage() {
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Eine Vision, zwei Experten, ein Ziel.</strong> Unser Sanitär- und 
-                  Heizungsmeister mit über 20 Jahren Erfahrung im Handwerk hat sich mit einem 
-                  erfahrenen Geschäftsführer zusammengeschlossen.
+                  Heizungsmeister mit 22 Jahren Erfahrung im Handwerk hat sich mit einem 
+                  erfahrenen Kaufmann zusammengeschlossen.
                 </p>
                 <p className="text-muted-foreground">
-                  25 Jahre Führungserfahrung treffen auf geballte Meistertechnik. Das Ergebnis: 
+                  26 Jahre Führungserfahrung treffen auf geballte Meistertechnik. Das Ergebnis: 
                   Ein Fachbetrieb, der höchste handwerkliche Qualität mit professionellem 
                   Service und transparenter Kommunikation verbindet.
                 </p>
@@ -101,35 +106,39 @@ export default function UeberUnsPage() {
                   </Button>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="bg-primary text-primary-foreground">
-                  <CardContent className="p-6 text-center">
-                    <Calendar className="w-8 h-8 mx-auto mb-2" />
-                    <div className="text-3xl font-bold">45+</div>
-                    <div className="text-sm opacity-90">Jahre Erfahrung gesamt</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-secondary text-secondary-foreground">
-                  <CardContent className="p-6 text-center">
-                    <Users className="w-8 h-8 mx-auto mb-2" />
-                    <div className="text-3xl font-bold">20+</div>
-                    <div className="text-sm opacity-90">Fachkräfte</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-accent text-accent-foreground">
-                  <CardContent className="p-6 text-center">
-                    <Star className="w-8 h-8 mx-auto mb-2" />
-                    <div className="text-3xl font-bold">4.9</div>
-                    <div className="text-sm opacity-90">Sterne Bewertung</div>
-                  </CardContent>
-                </Card>
-                <Card className="border-2 border-primary/20">
-                  <CardContent className="p-6 text-center">
-                    <Heart className="w-8 h-8 mx-auto mb-2 text-primary" />
-                    <div className="text-3xl font-bold">2.847</div>
-                    <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
-                  </CardContent>
-                </Card>
+              <div className="space-y-6">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={plumberImage} 
+                    alt="Professioneller Sanitär-Meister bei der Arbeit" 
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Wrench className="w-5 h-5" />
+                      <span className="font-semibold">22 Jahre Meistererfahrung</span>
+                    </div>
+                    <p className="text-sm opacity-90">Präzision und Qualität in jeder Arbeit</p>
+                  </div>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={familyImage} 
+                    alt="Zufriedene Kunden in ihrem Zuhause" 
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <ThumbsUp className="w-5 h-5" />
+                      <span className="font-semibold">Ihr Erfolg ist unser Antrieb</span>
+                    </div>
+                    <p className="text-sm opacity-90">Zufriedene Kunden durch erstklassigen Service</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
