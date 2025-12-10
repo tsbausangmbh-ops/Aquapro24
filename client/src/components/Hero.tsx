@@ -52,7 +52,15 @@ export default function Hero() {
                   Jetzt Notdienst rufen
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2" data-testid="button-callback-hero">
+              <Button 
+                size="lg" 
+                className="bg-foreground hover:bg-foreground/90 text-background border-foreground gap-2" 
+                onClick={() => {
+                  const chatButton = document.querySelector('[data-testid="button-chat-toggle"]') as HTMLButtonElement;
+                  if (chatButton) chatButton.click();
+                }}
+                data-testid="button-callback-hero"
+              >
                 <Clock className="w-4 h-4" />
                 Rückruf in 5 Minuten
               </Button>
