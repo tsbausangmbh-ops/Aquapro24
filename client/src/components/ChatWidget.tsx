@@ -329,6 +329,257 @@ const HEIZUNG_QUESTIONS: Question[] = [
   },
 ];
 
+const BAD_QUESTIONS: Question[] = [
+  {
+    id: "serviceTypes",
+    title: "Was planen Sie für Ihr Badezimmer?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "bad_komplett", label: "Komplette Badsanierung" },
+      { value: "dusche_neu", label: "Dusche erneuern / Walk-In Dusche" },
+      { value: "wanne_zu_dusche", label: "Badewanne gegen Dusche tauschen" },
+      { value: "barrierefrei", label: "Barrierefreies Bad / Seniorengerecht" },
+      { value: "wc_waschbecken", label: "WC und Waschbecken erneuern" },
+      { value: "fliesen", label: "Fliesen erneuern" },
+      { value: "armaturen", label: "Neue Armaturen" },
+      { value: "beratung", label: "Kostenlose Beratung vor Ort" },
+      { value: "3d_planung", label: "3D-Badplanung gewünscht" },
+    ],
+  },
+  {
+    id: "components",
+    title: "Welche Elemente sollen erneuert werden?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "dusche", label: "Dusche" },
+      { value: "badewanne", label: "Badewanne" },
+      { value: "wc", label: "WC" },
+      { value: "waschbecken", label: "Waschbecken" },
+      { value: "waschtisch", label: "Waschtisch / Unterschrank" },
+      { value: "armaturen", label: "Armaturen" },
+      { value: "fliesen_boden", label: "Bodenfliesen" },
+      { value: "fliesen_wand", label: "Wandfliesen" },
+      { value: "heizkoerper", label: "Heizkörper / Handtuchtrockner" },
+      { value: "beleuchtung", label: "Beleuchtung / Spiegel" },
+    ],
+  },
+  {
+    id: "locationType",
+    title: "Wie groß ist Ihr Badezimmer?",
+    type: "single",
+    options: [
+      { value: "klein", label: "Klein (bis 5 m²)" },
+      { value: "mittel", label: "Mittel (5-8 m²)" },
+      { value: "gross", label: "Groß (8-12 m²)" },
+      { value: "sehr_gross", label: "Sehr groß (über 12 m²)" },
+      { value: "gaeste_wc", label: "Gäste-WC" },
+    ],
+  },
+  {
+    id: "urgency",
+    title: "Wann soll die Sanierung stattfinden?",
+    type: "single",
+    options: [
+      { value: "sofort", label: "So schnell wie möglich" },
+      { value: "monat", label: "Innerhalb 1-2 Monaten" },
+      { value: "quartal", label: "Innerhalb 3-6 Monaten" },
+      { value: "planung", label: "Erst Planung / Beratung" },
+    ],
+  },
+  {
+    id: "accessSituation",
+    title: "Wie alt ist Ihr aktuelles Bad?",
+    type: "single",
+    options: [
+      { value: "unter_10", label: "Unter 10 Jahre" },
+      { value: "10_20", label: "10-20 Jahre" },
+      { value: "20_30", label: "20-30 Jahre" },
+      { value: "ueber_30", label: "Über 30 Jahre" },
+      { value: "neubau", label: "Neubau" },
+    ],
+  },
+  {
+    id: "description",
+    title: "Zusatzinformationen",
+    subtitle: "Beschreiben Sie kurz Ihre Wünsche für das neue Bad",
+    type: "textarea",
+  },
+  {
+    id: "contact",
+    title: "Ihre Kontaktdaten",
+    subtitle: "Für Terminvereinbarung und Rückfragen",
+    type: "contact",
+  },
+  {
+    id: "appointment",
+    title: "Wunschtermin für Beratung",
+    subtitle: "Wann passt es Ihnen am besten?",
+    type: "appointment",
+  },
+];
+
+const WAERMEPUMPE_QUESTIONS: Question[] = [
+  {
+    id: "serviceTypes",
+    title: "Was interessiert Sie bei Wärmepumpen?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "beratung_eignung", label: "Beratung: Ist mein Haus geeignet?" },
+      { value: "luft_wasser", label: "Angebot für Luft-Wasser-Wärmepumpe" },
+      { value: "erdwaerme", label: "Angebot für Erdwärmepumpe" },
+      { value: "foerderung", label: "Förderberatung (bis 70% Zuschuss)" },
+      { value: "heizungstausch", label: "Heizungstausch Gas/Öl → Wärmepumpe" },
+      { value: "wartung", label: "Wärmepumpe Wartung / Service" },
+      { value: "reparatur", label: "Wärmepumpe macht Probleme" },
+      { value: "vor_ort_check", label: "Kostenloser Vor-Ort-Check" },
+    ],
+  },
+  {
+    id: "components",
+    title: "Welche Heizung haben Sie aktuell?",
+    type: "single",
+    options: [
+      { value: "gas", label: "Gasheizung" },
+      { value: "oel", label: "Ölheizung" },
+      { value: "elektro", label: "Elektroheizung / Nachtspeicher" },
+      { value: "waermepumpe", label: "Bereits Wärmepumpe" },
+      { value: "keine", label: "Keine / Neubau" },
+      { value: "sonstige", label: "Sonstige" },
+    ],
+  },
+  {
+    id: "locationType",
+    title: "Um welches Gebäude handelt es sich?",
+    type: "single",
+    options: [
+      { value: "efh", label: "Einfamilienhaus" },
+      { value: "dhh", label: "Doppelhaushälfte" },
+      { value: "rh", label: "Reihenhaus" },
+      { value: "mfh", label: "Mehrfamilienhaus" },
+      { value: "gewerbe", label: "Gewerbe" },
+      { value: "neubau", label: "Neubau in Planung" },
+    ],
+  },
+  {
+    id: "symptoms",
+    title: "Wie ist Ihr Gebäude gedämmt?",
+    type: "single",
+    options: [
+      { value: "gut", label: "Gut gedämmt (nach 2000)" },
+      { value: "mittel", label: "Teilweise gedämmt" },
+      { value: "schlecht", label: "Kaum / nicht gedämmt" },
+      { value: "weiss_nicht", label: "Weiß ich nicht" },
+    ],
+  },
+  {
+    id: "urgency",
+    title: "Wann planen Sie den Umstieg?",
+    type: "single",
+    options: [
+      { value: "sofort", label: "So schnell wie möglich" },
+      { value: "halbjahr", label: "Innerhalb 6 Monaten" },
+      { value: "jahr", label: "Innerhalb 1 Jahr" },
+      { value: "planung", label: "Erst informieren / planen" },
+    ],
+  },
+  {
+    id: "description",
+    title: "Zusatzinformationen",
+    subtitle: "Haben Sie besondere Fragen oder Wünsche?",
+    type: "textarea",
+  },
+  {
+    id: "contact",
+    title: "Ihre Kontaktdaten",
+    subtitle: "Für Terminvereinbarung und Rückfragen",
+    type: "contact",
+  },
+  {
+    id: "appointment",
+    title: "Wunschtermin für Beratung",
+    subtitle: "Wann passt es Ihnen am besten?",
+    type: "appointment",
+  },
+];
+
+const HAUSTECHNIK_QUESTIONS: Question[] = [
+  {
+    id: "serviceTypes",
+    title: "Welche Haustechnik-Leistung benötigen Sie?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "neubau_planung", label: "Komplettplanung Neubau" },
+      { value: "wasser_komplett", label: "Wasserinstallation komplett" },
+      { value: "gas", label: "Gasinstallation / Gasleitung" },
+      { value: "lueftung", label: "Lüftungsanlage installieren" },
+      { value: "smart_home", label: "Smart Home Heizungssteuerung" },
+      { value: "wartungsvertrag", label: "Wartungsvertrag Haustechnik" },
+      { value: "energieberatung", label: "Energieberatung" },
+      { value: "sonstiges", label: "Sonstiges Haustechnik-Projekt" },
+    ],
+  },
+  {
+    id: "locationType",
+    title: "Um welches Objekt handelt es sich?",
+    type: "single",
+    options: [
+      { value: "neubau", label: "Neubau" },
+      { value: "altbau", label: "Altbau / Bestandsgebäude" },
+      { value: "sanierung", label: "Kernsanierung" },
+      { value: "gewerbe", label: "Gewerbeobjekt" },
+      { value: "mfh", label: "Mehrfamilienhaus" },
+    ],
+  },
+  {
+    id: "components",
+    title: "Welche Bereiche sind betroffen?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "heizung", label: "Heizungstechnik" },
+      { value: "sanitaer", label: "Sanitärtechnik" },
+      { value: "lueftung", label: "Lüftungstechnik" },
+      { value: "gas", label: "Gastechnik" },
+      { value: "solar", label: "Solarthermie" },
+      { value: "regenwasser", label: "Regenwassernutzung" },
+      { value: "entkalkung", label: "Wasserenthärtung" },
+    ],
+  },
+  {
+    id: "urgency",
+    title: "Wann soll das Projekt starten?",
+    type: "single",
+    options: [
+      { value: "sofort", label: "Sofort / dringend" },
+      { value: "monat", label: "Innerhalb 1-2 Monaten" },
+      { value: "quartal", label: "Innerhalb 3-6 Monaten" },
+      { value: "planung", label: "Erst Planung / Beratung" },
+    ],
+  },
+  {
+    id: "description",
+    title: "Projektbeschreibung",
+    subtitle: "Beschreiben Sie kurz Ihr Vorhaben",
+    type: "textarea",
+  },
+  {
+    id: "contact",
+    title: "Ihre Kontaktdaten",
+    subtitle: "Für Terminvereinbarung und Rückfragen",
+    type: "contact",
+  },
+  {
+    id: "appointment",
+    title: "Wunschtermin",
+    subtitle: "Wann passt es Ihnen am besten?",
+    type: "appointment",
+  },
+];
+
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
 interface ChatWidgetProps {
@@ -344,11 +595,11 @@ const SERVICE_CATEGORY_LABELS: Record<string, string> = {
 };
 
 const SERVICE_CATEGORY_DEFAULTS: Record<string, string[]> = {
-  sanitaer: ["reparatur"],
-  bad: ["bad_komplett"],
-  heizung: ["heizung_reparatur"],
-  waermepumpe: ["waermepumpe_installation"],
-  haustechnik: ["haustechnik_allgemein"],
+  sanitaer: [], // Force user to make explicit choice
+  bad: [], // Force user to make explicit choice
+  heizung: [], // Force user to make explicit choice
+  waermepumpe: [], // Force user to make explicit choice
+  haustechnik: [], // Force user to make explicit choice
 };
 
 function calculatePrice(data: LeadData): string {
@@ -413,7 +664,21 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
   const serviceCategoryLabel = serviceCategory ? SERVICE_CATEGORY_LABELS[serviceCategory] : null;
   
   // Select appropriate questions based on service category
-  const questions = serviceCategory === "heizung" ? HEIZUNG_QUESTIONS : QUESTIONS;
+  const getQuestionsForCategory = () => {
+    switch (serviceCategory) {
+      case "heizung":
+        return HEIZUNG_QUESTIONS;
+      case "bad":
+        return BAD_QUESTIONS;
+      case "waermepumpe":
+        return WAERMEPUMPE_QUESTIONS;
+      case "haustechnik":
+        return HAUSTECHNIK_QUESTIONS;
+      default:
+        return QUESTIONS; // Sanitär and default
+    }
+  };
+  const questions = getQuestionsForCategory();
   
   const contentRef = useRef<HTMLDivElement>(null);
 
