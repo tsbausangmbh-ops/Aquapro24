@@ -21,7 +21,7 @@ import {
   TrendingDown,
   Star
 } from "lucide-react";
-import heatPumpImage1 from "@assets/stock_images/black_modern_heat_pu_9fe387cb.jpg";
+import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
 import heatPumpImage3 from "@assets/stock_images/modern_white_heat_pu_786e8fed.jpg";
 
