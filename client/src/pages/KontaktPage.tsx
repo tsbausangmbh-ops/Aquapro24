@@ -345,6 +345,88 @@ export default function KontaktPage() {
           </div>
         </section>
 
+        {/* Standort & Karte */}
+        <section className="py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl font-bold mb-4">Unser Standort in München</h2>
+              <p className="text-muted-foreground">
+                Zentral gelegen - schnell bei Ihnen
+              </p>
+            </div>
+            <div className="grid lg:grid-cols-2 gap-8">
+              <Card>
+                <CardContent className="p-0 overflow-hidden rounded-lg">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.531506!2d11.5754!3d48.1371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA4JzEzLjYiTiAxMcKwMzQnMzEuNCJF!5e0!3m2!1sde!2sde!4v1"
+                    width="100%"
+                    height="350"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Standort AquaPro24 München"
+                    className="w-full"
+                  />
+                </CardContent>
+              </Card>
+              <div className="flex flex-col justify-center space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">AquaPro24 GmbH</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium">Musterstraße 123</p>
+                        <p className="text-muted-foreground">80331 München</p>
+                        <p className="text-muted-foreground">Deutschland</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <a href="tel:+4989123456789" className="font-medium hover:text-secondary">
+                          089 123 456 789
+                        </a>
+                        <p className="text-sm text-muted-foreground">24/7 Notdienst</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Mail className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <a href="mailto:info@sanitaer-muenchen.de" className="font-medium hover:text-secondary">
+                          info@sanitaer-muenchen.de
+                        </a>
+                        <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Clock className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium">Öffnungszeiten Büro</p>
+                        <p className="text-sm text-muted-foreground">Mo - Fr: 7:00 - 18:00 Uhr</p>
+                        <p className="text-sm text-muted-foreground">Sa: 8:00 - 12:00 Uhr</p>
+                        <p className="text-sm text-accent font-medium">Notdienst: 24/7 erreichbar</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Button size="lg" className="w-full sm:w-auto" asChild>
+                  <a 
+                    href="https://maps.google.com/?q=Musterstraße+123+80331+München" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    data-testid="button-google-maps"
+                  >
+                    <MapPin className="w-4 h-4 mr-2" />
+                    Route planen
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Company Info Section */}
         <section className="py-16 lg:py-20 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
