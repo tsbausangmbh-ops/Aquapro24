@@ -43,8 +43,8 @@ const pricingInfo = [
     icon: Euro,
     isPackage: true,
     packageContents: [
-      "Werktags 08:00 – 18:00 Uhr: 129 € netto",
-      "Werktags 18:00 – 22:00 Uhr: 149 € netto",
+      "Werktags 08:00 – 16:30 Uhr: 129 € netto",
+      "Werktags 16:30 – 22:00 Uhr: 149 € netto",
       "Nachts / Wochenende / Feiertage: 169 € netto",
     ],
   },
