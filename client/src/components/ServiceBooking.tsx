@@ -210,11 +210,12 @@ export default function ServiceBooking({
   const canProceedStep2 = formData.preferredDate !== "" && formData.preferredTime !== "";
   const canSubmit = formData.name && formData.phone && formData.email && formData.street && formData.zipCity;
 
-  const getButtonClass = () => {
-    if (buttonVariant === 'outline') {
-      return `border-2 ${config.borderClass} ${config.colorClass} bg-transparent hover:${config.bgClass} hover:text-white`;
-    }
-    return `${config.bgClass} text-white ${config.hoverClass}`;
+  const buttonStyles: Record<ServiceType, string> = {
+    sanitaer: "bg-blue-600 hover:bg-blue-700 text-white",
+    bad: "bg-cyan-600 hover:bg-cyan-700 text-white",
+    heizung: "bg-red-600 hover:bg-red-700 text-white",
+    waermepumpe: "bg-orange-500 hover:bg-orange-600 text-white",
+    haustechnik: "bg-emerald-600 hover:bg-emerald-700 text-white"
   };
 
   return (
@@ -222,7 +223,7 @@ export default function ServiceBooking({
       <DialogTrigger asChild>
         <Button 
           size={buttonSize}
-          className={`${getButtonClass()} ${className}`}
+          className={`${buttonStyles[serviceType]} ${className}`}
           data-testid={`button-booking-${serviceType}`}
         >
           <Calendar className="w-4 h-4 mr-2" />
@@ -289,7 +290,7 @@ export default function ServiceBooking({
                   ))}
                 </div>
                 <Button 
-                  className={`w-full ${config.bgClass} text-white ${config.hoverClass}`}
+                  className={`w-full ${buttonStyles[serviceType]}`}
                   disabled={!canProceedStep1}
                   onClick={() => setStep(2)}
                   data-testid="button-next-step-1"
@@ -340,7 +341,7 @@ export default function ServiceBooking({
                     Zurück
                   </Button>
                   <Button 
-                    className={`flex-1 ${config.bgClass} text-white ${config.hoverClass}`}
+                    className={`flex-1 ${buttonStyles[serviceType]}`}
                     disabled={!canProceedStep2}
                     onClick={() => setStep(3)}
                     data-testid="button-next-step-2"
@@ -440,7 +441,7 @@ export default function ServiceBooking({
                     Zurück
                   </Button>
                   <Button 
-                    className={`flex-1 ${config.bgClass} text-white ${config.hoverClass}`}
+                    className={`flex-1 ${buttonStyles[serviceType]}`}
                     disabled={!canSubmit || isSubmitting}
                     onClick={handleSubmit}
                     data-testid="button-submit-booking"
