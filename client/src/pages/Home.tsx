@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import CookieBanner from "@/components/CookieBanner";
 import SEO from "@/components/SEO";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
       </main>
       <Footer />
       <ChatWidget />
+      <CookieBanner />
     </div>
   );
 }
