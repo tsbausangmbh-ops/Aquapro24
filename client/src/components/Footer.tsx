@@ -25,10 +25,10 @@ const footerLinks = {
   info: {
     title: "Informationen",
     links: [
-      { label: "Über uns", href: "#about" },
-      { label: "Preise", href: "#pricing" },
+      { label: "Über uns", href: "/ueber-uns" },
+      { label: "FAQ & Preise", href: "/faq" },
+      { label: "Ratgeber", href: "/ratgeber" },
       { label: "Bewertungen", href: "#testimonials" },
-      { label: "FAQ", href: "#" },
       { label: "Kontakt", href: "#contact" },
     ],
   },
@@ -36,8 +36,8 @@ const footerLinks = {
     title: "Rechtliches",
     links: [
       { label: "Impressum", href: "/impressum" },
-      { label: "Datenschutz", href: "#" },
-      { label: "AGB", href: "#" },
+      { label: "Datenschutz", href: "/datenschutz" },
+      { label: "AGB", href: "/agb" },
     ],
   },
 };

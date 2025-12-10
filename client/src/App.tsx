@@ -16,6 +16,8 @@ const SanitaerPage = lazy(() => import("@/pages/SanitaerPage"));
 const UeberUnsPage = lazy(() => import("@/pages/UeberUnsPage"));
 const FAQPage = lazy(() => import("@/pages/FAQPage"));
 const RatgeberPage = lazy(() => import("@/pages/RatgeberPage"));
+const DatenschutzPage = lazy(() => import("@/pages/DatenschutzPage"));
+const AGBPage = lazy(() => import("@/pages/AGBPage"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function PageLoader() {
@@ -42,6 +44,8 @@ function Router() {
         <Route path="/ueber-uns" component={UeberUnsPage} />
         <Route path="/faq" component={FAQPage} />
         <Route path="/ratgeber" component={RatgeberPage} />
+        <Route path="/datenschutz" component={DatenschutzPage} />
+        <Route path="/agb" component={AGBPage} />
         <Route path="/impressum" component={Impressum} />
         <Route component={NotFound} />
       </Switch>
