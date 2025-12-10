@@ -25,16 +25,28 @@ import {
 
 const pricingInfo = [
   {
-    title: "Anfahrt",
-    price: "0 €",
-    note: "Im Stadtgebiet München",
+    title: "Anfahrt + 1. Stunde",
+    price: "ab 129 €",
+    note: "netto, im Stadtgebiet München",
     icon: Clock,
+    isPackage: true,
+    packageContents: [
+      "Werktags 08:00 – 18:00 Uhr: 129 € netto",
+      "Werktags 18:00 – 22:00 Uhr: 149 € netto",
+      "Nachts / Wochenende / Feiertage: 169 € netto",
+    ],
   },
   {
-    title: "Arbeitsstunde",
-    price: "ab 65 €",
-    note: "Mo-Fr 8-18 Uhr",
+    title: "Jede weitere Stunde",
+    price: "ab 129 €",
+    note: "netto, je nach Einsatzzeit",
     icon: Euro,
+    isPackage: true,
+    packageContents: [
+      "Werktags 08:00 – 18:00 Uhr: 129 € netto",
+      "Werktags 18:00 – 22:00 Uhr: 149 € netto",
+      "Nachts / Wochenende / Feiertage: 169 € netto",
+    ],
   },
   {
     title: "Notdienst-Paket",
@@ -42,6 +54,7 @@ const pricingInfo = [
     note: "Anfahrt + 1. Arbeitsstunde",
     icon: AlertCircle,
     isPackage: true,
+    isHighlighted: true,
     packageContents: [
       "Anfahrt",
       "Komplette erste Arbeitsstunde vor Ort",
@@ -249,10 +262,10 @@ export default function Pricing() {
         
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {pricingInfo.map((item, index) => (
-            <Card key={index} className={`text-center ${item.isPackage ? 'border-2 border-primary/30 bg-primary/5' : ''}`}>
+            <Card key={index} className={`text-center ${item.isHighlighted ? 'border-2 border-primary/30 bg-primary/5' : ''}`}>
               <CardHeader>
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 ${item.isPackage ? 'bg-primary/20' : 'bg-secondary/10'}`}>
-                  <item.icon className={`w-6 h-6 ${item.isPackage ? 'text-primary' : 'text-secondary'}`} />
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 ${item.isHighlighted ? 'bg-primary/20' : 'bg-secondary/10'}`}>
+                  <item.icon className={`w-6 h-6 ${item.isHighlighted ? 'text-primary' : 'text-secondary'}`} />
                 </div>
                 <CardTitle className="text-base font-medium text-muted-foreground">
                   {item.title}
