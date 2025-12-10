@@ -31,9 +31,9 @@ const pricingInfo = [
     icon: Clock,
     isPackage: true,
     packageContents: [
-      "0–10 km: 49 – 69 € netto",
-      "10–20 km: 69 – 89 € netto",
-      "20–30 km: 89 – 119 € netto",
+      "0–10 km: 49 € netto",
+      "10–20 km: 69 € netto",
+      "20–30 km: 89 € netto",
     ],
   },
   {
