@@ -80,6 +80,8 @@ export default function KontaktPage() {
     name: "",
     email: "",
     phone: "",
+    street: "",
+    zipCity: "",
     service: "",
     message: ""
   });
@@ -101,6 +103,8 @@ export default function KontaktPage() {
       name: "",
       email: "",
       phone: "",
+      street: "",
+      zipCity: "",
       service: "",
       message: ""
     });
@@ -212,6 +216,30 @@ export default function KontaktPage() {
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           required
                           data-testid="input-contact-email"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="street">Straße & Hausnummer *</Label>
+                        <Input
+                          id="street"
+                          placeholder="z.B. Musterstraße 123"
+                          value={formData.street}
+                          onChange={(e) => setFormData({ ...formData, street: e.target.value })}
+                          required
+                          data-testid="input-contact-street"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="zipCity">PLZ & Ort *</Label>
+                        <Input
+                          id="zipCity"
+                          placeholder="z.B. 80333 München"
+                          value={formData.zipCity}
+                          onChange={(e) => setFormData({ ...formData, zipCity: e.target.value })}
+                          required
+                          data-testid="input-contact-zipcity"
                         />
                       </div>
 
