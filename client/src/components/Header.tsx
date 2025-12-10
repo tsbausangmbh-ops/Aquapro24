@@ -108,20 +108,27 @@ export default function Header() {
                   </div>
                 )}
               </div>
-              <button
-                onClick={() => scrollToSection("#pricing")}
+              <Link 
+                href="/faq"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="nav-preise"
+                data-testid="nav-faq"
               >
-                Preise
-              </button>
-              <button
-                onClick={() => scrollToSection("#testimonials")}
+                FAQ & Preise
+              </Link>
+              <Link 
+                href="/ratgeber"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="nav-bewertungen"
+                data-testid="nav-ratgeber"
               >
-                Bewertungen
-              </button>
+                Ratgeber
+              </Link>
+              <Link 
+                href="/ueber-uns"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="nav-ueber-uns"
+              >
+                Über uns
+              </Link>
               <button
                 onClick={() => scrollToSection("#contact")}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -180,13 +187,30 @@ export default function Header() {
                 </Link>
               ))}
               <hr className="my-2 border-border" />
-              <button
-                onClick={() => scrollToSection("#pricing")}
+              <Link
+                href="/faq"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                data-testid="nav-mobile-preise"
+                data-testid="nav-mobile-faq"
               >
-                Preise
-              </button>
+                FAQ & Preise
+              </Link>
+              <Link
+                href="/ratgeber"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                data-testid="nav-mobile-ratgeber"
+              >
+                Ratgeber
+              </Link>
+              <Link
+                href="/ueber-uns"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                data-testid="nav-mobile-ueber-uns"
+              >
+                Über uns
+              </Link>
               <button
                 onClick={() => scrollToSection("#contact")}
                 className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"

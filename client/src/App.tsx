@@ -13,6 +13,9 @@ const HeizungPage = lazy(() => import("@/pages/HeizungPage"));
 const WaermepumpePage = lazy(() => import("@/pages/WaermepumpePage"));
 const HaustechnikPage = lazy(() => import("@/pages/HaustechnikPage"));
 const SanitaerPage = lazy(() => import("@/pages/SanitaerPage"));
+const UeberUnsPage = lazy(() => import("@/pages/UeberUnsPage"));
+const FAQPage = lazy(() => import("@/pages/FAQPage"));
+const RatgeberPage = lazy(() => import("@/pages/RatgeberPage"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function PageLoader() {
@@ -36,6 +39,9 @@ function Router() {
         <Route path="/waermepumpe" component={WaermepumpePage} />
         <Route path="/haustechnik" component={HaustechnikPage} />
         <Route path="/sanitaer" component={SanitaerPage} />
+        <Route path="/ueber-uns" component={UeberUnsPage} />
+        <Route path="/faq" component={FAQPage} />
+        <Route path="/ratgeber" component={RatgeberPage} />
         <Route path="/impressum" component={Impressum} />
         <Route component={NotFound} />
       </Switch>
