@@ -122,7 +122,7 @@ export default function KontaktPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="py-10 lg:py-8 bg-gradient-to-br from-secondary/10 to-background">
+        <section className="py-10 lg:py-6 bg-gradient-to-br from-secondary/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <Badge variant="secondary" className="mb-4">
@@ -141,7 +141,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Contact Cards */}
-        <section className="py-8">
+        <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {contactInfo.map((info, index) => (
@@ -171,7 +171,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Main Content: Form + Info */}
-        <section className="py-10 lg:py-12">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
@@ -374,7 +374,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Standort & Karte */}
-        <section className="py-10 lg:py-12">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl font-bold mb-4">Unser Standort in München</h2>
@@ -456,7 +456,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Company Info Section */}
-        <section className="py-10 lg:py-8 bg-muted/30">
+        <section className="py-10 lg:py-6 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl font-bold mb-4">Unternehmensdaten</h2>

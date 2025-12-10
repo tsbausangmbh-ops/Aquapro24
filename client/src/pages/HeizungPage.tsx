@@ -95,7 +95,7 @@ export default function HeizungPage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:py-10 bg-gradient-to-br from-primary/10 to-background">
+        <section className="relative py-12 lg:py-6 bg-gradient-to-br from-primary/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -201,7 +201,7 @@ export default function HeizungPage() {
           subtitle="So haben wir anderen Münchnern in der Kälte geholfen"
         />
 
-        <section className="py-10 lg:py-14">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Unsere Heizungs-Leistungen in München</h2>
@@ -237,7 +237,7 @@ export default function HeizungPage() {
         </section>
 
         {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="py-10 md:py-12">
+        <section className="py-6 md:py-8">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Heizungsservice in München - Ihr zuverlässiger Partner für wohlige Wärme
@@ -291,7 +291,7 @@ export default function HeizungPage() {
           subtitle="Antworten auf die wichtigsten Heizungsfragen unserer Münchner Kunden"
         />
 
-        <section className="py-10 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-primary mx-auto" />
