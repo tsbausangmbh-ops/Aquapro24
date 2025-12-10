@@ -12,7 +12,7 @@ export default function AGBPage() {
         canonical="https://aquapro24.de/agb"
       />
       <Header />
-      <main className="py-6 lg:py-8">
+      <main className="pt-4 pb-6 lg:pt-4 lg:pb-8">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <h1 className="text-3xl lg:text-4xl font-bold mb-8">Allgemeine Geschäftsbedingungen (AGB)</h1>
           

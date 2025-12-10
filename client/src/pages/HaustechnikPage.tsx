@@ -96,7 +96,7 @@ export default function HaustechnikPage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:py-6 bg-gradient-to-br from-secondary/10 to-background">
+        <section className="relative py-12 lg:pt-4 pb-6 bg-gradient-to-br from-secondary/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -202,7 +202,7 @@ export default function HaustechnikPage() {
           subtitle="So haben wir komplexe Projekte für Münchner Kunden gelöst"
         />
 
-        <section className="py-6 lg:py-8">
+        <section className="pt-4 pb-6 lg:pt-4 lg:pb-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Haustechnik-Leistungen in München</h2>
@@ -237,7 +237,7 @@ export default function HaustechnikPage() {
           </div>
         </section>
 
-        <section className="py-6 bg-muted/30">
+        <section className="pt-4 pb-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="space-y-2">
@@ -266,7 +266,7 @@ export default function HaustechnikPage() {
         </section>
 
         {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="py-6 md:py-8">
+        <section className="pt-4 pb-6 md:pt-4 md:pb-8">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Haustechnik in München - Alles aus einer Hand für Ihr Zuhause
@@ -322,7 +322,7 @@ export default function HaustechnikPage() {
           subtitle="Antworten auf die wichtigsten Fragen unserer Münchner Kunden"
         />
 
-        <section className="py-6">
+        <section className="pt-4 pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-secondary mx-auto" />

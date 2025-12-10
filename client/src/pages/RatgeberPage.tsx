@@ -247,7 +247,7 @@ export default function RatgeberPage() {
       />
       <Header />
       <main>
-        <section className="relative py-10 lg:py-6 bg-gradient-to-br from-accent/10 via-background to-primary/5">
+        <section className="relative py-10 lg:pt-4 pb-6 bg-gradient-to-br from-accent/10 via-background to-primary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
@@ -269,7 +269,7 @@ export default function RatgeberPage() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8">
+        <section className="pt-4 pb-6 lg:pt-4 lg:pb-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {guides.map((guide) => (
@@ -297,7 +297,7 @@ export default function RatgeberPage() {
           <section 
             key={guide.id} 
             id={guide.id} 
-            className={`py-6 lg:py-8 ${guideIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
+            className={`pt-4 pb-6 lg:pt-4 lg:pb-8 ${guideIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
           >
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
               <div className="grid lg:grid-cols-3 gap-8 mb-8">
@@ -384,7 +384,7 @@ export default function RatgeberPage() {
           </section>
         ))}
 
-        <section className="py-6 lg:py-6 bg-secondary text-secondary-foreground">
+        <section className="py-6 lg:pt-4 pb-6 bg-secondary text-secondary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Noch Fragen? Wir helfen gerne!
