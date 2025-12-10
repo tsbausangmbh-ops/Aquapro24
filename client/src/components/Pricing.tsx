@@ -241,7 +241,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-16 lg:py-24">
+    <section id="pricing" className="py-10 lg:py-14">
       <div className="max-w-5xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">

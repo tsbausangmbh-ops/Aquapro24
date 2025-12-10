@@ -23,7 +23,7 @@ const MUNICH_AREAS = [
 
 export default function ServiceAreas({ serviceName, highlightAreas = [] }: ServiceAreasProps) {
   return (
-    <section className="py-16 bg-secondary/5" data-testid="section-service-areas">
+    <section className="py-10 bg-secondary/5" data-testid="section-service-areas">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">

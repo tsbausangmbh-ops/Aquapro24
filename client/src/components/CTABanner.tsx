@@ -3,7 +3,7 @@ import { Phone, Clock, MapPin, Shield } from "lucide-react";
 
 export default function CTABanner() {
   return (
-    <section id="contact" className="py-16 lg:py-24 relative overflow-hidden">
+    <section id="contact" className="py-10 lg:py-14 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/95 to-secondary/90" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
       
