@@ -91,7 +91,7 @@ export default function Hero() {
               <div className="absolute -top-3 -right-3">
                 <Badge className="bg-primary text-primary-foreground shadow-lg">
                   <Clock className="w-3 h-3 mr-1" />
-                  24/7 erreichbar
+                  24/7 Online verfügbar
                 </Badge>
               </div>
               

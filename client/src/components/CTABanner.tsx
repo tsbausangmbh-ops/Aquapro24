@@ -52,7 +52,7 @@ export default function CTABanner() {
         <div className="flex flex-wrap justify-center gap-6 lg:gap-10 text-sm text-white/80">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4" />
-            <span>24/7 erreichbar</span>
+            <span>24/7 Online verfügbar</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4" />
