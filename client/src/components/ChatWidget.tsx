@@ -118,7 +118,7 @@ export default function ChatWidget() {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       addBotMessage(
-        "Hallo! Ich bin der virtuelle Assistent von Münchner Heizung & Sanitär. Haben Sie ein Problem mit Ihrer Heizung oder Sanitäranlage? Ich helfe Ihnen gerne weiter!\n\nWie darf ich Sie ansprechen?"
+        "Hallo! Ich bin der virtuelle Assistent von Münchner Sanitär & Wasserinstallation.\n\nIch kann Ihnen sofort eine Preisschätzung geben und einen Termin für Sie buchen – ganz ohne Wartezeit am Telefon!\n\nWie darf ich Sie ansprechen?"
       );
       setCurrentStep("name");
     }
@@ -334,7 +334,7 @@ export default function ChatWidget() {
                     <Wrench className="w-5 h-5" />
                   </div>
                   <div>
-                    <CardTitle className="text-base">Münchner Heizung & Sanitär</CardTitle>
+                    <CardTitle className="text-base">Münchner Sanitär & Wasserinstallation</CardTitle>
                     <div className="flex items-center gap-1.5 text-xs text-white/80">
                       <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                       <span>Online - Antworten in Sekunden</span>
@@ -485,9 +485,9 @@ export default function ChatWidget() {
       {!isOpen && showPulse && (
         <div className="fixed bottom-20 right-4 z-40 bg-card border border-card-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
           <p className="text-sm">
-            <span className="font-semibold">Brauchen Sie Hilfe?</span>
+            <span className="font-semibold">Jetzt online Termin buchen</span>
             <br />
-            <span className="text-muted-foreground">Klicken Sie hier für schnelle Hilfe!</span>
+            <span className="text-muted-foreground">Preisschätzung in Sekunden - ohne Anruf!</span>
           </p>
         </div>
       )}
