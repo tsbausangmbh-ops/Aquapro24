@@ -395,21 +395,21 @@ export default function ChatWidget() {
       return (
         <div className="space-y-2 max-h-48 overflow-y-auto">
           {q.options.map((opt) => (
-            <div 
+            <label 
               key={opt.value} 
+              htmlFor={`${q.id}-${opt.value}`}
               className="flex items-center space-x-3 p-3 rounded-md border border-border hover-elevate cursor-pointer"
-              onClick={() => handleMultiSelect(opt.value, !selectedValues.includes(opt.value))}
             >
               <Checkbox
-                id={opt.value}
+                id={`${q.id}-${opt.value}`}
                 checked={selectedValues.includes(opt.value)}
                 onCheckedChange={(checked) => handleMultiSelect(opt.value, !!checked)}
                 data-testid={`checkbox-${q.id}-${opt.value}`}
               />
-              <Label htmlFor={opt.value} className="cursor-pointer flex-1">
+              <span className="cursor-pointer flex-1">
                 {opt.label}
-              </Label>
-            </div>
+              </span>
+            </label>
           ))}
         </div>
       );
