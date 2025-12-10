@@ -34,7 +34,7 @@ interface LeadData {
   estimatedPrice: string;
 }
 
-type ChatStep = "greeting" | "problem" | "problem_details" | "name" | "phone" | "address" | "urgency" | "confirm" | "complete";
+type ChatStep = "greeting" | "problem" | "name" | "phone" | "address" | "urgency" | "confirm" | "complete";
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
@@ -161,34 +161,20 @@ export default function ChatWidget() {
   const processStep = (userInput: string) => {
     switch (currentStep) {
       case "problem":
-        leadDataRef.current = { ...leadDataRef.current, problem: userInput };
-        setLeadData(leadDataRef.current);
-        addBotMessage(
-          "Danke für die Info! Können Sie mir noch etwas mehr dazu sagen?\n\n" +
-          "Zum Beispiel:\n" +
-          "- Seit wann besteht das Problem?\n" +
-          "- Gibt es sichtbare Schäden (z.B. Wasserschaden, Leckage)?\n" +
-          "- Wurde schon etwas repariert?"
-        );
-        setCurrentStep("problem_details");
-        break;
-
-      case "problem_details":
-        const fullProblem = `${leadDataRef.current.problem}. Details: ${userInput}`;
-        const priceEstimate = estimatePrice(fullProblem);
+        const priceEstimate = estimatePrice(userInput);
         const estimatedPriceText = priceEstimate 
           ? `${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR`
           : "Wird vor Ort ermittelt";
         
-        leadDataRef.current = { ...leadDataRef.current, problem: fullProblem, estimatedPrice: estimatedPriceText };
+        leadDataRef.current = { ...leadDataRef.current, problem: userInput, estimatedPrice: estimatedPriceText };
         setLeadData(leadDataRef.current);
         
         const priceMessage = priceEstimate 
-          ? `Basierend auf Ihrer Beschreibung schätze ich die Kosten für ${priceEstimate.service} auf ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR (inkl. Anfahrt im Stadtgebiet München).\n\nDer genaue Preis wird vor Ort nach Diagnose festgelegt.`
+          ? `Basierend auf Ihrer Beschreibung schätze ich die Kosten für ${priceEstimate.service} auf ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR (inkl. Anfahrt im Stadtgebiet München).`
           : "Die genauen Kosten ermitteln wir vor Ort nach einer Diagnose.";
         
         addBotMessage(
-          `Verstanden!\n\n${priceMessage}\n\nUm einen Termin zu vereinbaren, brauche ich noch ein paar Angaben. Wie darf ich Sie ansprechen?`
+          `Verstanden!\n\n${priceMessage}\n\nSchritt 1 von 5: Wie darf ich Sie ansprechen?`
         );
         setCurrentStep("name");
         break;
@@ -197,7 +183,7 @@ export default function ChatWidget() {
         leadDataRef.current = { ...leadDataRef.current, name: userInput };
         setLeadData(leadDataRef.current);
         addBotMessage(
-          `Freut mich, ${userInput}! Unter welcher Telefonnummer können wir Sie erreichen?`
+          `Freut mich, ${userInput}!\n\nSchritt 2 von 5: Unter welcher Telefonnummer können wir Sie erreichen?`
         );
         setCurrentStep("phone");
         break;
@@ -206,7 +192,7 @@ export default function ChatWidget() {
         leadDataRef.current = { ...leadDataRef.current, phone: userInput };
         setLeadData(leadDataRef.current);
         addBotMessage(
-          "Perfekt! An welcher Adresse sollen wir vorbeikommen?"
+          "Perfekt!\n\nSchritt 3 von 5: An welcher Adresse sollen wir vorbeikommen?"
         );
         setCurrentStep("address");
         break;
@@ -215,7 +201,7 @@ export default function ChatWidget() {
         leadDataRef.current = { ...leadDataRef.current, address: userInput };
         setLeadData(leadDataRef.current);
         addBotMessage(
-          "Wie dringend ist Ihr Anliegen?"
+          "Schritt 4 von 5: Wie dringend ist Ihr Anliegen?"
         );
         setCurrentStep("urgency");
         break;
@@ -228,7 +214,7 @@ export default function ChatWidget() {
         const currentData = leadDataRef.current;
         
         addBotMessage(
-          `Vielen Dank für Ihre Angaben, ${currentData.name}!\n\n` +
+          `Schritt 5 von 5: Vielen Dank für Ihre Angaben, ${currentData.name}!\n\n` +
           `Zusammenfassung:\n` +
           `- Problem: ${currentData.problem}\n` +
           `- Geschätzte Kosten: ${currentData.estimatedPrice}\n` +
@@ -442,7 +428,6 @@ export default function ChatWidget() {
                       onKeyPress={handleKeyPress}
                       placeholder={
                         currentStep === "problem" ? "Beschreiben Sie Ihr Problem..." :
-                        currentStep === "problem_details" ? "Weitere Details..." :
                         currentStep === "name" ? "Ihr Name..." :
                         currentStep === "phone" ? "Telefonnummer..." :
                         currentStep === "address" ? "Straße, Hausnummer, PLZ München..." :
