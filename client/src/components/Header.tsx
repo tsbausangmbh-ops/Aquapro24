@@ -129,13 +129,13 @@ export default function Header() {
               >
                 Über uns
               </Link>
-              <button
-                onClick={() => scrollToSection("#contact")}
+              <Link 
+                href="/kontakt"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="nav-kontakt"
               >
                 Kontakt
-              </button>
+              </Link>
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
@@ -211,13 +211,14 @@ export default function Header() {
               >
                 Über uns
               </Link>
-              <button
-                onClick={() => scrollToSection("#contact")}
+              <Link
+                href="/kontakt"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                 data-testid="nav-mobile-kontakt"
               >
                 Kontakt
-              </button>
+              </Link>
               <hr className="my-2 border-border" />
               <Button className="mt-2" asChild data-testid="button-call-mobile">
                 <a href="tel:+4989123456789">
