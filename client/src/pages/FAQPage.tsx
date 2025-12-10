@@ -136,7 +136,7 @@ export default function FAQPage() {
       />
       <Header />
       <main>
-        <section className="relative py-10 lg:pt-4 pb-6 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
+        <section className="relative py-10 lg:pt-6 pb-6 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
@@ -166,7 +166,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="pt-4 pb-6 lg:pt-4 lg:pb-8">
+        <section className="pt-6 pb-6 lg:pt-8 lg:pb-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
@@ -222,7 +222,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="py-6 lg:pt-4 pb-6 bg-muted/30">
+        <section className="py-6 lg:pt-6 pb-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
               <div>
@@ -243,7 +243,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="pt-4 pb-6 lg:pt-4 lg:pb-8">
+        <section className="pt-6 pb-6 lg:pt-8 lg:pb-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Noch Fragen?</h2>
