@@ -20,6 +20,8 @@ import {
   Star,
   ArrowRight
 } from "lucide-react";
+import bathroomImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
+import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
 
 const services = [
   {
@@ -134,19 +136,27 @@ export default function BadPage() {
                   ))}
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-8 text-secondary-foreground">
-                  <div className="absolute -top-3 -right-3">
+              <div className="relative space-y-4">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={bathroomImage1} 
+                    alt="Modernes Badezimmer nach Sanierung" 
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
                     <Badge className="bg-primary text-primary-foreground shadow-lg">
                       <Star className="w-3 h-3 mr-1" />
                       Top bewertet
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Warum wir?</h3>
-                  <ul className="space-y-3">
-                    {benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                </div>
+                <div className="bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-6 text-secondary-foreground">
+                  <h3 className="text-lg font-bold mb-3">Warum wir?</h3>
+                  <ul className="space-y-2">
+                    {benefits.slice(0, 4).map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}

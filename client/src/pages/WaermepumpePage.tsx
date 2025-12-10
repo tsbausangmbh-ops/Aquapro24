@@ -18,8 +18,11 @@ import {
   ShieldCheck,
   ArrowRight,
   Zap,
-  TrendingDown
+  TrendingDown,
+  Star
 } from "lucide-react";
+import heatPumpImage1 from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
+import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
 
 const services = [
   {
@@ -133,19 +136,27 @@ export default function WaermepumpePage() {
                   ))}
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-8 text-accent-foreground">
-                  <div className="absolute -top-3 -right-3">
+              <div className="relative space-y-4">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={heatPumpImage1} 
+                    alt="Wärmepumpe Installation" 
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
                     <Badge className="bg-secondary text-secondary-foreground shadow-lg">
                       <Zap className="w-3 h-3 mr-1" />
                       Energiewende
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Ihre Vorteile</h3>
-                  <ul className="space-y-3">
-                    {benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                </div>
+                <div className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-6 text-accent-foreground">
+                  <h3 className="text-lg font-bold mb-3">Ihre Vorteile</h3>
+                  <ul className="space-y-2">
+                    {benefits.slice(0, 4).map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}

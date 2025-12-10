@@ -20,8 +20,11 @@ import {
   Gauge,
   Clock,
   Shield,
-  Award
+  Award,
+  Star
 } from "lucide-react";
+import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
+import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
 
 export default function SanitaerPage() {
   const services = [
@@ -108,35 +111,67 @@ export default function SanitaerPage() {
       <main className="flex-1">
         <section className="relative py-16 md:py-24 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4">
-                <Droplets className="w-3 h-3 mr-1" />
-                Sanitär-Fachbetrieb München
-              </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Sanitärinstallation & Wasserinstallation München
-              </h1>
-              <p className="text-lg text-muted-foreground mb-4">
-                <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
-                Situationen und wissen, wie stressig sie sein können.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Als Münchner Meisterbetrieb mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
-                schnell, sauber und zum Festpreis. Stellen Sie sich vor: In wenigen Stunden ist alles 
-                repariert und Sie können sich wieder auf die wichtigen Dinge konzentrieren.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4989123456789" data-testid="button-call-sanitaer">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Jetzt anrufen
-                  </a>
-                </Button>
-                <Button size="lg" variant="secondary" asChild>
-                  <a href="mailto:info@sanitaer-muenchen.de" data-testid="button-email-sanitaer">
-                    Anfrage senden
-                  </a>
-                </Button>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <Badge variant="secondary" className="mb-4">
+                  <Droplets className="w-3 h-3 mr-1" />
+                  Sanitär-Fachbetrieb München
+                </Badge>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                  Sanitärinstallation & Wasserinstallation München
+                </h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                  <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
+                  Situationen und wissen, wie stressig sie sein können.
+                </p>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Als Münchner Meisterbetrieb mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
+                  schnell, sauber und zum Festpreis. Stellen Sie sich vor: In wenigen Stunden ist alles 
+                  repariert und Sie können sich wieder auf die wichtigen Dinge konzentrieren.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4989123456789" data-testid="button-call-sanitaer">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="secondary" asChild>
+                    <a href="mailto:info@sanitaer-muenchen.de" data-testid="button-email-sanitaer">
+                      Anfrage senden
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative space-y-4">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={plumberImage1} 
+                    alt="Professioneller Sanitär-Fachmann bei der Arbeit" 
+                    className="w-full h-72 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      <Star className="w-3 h-3 mr-1" />
+                      Meisterbetrieb
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-xl overflow-hidden shadow-lg">
+                    <img 
+                      src={plumberImage2} 
+                      alt="Sanitärinstallation in München" 
+                      className="w-full h-32 object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center">
+                    <div className="text-2xl font-bold text-secondary">20+ Jahre</div>
+                    <div className="text-sm text-muted-foreground">Erfahrung in München</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
