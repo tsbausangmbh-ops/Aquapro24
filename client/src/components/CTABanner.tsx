@@ -36,15 +36,16 @@ export default function CTABanner() {
           </Button>
           <Button 
             size="lg" 
-            className="bg-foreground hover:bg-foreground/90 text-background border-foreground gap-2"
+            variant="secondary"
+            className="gap-2"
             onClick={() => {
-              const chatButton = document.querySelector('[data-testid="button-chat-toggle"]') as HTMLButtonElement;
+              const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
               if (chatButton) chatButton.click();
             }}
             data-testid="button-callback-cta"
           >
             <Clock className="w-5 h-5" />
-            Rückruf anfordern
+            Rückruf bitte
           </Button>
         </div>
         

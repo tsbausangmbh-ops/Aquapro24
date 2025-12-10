@@ -1,0 +1,286 @@
+1. Art des Auftrags (Mehrfachauswahl)
+
+Neuinstallation
+
+Austausch
+
+Reparatur
+
+Modernisierung
+
+Notdienst / Wasser läuft
+
+Tropfleck / Rohrleitung undicht
+
+Verstopfung / Rückstau
+
+Warmwasserproblem
+
+Niedriger Wasserdruck
+
+Komplette Badinstallation
+
+Küche – Zu- & Abläufe
+
+Gewerbliche Installation
+
+Andere Tätigkeit (bitte beschreiben)
+
+2. Betroffene Bereiche / Sanitärobjekte (Mehrfachauswahl)
+Armaturen / Wasserobjekte
+
+Waschbeckenarmatur
+
+Duscharmatur (thermostatisch?)
+
+Badewannenarmatur
+
+Spülkasten (Aufputz / Unterputz)
+
+WC-Komplettanlage
+
+Bidet / Dusch-WC
+
+Küchenarmatur
+
+Außenzapfstelle
+
+Leitungen
+
+Kaltwasserleitung
+
+Warmwasserleitung
+
+Zirkulationsleitung
+
+Abwasserleitung
+
+Fallstrang (vertikal)
+
+Kellerleitung
+
+Steigleitung
+
+Versorgung aus Boiler / Durchlauferhitzer
+
+Geräte
+
+Warmwasserspeicher / Boiler
+
+Durchlauferhitzer
+
+Druckminderer
+
+Filteranlage / Hauswasserstation
+
+Hebeanlage
+
+Wasserenthärter
+
+3. Welche Symptome treten auf? (Mehrfachauswahl)
+Wasser / Leckage
+
+Tropft leicht
+
+Tropft stark
+
+Wasser läuft dauerhaft
+
+Wasser austretend (akut)
+
+Feuchtigkeit in Wand/Boden
+
+Verdacht auf Rohrbruch
+
+Druck & Durchfluss
+
+Kein Druck
+
+Niedriger Druck
+
+Warmwasser dauert lange
+
+Druckschwankungen
+
+Klopfgeräusche / Strömungsgeräusche
+
+Abwasser
+
+Verstopft
+
+Rückstau
+
+Langsamer Abfluss
+
+Geruchsbelastung
+
+Abfluss gluckert
+
+Warmwasser
+
+Kein Warmwasser
+
+Zu heiß / Kalt-Warm-Sprünge
+
+Warmwasserspeicher defekt
+
+Durchlauferhitzer problematisch
+
+4. Einbausituation (extrem wichtig für Angebotserstellung)
+
+Zugänglich
+
+Teilweise zugänglich
+
+Hinter Verkleidung (Fliesen, Trockenbau)
+
+Hinter Schrank/Küche
+
+Unterputz / Vorwandinstallation
+
+In Wand eingelassen (UP-Element)
+
+Rohr im Estrich
+
+Rohr im Schacht
+
+Rohr im Keller offen sichtbar
+
+Unbekannt
+
+5. Müssen Bauteile geöffnet werden?
+
+Nein
+
+Ja, Fliesen entfernen
+
+Ja, Trockenbau öffnen
+
+Ja, Möbel abbauen
+
+Ja, Rohrverkleidung entfernen
+
+Unklar
+
+6. Etage / Zugang
+
+Keller
+
+EG
+
+OG
+
+OG
+
+3+. OG
+
+Dachgeschoss
+
+Treppenhaus schmal
+
+Innenhof schwer zugänglich
+
+7. Art des Gebäudes
+
+Wohnung
+
+Einfamilienhaus
+
+Doppelhaushälfte
+
+Gewerbefläche
+
+Gastronomie
+
+Büro
+
+Altbau (vor 1970)
+
+Bestand (1970–2000)
+
+Neubau
+
+8. Wasserabsperrung möglich?
+
+Ja, Hauptabsperrventil frei zugänglich
+
+Ja, aber nur gesamt Haus
+
+Nein
+
+Unklar / erst vor Ort klärbar
+
+9. Rohrmaterial (falls bekannt)
+
+Kupfer
+
+Stahl verzinkt
+
+Edelstahl
+
+PEX / Mehrschichtverbund
+
+PVC / HT / KG
+
+Bleirohr (!! Altbau)
+
+Unbekannt
+
+10. Fotos / Videos hochladen
+
+Schadenstelle
+
+Gesamte Situation
+
+Leitungsführung
+
+Sanitärinstallation
+
+Raumübersicht
+
+11. Dringlichkeit
+
+Sofort (Wasser läuft)
+
+Heute noch
+
+Diese Woche
+
+Nicht dringend
+
+12. Zusatzarbeiten gewünscht?
+
+Silikon erneuern
+
+WC austauschen
+
+Armatur tauschen
+
+Ablauf reinigen
+
+Verdacht auf Rohrkorrosion prüfen
+
+Rückstauklappe prüfen
+
+Installation modernisieren
+
+13. Kontaktdaten
+
+Vorname
+
+Nachname
+
+Straße
+
+PLZ & Ort
+
+Telefonnummer
+
+E-Mail
+
+Wunschtermin
+
+💥 BONUS (für deine Website / Funnel automatisch einbauen)
+
+Transparenzhinweis Notdienst:
+„Unser Notdienst-Paket enthält Anfahrt + 1. Arbeitsstunde ab 129–169 € netto.“

@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import type { Server } from "http";
 import { storage } from "./storage";
+import { createCalendarEvent } from "./googleCalendar";
 
 export async function registerRoutes(server: Server, app: Express): Promise<void> {
   app.post("/api/leads", async (req, res) => {
@@ -11,7 +12,7 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
         name: leadData.name,
         phone: leadData.phone,
         email: leadData.email,
-        problem: leadData.problem,
+        problem: leadData.problem || leadData.serviceTypes?.join(', ') || '',
         address: leadData.address,
         urgency: leadData.urgency,
         source: leadData.source || "website",
@@ -19,7 +20,25 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
         createdAt: new Date(),
       });
       
-      res.json({ success: true, id: lead.id });
+      let calendarEventId = null;
+      try {
+        calendarEventId = await createCalendarEvent({
+          name: leadData.name,
+          phone: leadData.phone,
+          email: leadData.email,
+          address: leadData.address,
+          serviceTypes: leadData.serviceTypes || [],
+          urgency: leadData.urgency,
+          isEmergency: leadData.isEmergency,
+          description: leadData.description,
+          preferredTime: leadData.preferredTime,
+          estimatedPrice: leadData.estimatedPrice,
+        });
+      } catch (calendarError) {
+        console.error("Failed to create calendar event:", calendarError);
+      }
+      
+      res.json({ success: true, id: lead.id, calendarEventId });
     } catch (error) {
       console.error("Error creating lead:", error);
       res.status(500).json({ success: false, error: "Failed to create lead" });
