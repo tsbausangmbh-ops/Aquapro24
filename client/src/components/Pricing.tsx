@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { 
   Check, 
-  Phone, 
   Clock, 
   Shield,
   AlertCircle,
@@ -15,7 +15,12 @@ import {
   Send,
   Loader2,
   CheckCircle2,
-  Mail
+  Calendar,
+  User,
+  Phone,
+  Mail,
+  ArrowRight,
+  Sparkles
 } from "lucide-react";
 
 const pricingInfo = [
@@ -79,34 +84,91 @@ function estimatePrice(problemDescription: string): { service: string; minPrice:
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
-type FormStep = "problem" | "contact" | "submitting" | "complete";
+type FormStep = "welcome" | "problem" | "appointment" | "contact" | "submitting" | "complete";
+
+function generateTimeSlots() {
+  const slots: string[] = [];
+  for (let hour = 8; hour <= 18; hour++) {
+    slots.push(`${hour.toString().padStart(2, '0')}:00`);
+    if (hour < 18) {
+      slots.push(`${hour.toString().padStart(2, '0')}:30`);
+    }
+  }
+  return slots;
+}
+
+function generateAvailableDates() {
+  const dates: { value: string; label: string }[] = [];
+  const today = new Date();
+  const weekdays = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  
+  for (let i = 1; i <= 14; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+    
+    if (date.getDay() !== 0) {
+      const day = date.getDate().toString().padStart(2, '0');
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      const weekday = weekdays[date.getDay()];
+      
+      dates.push({
+        value: `${date.getFullYear()}-${month}-${day}`,
+        label: `${weekday}, ${day}.${month}.`,
+      });
+    }
+  }
+  
+  return dates;
+}
 
 export default function Pricing() {
-  const [step, setStep] = useState<FormStep>("problem");
+  const [step, setStep] = useState<FormStep>("welcome");
   const [problem, setProblem] = useState("");
   const [priceResult, setPriceResult] = useState<{ service: string; minPrice: number; maxPrice: number } | null>(null);
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+
+  const availableDates = useMemo(() => generateAvailableDates(), []);
+  const timeSlots = useMemo(() => generateTimeSlots(), []);
+
+  const handleStartChat = () => {
+    setStep("problem");
+  };
 
   const handleProblemSubmit = () => {
     if (!problem.trim()) return;
     const estimate = estimatePrice(problem);
     setPriceResult(estimate || { service: "Allgemeine Arbeiten", minPrice: 96, maxPrice: 240 });
+    setStep("appointment");
+  };
+
+  const handleAppointmentSubmit = () => {
+    if (!selectedDate || !selectedTime) return;
     setStep("contact");
   };
 
   const handleContactSubmit = async () => {
-    if (!name.trim() || !phone.trim()) return;
+    if (!name.trim() || !phone.trim() || !address.trim()) return;
     setStep("submitting");
+
+    const selectedDateObj = availableDates.find(d => d.value === selectedDate);
+    const appointmentDisplay = selectedDateObj ? `${selectedDateObj.label} um ${selectedTime} Uhr` : `${selectedDate} ${selectedTime}`;
 
     const payload = {
       name,
       phone,
       email,
+      address,
       problem,
       estimatedPrice: priceResult ? `${priceResult.service}: ca. ${priceResult.minPrice} - ${priceResult.maxPrice} EUR` : "Wird ermittelt",
-      source: "website_price_calculator",
+      appointmentDate: selectedDate,
+      appointmentTime: selectedTime,
+      appointmentDisplay,
+      source: "website_ai_booking",
       timestamp: new Date().toISOString(),
       page_url: window.location.href,
     };
@@ -142,12 +204,20 @@ export default function Pricing() {
   };
 
   const resetForm = () => {
-    setStep("problem");
+    setStep("welcome");
     setProblem("");
     setPriceResult(null);
+    setSelectedDate("");
+    setSelectedTime("");
     setName("");
     setPhone("");
     setEmail("");
+    setAddress("");
+  };
+
+  const getSelectedDateLabel = () => {
+    const found = availableDates.find(d => d.value === selectedDate);
+    return found ? found.label : "";
   };
 
   return (
@@ -213,40 +283,57 @@ export default function Pricing() {
                 </ul>
               </div>
               
-              <div className="space-y-4">
-                <div className="bg-muted/50 rounded-xl p-6 text-center">
-                  <p className="text-sm text-muted-foreground mb-2">Jetzt unverbindlich anfragen</p>
-                  <p className="text-2xl font-bold mb-4">
-                    Kostenloses Angebot
-                  </p>
-                  <Button size="lg" className="w-full gap-2 mb-3" asChild data-testid="button-call-pricing">
-                    <a href="tel:+4989123456789">
-                      <Phone className="w-5 h-5" />
-                      089 123 456 789
-                    </a>
-                  </Button>
-                  <p className="text-xs text-muted-foreground">
-                    Oder schreiben Sie uns eine E-Mail an info@muenchner-sanitaer.de
-                  </p>
-                </div>
-
-                <div className="bg-secondary/5 border-2 border-secondary/30 rounded-xl p-5">
+              <div className="bg-secondary/5 border-2 border-secondary/30 rounded-xl p-5">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-secondary-foreground" />
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                      <Bot className="w-5 h-5 text-secondary-foreground" />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">KI-Preisrechner</p>
-                      <p className="text-xs text-muted-foreground">Sofort Preis-Schätzung erhalten</p>
+                      <p className="font-semibold">KI-Terminassistent</p>
+                      <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span>Online - Antworten in Sekunden</span>
+                      </div>
                     </div>
                   </div>
 
+                  {step === "welcome" && (
+                    <div className="space-y-4">
+                      <div className="bg-card rounded-lg p-4 border border-card-border">
+                        <p className="text-sm">
+                          Hallo! Ich bin Ihr virtueller Assistent. Ich helfe Ihnen gerne bei:
+                        </p>
+                        <ul className="text-sm text-muted-foreground mt-2 space-y-1">
+                          <li className="flex items-center gap-2">
+                            <Sparkles className="w-3 h-3 text-secondary" />
+                            Sofortige Preisschätzung
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <Calendar className="w-3 h-3 text-secondary" />
+                            Direkte Terminbuchung
+                          </li>
+                        </ul>
+                      </div>
+                      <Button 
+                        onClick={handleStartChat}
+                        className="w-full gap-2"
+                        data-testid="button-start-chat"
+                      >
+                        <Send className="w-4 h-4" />
+                        Jetzt Anfrage starten
+                      </Button>
+                    </div>
+                  )}
+
                   {step === "problem" && (
                     <div className="space-y-3">
+                      <div className="bg-card rounded-lg p-3 border border-card-border">
+                        <p className="text-sm">Was kann ich für Sie tun? Beschreiben Sie Ihr Anliegen:</p>
+                      </div>
                       <Textarea
                         value={problem}
                         onChange={(e) => setProblem(e.target.value)}
-                        placeholder="Beschreiben Sie Ihr Anliegen, z.B. 'Neue Dusche im Bad installieren' oder 'Wasserhahn tropft'..."
+                        placeholder="z.B. 'Neue Dusche installieren', 'Bad komplett sanieren', 'Wasserhahn tropft'..."
                         className="min-h-20 text-sm resize-none"
                         data-testid="input-problem-description"
                       />
@@ -256,55 +343,132 @@ export default function Pricing() {
                         className="w-full gap-2"
                         data-testid="button-get-price"
                       >
-                        <Send className="w-4 h-4" />
-                        Preis berechnen
+                        <ArrowRight className="w-4 h-4" />
+                        Weiter zur Preisschätzung
                       </Button>
                     </div>
                   )}
 
-                  {step === "contact" && priceResult && (
+                  {step === "appointment" && priceResult && (
                     <div className="space-y-4">
-                      <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 text-center">
-                        <p className="text-xs text-muted-foreground mb-1">Geschätzte Kosten für</p>
-                        <p className="font-semibold text-secondary">{priceResult.service}</p>
-                        <p className="text-2xl font-bold text-foreground mt-1" data-testid="text-estimated-price">
+                      <div className="bg-accent/10 border border-accent/30 rounded-lg p-3 text-center">
+                        <p className="text-xs text-muted-foreground mb-1">Geschätzte Kosten für {priceResult.service}</p>
+                        <p className="text-xl font-bold text-foreground" data-testid="text-estimated-price">
                           ca. {priceResult.minPrice} - {priceResult.maxPrice} EUR
                         </p>
-                        <p className="text-xs text-muted-foreground mt-1">inkl. Anfahrt im Stadtgebiet München</p>
+                        <p className="text-xs text-muted-foreground">inkl. Anfahrt München</p>
+                      </div>
+                      
+                      <div className="bg-card rounded-lg p-3 border border-card-border">
+                        <p className="text-sm">Super! Wann passt Ihnen ein Termin?</p>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-2">
+                        <Select value={selectedDate} onValueChange={setSelectedDate}>
+                          <SelectTrigger className="text-sm" data-testid="select-date">
+                            <SelectValue placeholder="Tag wählen" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {availableDates.map((date) => (
+                              <SelectItem key={date.value} value={date.value}>
+                                {date.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        
+                        <Select value={selectedTime} onValueChange={setSelectedTime}>
+                          <SelectTrigger className="text-sm" data-testid="select-time">
+                            <SelectValue placeholder="Uhrzeit" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {timeSlots.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time} Uhr
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      
+                      <Button 
+                        onClick={handleAppointmentSubmit}
+                        disabled={!selectedDate || !selectedTime}
+                        className="w-full gap-2"
+                        data-testid="button-confirm-appointment"
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                        Termin bestätigen
+                      </Button>
+                    </div>
+                  )}
+
+                  {step === "contact" && (
+                    <div className="space-y-4">
+                      <div className="bg-accent/10 border border-accent/30 rounded-lg p-3">
+                        <div className="flex items-center gap-2 text-sm">
+                          <Calendar className="w-4 h-4 text-accent" />
+                          <span className="font-medium">{getSelectedDateLabel()} um {selectedTime} Uhr</span>
+                        </div>
+                        {priceResult && (
+                          <p className="text-xs text-muted-foreground mt-1">
+                            {priceResult.service}: ca. {priceResult.minPrice} - {priceResult.maxPrice} EUR
+                          </p>
+                        )}
+                      </div>
+                      
+                      <div className="bg-card rounded-lg p-3 border border-card-border">
+                        <p className="text-sm">Fast geschafft! Noch Ihre Kontaktdaten:</p>
                       </div>
                       
                       <div className="space-y-2">
-                        <Input
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          placeholder="Ihr Name"
-                          className="text-sm"
-                          data-testid="input-name"
-                        />
-                        <Input
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          placeholder="Telefonnummer"
-                          className="text-sm"
-                          data-testid="input-phone"
-                        />
-                        <Input
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="E-Mail (optional)"
-                          className="text-sm"
-                          data-testid="input-email"
+                        <div className="relative">
+                          <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                          <Input
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="Ihr Name"
+                            className="text-sm pl-9"
+                            data-testid="input-name"
+                          />
+                        </div>
+                        <div className="relative">
+                          <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                          <Input
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            placeholder="Telefonnummer"
+                            className="text-sm pl-9"
+                            data-testid="input-phone"
+                          />
+                        </div>
+                        <div className="relative">
+                          <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                          <Input
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="E-Mail (optional)"
+                            className="text-sm pl-9"
+                            data-testid="input-email"
+                          />
+                        </div>
+                        <Textarea
+                          value={address}
+                          onChange={(e) => setAddress(e.target.value)}
+                          placeholder="Ihre Adresse (Straße, Hausnummer, PLZ München)"
+                          className="text-sm min-h-16 resize-none"
+                          data-testid="input-address"
                         />
                       </div>
                       
                       <Button 
                         onClick={handleContactSubmit}
-                        disabled={!name.trim() || !phone.trim()}
+                        disabled={!name.trim() || !phone.trim() || !address.trim()}
                         className="w-full gap-2"
-                        data-testid="button-submit-contact"
+                        data-testid="button-submit-booking"
                       >
-                        <Mail className="w-4 h-4" />
-                        Unverbindliches Angebot anfordern
+                        <CheckCircle2 className="w-4 h-4" />
+                        Termin verbindlich buchen
                       </Button>
                       
                       <button 
@@ -312,27 +476,32 @@ export default function Pricing() {
                         className="w-full text-xs text-muted-foreground hover:text-foreground transition-colors"
                         data-testid="button-reset-form"
                       >
-                        Andere Anfrage stellen
+                        Abbrechen
                       </button>
                     </div>
                   )}
 
                   {step === "submitting" && (
-                    <div className="flex items-center justify-center gap-2 py-8">
-                      <Loader2 className="w-5 h-5 animate-spin text-secondary" />
-                      <span className="text-sm">Anfrage wird gesendet...</span>
+                    <div className="flex flex-col items-center justify-center gap-3 py-8">
+                      <Loader2 className="w-8 h-8 animate-spin text-secondary" />
+                      <span className="text-sm">Termin wird gebucht...</span>
                     </div>
                   )}
 
                   {step === "complete" && (
-                    <div className="text-center py-4 space-y-3">
-                      <div className="flex items-center justify-center gap-2 text-accent">
-                        <CheckCircle2 className="w-6 h-6" />
-                        <span className="font-semibold">Anfrage gesendet!</span>
+                    <div className="text-center py-4 space-y-4">
+                      <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto">
+                        <CheckCircle2 className="w-8 h-8 text-accent" />
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Wir melden uns schnellstmöglich bei Ihnen.
-                      </p>
+                      <div>
+                        <p className="font-semibold text-lg">Termin gebucht!</p>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {getSelectedDateLabel()} um {selectedTime} Uhr
+                        </p>
+                      </div>
+                      <div className="bg-card rounded-lg p-3 border border-card-border text-sm text-left">
+                        <p>Wir haben Ihre Buchung erhalten und melden uns in Kürze zur Bestätigung bei Ihnen.</p>
+                      </div>
                       <Button 
                         onClick={resetForm}
                         variant="outline"
@@ -344,7 +513,6 @@ export default function Pricing() {
                     </div>
                   )}
                 </div>
-              </div>
             </div>
           </CardContent>
         </Card>
