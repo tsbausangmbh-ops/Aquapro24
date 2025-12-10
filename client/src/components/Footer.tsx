@@ -1,4 +1,5 @@
-import { Wrench, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Wrench, Mail, Phone, MapPin, Clock, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const footerLinks = {
   services: {
@@ -90,6 +91,17 @@ export default function Footer() {
                 <span className="text-background/70">24/7 Notdienst erreichbar</span>
               </div>
             </div>
+            <Button 
+              className="mt-6 bg-blue-800 hover:bg-blue-900 text-white border-blue-700"
+              onClick={() => {
+                const chatButton = document.querySelector('[data-testid="button-chat-toggle"]') as HTMLButtonElement;
+                if (chatButton) chatButton.click();
+              }}
+              data-testid="button-callback-footer"
+            >
+              <PhoneCall className="w-4 h-4 mr-2" />
+              Rückruf anfordern
+            </Button>
           </div>
           
           {Object.entries(footerLinks).map(([key, section]) => (
