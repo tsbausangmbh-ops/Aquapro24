@@ -180,7 +180,7 @@ export default function KontaktPage() {
                 <Card>
                   <CardContent className="p-6">
                     <form onSubmit={handleSubmit} className="space-y-5">
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                           <Label htmlFor="name">Name *</Label>
                           <Input
@@ -382,7 +382,7 @@ export default function KontaktPage() {
                 Zentral gelegen - schnell bei Ihnen
               </p>
             </div>
-            <div className="grid lg:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-6">
               <Card>
                 <CardContent className="p-0 overflow-hidden rounded-lg">
                   <iframe
@@ -466,7 +466,7 @@ export default function KontaktPage() {
             </div>
             <Card>
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <Building className="w-5 h-5 text-muted-foreground mt-0.5" />
@@ -501,7 +501,7 @@ export default function KontaktPage() {
                   </div>
                 </div>
                 <div className="border-t mt-8 pt-6 text-sm text-muted-foreground">
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-3 gap-6">
                     <div>
                       <span className="font-medium text-foreground">Handelsregister:</span> HRB 123456
                     </div>

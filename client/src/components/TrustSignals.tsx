@@ -75,7 +75,7 @@ export default function TrustSignals({
     return (
       <div className="py-6 bg-primary" data-testid="section-trust-signals-compact">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-6">
             {signals.map((signal, index) => (
               <div key={index} className="text-center group cursor-default">
                 <div className="text-2xl md:text-3xl font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-110">{signal.value}</div>

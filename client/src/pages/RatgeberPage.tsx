@@ -300,7 +300,7 @@ export default function RatgeberPage() {
             className={`pt-8 pb-4 lg:pt-10 lg:pb-6 ${guideIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
           >
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
-              <div className="grid lg:grid-cols-3 gap-4 mb-4">
+              <div className="grid lg:grid-cols-3 gap-6 mb-4">
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">

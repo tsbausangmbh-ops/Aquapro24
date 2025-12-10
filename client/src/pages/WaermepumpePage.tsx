@@ -240,7 +240,7 @@ export default function WaermepumpePage() {
 
         <section className="pt-8 pb-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-4 text-center">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="space-y-2">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
                   <TrendingDown className="w-8 h-8 text-accent" />

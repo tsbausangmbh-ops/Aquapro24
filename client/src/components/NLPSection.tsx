@@ -39,7 +39,7 @@ export default function NLPSection({
           </div>
         )}
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-red-50 dark:bg-red-950/20 rounded-lg p-6 border border-red-200 dark:border-red-900/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle className="w-5 h-5 text-red-600 dark:text-red-400" />

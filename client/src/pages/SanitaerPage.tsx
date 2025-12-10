@@ -158,7 +158,7 @@ export default function SanitaerPage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-6">
                   <div className="rounded-xl overflow-hidden shadow-lg">
                     <img 
                       src={plumberImage2} 

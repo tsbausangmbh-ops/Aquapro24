@@ -35,7 +35,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 items-start">
+        <div className="grid md:grid-cols-2 gap-6 items-start">
           <div>
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-primary" />
