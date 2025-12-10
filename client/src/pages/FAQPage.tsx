@@ -25,8 +25,8 @@ const pricingCategories = [
     icon: Wrench,
     title: "Sanitär-Reparaturen",
     items: [
-      { service: "Wasserhahn Reparatur", price: "ab 89€" },
-      { service: "Tropfender Wasserhahn", price: "ab 69€" },
+      { service: "Wasserhahn Reparatur", price: "ab 185€" },
+      { service: "Tropfender Wasserhahn", price: "ab 185€" },
       { service: "WC-Spülung Reparatur", price: "ab 79€" },
       { service: "Siphon austauschen", price: "ab 59€" },
       { service: "Abfluss reinigen", price: "ab 89€" },
