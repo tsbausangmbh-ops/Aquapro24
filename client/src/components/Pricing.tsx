@@ -241,9 +241,9 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-10 lg:py-14">
+    <section id="pricing" className="py-4 lg:py-6">
       <div className="max-w-5xl mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
             <Shield className="w-3 h-3 mr-1" />
             Festpreis-Garantie München

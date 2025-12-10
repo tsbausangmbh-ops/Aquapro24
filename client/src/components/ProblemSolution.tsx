@@ -51,9 +51,9 @@ const solutions = [
 
 export default function ProblemSolution() {
   return (
-    <section id="about" className="py-6 lg:py-8">
+    <section id="about" className="py-3 lg:py-4">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
             Ihr Traumbad wartet – wir machen es Wirklichkeit
           </h2>
