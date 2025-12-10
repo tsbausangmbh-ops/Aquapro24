@@ -278,14 +278,27 @@ export default function Pricing() {
                 <p className="text-sm text-muted-foreground mb-3">{item.note}</p>
                 {item.packageContents && (
                   <div className="text-left mt-4 pt-4 border-t border-border">
-                    <p className="text-xs font-semibold text-muted-foreground mb-2">Paket enthält:</p>
-                    <ul className="space-y-1.5">
-                      {item.packageContents.map((content, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs">
-                          <Check className="w-3 h-3 text-accent mt-0.5 flex-shrink-0" />
-                          <span>{content}</span>
-                        </li>
-                      ))}
+                    <p className="text-xs font-semibold text-muted-foreground mb-3">
+                      {item.isHighlighted ? "Paket enthält:" : "Staffelung:"}
+                    </p>
+                    <ul className="space-y-2">
+                      {item.packageContents.map((content, i) => {
+                        const parts = content.split(": ");
+                        const hasPrice = parts.length === 2;
+                        return (
+                          <li key={i} className="flex items-start gap-2 text-xs">
+                            <Check className="w-3 h-3 text-accent mt-0.5 flex-shrink-0" />
+                            {hasPrice ? (
+                              <span className="flex justify-between w-full gap-2">
+                                <span className="text-muted-foreground">{parts[0]}</span>
+                                <span className="font-semibold text-foreground whitespace-nowrap">{parts[1]}</span>
+                              </span>
+                            ) : (
+                              <span>{content}</span>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 )}
