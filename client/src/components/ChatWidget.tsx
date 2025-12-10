@@ -600,34 +600,31 @@ export default function ChatWidget() {
         </div>
       )}
       
-      <Button
-        onClick={toggleChat}
-        className={`fixed bottom-4 right-4 z-50 w-14 h-14 rounded-full shadow-xl ${
-          isOpen ? "bg-muted text-muted-foreground" : "bg-primary"
-        }`}
-        size="icon"
-        data-testid="button-toggle-chat"
-      >
-        {isOpen ? (
+      {isOpen ? (
+        <Button
+          onClick={toggleChat}
+          className="fixed bottom-4 right-4 z-50 w-14 h-14 rounded-full shadow-xl bg-muted text-muted-foreground"
+          size="icon"
+          data-testid="button-toggle-chat"
+        >
           <X className="w-6 h-6" />
-        ) : (
-          <>
-            <MessageCircle className="w-6 h-6" />
-            {showPulse && (
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-destructive rounded-full animate-ping" />
-            )}
-          </>
-        )}
-      </Button>
-      
-      {!isOpen && showPulse && (
-        <div className="fixed bottom-20 right-4 z-40 bg-card border border-card-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
-          <p className="text-sm">
-            <span className="font-semibold">Jetzt online Termin buchen</span>
-            <br />
-            <span className="text-muted-foreground">Preisschätzung in 2 Minuten!</span>
-          </p>
-        </div>
+        </Button>
+      ) : (
+        <button
+          onClick={toggleChat}
+          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 bg-primary text-primary-foreground px-3 py-4 rounded-l-lg shadow-2xl hover:px-4 transition-all duration-300 group"
+          data-testid="button-toggle-chat"
+        >
+          {showPulse && (
+            <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full animate-ping" />
+          )}
+          <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full" />
+          <MessageCircle className="w-6 h-6" />
+          <span className="writing-mode-vertical text-sm font-bold tracking-wide whitespace-nowrap" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+            Online Buchung
+          </span>
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+        </button>
       )}
     </>
   );
