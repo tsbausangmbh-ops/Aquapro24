@@ -669,7 +669,7 @@ export default function ChatWidget() {
       ) : (
         <button
           onClick={toggleChat}
-          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 bg-primary text-primary-foreground px-3 py-4 rounded-l-lg shadow-2xl hover:px-4 transition-all duration-300 group"
+          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 bg-secondary text-secondary-foreground px-3 py-4 rounded-l-lg shadow-2xl hover:px-4 transition-all duration-300 group"
           data-testid="button-toggle-chat"
         >
           {showPulse && (
