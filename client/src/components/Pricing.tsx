@@ -37,10 +37,18 @@ const pricingInfo = [
     icon: Euro,
   },
   {
-    title: "Notdienst-Zuschlag",
-    price: "ab 30 €",
-    note: "Abends/Wochenende",
+    title: "Notdienst-Paket",
+    price: "199 €",
+    note: "Anfahrt + 1. Arbeitsstunde",
     icon: AlertCircle,
+    isPackage: true,
+    packageContents: [
+      "Anfahrt",
+      "Komplette erste Arbeitsstunde vor Ort",
+      "Störungsanalyse",
+      "Sofortige Ersthilfe / Reparaturversuch",
+      "Materialeinsatz nach Verbrauch (separat)",
+    ],
   },
 ];
 
@@ -241,10 +249,10 @@ export default function Pricing() {
         
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {pricingInfo.map((item, index) => (
-            <Card key={index} className="text-center">
+            <Card key={index} className={`text-center ${item.isPackage ? 'border-2 border-primary/30 bg-primary/5' : ''}`}>
               <CardHeader>
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-2">
-                  <item.icon className="w-6 h-6 text-secondary" />
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 ${item.isPackage ? 'bg-primary/20' : 'bg-secondary/10'}`}>
+                  <item.icon className={`w-6 h-6 ${item.isPackage ? 'text-primary' : 'text-secondary'}`} />
                 </div>
                 <CardTitle className="text-base font-medium text-muted-foreground">
                   {item.title}
@@ -254,7 +262,20 @@ export default function Pricing() {
                 <p className="text-3xl font-bold text-foreground mb-1" data-testid={`text-price-${index}`}>
                   {item.price}
                 </p>
-                <p className="text-sm text-muted-foreground">{item.note}</p>
+                <p className="text-sm text-muted-foreground mb-3">{item.note}</p>
+                {item.packageContents && (
+                  <div className="text-left mt-4 pt-4 border-t border-border">
+                    <p className="text-xs font-semibold text-muted-foreground mb-2">Paket enthält:</p>
+                    <ul className="space-y-1.5">
+                      {item.packageContents.map((content, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs">
+                          <Check className="w-3 h-3 text-accent mt-0.5 flex-shrink-0" />
+                          <span>{content}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
