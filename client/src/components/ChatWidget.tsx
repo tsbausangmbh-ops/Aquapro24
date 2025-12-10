@@ -31,6 +31,7 @@ interface LeadData {
   address: string;
   urgency: string;
   urgencyLabel: string;
+  estimatedPrice: string;
 }
 
 type ChatStep = "greeting" | "name" | "phone" | "email" | "problem" | "address" | "urgency" | "confirm" | "complete";
@@ -43,6 +44,39 @@ const urgencyOptions = [
   { value: "week", label: "Diese Woche" },
   { value: "planning", label: "Nur Planung / Angebot" },
 ];
+
+const priceEstimates: { keywords: string[]; service: string; minPrice: number; maxPrice: number }[] = [
+  { keywords: ["heizung", "heizkörper", "thermostat", "heizungsausfall", "kalt", "warm"], service: "Heizungsreparatur", minPrice: 95, maxPrice: 250 },
+  { keywords: ["rohrbruch", "wasserrohr", "rohr", "leck", "undicht", "wasser"], service: "Rohrbruch-Reparatur", minPrice: 120, maxPrice: 350 },
+  { keywords: ["verstopf", "abfluss", "toilette", "wc", "klo", "verstopfung"], service: "Rohrreinigung", minPrice: 85, maxPrice: 180 },
+  { keywords: ["wasserhahn", "armatur", "tropf", "mischbatterie"], service: "Armaturenreparatur", minPrice: 75, maxPrice: 150 },
+  { keywords: ["boiler", "warmwasser", "durchlauferhitzer", "speicher"], service: "Warmwasseranlage", minPrice: 110, maxPrice: 280 },
+  { keywords: ["gas", "gasleitung", "gasgeruch"], service: "Gasinstallation", minPrice: 130, maxPrice: 320 },
+  { keywords: ["bad", "dusche", "badewanne", "sanitär"], service: "Sanitärarbeiten", minPrice: 90, maxPrice: 220 },
+  { keywords: ["wartung", "inspektion", "check"], service: "Wartung", minPrice: 85, maxPrice: 150 },
+];
+
+const MARKUP = 1.20;
+
+function estimatePrice(problemDescription: string): { service: string; minPrice: number; maxPrice: number } | null {
+  const lowerProblem = problemDescription.toLowerCase();
+  
+  for (const estimate of priceEstimates) {
+    if (estimate.keywords.some(keyword => lowerProblem.includes(keyword))) {
+      return {
+        service: estimate.service,
+        minPrice: Math.round(estimate.minPrice * MARKUP),
+        maxPrice: Math.round(estimate.maxPrice * MARKUP),
+      };
+    }
+  }
+  
+  return {
+    service: "Allgemeine Reparatur",
+    minPrice: Math.round(80 * MARKUP),
+    maxPrice: Math.round(200 * MARKUP),
+  };
+}
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +91,7 @@ export default function ChatWidget() {
     address: "",
     urgency: "",
     urgencyLabel: "",
+    estimatedPrice: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
@@ -69,6 +104,7 @@ export default function ChatWidget() {
     address: "",
     urgency: "",
     urgencyLabel: "",
+    estimatedPrice: "",
   });
 
   const scrollToBottom = () => {
@@ -152,10 +188,20 @@ export default function ChatWidget() {
         break;
 
       case "problem":
-        leadDataRef.current = { ...leadDataRef.current, problem: userInput };
+        const priceEstimate = estimatePrice(userInput);
+        const estimatedPriceText = priceEstimate 
+          ? `${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR`
+          : "Wird vor Ort ermittelt";
+        
+        leadDataRef.current = { ...leadDataRef.current, problem: userInput, estimatedPrice: estimatedPriceText };
         setLeadData(leadDataRef.current);
+        
+        const priceMessage = priceEstimate 
+          ? `\n\nGeschätzte Kosten für ${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR (inkl. Anfahrt im Stadtgebiet München). Der genaue Preis wird vor Ort nach Diagnose festgelegt.`
+          : "";
+        
         addBotMessage(
-          "Verstehe. An welcher Adresse sollen wir vorbeikommen?"
+          `Verstehe, ${leadDataRef.current.name}.${priceMessage}\n\nAn welcher Adresse sollen wir vorbeikommen?`
         );
         setCurrentStep("address");
         break;
@@ -180,6 +226,7 @@ export default function ChatWidget() {
           `Vielen Dank für Ihre Angaben, ${currentData.name}!\n\n` +
           `Zusammenfassung:\n` +
           `- Problem: ${currentData.problem}\n` +
+          `- Geschätzte Kosten: ${currentData.estimatedPrice}\n` +
           `- Adresse: ${currentData.address}\n` +
           `- Dringlichkeit: ${currentData.urgencyLabel}\n` +
           `- Telefon: ${currentData.phone}\n\n` +
