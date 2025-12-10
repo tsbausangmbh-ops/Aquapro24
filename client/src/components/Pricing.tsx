@@ -562,26 +562,34 @@ export default function Pricing() {
                     </div>
                   )}
                   
-                  <div className="mt-4 pt-4 border-t border-border/50">
-                    <p className="text-xs text-muted-foreground text-center mb-3">
-                      Lieber schriftlich? Kein Problem – viele unserer Kunden schätzen den Überblick einer E-Mail-Anfrage.
-                    </p>
-                    <Button 
-                      variant="outline"
-                      size="sm"
-                      className="w-full gap-2"
-                      onClick={() => window.location.href = 'mailto:info@sanitaer-muenchen.de?subject=Anfrage%20Sanitär%20Service'}
-                      data-testid="button-email-inquiry"
-                    >
-                      <Mail className="w-4 h-4" />
-                      Per E-Mail anfragen
-                    </Button>
-                    <p className="text-xs text-muted-foreground text-center mt-2">
-                      Wir antworten in der Regel innerhalb von 2 Stunden
-                    </p>
                   </div>
-                </div>
             </div>
+          </CardContent>
+        </Card>
+        
+        <Card className="mt-4 bg-muted/30 border-muted">
+          <CardContent className="p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Mail className="w-4 h-4 text-primary" />
+              </div>
+              <p className="font-medium text-sm">E-Mail Anfrage</p>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Lieber schriftlich? Kein Problem – viele unserer Kunden schätzen den Überblick einer E-Mail-Anfrage.
+            </p>
+            <Button 
+              variant="outline"
+              className="w-full gap-2"
+              onClick={() => window.location.href = 'mailto:info@sanitaer-muenchen.de?subject=Anfrage%20Sanitär%20Service'}
+              data-testid="button-email-inquiry"
+            >
+              <Mail className="w-4 h-4" />
+              Per E-Mail anfragen
+            </Button>
+            <p className="text-xs text-muted-foreground text-center mt-3">
+              Wir antworten in der Regel innerhalb von 2 Stunden
+            </p>
           </CardContent>
         </Card>
       </div>
