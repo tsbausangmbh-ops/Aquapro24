@@ -33,16 +33,19 @@ export default function Hero() {
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
-              Heizung ausgefallen?{" "}
-              <span className="text-secondary">Rohrbruch?</span>{" "}
-              <span className="block mt-1">Wir sind in 30 Minuten da.</span>
+              Heizung & Sanitär Notdienst München:{" "}
+              <span className="text-secondary">In 30 Minuten bei Ihnen</span>{" "}
+              <span className="block mt-1">– 24/7, auch jetzt.</span>
             </h1>
             
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
+            <h2 className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
               <span className="text-foreground font-medium">Stellen Sie sich vor:</span> In einer Stunde ist Ihre Heizung repariert, 
-              das Wasser gestoppt, der Stress vorbei.{" "}
-              <strong className="text-foreground">Keine Abzocke, keine versteckten Kosten</strong> – 
-              wie schon über 2.500 zufriedene Münchner Familien wissen.
+              das Wasser gestoppt, Ihre Familie wieder warm und sicher.
+            </h2>
+            
+            <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
+              <strong className="text-foreground">Über 2.500 Münchner Familien</strong> vertrauen bereits unserem Meisterbetrieb – 
+              mit Festpreis-Garantie, ohne versteckte Kosten. Wenn Sie uns jetzt anrufen, beginnt Ihre Lösung sofort.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3">
@@ -91,7 +94,7 @@ export default function Hero() {
                 </Badge>
               </div>
               
-              <h3 className="text-xl font-bold mb-6">Schnelle Hilfe bei:</h3>
+              <h3 className="text-xl font-bold mb-6">Sofort-Hilfe für München & Umland:</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4 bg-white/10 rounded-lg p-4">

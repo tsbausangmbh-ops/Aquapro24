@@ -66,10 +66,13 @@ export default function Testimonials() {
             ))}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Das sagen Münchner über uns
+            München spricht über uns: 4.9 Sterne im Heizung & Sanitär Notdienst
           </h2>
+          <h3 className="text-xl text-foreground font-medium mb-2">
+            Wenn Sie sich anschließen, endet Ihr Notfall genauso schnell
+          </h3>
           <p className="text-lg text-muted-foreground mb-4">
-            <span className="text-foreground font-bold text-xl">2.547</span> zufriedene Kunden in München vertrauen uns.
+            <span className="text-foreground font-bold text-xl">2.547</span> zufriedene Kunden in München, Schwabing, Bogenhausen & Sendling vertrauen uns bereits.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <Badge variant="secondary" className="gap-1">
@@ -78,7 +81,7 @@ export default function Testimonials() {
             </Badge>
             <Badge variant="outline" className="gap-1">
               <CheckCircle2 className="w-3 h-3" />
-              Verifizierte Kundenbewertungen
+              Echte Stimmen, echte Adressen – prüfen Sie jeden Stadtteil
             </Badge>
           </div>
         </div>

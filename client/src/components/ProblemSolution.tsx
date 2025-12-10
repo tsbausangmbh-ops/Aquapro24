@@ -55,20 +55,23 @@ export default function ProblemSolution() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Wir verstehen Ihre Situation
+            Wenn München friert oder überflutet wird – wir lösen Ihr Problem ohne Wartezeit
           </h2>
+          <h3 className="text-xl text-foreground font-medium mb-2">
+            Ihre Notlage endet, sobald unser Meisterbetrieb klingelt
+          </h3>
           <p className="text-lg text-muted-foreground">
-            Ein Heizungsausfall oder Rohrbruch ist stressig. 
+            Ein Heizungsausfall oder Rohrbruch ist stressig – das wissen wir. 
             <span className="text-foreground font-medium"> Nach unserem Besuch haben Sie wieder Ruhe</span> – 
-            deshalb machen wir es Ihnen so einfach wie möglich.
+            deshalb reagieren wir schneller als jeder andere Notdienst in München.
           </p>
         </div>
         
         <div className="space-y-12">
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-6 text-center">
-              Ihre Situation
-            </h3>
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-6 text-center">
+              Das kennen Sie – Ihr Notfall in München
+            </h4>
             <div className="grid md:grid-cols-3 gap-6">
               {problems.map((problem, index) => (
                 <Card key={index} className="border-destructive/20 bg-destructive/5">
@@ -96,9 +99,9 @@ export default function ProblemSolution() {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-accent mb-6 text-center">
-              Unsere Lösung
-            </h3>
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-accent mb-6 text-center">
+              So sieht Ihr Leben nach unserem Besuch aus
+            </h4>
             <div className="grid md:grid-cols-3 gap-6">
               {solutions.map((solution, index) => (
                 <Card key={index} className="border-accent/20 bg-accent/5">

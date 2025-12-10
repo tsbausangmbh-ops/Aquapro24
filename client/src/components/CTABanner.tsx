@@ -9,17 +9,17 @@ export default function CTABanner() {
       
       <div className="relative max-w-4xl mx-auto px-4 lg:px-8 text-center text-secondary-foreground">
         <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-4">
-          Heizung kaputt? Rohrbruch?
+          Stoppen Sie den Schaden, bevor er größer wird – greifen Sie jetzt zum Hörer
         </h2>
-        <p className="text-xl lg:text-2xl text-white/90 mb-2">
-          Keine Panik. Rufen Sie jetzt an.
-        </p>
+        <h3 className="text-xl lg:text-2xl text-white/90 mb-2">
+          Wenn Sie uns jetzt anrufen, steht Ihr Techniker bereits im Wagen
+        </h3>
         <p className="text-lg text-white/70 mb-4">
           <span className="text-white font-medium">Stellen Sie sich vor:</span> Morgen früh wachen Sie in einer warmen Wohnung auf, 
-          der Rohrbruch ist repariert, alles ist wieder normal.
+          der Rohrbruch ist repariert, Ihre Familie ist sicher, alles ist wieder normal.
         </p>
         <p className="text-base text-white/60 mb-8">
-          Wenn Sie uns jetzt anrufen, sind wir in 30 Minuten bei Ihnen – 24/7.
+          24/7 Heizung & Sanitär Notdienst für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">

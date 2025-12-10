@@ -47,14 +47,16 @@ export default function Pricing() {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
             <Shield className="w-3 h-3 mr-1" />
-            Faire Preise
+            Festpreis-Garantie München
           </Badge>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Transparent. Ehrlich. Fair.
+            Stellen Sie sich vor: Sie kennen den Festpreis, bevor wir starten
           </h2>
+          <h3 className="text-xl text-foreground font-medium mb-2">
+            Wenn Sie unser Angebot anfordern, erhalten Sie Klarheit in Sekunden
+          </h3>
           <p className="text-lg text-muted-foreground">
-            Wenn wir kommen, wissen Sie vorher, was es kostet. 
-            Nach der Reparatur: keine bösen Überraschungen auf der Rechnung.
+            Transparente Notdienst-Tarife für München, Garching, Starnberg, Freising & das gesamte Umland – ohne versteckte Kosten.
           </p>
         </div>
         
@@ -84,11 +86,11 @@ export default function Pricing() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-bold mb-4">
-                  Unsere Preisgarantie
+                  Ihre Festpreis-Garantie – Ihr Schutz vor bösen Überraschungen
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Wir nennen Ihnen den Preis, <strong>bevor</strong> wir mit der Arbeit beginnen. 
-                  So können Sie in Ruhe entscheiden – ohne Zeitdruck.
+                  <span className="text-foreground font-medium">Wenn Sie bei uns anrufen,</span> nennen wir Ihnen den exakten Preis, 
+                  <strong> bevor</strong> wir mit der Arbeit beginnen. So entscheiden Sie in Ruhe – garantiert.
                 </p>
                 <ul className="space-y-3">
                   {guarantees.map((guarantee, index) => (
