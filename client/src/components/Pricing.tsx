@@ -50,7 +50,7 @@ const pricingInfo = [
   },
   {
     title: "Notdienst-Paket",
-    price: "199 €",
+    price: "299 €",
     note: "Anfahrt + 1. Arbeitsstunde",
     icon: AlertCircle,
     isPackage: true,
