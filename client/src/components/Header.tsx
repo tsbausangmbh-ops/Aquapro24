@@ -86,7 +86,6 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
                   className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="nav-services"
                 >
@@ -94,11 +93,15 @@ export default function Header() {
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50">
+                  <div 
+                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
                     {servicePages.map((page) => (
                       <Link
                         key={page.href}
                         href={page.href}
+                        onClick={() => setServicesOpen(false)}
                         className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                         data-testid={`nav-${page.label.toLowerCase()}`}
                       >
