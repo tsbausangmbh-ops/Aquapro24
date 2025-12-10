@@ -669,18 +669,18 @@ export default function ChatWidget() {
       ) : (
         <button
           onClick={toggleChat}
-          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 bg-primary text-primary-foreground px-3 py-4 rounded-l-lg shadow-2xl hover:px-4 transition-all duration-300 group"
+          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-3 bg-primary text-primary-foreground px-4 py-6 rounded-l-xl shadow-2xl hover:px-5 transition-all duration-300 group"
           data-testid="button-toggle-chat"
         >
           {showPulse && (
-            <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full animate-ping" />
+            <span className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full animate-ping" />
           )}
-          <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full" />
-          <MessageCircle className="w-6 h-6" />
-          <span className="writing-mode-vertical text-sm font-bold tracking-wide whitespace-nowrap" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+          <span className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full" />
+          <MessageCircle className="w-8 h-8" />
+          <span className="writing-mode-vertical text-base font-bold tracking-wide whitespace-nowrap" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
             Online Buchung
           </span>
-          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <span className="w-3 h-3 rounded-full bg-accent animate-pulse" />
         </button>
       )}
     </>
