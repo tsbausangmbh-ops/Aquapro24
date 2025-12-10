@@ -581,7 +581,7 @@ export default function Pricing() {
                       Per E-Mail anfragen
                     </Button>
                     <p className="text-xs text-muted-foreground text-center mt-3">
-                      Wir antworten in der Regel innerhalb von 2 Stunden
+                      Wir antworten in der Regel innerhalb von 24 Stunden
                     </p>
                   </div>
                 </div>
