@@ -45,7 +45,7 @@ const pricingInfo = [
     packageContents: [
       "Werktags 08:00 – 16:30 Uhr: 69 € netto",
       "Werktags 16:30 – 22:00 Uhr: 99 € netto",
-      "Nachts / Wochenende / Feiertage: 149 € netto",
+      "Nachts / WE / Feiertage: 149 € netto",
     ],
   },
   {
