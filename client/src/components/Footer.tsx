@@ -4,11 +4,11 @@ const footerLinks = {
   services: {
     title: "Leistungen",
     links: [
-      { label: "Heizungsreparatur", href: "#services" },
-      { label: "Sanitär-Notdienst", href: "#services" },
-      { label: "Rohrbruch", href: "#services" },
       { label: "Badsanierung", href: "#services" },
-      { label: "Heizungswartung", href: "#services" },
+      { label: "Wasserinstallation", href: "#services" },
+      { label: "Rohrreinigung", href: "#services" },
+      { label: "Armaturen & Sanitär", href: "#services" },
+      { label: "Heizungsservice", href: "#services" },
     ],
   },
   areas: {
@@ -34,7 +34,7 @@ const footerLinks = {
   legal: {
     title: "Rechtliches",
     links: [
-      { label: "Impressum", href: "#" },
+      { label: "Impressum", href: "/impressum" },
       { label: "Datenschutz", href: "#" },
       { label: "AGB", href: "#" },
     ],
@@ -53,12 +53,11 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-lg">Münchner</span>
-                <span className="block text-xs text-background/70 -mt-0.5">Heizung & Sanitär</span>
+                <span className="block text-xs text-background/70 -mt-0.5">Sanitär & Wasserinstallation</span>
               </div>
             </div>
             <p className="text-sm text-background/70 mb-6 max-w-xs">
-              Wenn Sie uns anrufen, sind wir in 30 Minuten da – 
-              Ihr Meisterbetrieb seit 1985.
+              Ihr Meisterbetrieb für Badsanierung, Wasserinstallation und professionelle Sanitärarbeiten seit 1985.
             </p>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
