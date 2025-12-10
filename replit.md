@@ -32,7 +32,12 @@ Preferred communication style: Simple, everyday language.
 ### Component Structure
 - **UI Components**: Pre-built shadcn/ui components in `client/src/components/ui/`
 - **Page Components**: Feature components (Hero, Services, Pricing, Testimonials, ChatWidget) in `client/src/components/`
-- **Single Page**: Landing page architecture with smooth scroll navigation
+- **SEO Components**: Dedicated SEO infrastructure for search optimization
+  - `SEO.tsx`: Meta tags, titles, descriptions, Open Graph, canonical URLs, LocalBusiness JSON-LD
+  - `FAQ.tsx`: FAQ accordion with FAQPage schema.org markup for rich snippets
+  - `ServiceAreas.tsx`: Munich district geo-targeting with response times
+  - `NLPSection.tsx`: Psychology-driven copy (pacing, future pacing, problem-solution)
+- **Service Pages**: 5 dedicated pages (Sanitär, Bad, Heizung, Wärmepumpe, Haustechnik) with unique SEO per page
 
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)
