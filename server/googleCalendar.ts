@@ -57,6 +57,7 @@ export interface CalendarEventData {
   urgency: string;
   isEmergency: string;
   description?: string;
+  preferredDate?: string;
   preferredTime?: string;
   estimatedPrice?: string;
 }
@@ -68,8 +69,12 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     const serviceLabel = data.serviceTypes.join(', ') || 'Sanitär-Anfrage';
     const urgencyLabel = getUrgencyLabel(data.urgency, data.isEmergency);
     
-    const startTime = getEventStartTime(data.preferredTime, data.urgency, data.isEmergency);
+    const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
     const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
+    
+    const appointmentInfo = data.preferredDate && data.preferredTime 
+      ? `${data.preferredDate} um ${data.preferredTime} Uhr`
+      : data.preferredDate || data.preferredTime || 'Nicht angegeben';
     
     const eventDescription = `
 KUNDENANFRAGE - ${urgencyLabel}
@@ -84,7 +89,7 @@ Geschätzte Kosten: ${data.estimatedPrice || 'Vor Ort ermitteln'}
 
 ${data.description ? `Beschreibung:\n${data.description}` : ''}
 
-Terminwunsch: ${data.preferredTime || 'Nicht angegeben'}
+Terminwunsch: ${appointmentInfo}
     `.trim();
 
     const event = await calendar.events.insert({
@@ -132,7 +137,7 @@ function getUrgencyLabel(urgency: string, isEmergency: string): string {
   }
 }
 
-function getEventStartTime(preferredTime: string | undefined, urgency: string, isEmergency: string): Date {
+function getEventStartTime(preferredDate: string | undefined, preferredTime: string | undefined, urgency: string, isEmergency: string): Date {
   const now = new Date();
   
   if (isEmergency === 'akut' || urgency === 'sofort') {
@@ -143,6 +148,31 @@ function getEventStartTime(preferredTime: string | undefined, urgency: string, i
   if (urgency === 'heute') {
     now.setHours(now.getHours() + 2);
     return now;
+  }
+  
+  if (preferredDate && preferredTime) {
+    try {
+      const [hours, minutes] = preferredTime.split(':').map(Number);
+      const eventDate = new Date(preferredDate);
+      eventDate.setHours(hours || 9, minutes || 0, 0, 0);
+      if (eventDate > now) {
+        return eventDate;
+      }
+    } catch (e) {
+      console.error('Failed to parse preferred date/time:', e);
+    }
+  }
+  
+  if (preferredDate) {
+    try {
+      const eventDate = new Date(preferredDate);
+      eventDate.setHours(9, 0, 0, 0);
+      if (eventDate > now) {
+        return eventDate;
+      }
+    } catch (e) {
+      console.error('Failed to parse preferred date:', e);
+    }
   }
   
   const tomorrow = new Date();

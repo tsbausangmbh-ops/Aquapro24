@@ -31,6 +31,7 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
           urgency: leadData.urgency,
           isEmergency: leadData.isEmergency,
           description: leadData.description,
+          preferredDate: leadData.preferredDate,
           preferredTime: leadData.preferredTime,
           estimatedPrice: leadData.estimatedPrice,
         });

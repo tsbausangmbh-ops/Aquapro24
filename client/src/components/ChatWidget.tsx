@@ -25,6 +25,7 @@ interface LeadData {
   serviceTypes: string[];
   locationType: string;
   components: string[];
+  symptoms: string[];
   isEmergency: string;
   urgency: string;
   hasPhotos: string;
@@ -36,6 +37,7 @@ interface LeadData {
   address: string;
   phone: string;
   email: string;
+  preferredDate: string;
   preferredTime: string;
   estimatedPrice: string;
 }
@@ -46,10 +48,10 @@ interface QuestionOption {
 }
 
 interface Question {
-  id: keyof LeadData | "contact";
+  id: keyof LeadData | "contact" | "appointment";
   title: string;
   subtitle?: string;
-  type: "single" | "multi" | "text" | "textarea" | "contact";
+  type: "single" | "multi" | "text" | "textarea" | "contact" | "appointment";
   options?: QuestionOption[];
   required?: boolean;
 }
@@ -105,6 +107,24 @@ const QUESTIONS: Question[] = [
       { value: "spuele", label: "Küche / Spüle" },
       { value: "garten", label: "Gartenanschluss" },
       { value: "regenwasser", label: "Regenwasserablauf" },
+    ],
+  },
+  {
+    id: "symptoms",
+    title: "Welche Symptome treten auf?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "tropft_leicht", label: "Tropft leicht" },
+      { value: "tropft_stark", label: "Tropft stark" },
+      { value: "wasser_laeuft", label: "Wasser läuft dauerhaft" },
+      { value: "kein_druck", label: "Kein / niedriger Druck" },
+      { value: "verstopft", label: "Verstopft / Rückstau" },
+      { value: "geruch", label: "Geruchsbelastung" },
+      { value: "kein_warmwasser", label: "Kein Warmwasser" },
+      { value: "geraeusche", label: "Klopf-/Strömungsgeräusche" },
+      { value: "feuchtigkeit", label: "Feuchtigkeit in Wand/Boden" },
+      { value: "keine", label: "Keine Symptome (Neuinstallation)" },
     ],
   },
   {
@@ -184,6 +204,12 @@ const QUESTIONS: Question[] = [
     subtitle: "Für Terminvereinbarung und Rückfragen",
     type: "contact",
   },
+  {
+    id: "appointment",
+    title: "Wunschtermin",
+    subtitle: "Wann passt es Ihnen am besten?",
+    type: "appointment",
+  },
 ];
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
@@ -230,6 +256,7 @@ export default function ChatWidget() {
     serviceTypes: [],
     locationType: "",
     components: [],
+    symptoms: [],
     isEmergency: "",
     urgency: "",
     hasPhotos: "",
@@ -241,6 +268,7 @@ export default function ChatWidget() {
     address: "",
     phone: "",
     email: "",
+    preferredDate: "",
     preferredTime: "",
     estimatedPrice: "",
   });
@@ -265,7 +293,7 @@ export default function ChatWidget() {
 
   const handleMultiSelect = (value: string, checked: boolean) => {
     const fieldId = currentQuestion.id as keyof LeadData;
-    if (fieldId === "serviceTypes" || fieldId === "components") {
+    if (fieldId === "serviceTypes" || fieldId === "components" || fieldId === "symptoms") {
       setLeadData(prev => ({
         ...prev,
         [fieldId]: checked 
@@ -300,6 +328,9 @@ export default function ChatWidget() {
     }
     if (q.type === "contact") {
       return !!(leadData.name && leadData.phone && leadData.address);
+    }
+    if (q.type === "appointment") {
+      return !!(leadData.preferredDate && leadData.preferredTime);
     }
     return true;
   };
@@ -456,12 +487,38 @@ export default function ChatWidget() {
             type="email"
             data-testid="input-email"
           />
-          <Input
-            value={leadData.preferredTime}
-            onChange={(e) => handleContactChange("preferredTime", e.target.value)}
-            placeholder="Terminwunsch (z.B. morgen 10 Uhr)"
-            data-testid="input-preferred-time"
-          />
+        </div>
+      );
+    }
+
+    if (q.type === "appointment") {
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="preferred-date" className="text-sm font-medium">Datum *</Label>
+            <Input
+              id="preferred-date"
+              value={leadData.preferredDate}
+              onChange={(e) => handleContactChange("preferredDate", e.target.value)}
+              placeholder="z.B. 15.12.2024"
+              type="date"
+              data-testid="input-preferred-date"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="preferred-time" className="text-sm font-medium">Uhrzeit *</Label>
+            <Input
+              id="preferred-time"
+              value={leadData.preferredTime}
+              onChange={(e) => handleContactChange("preferredTime", e.target.value)}
+              placeholder="z.B. 10:00"
+              type="time"
+              data-testid="input-preferred-time"
+            />
+          </div>
+          <p className="text-xs text-muted-foreground">
+            Wir bestätigen Ihren Termin telefonisch oder per E-Mail.
+          </p>
         </div>
       );
     }
