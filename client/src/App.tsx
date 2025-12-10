@@ -17,6 +17,7 @@ const UeberUnsPage = lazy(() => import("@/pages/UeberUnsPage"));
 const FAQPage = lazy(() => import("@/pages/FAQPage"));
 const RatgeberPage = lazy(() => import("@/pages/RatgeberPage"));
 const KontaktPage = lazy(() => import("@/pages/KontaktPage"));
+const CookieRichtliniePage = lazy(() => import("@/pages/CookieRichtliniePage"));
 const DatenschutzPage = lazy(() => import("@/pages/DatenschutzPage"));
 const AGBPage = lazy(() => import("@/pages/AGBPage"));
 const NotFound = lazy(() => import("@/pages/not-found"));
@@ -46,6 +47,7 @@ function Router() {
         <Route path="/faq" component={FAQPage} />
         <Route path="/ratgeber" component={RatgeberPage} />
         <Route path="/kontakt" component={KontaktPage} />
+        <Route path="/cookie-richtlinie" component={CookieRichtliniePage} />
         <Route path="/datenschutz" component={DatenschutzPage} />
         <Route path="/agb" component={AGBPage} />
         <Route path="/impressum" component={Impressum} />
