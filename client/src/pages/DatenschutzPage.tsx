@@ -2,162 +2,368 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Shield, Mail, Phone } from "lucide-react";
 
 export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutzerklärung | Münchner Heizung & Sanitär"
-        description="Datenschutzerklärung der Münchner Heizung & Sanitär GmbH. Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO."
+        title="Datenschutzerklärung | DSGVO 2025 | AquaPro24 München"
+        description="Datenschutzerklärung gemäß DSGVO 2025. Informationen zur Verarbeitung personenbezogener Daten, Ihre Rechte und Kontaktmöglichkeiten."
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
       <main className="py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <Badge variant="secondary" className="gap-1">
+              <Shield className="w-3 h-3" />
+              DSGVO-konform
+            </Badge>
+            <Badge variant="outline">Stand: Januar 2025</Badge>
+          </div>
+          
           <h1 className="text-3xl lg:text-4xl font-bold mb-8">Datenschutzerklärung</h1>
           
+          <Card className="mb-8 bg-muted/30">
+            <CardContent className="p-6">
+              <h2 className="font-semibold mb-2">Kurzfassung für Sie</h2>
+              <p className="text-sm text-muted-foreground">
+                Wir nehmen den Schutz Ihrer Daten ernst. Diese Seite erklärt, welche Daten wir erheben, 
+                warum wir das tun und welche Rechte Sie haben. Bei Fragen erreichen Sie uns unter 
+                info@sanitaer-muenchen.de oder 089 123 456 789.
+              </p>
+            </CardContent>
+          </Card>
+          
           <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
+            
             <section>
-              <h2 className="text-xl font-semibold mb-4">1. Datenschutz auf einen Blick</h2>
-              <h3 className="text-lg font-medium mb-2">Allgemeine Hinweise</h3>
-              <p className="text-muted-foreground mb-4">
-                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen 
-                Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit 
-                denen Sie persönlich identifiziert werden können.
-              </p>
+              <h2 className="text-xl font-semibold mb-4">1. Verantwortlicher und Datenschutzbeauftragter</h2>
               
-              <h3 className="text-lg font-medium mb-2">Datenerfassung auf dieser Website</h3>
+              <h3 className="text-lg font-medium mb-2">Verantwortlicher gemäß Art. 4 Abs. 7 DSGVO</h3>
               <p className="text-muted-foreground mb-4">
-                <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
-                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten 
-                können Sie dem Impressum dieser Website entnehmen.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                <strong>Wie erfassen wir Ihre Daten?</strong><br />
-                Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich 
-                z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch 
-                oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind 
-                vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
-              </p>
-              <p className="text-muted-foreground mb-4">
-                <strong>Wofür nutzen wir Ihre Daten?</strong><br />
-                Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. 
-                Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4">2. Verantwortliche Stelle</h2>
-              <p className="text-muted-foreground mb-4">
-                Verantwortlich für die Datenverarbeitung auf dieser Website ist:
-              </p>
-              <p className="text-muted-foreground mb-4">
-                Münchner Heizung & Sanitär GmbH<br />
+                AquaPro24 GmbH<br />
                 Musterstraße 123<br />
                 80331 München<br />
+                Deutschland<br />
                 <br />
-                Telefon: 089 123 456 789<br />
-                E-Mail: info@sanitaer-muenchen.de
+                <span className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" /> 089 123 456 789
+                </span>
+                <span className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" /> info@sanitaer-muenchen.de
+                </span>
+              </p>
+
+              <h3 className="text-lg font-medium mb-2">Datenschutzbeauftragter</h3>
+              <p className="text-muted-foreground mb-4">
+                Bei Fragen zum Datenschutz erreichen Sie unseren Datenschutzbeauftragten unter:<br />
+                E-Mail: datenschutz@sanitaer-muenchen.de
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">3. Ihre Rechte</h2>
+              <h2 className="text-xl font-semibold mb-4">2. Übersicht der Verarbeitungen</h2>
               <p className="text-muted-foreground mb-4">
-                Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck 
-                Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die 
-                Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur 
-                Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft 
-                widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der 
-                Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+                Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer 
+                Verarbeitung zusammen und verweist auf die betroffenen Personen.
               </p>
-              <p className="text-muted-foreground mb-4">
-                Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
-              </p>
+              
+              <h3 className="text-lg font-medium mb-2">Arten der verarbeiteten Daten</h3>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
+                <li>Kontaktdaten (z.B. Name, E-Mail, Telefonnummer)</li>
+                <li>Inhaltsdaten (z.B. Eingaben in Formularen, Chatverläufe)</li>
+                <li>Nutzungsdaten (z.B. besuchte Seiten, Zugriffszeiten)</li>
+                <li>Meta-/Kommunikationsdaten (z.B. IP-Adressen, Geräteinformationen)</li>
+                <li>Vertragsdaten (z.B. Vertragsgegenstand, Laufzeit)</li>
+                <li>Terminbuchungsdaten (z.B. gewünschter Termin, Serviceart)</li>
+              </ul>
+
+              <h3 className="text-lg font-medium mb-2">Kategorien betroffener Personen</h3>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
+                <li>Interessenten und potenzielle Kunden</li>
+                <li>Kunden und Auftraggeber</li>
+                <li>Kommunikationspartner</li>
+                <li>Nutzer der Website</li>
+              </ul>
+
+              <h3 className="text-lg font-medium mb-2">Zwecke der Verarbeitung</h3>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
+                <li>Bereitstellung der Website und ihrer Funktionen</li>
+                <li>Bearbeitung von Kontaktanfragen und Kommunikation</li>
+                <li>Terminvereinbarung und Auftragsabwicklung</li>
+                <li>Erbringung vertraglicher Leistungen</li>
+                <li>Sicherheitsmaßnahmen</li>
+                <li>Reichweitenmessung und Optimierung</li>
+              </ul>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">4. Datenerfassung auf dieser Website</h2>
+              <h2 className="text-xl font-semibold mb-4">3. Rechtsgrundlagen der Verarbeitung</h2>
+              <p className="text-muted-foreground mb-4">
+                Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis 
+                wir personenbezogene Daten verarbeiten:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
+                <li>
+                  <strong>Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)</strong> - Die betroffene Person 
+                  hat ihre Einwilligung in die Verarbeitung der sie betreffenden personenbezogenen Daten 
+                  für einen oder mehrere bestimmte Zwecke gegeben.
+                </li>
+                <li>
+                  <strong>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b DSGVO)</strong> - 
+                  Die Verarbeitung ist für die Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher 
+                  Maßnahmen erforderlich.
+                </li>
+                <li>
+                  <strong>Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c DSGVO)</strong> - 
+                  Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich.
+                </li>
+                <li>
+                  <strong>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</strong> - 
+                  Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen 
+                  oder eines Dritten erforderlich.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4">4. Ihre Rechte als betroffene Person</h2>
+              <p className="text-muted-foreground mb-4">
+                Gemäß der DSGVO stehen Ihnen folgende Rechte zu:
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Auskunftsrecht (Art. 15 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten 
+                    verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen.
+                  </p>
+                </div>
+                
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Recht auf Berichtigung (Art. 16 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, die Vervollständigung oder Berichtigung Sie betreffender 
+                    unrichtiger Daten zu verlangen.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Recht auf Löschung (Art. 17 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, zu verlangen, dass Sie betreffende Daten unverzüglich gelöscht 
+                    werden ("Recht auf Vergessenwerden").
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer Daten zu verlangen.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, die Sie betreffenden Daten in einem strukturierten, gängigen 
+                    und maschinenlesbaren Format zu erhalten.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Widerspruchsrecht (Art. 21 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, 
+                    jederzeit gegen die Verarbeitung Sie betreffender Daten Widerspruch einzulegen.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, erteilte Einwilligungen jederzeit mit Wirkung für die Zukunft 
+                    zu widerrufen.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">Beschwerderecht bei Aufsichtsbehörde (Art. 77 DSGVO)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. 
+                    Zuständige Aufsichtsbehörde ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA).
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4">5. Datenverarbeitung auf dieser Website</h2>
               
               <h3 className="text-lg font-medium mb-2">Server-Log-Dateien</h3>
               <p className="text-muted-foreground mb-4">
-                Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten 
-                Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                Der Provider dieser Website erhebt und speichert automatisch Informationen in Server-Log-Dateien, 
+                die Ihr Browser automatisch übermittelt:
               </p>
               <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
-                <li>Browsertyp und Browserversion</li>
-                <li>verwendetes Betriebssystem</li>
+                <li>Browsertyp und -version</li>
+                <li>Verwendetes Betriebssystem</li>
                 <li>Referrer URL</li>
                 <li>Hostname des zugreifenden Rechners</li>
                 <li>Uhrzeit der Serveranfrage</li>
-                <li>IP-Adresse</li>
+                <li>IP-Adresse (anonymisiert)</li>
               </ul>
               <p className="text-muted-foreground mb-4">
-                Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. 
-                Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der 
+                sicheren Bereitstellung der Website)<br />
+                <strong>Speicherdauer:</strong> 7 Tage, danach automatische Löschung
               </p>
 
-              <h3 className="text-lg font-medium mb-2">Kontaktformular und Chat</h3>
+              <h3 className="text-lg font-medium mb-2">Kontaktformular und Chat-Widget</h3>
               <p className="text-muted-foreground mb-4">
-                Wenn Sie uns per Kontaktformular oder Chat-Widget Anfragen zukommen lassen, werden Ihre 
-                Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks 
-                Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese 
-                Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                Wenn Sie uns per Kontaktformular oder Chat-Widget kontaktieren, werden Ihre Angaben 
+                zur Bearbeitung der Anfrage und für eventuelle Anschlussfragen gespeichert.
               </p>
               <p className="text-muted-foreground mb-4">
-                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, 
-                sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung 
-                vorvertraglicher Maßnahmen erforderlich ist.
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen)<br />
+                <strong>Speicherdauer:</strong> 3 Jahre nach Abschluss der Anfrage bzw. gemäß gesetzlicher 
+                Aufbewahrungsfristen
+              </p>
+
+              <h3 className="text-lg font-medium mb-2">Terminbuchung mit Google Calendar</h3>
+              <p className="text-muted-foreground mb-4">
+                Für die Terminbuchung nutzen wir Google Calendar. Bei der Terminbuchung werden Ihre 
+                Kontaktdaten und Terminwünsche an Google Ireland Limited übermittelt.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)<br />
+                <strong>Drittlandtransfer:</strong> USA (Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO)<br />
+                <strong>Weitere Informationen:</strong> <a href="https://policies.google.com/privacy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">5. Cookies</h2>
+              <h2 className="text-xl font-semibold mb-4">6. Auftragsverarbeitung und Datenübermittlung</h2>
+              
+              <h3 className="text-lg font-medium mb-2">Auftragsverarbeiter</h3>
               <p className="text-muted-foreground mb-4">
-                Unsere Internetseiten verwenden so genannte "Cookies". Cookies sind kleine Datenpakete und 
-                richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die 
-                Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem 
-                Endgerät gespeichert.
+                Wir setzen folgende Auftragsverarbeiter ein, mit denen Verträge gemäß Art. 28 DSGVO 
+                geschlossen wurden:
               </p>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
+                <li>Webhosting-Anbieter (Bereitstellung der Website)</li>
+                <li>Google Ireland Limited (Kalenderdienste)</li>
+                <li>CRM-System-Anbieter (Kundenmanagement)</li>
+              </ul>
+
+              <h3 className="text-lg font-medium mb-2">Drittlandtransfer</h3>
               <p className="text-muted-foreground mb-4">
-                Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies 
-                bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine 
-                automatische Löschung durch Ihren Webbrowser erfolgt.
+                Sofern wir Daten in einem Drittland (außerhalb der EU/EWR) verarbeiten oder dies im 
+                Rahmen der Inanspruchnahme von Diensten Dritter geschieht, erfolgt dies nur auf Grundlage 
+                eines Angemessenheitsbeschlusses der EU-Kommission, Standardvertragsklauseln oder Ihrer 
+                ausdrücklichen Einwilligung gemäß Art. 49 Abs. 1 DSGVO.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">6. SSL- bzw. TLS-Verschlüsselung</h2>
+              <h2 className="text-xl font-semibold mb-4">7. Cookies und Einwilligungsverwaltung</h2>
               <p className="text-muted-foreground mb-4">
-                Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher 
-                Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber 
-                senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie 
-                daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem 
-                Schloss-Symbol in Ihrer Browserzeile.
+                Diese Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät 
+                gespeichert werden.
+              </p>
+              
+              <h3 className="text-lg font-medium mb-2">Technisch notwendige Cookies</h3>
+              <p className="text-muted-foreground mb-4">
+                Diese Cookies sind für den Betrieb der Website erforderlich und können nicht deaktiviert werden.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)<br />
+                <strong>Speicherdauer:</strong> Session-Cookies werden nach Schließen des Browsers gelöscht
+              </p>
+
+              <h3 className="text-lg font-medium mb-2">Einwilligungspflichtige Cookies</h3>
+              <p className="text-muted-foreground mb-4">
+                Cookies zu Analyse- oder Marketingzwecken werden nur nach Ihrer ausdrücklichen Einwilligung 
+                gesetzt. Sie können Ihre Einwilligung jederzeit widerrufen.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">7. Speicherdauer</h2>
+              <h2 className="text-xl font-semibold mb-4">8. Automatisierte Entscheidungsfindung</h2>
               <p className="text-muted-foreground mb-4">
-                Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, 
-                verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung 
-                entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung 
-                zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen 
-                rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben.
+                Wir setzen keine automatisierte Entscheidungsfindung einschließlich Profiling gemäß 
+                Art. 22 Abs. 1 und 4 DSGVO ein.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">8. Änderung dieser Datenschutzerklärung</h2>
+              <h2 className="text-xl font-semibold mb-4">9. Speicherdauer und Löschung</h2>
               <p className="text-muted-foreground mb-4">
-                Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen 
-                rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der 
-                Datenschutzerklärung umzusetzen.
+                Wir speichern personenbezogene Daten nur so lange, wie es für die Erfüllung der 
+                Verarbeitungszwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
+                <li><strong>Kontaktanfragen:</strong> 3 Jahre nach Abschluss</li>
+                <li><strong>Vertragsdaten:</strong> 10 Jahre (gemäß HGB/AO)</li>
+                <li><strong>Server-Logs:</strong> 7 Tage</li>
+                <li><strong>Buchungsdaten:</strong> 6 Monate nach Terminabschluss</li>
+              </ul>
+              <p className="text-muted-foreground mb-4">
+                Nach Ablauf der jeweiligen Frist werden die Daten routinemäßig gelöscht.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4">10. SSL/TLS-Verschlüsselung</h2>
+              <p className="text-muted-foreground mb-4">
+                Diese Website nutzt eine SSL/TLS-Verschlüsselung zum Schutz der Übertragung vertraulicher 
+                Inhalte. Eine verschlüsselte Verbindung erkennen Sie an "https://" in der Adresszeile 
+                und dem Schloss-Symbol im Browser.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4">11. Aktualität und Änderungen</h2>
+              <p className="text-muted-foreground mb-4">
+                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Januar 2025. 
+                Durch Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher 
+                Vorgaben kann eine Anpassung dieser Erklärung erforderlich werden.
               </p>
               <p className="text-muted-foreground">
-                Stand: 2025
+                Die jeweils aktuelle Fassung finden Sie stets auf dieser Seite.
               </p>
+            </section>
+
+            <section className="bg-muted/30 rounded-lg p-6 mt-8">
+              <h2 className="text-xl font-semibold mb-4">Fragen zum Datenschutz?</h2>
+              <p className="text-muted-foreground mb-4">
+                Wir nehmen den Schutz Ihrer Daten ernst. Bei Fragen zur Verarbeitung Ihrer 
+                personenbezogenen Daten oder zur Ausübung Ihrer Rechte kontaktieren Sie uns gerne:
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="mailto:datenschutz@sanitaer-muenchen.de" 
+                  className="inline-flex items-center gap-2 text-secondary hover:underline"
+                >
+                  <Mail className="w-4 h-4" />
+                  datenschutz@sanitaer-muenchen.de
+                </a>
+                <a 
+                  href="tel:+4989123456789" 
+                  className="inline-flex items-center gap-2 text-secondary hover:underline"
+                >
+                  <Phone className="w-4 h-4" />
+                  089 123 456 789
+                </a>
+              </div>
             </section>
           </div>
         </div>
