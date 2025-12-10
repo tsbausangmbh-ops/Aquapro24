@@ -82,6 +82,10 @@ export default function Hero() {
                 <CheckCircle2 className="w-4 h-4 text-accent" />
                 <span>Meisterbetrieb</span>
               </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <CheckCircle2 className="w-4 h-4 text-accent" />
+                <span>Anfahrt bereits inklusive</span>
+              </div>
             </div>
           </div>
           
