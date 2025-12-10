@@ -72,19 +72,15 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-2 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-accent" />
-                <span>Wir sind in 60 min bei Ihnen</span>
+                <span>In 60 min vor Ort</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-accent" />
-                <span>Sie kennen den Preis vorher</span>
+                <span>Festpreis garantiert</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-accent" />
-                <span>Geprüfter Meisterbetrieb</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <CheckCircle2 className="w-4 h-4 text-accent" />
-                <span>Anfahrt ist bereits inklusive</span>
+                <span>Anfahrt inklusive</span>
               </div>
             </div>
           </div>
