@@ -13,14 +13,14 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative pt-4 pb-8 lg:pt-6 lg:pb-12 overflow-hidden">
+    <section className="relative pt-2 pb-6 lg:pt-3 lg:pb-8 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-primary/5" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "4s" }} />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }} />
       
       <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-6 animate-fade-in-up">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="space-y-4 animate-fade-in-up">
             <div className="flex flex-wrap gap-2">
               <Badge className="bg-destructive/10 text-destructive border-destructive/20 gap-1">
                 <AlertTriangle className="w-3 h-3" />
