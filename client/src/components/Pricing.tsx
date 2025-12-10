@@ -38,7 +38,7 @@ const pricingInfo = [
   },
   {
     title: "Jede weitere Stunde",
-    price: "ab 69 €",
+    price: "ab 89 €",
     note: "netto, je nach Einsatzzeit",
     icon: Euro,
     isPackage: true,
