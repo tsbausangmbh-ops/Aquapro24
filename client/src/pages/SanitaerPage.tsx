@@ -87,7 +87,7 @@ export default function SanitaerPage() {
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="secondary" asChild>
                   <a href="mailto:info@sanitaer-muenchen.de" data-testid="button-email-sanitaer">
                     Anfrage senden
                   </a>
