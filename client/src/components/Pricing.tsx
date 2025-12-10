@@ -561,6 +561,25 @@ export default function Pricing() {
                       </Button>
                     </div>
                   )}
+                  
+                  <div className="mt-4 pt-4 border-t border-border/50">
+                    <p className="text-xs text-muted-foreground text-center mb-3">
+                      Lieber schriftlich? Kein Problem – viele unserer Kunden schätzen den Überblick einer E-Mail-Anfrage.
+                    </p>
+                    <Button 
+                      variant="outline"
+                      size="sm"
+                      className="w-full gap-2"
+                      onClick={() => window.location.href = 'mailto:info@sanitaer-muenchen.de?subject=Anfrage%20Sanitär%20Service'}
+                      data-testid="button-email-inquiry"
+                    >
+                      <Mail className="w-4 h-4" />
+                      Per E-Mail anfragen
+                    </Button>
+                    <p className="text-xs text-muted-foreground text-center mt-2">
+                      Wir antworten in der Regel innerhalb von 2 Stunden
+                    </p>
+                  </div>
                 </div>
             </div>
           </CardContent>
