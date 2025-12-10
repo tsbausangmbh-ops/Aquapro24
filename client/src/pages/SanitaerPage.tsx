@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
+import ServiceBooking from "@/components/ServiceBooking";
 
 export default function SanitaerPage() {
   const services = [
@@ -136,11 +137,11 @@ export default function SanitaerPage() {
                       Jetzt anrufen
                     </a>
                   </Button>
-                  <Button size="lg" variant="secondary" asChild>
-                    <a href="mailto:info@sanitaer-muenchen.de" data-testid="button-email-sanitaer">
-                      Anfrage senden
-                    </a>
-                  </Button>
+                  <ServiceBooking 
+                    serviceType="sanitaer" 
+                    buttonText="Online Termin buchen"
+                    buttonSize="lg"
+                  />
                 </div>
               </div>
               <div className="relative space-y-4">

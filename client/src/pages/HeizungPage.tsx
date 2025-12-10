@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
+import ServiceBooking from "@/components/ServiceBooking";
 
 const services = [
   {
@@ -95,11 +96,11 @@ export default function HeizungPage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-primary/10 to-background">
+        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-red-500/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
-                <Badge variant="secondary" className="gap-1">
+                <Badge className="gap-1 bg-red-600 text-white">
                   <Flame className="w-3 h-3" />
                   Heizung München
                 </Badge>
@@ -121,10 +122,11 @@ export default function HeizungPage() {
                       Jetzt anrufen
                     </a>
                   </Button>
-                  <Button size="lg" variant="secondary">
-                    Beratung anfragen
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  <ServiceBooking 
+                    serviceType="heizung" 
+                    buttonText="Termin buchen"
+                    buttonSize="lg"
+                  />
                 </div>
                 <div className="flex flex-wrap gap-4 pt-4">
                   {["24/7 Notdienst", "Alle Marken", "Festpreis"].map((item) => (
@@ -150,7 +152,7 @@ export default function HeizungPage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6 text-primary-foreground">
+                <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-6 text-white">
                   <h3 className="text-lg font-bold mb-3">Unsere Vorteile</h3>
                   <ul className="space-y-2">
                     {benefits.slice(0, 4).map((benefit) => (

@@ -24,6 +24,7 @@ import {
 import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
 import heatPumpImage3 from "@assets/stock_images/modern_white_heat_pu_786e8fed.jpg";
+import ServiceBooking from "@/components/ServiceBooking";
 
 const services = [
   {
@@ -97,11 +98,11 @@ export default function WaermepumpePage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-accent/10 to-background">
+        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-orange-500/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
-                <Badge variant="secondary" className="gap-1">
+                <Badge className="gap-1 bg-orange-500 text-white">
                   <Leaf className="w-3 h-3" />
                   Wärmepumpe München
                 </Badge>
@@ -124,10 +125,11 @@ export default function WaermepumpePage() {
                       Kostenlose Beratung
                     </a>
                   </Button>
-                  <Button size="lg" variant="secondary">
-                    Fördercheck starten
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  <ServiceBooking 
+                    serviceType="waermepumpe" 
+                    buttonText="Beratungstermin buchen"
+                    buttonSize="lg"
+                  />
                 </div>
                 <div className="flex flex-wrap gap-4 pt-4">
                   {["Bis 70% Förderung", "Festpreis", "Zertifiziert"].map((item) => (
@@ -153,7 +155,7 @@ export default function WaermepumpePage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-6 text-accent-foreground">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white">
                   <h3 className="text-lg font-bold mb-3">Ihre Vorteile</h3>
                   <ul className="space-y-2">
                     {benefits.slice(0, 4).map((benefit) => (

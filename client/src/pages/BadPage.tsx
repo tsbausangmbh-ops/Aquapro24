@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
+import ServiceBooking from "@/components/ServiceBooking";
 
 const services = [
   {
@@ -95,11 +96,11 @@ export default function BadPage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-secondary/10 to-background">
+        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-cyan-500/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
-                <Badge variant="secondary" className="gap-1">
+                <Badge className="gap-1 bg-cyan-600 text-white">
                   <Droplets className="w-3 h-3" />
                   Badsanierung München
                 </Badge>
@@ -122,10 +123,11 @@ export default function BadPage() {
                       Jetzt beraten lassen
                     </a>
                   </Button>
-                  <Button size="lg" variant="secondary">
-                    Kostenlose Beratung
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  <ServiceBooking 
+                    serviceType="bad" 
+                    buttonText="Beratungstermin buchen"
+                    buttonSize="lg"
+                  />
                 </div>
                 <div className="flex flex-wrap gap-4 pt-4">
                   {["In 90 Min. da", "Festpreis", "5 Jahre Garantie"].map((item) => (
@@ -151,7 +153,7 @@ export default function BadPage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-6 text-secondary-foreground">
+                <div className="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-2xl p-6 text-white">
                   <h3 className="text-lg font-bold mb-3">Warum wir?</h3>
                   <ul className="space-y-2">
                     {benefits.slice(0, 4).map((benefit) => (
