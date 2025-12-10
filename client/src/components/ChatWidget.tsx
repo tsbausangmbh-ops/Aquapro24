@@ -34,7 +34,7 @@ interface LeadData {
   estimatedPrice: string;
 }
 
-type ChatStep = "greeting" | "name" | "phone" | "email" | "problem" | "address" | "urgency" | "confirm" | "complete";
+type ChatStep = "greeting" | "problem" | "problem_details" | "name" | "phone" | "address" | "urgency" | "confirm" | "complete";
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
@@ -118,9 +118,9 @@ export default function ChatWidget() {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       addBotMessage(
-        "Hallo! Ich bin der virtuelle Assistent von Münchner Sanitär & Wasserinstallation.\n\nIch kann Ihnen sofort eine Preisschätzung geben und einen Termin für Sie buchen – ganz ohne Wartezeit am Telefon!\n\nWie darf ich Sie ansprechen?"
+        "Hallo! Ich bin der virtuelle Assistent von Münchner Sanitär & Wasserinstallation.\n\nWas kann ich für Sie tun? Beschreiben Sie bitte kurz Ihr Problem – z.B. \"Wasserhahn tropft\", \"Rohrbruch\", \"Badsanierung\" oder \"Heizung defekt\"."
       );
-      setCurrentStep("name");
+      setCurrentStep("problem");
     }
   }, [isOpen]);
 
@@ -160,6 +160,39 @@ export default function ChatWidget() {
 
   const processStep = (userInput: string) => {
     switch (currentStep) {
+      case "problem":
+        leadDataRef.current = { ...leadDataRef.current, problem: userInput };
+        setLeadData(leadDataRef.current);
+        addBotMessage(
+          "Danke für die Info! Können Sie mir noch etwas mehr dazu sagen?\n\n" +
+          "Zum Beispiel:\n" +
+          "- Seit wann besteht das Problem?\n" +
+          "- Gibt es sichtbare Schäden (z.B. Wasserschaden, Leckage)?\n" +
+          "- Wurde schon etwas repariert?"
+        );
+        setCurrentStep("problem_details");
+        break;
+
+      case "problem_details":
+        const fullProblem = `${leadDataRef.current.problem}. Details: ${userInput}`;
+        const priceEstimate = estimatePrice(fullProblem);
+        const estimatedPriceText = priceEstimate 
+          ? `${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR`
+          : "Wird vor Ort ermittelt";
+        
+        leadDataRef.current = { ...leadDataRef.current, problem: fullProblem, estimatedPrice: estimatedPriceText };
+        setLeadData(leadDataRef.current);
+        
+        const priceMessage = priceEstimate 
+          ? `Basierend auf Ihrer Beschreibung schätze ich die Kosten für ${priceEstimate.service} auf ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR (inkl. Anfahrt im Stadtgebiet München).\n\nDer genaue Preis wird vor Ort nach Diagnose festgelegt.`
+          : "Die genauen Kosten ermitteln wir vor Ort nach einer Diagnose.";
+        
+        addBotMessage(
+          `Verstanden!\n\n${priceMessage}\n\nUm einen Termin zu vereinbaren, brauche ich noch ein paar Angaben. Wie darf ich Sie ansprechen?`
+        );
+        setCurrentStep("name");
+        break;
+
       case "name":
         leadDataRef.current = { ...leadDataRef.current, name: userInput };
         setLeadData(leadDataRef.current);
@@ -173,35 +206,7 @@ export default function ChatWidget() {
         leadDataRef.current = { ...leadDataRef.current, phone: userInput };
         setLeadData(leadDataRef.current);
         addBotMessage(
-          "Perfekt! Und Ihre E-Mail-Adresse für die Bestätigung?"
-        );
-        setCurrentStep("email");
-        break;
-
-      case "email":
-        leadDataRef.current = { ...leadDataRef.current, email: userInput };
-        setLeadData(leadDataRef.current);
-        addBotMessage(
-          "Danke! Bitte beschreiben Sie kurz Ihr Problem. Was ist passiert?"
-        );
-        setCurrentStep("problem");
-        break;
-
-      case "problem":
-        const priceEstimate = estimatePrice(userInput);
-        const estimatedPriceText = priceEstimate 
-          ? `${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR`
-          : "Wird vor Ort ermittelt";
-        
-        leadDataRef.current = { ...leadDataRef.current, problem: userInput, estimatedPrice: estimatedPriceText };
-        setLeadData(leadDataRef.current);
-        
-        const priceMessage = priceEstimate 
-          ? `\n\nGeschätzte Kosten für ${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR (inkl. Anfahrt im Stadtgebiet München). Der genaue Preis wird vor Ort nach Diagnose festgelegt.`
-          : "";
-        
-        addBotMessage(
-          `Verstehe, ${leadDataRef.current.name}.${priceMessage}\n\nAn welcher Adresse sollen wir vorbeikommen?`
+          "Perfekt! An welcher Adresse sollen wir vorbeikommen?"
         );
         setCurrentStep("address");
         break;
@@ -436,10 +441,11 @@ export default function ChatWidget() {
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder={
+                        currentStep === "problem" ? "Beschreiben Sie Ihr Problem..." :
+                        currentStep === "problem_details" ? "Weitere Details..." :
                         currentStep === "name" ? "Ihr Name..." :
                         currentStep === "phone" ? "Telefonnummer..." :
-                        currentStep === "email" ? "E-Mail-Adresse..." :
-                        currentStep === "address" ? "Adresse..." :
+                        currentStep === "address" ? "Straße, Hausnummer, PLZ München..." :
                         "Ihre Nachricht..."
                       }
                       className="flex-1"
