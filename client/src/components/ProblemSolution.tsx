@@ -51,7 +51,7 @@ const solutions = [
 
 export default function ProblemSolution() {
   return (
-    <section id="about" className="py-10 lg:py-14">
+    <section id="about" className="py-6 lg:py-8">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">

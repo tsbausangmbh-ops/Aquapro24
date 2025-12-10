@@ -13,7 +13,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative py-12 lg:py-20 overflow-hidden">
+    <section className="relative pt-4 pb-8 lg:pt-6 lg:pb-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-primary/5" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "4s" }} />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }} />
