@@ -63,7 +63,7 @@ export default function ProblemSolution() {
           <p className="text-lg text-muted-foreground">
             Ein Heizungsausfall oder Rohrbruch ist stressig – das wissen wir. 
             <span className="text-foreground font-medium"> Nach unserem Besuch haben Sie wieder Ruhe</span> – 
-            deshalb reagieren wir schneller als jeder andere Notdienst in München.
+            deshalb reagieren wir schnell und zuverlässig.
           </p>
         </div>
         

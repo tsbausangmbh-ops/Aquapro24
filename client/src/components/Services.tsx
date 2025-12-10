@@ -64,13 +64,13 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Heizung & Sanitär Notdienst München – Alle Leistungen aus einer Hand
+            Heizung & Sanitär München – Alle Leistungen aus einer Hand
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
-            Wenn Sie uns rufen, wählen wir das passende Expertenteam binnen 5 Minuten
+            Wenn Sie uns rufen, wählen wir das passende Expertenteam für Ihr Problem
           </h3>
           <p className="text-lg text-muted-foreground">
-            24/7 Rohrbruch-Soforthilfe, Heizungsreparatur, Sanitär-Notdienst in ganz München, Schwabing, Bogenhausen, Sendling, Pasing & Umland.
+            Rohrbruch-Soforthilfe, Heizungsreparatur, Sanitär-Service in ganz München, Schwabing, Bogenhausen, Sendling, Pasing & Umland.
           </p>
         </div>
         

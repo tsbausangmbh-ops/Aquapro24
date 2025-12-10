@@ -66,10 +66,10 @@ export default function Testimonials() {
             ))}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            München spricht über uns: 4.9 Sterne im Heizung & Sanitär Notdienst
+            München spricht über uns: 4.9 Sterne für Heizung & Sanitär
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
-            Wenn Sie sich anschließen, endet Ihr Notfall genauso schnell
+            Werden auch Sie Teil unserer zufriedenen Kundenfamilie
           </h3>
           <p className="text-lg text-muted-foreground mb-4">
             <span className="text-foreground font-bold text-xl">2.547</span> zufriedene Kunden in München, Schwabing, Bogenhausen & Sendling vertrauen uns bereits.

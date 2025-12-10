@@ -33,19 +33,19 @@ export default function Hero() {
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
-              Heizung & Sanitär Notdienst München:{" "}
-              <span className="text-secondary">In 30 Minuten bei Ihnen</span>{" "}
-              <span className="block mt-1">– 24/7, auch jetzt.</span>
+              Heizung kaputt? Rohrbruch?{" "}
+              <span className="text-secondary">Wir lösen Ihr Problem</span>{" "}
+              <span className="block mt-1">– schnell, fair, zuverlässig.</span>
             </h1>
             
             <h2 className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              <span className="text-foreground font-medium">Stellen Sie sich vor:</span> In einer Stunde ist Ihre Heizung repariert, 
+              <span className="text-foreground font-medium">Stellen Sie sich vor:</span> Heute Abend ist Ihre Heizung repariert, 
               das Wasser gestoppt, Ihre Familie wieder warm und sicher.
             </h2>
             
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
               <strong className="text-foreground">Über 2.500 Münchner Familien</strong> vertrauen bereits unserem Meisterbetrieb – 
-              mit Festpreis-Garantie, ohne versteckte Kosten. Wenn Sie uns jetzt anrufen, beginnt Ihre Lösung sofort.
+              mit Festpreis-Garantie, ohne versteckte Kosten. Wenn Sie uns anrufen, kümmern wir uns sofort um Ihr Anliegen.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3">

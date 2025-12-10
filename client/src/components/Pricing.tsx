@@ -56,7 +56,7 @@ export default function Pricing() {
             Wenn Sie unser Angebot anfordern, erhalten Sie Klarheit in Sekunden
           </h3>
           <p className="text-lg text-muted-foreground">
-            Transparente Notdienst-Tarife für München, Garching, Starnberg, Freising & das gesamte Umland – ohne versteckte Kosten.
+            Transparente Preise für München, Garching, Starnberg, Freising & das gesamte Umland – ohne versteckte Kosten.
           </p>
         </div>
         

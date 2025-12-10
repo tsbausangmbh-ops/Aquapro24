@@ -12,14 +12,14 @@ export default function CTABanner() {
           Stoppen Sie den Schaden, bevor er größer wird – greifen Sie jetzt zum Hörer
         </h2>
         <h3 className="text-xl lg:text-2xl text-white/90 mb-2">
-          Wenn Sie uns jetzt anrufen, steht Ihr Techniker bereits im Wagen
+          Wenn Sie uns anrufen, kümmern wir uns sofort um Ihr Anliegen
         </h3>
         <p className="text-lg text-white/70 mb-4">
           <span className="text-white font-medium">Stellen Sie sich vor:</span> Morgen früh wachen Sie in einer warmen Wohnung auf, 
           der Rohrbruch ist repariert, Ihre Familie ist sicher, alles ist wieder normal.
         </p>
         <p className="text-base text-white/60 mb-8">
-          24/7 Heizung & Sanitär Notdienst für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
+          Heizung & Sanitär Service für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
