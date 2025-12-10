@@ -212,6 +212,123 @@ const QUESTIONS: Question[] = [
   },
 ];
 
+const HEIZUNG_QUESTIONS: Question[] = [
+  {
+    id: "serviceTypes",
+    title: "Was ist das Problem mit Ihrer Heizung?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "heizung_ausgefallen", label: "Heizung ausgefallen (Notfall)" },
+      { value: "heizung_nicht_warm", label: "Heizung wird nicht warm" },
+      { value: "heizung_geraeusche", label: "Heizung macht Geräusche / gluckert" },
+      { value: "heizung_wartung", label: "Heizungswartung / Jahresservice" },
+      { value: "heizung_neu", label: "Neue Heizung installieren" },
+      { value: "heizung_modernisieren", label: "Alte Heizung modernisieren" },
+      { value: "thermostat_defekt", label: "Thermostat / Regelung defekt" },
+      { value: "heizkoerper", label: "Heizkörper entlüften / tauschen" },
+      { value: "wasserdruck_niedrig", label: "Wasserdruck zu niedrig" },
+      { value: "brenner_startet_nicht", label: "Brenner startet nicht" },
+    ],
+  },
+  {
+    id: "components",
+    title: "Welche Heizungsart haben Sie?",
+    type: "single",
+    options: [
+      { value: "gasheizung", label: "Gasheizung" },
+      { value: "oelheizung", label: "Ölheizung" },
+      { value: "waermepumpe", label: "Wärmepumpe" },
+      { value: "pelletheizung", label: "Pelletheizung" },
+      { value: "fernwaerme", label: "Fernwärme" },
+      { value: "elektroheizung", label: "Elektroheizung" },
+      { value: "weiss_nicht", label: "Weiß ich nicht" },
+    ],
+  },
+  {
+    id: "symptoms",
+    title: "Welche Symptome treten auf?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "kalt", label: "Heizkörper bleiben kalt" },
+      { value: "lauwarm", label: "Nur lauwarm, nicht richtig warm" },
+      { value: "gluckern", label: "Gluckern / Luftgeräusche" },
+      { value: "klopfen", label: "Klopfgeräusche" },
+      { value: "pfeifen", label: "Pfeifgeräusche" },
+      { value: "kein_warmwasser", label: "Kein Warmwasser" },
+      { value: "display_fehler", label: "Fehlermeldung am Display" },
+      { value: "brenner_geht_aus", label: "Brenner geht immer wieder aus" },
+      { value: "geruch", label: "Ungewöhnlicher Geruch" },
+      { value: "wasserleck", label: "Wasseraustritt / Leck" },
+    ],
+  },
+  {
+    id: "isEmergency",
+    title: "Handelt es sich um einen Heizungsnotfall?",
+    type: "single",
+    options: [
+      { value: "akut", label: "Ja, Heizung komplett ausgefallen" },
+      { value: "kein_warmwasser", label: "Ja, kein Warmwasser" },
+      { value: "geplant_reparatur", label: "Nein, geplante Reparatur" },
+      { value: "geplant_neu", label: "Nein, geplante Neuinstallation / Wartung" },
+    ],
+  },
+  {
+    id: "urgency",
+    title: "Wie dringend ist Ihr Anliegen?",
+    type: "single",
+    options: [
+      { value: "sofort", label: "Notfall - sofort" },
+      { value: "heute", label: "Dringend - innerhalb 24 Stunden" },
+      { value: "woche", label: "Diese Woche" },
+      { value: "nicht_dringend", label: "Flexibel / Beratungstermin" },
+    ],
+  },
+  {
+    id: "locationType",
+    title: "Um welches Gebäude handelt es sich?",
+    type: "single",
+    options: [
+      { value: "wohnung", label: "Wohnung" },
+      { value: "einfamilienhaus", label: "Einfamilienhaus" },
+      { value: "mehrfamilienhaus", label: "Mehrfamilienhaus" },
+      { value: "gewerbe", label: "Gewerbe" },
+    ],
+  },
+  {
+    id: "accessSituation",
+    title: "Wie alt ist Ihre Heizung?",
+    type: "single",
+    options: [
+      { value: "unter_5", label: "Unter 5 Jahre" },
+      { value: "5_10", label: "5-10 Jahre" },
+      { value: "10_15", label: "10-15 Jahre" },
+      { value: "15_20", label: "15-20 Jahre" },
+      { value: "ueber_20", label: "Über 20 Jahre" },
+      { value: "unklar", label: "Weiß ich nicht" },
+    ],
+  },
+  {
+    id: "description",
+    title: "Zusatzinformationen",
+    subtitle: "Beschreiben Sie kurz das Problem oder was Sie benötigen",
+    type: "textarea",
+  },
+  {
+    id: "contact",
+    title: "Ihre Kontaktdaten",
+    subtitle: "Für Terminvereinbarung und Rückfragen",
+    type: "contact",
+  },
+  {
+    id: "appointment",
+    title: "Wunschtermin",
+    subtitle: "Wann passt es Ihnen am besten?",
+    type: "appointment",
+  },
+];
+
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
 interface ChatWidgetProps {
@@ -295,6 +412,9 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
   
   const serviceCategoryLabel = serviceCategory ? SERVICE_CATEGORY_LABELS[serviceCategory] : null;
   
+  // Select appropriate questions based on service category
+  const questions = serviceCategory === "heizung" ? HEIZUNG_QUESTIONS : QUESTIONS;
+  
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -303,8 +423,8 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
     }
   }, [currentStep]);
 
-  const currentQuestion = QUESTIONS[currentStep];
-  const progress = ((currentStep + 1) / QUESTIONS.length) * 100;
+  const currentQuestion = questions[currentStep];
+  const progress = ((currentStep + 1) / questions.length) * 100;
 
   const handleSingleSelect = (value: string) => {
     if (currentQuestion.id !== "contact") {
@@ -358,7 +478,7 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
   };
 
   const handleNext = () => {
-    if (currentStep < QUESTIONS.length - 1) {
+    if (currentStep < questions.length - 1) {
       setCurrentStep(prev => prev + 1);
     } else {
       handleSubmit();
@@ -586,7 +706,7 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
                 <>
                   <div className="px-4 pt-3">
                     <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
-                      <span>Schritt {currentStep + 1} von {QUESTIONS.length}</span>
+                      <span>Schritt {currentStep + 1} von {questions.length}</span>
                       <span>{Math.round(progress)}%</span>
                     </div>
                     <Progress value={progress} className="h-2" />
@@ -627,7 +747,7 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
                     >
                       {isSubmitting ? (
                         <Loader2 className="w-4 h-4 animate-spin" />
-                      ) : currentStep === QUESTIONS.length - 1 ? (
+                      ) : currentStep === questions.length - 1 ? (
                         <>
                           Anfrage senden
                           <Send className="w-4 h-4 ml-2" />

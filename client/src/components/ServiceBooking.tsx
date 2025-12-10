@@ -294,7 +294,7 @@ export default function ServiceBooking({
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <span className={`w-3 h-3 rounded-full ${config.bgClass}`} />
-            Online-Terminbuchung: {config.name} ({serviceType})
+            Online-Terminbuchung: {config.name}
           </DialogTitle>
         </DialogHeader>
 
