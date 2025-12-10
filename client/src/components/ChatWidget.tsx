@@ -4,6 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 import { 
   MessageCircle, 
   X, 
@@ -13,244 +16,316 @@ import {
   Phone,
   Loader2,
   CheckCircle2,
-  Wrench
+  Wrench,
+  ArrowRight,
+  ArrowLeft
 } from "lucide-react";
 
-interface Message {
-  id: string;
-  role: "bot" | "user";
-  content: string;
-  timestamp: Date;
-}
-
 interface LeadData {
+  serviceTypes: string[];
+  locationType: string;
+  components: string[];
+  isEmergency: string;
+  urgency: string;
+  hasPhotos: string;
+  accessSituation: string;
+  floorLevel: string;
+  waterShutoff: string;
+  description: string;
   name: string;
+  address: string;
   phone: string;
   email: string;
-  problem: string;
-  address: string;
-  urgency: string;
-  urgencyLabel: string;
+  preferredTime: string;
   estimatedPrice: string;
 }
 
-type ChatStep = "greeting" | "problem" | "name" | "phone" | "address" | "urgency" | "confirm" | "complete";
+interface QuestionOption {
+  value: string;
+  label: string;
+}
+
+interface Question {
+  id: keyof LeadData | "contact";
+  title: string;
+  subtitle?: string;
+  type: "single" | "multi" | "text" | "textarea" | "contact";
+  options?: QuestionOption[];
+  required?: boolean;
+}
+
+const QUESTIONS: Question[] = [
+  {
+    id: "serviceTypes",
+    title: "Was genau benötigen Sie?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "neuinstallation", label: "Neuinstallation Sanitär" },
+      { value: "austausch", label: "Austausch bestehender Installation" },
+      { value: "reparatur", label: "Reparatur / Undichtigkeit" },
+      { value: "wc_defekt", label: "WC / Spülkasten defekt" },
+      { value: "armatur_tropft", label: "Armatur tropft / Undicht" },
+      { value: "rohrbruch", label: "Rohrbruch / Wasserschaden" },
+      { value: "warmwasser", label: "Warmwasserprobleme" },
+      { value: "bad_komplett", label: "Badinstallation komplett" },
+      { value: "kueche", label: "Küche (Wasseranschluss / Ablauf)" },
+      { value: "sonstiges", label: "Sonstiges" },
+    ],
+  },
+  {
+    id: "locationType",
+    title: "Wo soll die Arbeit durchgeführt werden?",
+    type: "single",
+    options: [
+      { value: "wohnung", label: "Wohnung" },
+      { value: "haus", label: "Haus" },
+      { value: "gewerbe", label: "Gewerbe" },
+      { value: "keller", label: "Keller" },
+      { value: "dachgeschoss", label: "Dachgeschoss" },
+      { value: "aussen", label: "Außenbereich" },
+    ],
+  },
+  {
+    id: "components",
+    title: "Welche Sanitärkomponenten sind betroffen?",
+    subtitle: "Mehrfachauswahl möglich",
+    type: "multi",
+    options: [
+      { value: "waschbecken", label: "Waschbecken" },
+      { value: "wc", label: "WC" },
+      { value: "urinal", label: "Urinal" },
+      { value: "dusche", label: "Dusche" },
+      { value: "badewanne", label: "Badewanne" },
+      { value: "armaturen", label: "Armaturen" },
+      { value: "wasserleitungen", label: "Wasserleitungen" },
+      { value: "abwasserleitungen", label: "Abwasserleitungen" },
+      { value: "warmwasserbereiter", label: "Warmwasserbereiter / Boiler" },
+      { value: "zirkulation", label: "Zirkulationsleitung" },
+      { value: "spuele", label: "Küche / Spüle" },
+      { value: "garten", label: "Gartenanschluss" },
+      { value: "regenwasser", label: "Regenwasserablauf" },
+    ],
+  },
+  {
+    id: "isEmergency",
+    title: "Handelt es sich um einen Notfall?",
+    type: "single",
+    options: [
+      { value: "akut", label: "Ja, akuter Notfall (Wasser läuft / tropft stark)" },
+      { value: "kein_wasser", label: "Ja, aber kein Wasser mehr vorhanden" },
+      { value: "geplant_reparatur", label: "Nein, geplante Reparatur" },
+      { value: "geplant_neu", label: "Nein, geplante Neuinstallation" },
+    ],
+  },
+  {
+    id: "urgency",
+    title: "Wie dringend ist Ihr Anliegen?",
+    type: "single",
+    options: [
+      { value: "sofort", label: "Sofort / innerhalb 1 Stunde" },
+      { value: "heute", label: "Heute noch" },
+      { value: "woche", label: "Diese Woche" },
+      { value: "nicht_dringend", label: "Nicht dringend" },
+    ],
+  },
+  {
+    id: "hasPhotos",
+    title: "Sind Fotos verfügbar?",
+    subtitle: "Fotos helfen uns bei der Einschätzung",
+    type: "single",
+    options: [
+      { value: "ja", label: "Ja (bitte per E-Mail/WhatsApp senden)" },
+      { value: "nein", label: "Nein" },
+    ],
+  },
+  {
+    id: "accessSituation",
+    title: "Zugang / Einbausituation",
+    type: "single",
+    options: [
+      { value: "leicht", label: "Leicht zugänglich" },
+      { value: "schwer", label: "Schwer zugänglich" },
+      { value: "verkleidung", label: "Verkleidung muss geöffnet werden" },
+      { value: "wand_boden", label: "Wand / Boden muss geöffnet werden" },
+      { value: "unklar", label: "Unklar" },
+    ],
+  },
+  {
+    id: "floorLevel",
+    title: "In welcher Etage?",
+    type: "single",
+    options: [
+      { value: "eg", label: "Erdgeschoss" },
+      { value: "1-2og", label: "1.–2. OG" },
+      { value: "3og+", label: "ab 3. OG" },
+      { value: "keller", label: "Keller" },
+    ],
+  },
+  {
+    id: "waterShutoff",
+    title: "Wasser absperrbar?",
+    type: "single",
+    options: [
+      { value: "ja", label: "Ja, Hauptwasserhahn vorhanden" },
+      { value: "nein", label: "Nein" },
+      { value: "unklar", label: "Unklar" },
+    ],
+  },
+  {
+    id: "description",
+    title: "Zusatzinformationen",
+    subtitle: "Bitte kurz beschreiben, was passiert ist bzw. was installiert werden soll",
+    type: "textarea",
+  },
+  {
+    id: "contact",
+    title: "Ihre Kontaktdaten",
+    subtitle: "Für Terminvereinbarung und Rückfragen",
+    type: "contact",
+  },
+];
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
-const urgencyOptions = [
-  { value: "emergency", label: "Notfall - Sofort Hilfe nötig" },
-  { value: "today", label: "Heute noch" },
-  { value: "week", label: "Diese Woche" },
-  { value: "planning", label: "Nur Planung / Angebot" },
-];
-
-const priceEstimates: { keywords: string[]; service: string; minPrice: number; maxPrice: number }[] = [
-  { keywords: ["heizung", "heizkörper", "thermostat", "heizungsausfall", "kalt", "warm"], service: "Heizungsreparatur", minPrice: 95, maxPrice: 250 },
-  { keywords: ["rohrbruch", "wasserrohr", "rohr", "leck", "undicht", "wasser"], service: "Rohrbruch-Reparatur", minPrice: 120, maxPrice: 350 },
-  { keywords: ["verstopf", "abfluss", "toilette", "wc", "klo", "verstopfung"], service: "Rohrreinigung", minPrice: 85, maxPrice: 180 },
-  { keywords: ["wasserhahn", "armatur", "tropf", "mischbatterie"], service: "Armaturenreparatur", minPrice: 75, maxPrice: 150 },
-  { keywords: ["boiler", "warmwasser", "durchlauferhitzer", "speicher"], service: "Warmwasseranlage", minPrice: 110, maxPrice: 280 },
-  { keywords: ["gas", "gasleitung", "gasgeruch"], service: "Gasinstallation", minPrice: 130, maxPrice: 320 },
-  { keywords: ["bad", "dusche", "badewanne", "sanitär"], service: "Sanitärarbeiten", minPrice: 90, maxPrice: 220 },
-  { keywords: ["wartung", "inspektion", "check"], service: "Wartung", minPrice: 85, maxPrice: 150 },
-];
-
-const MARKUP = 1.20;
-
-function estimatePrice(problemDescription: string): { service: string; minPrice: number; maxPrice: number } | null {
-  const lowerProblem = problemDescription.toLowerCase();
+function calculatePrice(data: LeadData): string {
+  let minPrice = 89;
+  let maxPrice = 149;
   
-  for (const estimate of priceEstimates) {
-    if (estimate.keywords.some(keyword => lowerProblem.includes(keyword))) {
-      return {
-        service: estimate.service,
-        minPrice: Math.round(estimate.minPrice * MARKUP),
-        maxPrice: Math.round(estimate.maxPrice * MARKUP),
-      };
-    }
+  // Base on urgency
+  if (data.urgency === "sofort" || data.isEmergency === "akut") {
+    minPrice = 299;
+    maxPrice = 399;
+  } else if (data.urgency === "heute" || data.isEmergency === "kein_wasser") {
+    minPrice = 199;
+    maxPrice = 299;
   }
   
-  return {
-    service: "Allgemeine Reparatur",
-    minPrice: Math.round(80 * MARKUP),
-    maxPrice: Math.round(200 * MARKUP),
-  };
+  // Add complexity based on service type
+  if (data.serviceTypes.includes("rohrbruch")) {
+    minPrice += 100;
+    maxPrice += 150;
+  }
+  if (data.serviceTypes.includes("bad_komplett")) {
+    minPrice = 2500;
+    maxPrice = 8000;
+  }
+  
+  // Access difficulty
+  if (data.accessSituation === "wand_boden") {
+    minPrice += 100;
+    maxPrice += 200;
+  }
+  
+  return `${minPrice} - ${maxPrice} EUR`;
 }
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [inputValue, setInputValue] = useState("");
-  const [currentStep, setCurrentStep] = useState<ChatStep>("greeting");
-  const [leadData, setLeadData] = useState<LeadData>({
-    name: "",
-    phone: "",
-    email: "",
-    problem: "",
-    address: "",
-    urgency: "",
-    urgencyLabel: "",
-    estimatedPrice: "",
-  });
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const leadDataRef = useRef<LeadData>({
+  const [leadData, setLeadData] = useState<LeadData>({
+    serviceTypes: [],
+    locationType: "",
+    components: [],
+    isEmergency: "",
+    urgency: "",
+    hasPhotos: "",
+    accessSituation: "",
+    floorLevel: "",
+    waterShutoff: "",
+    description: "",
     name: "",
+    address: "",
     phone: "",
     email: "",
-    problem: "",
-    address: "",
-    urgency: "",
-    urgencyLabel: "",
+    preferredTime: "",
     estimatedPrice: "",
   });
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-  useEffect(() => {
-    if (isOpen && messages.length === 0) {
-      addBotMessage(
-        "Hallo! Ich bin der virtuelle Assistent von Münchner Sanitär & Wasserinstallation.\n\nWas kann ich für Sie tun? Beschreiben Sie bitte kurz Ihr Problem – z.B. \"Wasserhahn tropft\", \"Rohrbruch\", \"Badsanierung\" oder \"Heizung defekt\"."
-      );
-      setCurrentStep("problem");
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
     }
-  }, [isOpen]);
+  }, [currentStep]);
 
-  const addBotMessage = (content: string) => {
-    const message: Message = {
-      id: Date.now().toString(),
-      role: "bot",
-      content,
-      timestamp: new Date(),
-    };
-    setMessages(prev => [...prev, message]);
-  };
+  const currentQuestion = QUESTIONS[currentStep];
+  const progress = ((currentStep + 1) / QUESTIONS.length) * 100;
 
-  const addUserMessage = (content: string) => {
-    const message: Message = {
-      id: Date.now().toString(),
-      role: "user",
-      content,
-      timestamp: new Date(),
-    };
-    setMessages(prev => [...prev, message]);
-  };
-
-  const handleSendMessage = async () => {
-    if (!inputValue.trim() && currentStep !== "urgency") return;
-
-    const userInput = inputValue.trim();
-    if (userInput) {
-      addUserMessage(userInput);
-    }
-    setInputValue("");
-
-    setTimeout(() => {
-      processStep(userInput);
-    }, 500);
-  };
-
-  const processStep = (userInput: string) => {
-    switch (currentStep) {
-      case "problem":
-        const priceEstimate = estimatePrice(userInput);
-        const estimatedPriceText = priceEstimate 
-          ? `${priceEstimate.service}: ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR`
-          : "Wird vor Ort ermittelt";
-        
-        leadDataRef.current = { ...leadDataRef.current, problem: userInput, estimatedPrice: estimatedPriceText };
-        setLeadData(leadDataRef.current);
-        
-        const priceMessage = priceEstimate 
-          ? `Basierend auf Ihrer Beschreibung schätze ich die Kosten für ${priceEstimate.service} auf ca. ${priceEstimate.minPrice} - ${priceEstimate.maxPrice} EUR (inkl. Anfahrt im Stadtgebiet München).`
-          : "Die genauen Kosten ermitteln wir vor Ort nach einer Diagnose.";
-        
-        addBotMessage(
-          `Verstanden!\n\n${priceMessage}\n\nSchritt 1 von 5: Wie darf ich Sie ansprechen?`
-        );
-        setCurrentStep("name");
-        break;
-
-      case "name":
-        leadDataRef.current = { ...leadDataRef.current, name: userInput };
-        setLeadData(leadDataRef.current);
-        addBotMessage(
-          `Freut mich, ${userInput}!\n\nSchritt 2 von 5: Unter welcher Telefonnummer können wir Sie erreichen?`
-        );
-        setCurrentStep("phone");
-        break;
-
-      case "phone":
-        leadDataRef.current = { ...leadDataRef.current, phone: userInput };
-        setLeadData(leadDataRef.current);
-        addBotMessage(
-          "Perfekt!\n\nSchritt 3 von 5: An welcher Adresse sollen wir vorbeikommen?"
-        );
-        setCurrentStep("address");
-        break;
-
-      case "address":
-        leadDataRef.current = { ...leadDataRef.current, address: userInput };
-        setLeadData(leadDataRef.current);
-        addBotMessage(
-          "Schritt 4 von 5: Wie dringend ist Ihr Anliegen?"
-        );
-        setCurrentStep("urgency");
-        break;
-
-      case "urgency":
-        const urgencyLabelText = urgencyOptions.find(o => o.value === userInput)?.label || userInput;
-        leadDataRef.current = { ...leadDataRef.current, urgency: userInput, urgencyLabel: urgencyLabelText };
-        setLeadData(leadDataRef.current);
-        
-        const currentData = leadDataRef.current;
-        
-        addBotMessage(
-          `Schritt 5 von 5: Vielen Dank für Ihre Angaben, ${currentData.name}!\n\n` +
-          `Zusammenfassung:\n` +
-          `- Problem: ${currentData.problem}\n` +
-          `- Geschätzte Kosten: ${currentData.estimatedPrice}\n` +
-          `- Adresse: ${currentData.address}\n` +
-          `- Dringlichkeit: ${currentData.urgencyLabel}\n` +
-          `- Telefon: ${currentData.phone}\n\n` +
-          `Soll ich diese Anfrage an unser Team weiterleiten? Schreiben Sie "Ja" zum Bestätigen.`
-        );
-        setCurrentStep("confirm");
-        break;
-
-      case "confirm":
-        if (userInput.toLowerCase().includes("ja")) {
-          submitLeadWithData(leadDataRef.current);
-        } else {
-          addBotMessage(
-            "Kein Problem! Wenn Sie doch Hilfe benötigen, rufen Sie uns einfach an unter 089 123 456 789 oder starten Sie den Chat erneut."
-          );
-        }
-        break;
+  const handleSingleSelect = (value: string) => {
+    if (currentQuestion.id !== "contact") {
+      const fieldId = currentQuestion.id as keyof LeadData;
+      setLeadData(prev => ({ ...prev, [fieldId]: value }));
     }
   };
 
-  const handleUrgencySelect = (value: string) => {
-    addUserMessage(urgencyOptions.find(o => o.value === value)?.label || value);
-    setInputValue("");
-    setTimeout(() => {
-      processStep(value);
-    }, 500);
+  const handleMultiSelect = (value: string, checked: boolean) => {
+    const fieldId = currentQuestion.id as keyof LeadData;
+    if (fieldId === "serviceTypes" || fieldId === "components") {
+      setLeadData(prev => ({
+        ...prev,
+        [fieldId]: checked 
+          ? [...(prev[fieldId] as string[]), value]
+          : (prev[fieldId] as string[]).filter(v => v !== value)
+      }));
+    }
   };
 
-  const submitLeadWithData = async (data: typeof leadData) => {
+  const handleTextChange = (value: string) => {
+    if (currentQuestion.id !== "contact") {
+      const fieldId = currentQuestion.id as keyof LeadData;
+      setLeadData(prev => ({ ...prev, [fieldId]: value }));
+    }
+  };
+
+  const handleContactChange = (field: keyof LeadData, value: string) => {
+    setLeadData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const canProceed = (): boolean => {
+    const q = currentQuestion;
+    if (q.type === "multi") {
+      const arr = leadData[q.id as keyof LeadData] as string[];
+      return arr.length > 0;
+    }
+    if (q.type === "single") {
+      return !!(leadData[q.id as keyof LeadData] as string);
+    }
+    if (q.type === "textarea") {
+      return true; // Optional
+    }
+    if (q.type === "contact") {
+      return !!(leadData.name && leadData.phone && leadData.address);
+    }
+    return true;
+  };
+
+  const handleNext = () => {
+    if (currentStep < QUESTIONS.length - 1) {
+      setCurrentStep(prev => prev + 1);
+    } else {
+      handleSubmit();
+    }
+  };
+
+  const handleBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep(prev => prev - 1);
+    }
+  };
+
+  const handleSubmit = async () => {
     setIsSubmitting(true);
     
+    const estimatedPrice = calculatePrice(leadData);
+    const finalData = { ...leadData, estimatedPrice };
+    
     const payload = {
-      ...data,
+      ...finalData,
       timestamp: new Date().toISOString(),
       source: "website_chatbot",
       page_url: window.location.href,
@@ -262,9 +337,7 @@ export default function ChatWidget() {
       webhookPromises.push(
         fetch(WEBHOOK_URL, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           mode: "no-cors",
           body: JSON.stringify(payload),
         })
@@ -274,43 +347,126 @@ export default function ChatWidget() {
     webhookPromises.push(
       fetch("/api/leads", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       })
     );
 
     try {
       await Promise.all(webhookPromises);
-
-      addBotMessage(
-        `Ihre Anfrage wurde erfolgreich übermittelt!\n\n` +
-        (data.urgency === "emergency" 
-          ? `Da es sich um einen Notfall handelt, rufen Sie uns bitte direkt an unter 089 123 456 789 für schnellste Hilfe.`
-          : `Unser Team wird sich innerhalb von 30 Minuten bei Ihnen melden.\n\nFür dringende Notfälle erreichen Sie uns unter 089 123 456 789.`)
-      );
-      setCurrentStep("complete");
+      setLeadData(prev => ({ ...prev, estimatedPrice }));
+      setIsComplete(true);
     } catch (error) {
       console.error("Lead submission error:", error);
-      addBotMessage(
-        "Es gab ein technisches Problem. Bitte rufen Sie uns direkt an: 089 123 456 789"
-      );
     } finally {
       setIsSubmitting(false);
-    }
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
     }
   };
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
     setShowPulse(false);
+  };
+
+  const renderQuestion = () => {
+    const q = currentQuestion;
+
+    if (q.type === "single" && q.options) {
+      const selectedValue = leadData[q.id as keyof LeadData] as string;
+      return (
+        <div className="space-y-2">
+          {q.options.map((opt) => (
+            <Button
+              key={opt.value}
+              variant={selectedValue === opt.value ? "default" : "outline"}
+              className="w-full justify-start text-left h-auto py-3 px-4"
+              onClick={() => handleSingleSelect(opt.value)}
+              data-testid={`option-${q.id}-${opt.value}`}
+            >
+              {opt.label}
+            </Button>
+          ))}
+        </div>
+      );
+    }
+
+    if (q.type === "multi" && q.options) {
+      const selectedValues = leadData[q.id as keyof LeadData] as string[];
+      return (
+        <div className="space-y-2 max-h-48 overflow-y-auto">
+          {q.options.map((opt) => (
+            <div 
+              key={opt.value} 
+              className="flex items-center space-x-3 p-3 rounded-md border border-border hover-elevate cursor-pointer"
+              onClick={() => handleMultiSelect(opt.value, !selectedValues.includes(opt.value))}
+            >
+              <Checkbox
+                id={opt.value}
+                checked={selectedValues.includes(opt.value)}
+                onCheckedChange={(checked) => handleMultiSelect(opt.value, !!checked)}
+                data-testid={`checkbox-${q.id}-${opt.value}`}
+              />
+              <Label htmlFor={opt.value} className="cursor-pointer flex-1">
+                {opt.label}
+              </Label>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    if (q.type === "textarea") {
+      return (
+        <Textarea
+          value={leadData[q.id as keyof LeadData] as string}
+          onChange={(e) => handleTextChange(e.target.value)}
+          placeholder="Beschreiben Sie Ihr Anliegen..."
+          className="min-h-[100px]"
+          data-testid={`textarea-${q.id}`}
+        />
+      );
+    }
+
+    if (q.type === "contact") {
+      return (
+        <div className="space-y-3">
+          <Input
+            value={leadData.name}
+            onChange={(e) => handleContactChange("name", e.target.value)}
+            placeholder="Vorname & Nachname *"
+            data-testid="input-name"
+          />
+          <Input
+            value={leadData.address}
+            onChange={(e) => handleContactChange("address", e.target.value)}
+            placeholder="Straße, Hausnummer, PLZ, Ort *"
+            data-testid="input-address"
+          />
+          <Input
+            value={leadData.phone}
+            onChange={(e) => handleContactChange("phone", e.target.value)}
+            placeholder="Telefon *"
+            type="tel"
+            data-testid="input-phone"
+          />
+          <Input
+            value={leadData.email}
+            onChange={(e) => handleContactChange("email", e.target.value)}
+            placeholder="E-Mail (optional)"
+            type="email"
+            data-testid="input-email"
+          />
+          <Input
+            value={leadData.preferredTime}
+            onChange={(e) => handleContactChange("preferredTime", e.target.value)}
+            placeholder="Terminwunsch (z.B. morgen 10 Uhr)"
+            data-testid="input-preferred-time"
+          />
+        </div>
+      );
+    }
+
+    return null;
   };
 
   return (
@@ -325,10 +481,10 @@ export default function ChatWidget() {
                     <Wrench className="w-5 h-5" />
                   </div>
                   <div>
-                    <CardTitle className="text-base">Münchner Sanitär & Wasserinstallation</CardTitle>
+                    <CardTitle className="text-base">Münchner Sanitär</CardTitle>
                     <div className="flex items-center gap-1.5 text-xs text-white/80">
                       <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                      <span>Online - Antworten in Sekunden</span>
+                      <span>Online - Sofort Preisschätzung</span>
                     </div>
                   </div>
                 </div>
@@ -345,107 +501,98 @@ export default function ChatWidget() {
             </CardHeader>
             
             <CardContent className="p-0">
-              <div className="h-80 overflow-y-auto p-4 space-y-4 bg-muted/30">
-                {messages.map((message) => (
-                  <div
-                    key={message.id}
-                    className={`flex gap-2 ${message.role === "user" ? "justify-end" : "justify-start"}`}
-                  >
-                    {message.role === "bot" && (
+              {!isComplete ? (
+                <>
+                  <div className="px-4 pt-3">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
+                      <span>Schritt {currentStep + 1} von {QUESTIONS.length}</span>
+                      <span>{Math.round(progress)}%</span>
+                    </div>
+                    <Progress value={progress} className="h-2" />
+                  </div>
+                  
+                  <div ref={contentRef} className="p-4 space-y-4 max-h-80 overflow-y-auto">
+                    <div className="flex gap-2">
                       <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
                         <Bot className="w-4 h-4 text-secondary" />
                       </div>
-                    )}
-                    <div
-                      className={`max-w-[80%] rounded-lg p-3 text-sm whitespace-pre-line ${
-                        message.role === "user"
-                          ? "bg-secondary text-secondary-foreground rounded-tr-none"
-                          : "bg-card border border-card-border rounded-tl-none"
-                      }`}
-                      data-testid={`chat-message-${message.role}`}
-                    >
-                      {message.content}
-                    </div>
-                    {message.role === "user" && (
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <User className="w-4 h-4 text-primary" />
+                      <div className="bg-card border border-card-border rounded-lg rounded-tl-none p-3">
+                        <p className="font-medium text-sm">{currentQuestion.title}</p>
+                        {currentQuestion.subtitle && (
+                          <p className="text-xs text-muted-foreground mt-1">{currentQuestion.subtitle}</p>
+                        )}
                       </div>
-                    )}
-                  </div>
-                ))}
-                
-                {isSubmitting && (
-                  <div className="flex gap-2 justify-start">
-                    <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                      <Loader2 className="w-4 h-4 text-secondary animate-spin" />
                     </div>
-                    <div className="bg-card border border-card-border rounded-lg rounded-tl-none p-3 text-sm">
-                      Ihre Anfrage wird übermittelt...
-                    </div>
+                    
+                    {renderQuestion()}
                   </div>
-                )}
-                
-                <div ref={messagesEndRef} />
-              </div>
-              
-              {currentStep === "urgency" ? (
-                <div className="p-4 border-t border-border space-y-2">
-                  <p className="text-sm text-muted-foreground mb-2">Wählen Sie die Dringlichkeit:</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {urgencyOptions.map((option) => (
-                      <Button
-                        key={option.value}
-                        variant={option.value === "emergency" ? "default" : "outline"}
-                        size="sm"
-                        className="text-xs h-auto py-2 px-3"
-                        onClick={() => handleUrgencySelect(option.value)}
-                        data-testid={`button-urgency-${option.value}`}
+                  
+                  <div className="p-4 border-t border-border flex gap-2">
+                    {currentStep > 0 && (
+                      <Button 
+                        variant="outline" 
+                        onClick={handleBack}
+                        data-testid="button-back"
                       >
-                        {option.label}
+                        <ArrowLeft className="w-4 h-4 mr-1" />
+                        Zurück
                       </Button>
-                    ))}
-                  </div>
-                </div>
-              ) : currentStep === "complete" ? (
-                <div className="p-4 border-t border-border">
-                  <div className="flex items-center gap-2 text-accent mb-3">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm font-medium">Anfrage gesendet!</span>
-                  </div>
-                  <Button className="w-full gap-2" asChild>
-                    <a href="tel:+4989123456789">
-                      <Phone className="w-4 h-4" />
-                      Jetzt anrufen: 089 123 456 789
-                    </a>
-                  </Button>
-                </div>
-              ) : (
-                <div className="p-4 border-t border-border">
-                  <div className="flex gap-2">
-                    <Input
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-                      onKeyPress={handleKeyPress}
-                      placeholder={
-                        currentStep === "problem" ? "Beschreiben Sie Ihr Problem..." :
-                        currentStep === "name" ? "Ihr Name..." :
-                        currentStep === "phone" ? "Telefonnummer..." :
-                        currentStep === "address" ? "Straße, Hausnummer, PLZ München..." :
-                        "Ihre Nachricht..."
-                      }
-                      className="flex-1"
-                      disabled={isSubmitting}
-                      data-testid="input-chat-message"
-                    />
+                    )}
                     <Button 
-                      onClick={handleSendMessage}
-                      disabled={!inputValue.trim() || isSubmitting}
-                      size="icon"
-                      data-testid="button-send-message"
+                      className="flex-1"
+                      onClick={handleNext}
+                      disabled={!canProceed() || isSubmitting}
+                      data-testid="button-next"
                     >
-                      <Send className="w-4 h-4" />
+                      {isSubmitting ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : currentStep === QUESTIONS.length - 1 ? (
+                        <>
+                          Anfrage senden
+                          <Send className="w-4 h-4 ml-2" />
+                        </>
+                      ) : (
+                        <>
+                          Weiter
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </>
+                      )}
                     </Button>
                   </div>
+                </>
+              ) : (
+                <div className="p-6 text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Anfrage gesendet!</h3>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Vielen Dank, {leadData.name}! Wir melden uns schnellstmöglich bei Ihnen.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-muted/50 rounded-lg p-4 text-left">
+                    <p className="text-sm font-medium">Geschätzte Kosten:</p>
+                    <p className="text-xl font-bold text-primary">{leadData.estimatedPrice}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      inkl. Anfahrt im Stadtgebiet München
+                    </p>
+                  </div>
+                  
+                  {(leadData.isEmergency === "akut" || leadData.urgency === "sofort") && (
+                    <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-3">
+                      <p className="text-sm text-destructive font-medium">
+                        Notfall? Rufen Sie uns direkt an:
+                      </p>
+                      <Button className="mt-2 w-full" asChild>
+                        <a href="tel:+4989123456789">
+                          <Phone className="w-4 h-4 mr-2" />
+                          089 123 456 789
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                 </div>
               )}
             </CardContent>
@@ -478,7 +625,7 @@ export default function ChatWidget() {
           <p className="text-sm">
             <span className="font-semibold">Jetzt online Termin buchen</span>
             <br />
-            <span className="text-muted-foreground">Preisschätzung in Sekunden - ohne Anruf!</span>
+            <span className="text-muted-foreground">Preisschätzung in 2 Minuten!</span>
           </p>
         </div>
       )}
