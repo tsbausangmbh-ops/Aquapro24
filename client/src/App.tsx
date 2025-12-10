@@ -9,6 +9,7 @@ import BadPage from "@/pages/BadPage";
 import HeizungPage from "@/pages/HeizungPage";
 import WaermepumpePage from "@/pages/WaermepumpePage";
 import HaustechnikPage from "@/pages/HaustechnikPage";
+import SanitaerPage from "@/pages/SanitaerPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/heizung" component={HeizungPage} />
       <Route path="/waermepumpe" component={WaermepumpePage} />
       <Route path="/haustechnik" component={HaustechnikPage} />
+      <Route path="/sanitaer" component={SanitaerPage} />
       <Route path="/impressum" component={Impressum} />
       <Route component={NotFound} />
     </Switch>

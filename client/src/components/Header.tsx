@@ -10,6 +10,7 @@ export default function Header() {
   const [location] = useLocation();
 
   const servicePages = [
+    { label: "Sanitär", href: "/sanitaer" },
     { label: "Bad", href: "/bad" },
     { label: "Heizung", href: "/heizung" },
     { label: "Wärmepumpe", href: "/waermepumpe" },
