@@ -1,0 +1,469 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Calendar, Clock, CheckCircle2, Send, Phone, X } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+export type ServiceType = 'sanitaer' | 'bad' | 'heizung' | 'waermepumpe' | 'haustechnik';
+
+interface ServiceConfig {
+  name: string;
+  colorClass: string;
+  bgClass: string;
+  borderClass: string;
+  hoverClass: string;
+  gradientClass: string;
+  services: string[];
+}
+
+const serviceConfigs: Record<ServiceType, ServiceConfig> = {
+  sanitaer: {
+    name: "Sanitär",
+    colorClass: "text-secondary",
+    bgClass: "bg-secondary",
+    borderClass: "border-secondary",
+    hoverClass: "hover:bg-secondary/90",
+    gradientClass: "from-secondary/20 to-secondary/5",
+    services: [
+      "Wasserinstallation",
+      "Rohrreinigung",
+      "Armaturentausch",
+      "Abwassertechnik",
+      "Druckprüfung",
+      "Wartung"
+    ]
+  },
+  bad: {
+    name: "Badsanierung",
+    colorClass: "text-cyan-600 dark:text-cyan-400",
+    bgClass: "bg-cyan-600",
+    borderClass: "border-cyan-600",
+    hoverClass: "hover:bg-cyan-700",
+    gradientClass: "from-cyan-500/20 to-cyan-500/5",
+    services: [
+      "Komplettsanierung",
+      "Teilsanierung",
+      "Barrierefreies Bad",
+      "Luxusbad Premium",
+      "Dusche erneuern",
+      "WC/Waschbecken tauschen"
+    ]
+  },
+  heizung: {
+    name: "Heizung",
+    colorClass: "text-red-600 dark:text-red-400",
+    bgClass: "bg-red-600",
+    borderClass: "border-red-600",
+    hoverClass: "hover:bg-red-700",
+    gradientClass: "from-red-500/20 to-red-500/5",
+    services: [
+      "Heizungsinstallation",
+      "Heizungswartung",
+      "Heizungsreparatur",
+      "Heizungsmodernisierung",
+      "Notdienst Heizungsausfall",
+      "Brennereinstellung"
+    ]
+  },
+  waermepumpe: {
+    name: "Wärmepumpe",
+    colorClass: "text-orange-500 dark:text-orange-400",
+    bgClass: "bg-orange-500",
+    borderClass: "border-orange-500",
+    hoverClass: "hover:bg-orange-600",
+    gradientClass: "from-orange-500/20 to-orange-500/5",
+    services: [
+      "Luft-Wasser-Wärmepumpe",
+      "Erdwärmepumpe",
+      "Wärmepumpen-Wartung",
+      "Förderberatung",
+      "Heizungstausch",
+      "Kostenlose Beratung"
+    ]
+  },
+  haustechnik: {
+    name: "Haustechnik",
+    colorClass: "text-purple-600 dark:text-purple-400",
+    bgClass: "bg-purple-600",
+    borderClass: "border-purple-600",
+    hoverClass: "hover:bg-purple-700",
+    gradientClass: "from-purple-500/20 to-purple-500/5",
+    services: [
+      "Wasserinstallation",
+      "Gasinstallation",
+      "Lüftungstechnik",
+      "Smart Home",
+      "Komplettplanung Neubau",
+      "Wartungsvertrag"
+    ]
+  }
+};
+
+interface ServiceBookingProps {
+  serviceType: ServiceType;
+  buttonText?: string;
+  buttonVariant?: 'default' | 'outline' | 'secondary';
+  buttonSize?: 'default' | 'sm' | 'lg';
+  className?: string;
+}
+
+export default function ServiceBooking({
+  serviceType,
+  buttonText = "Online Termin buchen",
+  buttonVariant = 'default',
+  buttonSize = 'default',
+  className = ""
+}: ServiceBookingProps) {
+  const [open, setOpen] = useState(false);
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    service: "",
+    preferredDate: "",
+    preferredTime: "",
+    name: "",
+    phone: "",
+    email: "",
+    street: "",
+    zipCity: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const config = serviceConfigs[serviceType];
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    
+    // Simulate API call - in production, send to webhook
+    const webhookUrl = import.meta.env.VITE_WEBHOOK_URL;
+    
+    try {
+      if (webhookUrl) {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'booking',
+            serviceType: config.name,
+            ...formData,
+            timestamp: new Date().toISOString()
+          })
+        });
+      }
+      
+      setIsSuccess(true);
+      setTimeout(() => {
+        setOpen(false);
+        setStep(1);
+        setFormData({
+          service: "",
+          preferredDate: "",
+          preferredTime: "",
+          name: "",
+          phone: "",
+          email: "",
+          street: "",
+          zipCity: "",
+          message: ""
+        });
+        setIsSuccess(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Booking submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const canProceedStep1 = formData.service !== "";
+  const canProceedStep2 = formData.preferredDate !== "" && formData.preferredTime !== "";
+  const canSubmit = formData.name && formData.phone && formData.email && formData.street && formData.zipCity;
+
+  const getButtonClass = () => {
+    if (buttonVariant === 'outline') {
+      return `border-2 ${config.borderClass} ${config.colorClass} bg-transparent hover:${config.bgClass} hover:text-white`;
+    }
+    return `${config.bgClass} text-white ${config.hoverClass}`;
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        <Button 
+          size={buttonSize}
+          className={`${getButtonClass()} ${className}`}
+          data-testid={`button-booking-${serviceType}`}
+        >
+          <Calendar className="w-4 h-4 mr-2" />
+          {buttonText}
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
+            <span className={`w-3 h-3 rounded-full ${config.bgClass}`} />
+            Online-Terminbuchung: {config.name}
+          </DialogTitle>
+        </DialogHeader>
+
+        {isSuccess ? (
+          <div className="py-8 text-center space-y-4">
+            <div className={`w-16 h-16 rounded-full ${config.bgClass} mx-auto flex items-center justify-center`}>
+              <CheckCircle2 className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold">Anfrage erfolgreich gesendet!</h3>
+            <p className="text-muted-foreground">
+              Wir melden uns innerhalb von 2 Stunden bei Ihnen.
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {/* Progress Steps */}
+            <div className="flex items-center justify-between mb-6">
+              {[1, 2, 3].map((s) => (
+                <div key={s} className="flex items-center">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
+                    step >= s ? `${config.bgClass} text-white` : 'bg-muted text-muted-foreground'
+                  }`}>
+                    {step > s ? <CheckCircle2 className="w-4 h-4" /> : s}
+                  </div>
+                  {s < 3 && (
+                    <div className={`w-16 sm:w-24 h-1 mx-2 rounded ${step > s ? config.bgClass : 'bg-muted'}`} />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Step 1: Service Selection */}
+            {step === 1 && (
+              <div className="space-y-4 animate-fade-in">
+                <div>
+                  <Label className="text-base font-medium">Welche Leistung benötigen Sie?</Label>
+                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren gewünschten Service</p>
+                </div>
+                <div className="grid gap-2">
+                  {config.services.map((service) => (
+                    <button
+                      key={service}
+                      onClick={() => handleInputChange('service', service)}
+                      className={`p-3 text-left rounded-md border transition-all ${
+                        formData.service === service
+                          ? `${config.borderClass} ${config.bgClass}/10 border-2`
+                          : 'border-border hover-elevate'
+                      }`}
+                      data-testid={`select-service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      <span className={formData.service === service ? config.colorClass : ''}>{service}</span>
+                    </button>
+                  ))}
+                </div>
+                <Button 
+                  className={`w-full ${config.bgClass} text-white ${config.hoverClass}`}
+                  disabled={!canProceedStep1}
+                  onClick={() => setStep(2)}
+                  data-testid="button-next-step-1"
+                >
+                  Weiter
+                </Button>
+              </div>
+            )}
+
+            {/* Step 2: Date & Time */}
+            {step === 2 && (
+              <div className="space-y-4 animate-fade-in">
+                <div>
+                  <Label className="text-base font-medium">Wann passt es Ihnen?</Label>
+                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren Wunschtermin</p>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <Label htmlFor="date">Wunschdatum</Label>
+                    <Input
+                      id="date"
+                      type="date"
+                      value={formData.preferredDate}
+                      onChange={(e) => handleInputChange('preferredDate', e.target.value)}
+                      min={new Date().toISOString().split('T')[0]}
+                      data-testid="input-date"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="time">Bevorzugte Uhrzeit</Label>
+                    <Select value={formData.preferredTime} onValueChange={(v) => handleInputChange('preferredTime', v)}>
+                      <SelectTrigger data-testid="select-time">
+                        <SelectValue placeholder="Uhrzeit wählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="08:00-10:00">08:00 - 10:00 Uhr</SelectItem>
+                        <SelectItem value="10:00-12:00">10:00 - 12:00 Uhr</SelectItem>
+                        <SelectItem value="12:00-14:00">12:00 - 14:00 Uhr</SelectItem>
+                        <SelectItem value="14:00-16:00">14:00 - 16:00 Uhr</SelectItem>
+                        <SelectItem value="16:00-18:00">16:00 - 18:00 Uhr</SelectItem>
+                        <SelectItem value="flexibel">Flexibel</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <Button variant="outline" onClick={() => setStep(1)} className="flex-1">
+                    Zurück
+                  </Button>
+                  <Button 
+                    className={`flex-1 ${config.bgClass} text-white ${config.hoverClass}`}
+                    disabled={!canProceedStep2}
+                    onClick={() => setStep(3)}
+                    data-testid="button-next-step-2"
+                  >
+                    Weiter
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {/* Step 3: Contact Info */}
+            {step === 3 && (
+              <div className="space-y-4 animate-fade-in">
+                <div>
+                  <Label className="text-base font-medium">Ihre Kontaktdaten</Label>
+                  <p className="text-sm text-muted-foreground mb-3">Damit wir Sie erreichen können</p>
+                </div>
+                <div className="grid gap-3">
+                  <div>
+                    <Label htmlFor="name">Name *</Label>
+                    <Input
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      placeholder="Max Mustermann"
+                      data-testid="input-name"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <Label htmlFor="phone">Telefon *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        placeholder="089 123456"
+                        data-testid="input-phone"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email">E-Mail *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        placeholder="max@beispiel.de"
+                        data-testid="input-email"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="street">Straße & Hausnummer *</Label>
+                    <Input
+                      id="street"
+                      value={formData.street}
+                      onChange={(e) => handleInputChange('street', e.target.value)}
+                      placeholder="Musterstraße 12"
+                      data-testid="input-street"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="zipCity">PLZ & Ort *</Label>
+                    <Input
+                      id="zipCity"
+                      value={formData.zipCity}
+                      onChange={(e) => handleInputChange('zipCity', e.target.value)}
+                      placeholder="80331 München"
+                      data-testid="input-zip-city"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="message">Nachricht (optional)</Label>
+                    <Textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                      rows={3}
+                      data-testid="input-message"
+                    />
+                  </div>
+                </div>
+
+                {/* Summary */}
+                <Card className={`bg-gradient-to-r ${config.gradientClass}`}>
+                  <CardContent className="p-3 text-sm">
+                    <p className="font-medium mb-1">Ihre Buchung:</p>
+                    <p>{config.name}: {formData.service}</p>
+                    <p>{formData.preferredDate} um {formData.preferredTime}</p>
+                  </CardContent>
+                </Card>
+
+                <div className="flex gap-2">
+                  <Button variant="outline" onClick={() => setStep(2)} className="flex-1">
+                    Zurück
+                  </Button>
+                  <Button 
+                    className={`flex-1 ${config.bgClass} text-white ${config.hoverClass}`}
+                    disabled={!canSubmit || isSubmitting}
+                    onClick={handleSubmit}
+                    data-testid="button-submit-booking"
+                  >
+                    {isSubmitting ? (
+                      "Wird gesendet..."
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Termin anfragen
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {/* Quick Contact */}
+            <div className="pt-4 border-t text-center">
+              <p className="text-sm text-muted-foreground mb-2">Lieber telefonisch?</p>
+              <Button variant="outline" size="sm" asChild>
+                <a href="tel:+4989123456789" data-testid="button-call-booking">
+                  <Phone className="w-4 h-4 mr-2" />
+                  089 123 456 789
+                </a>
+              </Button>
+            </div>
+          </div>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+// Export config for use in pages
+export { serviceConfigs };
