@@ -1,37 +1,46 @@
-import { type User, type InsertUser } from "@shared/schema";
-import { randomUUID } from "crypto";
-
-// modify the interface with any CRUD methods
-// you might need
+export interface Lead {
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  problem: string;
+  address: string;
+  urgency: string;
+  source: string;
+  pageUrl?: string;
+  createdAt: Date;
+}
 
 export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  createLead(lead: Omit<Lead, "id">): Promise<Lead>;
+  getLeads(): Promise<Lead[]>;
+  getLeadById(id: number): Promise<Lead | undefined>;
 }
 
 export class MemStorage implements IStorage {
-  private users: Map<string, User>;
+  private leads: Map<number, Lead>;
+  private currentId: number;
 
   constructor() {
-    this.users = new Map();
+    this.leads = new Map();
+    this.currentId = 1;
   }
 
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+  async createLead(leadData: Omit<Lead, "id">): Promise<Lead> {
+    const id = this.currentId++;
+    const lead: Lead = { id, ...leadData };
+    this.leads.set(id, lead);
+    return lead;
   }
 
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
+  async getLeads(): Promise<Lead[]> {
+    return Array.from(this.leads.values()).sort(
+      (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
     );
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+  async getLeadById(id: number): Promise<Lead | undefined> {
+    return this.leads.get(id);
   }
 }
 

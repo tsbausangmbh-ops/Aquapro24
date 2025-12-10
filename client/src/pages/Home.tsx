@@ -1,14 +1,13 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import ProblemSolution from "@/components/ProblemSolution";
-import Features from "@/components/Features";
-import WorkflowVisualization from "@/components/WorkflowVisualization";
-import RoiCalculator from "@/components/RoiCalculator";
+import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
-import TrustSection from "@/components/TrustSection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function Home() {
   return (
@@ -16,16 +15,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <TrustBar />
         <ProblemSolution />
-        <Features />
-        <WorkflowVisualization />
-        <RoiCalculator />
+        <Services />
         <Pricing />
         <Testimonials />
-        <TrustSection />
         <CTABanner />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

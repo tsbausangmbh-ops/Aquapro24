@@ -1,114 +1,119 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { 
+  Snowflake, 
+  Droplets, 
   Clock, 
-  Users, 
-  TrendingDown, 
-  ArrowRight,
-  Bot,
-  Zap,
-  PiggyBank
+  AlertTriangle,
+  ThumbsUp,
+  Thermometer,
+  Wrench,
+  Shield
 } from "lucide-react";
 
 const problems = [
   {
-    icon: Clock,
-    title: "Langsame Reaktionszeiten",
-    description: "Kunden warten stundenlang auf Antworten und verlieren das Interesse.",
+    icon: Snowflake,
+    title: "Kalte Wohnung im Winter",
+    description: "Die Heizung fällt ausgerechnet bei Minusgraden aus. Sie und Ihre Familie frieren.",
+    emotion: "Das kennen wir. Deshalb sind wir auch nachts für Sie da.",
   },
   {
-    icon: Users,
-    title: "Hohe Personalkosten",
-    description: "Große Support-Teams sind teuer und skalieren nicht effizient.",
+    icon: Droplets,
+    title: "Wasser überschwemmt die Wohnung",
+    description: "Ein Rohrbruch. Jede Minute zählt, bevor der Schaden noch größer wird.",
+    emotion: "Rufen Sie uns an. Wir stoppen das Wasser, bevor es schlimmer wird.",
   },
   {
-    icon: TrendingDown,
-    title: "Verpasste Leads",
-    description: "Potenzielle Kunden gehen verloren, weil niemand außerhalb der Geschäftszeiten erreichbar ist.",
+    icon: AlertTriangle,
+    title: "Angst vor überhöhten Preisen",
+    description: "Sie haben von unseriösen Notdiensten gehört, die Wucherpreise verlangen.",
+    emotion: "Verständlich. Deshalb nennen wir Ihnen den Festpreis, bevor wir anfangen.",
   },
 ];
 
 const solutions = [
   {
-    icon: Bot,
-    title: "Sofortige Antworten",
-    description: "KI-Chatbot beantwortet Anfragen in Sekundenschnelle, 24 Stunden am Tag.",
+    icon: Thermometer,
+    title: "Warme Wohnung noch heute",
+    description: "In 30 Minuten bei Ihnen. Reparatur oft am selben Tag abgeschlossen.",
   },
   {
-    icon: PiggyBank,
-    title: "Bis zu 70% Kosteneinsparung",
-    description: "Automatisierung reduziert den Bedarf an zusätzlichem Personal erheblich.",
+    icon: Wrench,
+    title: "Schnelle Schadensbegrenzung",
+    description: "Sofortmaßnahmen verhindern Folgeschäden an Wänden und Böden.",
   },
   {
-    icon: Zap,
-    title: "Kein Lead geht verloren",
-    description: "Rund-um-die-Uhr-Verfügbarkeit sorgt dafür, dass jeder Interessent betreut wird.",
+    icon: Shield,
+    title: "Festpreis vor Arbeitsbeginn",
+    description: "Sie wissen genau, was es kostet – ohne versteckte Zusatzkosten.",
   },
 ];
 
 export default function ProblemSolution() {
   return (
-    <section className="py-16 lg:py-24 bg-muted/30">
+    <section id="about" className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-4">
-            Von Herausforderungen zu Lösungen
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
+            Wir verstehen Ihre Situation
           </h2>
           <p className="text-lg text-muted-foreground">
-            Erkennen Sie diese Probleme? Unsere KI-Chatbots transformieren Ihren Kundenservice.
+            Ein Heizungsausfall oder Rohrbruch ist stressig. 
+            <span className="text-foreground font-medium"> Nach unserem Besuch haben Sie wieder Ruhe</span> – 
+            deshalb machen wir es Ihnen so einfach wie möglich.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-center">
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-destructive mb-6 text-center lg:text-left">
-              Ohne KI-Chatbot
+        <div className="space-y-12">
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-6 text-center">
+              Ihre Situation
             </h3>
-            {problems.map((problem, index) => (
-              <Card key={index} className="border-destructive/20 bg-destructive/5">
-                <CardContent className="flex items-start gap-4 p-5">
-                  <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                    <problem.icon className="w-5 h-5 text-destructive" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1" data-testid={`text-problem-${index}`}>{problem.title}</h4>
-                    <p className="text-sm text-muted-foreground">{problem.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="hidden lg:flex flex-col items-center gap-2 py-8">
-            <div className="w-px h-full bg-gradient-to-b from-transparent via-border to-transparent" />
-            <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center shadow-lg">
-              <ArrowRight className="w-5 h-5 text-secondary-foreground" />
-            </div>
-            <div className="w-px h-full bg-gradient-to-b from-transparent via-border to-transparent" />
-          </div>
-          
-          <div className="flex justify-center lg:hidden py-4">
-            <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center shadow-lg rotate-90">
-              <ArrowRight className="w-5 h-5 text-secondary-foreground" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {problems.map((problem, index) => (
+                <Card key={index} className="border-destructive/20 bg-destructive/5">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
+                      <problem.icon className="w-6 h-6 text-destructive" />
+                    </div>
+                    <h4 className="font-semibold text-lg mb-2" data-testid={`text-problem-${index}`}>
+                      {problem.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm mb-4">{problem.description}</p>
+                    <p className="text-sm font-medium text-foreground italic border-l-2 border-secondary pl-3">
+                      "{problem.emotion}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
           
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-accent mb-6 text-center lg:text-left">
-              Mit KI-Chatbot
+          <div className="flex justify-center">
+            <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center shadow-lg">
+              <ThumbsUp className="w-7 h-7 text-accent-foreground" />
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-accent mb-6 text-center">
+              Unsere Lösung
             </h3>
-            {solutions.map((solution, index) => (
-              <Card key={index} className="border-accent/20 bg-accent/5">
-                <CardContent className="flex items-start gap-4 p-5">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <solution.icon className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1" data-testid={`text-solution-${index}`}>{solution.title}</h4>
-                    <p className="text-sm text-muted-foreground">{solution.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid md:grid-cols-3 gap-6">
+              {solutions.map((solution, index) => (
+                <Card key={index} className="border-accent/20 bg-accent/5">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <solution.icon className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-lg mb-2" data-testid={`text-solution-${index}`}>
+                      {solution.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm">{solution.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>

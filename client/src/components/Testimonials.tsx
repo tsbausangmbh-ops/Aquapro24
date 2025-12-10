@@ -1,90 +1,107 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Star, Quote } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Star, Quote, CheckCircle2 } from "lucide-react";
+
 
 const testimonials = [
   {
-    name: "Michael Schmidt",
-    role: "CEO",
-    company: "TechStart GmbH",
-    content: "Der Chatbot hat unsere Lead-Qualifizierung komplett transformiert. Wir generieren jetzt 3x mehr qualifizierte Leads bei halbierten Kosten.",
+    name: "Familie Müller",
+    location: "Schwabing",
+    content: "Heizung ausgefallen an einem Sonntagabend im Januar. Der Monteur war in 35 Minuten da und hat alles repariert. Preis war genau wie am Telefon besprochen. Absolute Empfehlung!",
+    rating: 5,
+    initials: "FM",
+    service: "Heizungsnotdienst",
+  },
+  {
+    name: "Thomas K.",
+    location: "Bogenhausen",
+    content: "Rohrbruch im Keller entdeckt. Innerhalb von 30 Minuten war der Techniker da und hat den Schaden begrenzt. Professionell, freundlich und transparent bei den Kosten.",
+    rating: 5,
+    initials: "TK",
+    service: "Rohrbruch",
+  },
+  {
+    name: "Hausverwaltung Schneider",
+    location: "Maxvorstadt",
+    content: "Wir arbeiten seit 5 Jahren mit dem Münchner Heizung & Sanitär Team zusammen. Zuverlässig, pünktlich und faire Preise. Unsere Mieter sind immer zufrieden.",
+    rating: 5,
+    initials: "HS",
+    service: "Wartung",
+  },
+  {
+    name: "Maria S.",
+    location: "Sendling",
+    content: "Endlich ein Handwerker, der ehrlich abrechnet! Keine versteckten Kosten, Festpreis wurde eingehalten. Das Bad ist jetzt wunderschön renoviert.",
     rating: 5,
     initials: "MS",
+    service: "Badsanierung",
   },
   {
-    name: "Sarah Weber",
-    role: "Head of Customer Service",
-    company: "E-Commerce Plus",
-    content: "Unsere Kunden sind begeistert von den schnellen Antworten. Die Kundenzufriedenheit ist um 40% gestiegen seit wir den Chatbot nutzen.",
+    name: "Peter B.",
+    location: "Pasing",
+    content: "Verstopfter Abfluss am Wochenende. Der Notdienst hat sofort geholfen. Super netter Monteur, hat auch noch ein paar Tipps zur Vorbeugung gegeben.",
     rating: 5,
-    initials: "SW",
+    initials: "PB",
+    service: "Rohrreinigung",
   },
   {
-    name: "Thomas Müller",
-    role: "Marketing Director",
-    company: "Digital Solutions AG",
-    content: "Die Integration war kinderleicht und der Support ist erstklassig. Nach nur 2 Wochen hatten wir einen vollständig konfigurierten Chatbot live.",
+    name: "Familie Özdemir",
+    location: "Giesing",
+    content: "Die Heizungswartung war schnell erledigt und der Monteur hat alles erklärt. Jetzt läuft die Heizung viel effizienter. Sehr zu empfehlen!",
     rating: 5,
-    initials: "TM",
+    initials: "FÖ",
+    service: "Wartung",
   },
-  {
-    name: "Lisa Hoffmann",
-    role: "Geschäftsführerin",
-    company: "Immobilien Hoffmann",
-    content: "Als Immobilienmaklerin spare ich jetzt Stunden pro Tag, weil der Chatbot Erstanfragen vorqualifiziert und Besichtigungstermine bucht.",
-    rating: 5,
-    initials: "LH",
-  },
-  {
-    name: "Dr. Martin König",
-    role: "Praxisinhaber",
-    company: "Zahnarztpraxis König",
-    content: "Patienten können jetzt rund um die Uhr Termine buchen. Das entlastet unser Team enorm und wir haben weniger Terminausfälle.",
-    rating: 5,
-    initials: "MK",
-  },
-  {
-    name: "Anna Fischer",
-    role: "COO",
-    company: "FinTech Solutions",
-    content: "Die DSGVO-Konformität war für uns entscheidend. Der Chatbot erfüllt alle Anforderungen und unsere Kunden vertrauen dem System.",
-    rating: 5,
-    initials: "AF",
-  },
-];
-
-const logos = [
-  "TechStart", "E-Commerce Plus", "Digital Solutions", "FinTech Pro", 
-  "MediCare", "AutoHaus", "Reise Expert", "Sport Direct"
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-16 lg:py-24">
+    <section id="testimonials" className="py-16 lg:py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-4">
-            Das sagen unsere Kunden
+          <div className="flex justify-center gap-1 mb-4">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <Star key={star} className="w-6 h-6 fill-primary text-primary" />
+            ))}
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
+            Das sagen Münchner über uns
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Über 500 Unternehmen vertrauen bereits auf unsere KI-Chatbot-Lösung.
+          <p className="text-lg text-muted-foreground mb-4">
+            <span className="text-foreground font-bold text-xl">2.547</span> zufriedene Kunden in München vertrauen uns.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Badge variant="secondary" className="gap-1">
+              <Star className="w-3 h-3 fill-current" />
+              4.9 Sterne bei Google (312 Bewertungen)
+            </Badge>
+            <Badge variant="outline" className="gap-1">
+              <CheckCircle2 className="w-3 h-3" />
+              Verifizierte Kundenbewertungen
+            </Badge>
+          </div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="hover-elevate">
               <CardContent className="p-6">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                  ))}
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <Badge variant="outline" className="text-xs">
+                    {testimonial.service}
+                  </Badge>
                 </div>
                 
                 <div className="relative mb-4">
-                  <Quote className="absolute -top-2 -left-2 w-8 h-8 text-muted/30" />
+                  <Quote className="absolute -top-1 -left-1 w-6 h-6 text-muted/40" />
                   <p className="text-sm leading-relaxed pl-4" data-testid={`text-testimonial-${index}`}>
-                    "{testimonial.content}"
+                    {testimonial.content}
                   </p>
                 </div>
                 
@@ -94,10 +111,13 @@ export default function Testimonials() {
                       {testimonial.initials}
                     </AvatarFallback>
                   </Avatar>
-                  <div>
-                    <p className="font-semibold text-sm">{testimonial.name}</p>
+                  <div className="flex-1">
+                    <p className="font-semibold text-sm flex items-center gap-1">
+                      {testimonial.name}
+                      <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                    </p>
                     <p className="text-xs text-muted-foreground">
-                      {testimonial.role}, {testimonial.company}
+                      {testimonial.location}
                     </p>
                   </div>
                 </div>
@@ -106,21 +126,21 @@ export default function Testimonials() {
           ))}
         </div>
         
-        <div className="border-t border-border pt-12">
-          <p className="text-center text-sm text-muted-foreground mb-8">
-            Vertraut von führenden Unternehmen
+        <div className="mt-12 text-center">
+          <p className="text-muted-foreground mb-2">
+            Werden auch Sie einer unserer zufriedenen Kunden.{" "}
+            <span className="text-foreground font-medium">Wenn Sie uns anrufen, helfen wir Ihnen genauso zuverlässig.</span>
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-            {logos.map((logo, index) => (
-              <div 
-                key={index}
-                className="text-lg font-semibold text-muted-foreground/50"
-                data-testid={`text-logo-${index}`}
-              >
-                {logo}
-              </div>
-            ))}
-          </div>
+          <p className="text-sm text-muted-foreground">
+            Alle Bewertungen sind echt und verifiziert.{" "}
+            <a 
+              href="#" 
+              className="text-secondary underline hover:no-underline"
+              data-testid="link-google-reviews"
+            >
+              Mehr auf Google lesen
+            </a>
+          </p>
         </div>
       </div>
     </section>
