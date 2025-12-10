@@ -529,7 +529,7 @@ export default function ChatWidget() {
   return (
     <>
       {isOpen && (
-        <div className="fixed bottom-20 right-4 z-50 w-[calc(100%-2rem)] max-w-md">
+        <div className="fixed bottom-20 right-4 z-50 w-[calc(100%-2rem)] max-w-lg">
           <Card className="shadow-2xl border-2 border-secondary/20">
             <CardHeader className="bg-secondary text-secondary-foreground rounded-t-lg p-4">
               <div className="flex items-center justify-between gap-2">
@@ -568,7 +568,7 @@ export default function ChatWidget() {
                     <Progress value={progress} className="h-2" />
                   </div>
                   
-                  <div ref={contentRef} className="p-4 space-y-4 max-h-80 overflow-y-auto">
+                  <div ref={contentRef} className="p-4 space-y-4 max-h-[28rem] overflow-y-auto">
                     <div className="flex gap-2">
                       <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
                         <Bot className="w-4 h-4 text-secondary" />
