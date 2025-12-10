@@ -99,11 +99,11 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
   },
   haustechnik: {
     name: "Haustechnik",
-    colorClass: "text-purple-600 dark:text-purple-400",
-    bgClass: "bg-purple-600",
-    borderClass: "border-purple-600",
-    hoverClass: "hover:bg-purple-700",
-    gradientClass: "from-purple-500/20 to-purple-500/5",
+    colorClass: "text-emerald-600 dark:text-emerald-400",
+    bgClass: "bg-emerald-600",
+    borderClass: "border-emerald-600",
+    hoverClass: "hover:bg-emerald-700",
+    gradientClass: "from-emerald-500/20 to-emerald-500/5",
     services: [
       "Wasserinstallation",
       "Gasinstallation",
