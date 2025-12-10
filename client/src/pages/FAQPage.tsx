@@ -27,7 +27,7 @@ const pricingCategories = [
     items: [
       { service: "Wasserhahn Reparatur", price: "ab 185€" },
       { service: "Tropfender Wasserhahn", price: "ab 185€" },
-      { service: "WC-Spülung Reparatur", price: "ab 79€" },
+      { service: "WC-Spülung Reparatur", price: "ab 285€" },
       { service: "Siphon austauschen", price: "ab 59€" },
       { service: "Abfluss reinigen", price: "ab 89€" },
       { service: "Rohrbruch Notdienst", price: "ab 149€" },
