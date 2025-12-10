@@ -153,16 +153,16 @@ export default function WaermepumpePage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={heatPumpImage3} 
-                    alt="Moderne Wärmepumpe am Haus" 
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <p className="text-white text-sm font-medium">Professionelle Installation vor Ort</p>
-                  </div>
+                <div className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-6 text-accent-foreground">
+                  <h3 className="text-lg font-bold mb-3">Ihre Vorteile</h3>
+                  <ul className="space-y-2">
+                    {benefits.slice(0, 4).map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
