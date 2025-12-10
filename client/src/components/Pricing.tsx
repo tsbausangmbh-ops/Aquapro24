@@ -313,9 +313,12 @@ export default function Pricing() {
                 <h3 className="text-xl font-bold mb-4">
                   Ihre Festpreis-Garantie – Ihr Schutz vor bösen Überraschungen
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-4">
                   <span className="text-foreground font-medium">Wenn Sie bei uns anrufen,</span> nennen wir Ihnen den exakten Preis, 
                   <strong> bevor</strong> wir mit der Arbeit beginnen. So entscheiden Sie in Ruhe – garantiert.
+                </p>
+                <p className="text-sm text-muted-foreground mb-6 bg-muted/50 p-3 rounded-md">
+                  <strong className="text-foreground">Hinweis:</strong> Bei kleinen Arbeiten wie WC-Montage, Armaturen-Austausch usw. erhalten Sie direkt am Telefon einen verbindlichen Festpreis.
                 </p>
                 <ul className="space-y-3">
                   {guarantees.map((guarantee, index) => (
