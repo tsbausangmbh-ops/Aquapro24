@@ -36,8 +36,11 @@ Preferred communication style: Simple, everyday language.
   - `SEO.tsx`: Meta tags, titles, descriptions, Open Graph, canonical URLs, LocalBusiness JSON-LD
   - `FAQ.tsx`: FAQ accordion with FAQPage schema.org markup for rich snippets
   - `ServiceAreas.tsx`: Munich district geo-targeting with response times
-  - `NLPSection.tsx`: Psychology-driven copy (pacing, future pacing, problem-solution)
-- **Service Pages**: 5 dedicated pages (Sanitär, Bad, Heizung, Wärmepumpe, Haustechnik) with unique SEO per page
+- **NLP Psychology Components**: Customer persuasion infrastructure
+  - `NLPSection.tsx`: Problem-solution framework with authority badges, urgency triggers, transformation steps (3-step journey visualization)
+  - `CustomerStories.tsx`: 10 emotional success stories (2 per service) following problem/emotion/solution/result pattern, with specific savings amounts and timeframes
+  - `TrustSignals.tsx`: Social proof (compact/detailed variants) with Meisterbetrieb authority, customer stats (2.847+), ratings (4.9/5), response times
+- **Service Pages**: 5 dedicated pages (Sanitär, Bad, Heizung, Wärmepumpe, Haustechnik) with unique SEO, customer stories, and NLP triggers per page
 
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)
