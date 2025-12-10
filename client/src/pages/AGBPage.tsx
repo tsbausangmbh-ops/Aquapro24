@@ -47,13 +47,15 @@ export default function AGBPage() {
                 Beginn der Ausführung der Arbeiten zustande.
               </p>
               <p className="text-muted-foreground mb-4">
-                (3) Kostenvoranschläge sind unverbindlich, sofern nicht ausdrücklich als Festpreis 
-                bezeichnet. Werden bei der Ausführung notwendige Zusatzarbeiten erkennbar, informieren 
-                wir den Auftraggeber unverzüglich.
+                (3) Bei Festpreisangeboten gilt der genannte Preis verbindlich für den beschriebenen 
+                Leistungsumfang. Änderungen am Leistungsumfang bedürfen einer gesonderten Vereinbarung.
               </p>
               <p className="text-muted-foreground mb-4">
-                (4) Bei Festpreisangeboten gilt der genannte Preis verbindlich für den beschriebenen 
-                Leistungsumfang. Änderungen am Leistungsumfang bedürfen einer gesonderten Vereinbarung.
+                (4) Gemäß § 650c BGB gilt: Ist dem Vertrag ein Kostenanschlag zugrunde gelegt worden, 
+                ohne dass dieser vereinbarungsgemäß unverbindlich ist, so wird die vereinbarte 
+                Vergütung für den Teil der Leistung berechnet, der dem Kostenanschlag entspricht. 
+                Die darüber hinausgehende Vergütung wird nach den tatsächlich erforderlichen Kosten 
+                mit angemessenen Zuschlägen für allgemeine Geschäftskosten, Wagnis und Gewinn ermittelt.
               </p>
             </section>
 
