@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Menu, X, Phone, Clock, MapPin, Wrench, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Clock, MapPin, ChevronDown } from "lucide-react";
+import logoImage from "@assets/Icon_Logo_1765382090112.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,15 +60,18 @@ export default function Header() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between gap-4 h-16">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-secondary-foreground" />
-              </div>
+            <Link href="/" className="flex items-center gap-2">
+              <img 
+                src={logoImage} 
+                alt="Münchner Sanitär Logo" 
+                className="w-10 h-10 object-contain"
+                data-testid="img-header-logo"
+              />
               <div>
                 <span className="font-bold text-lg tracking-tight">Münchner</span>
                 <span className="block text-xs text-muted-foreground -mt-0.5">Heizung & Sanitär</span>
               </div>
-            </div>
+            </Link>
 
             <nav className="hidden lg:flex items-center gap-6">
               <Link 
