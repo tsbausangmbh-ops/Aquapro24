@@ -5,6 +5,8 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/FAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
+import CustomerStories, { badStories } from "@/components/CustomerStories";
+import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -155,6 +157,8 @@ export default function BadPage() {
           </div>
         </section>
 
+        <TrustSignals variant="compact" />
+
         <NLPSection
           problemTitle="Diese Probleme kennen viele Münchner"
           problems={[
@@ -173,6 +177,19 @@ export default function BadPage() {
             "Barrierefreie Lösungen für alle Generationen"
           ]}
           futureState="...Sie betreten jeden Morgen Ihr neues Traumbad. Alles ist genau so, wie Sie es sich vorgestellt haben - modern, funktional und einladend. Ihre Investition zahlt sich jeden Tag aus und steigert gleichzeitig den Wert Ihrer Immobilie."
+          authorityText="Über 500 Badsanierungen in München erfolgreich abgeschlossen"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
+          transformationSteps={[
+            "Kostenlose Beratung vor Ort: Wir besprechen Ihre Wünsche und zeigen Möglichkeiten.",
+            "3D-Visualisierung: Sie sehen Ihr neues Bad vorab am Bildschirm - so treffen Sie die richtige Entscheidung.",
+            "Termingerechte Umsetzung: In 2-3 Wochen ist Ihr Traumbad fertig - wir räumen auf und Sie genießen."
+          ]}
+        />
+
+        <CustomerStories 
+          stories={badStories}
+          title="Badsanierung in München: Echte Erfolgsgeschichten"
+          subtitle="So haben wir anderen Münchnern zu ihrem Traumbad verholfen"
         />
 
         <section className="py-16 lg:py-24">

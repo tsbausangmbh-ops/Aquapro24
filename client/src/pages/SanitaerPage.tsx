@@ -5,6 +5,8 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/FAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
+import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
+import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -140,6 +142,8 @@ export default function SanitaerPage() {
           </div>
         </section>
 
+        <TrustSignals variant="compact" />
+
         <NLPSection
           problemTitle="Kennen Sie diese Probleme?"
           problems={[
@@ -158,6 +162,19 @@ export default function SanitaerPage() {
             "Pünktlichkeit und Zuverlässigkeit garantiert"
           ]}
           futureState="...Ihr Sanitärproblem ist gelöst, die Arbeit wurde sauber und professionell erledigt, und Sie haben einen fairen Preis bezahlt. So arbeiten wir - Tag für Tag für unsere Münchner Kunden."
+          authorityText="Meisterbetrieb mit über 2.800 zufriedenen Kunden in München"
+          urgencyText="Heute noch freie Termine verfügbar"
+          transformationSteps={[
+            "Sie rufen an oder schreiben uns - wir sind sofort für Sie da und hören Ihnen zu.",
+            "Wir kommen zum vereinbarten Termin, analysieren das Problem und nennen Ihnen den Festpreis.",
+            "Die Arbeit wird sauber erledigt, Sie zahlen nur den vereinbarten Preis und sind zufrieden."
+          ]}
+        />
+
+        <CustomerStories 
+          stories={sanitaerStories}
+          title="Echte Geschichten von Münchner Kunden"
+          subtitle="Diese Situationen kennen viele - lesen Sie, wie wir helfen konnten"
         />
 
         <section className="py-16 md:py-20">

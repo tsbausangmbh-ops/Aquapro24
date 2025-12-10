@@ -5,6 +5,8 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/FAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
+import CustomerStories, { waermepumpeStories } from "@/components/CustomerStories";
+import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -154,6 +156,8 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
+        <TrustSignals variant="compact" />
+
         <NLPSection
           problemTitle="Diese Bedenken hören wir oft"
           problems={[
@@ -172,6 +176,19 @@ export default function WaermepumpePage() {
             "5 Jahre Gewährleistung und optionale Wartungsverträge"
           ]}
           futureState="...Ihre neue Wärmepumpe läuft leise im Garten, Sie heizen klimaneutral und Ihre Heizkosten sind um die Hälfte gesunken. Jeden Monat sparen Sie Geld und tun etwas für die Umwelt. Mit AquaPro24 wird diese Vision Realität."
+          authorityText="Über 200 Wärmepumpen in München installiert - zertifizierter Fachbetrieb"
+          urgencyText="Förderung sichern: BAFA-Antrag vor Heizungstausch nötig!"
+          transformationSteps={[
+            "Kostenloser Eignungscheck: Wir prüfen Ihr Haus und berechnen die optimale Wärmepumpe.",
+            "Förderantrag & Planung: Wir übernehmen die BAFA-Beantragung und planen die Installation.",
+            "Saubere Montage: In 2-4 Tagen läuft Ihre Wärmepumpe - Sie heizen ab sofort günstiger und grüner."
+          ]}
+        />
+
+        <CustomerStories 
+          stories={waermepumpeStories}
+          title="Erfolgsgeschichten: So sparen Münchner mit Wärmepumpe"
+          subtitle="Echte Kunden berichten von ihrer Energiewende"
         />
 
         <section className="py-16 lg:py-24">

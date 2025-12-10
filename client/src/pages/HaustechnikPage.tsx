@@ -5,6 +5,8 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/FAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
+import CustomerStories, { haustechnikStories } from "@/components/CustomerStories";
+import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -155,6 +157,8 @@ export default function HaustechnikPage() {
           </div>
         </section>
 
+        <TrustSignals variant="compact" />
+
         <NLPSection
           problemTitle="Typische Haustechnik-Herausforderungen"
           problems={[
@@ -173,6 +177,19 @@ export default function HaustechnikPage() {
             "Smart-Home-Integration für maximalen Komfort"
           ]}
           futureState="...Ihre gesamte Haustechnik funktioniert perfekt zusammen, Sie haben einen Ansprechpartner für alles und Ihr Zuhause arbeitet intelligent für Sie. Wasserversorgung, Heizung und Lüftung spielen optimal zusammen - und Sie genießen einfach den Komfort."
+          authorityText="Über 1.500 Haustechnik-Projekte in München realisiert"
+          urgencyText="Komplettberatung: Ein Termin für alle Gewerke"
+          transformationSteps={[
+            "Bedarfsanalyse: Wir erfassen alle Ihre Haustechnik-Anforderungen in einem Termin.",
+            "Ganzheitliche Planung: Ein Konzept für Wasser, Gas, Lüftung und Smart Home - alles abgestimmt.",
+            "Koordinierte Umsetzung: Wir führen alle Arbeiten durch - Sie haben nur einen Ansprechpartner."
+          ]}
+        />
+
+        <CustomerStories 
+          stories={haustechnikStories}
+          title="Haustechnik aus einer Hand: Erfolgsgeschichten"
+          subtitle="So haben wir komplexe Projekte für Münchner Kunden gelöst"
         />
 
         <section className="py-16 lg:py-24">

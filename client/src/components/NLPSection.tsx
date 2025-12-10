@@ -1,5 +1,6 @@
-import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
+import { CheckCircle, AlertTriangle, ArrowRight, Clock, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 interface NLPSectionProps {
   problemTitle: string;
@@ -9,6 +10,9 @@ interface NLPSectionProps {
   futureState: string;
   ctaText?: string;
   ctaHref?: string;
+  urgencyText?: string;
+  authorityText?: string;
+  transformationSteps?: string[];
 }
 
 export default function NLPSection({
@@ -18,11 +22,23 @@ export default function NLPSection({
   solutions,
   futureState,
   ctaText = "Jetzt kostenlos beraten lassen",
-  ctaHref = "tel:+4989123456789"
+  ctaHref = "tel:+4989123456789",
+  urgencyText,
+  authorityText,
+  transformationSteps
 }: NLPSectionProps) {
   return (
     <section className="py-16" data-testid="section-nlp-problem-solution">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        {authorityText && (
+          <div className="text-center mb-8">
+            <Badge variant="outline" className="mb-4">
+              <Shield className="w-3 h-3 mr-1" />
+              {authorityText}
+            </Badge>
+          </div>
+        )}
+
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-red-50 dark:bg-red-950/20 rounded-lg p-6 border border-red-200 dark:border-red-900/30">
             <div className="flex items-center gap-2 mb-4">
@@ -61,6 +77,25 @@ export default function NLPSection({
           </div>
         </div>
 
+        {transformationSteps && transformationSteps.length > 0 && (
+          <div className="mt-8 bg-muted/50 rounded-lg p-6 md:p-8">
+            <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-secondary" />
+              Ihre Reise mit uns - in 3 einfachen Schritten:
+            </h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {transformationSteps.map((step, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">
+                    {index + 1}
+                  </div>
+                  <p className="text-sm pt-1">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="mt-8 bg-gradient-to-r from-secondary/10 to-primary/10 rounded-lg p-6 md:p-8 text-center">
           <h3 className="text-xl md:text-2xl font-bold mb-3">
             Stellen Sie sich vor...
@@ -68,12 +103,22 @@ export default function NLPSection({
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
             {futureState}
           </p>
-          <a href={ctaHref}>
-            <Button variant="secondary" size="lg" data-testid="button-nlp-cta">
-              {ctaText}
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </a>
+          
+          {urgencyText && (
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary-foreground dark:text-foreground px-4 py-2 rounded-full text-sm mb-6">
+              <Clock className="w-4 h-4" />
+              <span className="font-medium">{urgencyText}</span>
+            </div>
+          )}
+          
+          <div>
+            <a href={ctaHref}>
+              <Button variant="secondary" size="lg" data-testid="button-nlp-cta">
+                {ctaText}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

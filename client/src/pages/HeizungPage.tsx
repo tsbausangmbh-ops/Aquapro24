@@ -5,6 +5,8 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/FAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
+import CustomerStories, { heizungStories } from "@/components/CustomerStories";
+import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -154,6 +156,8 @@ export default function HeizungPage() {
           </div>
         </section>
 
+        <TrustSignals variant="compact" />
+
         <NLPSection
           problemTitle="Diese Sorgen kennen wir"
           problems={[
@@ -172,6 +176,19 @@ export default function HeizungPage() {
             "Wartungsverträge für sorgenfreie Heizperioden"
           ]}
           futureState="...Ihre Heizung läuft zuverlässig, Ihre Energiekosten sind gesunken und Sie haben einen vertrauenswürdigen Partner, der sich um alles kümmert. Bei uns ist das kein Wunschtraum - das ist Standard."
+          authorityText="24/7 Notdienst mit durchschnittlich 38 Minuten Reaktionszeit"
+          urgencyText="Heizungsnotfall? Wir sind in 45 Min. da"
+          transformationSteps={[
+            "Anruf oder Chat: Schildern Sie kurz das Problem - wir sind rund um die Uhr erreichbar.",
+            "Schnelle Diagnose: Unser Techniker kommt, prüft die Heizung und nennt Ihnen den Festpreis.",
+            "Sofortige Lösung: Die Reparatur erfolgt direkt - Sie haben wieder Wärme und Sicherheit."
+          ]}
+        />
+
+        <CustomerStories 
+          stories={heizungStories}
+          title="Heizungsnotfälle gelöst: Echte Kundengeschichten"
+          subtitle="So haben wir anderen Münchnern in der Kälte geholfen"
         />
 
         <section className="py-16 lg:py-24">
