@@ -30,6 +30,11 @@ interface ServiceConfig {
   hoverClass: string;
   gradientClass: string;
   services: string[];
+  additionalQuestions?: {
+    heizungstyp?: string[];
+    heizungsalter?: string[];
+    dringlichkeit?: string[];
+  };
 }
 
 const serviceConfigs: Record<ServiceType, ServiceConfig> = {
@@ -79,13 +84,40 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
     services: [
       "Heizung ausgefallen (Notfall)",
       "Heizung wird nicht warm",
-      "Heizung macht Geräusche",
+      "Heizung macht Geräusche / gluckert",
       "Heizungswartung / Jahresservice",
       "Neue Heizung installieren",
-      "Alte Heizung modernisieren",
+      "Alte Heizung modernisieren / tauschen",
       "Thermostat / Regelung defekt",
-      "Heizkörper entlüften / tauschen"
-    ]
+      "Heizkörper entlüften / tauschen",
+      "Wasserdruck zu niedrig",
+      "Brenner startet nicht"
+    ],
+    additionalQuestions: {
+      heizungstyp: [
+        "Gasheizung",
+        "Ölheizung",
+        "Wärmepumpe",
+        "Pelletheizung",
+        "Fernwärme",
+        "Elektroheizung",
+        "Weiß ich nicht"
+      ],
+      heizungsalter: [
+        "Unter 5 Jahre",
+        "5-10 Jahre",
+        "10-15 Jahre",
+        "15-20 Jahre",
+        "Über 20 Jahre",
+        "Weiß ich nicht"
+      ],
+      dringlichkeit: [
+        "Notfall - Heizung komplett aus",
+        "Dringend - Innerhalb 24 Stunden",
+        "Diese Woche",
+        "Flexibel / Beratungstermin"
+      ]
+    }
   },
   waermepumpe: {
     name: "Wärmepumpe",
@@ -144,6 +176,9 @@ export default function ServiceBooking({
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     service: "",
+    heizungstyp: "",
+    heizungsalter: "",
+    dringlichkeit: "",
     preferredDate: "",
     preferredTime: "",
     name: "",
@@ -188,6 +223,9 @@ export default function ServiceBooking({
         setStep(1);
         setFormData({
           service: "",
+          heizungstyp: "",
+          heizungsalter: "",
+          dringlichkeit: "",
           preferredDate: "",
           preferredTime: "",
           name: "",
@@ -206,7 +244,9 @@ export default function ServiceBooking({
     }
   };
 
-  const canProceedStep1 = formData.service !== "";
+  const hasAdditionalQuestions = serviceType === 'heizung' && config.additionalQuestions;
+  const canProceedStep1 = formData.service !== "" && 
+    (!hasAdditionalQuestions || (formData.heizungstyp !== "" && formData.dringlichkeit !== ""));
   const canProceedStep2 = formData.preferredDate !== "" && formData.preferredTime !== "";
   const canSubmit = formData.name && formData.phone && formData.email && formData.street && formData.zipCity;
 
@@ -270,10 +310,12 @@ export default function ServiceBooking({
             {step === 1 && (
               <div className="space-y-4 animate-fade-in">
                 <div>
-                  <Label className="text-base font-medium">Welche Leistung benötigen Sie?</Label>
+                  <Label className="text-base font-medium">
+                    {serviceType === 'heizung' ? 'Was ist das Problem?' : 'Welche Leistung benötigen Sie?'}
+                  </Label>
                   <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren gewünschten Service</p>
                 </div>
-                <div className="grid gap-2">
+                <div className="grid gap-2 max-h-48 overflow-y-auto">
                   {config.services.map((service) => (
                     <button
                       key={service}
@@ -289,6 +331,66 @@ export default function ServiceBooking({
                     </button>
                   ))}
                 </div>
+
+                {/* Additional questions for Heizung */}
+                {hasAdditionalQuestions && config.additionalQuestions && (
+                  <>
+                    <div className="pt-2 border-t">
+                      <Label className="text-base font-medium">Welche Heizungsart haben Sie?</Label>
+                      <div className="grid grid-cols-2 gap-2 mt-2">
+                        {config.additionalQuestions.heizungstyp?.map((typ) => (
+                          <button
+                            key={typ}
+                            onClick={() => handleInputChange('heizungstyp', typ)}
+                            className={`p-2 text-sm text-left rounded-md border transition-all ${
+                              formData.heizungstyp === typ
+                                ? `${config.borderClass} ${config.bgClass}/10 border-2`
+                                : 'border-border hover-elevate'
+                            }`}
+                            data-testid={`select-heizungstyp-${typ.toLowerCase().replace(/\s+/g, '-')}`}
+                          >
+                            <span className={formData.heizungstyp === typ ? config.colorClass : ''}>{typ}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <Label className="text-base font-medium">Wie alt ist Ihre Heizung?</Label>
+                      <Select value={formData.heizungsalter} onValueChange={(v) => handleInputChange('heizungsalter', v)}>
+                        <SelectTrigger className="mt-2" data-testid="select-heizungsalter">
+                          <SelectValue placeholder="Alter wählen (optional)" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {config.additionalQuestions.heizungsalter?.map((alter) => (
+                            <SelectItem key={alter} value={alter}>{alter}</SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div>
+                      <Label className="text-base font-medium">Wie dringend ist es?</Label>
+                      <div className="grid gap-2 mt-2">
+                        {config.additionalQuestions.dringlichkeit?.map((d) => (
+                          <button
+                            key={d}
+                            onClick={() => handleInputChange('dringlichkeit', d)}
+                            className={`p-2 text-sm text-left rounded-md border transition-all ${
+                              formData.dringlichkeit === d
+                                ? `${config.borderClass} ${config.bgClass}/10 border-2`
+                                : 'border-border hover-elevate'
+                            }`}
+                            data-testid={`select-dringlichkeit-${d.toLowerCase().replace(/\s+/g, '-')}`}
+                          >
+                            <span className={formData.dringlichkeit === d ? config.colorClass : ''}>{d}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
                 <Button 
                   className={`w-full ${buttonStyles[serviceType]}`}
                   disabled={!canProceedStep1}
@@ -432,6 +534,12 @@ export default function ServiceBooking({
                   <CardContent className="p-3 text-sm">
                     <p className="font-medium mb-1">Ihre Buchung:</p>
                     <p>{config.name}: {formData.service}</p>
+                    {serviceType === 'heizung' && formData.heizungstyp && (
+                      <p>Heizungsart: {formData.heizungstyp}{formData.heizungsalter ? ` (${formData.heizungsalter})` : ''}</p>
+                    )}
+                    {serviceType === 'heizung' && formData.dringlichkeit && (
+                      <p>Dringlichkeit: {formData.dringlichkeit}</p>
+                    )}
                     <p>{formData.preferredDate} um {formData.preferredTime}</p>
                   </CardContent>
                 </Card>
