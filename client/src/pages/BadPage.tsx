@@ -20,7 +20,7 @@ import {
   Star,
   ArrowRight
 } from "lucide-react";
-import bathroomImage1 from "@assets/stock_images/bright_white_bathroo_11e09dc4.jpg";
+import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_1a31fdd1.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
 
 const services = [
