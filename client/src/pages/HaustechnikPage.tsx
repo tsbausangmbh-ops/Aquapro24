@@ -200,7 +200,7 @@ export default function HaustechnikPage() {
         </section>
       </main>
       <Footer />
-      <ChatWidget />
+      <ChatWidget serviceCategory="haustechnik" />
     </div>
   );
 }

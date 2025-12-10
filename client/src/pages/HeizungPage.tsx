@@ -171,7 +171,7 @@ export default function HeizungPage() {
         </section>
       </main>
       <Footer />
-      <ChatWidget />
+      <ChatWidget serviceCategory="heizung" />
     </div>
   );
 }

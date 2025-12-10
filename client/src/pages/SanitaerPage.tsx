@@ -192,7 +192,7 @@ export default function SanitaerPage() {
       </main>
 
       <Footer />
-      <ChatWidget />
+      <ChatWidget serviceCategory="sanitaer" />
     </div>
   );
 }

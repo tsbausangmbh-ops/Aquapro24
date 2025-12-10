@@ -200,7 +200,7 @@ export default function WaermepumpePage() {
         </section>
       </main>
       <Footer />
-      <ChatWidget />
+      <ChatWidget serviceCategory="waermepumpe" />
     </div>
   );
 }

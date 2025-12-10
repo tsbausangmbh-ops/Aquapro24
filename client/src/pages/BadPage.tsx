@@ -170,7 +170,7 @@ export default function BadPage() {
         </section>
       </main>
       <Footer />
-      <ChatWidget />
+      <ChatWidget serviceCategory="bad" />
     </div>
   );
 }

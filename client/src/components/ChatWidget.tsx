@@ -214,6 +214,26 @@ const QUESTIONS: Question[] = [
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || "";
 
+interface ChatWidgetProps {
+  serviceCategory?: "sanitaer" | "bad" | "heizung" | "waermepumpe" | "haustechnik";
+}
+
+const SERVICE_CATEGORY_LABELS: Record<string, string> = {
+  sanitaer: "Sanitär & Wasserinstallation",
+  bad: "Badsanierung",
+  heizung: "Heizung",
+  waermepumpe: "Wärmepumpe",
+  haustechnik: "Haustechnik",
+};
+
+const SERVICE_CATEGORY_DEFAULTS: Record<string, string[]> = {
+  sanitaer: ["reparatur"],
+  bad: ["bad_komplett"],
+  heizung: ["heizung_reparatur"],
+  waermepumpe: ["waermepumpe_installation"],
+  haustechnik: ["haustechnik_allgemein"],
+};
+
 function calculatePrice(data: LeadData): string {
   let minPrice = 89;
   let maxPrice = 149;
@@ -246,14 +266,14 @@ function calculatePrice(data: LeadData): string {
   return `${minPrice} - ${maxPrice} EUR`;
 }
 
-export default function ChatWidget() {
+export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
   const [leadData, setLeadData] = useState<LeadData>({
-    serviceTypes: [],
+    serviceTypes: serviceCategory ? SERVICE_CATEGORY_DEFAULTS[serviceCategory] || [] : [],
     locationType: "",
     components: [],
     symptoms: [],
@@ -272,6 +292,8 @@ export default function ChatWidget() {
     preferredTime: "",
     estimatedPrice: "",
   });
+  
+  const serviceCategoryLabel = serviceCategory ? SERVICE_CATEGORY_LABELS[serviceCategory] : null;
   
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -538,10 +560,12 @@ export default function ChatWidget() {
                     <Wrench className="w-5 h-5" />
                   </div>
                   <div>
-                    <CardTitle className="text-base">Münchner Sanitär</CardTitle>
+                    <CardTitle className="text-base">
+                      {serviceCategoryLabel ? `Buchung: ${serviceCategoryLabel}` : "Münchner Sanitär"}
+                    </CardTitle>
                     <div className="flex items-center gap-1.5 text-xs text-white/80">
                       <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                      <span>Online - Sofort Preisschätzung</span>
+                      <span>{serviceCategoryLabel ? "Online Buchung" : "Online - Sofort Preisschätzung"}</span>
                     </div>
                   </div>
                 </div>
