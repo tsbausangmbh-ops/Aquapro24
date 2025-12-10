@@ -77,8 +77,8 @@ export default function TrustSignals({
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {signals.map((signal, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-secondary">{signal.value}</div>
+              <div key={index} className="text-center group cursor-default">
+                <div className="text-2xl md:text-3xl font-bold text-secondary transition-transform duration-300 group-hover:scale-110">{signal.value}</div>
                 <div className="text-sm text-muted-foreground">{signal.title}</div>
               </div>
             ))}

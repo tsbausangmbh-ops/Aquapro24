@@ -76,17 +76,17 @@ export default function Services() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
-            <Card key={index} className="group hover-elevate relative">
+            <Card key={index} className="group hover-elevate relative transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
               {service.emergency && (
                 <Badge 
-                  className="absolute -top-2 -right-2 bg-primary text-primary-foreground"
+                  className="absolute -top-2 -right-2 bg-primary text-primary-foreground shadow-lg"
                 >
                   <Clock className="w-3 h-3 mr-1" />
                   Notdienst
                 </Badge>
               )}
               <CardHeader>
-                <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 group-hover:scale-110 transition-all duration-300">
                   <service.icon className="w-7 h-7 text-secondary" />
                 </div>
                 <CardTitle data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>

@@ -35,7 +35,7 @@ export default function CustomerStories({
 
         <div className="space-y-8">
           {stories.map((story, index) => (
-            <Card key={index} className="overflow-visible" data-testid={`story-card-${index}`}>
+            <Card key={index} className="overflow-visible transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-testid={`story-card-${index}`}>
               <CardContent className="p-6 md:p-8">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="md:col-span-2 space-y-4">

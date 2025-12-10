@@ -15,12 +15,12 @@ export default function Hero() {
   return (
     <section className="relative py-12 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-primary/5" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "4s" }} />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }} />
       
       <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in-up">
             <div className="flex flex-wrap gap-2">
               <Badge className="bg-destructive/10 text-destructive border-destructive/20 gap-1">
                 <AlertTriangle className="w-3 h-3" />
@@ -86,8 +86,8 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-8 text-secondary-foreground">
+          <div className="relative animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
+            <div className="relative bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-8 text-secondary-foreground shadow-xl">
               <div className="absolute -top-3 -right-3">
                 <Badge className="bg-primary text-primary-foreground shadow-lg">
                   <Clock className="w-3 h-3 mr-1" />

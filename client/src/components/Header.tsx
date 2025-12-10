@@ -65,6 +65,8 @@ export default function Header() {
                 src={logoImage} 
                 alt="Münchner Sanitär Logo" 
                 className="w-10 h-10 object-contain"
+                loading="eager"
+                decoding="async"
                 data-testid="img-header-logo"
               />
               <div>
