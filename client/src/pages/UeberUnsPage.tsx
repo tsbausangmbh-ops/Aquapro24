@@ -31,6 +31,57 @@ const milestones = [
   { id: 4, year: "Heute", title: "Ihr starker Partner", description: "Meisterqualität, transparente Preise und professioneller Service - alles aus einer Hand in München" },
 ];
 
+const painPoints = [
+  {
+    icon: AlertTriangle,
+    problem: "Handwerker erscheinen nicht zum vereinbarten Termin",
+    solution: "Bei uns: Verbindliche Terminzusage mit SMS-Bestätigung"
+  },
+  {
+    icon: AlertTriangle,
+    problem: "Kostenexplosion nach Arbeitsbeginn",
+    solution: "Bei uns: Festpreisgarantie vor Arbeitsbeginn - schriftlich"
+  },
+  {
+    icon: AlertTriangle,
+    problem: "Wochenlange Wartezeit auf Reparaturen",
+    solution: "Bei uns: In 90 Minuten vor Ort - auch am Wochenende"
+  },
+  {
+    icon: AlertTriangle,
+    problem: "Keine Erreichbarkeit bei Notfällen",
+    solution: "Bei uns: 24/7 Hotline mit echtem Ansprechpartner"
+  }
+];
+
+const futurePacingPoints = [
+  "Sie kommen nach Hause und alles funktioniert perfekt - Heizung, Wasser, Bad",
+  "Keine bösen Überraschungen mehr bei der Rechnung",
+  "Ein Ansprechpartner für alle Fragen rund um Sanitär und Heizung",
+  "Ruhiges Gewissen durch regelmäßige Wartung und schnelle Hilfe im Notfall"
+];
+
+const testimonials = [
+  {
+    name: "Familie Müller",
+    location: "München-Schwabing",
+    text: "Nach drei schlechten Erfahrungen mit anderen Firmen haben wir endlich einen zuverlässigen Partner gefunden. Pünktlich, sauber und der Preis stimmte genau.",
+    service: "Badsanierung"
+  },
+  {
+    name: "Herr Schmidt",
+    location: "München-Bogenhausen",
+    text: "Sonntagabend Wasserrohrbruch - innerhalb von 45 Minuten war der Techniker da. Professionell, freundlich und hat alles wieder in Ordnung gebracht.",
+    service: "Notdienst"
+  },
+  {
+    name: "Frau Weber",
+    location: "München-Sendling",
+    text: "Die Wärmepumpen-Beratung war top. Keine Verkaufsgespräche, sondern echte Beratung. Jetzt spare ich 60% Heizkosten.",
+    service: "Wärmepumpe"
+  }
+];
+
 const values = [
   {
     icon: Heart,
@@ -139,6 +190,149 @@ export default function UeberUnsPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NLP Pacing Section - Acknowledge Pain Points */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <Badge variant="outline" className="mb-4">Kennen Sie das?</Badge>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Frustriert von schlechten Erfahrungen mit Handwerkern?
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Sie sind nicht allein. Viele unserer Kunden kamen nach genau diesen Erlebnissen zu uns.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {painPoints.map((point, index) => (
+                <Card key={index} className="overflow-visible">
+                  <CardContent className="p-6">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
+                          <point.icon className="w-5 h-5 text-destructive" />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <p className="text-muted-foreground line-through">{point.problem}</p>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <p className="font-medium text-accent-foreground">{point.solution}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Future Pacing Section */}
+        <section className="py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <Badge variant="secondary">Stellen Sie sich vor...</Badge>
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  Wie wäre es, einen Handwerker zu haben, dem Sie vertrauen können?
+                </h2>
+                <p className="text-muted-foreground">
+                  Stellen Sie sich vor: Sie haben ein Problem mit der Heizung oder ein Rohr ist undicht. 
+                  Statt stundenlang zu telefonieren und Wochen auf einen Termin zu warten, rufen Sie einfach an - 
+                  und innerhalb kürzester Zeit ist ein freundlicher, kompetenter Fachmann bei Ihnen.
+                </p>
+                <div className="space-y-4">
+                  {futurePacingPoints.map((point, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 mt-1">
+                        <CheckCircle2 className="w-5 h-5 text-accent" />
+                      </div>
+                      <p>{point}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="pt-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4989123456789">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Jetzt erleben
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative">
+                <Card className="p-6 bg-accent/5 border-accent/20">
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                        <Star className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-2xl">4.9 / 5.0</div>
+                        <div className="text-sm text-muted-foreground">Kundenbewertung</div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-background rounded-lg">
+                        <div className="text-2xl font-bold text-primary">48</div>
+                        <div className="text-xs text-muted-foreground">Jahre Erfahrung</div>
+                      </div>
+                      <div className="text-center p-4 bg-background rounded-lg">
+                        <div className="text-2xl font-bold text-primary">90</div>
+                        <div className="text-xs text-muted-foreground">Min. Reaktionszeit</div>
+                      </div>
+                      <div className="text-center p-4 bg-background rounded-lg">
+                        <div className="text-2xl font-bold text-primary">100%</div>
+                        <div className="text-xs text-muted-foreground">Festpreisgarantie</div>
+                      </div>
+                      <div className="text-center p-4 bg-background rounded-lg">
+                        <div className="text-2xl font-bold text-primary">24/7</div>
+                        <div className="text-xs text-muted-foreground">Erreichbarkeit</div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof - Testimonials */}
+        <section className="py-12 lg:py-16 bg-secondary/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <Badge variant="secondary" className="mb-4">Kundenstimmen</Badge>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Was unsere Kunden sagen
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Echte Erfahrungen von echten Kunden aus München
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="hover-elevate">
+                  <CardContent className="p-6">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="font-semibold">{testimonial.name}</div>
+                        <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                      </div>
+                      <Badge variant="outline" className="text-xs">{testimonial.service}</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
