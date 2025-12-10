@@ -144,7 +144,7 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-3">
               <Badge variant="outline" className="gap-1 text-accent border-accent/30">
                 <Clock className="w-3 h-3" />
-                In 90 Min. da
+                24/7 Notdienst
               </Badge>
               <Button data-testid="button-call-header">
                 <Phone className="w-4 h-4 mr-2" />

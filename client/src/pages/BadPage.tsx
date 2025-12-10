@@ -130,7 +130,7 @@ export default function BadPage() {
                   />
                 </div>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  {["In 90 Min. da", "Festpreis", "5 Jahre Garantie"].map((item) => (
+                  {["Schneller Termin", "Festpreis", "5 Jahre Garantie"].map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <CheckCircle2 className="w-4 h-4 text-accent" />
                       <span>{item}</span>

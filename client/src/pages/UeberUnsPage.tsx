@@ -30,7 +30,7 @@ const stats = [
   { value: "48+", label: "Jahre Erfahrung", sublabel: "kombiniert" },
   { value: "2.500+", label: "Projekte", sublabel: "erfolgreich abgeschlossen" },
   { value: "4.9", label: "Sterne", sublabel: "Kundenbewertung" },
-  { value: "90", label: "Minuten", sublabel: "Reaktionszeit" }
+  { value: "24/7", label: "Notdienst", sublabel: "erreichbar" }
 ];
 
 const values = [
@@ -52,7 +52,7 @@ const values = [
   {
     icon: Zap,
     title: "Schnelligkeit",
-    description: "In 90 Minuten vor Ort. Auch nachts, am Wochenende und an Feiertagen."
+    description: "Schnelle Hilfe vor Ort. Auch nachts, am Wochenende und an Feiertagen."
   }
 ];
 
