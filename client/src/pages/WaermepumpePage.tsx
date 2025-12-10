@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import heatPumpImage1 from "@assets/stock_images/black_outdoor_heat_p_c697bf31.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
+import heatPumpImage3 from "@assets/stock_images/modern_white_heat_pu_786e8fed.jpg";
 
 const services = [
   {
@@ -152,16 +153,16 @@ export default function WaermepumpePage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-6 text-accent-foreground">
-                  <h3 className="text-lg font-bold mb-3">Ihre Vorteile</h3>
-                  <ul className="space-y-2">
-                    {benefits.slice(0, 4).map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={heatPumpImage3} 
+                    alt="Moderne Wärmepumpe am Haus" 
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <p className="text-white text-sm font-medium">Professionelle Installation vor Ort</p>
+                  </div>
                 </div>
               </div>
             </div>
