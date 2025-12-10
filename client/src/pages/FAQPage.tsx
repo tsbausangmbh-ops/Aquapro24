@@ -63,7 +63,7 @@ const pricingCategories = [
     items: [
       { service: "Luft-Wasser-WP (klein)", price: "ab 12.000€" },
       { service: "Luft-Wasser-WP (groß)", price: "ab 18.000€" },
-      { service: "Erdwärmepumpe", price: "ab 22.000€" },
+      { service: "Erdwärmepumpe", price: "ab 45.000€" },
       { service: "WP-Wartung jährlich", price: "ab 249€" },
       { service: "Förderberatung", price: "kostenlos" },
       { service: "Vor-Ort-Check", price: "kostenlos" },
