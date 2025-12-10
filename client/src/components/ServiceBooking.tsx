@@ -41,12 +41,14 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
     hoverClass: "hover:bg-secondary/90",
     gradientClass: "from-secondary/20 to-secondary/5",
     services: [
-      "Wasserinstallation",
-      "Rohrreinigung",
-      "Armaturentausch",
-      "Abwassertechnik",
-      "Druckprüfung",
-      "Wartung"
+      "Wasserhahn tropft / undicht",
+      "Abfluss verstopft",
+      "Rohrbruch / Wasserrohrbruch",
+      "Toilette defekt / verstopft",
+      "Neue Armaturen installieren",
+      "Wasserleitung verlegen",
+      "Druckprüfung / Dichtheitsprüfung",
+      "Sonstiges Sanitärproblem"
     ]
   },
   bad: {
@@ -57,12 +59,14 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
     hoverClass: "hover:bg-cyan-700",
     gradientClass: "from-cyan-500/20 to-cyan-500/5",
     services: [
-      "Komplettsanierung",
-      "Teilsanierung",
-      "Barrierefreies Bad",
-      "Luxusbad Premium",
-      "Dusche erneuern",
-      "WC/Waschbecken tauschen"
+      "Komplette Badsanierung (alles neu)",
+      "Dusche erneuern / Walk-In Dusche",
+      "Badewanne gegen Dusche tauschen",
+      "Barrierefreies Bad / Seniorengerecht",
+      "WC und Waschbecken erneuern",
+      "Fliesen erneuern",
+      "Kostenlose Beratung vor Ort",
+      "3D-Badplanung gewünscht"
     ]
   },
   heizung: {
@@ -73,12 +77,14 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
     hoverClass: "hover:bg-red-700",
     gradientClass: "from-red-500/20 to-red-500/5",
     services: [
-      "Heizungsinstallation",
-      "Heizungswartung",
-      "Heizungsreparatur",
-      "Heizungsmodernisierung",
-      "Notdienst Heizungsausfall",
-      "Brennereinstellung"
+      "Heizung ausgefallen (Notfall)",
+      "Heizung wird nicht warm",
+      "Heizung macht Geräusche",
+      "Heizungswartung / Jahresservice",
+      "Neue Heizung installieren",
+      "Alte Heizung modernisieren",
+      "Thermostat / Regelung defekt",
+      "Heizkörper entlüften / tauschen"
     ]
   },
   waermepumpe: {
@@ -89,12 +95,14 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
     hoverClass: "hover:bg-orange-600",
     gradientClass: "from-orange-500/20 to-orange-500/5",
     services: [
-      "Luft-Wasser-Wärmepumpe",
-      "Erdwärmepumpe",
-      "Wärmepumpen-Wartung",
-      "Förderberatung",
-      "Heizungstausch",
-      "Kostenlose Beratung"
+      "Beratung: Ist mein Haus geeignet?",
+      "Angebot für Luft-Wasser-Wärmepumpe",
+      "Angebot für Erdwärmepumpe",
+      "Förderberatung (bis 70% Zuschuss)",
+      "Heizungstausch Gas/Öl → Wärmepumpe",
+      "Wärmepumpe Wartung / Service",
+      "Wärmepumpe macht Probleme",
+      "Kostenloser Vor-Ort-Check"
     ]
   },
   haustechnik: {
@@ -105,12 +113,14 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
     hoverClass: "hover:bg-emerald-700",
     gradientClass: "from-emerald-500/20 to-emerald-500/5",
     services: [
-      "Wasserinstallation",
-      "Gasinstallation",
-      "Lüftungstechnik",
-      "Smart Home",
       "Komplettplanung Neubau",
-      "Wartungsvertrag"
+      "Wasserinstallation komplett",
+      "Gasinstallation / Gasleitung",
+      "Lüftungsanlage installieren",
+      "Smart Home Heizungssteuerung",
+      "Wartungsvertrag Haustechnik",
+      "Energieberatung",
+      "Sonstiges Haustechnik-Projekt"
     ]
   }
 };
