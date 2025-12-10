@@ -105,37 +105,37 @@ export default function UeberUnsPage() {
                   </Button>
                 </div>
               </div>
-              <div className="space-y-6">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={plumberImage} 
-                    alt="Professioneller Sanitär-Meister bei der Arbeit" 
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Wrench className="w-5 h-5" />
-                      <span className="font-semibold">22 Jahre Meistererfahrung</span>
-                    </div>
-                    <p className="text-sm opacity-90">Präzision und Qualität in jeder Arbeit</p>
-                  </div>
-                </div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="grid grid-cols-1 gap-4">
+                <div className="relative rounded-xl overflow-hidden shadow-lg aspect-[4/3]">
                   <img 
                     src={familyImage} 
                     alt="Zufriedene Kunden in ihrem Zuhause" 
-                    className="w-full h-48 object-cover"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="flex items-center gap-2 mb-2">
-                      <ThumbsUp className="w-5 h-5" />
-                      <span className="font-semibold">Ihr Erfolg ist unser Antrieb</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <ThumbsUp className="w-4 h-4" />
+                      <span className="font-semibold text-sm">Ihr Erfolg ist unser Antrieb</span>
                     </div>
-                    <p className="text-sm opacity-90">Zufriedene Kunden durch erstklassigen Service</p>
+                    <p className="text-xs opacity-90">Zufriedene Kunden durch erstklassigen Service</p>
+                  </div>
+                </div>
+                <div className="relative rounded-xl overflow-hidden shadow-lg aspect-[4/3]">
+                  <img 
+                    src={plumberImage} 
+                    alt="Professioneller Sanitär-Meister bei der Arbeit" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Wrench className="w-4 h-4" />
+                      <span className="font-semibold text-sm">22 Jahre Meistererfahrung</span>
+                    </div>
+                    <p className="text-xs opacity-90">Präzision und Qualität in jeder Arbeit</p>
                   </div>
                 </div>
               </div>
