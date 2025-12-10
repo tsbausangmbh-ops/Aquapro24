@@ -9,17 +9,17 @@ export default function CTABanner() {
       
       <div className="relative max-w-4xl mx-auto px-4 lg:px-8 text-center text-secondary-foreground">
         <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-4">
-          Stoppen Sie den Schaden, bevor er größer wird – greifen Sie jetzt zum Hörer
+          Bereit für Ihr neues Bad? Lassen Sie uns starten!
         </h2>
         <h3 className="text-xl lg:text-2xl text-white/90 mb-2">
-          Wenn Sie uns anrufen, kümmern wir uns sofort um Ihr Anliegen
+          Kostenlose Beratung und unverbindliches Angebot
         </h3>
         <p className="text-lg text-white/70 mb-4">
-          <span className="text-white font-medium">Stellen Sie sich vor:</span> Morgen früh wachen Sie in einer warmen Wohnung auf, 
-          der Rohrbruch ist repariert, Ihre Familie ist sicher, alles ist wieder normal.
+          <span className="text-white font-medium">Stellen Sie sich vor:</span> In wenigen Wochen genießen Sie Ihr neues Traumbad – 
+          modern, funktional und genau nach Ihren Wünschen gestaltet.
         </p>
         <p className="text-base text-white/60 mb-8">
-          Heizung & Sanitär Service für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
+          Sanitär & Wasserinstallation für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">

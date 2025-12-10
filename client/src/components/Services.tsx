@@ -15,46 +15,46 @@ import {
 
 const services = [
   {
-    icon: Thermometer,
-    title: "Heizungsreparatur",
-    description: "Alle Hersteller: Viessmann, Buderus, Vaillant, Wolf und mehr. Schnelle Diagnose und Reparatur.",
-    features: ["Alle Heizungstypen", "Ersatzteile vorrätig", "Wartungsverträge"],
-    emergency: true,
-  },
-  {
-    icon: Droplets,
-    title: "Rohrbruch & Wasserschaden",
-    description: "Sofortige Hilfe bei Rohrbrüchen. Wir stoppen das Wasser und reparieren die Leitung.",
-    features: ["Leckortung", "Rohrbruch-Reparatur", "Schadensminimierung"],
-    emergency: true,
-  },
-  {
     icon: ShowerHead,
-    title: "Sanitärinstallation",
-    description: "Von der tropfenden Armatur bis zur kompletten Badsanierung – wir sind Ihr Partner.",
-    features: ["Badsanierung", "Armaturen", "WC & Waschbecken"],
+    title: "Badsanierung & Renovierung",
+    description: "Komplette Badsanierung oder Teilrenovierung – modern, barrierefrei oder luxuriös nach Ihren Wünschen.",
+    features: ["Komplettsanierung", "Barrierefreies Bad", "Designbäder"],
     emergency: false,
   },
   {
-    icon: Flame,
-    title: "Heizungswartung",
-    description: "Regelmäßige Wartung verlängert die Lebensdauer und spart Energiekosten.",
-    features: ["Jahreswartung", "Effizienzcheck", "Brennerreinigung"],
+    icon: Droplets,
+    title: "Wasserinstallation",
+    description: "Professionelle Installation von Wasserleitungen, Anschlüssen und Armaturen in Neubau und Bestand.",
+    features: ["Neuinstallation", "Leitungserneuerung", "Anschlussarbeiten"],
     emergency: false,
   },
   {
     icon: PipetteIcon,
-    title: "Rohrreinigung",
-    description: "Verstopfte Abflüsse? Professionelle Reinigung mit moderner Technik.",
+    title: "Rohrreinigung & Abfluss",
+    description: "Verstopfte Abflüsse? Professionelle Reinigung mit moderner Technik und Kamerainspektion.",
     features: ["Hochdruckreinigung", "Kamerainspektion", "Wurzelentfernung"],
     emergency: true,
   },
   {
     icon: Wrench,
-    title: "Gasinstallation",
-    description: "Zertifizierte Arbeiten an Gasleitungen und Gasgeräten. Sicherheit an erster Stelle.",
-    features: ["Gasanschluss", "Gasprüfung", "Geräteanschluss"],
-    emergency: true,
+    title: "Armaturen & Sanitärobjekte",
+    description: "Montage und Austausch von Wasserhähnen, Duscharmaturen, WCs und Waschbecken.",
+    features: ["Armaturentausch", "WC-Montage", "Waschbecken"],
+    emergency: false,
+  },
+  {
+    icon: Thermometer,
+    title: "Warmwasserbereitung",
+    description: "Installation und Wartung von Durchlauferhitzern, Boilern und Warmwasserspeichern.",
+    features: ["Durchlauferhitzer", "Boiler", "Speicheranlagen"],
+    emergency: false,
+  },
+  {
+    icon: Flame,
+    title: "Heizungsservice",
+    description: "Wartung und Reparatur Ihrer Heizungsanlage – alle Hersteller und Systeme.",
+    features: ["Wartung", "Reparatur", "Effizienzcheck"],
+    emergency: false,
   },
 ];
 
@@ -64,13 +64,13 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Heizung & Sanitär München – Alle Leistungen aus einer Hand
+            Sanitär & Wasserinstallation München – Vom Wasserhahn bis zur Komplettsanierung
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
-            Wenn Sie uns rufen, wählen wir das passende Expertenteam für Ihr Problem
+            Wenn Sie uns beauftragen, bekommen Sie Qualitätsarbeit vom Meisterbetrieb
           </h3>
           <p className="text-lg text-muted-foreground">
-            Rohrbruch-Soforthilfe, Heizungsreparatur, Sanitär-Service in ganz München, Schwabing, Bogenhausen, Sendling, Pasing & Umland.
+            Badsanierung, Wasserinstallation, Rohrreinigung, Armaturen & mehr in ganz München, Schwabing, Bogenhausen, Sendling, Pasing & Umland.
           </p>
         </div>
         

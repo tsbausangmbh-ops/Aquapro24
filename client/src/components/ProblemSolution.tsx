@@ -12,35 +12,35 @@ import {
 
 const problems = [
   {
-    icon: Snowflake,
-    title: "Kalte Wohnung im Winter",
-    description: "Die Heizung fällt ausgerechnet bei Minusgraden aus. Sie und Ihre Familie frieren.",
-    emotion: "Das kennen wir. Deshalb sind wir auch nachts für Sie da.",
+    icon: Droplets,
+    title: "Veraltetes Bad ohne Komfort",
+    description: "Alte Fliesen, undichte Armaturen, kein Stauraum – Ihr Bad ist in die Jahre gekommen.",
+    emotion: "Wir planen mit Ihnen Ihr Traumbad und setzen es termingerecht um.",
   },
   {
-    icon: Droplets,
-    title: "Wasser überschwemmt die Wohnung",
-    description: "Ein Rohrbruch. Jede Minute zählt, bevor der Schaden noch größer wird.",
-    emotion: "Rufen Sie uns an. Wir stoppen das Wasser, bevor es schlimmer wird.",
+    icon: Snowflake,
+    title: "Tropfende Wasserhähne & Lecks",
+    description: "Ständiges Tropfen, hohe Wasserrechnung, Feuchtigkeit an den Wänden.",
+    emotion: "Wir finden das Problem und lösen es dauerhaft – mit Garantie.",
   },
   {
     icon: AlertTriangle,
-    title: "Angst vor überhöhten Preisen",
-    description: "Sie haben von unseriösen Notdiensten gehört, die Wucherpreise verlangen.",
-    emotion: "Verständlich. Deshalb nennen wir Ihnen den Festpreis, bevor wir anfangen.",
+    title: "Angst vor Chaos bei der Sanierung",
+    description: "Wochenlange Baustelle, Dreck überall, unzuverlässige Handwerker.",
+    emotion: "Bei uns gibt es einen festen Zeitplan, saubere Arbeit und klare Kommunikation.",
   },
 ];
 
 const solutions = [
   {
-    icon: Thermometer,
-    title: "Warme Wohnung noch heute",
-    description: "In 30 Minuten bei Ihnen. Reparatur oft am selben Tag abgeschlossen.",
+    icon: Droplets,
+    title: "Modernes Bad nach Ihren Wünschen",
+    description: "Komplette Planung und Umsetzung – barrierefrei, modern oder luxuriös.",
   },
   {
     icon: Wrench,
-    title: "Schnelle Schadensbegrenzung",
-    description: "Sofortmaßnahmen verhindern Folgeschäden an Wänden und Böden.",
+    title: "Professionelle Wasserinstallation",
+    description: "Fachgerechte Arbeit mit hochwertigen Materialien und langer Garantie.",
   },
   {
     icon: Shield,
@@ -55,15 +55,15 @@ export default function ProblemSolution() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Wenn München friert oder überflutet wird – wir lösen Ihr Problem ohne Wartezeit
+            Ihr Traumbad wartet – wir machen es Wirklichkeit
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
-            Ihre Notlage endet, sobald unser Meisterbetrieb klingelt
+            Von der Planung bis zur Fertigstellung – alles aus einer Hand
           </h3>
           <p className="text-lg text-muted-foreground">
-            Ein Heizungsausfall oder Rohrbruch ist stressig – das wissen wir. 
-            <span className="text-foreground font-medium"> Nach unserem Besuch haben Sie wieder Ruhe</span> – 
-            deshalb reagieren wir schnell und zuverlässig.
+            Eine Badsanierung oder Wasserinstallation ist eine große Entscheidung. 
+            <span className="text-foreground font-medium"> Mit uns wird es einfach</span> – 
+            professionelle Beratung, saubere Arbeit, termingerechte Fertigstellung.
           </p>
         </div>
         

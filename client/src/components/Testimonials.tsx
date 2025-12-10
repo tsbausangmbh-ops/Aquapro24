@@ -66,7 +66,7 @@ export default function Testimonials() {
             ))}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            München spricht über uns: 4.9 Sterne für Heizung & Sanitär
+            München spricht über uns: 4.9 Sterne für Sanitär & Wasserinstallation
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
             Werden auch Sie Teil unserer zufriedenen Kundenfamilie

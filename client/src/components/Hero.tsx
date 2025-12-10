@@ -33,14 +33,14 @@ export default function Hero() {
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
-              Heizung kaputt? Rohrbruch?{" "}
-              <span className="text-secondary">Wir lösen Ihr Problem</span>{" "}
-              <span className="block mt-1">– schnell, fair, zuverlässig.</span>
+              Sanitär & Wasserinstallation München:{" "}
+              <span className="text-secondary">Ihr Meisterbetrieb</span>{" "}
+              <span className="block mt-1">für Bad, Rohre & Wassertechnik.</span>
             </h1>
             
             <h2 className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              <span className="text-foreground font-medium">Stellen Sie sich vor:</span> Heute Abend ist Ihre Heizung repariert, 
-              das Wasser gestoppt, Ihre Familie wieder warm und sicher.
+              <span className="text-foreground font-medium">Stellen Sie sich vor:</span> Ihr neues Bad ist fertig, 
+              die Rohre sind dicht, alles funktioniert einwandfrei.
             </h2>
             
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
@@ -94,7 +94,7 @@ export default function Hero() {
                 </Badge>
               </div>
               
-              <h3 className="text-xl font-bold mb-6">Sofort-Hilfe für München & Umland:</h3>
+              <h3 className="text-xl font-bold mb-6">Unsere Sanitär-Leistungen:</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4 bg-white/10 rounded-lg p-4">
@@ -102,8 +102,8 @@ export default function Hero() {
                     <Thermometer className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-semibold" data-testid="text-service-heating">Heizungsausfall</p>
-                    <p className="text-sm text-white/80">Reparatur aller Hersteller - oft am selben Tag</p>
+                    <p className="font-semibold" data-testid="text-service-heating">Badsanierung & Renovierung</p>
+                    <p className="text-sm text-white/80">Komplettumbau oder Teilsanierung - nach Ihren Wünschen</p>
                   </div>
                 </div>
                 
