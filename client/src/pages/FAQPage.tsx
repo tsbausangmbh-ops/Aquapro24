@@ -53,7 +53,7 @@ const pricingCategories = [
       { service: "Heizkörper tauschen", price: "ab 455€" },
       { service: "Thermostat austauschen", price: "ab 115€" },
       { service: "Heizung entlüften", price: "ab 105€" },
-      { service: "Gasheizung neu", price: "ab 8.450€" },
+      { service: "Gasheizung neu", price: "ab 8.500€" },
       { service: "Heizungsnotdienst", price: "ab 169€" },
     ]
   },
