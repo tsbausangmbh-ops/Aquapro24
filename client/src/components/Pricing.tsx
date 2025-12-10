@@ -38,12 +38,12 @@ const pricingInfo = [
   },
   {
     title: "Jede weitere Stunde",
-    price: "ab 69 €",
+    price: "ab 89 €",
     note: "netto, je nach Einsatzzeit",
     icon: Euro,
     isPackage: true,
     packageContents: [
-      "Werktags 08:00 – 16:30 Uhr: 69 € netto",
+      "Werktags 08:00 – 16:30 Uhr: 89 € netto",
       "Werktags 16:30 – 22:00 Uhr: 149 € netto",
       "WE / Feiertage: 199 € netto",
     ],
