@@ -66,7 +66,7 @@ const pricingCategories = [
       { service: "Erdwärmepumpe", price: "ab 58.500€" },
       { service: "WP-Wartung jährlich", price: "ab 325€" },
       { service: "Förderberatung", price: "ab 195€" },
-      { service: "Vor-Ort-Check", price: "kostenlos" },
+      { service: "Vor-Ort-Check", price: "ab 200€" },
     ]
   },
 ];
