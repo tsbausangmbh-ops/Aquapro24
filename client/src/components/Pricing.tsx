@@ -573,6 +573,7 @@ export default function Pricing() {
                       Lieber schriftlich? Kein Problem – viele unserer Kunden schätzen den Überblick einer E-Mail-Anfrage.
                     </p>
                     <Button 
+                      variant="secondary"
                       className="w-full gap-2"
                       onClick={() => window.location.href = 'mailto:info@sanitaer-muenchen.de?subject=Anfrage%20Sanitär%20Service'}
                       data-testid="button-email-inquiry"
