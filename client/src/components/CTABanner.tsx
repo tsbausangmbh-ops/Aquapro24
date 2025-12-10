@@ -36,7 +36,7 @@ export default function CTABanner() {
           </Button>
           <Button 
             size="lg" 
-            className="bg-blue-800 hover:bg-blue-900 text-white border-blue-700 gap-2"
+            className="bg-foreground hover:bg-foreground/90 text-background border-foreground gap-2"
             onClick={() => {
               const chatButton = document.querySelector('[data-testid="button-chat-toggle"]') as HTMLButtonElement;
               if (chatButton) chatButton.click();
