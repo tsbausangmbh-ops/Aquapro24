@@ -136,7 +136,7 @@ export default function FAQPage() {
       />
       <Header />
       <main>
-        <section className="relative py-10 lg:pt-10 pb-6 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
+        <section className="relative py-10 lg:pt-8 pb-4 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
@@ -150,7 +150,7 @@ export default function FAQPage() {
                 <strong>Transparenz ist uns wichtig.</strong> Hier finden Sie Antworten auf die 
                 häufigsten Fragen und eine Übersicht unserer Preise.
               </p>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-4">
                 Alle Preise sind Richtwerte inklusive Mehrwertsteuer. Den genauen Festpreis 
                 für Ihr Projekt erhalten Sie nach einer kostenlosen Besichtigung.
               </p>
@@ -166,7 +166,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
@@ -222,9 +222,9 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="py-6 lg:pt-10 pb-6 bg-muted/30">
+        <section className="py-6 lg:pt-8 pb-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">Allgemeine Fragen</h2>
                 <FAQ 
@@ -243,7 +243,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Noch Fragen?</h2>

@@ -67,7 +67,7 @@ export default function ProblemSolution() {
           </p>
         </div>
         
-        <div className="space-y-12">
+        <div className="space-y-6">
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-6 text-center">
               Das kennen Sie – Ihr Notfall in München

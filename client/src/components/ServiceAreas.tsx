@@ -25,7 +25,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
   return (
     <section className="py-10 bg-secondary/5" data-testid="section-service-areas">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-5">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             {serviceName} in München & Umgebung
           </h2>
@@ -35,7 +35,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-4 items-start">
           <div>
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-primary" />

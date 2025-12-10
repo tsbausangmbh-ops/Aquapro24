@@ -247,7 +247,7 @@ export default function RatgeberPage() {
       />
       <Header />
       <main>
-        <section className="relative py-10 lg:pt-10 pb-6 bg-gradient-to-br from-accent/10 via-background to-primary/5">
+        <section className="relative py-10 lg:pt-8 pb-4 bg-gradient-to-br from-accent/10 via-background to-primary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
@@ -269,9 +269,9 @@ export default function RatgeberPage() {
           </div>
         </section>
 
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
               {guides.map((guide) => (
                 <a 
                   key={guide.id} 
@@ -297,10 +297,10 @@ export default function RatgeberPage() {
           <section 
             key={guide.id} 
             id={guide.id} 
-            className={`pt-10 pb-6 lg:pt-12 lg:pb-8 ${guideIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
+            className={`pt-8 pb-4 lg:pt-10 lg:pb-6 ${guideIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
           >
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
-              <div className="grid lg:grid-cols-3 gap-8 mb-8">
+              <div className="grid lg:grid-cols-3 gap-4 mb-4">
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -325,7 +325,7 @@ export default function RatgeberPage() {
                 </div>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-4">
                 {guide.sections.map((section, sectionIndex) => (
                   <Card key={sectionIndex}>
                     <CardHeader className="pb-4">
@@ -384,12 +384,12 @@ export default function RatgeberPage() {
           </section>
         ))}
 
-        <section className="py-6 lg:pt-10 pb-6 bg-secondary text-secondary-foreground">
+        <section className="py-6 lg:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Noch Fragen? Wir helfen gerne!
             </h2>
-            <p className="text-secondary-foreground/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Unser Team steht Ihnen für alle Fragen rund um Sanitär, Heizung und Haustechnik 
               zur Verfügung. Kostenlose Beratung - auch vor Ort.
             </p>

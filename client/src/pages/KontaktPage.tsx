@@ -122,7 +122,7 @@ export default function KontaktPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="py-10 lg:pt-10 pb-6 bg-gradient-to-br from-secondary/10 to-background">
+        <section className="py-10 lg:pt-8 pb-4 bg-gradient-to-br from-secondary/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <Badge variant="secondary" className="mb-4">
@@ -141,7 +141,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Contact Cards */}
-        <section className="pt-10 pb-6">
+        <section className="pt-8 pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {contactInfo.map((info, index) => (
@@ -171,9 +171,9 @@ export default function KontaktPage() {
         </section>
 
         {/* Main Content: Form + Info */}
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-6">
               {/* Contact Form */}
               <div>
                 <h2 className="text-2xl font-bold mb-6">Schreiben Sie uns</h2>
@@ -303,7 +303,7 @@ export default function KontaktPage() {
               </div>
 
               {/* Additional Info */}
-              <div className="space-y-8">
+              <div className="space-y-4">
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Schneller Kontakt</h2>
                   <Card className="bg-accent/5 border-accent/20">
@@ -374,15 +374,15 @@ export default function KontaktPage() {
         </section>
 
         {/* Standort & Karte */}
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-2xl font-bold mb-4">Unser Standort in München</h2>
               <p className="text-muted-foreground">
                 Zentral gelegen - schnell bei Ihnen
               </p>
             </div>
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-4">
               <Card>
                 <CardContent className="p-0 overflow-hidden rounded-lg">
                   <iframe
@@ -456,9 +456,9 @@ export default function KontaktPage() {
         </section>
 
         {/* Company Info Section */}
-        <section className="py-10 lg:pt-10 pb-6 bg-muted/30">
+        <section className="py-10 lg:pt-8 pb-4 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-2xl font-bold mb-4">Unternehmensdaten</h2>
               <p className="text-muted-foreground">
                 Für Geschäftskunden und offizielle Korrespondenz
@@ -466,7 +466,7 @@ export default function KontaktPage() {
             </div>
             <Card>
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <Building className="w-5 h-5 text-muted-foreground mt-0.5" />

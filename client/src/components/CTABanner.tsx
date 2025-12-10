@@ -18,11 +18,11 @@ export default function CTABanner() {
           <span className="text-white font-medium">Stellen Sie sich vor:</span> In wenigen Wochen genießen Sie Ihr neues Traumbad – 
           modern, funktional und genau nach Ihren Wünschen gestaltet.
         </p>
-        <p className="text-base text-white/60 mb-8">
+        <p className="text-base text-white/60 mb-4">
           Sanitär & Wasserinstallation für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-5">
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 text-lg py-6"

@@ -75,7 +75,7 @@ export default function TrustSignals({
     return (
       <div className="py-6 bg-primary" data-testid="section-trust-signals-compact">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-4">
             {signals.map((signal, index) => (
               <div key={index} className="text-center group cursor-default">
                 <div className="text-2xl md:text-3xl font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-110">{signal.value}</div>
@@ -91,7 +91,7 @@ export default function TrustSignals({
   return (
     <section className="py-10 md:py-12" data-testid="section-trust-signals">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <Badge variant="secondary" className="mb-4">
             <CheckCircle className="w-3 h-3 mr-1" />
             Warum uns Münchner vertrauen
@@ -104,7 +104,7 @@ export default function TrustSignals({
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-4 gap-6 mb-6">
           {signals.map((signal, index) => (
             <Card key={index} className="text-center">
               <CardContent className="p-6">

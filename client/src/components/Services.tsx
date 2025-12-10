@@ -74,7 +74,7 @@ export default function Services() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           {services.map((service, index) => (
             <Card key={index} className="group hover-elevate relative transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
               {service.emergency && (

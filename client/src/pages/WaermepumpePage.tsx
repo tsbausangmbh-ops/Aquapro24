@@ -96,9 +96,9 @@ export default function WaermepumpePage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:pt-10 pb-6 bg-gradient-to-br from-accent/10 to-background">
+        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-accent/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
                 <Badge variant="secondary" className="gap-1">
                   <Leaf className="w-3 h-3" />
@@ -203,9 +203,9 @@ export default function WaermepumpePage() {
           subtitle="Echte Kunden berichten von ihrer Energiewende"
         />
 
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-3xl font-bold mb-4">Wärmepumpen-Leistungen in München</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung über die Installation bis zur Wartung - wir begleiten Sie auf dem Weg zur klimafreundlichen Heizung.
@@ -238,9 +238,9 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
-        <section className="pt-10 pb-6 bg-muted/30">
+        <section className="pt-8 pb-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="grid md:grid-cols-3 gap-4 text-center">
               <div className="space-y-2">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
                   <TrendingDown className="w-8 h-8 text-accent" />
@@ -267,7 +267,7 @@ export default function WaermepumpePage() {
         </section>
 
         {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="pt-10 pb-6 md:pt-10 md:pb-6">
+        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Wärmepumpe in München - Klimaneutral heizen und bis zu 50% sparen
@@ -325,7 +325,7 @@ export default function WaermepumpePage() {
           subtitle="Alles, was Sie über Wärmepumpen in München wissen sollten"
         />
 
-        <section className="pt-10 pb-6">
+        <section className="pt-8 pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-accent mx-auto" />

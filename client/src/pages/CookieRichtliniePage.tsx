@@ -16,7 +16,7 @@ export default function CookieRichtliniePage() {
         canonical="https://aquapro24.de/cookie-richtlinie"
       />
       <Header />
-      <main className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+      <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <Badge variant="secondary" className="gap-1">
@@ -26,9 +26,9 @@ export default function CookieRichtliniePage() {
             <Badge variant="outline">Stand: Januar 2025</Badge>
           </div>
           
-          <h1 className="text-3xl lg:text-4xl font-bold mb-8">Cookie-Richtlinie</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Cookie-Richtlinie</h1>
           
-          <Card className="mb-8 bg-muted/30">
+          <Card className="mb-4 bg-muted/30">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
                 <Info className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
@@ -44,7 +44,7 @@ export default function CookieRichtliniePage() {
             </CardContent>
           </Card>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
+          <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
             
             <section>
               <h2 className="text-xl font-semibold mb-4">1. Verantwortlicher</h2>

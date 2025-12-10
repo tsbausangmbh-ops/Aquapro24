@@ -109,9 +109,9 @@ export default function SanitaerPage() {
       <Header />
       
       <main className="flex-1">
-        <section className="relative py-6 md:pt-10 pb-6 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
+        <section className="relative py-6 md:pt-8 pb-4 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div>
                 <Badge variant="secondary" className="mb-4">
                   <Droplets className="w-3 h-3 mr-1" />
@@ -124,7 +124,7 @@ export default function SanitaerPage() {
                   <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
                   Situationen und wissen, wie stressig sie sein können.
                 </p>
-                <p className="text-lg text-muted-foreground mb-8">
+                <p className="text-lg text-muted-foreground mb-4">
                   Als Münchner Meisterbetrieb mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
                   schnell, sauber und zum Festpreis. Stellen Sie sich vor: In wenigen Stunden ist alles 
                   repariert und Sie können sich wieder auf die wichtigen Dinge konzentrieren.
@@ -212,9 +212,9 @@ export default function SanitaerPage() {
           subtitle="Diese Situationen kennen viele - lesen Sie, wie wir helfen konnten"
         />
 
-        <section className="pt-10 pb-6 md:pt-10 md:pb-6">
+        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Unsere Sanitär-Leistungen in München
               </h2>
@@ -240,9 +240,9 @@ export default function SanitaerPage() {
           </div>
         </section>
 
-        <section className="py-10 md:pt-10 pb-6 bg-muted/30">
+        <section className="py-10 md:pt-8 pb-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
                   Warum Münchner uns vertrauen
@@ -286,7 +286,7 @@ export default function SanitaerPage() {
         </section>
 
         {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="pt-10 pb-6 md:pt-10 md:pb-6">
+        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Professionelle Sanitärinstallation in München - Ihr Meisterbetrieb
@@ -343,12 +343,12 @@ export default function SanitaerPage() {
           subtitle="Hier finden Sie Antworten auf die wichtigsten Fragen unserer Kunden in München"
         />
 
-        <section className="py-10 md:pt-10 pb-6 bg-secondary text-secondary-foreground">
+        <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Sanitär-Problem in München? Wir helfen sofort!
             </h2>
-            <p className="text-secondary-foreground/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Ob tropfender Wasserhahn, verstopfter Abfluss oder neue Sanitärinstallation - 
               rufen Sie uns an und wir kümmern uns darum. Über 847 zufriedene Kunden in München.
             </p>

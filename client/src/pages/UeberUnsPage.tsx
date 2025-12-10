@@ -98,9 +98,9 @@ export default function UeberUnsPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="relative pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
                 <Badge variant="secondary" className="gap-2">
                   <BadgeCheck className="w-4 h-4" />
@@ -153,7 +153,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="pt-10 pb-6 bg-muted/30">
+        <section className="pt-8 pb-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
@@ -168,9 +168,9 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Story Section */}
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="order-2 lg:order-1">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img 
@@ -208,9 +208,9 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-10 lg:pt-10 pb-6 bg-secondary/5">
+        <section className="py-10 lg:pt-8 pb-4 bg-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Unsere Werte</Badge>
               <h2 className="text-3xl font-bold mb-4">Wofür wir stehen</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -235,9 +235,9 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Differentiators Section */}
-        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
                 <Badge variant="outline">Warum wir?</Badge>
                 <h2 className="text-3xl font-bold">
@@ -269,9 +269,9 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-10 lg:pt-10 pb-6 bg-muted/30">
+        <section className="py-10 lg:pt-8 pb-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Kundenstimmen</Badge>
               <h2 className="text-3xl font-bold mb-4">Was unsere Kunden sagen</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -305,12 +305,12 @@ export default function UeberUnsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 lg:pt-10 pb-6 bg-primary text-primary-foreground">
+        <section className="py-10 lg:pt-8 pb-4 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Bereit für einen Handwerker, dem Sie vertrauen können?
             </h2>
-            <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-lg">
+            <p className="text-primary-foreground/80 mb-4 max-w-2xl mx-auto text-lg">
               Rufen Sie uns an oder schreiben Sie uns. Wir beraten Sie kostenlos und 
               unverbindlich - und Sie entscheiden dann in Ruhe.
             </p>
@@ -327,7 +327,7 @@ export default function UeberUnsPage() {
                 </a>
               </Button>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 mt-10 text-sm text-primary-foreground/70">
+            <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-primary-foreground/70">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 München & Umgebung

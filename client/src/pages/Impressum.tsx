@@ -9,7 +9,7 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+      <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <Button variant="ghost" className="mb-6 gap-2" asChild>
             <Link href="/">
@@ -18,11 +18,11 @@ export default function Impressum() {
             </Link>
           </Button>
 
-          <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-8">
+          <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
             Impressum
           </h1>
 
-          <div className="space-y-8">
+          <div className="space-y-4">
             <Card>
               <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>

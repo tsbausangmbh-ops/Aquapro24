@@ -31,7 +31,7 @@ export default function NLPSection({
     <section className="py-10" data-testid="section-nlp-problem-solution">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {authorityText && (
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <Badge variant="outline" className="mb-4 animate-fade-in">
               <Shield className="w-3 h-3 mr-1" />
               {authorityText}
@@ -39,7 +39,7 @@ export default function NLPSection({
           </div>
         )}
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-red-50 dark:bg-red-950/20 rounded-lg p-6 border border-red-200 dark:border-red-900/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle className="w-5 h-5 text-red-600 dark:text-red-400" />

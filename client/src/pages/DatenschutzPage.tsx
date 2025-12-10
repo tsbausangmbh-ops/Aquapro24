@@ -15,7 +15,7 @@ export default function DatenschutzPage() {
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
-      <main className="pt-10 pb-6 lg:pt-12 lg:pb-8">
+      <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <Badge variant="secondary" className="gap-1">
@@ -25,9 +25,9 @@ export default function DatenschutzPage() {
             <Badge variant="outline">Stand: Januar 2025</Badge>
           </div>
           
-          <h1 className="text-3xl lg:text-4xl font-bold mb-8">Datenschutzerklärung</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Datenschutzerklärung</h1>
           
-          <Card className="mb-8 bg-muted/30">
+          <Card className="mb-4 bg-muted/30">
             <CardContent className="p-6">
               <h2 className="font-semibold mb-2">Kurzfassung für Sie</h2>
               <p className="text-sm text-muted-foreground">
@@ -38,7 +38,7 @@ export default function DatenschutzPage() {
             </CardContent>
           </Card>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
+          <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
             
             <section>
               <h2 className="text-xl font-semibold mb-4">1. Verantwortlicher und Datenschutzbeauftragter</h2>

@@ -259,7 +259,7 @@ export default function Pricing() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 mb-6">
           {pricingInfo.map((item, index) => (
             <Card key={index} className={`text-center ${item.isHighlighted ? 'border-2 border-primary/30 bg-primary/5' : ''}`}>
               <CardHeader>
@@ -308,7 +308,7 @@ export default function Pricing() {
         
         <Card className="border-2 border-secondary/20">
           <CardContent className="p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-4 items-center">
               <div>
                 <h3 className="text-xl font-bold mb-4">
                   Ihre Festpreis-Garantie – Ihr Schutz vor bösen Überraschungen
