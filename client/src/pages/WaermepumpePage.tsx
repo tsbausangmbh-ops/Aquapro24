@@ -96,7 +96,7 @@ export default function WaermepumpePage() {
       />
       <Header />
       <main>
-        <section className="relative py-12 lg:pt-6 pb-6 bg-gradient-to-br from-accent/10 to-background">
+        <section className="relative py-12 lg:pt-10 pb-6 bg-gradient-to-br from-accent/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -203,7 +203,7 @@ export default function WaermepumpePage() {
           subtitle="Echte Kunden berichten von ihrer Energiewende"
         />
 
-        <section className="pt-6 pb-6 lg:pt-8 lg:pb-8">
+        <section className="pt-10 pb-6 lg:pt-12 lg:pb-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Wärmepumpen-Leistungen in München</h2>
@@ -238,7 +238,7 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
-        <section className="pt-6 pb-6 bg-muted/30">
+        <section className="pt-10 pb-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="space-y-2">
@@ -267,7 +267,7 @@ export default function WaermepumpePage() {
         </section>
 
         {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="pt-6 pb-6 md:pt-8 md:pb-8">
+        <section className="pt-10 pb-6 md:pt-10 md:pb-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Wärmepumpe in München - Klimaneutral heizen und bis zu 50% sparen
@@ -325,7 +325,7 @@ export default function WaermepumpePage() {
           subtitle="Alles, was Sie über Wärmepumpen in München wissen sollten"
         />
 
-        <section className="pt-6 pb-6">
+        <section className="pt-10 pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto space-y-6">
               <ShieldCheck className="w-12 h-12 text-accent mx-auto" />
