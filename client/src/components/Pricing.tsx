@@ -25,15 +25,15 @@ import {
 
 const pricingInfo = [
   {
-    title: "Anfahrt + 1. Stunde",
-    price: "ab 129 €",
-    note: "netto, im Stadtgebiet München",
+    title: "Anfahrtspauschale",
+    price: "ab 49 €",
+    note: "netto, Raum München",
     icon: Clock,
     isPackage: true,
     packageContents: [
-      "Werktags 08:00 – 18:00 Uhr: 129 € netto",
-      "Werktags 18:00 – 22:00 Uhr: 149 € netto",
-      "Nachts / Wochenende / Feiertage: 169 € netto",
+      "0–10 km: 49 – 69 € netto",
+      "10–20 km: 69 – 89 € netto",
+      "20–30 km: 89 – 119 € netto",
     ],
   },
   {
