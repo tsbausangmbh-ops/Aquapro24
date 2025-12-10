@@ -49,7 +49,7 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
+              <Button size="lg" className="gap-2 text-base bg-accent text-accent-foreground border-accent-border" asChild data-testid="button-call-hero">
                 <a href="tel:+4989123456789">
                   <Phone className="w-5 h-5" />
                   Jetzt Notdienst rufen

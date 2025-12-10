@@ -289,7 +289,7 @@ export default function FAQPage() {
                   </div>
                   <h3 className="font-semibold mb-2">Notfall?</h3>
                   <p className="text-sm text-muted-foreground mb-4">24/7 Notdienst erreichbar</p>
-                  <Button variant="outline" asChild className="w-full border-destructive text-destructive hover:bg-destructive/10">
+                  <Button asChild className="w-full bg-accent text-accent-foreground border-accent-border">
                     <a href="tel:+4989123456789">Notdienst anrufen</a>
                   </Button>
                 </CardContent>
