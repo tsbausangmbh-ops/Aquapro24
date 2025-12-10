@@ -1,4 +1,5 @@
-import { Wrench, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import footerLogo from "@assets/Logo_1765382185377.png";
 
 const footerLinks = {
   services: {
@@ -47,14 +48,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-secondary-foreground" />
-              </div>
-              <div>
-                <span className="font-bold text-lg">Münchner</span>
-                <span className="block text-xs text-background/70 -mt-0.5">Sanitär & Wasserinstallation</span>
-              </div>
+            <div className="mb-4">
+              <img 
+                src={footerLogo} 
+                alt="AquaPro24 Logo" 
+                className="h-12 object-contain"
+                data-testid="img-footer-logo"
+              />
             </div>
             <p className="text-sm text-background/70 mb-6 max-w-xs">
               Ihr Meisterbetrieb für Badsanierung, Wasserinstallation und professionelle Sanitärarbeiten seit 1985.
