@@ -56,8 +56,7 @@ const pricingInfo = [
     isPackage: true,
     isHighlighted: true,
     packageContents: [
-      "Anfahrt",
-      "Komplette erste Arbeitsstunde vor Ort",
+      "Anfahrt + 1. Arbeitsstunde: 299 € netto",
       "Störungsanalyse",
       "Sofortige Ersthilfe / Reparaturversuch",
       "Materialeinsatz nach Verbrauch (separat)",
