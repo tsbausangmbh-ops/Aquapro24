@@ -40,7 +40,7 @@ export default function Header() {
                 <MapPin className="w-4 h-4" />
                 <span>München & Umgebung</span>
               </div>
-              <span className="hidden lg:inline text-xs text-primary-foreground/70">Partnernetzwerk geprüfter Meisterbetriebe</span>
+              <span className="hidden lg:inline text-xs text-primary-foreground/70">Wir sind ein Netzwerk geprüfter Meisterbetriebe</span>
             </div>
             <a 
               href="tel:+4989123456789" 
