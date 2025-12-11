@@ -167,7 +167,7 @@ interface ServiceBookingProps {
 
 export default function ServiceBooking({
   serviceType,
-  buttonText = "Online Termin buchen",
+  buttonText = "24h Buchungstermin",
   buttonVariant = 'default',
   buttonSize = 'default',
   className = ""
