@@ -20,7 +20,8 @@ import {
   Zap,
   ThumbsUp,
   Building,
-  BadgeCheck
+  BadgeCheck,
+  MessageCircle
 } from "lucide-react";
 import teamImage from "@assets/stock_images/professional_busines_7b2784dc.jpg";
 import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
@@ -127,9 +128,15 @@ export default function UeberUnsPage() {
                       0152 12274043
                     </a>
                   </Button>
-                  <Button size="lg" variant="secondary" asChild>
-                    <a href="mailto:info@aquapro24.de" data-testid="button-email-about">
-                      Anfrage senden
+                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
+                    <a 
+                      href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Dienstleistungen%20und%20m%C3%B6chte%20eine%20Anfrage%20stellen." 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      data-testid="button-whatsapp-about"
+                    >
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Anfrage per WhatsApp
                     </a>
                   </Button>
                 </div>
@@ -321,9 +328,15 @@ export default function UeberUnsPage() {
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground" asChild>
-                <a href="mailto:info@aquapro24.de">
-                  Anfrage senden
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Dienstleistungen%20und%20m%C3%B6chte%20eine%20Anfrage%20stellen." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  data-testid="button-whatsapp-cta"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Anfrage per WhatsApp
                 </a>
               </Button>
             </div>
