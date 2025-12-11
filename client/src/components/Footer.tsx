@@ -92,7 +92,7 @@ export default function Footer() {
               © {new Date().getFullYear()} AquaProfi 24. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-6 text-sm text-background/50">
-              <span>Hausmeisterbetriebe seit 2005</span>
+              <span>Partnernetzwerk seit 2005</span>
             </div>
           </div>
         </div>
