@@ -352,7 +352,7 @@ export default function Pricing() {
                         <p className="text-sm">
                           Guten Tag!<br /><br />
                           Ich bin Ihr virtueller Assistent für die Kostenschätzung.<br /><br />
-                          Ich beantworte Ihre Fragen und gebe Ihnen eine unverbindliche Preisauskunft.
+                          Ich beantworte Ihre Fragen und gebe Ihnen eine unverbindliche Preisauskunft.<br /><br />
                         </p>
                         <ul className="text-sm text-muted-foreground mt-2 space-y-1">
                           <li className="flex items-center gap-2">
