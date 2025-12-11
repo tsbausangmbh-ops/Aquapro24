@@ -584,7 +584,10 @@ export default function Pricing() {
                       <p className="font-medium text-sm">E-Mail Anfrage</p>
                     </div>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Lieber schriftlich? Kein Problem – viele unserer Kunden schätzen den Überblick einer E-Mail-Anfrage.
+                      Lieber schriftlich? Kein Problem!<br /><br />
+                      Viele unserer Kunden schätzen den Überblick einer E-Mail-Anfrage.<br /><br />
+                      So können Sie Ihr Anliegen in Ruhe beschreiben und bei Bedarf auch Fotos anhängen.<br /><br />
+                      Wir erstellen Ihnen dann eine erste Kostenschätzung per E-Mail.
                     </p>
                     <Button 
                       variant="secondary"
