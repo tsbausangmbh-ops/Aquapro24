@@ -19,7 +19,8 @@ import {
   Star,
   ArrowRight,
   Thermometer,
-  FileText
+  FileText,
+  MessageCircle
 } from "lucide-react";
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
@@ -330,9 +331,11 @@ export default function HeizungPage() {
                     089 123 456 789
                   </a>
                 </Button>
-                <Button size="lg" variant="secondary">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Wartungstermin
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Wartungstermin%20f%C3%BCr%20meine%20Heizung%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Wartungstermin
+                  </a>
                 </Button>
               </div>
             </div>
