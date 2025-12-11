@@ -7,6 +7,7 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { waermepumpeStories } from "@/components/CustomerStories";
 import TrustSignals from "@/components/TrustSignals";
+import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -112,6 +113,7 @@ export default function WaermepumpePage() {
         }}
       />
       <Header />
+      <TrustBar />
       <main>
         <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-orange-500/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

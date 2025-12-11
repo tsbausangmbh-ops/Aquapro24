@@ -7,6 +7,7 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
 import TrustSignals from "@/components/TrustSignals";
+import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -122,6 +123,7 @@ export default function SanitaerPage() {
         }}
       />
       <Header />
+      <TrustBar />
       
       <main className="flex-1">
         <section className="relative py-6 md:pt-8 pb-4 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
