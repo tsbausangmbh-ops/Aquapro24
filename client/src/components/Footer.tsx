@@ -62,7 +62,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              <a href="https://sanierer.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">AquaPro 24 München</a> - Ihr Fachteam für Sanitär, Heizung und Badsanierung seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
+              Ihr AquaProfi24-Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
             </p>
           </div>
           
