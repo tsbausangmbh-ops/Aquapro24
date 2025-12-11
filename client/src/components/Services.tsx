@@ -104,7 +104,7 @@ export default function Services() {
                 <div className="mt-4 pt-3 border-t border-border">
                   <p className="text-xs text-secondary font-medium flex items-center gap-1.5">
                     <Clock className="w-3 h-3" />
-                    24 h - Beratungstermin Buchen
+                    24h Wartungstermin
                   </p>
                 </div>
               </CardContent>

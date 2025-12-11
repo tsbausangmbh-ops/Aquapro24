@@ -19,7 +19,8 @@ import {
   Star,
   ArrowRight,
   Home,
-  Gauge
+  Gauge,
+  MessageCircle
 } from "lucide-react";
 import smartHomeImage1 from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import smartHomeImage2 from "@assets/stock_images/smart_home_technolog_6887dbb7.jpg";
@@ -352,9 +353,11 @@ export default function HaustechnikPage() {
                     089 123 456 789
                   </a>
                 </Button>
-                <Button size="lg" variant="secondary">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Beratungstermin
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Wartungstermin%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    24h Wartungstermin
+                  </a>
                 </Button>
               </div>
             </div>

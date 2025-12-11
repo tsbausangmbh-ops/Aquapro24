@@ -20,7 +20,8 @@ import {
   Zap,
   TrendingDown,
   Star,
-  FileText
+  FileText,
+  MessageCircle
 } from "lucide-react";
 import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
@@ -141,7 +142,7 @@ export default function WaermepumpePage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="waermepumpe" 
-                    buttonText="Beratungstermin buchen"
+                    buttonText="24h Wartungstermin"
                     buttonSize="lg"
                   />
                 </div>
@@ -365,9 +366,11 @@ export default function WaermepumpePage() {
                     089 123 456 789
                   </a>
                 </Button>
-                <Button size="lg" variant="secondary">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Beratungstermin
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Wartungstermin%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    24h Wartungstermin
+                  </a>
                 </Button>
               </div>
             </div>

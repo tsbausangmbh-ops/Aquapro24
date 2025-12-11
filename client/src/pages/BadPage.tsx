@@ -18,7 +18,8 @@ import {
   Clock,
   ShieldCheck,
   Star,
-  ArrowRight
+  ArrowRight,
+  MessageCircle
 } from "lucide-react";
 import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
@@ -138,7 +139,7 @@ export default function BadPage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="bad" 
-                    buttonText="Beratungstermin buchen"
+                    buttonText="24h Wartungstermin"
                     buttonSize="lg"
                   />
                 </div>
@@ -327,9 +328,11 @@ export default function BadPage() {
                     089 123 456 789
                   </a>
                 </Button>
-                <Button size="lg" variant="secondary">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Termin vereinbaren
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20f%C3%BCr%20Badsanierung%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    24h Wartungstermin
+                  </a>
                 </Button>
               </div>
             </div>
