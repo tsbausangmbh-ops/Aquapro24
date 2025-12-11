@@ -77,6 +77,10 @@ const faqItems = [
   {
     question: "Arbeiten Sie auch an Gasinstallationen?",
     answer: "Ja, wir sind zertifiziert für alle Gasarbeiten. Von der Gasleitung über Gasgeräte bis zur vorgeschriebenen Sicherheitsprüfung - alles aus einer Hand und nach aktuellen Sicherheitsstandards."
+  },
+  {
+    question: "Wie lange dauert die Planung und Umsetzung?",
+    answer: "Je nach Projektumfang planen wir 2-4 Wochen für die Konzeption. Die Umsetzung dauert bei einer Sanierung 1-3 Wochen, bei Neubauten arbeiten wir nach Ihrem Bauzeitenplan. Wir halten vereinbarte Termine ein."
   }
 ];
 

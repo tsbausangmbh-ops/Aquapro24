@@ -76,6 +76,10 @@ const faqItems = [
   {
     question: "Übernehmen Sie auch die Entsorgung der alten Sanitärobjekte?",
     answer: "Selbstverständlich! Die fachgerechte Entsorgung aller Altmaterialien ist in unserem Angebot enthalten. Sie müssen sich um nichts kümmern."
+  },
+  {
+    question: "Welche Garantie geben Sie auf die Badsanierung?",
+    answer: "Wir geben 5 Jahre Gewährleistung auf alle unsere Arbeiten. Bei Problemen kommen wir kostenlos zurück. Auf eingebaute Produkte gelten zusätzlich die Herstellergarantien."
   }
 ];
 

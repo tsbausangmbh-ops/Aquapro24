@@ -78,6 +78,10 @@ const faqItems = [
   {
     question: "Ist mein Haus für eine Wärmepumpe geeignet?",
     answer: "Die meisten Gebäude sind geeignet. Ideal sind gut gedämmte Häuser mit Fußbodenheizung. Aber auch Altbauten mit Heizkörpern können oft umgerüstet werden. Wir prüfen Ihr Gebäude kostenlos und beraten ehrlich."
+  },
+  {
+    question: "Wie laut ist eine Wärmepumpe?",
+    answer: "Moderne Luft-Wasser-Wärmepumpen sind sehr leise - vergleichbar mit einem Kühlschrank (35-50 dB). Erdwärmepumpen sind praktisch unhörbar. Wir achten bei der Platzierung auf optimale Schallschutz-Abstände."
   }
 ];
 

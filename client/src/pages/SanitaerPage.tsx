@@ -90,6 +90,10 @@ export default function SanitaerPage() {
     {
       question: "Können Sie auch verstopfte Abflüsse reinigen?",
       answer: "Selbstverständlich! Wir beseitigen Verstopfungen in Waschbecken, Duschen, WCs und Abwasserleitungen. Mit professioneller Ausrüstung lösen wir auch hartnäckige Verstopfungen schnell und sauber."
+    },
+    {
+      question: "Geben Sie Garantie auf Ihre Sanitärarbeiten?",
+      answer: "Ja, auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Bei Problemen kommen wir kostenlos zurück und beheben den Mangel. Auf eingebaute Materialien gelten zusätzlich die Herstellergarantien."
     }
   ];
 

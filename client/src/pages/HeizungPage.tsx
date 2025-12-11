@@ -76,6 +76,10 @@ const faqItems = [
   {
     question: "Wie oft sollte die Heizung gewartet werden?",
     answer: "Mindestens einmal jährlich vor der Heizperiode. Regelmäßige Wartung erhält die Effizienz, senkt Verbrauch und beugt teuren Reparaturen vor. Wir bieten günstige Wartungsverträge mit Priorität im Notfall."
+  },
+  {
+    question: "Reparieren Sie alle Heizungsmarken?",
+    answer: "Ja, wir reparieren und warten Heizungen aller Hersteller: Viessmann, Vaillant, Buderus, Wolf, Junkers, Bosch und viele mehr. Ersatzteile haben wir oft direkt dabei für schnelle Reparaturen."
   }
 ];
 
