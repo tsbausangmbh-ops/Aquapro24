@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Menu, X, Phone, Clock, MapPin, ChevronDown, Mail } from "lucide-react";
+import { Menu, X, Phone, MapPin, ChevronDown, Mail } from "lucide-react";
 import logoImage from "@assets/Icon_Logo_1765382090112.png";
 
 export default function Header() {
@@ -36,10 +36,6 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-2 md:gap-4 text-sm">
             <div className="flex items-center gap-4 flex-wrap justify-center">
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4" />
-                <span className="font-medium">24/7 verfügbar</span>
-              </div>
               <div className="hidden sm:flex items-center gap-1.5">
                 <MapPin className="w-4 h-4" />
                 <span>München & Umgebung</span>
@@ -142,10 +138,6 @@ export default function Header() {
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
-              <Badge variant="outline" className="gap-1 text-accent border-accent/30">
-                <Clock className="w-3 h-3" />
-                24/7 verfügbar
-              </Badge>
               <Button data-testid="button-email-header" asChild>
                 <a href="mailto:info@sanitaer-muenchen.de">
                   <Mail className="w-4 h-4 mr-2" />
