@@ -271,9 +271,9 @@ export default function ServiceBooking({
   const canSubmit = formData.name && formData.phone && formData.email && formData.street && formData.zipCity;
 
   const buttonStyles: Record<ServiceType, string> = {
-    sanitaer: "bg-blue-600 hover:bg-blue-700 text-white",
+    sanitaer: "bg-secondary hover:bg-secondary/90 text-secondary-foreground",
     bad: "bg-cyan-600 hover:bg-cyan-700 text-white",
-    heizung: "bg-red-600 hover:bg-red-700 text-white",
+    heizung: "bg-destructive hover:bg-destructive/90 text-destructive-foreground",
     waermepumpe: "bg-orange-500 hover:bg-orange-600 text-white",
     haustechnik: "bg-emerald-600 hover:bg-emerald-700 text-white"
   };

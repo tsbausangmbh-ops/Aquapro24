@@ -594,6 +594,14 @@ const SERVICE_CATEGORY_LABELS: Record<string, string> = {
   haustechnik: "Haustechnik",
 };
 
+const SERVICE_CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
+  sanitaer: { bg: "bg-secondary", text: "text-secondary-foreground", border: "border-secondary/20" },
+  bad: { bg: "bg-cyan-600", text: "text-white", border: "border-cyan-600/20" },
+  heizung: { bg: "bg-destructive", text: "text-destructive-foreground", border: "border-destructive/20" },
+  waermepumpe: { bg: "bg-orange-500", text: "text-white", border: "border-orange-500/20" },
+  haustechnik: { bg: "bg-emerald-600", text: "text-white", border: "border-emerald-600/20" },
+};
+
 const SERVICE_CATEGORY_DEFAULTS: Record<string, string[]> = {
   sanitaer: [], // Force user to make explicit choice
   bad: [], // Force user to make explicit choice
@@ -662,6 +670,7 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
   });
   
   const serviceCategoryLabel = serviceCategory ? SERVICE_CATEGORY_LABELS[serviceCategory] : null;
+  const serviceCategoryColors = serviceCategory ? SERVICE_CATEGORY_COLORS[serviceCategory] : SERVICE_CATEGORY_COLORS.sanitaer;
   
   // Select appropriate questions based on service category
   const getQuestionsForCategory = () => {
@@ -937,8 +946,8 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
     <>
       {isOpen && (
         <div className="fixed bottom-20 right-4 z-50 w-[calc(100%-2rem)] max-w-lg">
-          <Card className="shadow-2xl border-2 border-secondary/20">
-            <CardHeader className="bg-secondary text-secondary-foreground rounded-t-lg p-4">
+          <Card className={`shadow-2xl border-2 ${serviceCategoryColors.border}`}>
+            <CardHeader className={`${serviceCategoryColors.bg} ${serviceCategoryColors.text} rounded-t-lg p-4`}>
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -1078,7 +1087,7 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
       ) : (
         <button
           onClick={toggleChat}
-          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 bg-secondary text-secondary-foreground px-3 py-4 rounded-l-lg shadow-2xl hover:px-4 transition-all duration-300 group"
+          className={`fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 ${serviceCategoryColors.bg} ${serviceCategoryColors.text} px-3 py-4 rounded-l-lg shadow-2xl hover:px-4 transition-all duration-300 group`}
           data-testid="button-toggle-chat"
         >
           {showPulse && (
