@@ -144,7 +144,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
             data-testid="label-ai-chat-hint"
           >
             <p className="text-sm font-medium">KI-Agent für die Kostenschätzung</p>
-            <p className="text-xs opacity-90 mt-1">Kostenlose Tipps & Soforthilfe</p>
+            <p className="text-xs opacity-90 mt-1">Kostenlose Tipps & 24h Buchung Online</p>
           </div>
           <Button
             onClick={handleOpen}
