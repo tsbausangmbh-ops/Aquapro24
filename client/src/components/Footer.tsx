@@ -62,7 +62,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              KSHW München - Ihr Fachteam für Sanitär, Heizung und Badsanierung seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
+              <a href="https://sanierer.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHW München</a> - Ihr Fachteam für Sanitär, Heizung und Badsanierung seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
             </p>
           </div>
           
