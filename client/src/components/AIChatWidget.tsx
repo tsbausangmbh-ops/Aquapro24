@@ -140,11 +140,11 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
         <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
           <div 
             onClick={handleOpen}
-            className="bg-card border shadow-lg rounded-lg px-4 py-3 max-w-[200px] cursor-pointer hover-elevate"
+            className="bg-destructive text-destructive-foreground shadow-lg rounded-lg px-4 py-3 max-w-[200px] cursor-pointer hover-elevate"
             data-testid="label-ai-chat-hint"
           >
-            <p className="text-sm font-medium text-foreground">Schnelle Hilfe gesucht?</p>
-            <p className="text-xs text-muted-foreground mt-1">Kostenlose Tipps & Preisauskunft</p>
+            <p className="text-sm font-medium">Schnelle Hilfe gesucht?</p>
+            <p className="text-xs opacity-90 mt-1">Kostenlose Tipps & Preisauskunft</p>
           </div>
           <Button
             onClick={handleOpen}
