@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, MapPin, ChevronDown, Mail } from "lucide-react";
-import logoImage from "@assets/Icon_Logo_1765382090112.png";
+import logoImage from "@assets/Logo_einzeln_1765466854369.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
