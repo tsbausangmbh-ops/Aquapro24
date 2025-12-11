@@ -143,7 +143,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
             className="bg-destructive text-destructive-foreground shadow-lg rounded-lg px-4 py-3 max-w-[200px] cursor-pointer hover-elevate"
             data-testid="label-ai-chat-hint"
           >
-            <p className="text-sm font-medium">KI-Agent für die Kostenschätzung</p>
+            <p className="text-sm font-medium">KI-Agent für Beratung</p>
             <p className="text-xs opacity-90 mt-1">Kostenlose Tipps & 24h Buchung Online</p>
           </div>
           <Button
@@ -171,7 +171,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                     <Bot className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm">AquaPro24 KI-Agent für die Kostenschätzung</p>
+                    <p className="font-semibold text-sm">AquaPro24 KI-Agent für Beratung</p>
                     <div className="flex items-center gap-1.5 text-xs opacity-90">
                       <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                       <span>Online</span>
