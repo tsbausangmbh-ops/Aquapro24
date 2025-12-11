@@ -81,6 +81,9 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-background/10 mt-3 pt-2">
+          <p className="text-xs text-background/40 text-center mb-2">
+            Wir arbeiten mit einem Netzwerk an Meisterbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
+          </p>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/50">
               © {new Date().getFullYear()} Münchner Heizung & Sanitär GmbH. Alle Rechte vorbehalten.
