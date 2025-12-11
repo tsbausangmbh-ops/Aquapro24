@@ -87,7 +87,7 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung München | Installation, Wartung & Reparatur | Alle Marken | Meisterbetrieb"
+        title="Heizung München | Installation, Wartung & Reparatur | Alle Marken | Partnernetzwerk"
         description="Heizungsinstallation und Wartung in München: Gasheizung, Ölheizung, Fußbodenheizung. Förderberatung bis 70%, Festpreise. 1.200+ Heizungsanlagen in Schwabing, Bogenhausen, Sendling installiert."
         canonical="https://aquapro24.de/heizung"
         keywords="Heizung München, Heizungsinstallation Schwabing, Heizungswartung Bogenhausen, Gasheizung Sendling, Heizungsreparatur Pasing, Fußbodenheizung Maxvorstadt, Heizungstausch Haidhausen, Heizung Neuhausen"
@@ -161,7 +161,7 @@ export default function HeizungPage() {
                   <div className="absolute top-3 right-3">
                     <Badge className="bg-secondary text-secondary-foreground shadow-lg">
                       <Star className="w-3 h-3 mr-1" />
-                      Meisterbetrieb
+                      Geprüfte Partner
                     </Badge>
                   </div>
                 </div>
@@ -259,7 +259,7 @@ export default function HeizungPage() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Eine funktionierende Heizung ist in den kalten Münchner Wintern unverzichtbar. Als Meisterbetrieb mit über 
+                Eine funktionierende Heizung ist in den kalten Münchner Wintern unverzichtbar. Als Partnernetzwerk mit über 
                 20 Jahren Erfahrung sind wir Ihr verlässlicher Partner für alle Heizungsfragen - von der Wartung über die 
                 Reparatur bis zur kompletten Neuinstallation.
               </p>

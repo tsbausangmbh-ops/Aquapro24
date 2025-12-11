@@ -67,7 +67,7 @@ export default function Services() {
             Sanitär & Wasserinstallation München – Vom Wasserhahn bis zur Komplettsanierung
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
-            Wenn Sie uns beauftragen, bekommen Sie Qualitätsarbeit vom Meisterbetrieb
+            Wenn Sie uns beauftragen, bekommen Sie Qualitätsarbeit von geprüften Partnerbetrieben
           </h3>
           <p className="text-lg text-muted-foreground">
             Badsanierung, Wasserinstallation, Rohrreinigung, Armaturen & mehr in ganz München, Schwabing, Bogenhausen, Sendling, Pasing & Umland.

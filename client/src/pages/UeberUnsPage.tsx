@@ -59,7 +59,7 @@ const values = [
 const differentiators = [
   { icon: CheckCircle2, text: "Festpreisgarantie vor Arbeitsbeginn" },
   { icon: CheckCircle2, text: "24/7 Notdienst mit echtem Ansprechpartner" },
-  { icon: CheckCircle2, text: "Meisterbetrieb mit Qualitätsversprechen" },
+  { icon: CheckCircle2, text: "Partnernetzwerk mit Qualitätsversprechen" },
   { icon: CheckCircle2, text: "Transparente Kommunikation ohne Fachchinesisch" },
   { icon: CheckCircle2, text: "Saubere Arbeit - wir hinterlassen keinen Schmutz" },
   { icon: CheckCircle2, text: "5 Jahre Gewährleistung auf alle Arbeiten" }
@@ -90,10 +90,10 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | AquaPro24 München | Meisterbetrieb seit 2005 | HWK München zertifiziert"
+        title="Über uns | AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
         description="Ihr Münchner Familienbetrieb für Sanitär und Heizung. 48+ Jahre Erfahrung, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Meisterqualität, Festpreise, persönlicher Service. München."
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns Sanitär München, Meisterbetrieb Heizung Schwabing, Team Installateur Bogenhausen, Familienbetrieb Sendling, HWK Pasing, Team Maxvorstadt, Meister Haidhausen, Betrieb Neuhausen"
+        keywords="Über uns Sanitär München, Partnernetzwerk Heizung Schwabing, Team Installateur Bogenhausen, Familienbetrieb Sendling, Fachbetriebe Pasing, Team Maxvorstadt, Partner Haidhausen, Betrieb Neuhausen"
       />
       <Header />
       <main>
@@ -104,7 +104,7 @@ export default function UeberUnsPage() {
               <div className="space-y-6">
                 <Badge variant="secondary" className="gap-2">
                   <BadgeCheck className="w-4 h-4" />
-                  Meisterbetrieb seit 2005
+                  Partnernetzwerk seit 2005
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
                   Meistertechnik trifft<br />

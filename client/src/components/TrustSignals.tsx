@@ -24,8 +24,8 @@ export default function TrustSignals({
   const signals = [
     {
       icon: Award,
-      title: "Meisterbetrieb",
-      detail: "Zertifizierte Handwerksqualität",
+      title: "Partnernetzwerk",
+      detail: "Geprüfte Fachbetriebe",
       value: "Seit 2005"
     },
     {

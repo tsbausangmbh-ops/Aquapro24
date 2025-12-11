@@ -38,8 +38,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   "name": "AquaPro24 - Sanitär & Heizung München",
   "alternateName": ["AquaPro24", "Münchner Heizung & Sanitär", "Sanitär München"],
   "legalName": "Münchner Heizung & Sanitär GmbH",
-  "description": "Meisterbetrieb für Sanitär, Heizung und Badsanierung in München. Seit 2005 Ihr zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik. HWK München zertifiziert, 2.847+ zufriedene Kunden.",
-  "slogan": "Meisterqualität für München - seit 2005",
+  "description": "Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 Ihr zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik. Geprüfte Fachbetriebe, 2.847+ zufriedene Kunden.",
+  "slogan": "Geprüfte Partnerbetriebe für München - seit 2005",
   "url": "https://aquapro24.de",
   "logo": {
     "@type": "ImageObject",

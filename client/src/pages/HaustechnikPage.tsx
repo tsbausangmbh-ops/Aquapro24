@@ -50,7 +50,7 @@ const services = [
 
 const benefits = [
   "Komplettservice Haustechnik",
-  "Zertifizierter Meisterbetrieb",
+  "Geprüfte Partnerbetriebe",
   "Modernste Technik",
   "Energieberatung inklusive",
   "Smart Home Integration",
@@ -143,7 +143,7 @@ export default function HaustechnikPage() {
                   />
                 </div>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  {["Meisterbetrieb", "Festpreis", "Komplettservice"].map((item) => (
+                  {["Geprüfte Partner", "Festpreis", "Komplettservice"].map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <CheckCircle2 className="w-4 h-4 text-accent" />
                       <span>{item}</span>

@@ -34,7 +34,7 @@ export default function Hero() {
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
               Sanitär & Wasserinstallation München:{" "}
-              <span className="text-secondary">Ihr Meisterbetrieb</span>{" "}
+              <span className="text-secondary">Ihr Partnernetzwerk</span>{" "}
               <span className="block mt-1">für Bad, Rohre & Wassertechnik.</span>
             </h1>
             
@@ -44,7 +44,7 @@ export default function Hero() {
             </h2>
             
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              <strong className="text-foreground">Über 2.500 Münchner Familien</strong> vertrauen bereits unserem Meisterbetrieb – 
+              <strong className="text-foreground">Über 2.500 Münchner Familien</strong> vertrauen bereits unserem Partnernetzwerk – 
               mit Festpreis-Garantie, ohne versteckte Kosten. Wenn Sie uns anrufen, kümmern wir uns sofort um Ihr Anliegen.
             </p>
             

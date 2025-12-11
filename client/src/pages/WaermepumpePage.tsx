@@ -120,7 +120,7 @@ export default function WaermepumpePage() {
                   Wärmepumpe München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Wärmepumpe vom Meisterbetrieb
+                  Wärmepumpe vom Partnernetzwerk
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
@@ -128,7 +128,7 @@ export default function WaermepumpePage() {
                 </p>
                 <p className="text-muted-foreground">
                   Jetzt ist der beste Zeitpunkt: Bis zu 70% staatliche Förderung, fachgerechte 
-                  Installation durch unseren Meisterbetrieb und ein verbindlicher Festpreis ohne 
+                  Installation durch unser Partnernetzwerk und ein verbindlicher Festpreis ohne 
                   Überraschungen. Wir kümmern uns um alles - von der Beratung bis zur Förderantragstellung.
                 </p>
                 <div className="flex flex-wrap gap-4">

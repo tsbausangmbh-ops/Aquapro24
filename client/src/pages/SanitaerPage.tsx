@@ -62,7 +62,7 @@ export default function SanitaerPage() {
   ];
 
   const benefits = [
-    "Meisterbetrieb mit über 20 Jahren Erfahrung",
+    "Partnernetzwerk mit über 20 Jahren Erfahrung",
     "Festpreisgarantie ohne versteckte Kosten",
     "Schnelle Terminvergabe - oft am selben Tag",
     "Nur hochwertige Markenprodukte",
@@ -100,13 +100,13 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitärinstallation München | Wasserinstallation & Klempner | Meisterbetrieb seit 2005"
-        description="Professionelle Sanitärinstallation in München: Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. Festpreisgarantie, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. HWK München zertifiziert."
+        title="Sanitärinstallation München | Wasserinstallation & Klempner | Partnernetzwerk seit 2005"
+        description="Professionelle Sanitärinstallation in München: Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. Festpreisgarantie, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Geprüfte Partnerbetriebe."
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Wasserinstallation München, Klempner Schwabing, Rohrreinigung Bogenhausen, Sanitär Sendling, Wasserleitungen Pasing, Armaturen Maxvorstadt, Sanitärinstallation Haidhausen, Installateur Neuhausen"
         serviceSchema={{
           name: "Sanitärinstallation München",
-          description: "Professionelle Sanitärinstallation und Wasserinstallation in München - Meisterbetrieb seit 2005 mit über 2.847 zufriedenen Kunden",
+          description: "Professionelle Sanitärinstallation und Wasserinstallation in München - Partnernetzwerk seit 2005 mit über 2.847 zufriedenen Kunden",
           serviceType: "Plumbing",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
           offers: [
@@ -139,7 +139,7 @@ export default function SanitaerPage() {
                   Situationen und wissen, wie stressig sie sein können.
                 </p>
                 <p className="text-lg text-muted-foreground mb-4">
-                  Als Münchner Meisterbetrieb mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
+                  Als Münchner Partnernetzwerk mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
                   schnell, sauber und zum Festpreis. Stellen Sie sich vor: In wenigen Stunden ist alles 
                   repariert und Sie können sich wieder auf die wichtigen Dinge konzentrieren.
                 </p>
@@ -168,7 +168,7 @@ export default function SanitaerPage() {
                   <div className="absolute top-3 right-3">
                     <Badge className="bg-primary text-primary-foreground shadow-lg">
                       <Star className="w-3 h-3 mr-1" />
-                      Meisterbetrieb
+                      Geprüfte Partner
                     </Badge>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ export default function SanitaerPage() {
             "Pünktlichkeit und Zuverlässigkeit garantiert"
           ]}
           futureState="...Ihr Sanitärproblem ist gelöst, die Arbeit wurde sauber und professionell erledigt, und Sie haben einen fairen Preis bezahlt. So arbeiten wir - Tag für Tag für unsere Münchner Kunden."
-          authorityText="Meisterbetrieb mit über 2.800 zufriedenen Kunden in München"
+          authorityText="Partnernetzwerk mit über 2.800 zufriedenen Kunden in München"
           urgencyText="Heute noch freie Termine verfügbar"
           transformationSteps={[
             "Sie rufen an oder schreiben uns - wir sind sofort für Sie da und hören Ihnen zu.",
@@ -276,8 +276,8 @@ export default function SanitaerPage() {
                     <Award className="w-8 h-8 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Meisterbetrieb</h3>
-                    <p className="text-muted-foreground text-sm">Qualität vom Fachmann</p>
+                    <h3 className="font-bold text-lg">Geprüfte Partner</h3>
+                    <p className="text-muted-foreground text-sm">Qualität vom Fachbetrieb</p>
                   </div>
                 </div>
                 <div className="space-y-4 text-sm">
@@ -303,11 +303,11 @@ export default function SanitaerPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Professionelle Sanitärinstallation in München - Ihr Meisterbetrieb
+              Professionelle Sanitärinstallation in München - Ihr Partnernetzwerk
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Als Münchner Meisterbetrieb für Sanitärinstallation sind wir seit über 20 Jahren Ihr zuverlässiger Partner 
+                Als Münchner Partnernetzwerk für Sanitärinstallation sind wir seit über 20 Jahren Ihr zuverlässiger Partner 
                 für alle Arbeiten rund um Wasser, Abwasser und Sanitäranlagen. Ob Sie einen tropfenden Wasserhahn reparieren 
                 lassen möchten, eine komplett neue Wasserinstallation benötigen oder mitten in der Nacht einen Rohrbruch haben - 
                 wir sind für Sie da.

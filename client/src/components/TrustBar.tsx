@@ -3,7 +3,7 @@ import { Award, Clock, Shield, Star, MapPin, Users } from "lucide-react";
 const trustItems = [
   {
     icon: Award,
-    title: "Meisterbetrieb",
+    title: "Partnernetzwerk",
     subtitle: "Seit 2005",
   },
   {
@@ -28,7 +28,7 @@ const trustItems = [
   },
   {
     icon: Users,
-    title: "HWK München",
+    title: "Geprüfte Partner",
     subtitle: "Zertifiziert",
   },
 ];

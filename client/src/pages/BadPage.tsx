@@ -88,7 +88,7 @@ export default function BadPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Badsanierung München | Komplettumbau zum Festpreis ab 8.900€ | 5 Jahre Garantie"
-        description="Badsanierung in München vom Meisterbetrieb: Komplettumbau in 2-4 Wochen, 3D-Planung inklusive, barrierefreie Bäder. 847+ renovierte Bäder in Schwabing, Bogenhausen, Sendling. Festpreis ohne Überraschungen."
+        description="Badsanierung in München vom Partnernetzwerk: Komplettumbau in 2-4 Wochen, 3D-Planung inklusive, barrierefreie Bäder. 847+ renovierte Bäder in Schwabing, Bogenhausen, Sendling. Festpreis ohne Überraschungen."
         canonical="https://aquapro24.de/bad"
         keywords="Badsanierung München, Bad renovieren Schwabing, Badezimmer sanieren Bogenhausen, Komplettbad Sendling, barrierefreies Bad Pasing, Badumbau Maxvorstadt, Badsanierung Haidhausen, Traumbad Neuhausen"
         serviceSchema={{
@@ -118,7 +118,7 @@ export default function BadPage() {
                   Badsanierung München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Badsanierung vom Meisterbetrieb
+                  Badsanierung vom Partnernetzwerk
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
@@ -126,7 +126,7 @@ export default function BadPage() {
                 </p>
                 <p className="text-muted-foreground">
                   Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
-                  Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Meisterbetrieb. 
+                  Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Partnernetzwerk. 
                   Sie lehnen sich zurück und freuen sich auf Ihr Traumbad.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -261,7 +261,7 @@ export default function BadPage() {
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
                 Eine Badsanierung ist mehr als nur eine Renovierung - es ist die Verwandlung eines der wichtigsten Räume in Ihrem 
-                Zuhause. Als Münchner Meisterbetrieb haben wir bereits über 500 Bäder komplett saniert und wissen genau, worauf 
+                Zuhause. Als Münchner Partnernetzwerk haben wir bereits über 500 Bäder komplett saniert und wissen genau, worauf 
                 es ankommt: präzise Planung, hochwertige Materialien und handwerkliche Perfektion.
               </p>
               <p>

@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär & Heizung München | Wasserinstallation, Badsanierung, Wärmepumpe | Meisterbetrieb seit 2005"
-        description="AquaPro24 - Ihr Meisterbetrieb für Sanitär, Heizung und Badsanierung in München. 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Festpreise, 24/7 Online-Buchung, HWK München zertifiziert."
+        title="Sanitär & Heizung München | Wasserinstallation, Badsanierung, Wärmepumpe | Partnernetzwerk seit 2005"
+        description="AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Festpreise, 24/7 Online-Buchung, geprüfte Partnerbetriebe."
         canonical="https://aquapro24.de"
         keywords="Sanitär München, Heizung München, Wasserinstallation Schwabing, Badsanierung Bogenhausen, Wärmepumpe Sendling, Klempner Pasing, Installateur Maxvorstadt, Haustechnik Haidhausen, Sanitär Neuhausen"
         serviceSchema={{
           name: "AquaPro24 - Sanitär & Heizung München",
-          description: "Komplettservice für Sanitär, Heizung und Haustechnik in München - Meisterbetrieb seit 2005 mit über 2.847 zufriedenen Kunden",
+          description: "Komplettservice für Sanitär, Heizung und Haustechnik in München - Partnernetzwerk seit 2005 mit über 2.847 zufriedenen Kunden",
           serviceType: "Plumbing and HVAC Services",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
           reviews: [
