@@ -391,7 +391,7 @@ export default function Pricing() {
                   {step === "problem" && (
                     <div className="space-y-3">
                       <div className="bg-card rounded-lg p-3 border border-card-border">
-                        <p className="text-sm">Was kann ich für Sie tun? Beschreiben Sie Ihr Anliegen:</p>
+                        <p className="text-sm">Was kann ich für Sie tun?<br /><br />Beschreiben Sie Ihr Anliegen:</p>
                       </div>
                       <Textarea
                         value={problem}
