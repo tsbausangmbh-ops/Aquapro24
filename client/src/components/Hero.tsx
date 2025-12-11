@@ -88,13 +88,6 @@ export default function Hero() {
           
           <div className="relative animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
             <div className="relative bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-8 text-secondary-foreground shadow-xl">
-              <div className="absolute -top-3 -right-3">
-                <Badge className="bg-primary text-primary-foreground shadow-lg">
-                  <Clock className="w-3 h-3 mr-1" />
-                  24/7 Online verfügbar
-                </Badge>
-              </div>
-              
               <h3 className="text-xl font-bold mb-6">Unsere Sanitär-Leistungen:</h3>
               
               <div className="space-y-4">
