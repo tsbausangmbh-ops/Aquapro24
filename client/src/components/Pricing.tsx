@@ -355,7 +355,7 @@ export default function Pricing() {
                         <ul className="text-sm text-muted-foreground mt-2 space-y-1">
                           <li className="flex items-center gap-2">
                             <Sparkles className="w-3 h-3 text-secondary" />
-                            Sofortige Preisschätzung
+                            Wir helfen Ihnen bei Ihrem Problem
                           </li>
                           <li className="flex items-center gap-2">
                             <Calendar className="w-3 h-3 text-secondary" />
