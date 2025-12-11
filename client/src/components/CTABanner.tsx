@@ -36,8 +36,7 @@ export default function CTABanner() {
           </Button>
           <Button 
             size="lg" 
-            variant="secondary"
-            className="gap-2"
+            className="gap-2 bg-orange-500 text-white border-orange-600"
             onClick={() => {
               const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
               if (chatButton) chatButton.click();

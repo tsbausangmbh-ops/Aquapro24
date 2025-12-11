@@ -264,7 +264,7 @@ export default function FAQPage() {
                   089 123 456 789
                 </a>
               </Button>
-              <Button size="lg" variant="outline" onClick={() => {
+              <Button size="lg" className="bg-orange-500 text-white border-orange-600" onClick={() => {
                 const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
                 if (chatButton) chatButton.click();
               }}>
