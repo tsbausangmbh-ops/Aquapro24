@@ -30,7 +30,7 @@ import {
 const faqs = [
   {
     question: "Wie schnell können Sie bei einem Notfall kommen?",
-    answer: "Bei Notfällen wie Rohrbruch oder Heizungsausfall sind wir in der Regel innerhalb von 30-45 Minuten bei Ihnen. Unser Notdienst ist auch an Wochenenden und Feiertagen besetzt.",
+    answer: "Bei Notfällen wie Rohrbruch oder Heizungsausfall sind wir in der Regel ab 60 Minuten bei Ihnen. Unser Notdienst ist auch an Wochenenden und Feiertagen besetzt.",
     icon: Clock,
     color: "bg-blue-500",
     lightBg: "bg-blue-50 dark:bg-blue-950/30",

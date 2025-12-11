@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Thomas K.",
     location: "Bogenhausen",
-    content: "Rohrbruch im Keller entdeckt. Innerhalb von 30 Minuten war der Techniker da und hat den Schaden begrenzt. Professionell, freundlich und transparent bei den Kosten.",
+    content: "Rohrbruch im Keller entdeckt. Innerhalb kürzester Zeit war der Techniker da und hat den Schaden begrenzt. Professionell, freundlich und transparent bei den Kosten.",
     rating: 5,
     initials: "TK",
     service: "Rohrbruch",

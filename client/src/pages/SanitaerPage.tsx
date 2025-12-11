@@ -333,7 +333,7 @@ export default function SanitaerPage() {
               </p>
               <p>
                 Für Notfälle wie Rohrbrüche oder schwere Wasserschäden bieten wir einen 24/7-Notdienst an. In der Regel sind 
-                wir innerhalb von 30-45 Minuten bei Ihnen in München und stoppen den Schaden, bevor er größer wird. Unsere 
+                wir ab 60 Minuten bei Ihnen in München und stoppen den Schaden, bevor er größer wird. Unsere 
                 Notdienst-Pauschale ist transparent und fair - ohne versteckte Kosten.
               </p>
               <h3 className="text-xl font-semibold text-foreground mt-8">Unsere Garantie für Sie</h3>

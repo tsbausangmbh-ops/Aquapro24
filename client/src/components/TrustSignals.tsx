@@ -67,7 +67,7 @@ export default function TrustSignals({
     {
       icon: Zap,
       title: "Schnellservice-Garantie",
-      description: "Bei Notfällen sind wir innerhalb von 45 Minuten bei Ihnen - oder die Anfahrt ist kostenlos."
+      description: "Bei Notfällen sind wir ab 60 Minuten bei Ihnen - schnell und zuverlässig."
     }
   ];
 

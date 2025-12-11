@@ -73,7 +73,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">2</span>
-                <span><strong>Garantierte Anfahrt unter 45 Minuten</strong> im Stadtgebiet München</span>
+                <span><strong>Schnelle Anfahrt ab 60 Minuten</strong> im Stadtgebiet München</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">3</span>

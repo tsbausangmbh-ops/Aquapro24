@@ -72,7 +72,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-2 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-accent" />
-                <span>In 90 min da</span>
+                <span>Ab 60 Min. da</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-accent" />
