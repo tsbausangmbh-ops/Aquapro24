@@ -61,7 +61,7 @@ export default function DatenschutzPage() {
               <h3 className="text-lg font-medium mb-2">Datenschutzbeauftragter</h3>
               <p className="text-muted-foreground mb-4">
                 Bei Fragen zum Datenschutz erreichen Sie unseren Datenschutzbeauftragten unter:<br />
-                E-Mail: datenschutz@aquapro24.de
+                E-Mail: info@aquapro24.de
               </p>
             </section>
 
