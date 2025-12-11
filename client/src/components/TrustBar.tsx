@@ -28,7 +28,7 @@ const trustItems = [
   },
   {
     icon: Users,
-    title: "SHK-Innung",
+    title: "HWK München",
     subtitle: "Zertifiziert",
   },
 ];
