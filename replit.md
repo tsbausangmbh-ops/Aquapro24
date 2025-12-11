@@ -11,7 +11,7 @@ A professional German-language website for KSHW München (Inhaber: Ali Kemal Kur
 - **Phone**: 0152 12274043
 - **USt-IdNr**: DE356852204
 - **Type**: Einzelunternehmer (Sole Proprietor)
-- **Domain**: kshw-muenchen.de
+- **Domain**: aquapro24.de (verwaltet und gesteuert von KSHW München)
 - **Established**: 2005 (Partnernetzwerk)
 
 ## User Preferences

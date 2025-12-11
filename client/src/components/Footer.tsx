@@ -88,9 +88,10 @@ export default function Footer() {
         
         <div className="border-t border-background/10 mt-3 pt-2">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-background/50">
-              © {new Date().getFullYear()} KSHW München. Alle Rechte vorbehalten.
-            </p>
+            <div className="text-sm text-background/50 text-center md:text-left">
+              <p>© {new Date().getFullYear()} KSHW München. Alle Rechte vorbehalten.</p>
+              <p className="text-xs mt-1">AquaPro24.de wird von KSHW München verwaltet und gesteuert.</p>
+            </div>
             <div className="flex items-center gap-6 text-sm text-background/50">
               <span>Partnernetzwerk seit 2005</span>
             </div>
