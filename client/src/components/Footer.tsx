@@ -81,7 +81,7 @@ export default function Footer() {
           ))}
         </div>
         
-        <div className="border-t border-background/10 mt-12 pt-8">
+        <div className="border-t border-background/10 mt-6 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/50">
               © {new Date().getFullYear()} Münchner Heizung & Sanitär GmbH. Alle Rechte vorbehalten.
