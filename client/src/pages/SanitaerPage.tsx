@@ -73,7 +73,7 @@ export default function SanitaerPage() {
   const faqItems = [
     {
       question: "Wie schnell können Sie bei einem Wasserrohrbruch in München vor Ort sein?",
-      answer: "Bei einem Notfall wie Wasserrohrbruch sind wir in der Regel innerhalb von 30-45 Minuten bei Ihnen in München. Unser 24/7 Notdienst steht rund um die Uhr bereit - auch an Wochenenden und Feiertagen."
+      answer: "Bei einem Notfall wie Wasserrohrbruch sind wir in der Regel innerhalb von 60-90 Minuten bei Ihnen in München. Unser 24/7 Notdienst steht rund um die Uhr bereit - auch an Wochenenden und Feiertagen."
     },
     {
       question: "Was kostet eine Sanitärinstallation in München?",
