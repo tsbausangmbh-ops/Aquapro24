@@ -400,7 +400,7 @@ export default function KontaktPage() {
               </Card>
               <div className="flex flex-col justify-center space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">KSHW München GmbH</h3>
+                  <h3 className="text-xl font-semibold mb-4">KSHW München</h3>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -471,7 +471,7 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Building className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p className="font-semibold">KSHW München GmbH</p>
+                        <p className="font-semibold">KSHW München</p>
                         <p className="text-sm text-muted-foreground">Sanitär & Heizung München</p>
                       </div>
                     </div>

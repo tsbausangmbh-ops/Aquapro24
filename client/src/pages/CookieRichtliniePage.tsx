@@ -52,7 +52,7 @@ export default function CookieRichtliniePage() {
                 Verantwortlich für die Verwendung von Cookies auf dieser Website ist:
               </p>
               <p className="text-muted-foreground mb-4">
-                KSHW München GmbH<br />
+                KSHW München<br />
                 Zielstattstr. 20<br />
                 81379 München<br />
                 E-Mail: info@aquapro24.de<br />

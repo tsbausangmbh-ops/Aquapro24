@@ -45,7 +45,7 @@ export default function DatenschutzPage() {
               
               <h3 className="text-lg font-medium mb-2">Verantwortlicher gemäß Art. 4 Abs. 7 DSGVO</h3>
               <p className="text-muted-foreground mb-4">
-                KSHW München GmbH<br />
+                KSHW München<br />
                 Zielstattstr. 20<br />
                 81379 München<br />
                 Deutschland<br />
