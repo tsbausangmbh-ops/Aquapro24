@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
+import TrustBar from "@/components/TrustBar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,10 +29,10 @@ import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.
 import workshopImage from "@assets/stock_images/modern_plumbing_work_077b9e6b.jpg";
 
 const stats = [
-  { value: "48+", label: "Jahre Erfahrung", sublabel: "kombiniert" },
-  { value: "2.500+", label: "Projekte", sublabel: "erfolgreich abgeschlossen" },
-  { value: "4.9", label: "Sterne", sublabel: "Kundenbewertung" },
-  { value: "24/7", label: "Notdienst", sublabel: "erreichbar" }
+  { value: "Seit 2005", label: "Partnernetzwerk", sublabel: "in München" },
+  { value: "2.800+", label: "Zufriedene Kunden", sublabel: "in München" },
+  { value: "4.9", label: "Sterne", sublabel: "Google Bewertung" },
+  { value: "Ab 60 Min.", label: "Vor Ort", sublabel: "bei Notfällen" }
 ];
 
 const values = [
@@ -91,12 +92,13 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | KSHW München München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
-        description="Ihr Münchner Familienbetrieb für Sanitär und Heizung. 48+ Jahre Erfahrung, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Meisterqualität, Festpreise, persönlicher Service. München."
-        canonical="https://kshw-muenchen.de/ueber-uns"
-        keywords="Über uns Sanitär München, Partnernetzwerk Heizung Schwabing, Team Installateur Bogenhausen, Familienbetrieb Sendling, Fachbetriebe Pasing, Team Maxvorstadt, Partner Haidhausen, Betrieb Neuhausen"
+        title="Über uns | AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
+        description="Ihr Münchner Partnernetzwerk für Sanitär und Heizung. 48+ Jahre Erfahrung, 2.500+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Meisterqualität, Festpreise, persönlicher Service."
+        canonical="https://aquapro24.de/ueber-uns"
+        keywords="Über uns Sanitär München, Partnernetzwerk Heizung Schwabing, Team Installateur Bogenhausen, Fachbetriebe Sendling, Team Pasing, Partner Maxvorstadt, Betrieb Haidhausen, Neuhausen"
       />
       <Header />
+      <TrustBar />
       <main>
         {/* Hero Section */}
         <section className="relative pt-8 pb-4 lg:pt-10 lg:pb-6">
