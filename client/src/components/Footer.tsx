@@ -87,7 +87,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
-                <span className="text-background/70">24/7 Notdienst erreichbar</span>
+                <span className="text-background/70">24/7 Online Verfügbar</span>
               </div>
             </div>
           </div>
