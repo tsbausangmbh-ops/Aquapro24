@@ -367,7 +367,7 @@ export default function SanitaerPage() {
               rufen Sie uns an und wir kümmern uns darum. Über 847 zufriedene Kunden in München.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="outline" className="bg-background text-foreground" asChild>
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
                   <Phone className="w-4 h-4 mr-2" />
                   0152 12274043
