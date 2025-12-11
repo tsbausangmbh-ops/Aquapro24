@@ -7,7 +7,7 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import AIChatWidget from "@/components/AIChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import SEO from "@/components/SEO";
 
@@ -43,7 +43,7 @@ export default function Home() {
         <CTABanner />
       </main>
       <Footer />
-      <ChatWidget />
+      <AIChatWidget />
       <CookieBanner />
     </div>
   );

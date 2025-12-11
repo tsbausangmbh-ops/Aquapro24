@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
@@ -365,7 +365,7 @@ export default function HaustechnikPage() {
         </section>
       </main>
       <Footer />
-      <ChatWidget serviceCategory="haustechnik" />
+      <AIChatWidget serviceCategory="haustechnik" />
     </div>
   );
 }

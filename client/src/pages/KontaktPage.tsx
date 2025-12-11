@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -519,7 +519,7 @@ export default function KontaktPage() {
         </section>
       </main>
       <Footer />
-      <ChatWidget />
+      <AIChatWidget />
     </div>
   );
 }

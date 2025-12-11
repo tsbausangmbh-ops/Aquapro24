@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -293,7 +293,7 @@ export default function CookieRichtliniePage() {
         </div>
       </main>
       <Footer />
-      <ChatWidget />
+      <AIChatWidget />
     </div>
   );
 }
