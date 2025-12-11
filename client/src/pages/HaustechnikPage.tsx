@@ -6,7 +6,6 @@ import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { haustechnikStories } from "@/components/CustomerStories";
-import TrustSignals from "@/components/TrustSignals";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -184,8 +183,6 @@ export default function HaustechnikPage() {
             </div>
           </div>
         </section>
-
-        <TrustSignals variant="compact" />
 
         <NLPSection
           problemTitle="Typische Haustechnik-Herausforderungen"

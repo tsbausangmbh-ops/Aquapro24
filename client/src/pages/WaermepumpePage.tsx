@@ -6,7 +6,6 @@ import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { waermepumpeStories } from "@/components/CustomerStories";
-import TrustSignals from "@/components/TrustSignals";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -195,8 +194,6 @@ export default function WaermepumpePage() {
             </div>
           </div>
         </section>
-
-        <TrustSignals variant="compact" />
 
         <NLPSection
           problemTitle="Diese Bedenken hören wir oft"
