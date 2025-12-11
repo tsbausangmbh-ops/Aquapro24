@@ -40,9 +40,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: "E-Mail",
-    primary: "info@kshw-muenchen.de",
+    primary: "info@aquapro24.de",
     secondary: "Antwort innerhalb 24h",
-    action: "mailto:info@kshw-muenchen.de"
+    action: "mailto:info@aquapro24.de"
   },
   {
     icon: MapPin,
@@ -422,8 +422,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <a href="mailto:info@kshw-muenchen.de" className="font-medium hover:text-secondary">
-                          info@kshw-muenchen.de
+                        <a href="mailto:info@aquapro24.de" className="font-medium hover:text-secondary">
+                          info@aquapro24.de
                         </a>
                         <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
                       </div>
@@ -494,7 +494,7 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>info@kshw-muenchen.de</p>
+                        <p>info@aquapro24.de</p>
                         <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
                       </div>
                     </div>

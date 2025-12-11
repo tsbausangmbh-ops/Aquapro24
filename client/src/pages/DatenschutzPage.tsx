@@ -33,7 +33,7 @@ export default function DatenschutzPage() {
               <p className="text-sm text-muted-foreground">
                 Wir nehmen den Schutz Ihrer Daten ernst. Diese Seite erklärt, welche Daten wir erheben, 
                 warum wir das tun und welche Rechte Sie haben. Bei Fragen erreichen Sie uns unter 
-                info@kshw-muenchen.de oder 0152 12274043.
+                info@aquapro24.de oder 0152 12274043.
               </p>
             </CardContent>
           </Card>
@@ -54,14 +54,14 @@ export default function DatenschutzPage() {
                   <Phone className="w-4 h-4" /> 0152 12274043
                 </span>
                 <span className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" /> info@kshw-muenchen.de
+                  <Mail className="w-4 h-4" /> info@aquapro24.de
                 </span>
               </p>
 
               <h3 className="text-lg font-medium mb-2">Datenschutzbeauftragter</h3>
               <p className="text-muted-foreground mb-4">
                 Bei Fragen zum Datenschutz erreichen Sie unseren Datenschutzbeauftragten unter:<br />
-                E-Mail: datenschutz@kshw-muenchen.de
+                E-Mail: datenschutz@aquapro24.de
               </p>
             </section>
 
@@ -350,11 +350,11 @@ export default function DatenschutzPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="mailto:datenschutz@kshw-muenchen.de" 
+                  href="mailto:datenschutz@aquapro24.de" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                 >
                   <Mail className="w-4 h-4" />
-                  datenschutz@kshw-muenchen.de
+                  datenschutz@aquapro24.de
                 </a>
                 <a 
                   href="tel:+4915212274043" 

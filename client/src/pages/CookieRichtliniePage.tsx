@@ -55,7 +55,7 @@ export default function CookieRichtliniePage() {
                 KSHW München GmbH<br />
                 Zielstattstr. 20<br />
                 81379 München<br />
-                E-Mail: info@kshw-muenchen.de<br />
+                E-Mail: info@aquapro24.de<br />
                 Telefon: 0152 12274043
               </p>
             </section>
@@ -278,8 +278,8 @@ export default function CookieRichtliniePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="secondary" asChild>
-                  <a href="mailto:datenschutz@kshw-muenchen.de">
-                    datenschutz@kshw-muenchen.de
+                  <a href="mailto:datenschutz@aquapro24.de">
+                    datenschutz@aquapro24.de
                   </a>
                 </Button>
                 <Button variant="outline" asChild>

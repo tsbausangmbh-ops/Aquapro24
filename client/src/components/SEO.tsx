@@ -52,7 +52,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://kshw-muenchen.de/team.jpg"
   ],
   "telephone": "+49-152-12274043",
-  "email": "info@kshw-muenchen.de",
+  "email": "info@aquapro24.de",
   "foundingDate": "2005",
   "numberOfEmployees": {
     "@type": "QuantitativeValue",

@@ -48,8 +48,8 @@ export default function Impressum() {
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Mail className="w-4 h-4 text-secondary" />
-                    <a href="mailto:info@kshw-muenchen.de" className="hover:text-secondary transition-colors">
-                      info@kshw-muenchen.de
+                    <a href="mailto:info@aquapro24.de" className="hover:text-secondary transition-colors">
+                      info@aquapro24.de
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">

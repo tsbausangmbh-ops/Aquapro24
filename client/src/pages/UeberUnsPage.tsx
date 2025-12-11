@@ -128,7 +128,7 @@ export default function UeberUnsPage() {
                     </a>
                   </Button>
                   <Button size="lg" variant="secondary" asChild>
-                    <a href="mailto:info@kshw-muenchen.de" data-testid="button-email-about">
+                    <a href="mailto:info@aquapro24.de" data-testid="button-email-about">
                       Anfrage senden
                     </a>
                   </Button>
@@ -322,7 +322,7 @@ export default function UeberUnsPage() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground" asChild>
-                <a href="mailto:info@kshw-muenchen.de">
+                <a href="mailto:info@aquapro24.de">
                   Anfrage senden
                 </a>
               </Button>
