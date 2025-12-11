@@ -31,9 +31,9 @@ export default function Home() {
         }}
       />
       <Header />
+      <TrustBar />
       <main>
         <Hero />
-        <TrustBar />
         <ProblemSolution />
         <Services />
         <Pricing />
