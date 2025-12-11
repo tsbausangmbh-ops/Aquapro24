@@ -93,6 +93,10 @@ export default function HaustechnikPage() {
         description="Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Kostenlose Beratung: 0152 12274043"
         canonical="https://aquapro24.de/haustechnik"
         keywords="Haustechnik München, Wasserinstallation Schwabing, Gasinstallation Bogenhausen, Lüftungstechnik Sendling, Smart Home München, Gebäudetechnik Pasing, Haustechnik Maxvorstadt, KWL Haidhausen, Wohnraumlüftung Neuhausen, Haustechnik Trudering, Gasinstallateur Laim, Haustechnik Giesing, Lüftungsanlage Moosach, Smart Home Milbertshofen, kontrollierte Wohnraumlüftung München"
+        breadcrumbs={[
+          { name: "Home", url: "https://aquapro24.de/" },
+          { name: "Haustechnik", url: "https://aquapro24.de/haustechnik" }
+        ]}
         serviceSchema={{
           name: "AquaPro24 Haustechnik München",
           description: "Komplette Haustechnik München: Wasser, Gas, Lüftung, Smart Home aus einer Hand. 500+ Projekte seit 2005, zertifizierte Meisterbetriebe.",

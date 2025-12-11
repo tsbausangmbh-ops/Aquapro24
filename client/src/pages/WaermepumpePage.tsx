@@ -95,6 +95,10 @@ export default function WaermepumpePage() {
         description="Wärmepumpe München: Bis 70% staatliche Förderung (BAFA/KfW), 50% Heizkosten sparen. Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. 320+ Installationen. Kostenlose Beratung: 0152 12274043"
         canonical="https://aquapro24.de/waermepumpe"
         keywords="Wärmepumpe München, Wärmepumpe Förderung 2025, BAFA Förderung Wärmepumpe München, Luft-Wasser-Wärmepumpe Schwabing, Erdwärmepumpe Bogenhausen, Wärmepumpe Altbau Sendling, Heizungstausch Förderung Pasing, Wärmepumpe Maxvorstadt, Wärmepumpe Installation Haidhausen, klimaneutral heizen Neuhausen, Wärmepumpe Trudering, Luftwärmepumpe Laim, Wärmepumpe Giesing, Wärmepumpe Moosach, Wärmepumpe Milbertshofen, Vaillant Wärmepumpe, Viessmann Wärmepumpe München"
+        breadcrumbs={[
+          { name: "Home", url: "https://aquapro24.de/" },
+          { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" }
+        ]}
         serviceSchema={{
           name: "AquaPro24 Wärmepumpen München",
           description: "Wärmepumpen-Installation München: Bis 70% BAFA/KfW-Förderung, Luft-Wasser & Erdwärme, komplette Antragstellung. 320+ erfolgreiche Installationen seit 2005.",

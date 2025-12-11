@@ -93,6 +93,10 @@ export default function HeizungPage() {
         description="Heizung München: Notdienst bei Ausfall, Wartung, Reparatur, Neuinstallation. Alle Marken, 45 Min. vor Ort, Förderberatung bis 70%. 1.200+ Anlagen installiert. Tel: 0152 12274043"
         canonical="https://aquapro24.de/heizung"
         keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung Schwabing, Gasheizung Bogenhausen, Heizung kaputt Sendling, Heizungsinstallation Pasing, Fußbodenheizung Maxvorstadt, Heizungstausch Haidhausen, Heizung Neuhausen, Heizungsmonteur Trudering, Heizung reparieren Laim, Heizungswartung Giesing, Heizung Moosach, Heizungsservice Milbertshofen, Viessmann München, Vaillant München"
+        breadcrumbs={[
+          { name: "Home", url: "https://aquapro24.de/" },
+          { name: "Heizung", url: "https://aquapro24.de/heizung" }
+        ]}
         serviceSchema={{
           name: "AquaPro24 Heizungsservice München",
           description: "Heizungsnotdienst München: 24/7 Reparatur, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus, Wolf.",
