@@ -56,13 +56,13 @@ export default function Footer() {
             <div className="mb-4">
               <img 
                 src={footerLogo} 
-                alt="KSHW München Logo" 
+                alt="AquaPro 24 München Logo" 
                 className="h-12 object-contain"
                 data-testid="img-footer-logo"
               />
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              <a href="https://sanierer.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHW München</a> - Ihr Fachteam für Sanitär, Heizung und Badsanierung seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
+              <a href="https://sanierer.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">AquaPro 24 München</a> - Ihr Fachteam für Sanitär, Heizung und Badsanierung seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
             </p>
           </div>
           
