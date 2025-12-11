@@ -11,9 +11,9 @@ export default function CookieRichtliniePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Cookie-Richtlinie | DSGVO 2025 | KSHW München München"
-        description="Cookie-Richtlinie gemäß DSGVO und ePrivacy. Informationen zu Cookies, deren Verwendung und Ihre Einstellungsmöglichkeiten."
-        canonical="https://kshw-muenchen.de/cookie-richtlinie"
+        title="Cookie-Richtlinie | DSGVO 2025 | AquaPro24 München"
+        description="Cookie-Richtlinie gemäß DSGVO und ePrivacy für AquaPro24 München. Informationen zu Cookies, KI-Chatbot, OpenAI und Ihre Einstellungsmöglichkeiten."
+        canonical="https://aquapro24.de/cookie-richtlinie"
       />
       <Header />
       <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
@@ -23,7 +23,7 @@ export default function CookieRichtliniePage() {
               <Cookie className="w-3 h-3" />
               Cookie-Richtlinie
             </Badge>
-            <Badge variant="outline">Stand: Januar 2025</Badge>
+            <Badge variant="outline">Stand: Dezember 2025</Badge>
           </div>
           
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">Cookie-Richtlinie</h1>
@@ -53,8 +53,10 @@ export default function CookieRichtliniePage() {
               </p>
               <p className="text-muted-foreground mb-4">
                 KSHW München<br />
+                Inhaber: Ali Kemal Kurt<br />
                 Zielstattstr. 20<br />
                 81379 München<br />
+                USt-IdNr: DE356852204<br />
                 E-Mail: info@aquapro24.de<br />
                 Telefon: 0152 12274043
               </p>
@@ -282,7 +284,7 @@ export default function CookieRichtliniePage() {
                 regulatorischen Gründen widerzuspiegeln.
               </p>
               <p className="text-muted-foreground">
-                Die aktuelle Version finden Sie immer auf dieser Seite. Letzte Aktualisierung: Januar 2025.
+                Die aktuelle Version finden Sie immer auf dieser Seite. Letzte Aktualisierung: Dezember 2025.
               </p>
             </section>
 

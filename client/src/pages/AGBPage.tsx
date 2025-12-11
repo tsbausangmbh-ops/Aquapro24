@@ -7,9 +7,9 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AGB | Allgemeine Geschäftsbedingungen | Münchner Heizung & Sanitär"
-        description="Allgemeine Geschäftsbedingungen der Münchner Heizung & Sanitär GmbH für Sanitär-, Heizungs- und Installationsarbeiten."
-        canonical="https://kshw-muenchen.de/agb"
+        title="AGB | Allgemeine Geschäftsbedingungen | AquaPro24 München | KSHW"
+        description="Allgemeine Geschäftsbedingungen von KSHW München (Inhaber: Ali Kemal Kurt) für Sanitär-, Heizungs- und Installationsarbeiten. DSGVO-konform. Tel: 0152 12274043"
+        canonical="https://aquapro24.de/agb"
       />
       <Header />
       <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
@@ -20,11 +20,11 @@ export default function AGBPage() {
             <section>
               <h2 className="text-xl font-semibold mb-4">§ 1 Geltungsbereich</h2>
               <p className="text-muted-foreground mb-4">
-                (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der 
-                Münchner Heizung & Sanitär GmbH (nachfolgend "Auftragnehmer") und dem Kunden 
-                (nachfolgend "Auftraggeber") über Sanitär-, Heizungs- und Installationsarbeiten sowie 
-                damit verbundene Dienstleistungen. Diese AGB gelten sowohl für Privatkunden (Verbraucher) 
-                als auch für Geschäftskunden (B2B).
+                (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
+                KSHW München, Inhaber: Ali Kemal Kurt, Zielstattstr. 20, 81379 München 
+                (nachfolgend "Auftragnehmer") und dem Kunden (nachfolgend "Auftraggeber") über 
+                Sanitär-, Heizungs- und Installationsarbeiten sowie damit verbundene Dienstleistungen. 
+                Diese AGB gelten sowohl für Privatkunden (Verbraucher) als auch für Geschäftskunden (B2B).
               </p>
               <p className="text-muted-foreground mb-4">
                 (2) Abweichende Bedingungen des Auftraggebers werden nicht Vertragsbestandteil, es sei 
@@ -228,7 +228,7 @@ export default function AGBPage() {
                 dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt.
               </p>
               <p className="text-muted-foreground">
-                Stand: 2025
+                Stand: Dezember 2025
               </p>
             </section>
           </div>

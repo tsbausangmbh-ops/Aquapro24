@@ -10,9 +10,9 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutzerklärung | DSGVO 2025 | KSHW München München"
-        description="Datenschutzerklärung gemäß DSGVO 2025. Informationen zur Verarbeitung personenbezogener Daten, Ihre Rechte und Kontaktmöglichkeiten."
-        canonical="https://kshw-muenchen.de/datenschutz"
+        title="Datenschutzerklärung | DSGVO 2025 | AquaPro24 München"
+        description="Datenschutzerklärung gemäß DSGVO 2025 für AquaPro24 München. Informationen zur Verarbeitung personenbezogener Daten, KI-Chatbot, Ihre Rechte. Tel: 0152 12274043"
+        canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
       <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
@@ -22,7 +22,7 @@ export default function DatenschutzPage() {
               <Shield className="w-3 h-3" />
               DSGVO-konform
             </Badge>
-            <Badge variant="outline">Stand: Januar 2025</Badge>
+            <Badge variant="outline">Stand: Dezember 2025</Badge>
           </div>
           
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">Datenschutzerklärung</h1>
@@ -46,9 +46,11 @@ export default function DatenschutzPage() {
               <h3 className="text-lg font-medium mb-2">Verantwortlicher gemäß Art. 4 Abs. 7 DSGVO</h3>
               <p className="text-muted-foreground mb-4">
                 KSHW München<br />
+                Inhaber: Ali Kemal Kurt<br />
                 Zielstattstr. 20<br />
                 81379 München<br />
                 Deutschland<br />
+                USt-IdNr: DE356852204<br />
                 <br />
                 <span className="flex items-center gap-2">
                   <Phone className="w-4 h-4" /> 0152 12274043
@@ -323,10 +325,19 @@ export default function DatenschutzPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">8. Automatisierte Entscheidungsfindung</h2>
+              <h2 className="text-xl font-semibold mb-4">8. Automatisierte Entscheidungsfindung und KI</h2>
               <p className="text-muted-foreground mb-4">
                 Wir setzen keine automatisierte Entscheidungsfindung einschließlich Profiling gemäß 
-                Art. 22 Abs. 1 und 4 DSGVO ein.
+                Art. 22 Abs. 1 und 4 DSGVO ein, die Ihnen gegenüber rechtliche Wirkung entfaltet oder 
+                Sie in ähnlicher Weise erheblich beeinträchtigt.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Hinweis zum KI-Beratungsassistenten:</strong> Unser KI-gestützter Chatbot (basierend 
+                auf OpenAI) dient ausschließlich der unverbindlichen Beratung und Ersteinschätzung. Die 
+                KI trifft keine verbindlichen Entscheidungen über Verträge, Preise oder Leistungen. Alle 
+                vom Chatbot genannten Preise sind unverbindliche Schätzungen (Netto zzgl. 19% MwSt.). 
+                Verbindliche Angebote werden ausschließlich nach persönlicher Vor-Ort-Besichtigung durch 
+                unsere Fachkräfte erstellt.
               </p>
             </section>
 
@@ -341,6 +352,7 @@ export default function DatenschutzPage() {
                 <li><strong>Vertragsdaten:</strong> 10 Jahre (gemäß HGB/AO)</li>
                 <li><strong>Server-Logs:</strong> 7 Tage</li>
                 <li><strong>Buchungsdaten:</strong> 6 Monate nach Terminabschluss</li>
+                <li><strong>KI-Chat-Verläufe:</strong> Werden nicht dauerhaft gespeichert; OpenAI speichert max. 30 Tage</li>
               </ul>
               <p className="text-muted-foreground mb-4">
                 Nach Ablauf der jeweiligen Frist werden die Daten routinemäßig gelöscht.
@@ -359,7 +371,7 @@ export default function DatenschutzPage() {
             <section>
               <h2 className="text-xl font-semibold mb-4">11. Aktualität und Änderungen</h2>
               <p className="text-muted-foreground mb-4">
-                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Januar 2025. 
+                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Dezember 2025. 
                 Durch Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher 
                 Vorgaben kann eine Anpassung dieser Erklärung erforderlich werden.
               </p>
