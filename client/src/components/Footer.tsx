@@ -62,7 +62,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              Ihr Meisterbetrieb für Badsanierung, Wasserinstallation und professionelle Sanitärarbeiten seit 2005.
+              Ihr AquaProfi24-Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005.
             </p>
           </div>
           
