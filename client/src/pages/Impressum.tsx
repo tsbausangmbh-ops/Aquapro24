@@ -93,17 +93,6 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-                <div className="space-y-2 text-muted-foreground">
-                  <p>Berufsbezeichnung: Installateur- und Heizungsbauermeister</p>
-                  <p>Zuständige Kammer: Handwerkskammer für München und Oberbayern</p>
-                  <p>Verliehen in: Deutschland</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Ali Kemal Kurt</p>
