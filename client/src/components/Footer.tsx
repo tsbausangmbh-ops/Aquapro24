@@ -92,7 +92,6 @@ export default function Footer() {
               © {new Date().getFullYear()} Münchner Heizung & Sanitär GmbH. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-6 text-sm text-background/50">
-              <span>Mitglied der HWK München</span>
               <span>Hausmeisterbetriebe seit 2005</span>
             </div>
           </div>
