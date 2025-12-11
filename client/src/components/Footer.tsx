@@ -46,7 +46,7 @@ export default function Footer() {
     <>
       <div className="bg-muted/50 py-3 border-t">
         <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto px-4">
-          Wir arbeiten mit einem Netzwerk an Meisterbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
+          Wir arbeiten mit einem Netzwerk an geprüften Meisterbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
         </p>
       </div>
       <footer className="bg-foreground text-background">
