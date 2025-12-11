@@ -129,10 +129,10 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="FAQ & Preise | Häufige Fragen | Sanitär & Heizung München"
-        description="Alle Antworten zu Preisen, Leistungen und Service. Transparente Preisliste für Sanitär, Badsanierung, Heizung und Wärmepumpe. Festpreisgarantie."
+        title="FAQ & Preise 2024/2025 | Sanitär, Heizung, Badsanierung München | Transparente Kosten"
+        description="Transparente Preisliste für Sanitär, Heizung und Badsanierung in München. Wasserhahn ab 89€, Heizungswartung ab 149€, Badsanierung ab 8.900€. Festpreisgarantie ohne versteckte Kosten."
         canonical="https://aquapro24.de/faq"
-        keywords="FAQ Sanitär München, Preise Heizung, Kosten Badsanierung, Wärmepumpe Förderung, Sanitär Preisliste"
+        keywords="FAQ Sanitär München, Preise Heizung Schwabing, Kosten Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Preisliste Sendling, Klempner Pasing, Preise Maxvorstadt, FAQ Haidhausen, Kosten Neuhausen"
       />
       <Header />
       <main>

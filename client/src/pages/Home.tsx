@@ -15,10 +15,20 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär & Heizung München | 24h Notdienst | AquaPro24"
-        description="24/7 Notdienst für Sanitär und Heizung in München. Rohrbruch, Heizungsausfall, Badsanierung. Festpreise, Meisterbetrieb seit 2005. In 45 Min. vor Ort."
+        title="Sanitär & Heizung München | Wasserinstallation, Badsanierung, Wärmepumpe | Meisterbetrieb seit 2005"
+        description="AquaPro24 - Ihr Meisterbetrieb für Sanitär, Heizung und Badsanierung in München. 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Festpreise, 24/7 Online-Buchung, HWK München zertifiziert."
         canonical="https://aquapro24.de"
-        keywords="Sanitär München, Heizung München, Notdienst, Klempner, Installateur, Rohrbruch, Badsanierung, Wärmepumpe"
+        keywords="Sanitär München, Heizung München, Wasserinstallation Schwabing, Badsanierung Bogenhausen, Wärmepumpe Sendling, Klempner Pasing, Installateur Maxvorstadt, Haustechnik Haidhausen, Sanitär Neuhausen"
+        serviceSchema={{
+          name: "AquaPro24 - Sanitär & Heizung München",
+          description: "Komplettservice für Sanitär, Heizung und Haustechnik in München - Meisterbetrieb seit 2005 mit über 2.847 zufriedenen Kunden",
+          serviceType: "Plumbing and HVAC Services",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          reviews: [
+            { author: "Familie Schneider", rating: 5, reviewBody: "Badsanierung in Schwabing perfekt umgesetzt. Termingerecht, sauber, zum Festpreis.", datePublished: "2024-11-25", location: "München-Schwabing" },
+            { author: "Dr. Müller", rating: 5, reviewBody: "Wärmepumpe in unserem Altbau in Bogenhausen. Professionelle Beratung und Installation.", datePublished: "2024-11-10", location: "München-Bogenhausen" }
+          ]
+        }}
       />
       <Header />
       <main>

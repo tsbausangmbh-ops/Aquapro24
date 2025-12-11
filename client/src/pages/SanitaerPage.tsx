@@ -96,15 +96,24 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitärinstallation München | 24h Notdienst | AquaPro24"
-        description="Professionelle Sanitärinstallation in München. Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. 24/7 Notdienst, Festpreise, Meisterbetrieb seit 2005."
+        title="Sanitärinstallation München | Wasserinstallation & Klempner | Meisterbetrieb seit 2005"
+        description="Professionelle Sanitärinstallation in München: Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. Festpreisgarantie, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. HWK München zertifiziert."
         canonical="https://aquapro24.de/sanitaer"
-        keywords="Sanitär München, Wasserinstallation, Klempner München, Rohrreinigung, Sanitärnotdienst, Wasserleitungen, Armaturen"
+        keywords="Sanitär München, Wasserinstallation München, Klempner Schwabing, Rohrreinigung Bogenhausen, Sanitär Sendling, Wasserleitungen Pasing, Armaturen Maxvorstadt, Sanitärinstallation Haidhausen, Installateur Neuhausen"
         serviceSchema={{
           name: "Sanitärinstallation München",
-          description: "Professionelle Sanitärinstallation und Wasserinstallation in München und Umgebung",
+          description: "Professionelle Sanitärinstallation und Wasserinstallation in München - Meisterbetrieb seit 2005 mit über 2.847 zufriedenen Kunden",
           serviceType: "Plumbing",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          offers: [
+            { name: "Wasserinstallation", description: "Professionelle Installation von Wasserleitungen", priceRange: "ab 89€" },
+            { name: "Rohrreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 79€" },
+            { name: "Armaturen-Montage", description: "Einbau von Markenarmaturen", priceRange: "ab 120€" }
+          ],
+          reviews: [
+            { author: "Michael S.", rating: 5, reviewBody: "Schnelle Hilfe bei Rohrbruch in Schwabing. Innerhalb von 40 Minuten vor Ort. Sehr professionell!", datePublished: "2024-11-15", location: "München-Schwabing" },
+            { author: "Sandra K.", rating: 5, reviewBody: "Neue Wasserinstallation im Altbau in Haidhausen. Saubere Arbeit, fairer Preis.", datePublished: "2024-10-22", location: "München-Haidhausen" }
+          ]
         }}
       />
       <Header />

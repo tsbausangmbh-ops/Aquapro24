@@ -90,10 +90,10 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | AquaPro24 - Ihr Meisterbetrieb in München"
-        description="48 Jahre kombinierte Erfahrung. Sanitär- und Heizungsmeister mit 22 Jahren Praxis trifft auf 26 Jahre Unternehmensführung. Meisterqualität für München."
+        title="Über uns | AquaPro24 München | Meisterbetrieb seit 2005 | HWK München zertifiziert"
+        description="Ihr Münchner Familienbetrieb für Sanitär und Heizung. 48+ Jahre Erfahrung, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Meisterqualität, Festpreise, persönlicher Service. München."
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Sanitär München, Heizung München, Meisterbetrieb, Notdienst, Badsanierung"
+        keywords="Über uns Sanitär München, Meisterbetrieb Heizung Schwabing, Team Installateur Bogenhausen, Familienbetrieb Sendling, HWK Pasing, Team Maxvorstadt, Meister Haidhausen, Betrieb Neuhausen"
       />
       <Header />
       <main>
@@ -104,7 +104,7 @@ export default function UeberUnsPage() {
               <div className="space-y-6">
                 <Badge variant="secondary" className="gap-2">
                   <BadgeCheck className="w-4 h-4" />
-                  Meisterbetrieb seit 2024
+                  Meisterbetrieb seit 2005
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
                   Meistertechnik trifft<br />

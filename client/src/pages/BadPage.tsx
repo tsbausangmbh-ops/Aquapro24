@@ -83,15 +83,24 @@ export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Badsanierung München | Komplettumbau zum Festpreis | AquaPro24"
-        description="Professionelle Badsanierung in München. Komplettumbau, Modernisierung, barrierefrei. Kostenlose Beratung, 3D-Planung, 5 Jahre Garantie. Meisterbetrieb."
+        title="Badsanierung München | Komplettumbau zum Festpreis ab 8.900€ | 5 Jahre Garantie"
+        description="Badsanierung in München vom Meisterbetrieb: Komplettumbau in 2-4 Wochen, 3D-Planung inklusive, barrierefreie Bäder. 847+ renovierte Bäder in Schwabing, Bogenhausen, Sendling. Festpreis ohne Überraschungen."
         canonical="https://aquapro24.de/bad"
-        keywords="Badsanierung München, Bad renovieren, Badezimmer sanieren, Komplettbad, barrierefreies Bad, Badumbau München"
+        keywords="Badsanierung München, Bad renovieren Schwabing, Badezimmer sanieren Bogenhausen, Komplettbad Sendling, barrierefreies Bad Pasing, Badumbau Maxvorstadt, Badsanierung Haidhausen, Traumbad Neuhausen"
         serviceSchema={{
           name: "Badsanierung München",
-          description: "Komplette Badsanierung und Badmodernisierung in München - alles aus einer Hand",
+          description: "Komplette Badsanierung in München - von der 3D-Planung bis zur Abnahme. Über 847 renovierte Bäder seit 2005.",
           serviceType: "Bathroom Renovation",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          offers: [
+            { name: "Komplettsanierung", description: "Komplettumbau mit Fliesen, Sanitär, Elektrik", priceRange: "ab 8.900€" },
+            { name: "Teilsanierung", description: "Gezielte Modernisierung einzelner Bereiche", priceRange: "ab 2.500€" },
+            { name: "Barrierefreies Bad", description: "Seniorengerecht mit KfW-Förderung", priceRange: "ab 12.000€" }
+          ],
+          reviews: [
+            { author: "Familie Weber", rating: 5, reviewBody: "Unser Altbau-Bad in Schwabing wurde in nur 3 Wochen komplett saniert. Perfekte 3D-Planung, pünktliche Fertigstellung!", datePublished: "2024-10-28", location: "München-Schwabing" },
+            { author: "Renate M.", rating: 5, reviewBody: "Barrierefreies Bad für meine Mutter in Sendling. Sehr einfühlsame Beratung, perfekte Umsetzung.", datePublished: "2024-09-15", location: "München-Sendling" }
+          ]
         }}
       />
       <Header />

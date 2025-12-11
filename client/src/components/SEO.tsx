@@ -1,5 +1,19 @@
 import { useEffect } from "react";
 
+interface ReviewSchema {
+  author: string;
+  rating: number;
+  reviewBody: string;
+  datePublished: string;
+  location?: string;
+}
+
+interface OfferSchema {
+  name: string;
+  description: string;
+  priceRange: string;
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -12,6 +26,8 @@ interface SEOProps {
     description: string;
     serviceType: string;
     areaServed: string[];
+    offers?: OfferSchema[];
+    reviews?: ReviewSchema[];
   };
 }
 
@@ -185,7 +201,7 @@ export default function SEO({
     document.head.appendChild(localBusinessScript);
 
     if (serviceSchema) {
-      const serviceSchemaData = {
+      const serviceSchemaData: Record<string, unknown> = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": serviceSchema.name,
@@ -193,18 +209,66 @@ export default function SEO({
         "serviceType": serviceSchema.serviceType,
         "provider": {
           "@type": "Plumber",
-          "name": "AquaPro24 - Sanitär & Heizung München"
+          "name": "AquaPro24 - Sanitär & Heizung München",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "München",
+            "addressRegion": "Bayern",
+            "addressCountry": "DE"
+          }
         },
         "areaServed": serviceSchema.areaServed.map(area => ({
-          "@type": "City",
+          "@type": area === "München" ? "City" : "AdministrativeArea",
           "name": area
         })),
         "availableChannel": {
           "@type": "ServiceChannel",
           "servicePhone": "+49-89-123456789",
+          "serviceUrl": "https://aquapro24.de",
           "availableLanguage": "German"
+        },
+        "termsOfService": "https://aquapro24.de/agb",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
         }
       };
+
+      if (serviceSchema.offers && serviceSchema.offers.length > 0) {
+        serviceSchemaData["offers"] = serviceSchema.offers.map(offer => {
+          const numericPrice = parseFloat(offer.priceRange.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
+          return {
+            "@type": "Offer",
+            "name": offer.name,
+            "description": `${offer.description} - ${offer.priceRange}`,
+            "priceCurrency": "EUR",
+            "price": numericPrice,
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock"
+          };
+        });
+      }
+
+      if (serviceSchema.reviews && serviceSchema.reviews.length > 0) {
+        serviceSchemaData["review"] = serviceSchema.reviews.map(review => ({
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": review.author
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": review.rating,
+            "bestRating": 5
+          },
+          "reviewBody": review.reviewBody,
+          "datePublished": review.datePublished,
+          ...(review.location && { "locationCreated": { "@type": "Place", "name": review.location } })
+        }));
+      }
+
       const serviceScript = document.createElement("script");
       serviceScript.type = "application/ld+json";
       serviceScript.textContent = JSON.stringify(serviceSchemaData);

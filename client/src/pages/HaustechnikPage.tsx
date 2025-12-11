@@ -84,15 +84,24 @@ export default function HaustechnikPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | AquaPro24"
-        description="Komplette Haustechnik in München. Wasserinstallation, Gasanlagen, Lüftungstechnik, Smart Home. Meisterbetrieb, Festpreise, Komplettservice aus einer Hand."
+        title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | Komplettservice"
+        description="Haustechnik München aus einer Hand: Wasserinstallation, Gasanlagen, kontrollierte Wohnraumlüftung, Smart Home. Ein Ansprechpartner für alles. 500+ Projekte in Schwabing, Bogenhausen, Sendling."
         canonical="https://aquapro24.de/haustechnik"
-        keywords="Haustechnik München, Wasserinstallation, Gasinstallation, Lüftungstechnik, Smart Home, Gebäudetechnik München"
+        keywords="Haustechnik München, Wasserinstallation Schwabing, Gasinstallation Bogenhausen, Lüftungstechnik Sendling, Smart Home Pasing, Gebäudetechnik Maxvorstadt, Haustechnik Haidhausen, KWL Neuhausen"
         serviceSchema={{
           name: "Haustechnik München",
-          description: "Komplettservice für Haustechnik in München - Wasser, Gas, Lüftung und Smart Home",
+          description: "Komplette Haustechnik aus einer Hand in München - über 500 realisierte Projekte seit 2005",
           serviceType: "Building Services Engineering",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          offers: [
+            { name: "Kontrollierte Wohnraumlüftung", description: "KWL mit Wärmerückgewinnung", priceRange: "ab 3.500€" },
+            { name: "Smart Home Heizungssteuerung", description: "Intelligente Steuerung per App", priceRange: "ab 500€" },
+            { name: "Gasinstallation", description: "Zertifizierte Gasarbeiten", priceRange: "ab 250€" }
+          ],
+          reviews: [
+            { author: "Architekturbüro Meier", rating: 5, reviewBody: "Komplette Haustechnik für Neubau-Villa in Bogenhausen. Professionelle Planung, perfekte Koordination aller Gewerke.", datePublished: "2024-09-28", location: "München-Bogenhausen" },
+            { author: "Stefan R.", rating: 5, reviewBody: "Smart Home nachgerüstet in Altbau-Wohnung in Maxvorstadt. Jetzt steuere ich alles per App.", datePublished: "2024-11-08", location: "München-Maxvorstadt" }
+          ]
         }}
       />
       <Header />

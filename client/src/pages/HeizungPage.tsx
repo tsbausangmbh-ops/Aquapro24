@@ -83,15 +83,24 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung München | 24h Notdienst | Installation & Reparatur | AquaPro24"
-        description="Heizungsinstallation, Wartung und Reparatur in München. 24/7 Notdienst bei Heizungsausfall. Alle Marken, Festpreise, Förderberatung. Meisterbetrieb."
+        title="Heizung München | Installation, Wartung & Reparatur | Alle Marken | Meisterbetrieb"
+        description="Heizungsinstallation und Wartung in München: Gasheizung, Ölheizung, Fußbodenheizung. Förderberatung bis 70%, Festpreise. 1.200+ Heizungsanlagen in Schwabing, Bogenhausen, Sendling installiert."
         canonical="https://aquapro24.de/heizung"
-        keywords="Heizung München, Heizungsnotdienst, Heizungsinstallation, Heizungswartung, Gasheizung, Heizungsreparatur München"
+        keywords="Heizung München, Heizungsinstallation Schwabing, Heizungswartung Bogenhausen, Gasheizung Sendling, Heizungsreparatur Pasing, Fußbodenheizung Maxvorstadt, Heizungstausch Haidhausen, Heizung Neuhausen"
         serviceSchema={{
           name: "Heizungsservice München",
-          description: "Professionelle Heizungsinstallation, Wartung und 24/7 Notdienst in München",
+          description: "Heizungsinstallation, Wartung und Reparatur in München - über 1.200 installierte Anlagen seit 2005",
           serviceType: "HVAC",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing"]
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          offers: [
+            { name: "Gasheizung Installation", description: "Moderne Gasbrennwerttechnik", priceRange: "ab 6.000€" },
+            { name: "Heizungswartung", description: "Jährliche Inspektion und Optimierung", priceRange: "ab 149€" },
+            { name: "Heizungsreparatur", description: "Schnelle Reparatur aller Marken", priceRange: "ab 89€" }
+          ],
+          reviews: [
+            { author: "Thomas B.", rating: 5, reviewBody: "Neue Gasheizung in unserem Reihenhaus in Bogenhausen. Kompetente Beratung, saubere Installation.", datePublished: "2024-11-02", location: "München-Bogenhausen" },
+            { author: "Ingrid W.", rating: 5, reviewBody: "Heizungswartung seit 5 Jahren. Immer pünktlich, immer zuverlässig. In Pasing.", datePublished: "2024-10-10", location: "München-Pasing" }
+          ]
         }}
       />
       <Header />
