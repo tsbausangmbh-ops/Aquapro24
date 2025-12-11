@@ -58,7 +58,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-background/70 mb-6 max-w-xs">
-              Ihr Meisterbetrieb für Badsanierung, Wasserinstallation und professionelle Sanitärarbeiten seit 1985.
+              Ihr Meisterbetrieb für Badsanierung, Wasserinstallation und professionelle Sanitärarbeiten seit 2005.
             </p>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">

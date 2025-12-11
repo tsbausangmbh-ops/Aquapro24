@@ -4,7 +4,7 @@ const trustItems = [
   {
     icon: Award,
     title: "Meisterbetrieb",
-    subtitle: "Seit 1985",
+    subtitle: "Seit 2005",
   },
   {
     icon: Clock,

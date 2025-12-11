@@ -26,7 +26,7 @@ export default function TrustSignals({
       icon: Award,
       title: "Meisterbetrieb",
       detail: "Zertifizierte Handwerksqualität",
-      value: "Seit 1985"
+      value: "Seit 2005"
     },
     {
       icon: Users,

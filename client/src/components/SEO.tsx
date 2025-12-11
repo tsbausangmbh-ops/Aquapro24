@@ -20,7 +20,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@type": "Plumber",
   "name": "AquaPro24 - Sanitär & Heizung München",
   "alternateName": "AquaPro24",
-  "description": "24/7 Notdienst für Sanitär, Heizung und Wasserinstallation in München. Meisterbetrieb seit 1985.",
+  "description": "24/7 Notdienst für Sanitär, Heizung und Wasserinstallation in München. Meisterbetrieb seit 2005.",
   "url": "https://aquapro24.de",
   "telephone": "+49-89-123456789",
   "email": "info@sanitaer-muenchen.de",

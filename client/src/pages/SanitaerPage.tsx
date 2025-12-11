@@ -97,7 +97,7 @@ export default function SanitaerPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Sanitärinstallation München | 24h Notdienst | AquaPro24"
-        description="Professionelle Sanitärinstallation in München. Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. 24/7 Notdienst, Festpreise, Meisterbetrieb seit 1985."
+        description="Professionelle Sanitärinstallation in München. Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. 24/7 Notdienst, Festpreise, Meisterbetrieb seit 2005."
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Wasserinstallation, Klempner München, Rohrreinigung, Sanitärnotdienst, Wasserleitungen, Armaturen"
         serviceSchema={{
