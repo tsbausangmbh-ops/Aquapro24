@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/FAQ";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { waermepumpeStories } from "@/components/CustomerStories";
@@ -331,10 +331,9 @@ export default function WaermepumpePage() {
           highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
         />
 
-        <FAQ 
+        <ColorfulFAQ 
           items={faqItems}
           title="Häufige Fragen zu Wärmepumpen"
-          subtitle="Alles, was Sie über Wärmepumpen in München wissen sollten"
         />
 
         <section className="pt-8 pb-4">

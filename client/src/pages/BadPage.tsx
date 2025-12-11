@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/FAQ";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { badStories } from "@/components/CustomerStories";
@@ -301,10 +301,9 @@ export default function BadPage() {
           highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
         />
 
-        <FAQ 
+        <ColorfulFAQ 
           items={faqItems}
           title="Häufige Fragen zur Badsanierung"
-          subtitle="Alles, was Sie über Badsanierung in München wissen müssen"
         />
 
         <section className="pt-8 pb-4 bg-muted/30">

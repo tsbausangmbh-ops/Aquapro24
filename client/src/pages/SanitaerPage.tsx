@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/FAQ";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
@@ -347,10 +347,9 @@ export default function SanitaerPage() {
           highlightAreas={["Schwabing", "Maxvorstadt", "Haidhausen"]}
         />
 
-        <FAQ 
+        <ColorfulFAQ 
           items={faqItems}
           title="Häufige Fragen zur Sanitärinstallation"
-          subtitle="Hier finden Sie Antworten auf die wichtigsten Fragen unserer Kunden in München"
         />
 
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">

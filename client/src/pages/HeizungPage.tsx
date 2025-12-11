@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/FAQ";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { heizungStories } from "@/components/CustomerStories";
@@ -296,10 +296,9 @@ export default function HeizungPage() {
           highlightAreas={["Pasing", "Laim", "Neuhausen"]}
         />
 
-        <FAQ 
+        <ColorfulFAQ 
           items={faqItems}
           title="Häufige Fragen zum Heizungsservice"
-          subtitle="Antworten auf die wichtigsten Heizungsfragen unserer Münchner Kunden"
         />
 
         <section className="pt-8 pb-4 bg-muted/30">

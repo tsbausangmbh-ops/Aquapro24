@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/FAQ";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { haustechnikStories } from "@/components/CustomerStories";
@@ -327,10 +327,9 @@ export default function HaustechnikPage() {
           highlightAreas={["Maxvorstadt", "Schwabing", "Neuhausen"]}
         />
 
-        <FAQ 
+        <ColorfulFAQ 
           items={faqItems}
           title="Häufige Fragen zur Haustechnik"
-          subtitle="Antworten auf die wichtigsten Fragen unserer Münchner Kunden"
         />
 
         <section className="pt-8 pb-4">
