@@ -104,7 +104,7 @@ export default function SanitaerPage() {
       <SEO 
         title="Sanitärinstallation München | Wasserinstallation & Klempner | Partnernetzwerk seit 2005"
         description="Professionelle Sanitärinstallation in München: Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. Festpreisgarantie, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Geprüfte Partnerbetriebe."
-        canonical="https://aquapro24.de/sanitaer"
+        canonical="https://kshw-muenchen.de/sanitaer"
         keywords="Sanitär München, Wasserinstallation München, Klempner Schwabing, Rohrreinigung Bogenhausen, Sanitär Sendling, Wasserleitungen Pasing, Armaturen Maxvorstadt, Sanitärinstallation Haidhausen, Installateur Neuhausen"
         serviceSchema={{
           name: "Sanitärinstallation München",
@@ -148,7 +148,7 @@ export default function SanitaerPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789" data-testid="button-call-sanitaer">
+                    <a href="tel:+4915212274043" data-testid="button-call-sanitaer">
                       <Phone className="w-4 h-4 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -370,7 +370,7 @@ export default function SanitaerPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="outline" className="bg-background text-foreground" asChild>
-                <a href="tel:+4989123456789" data-testid="button-call-sanitaer-cta">
+                <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
                   <Phone className="w-4 h-4 mr-2" />
                   089 123 456 789
                 </a>

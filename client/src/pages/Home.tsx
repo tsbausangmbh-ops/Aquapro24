@@ -16,11 +16,11 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Sanitär & Heizung München | Wasserinstallation, Badsanierung, Wärmepumpe | Partnernetzwerk seit 2005"
-        description="AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Festpreise, 24/7 Online-Buchung, geprüfte Partnerbetriebe."
-        canonical="https://aquapro24.de"
+        description="KSHW München - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Festpreise, 24/7 Online-Buchung, geprüfte Partnerbetriebe."
+        canonical="https://kshw-muenchen.de"
         keywords="Sanitär München, Heizung München, Wasserinstallation Schwabing, Badsanierung Bogenhausen, Wärmepumpe Sendling, Klempner Pasing, Installateur Maxvorstadt, Haustechnik Haidhausen, Sanitär Neuhausen"
         serviceSchema={{
-          name: "AquaPro24 - Sanitär & Heizung München",
+          name: "KSHW München - Sanitär & Heizung München",
           description: "Komplettservice für Sanitär, Heizung und Haustechnik in München - Partnernetzwerk seit 2005 mit über 2.847 zufriedenen Kunden",
           serviceType: "Plumbing and HVAC Services",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],

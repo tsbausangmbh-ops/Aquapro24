@@ -56,13 +56,13 @@ export default function Footer() {
             <div className="mb-4">
               <img 
                 src={footerLogo} 
-                alt="AquaPro24 Logo" 
+                alt="KSHW München Logo" 
                 className="h-12 object-contain"
                 data-testid="img-footer-logo"
               />
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              Ihr AquaProfi24-Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
+              KSHW München - Ihr Fachteam für Sanitär, Heizung und Badsanierung seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
             </p>
           </div>
           
@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="border-t border-background/10 mt-3 pt-2">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/50">
-              © {new Date().getFullYear()} AquaProfi 24. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} KSHW München. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-6 text-sm text-background/50">
               <span>Partnernetzwerk seit 2005</span>

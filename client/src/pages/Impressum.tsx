@@ -27,9 +27,10 @@ export default function Impressum() {
               <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="text-foreground font-medium">Münchner Sanitär & Wasserinstallation GmbH</p>
-                  <p>Musterstraße 123</p>
-                  <p>80333 München</p>
+                  <p className="text-foreground font-medium">KSHW München</p>
+                  <p>Inhaber: Ali Kemal Kurt</p>
+                  <p>Zielstattstr. 20</p>
+                  <p>81379 München</p>
                   <p>Deutschland</p>
                 </div>
               </CardContent>
@@ -41,19 +42,19 @@ export default function Impressum() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-4 h-4 text-secondary" />
-                    <a href="tel:+4989123456789" className="hover:text-secondary transition-colors">
-                      089 123 456 789
+                    <a href="tel:+4915212274043" className="hover:text-secondary transition-colors">
+                      0152 12274043
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Mail className="w-4 h-4 text-secondary" />
-                    <a href="mailto:info@muenchner-sanitaer.de" className="hover:text-secondary transition-colors">
-                      info@muenchner-sanitaer.de
+                    <a href="mailto:info@kshw-muenchen.de" className="hover:text-secondary transition-colors">
+                      info@kshw-muenchen.de
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="w-4 h-4 text-secondary" />
-                    <span>Musterstraße 123, 80333 München</span>
+                    <span>Zielstattstr. 20, 81379 München</span>
                   </div>
                 </div>
               </CardContent>
@@ -61,20 +62,10 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Vertreten durch</h2>
+                <h2 className="text-xl font-semibold mb-4">Unternehmensform</h2>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Geschäftsführer: Max Mustermann</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Registereintrag</h2>
-                <div className="space-y-2 text-muted-foreground">
-                  <p>Eintragung im Handelsregister</p>
-                  <p>Registergericht: Amtsgericht München</p>
-                  <p>Registernummer: HRB 123456</p>
+                  <p>Einzelunternehmer</p>
+                  <p>Inhaber: Ali Kemal Kurt</p>
                 </div>
               </CardContent>
             </Card>
@@ -84,7 +75,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-semibold mb-4">Umsatzsteuer-ID</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
-                  <p className="text-foreground font-medium">DE 123 456 789</p>
+                  <p className="text-foreground font-medium">DE356852204</p>
                 </div>
               </CardContent>
             </Card>
@@ -104,9 +95,9 @@ export default function Impressum() {
               <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Max Mustermann</p>
-                  <p>Musterstraße 123</p>
-                  <p>80333 München</p>
+                  <p>Ali Kemal Kurt</p>
+                  <p>Zielstattstr. 20</p>
+                  <p>81379 München</p>
                 </div>
               </CardContent>
             </Card>

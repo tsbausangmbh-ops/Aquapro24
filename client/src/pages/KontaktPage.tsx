@@ -35,7 +35,7 @@ const contactInfo = [
     title: "Telefon",
     primary: "089 123 456 789",
     secondary: "24/7 Notdienst erreichbar",
-    action: "tel:+4989123456789"
+    action: "tel:+4915212274043"
   },
   {
     icon: Mail,
@@ -114,9 +114,9 @@ export default function KontaktPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Kontakt | AquaPro24 - Sanitär & Heizung München"
+        title="Kontakt | KSHW München - Sanitär & Heizung München"
         description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 089 123 456 789. Kostenlose Beratung, schnelle Termine."
-        canonical="https://aquapro24.de/kontakt"
+        canonical="https://kshw-muenchen.de/kontakt"
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst, Badsanierung München Beratung"
       />
       <Header />
@@ -318,7 +318,7 @@ export default function KontaktPage() {
                             Bei Rohrbruch, Wasserschaden oder Heizungsausfall erreichen Sie uns rund um die Uhr.
                           </p>
                           <Button className="bg-accent text-accent-foreground" asChild>
-                            <a href="tel:+4989123456789" data-testid="button-emergency-call">
+                            <a href="tel:+4915212274043" data-testid="button-emergency-call">
                               <Phone className="w-4 h-4 mr-2" />
                               089 123 456 789
                             </a>
@@ -393,14 +393,14 @@ export default function KontaktPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Standort AquaPro24 München"
+                    title="Standort KSHW München München"
                     className="w-full"
                   />
                 </CardContent>
               </Card>
               <div className="flex flex-col justify-center space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">AquaPro24 GmbH</h3>
+                  <h3 className="text-xl font-semibold mb-4">KSHW München GmbH</h3>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -413,7 +413,7 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <a href="tel:+4989123456789" className="font-medium hover:text-secondary">
+                        <a href="tel:+4915212274043" className="font-medium hover:text-secondary">
                           089 123 456 789
                         </a>
                         <p className="text-sm text-muted-foreground">24/7 Notdienst</p>
@@ -471,7 +471,7 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Building className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p className="font-semibold">AquaPro24 GmbH</p>
+                        <p className="font-semibold">KSHW München GmbH</p>
                         <p className="text-sm text-muted-foreground">Sanitär & Heizung München</p>
                       </div>
                     </div>

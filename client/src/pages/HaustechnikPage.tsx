@@ -92,7 +92,7 @@ export default function HaustechnikPage() {
       <SEO 
         title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | Komplettservice"
         description="Haustechnik München aus einer Hand: Wasserinstallation, Gasanlagen, kontrollierte Wohnraumlüftung, Smart Home. Ein Ansprechpartner für alles. 500+ Projekte in Schwabing, Bogenhausen, Sendling."
-        canonical="https://aquapro24.de/haustechnik"
+        canonical="https://kshw-muenchen.de/haustechnik"
         keywords="Haustechnik München, Wasserinstallation Schwabing, Gasinstallation Bogenhausen, Lüftungstechnik Sendling, Smart Home Pasing, Gebäudetechnik Maxvorstadt, Haustechnik Haidhausen, KWL Neuhausen"
         serviceSchema={{
           name: "Haustechnik München",
@@ -134,7 +134,7 @@ export default function HaustechnikPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789" data-testid="button-call-haustechnik">
+                    <a href="tel:+4915212274043" data-testid="button-call-haustechnik">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt anfragen
                     </a>
@@ -196,7 +196,7 @@ export default function HaustechnikPage() {
             "Unterschiedliche Termine und Wartezeiten",
             "Keine ganzheitliche Beratung zur Energieeffizienz"
           ]}
-          solutionTitle="Der AquaPro24 Komplettservice"
+          solutionTitle="Der KSHW München Komplettservice"
           solutions={[
             "Ein Ansprechpartner für alle Haustechnik-Gewerke",
             "Koordinierte Planung und Ausführung aus einer Hand",
@@ -350,7 +350,7 @@ export default function HaustechnikPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789" data-testid="button-call-haustechnik-cta">
+                  <a href="tel:+4915212274043" data-testid="button-call-haustechnik-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

@@ -94,7 +94,7 @@ export default function WaermepumpePage() {
       <SEO 
         title="Wärmepumpe München | Bis 70% Förderung 2024/2025 | Luft-Wasser & Erdwärme"
         description="Wärmepumpe in München: Bis 70% staatliche Förderung, 50% Heizkosten sparen. Luft-Wasser-Wärmepumpe ab 15.000€. 320+ Installationen in Schwabing, Bogenhausen, Sendling. Zertifizierter Fachbetrieb."
-        canonical="https://aquapro24.de/waermepumpe"
+        canonical="https://kshw-muenchen.de/waermepumpe"
         keywords="Wärmepumpe München, Luft-Wasser-Wärmepumpe Schwabing, Erdwärmepumpe Bogenhausen, Wärmepumpe Förderung Bayern, Heizungstausch Sendling, Wärmepumpe Pasing, klimaneutral Maxvorstadt, Wärmepumpe Haidhausen, Heizungstausch Neuhausen"
         serviceSchema={{
           name: "Wärmepumpen-Installation München",
@@ -107,7 +107,7 @@ export default function WaermepumpePage() {
             { name: "Hybrid-System", description: "Wärmepumpe mit Gas-Backup", priceRange: "ab 18.000€" }
           ],
           reviews: [
-            { author: "Dr. Martin S.", rating: 5, reviewBody: "Wärmepumpe im Altbau in Schwabing - alle sagten unmöglich. AquaPro24 hat es geschafft. 60% weniger Heizkosten!", datePublished: "2024-11-20", location: "München-Schwabing" },
+            { author: "Dr. Martin S.", rating: 5, reviewBody: "Wärmepumpe im Altbau in Schwabing - alle sagten unmöglich. KSHW München hat es geschafft. 60% weniger Heizkosten!", datePublished: "2024-11-20", location: "München-Schwabing" },
             { author: "Familie Huber", rating: 5, reviewBody: "Von der Beratung bis zur Förderantrag-Abwicklung alles perfekt. Jetzt heizen wir klimaneutral in Bogenhausen.", datePublished: "2024-10-05", location: "München-Bogenhausen" }
           ]
         }}
@@ -137,7 +137,7 @@ export default function WaermepumpePage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789" data-testid="button-call-waermepumpe">
+                    <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
                       <Phone className="w-5 h-5 mr-2" />
                       Kostenlose Beratung
                     </a>
@@ -215,7 +215,7 @@ export default function WaermepumpePage() {
             "Komplette Abwicklung von Planung bis Inbetriebnahme",
             "5 Jahre Gewährleistung und optionale Wartungsverträge"
           ]}
-          futureState="...Ihre neue Wärmepumpe läuft leise im Garten, Sie heizen klimaneutral und Ihre Heizkosten sind um die Hälfte gesunken. Jeden Monat sparen Sie Geld und tun etwas für die Umwelt. Mit AquaPro24 wird diese Vision Realität."
+          futureState="...Ihre neue Wärmepumpe läuft leise im Garten, Sie heizen klimaneutral und Ihre Heizkosten sind um die Hälfte gesunken. Jeden Monat sparen Sie Geld und tun etwas für die Umwelt. Mit KSHW München wird diese Vision Realität."
           authorityText="Über 200 Wärmepumpen in München installiert - zertifizierter Fachbetrieb"
           urgencyText="Förderung sichern: BAFA-Antrag vor Heizungstausch nötig!"
           transformationSteps={[
@@ -363,7 +363,7 @@ export default function WaermepumpePage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789" data-testid="button-call-waermepumpe-cta">
+                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

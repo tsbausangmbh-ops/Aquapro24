@@ -91,7 +91,7 @@ export default function BadPage() {
       <SEO 
         title="Badsanierung München | Komplettumbau zum Festpreis ab 8.900€ | 5 Jahre Garantie"
         description="Badsanierung in München vom Partnernetzwerk: Komplettumbau in 2-4 Wochen, 3D-Planung inklusive, barrierefreie Bäder. 847+ renovierte Bäder in Schwabing, Bogenhausen, Sendling. Festpreis ohne Überraschungen."
-        canonical="https://aquapro24.de/bad"
+        canonical="https://kshw-muenchen.de/bad"
         keywords="Badsanierung München, Bad renovieren Schwabing, Badezimmer sanieren Bogenhausen, Komplettbad Sendling, barrierefreies Bad Pasing, Badumbau Maxvorstadt, Badsanierung Haidhausen, Traumbad Neuhausen"
         serviceSchema={{
           name: "Badsanierung München",
@@ -134,7 +134,7 @@ export default function BadPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789" data-testid="button-call-bad">
+                    <a href="tel:+4915212274043" data-testid="button-call-bad">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt beraten lassen
                     </a>
@@ -196,7 +196,7 @@ export default function BadPage() {
             "Hohe Heizkosten durch schlechte Dämmung",
             "Einstieg in die Badewanne wird beschwerlich"
           ]}
-          solutionTitle="Ihre Vorteile mit AquaPro24"
+          solutionTitle="Ihre Vorteile mit KSHW München"
           solutions={[
             "Komplette Badsanierung aus einer Hand - keine 5 verschiedenen Handwerker",
             "Kostenlose 3D-Visualisierung Ihres neuen Bades",
@@ -325,7 +325,7 @@ export default function BadPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789" data-testid="button-call-bad-cta">
+                  <a href="tel:+4915212274043" data-testid="button-call-bad-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

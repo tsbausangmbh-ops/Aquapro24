@@ -92,7 +92,7 @@ export default function HeizungPage() {
       <SEO 
         title="Heizung München | Installation, Wartung & Reparatur | Alle Marken | Partnernetzwerk"
         description="Heizungsinstallation und Wartung in München: Gasheizung, Ölheizung, Fußbodenheizung. Förderberatung bis 70%, Festpreise. 1.200+ Heizungsanlagen in Schwabing, Bogenhausen, Sendling installiert."
-        canonical="https://aquapro24.de/heizung"
+        canonical="https://kshw-muenchen.de/heizung"
         keywords="Heizung München, Heizungsinstallation Schwabing, Heizungswartung Bogenhausen, Gasheizung Sendling, Heizungsreparatur Pasing, Fußbodenheizung Maxvorstadt, Heizungstausch Haidhausen, Heizung Neuhausen"
         serviceSchema={{
           name: "Heizungsservice München",
@@ -134,7 +134,7 @@ export default function HeizungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789" data-testid="button-call-heizung">
+                    <a href="tel:+4915212274043" data-testid="button-call-heizung">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -328,7 +328,7 @@ export default function HeizungPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789" data-testid="button-call-heizung-cta">
+                  <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     089 123 456 789
                   </a>

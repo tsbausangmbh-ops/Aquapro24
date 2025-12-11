@@ -1061,7 +1061,7 @@ export default function ChatWidget({ serviceCategory }: ChatWidgetProps = {}) {
                         Notfall? Rufen Sie uns direkt an:
                       </p>
                       <Button className="mt-2 w-full" asChild>
-                        <a href="tel:+4989123456789">
+                        <a href="tel:+4915212274043">
                           <Phone className="w-4 h-4 mr-2" />
                           089 123 456 789
                         </a>

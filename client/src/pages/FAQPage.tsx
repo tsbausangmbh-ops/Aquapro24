@@ -197,7 +197,7 @@ export default function FAQPage() {
       <SEO 
         title="Häufige Fragen (FAQ) | Sanitär & Heizung München | Ihr Partnernetzwerk"
         description="Antworten auf häufige Fragen zu Sanitär, Heizung und Badsanierung in München. Festpreisgarantie, Notdienst, Förderungen und mehr. Jetzt informieren!"
-        canonical="https://aquapro24.de/faq"
+        canonical="https://kshw-muenchen.de/faq"
         keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />
       <Header />
@@ -218,7 +218,7 @@ export default function FAQPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4989123456789" data-testid="button-call-faq">
+                  <a href="tel:+4915212274043" data-testid="button-call-faq">
                     <Phone className="w-5 h-5 mr-2" />
                     Kostenlos beraten lassen
                   </a>
@@ -260,7 +260,7 @@ export default function FAQPage() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" asChild>
-                <a href="tel:+4989123456789" data-testid="button-call-bottom">
+                <a href="tel:+4915212274043" data-testid="button-call-bottom">
                   <Phone className="w-5 h-5 mr-2" />
                   089 123 456 789
                 </a>
@@ -272,7 +272,7 @@ export default function FAQPage() {
                 </a>
               </Button>
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4989123456789" data-testid="button-emergency-faq">
+                <a href="tel:+4915212274043" data-testid="button-emergency-faq">
                   <AlertTriangle className="w-5 h-5 mr-2" />
                   Notdienst
                 </a>

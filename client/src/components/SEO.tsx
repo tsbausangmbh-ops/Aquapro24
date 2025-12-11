@@ -34,25 +34,25 @@ interface SEOProps {
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
-  "@id": "https://aquapro24.de/#organization",
-  "name": "AquaPro24 - Sanitär & Heizung München",
-  "alternateName": ["AquaPro24", "Münchner Heizung & Sanitär", "Sanitär München"],
-  "legalName": "Münchner Heizung & Sanitär GmbH",
+  "@id": "https://kshw-muenchen.de/#organization",
+  "name": "KSHW München - Sanitär & Heizung",
+  "alternateName": ["KSHW München", "KSHW", "Sanitär München"],
+  "legalName": "KSHW München - Ali Kemal Kurt",
   "description": "Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 Ihr zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik. Geprüfte Fachbetriebe, 2.847+ zufriedene Kunden.",
   "slogan": "Geprüfte Partnerbetriebe für München - seit 2005",
-  "url": "https://aquapro24.de",
+  "url": "https://kshw-muenchen.de",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://aquapro24.de/logo.png",
+    "url": "https://kshw-muenchen.de/logo.png",
     "width": 200,
     "height": 200
   },
   "image": [
-    "https://aquapro24.de/og-image.jpg",
-    "https://aquapro24.de/team.jpg"
+    "https://kshw-muenchen.de/og-image.jpg",
+    "https://kshw-muenchen.de/team.jpg"
   ],
-  "telephone": "+49-89-123456789",
-  "email": "info@sanitaer-muenchen.de",
+  "telephone": "+49-152-12274043",
+  "email": "info@kshw-muenchen.de",
   "foundingDate": "2005",
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
@@ -61,10 +61,10 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Musterstraße 123",
+    "streetAddress": "Zielstattstr. 20",
     "addressLocality": "München",
     "addressRegion": "Bayern",
-    "postalCode": "80333",
+    "postalCode": "81379",
     "addressCountry": "DE"
   },
   "geo": {
@@ -217,7 +217,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "ReserveAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://aquapro24.de/kontakt",
+        "urlTemplate": "https://kshw-muenchen.de/kontakt",
         "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
       },
       "result": { "@type": "Reservation", "name": "Terminbuchung" }
@@ -226,7 +226,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "CommunicateAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "tel:+4989123456789"
+        "urlTemplate": "tel:+4915212274043"
       }
     }
   ]
@@ -300,7 +300,7 @@ export default function SEO({
         "serviceType": serviceSchema.serviceType,
         "provider": {
           "@type": "Plumber",
-          "name": "AquaPro24 - Sanitär & Heizung München",
+          "name": "KSHW München - Sanitär & Heizung München",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "München",
@@ -315,10 +315,10 @@ export default function SEO({
         "availableChannel": {
           "@type": "ServiceChannel",
           "servicePhone": "+49-89-123456789",
-          "serviceUrl": "https://aquapro24.de",
+          "serviceUrl": "https://kshw-muenchen.de",
           "availableLanguage": "German"
         },
-        "termsOfService": "https://aquapro24.de/agb",
+        "termsOfService": "https://kshw-muenchen.de/agb",
         "hoursAvailable": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

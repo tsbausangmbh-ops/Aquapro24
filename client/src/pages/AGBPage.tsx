@@ -9,7 +9,7 @@ export default function AGBPage() {
       <SEO 
         title="AGB | Allgemeine Geschäftsbedingungen | Münchner Heizung & Sanitär"
         description="Allgemeine Geschäftsbedingungen der Münchner Heizung & Sanitär GmbH für Sanitär-, Heizungs- und Installationsarbeiten."
-        canonical="https://aquapro24.de/agb"
+        canonical="https://kshw-muenchen.de/agb"
       />
       <Header />
       <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">

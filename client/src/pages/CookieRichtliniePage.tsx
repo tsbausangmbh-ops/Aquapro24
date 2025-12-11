@@ -11,9 +11,9 @@ export default function CookieRichtliniePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Cookie-Richtlinie | DSGVO 2025 | AquaPro24 München"
+        title="Cookie-Richtlinie | DSGVO 2025 | KSHW München München"
         description="Cookie-Richtlinie gemäß DSGVO und ePrivacy. Informationen zu Cookies, deren Verwendung und Ihre Einstellungsmöglichkeiten."
-        canonical="https://aquapro24.de/cookie-richtlinie"
+        canonical="https://kshw-muenchen.de/cookie-richtlinie"
       />
       <Header />
       <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
@@ -52,7 +52,7 @@ export default function CookieRichtliniePage() {
                 Verantwortlich für die Verwendung von Cookies auf dieser Website ist:
               </p>
               <p className="text-muted-foreground mb-4">
-                AquaPro24 GmbH<br />
+                KSHW München GmbH<br />
                 Musterstraße 123<br />
                 80331 München<br />
                 E-Mail: info@sanitaer-muenchen.de<br />

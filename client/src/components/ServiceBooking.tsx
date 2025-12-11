@@ -591,7 +591,7 @@ export default function ServiceBooking({
             <div className="pt-4 border-t text-center">
               <p className="text-sm text-muted-foreground mb-2">Lieber telefonisch?</p>
               <Button variant="outline" size="sm" asChild>
-                <a href="tel:+4989123456789" data-testid="button-call-booking">
+                <a href="tel:+4915212274043" data-testid="button-call-booking">
                   <Phone className="w-4 h-4 mr-2" />
                   089 123 456 789
                 </a>

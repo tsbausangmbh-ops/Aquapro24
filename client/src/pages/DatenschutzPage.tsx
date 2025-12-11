@@ -10,9 +10,9 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutzerklärung | DSGVO 2025 | AquaPro24 München"
+        title="Datenschutzerklärung | DSGVO 2025 | KSHW München München"
         description="Datenschutzerklärung gemäß DSGVO 2025. Informationen zur Verarbeitung personenbezogener Daten, Ihre Rechte und Kontaktmöglichkeiten."
-        canonical="https://aquapro24.de/datenschutz"
+        canonical="https://kshw-muenchen.de/datenschutz"
       />
       <Header />
       <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
@@ -45,7 +45,7 @@ export default function DatenschutzPage() {
               
               <h3 className="text-lg font-medium mb-2">Verantwortlicher gemäß Art. 4 Abs. 7 DSGVO</h3>
               <p className="text-muted-foreground mb-4">
-                AquaPro24 GmbH<br />
+                KSHW München GmbH<br />
                 Musterstraße 123<br />
                 80331 München<br />
                 Deutschland<br />
@@ -357,7 +357,7 @@ export default function DatenschutzPage() {
                   datenschutz@sanitaer-muenchen.de
                 </a>
                 <a 
-                  href="tel:+4989123456789" 
+                  href="tel:+4915212274043" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                 >
                   <Phone className="w-4 h-4" />

@@ -90,9 +90,9 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
+        title="Über uns | KSHW München München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
         description="Ihr Münchner Familienbetrieb für Sanitär und Heizung. 48+ Jahre Erfahrung, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Meisterqualität, Festpreise, persönlicher Service. München."
-        canonical="https://aquapro24.de/ueber-uns"
+        canonical="https://kshw-muenchen.de/ueber-uns"
         keywords="Über uns Sanitär München, Partnernetzwerk Heizung Schwabing, Team Installateur Bogenhausen, Familienbetrieb Sendling, Fachbetriebe Pasing, Team Maxvorstadt, Partner Haidhausen, Betrieb Neuhausen"
       />
       <Header />
@@ -122,7 +122,7 @@ export default function UeberUnsPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" asChild>
-                    <a href="tel:+4989123456789" data-testid="button-call-about">
+                    <a href="tel:+4915212274043" data-testid="button-call-about">
                       <Phone className="w-5 h-5 mr-2" />
                       089 123 456 789
                     </a>
@@ -316,7 +316,7 @@ export default function UeberUnsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4989123456789">
+                <a href="tel:+4915212274043">
                   <Phone className="w-5 h-5 mr-2" />
                   089 123 456 789
                 </a>

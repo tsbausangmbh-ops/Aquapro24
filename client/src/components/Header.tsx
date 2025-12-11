@@ -43,7 +43,7 @@ export default function Header() {
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
             <a 
-              href="tel:+4989123456789" 
+              href="tel:+4915212274043" 
               className="flex items-center gap-2 font-bold text-base md:text-lg hover:underline"
               data-testid="link-emergency-phone"
             >
@@ -219,7 +219,7 @@ export default function Header() {
               </Link>
               <hr className="my-2 border-border" />
               <Button className="mt-2" asChild data-testid="button-call-mobile">
-                <a href="tel:+4989123456789">
+                <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />
                   089 123 456 789
                 </a>
