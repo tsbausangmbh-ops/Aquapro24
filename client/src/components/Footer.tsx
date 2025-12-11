@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="border-t border-background/10 mt-3 pt-2">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/50">
-              © {new Date().getFullYear()} Münchner Heizung & Sanitär GmbH. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} AquaProfi 24. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-6 text-sm text-background/50">
               <span>Hausmeisterbetriebe seit 2005</span>
