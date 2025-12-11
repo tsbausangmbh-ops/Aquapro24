@@ -18,7 +18,8 @@ import {
   ShieldCheck,
   Star,
   ArrowRight,
-  Thermometer
+  Thermometer,
+  FileText
 } from "lucide-react";
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
@@ -165,13 +166,21 @@ export default function HeizungPage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-6 text-white">
-                  <h3 className="text-lg font-bold mb-3">Unsere Vorteile</h3>
+                <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-2xl p-6 text-white">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold">KfW & BAFA Förderanträge inklusive!</h3>
+                  </div>
+                  <p className="text-white/90 text-sm mb-4">
+                    Bei einer neuen Heizung stellen wir alle Förderanträge für Sie – KfW, BAFA und weitere Programme.
+                  </p>
                   <ul className="space-y-2">
-                    {benefits.slice(0, 4).map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span>{benefit}</span>
+                    {["Bis 70% Zuschuss möglich", "Komplette Antragstellung", "Schnelle Bearbeitung", "Alle Formulare inklusive"].map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
