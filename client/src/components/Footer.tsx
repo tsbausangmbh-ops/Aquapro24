@@ -1,4 +1,4 @@
-import footerLogo from "@assets/Logo_1765382185377.png";
+import footerLogo from "@assets/AquaPro_24_Logo_1765466530477.png";
 
 const footerLinks = {
   services: {
