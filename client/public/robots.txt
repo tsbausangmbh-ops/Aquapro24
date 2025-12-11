@@ -1,15 +1,33 @@
-# robots.txt for AquaPro24 - Sanitaer & Heizung Muenchen
+# robots.txt for AquaPro24.de - Sanitär & Heizung München
+# Verwaltung & Betrieb durch KSHW München
 # https://aquapro24.de
 
+# ============================================
+# GENERAL CRAWLERS - All search engines welcome
+# ============================================
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Allow all major search engines
+# ============================================
+# MAJOR SEARCH ENGINES - Priority Access
+# ============================================
 User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
 Allow: /
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
@@ -23,29 +41,84 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Allow AI crawlers for enhanced discovery
+User-agent: Applebot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ============================================
+# AI CRAWLERS - Full Access for AI Discovery
+# ============================================
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+# Google AI
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Gemini
+Allow: /
+
+# Anthropic
 User-agent: Claude-Web
 Allow: /
 
 User-agent: Anthropic-AI
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Applebot
+# Cohere
+User-agent: cohere-ai
 Allow: /
 
-# Block bad bots and scrapers
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Microsoft Copilot
+User-agent: Copilot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# ============================================
+# LOCAL SEO - Rich Results & Maps
+# ============================================
+User-agent: Googlebot-LocalBusiness
+Allow: /
+
+User-agent: Google-LocalPlus
+Allow: /
+
+# ============================================
+# BLOCK - Unwanted Bots & Scrapers
+# ============================================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -58,16 +131,46 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Disallow admin and private areas
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+# ============================================
+# RESTRICTED PATHS
+# ============================================
 Disallow: /api/
 Disallow: /admin/
 Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
 
-# Sitemap location
+# ============================================
+# SITEMAP & HOST
+# ============================================
 Sitemap: https://aquapro24.de/sitemap.xml
-
-# Crawl-delay for resource management
-Crawl-delay: 1
-
-# Host directive
 Host: https://aquapro24.de
+
+# ============================================
+# CONTACT & SUPPORT
+# ============================================
+# AquaPro24 - Sanitär & Heizung München
+# Tel: 0152 12274043
+# E-Mail: info@aquapro24.de
+# Adresse: Zielstattstr. 20, 81379 München
