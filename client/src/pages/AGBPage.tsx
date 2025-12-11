@@ -69,7 +69,7 @@ export default function AGBPage() {
                 Auftragswertes verlangt werden.
               </p>
               <p className="text-muted-foreground mb-4">
-                (3) Die Rechnung ist innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug zur Zahlung 
+                (3) Die Rechnung ist innerhalb von 5 Tagen nach Rechnungsdatum ohne Abzug zur Zahlung 
                 fällig, sofern keine abweichende Vereinbarung getroffen wurde.
               </p>
               <p className="text-muted-foreground mb-4">
