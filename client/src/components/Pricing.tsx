@@ -338,7 +338,7 @@ export default function Pricing() {
                       <Bot className="w-5 h-5 text-secondary-foreground" />
                     </div>
                     <div>
-                      <p className="font-semibold">AquaPro24 KI-Beratungsassistent</p>
+                      <p className="font-semibold">AquaPro24 KI-Agent für die Kostenschätzung</p>
                       <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span>Online - Antworten in Sekunden</span>
@@ -350,7 +350,9 @@ export default function Pricing() {
                     <div className="space-y-4">
                       <div className="bg-card rounded-lg p-4 border border-card-border">
                         <p className="text-sm">
-                          Hallo! Ich bin Ihr virtueller Assistent. Ich beantworte Ihre Anfragen.
+                          Guten Tag!<br /><br />
+                          Ich bin Ihr virtueller Assistent für die Kostenschätzung.<br /><br />
+                          Ich beantworte Ihre Fragen und gebe Ihnen eine unverbindliche Preisauskunft.
                         </p>
                         <ul className="text-sm text-muted-foreground mt-2 space-y-1">
                           <li className="flex items-center gap-2">

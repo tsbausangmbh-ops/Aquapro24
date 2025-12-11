@@ -248,11 +248,12 @@ export default function DatenschutzPage() {
                 <strong>Weitere Informationen:</strong> <a href="https://policies.google.com/privacy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>
               </p>
 
-              <h3 className="text-lg font-medium mb-2">KI-Beratungsassistent (OpenAI)</h3>
+              <h3 className="text-lg font-medium mb-2">KI-Agent für die Kostenschätzung (OpenAI)</h3>
               <p className="text-muted-foreground mb-4">
-                Auf unserer Website setzen wir einen KI-gestützten Beratungsassistenten ein, der auf 
-                der Technologie von OpenAI basiert. Dieser Assistent dient der ersten Beratung zu 
-                Sanitär-, Heizungs- und Haustechnikfragen sowie zur unverbindlichen Preisschätzung.
+                Auf unserer Website setzen wir einen KI-Agent für die Kostenschätzung ein, der auf 
+                der Technologie von OpenAI basiert.<br /><br />
+                Dieser Assistent dient der ersten Beratung zu Sanitär-, Heizungs- und Haustechnikfragen 
+                sowie zur unverbindlichen Kostenschätzung.
               </p>
               <p className="text-muted-foreground mb-4">
                 <strong>Verarbeitete Daten:</strong> Ihre Chat-Nachrichten und Eingaben werden zur 
@@ -285,7 +286,7 @@ export default function DatenschutzPage() {
               <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
                 <li>Webhosting-Anbieter (Bereitstellung der Website)</li>
                 <li>Google Ireland Limited (Kalenderdienste)</li>
-                <li>OpenAI L.L.C. (KI-Beratungsassistent)</li>
+                <li>OpenAI L.L.C. (KI-Agent für die Kostenschätzung)</li>
                 <li>CRM-System-Anbieter (Kundenmanagement)</li>
               </ul>
 

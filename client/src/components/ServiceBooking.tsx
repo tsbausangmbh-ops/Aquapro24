@@ -348,6 +348,7 @@ export default function ServiceBooking({
             </div>
             <h3 className="text-xl font-semibold">Anfrage erfolgreich gesendet!</h3>
             <p className="text-muted-foreground">
+              Vielen Dank für Ihre Anfrage.<br /><br />
               Wir melden uns innerhalb von 2 Stunden bei Ihnen.
             </p>
           </div>
@@ -377,8 +378,7 @@ export default function ServiceBooking({
                     {serviceType === 'heizung' ? 'Was ist das Problem?' : 'Welche Leistung benötigen Sie?'}
                   </Label>
                   <p className="text-sm text-muted-foreground mb-3">
-                    1. Wählen Sie Ihren gewünschten Service<br />
-                    2. Klicken Sie auf "Weiter"
+                    Bitte wählen Sie aus der Liste den passenden Service aus.
                   </p>
                 </div>
                 <div className="grid gap-2 max-h-48 overflow-y-auto">
@@ -474,9 +474,9 @@ export default function ServiceBooking({
                 <div>
                   <Label className="text-base font-medium">Wann passt es Ihnen?</Label>
                   <p className="text-sm text-muted-foreground mb-3">
-                    1. Wählen Sie Ihr Wunschdatum<br />
-                    2. Freie Zeiten werden aus dem Kalender geladen<br />
-                    3. Wählen Sie eine verfügbare Uhrzeit
+                    Wählen Sie zunächst Ihr Wunschdatum aus.<br /><br />
+                    Anschließend werden die freien Termine aus unserem Kalender geladen.<br /><br />
+                    Klicken Sie dann auf eine verfügbare Uhrzeit.
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -532,8 +532,8 @@ export default function ServiceBooking({
                       )}
                       {!isLoadingSlots && timeSlots.filter(s => s.available).length === 0 && (
                         <p className="text-sm text-destructive mt-2">
-                          1. An diesem Tag sind leider keine Termine mehr frei.<br />
-                          2. Bitte wählen Sie ein anderes Datum.
+                          Leider sind an diesem Tag keine Termine mehr verfügbar.<br /><br />
+                          Bitte wählen Sie ein anderes Datum aus.
                         </p>
                       )}
                     </div>
@@ -561,9 +561,8 @@ export default function ServiceBooking({
                 <div>
                   <Label className="text-base font-medium">Ihre Kontaktdaten</Label>
                   <p className="text-sm text-muted-foreground mb-3">
-                    1. Füllen Sie alle Pflichtfelder aus (*)<br />
-                    2. Klicken Sie auf "Termin anfragen"<br />
-                    3. Wir melden uns innerhalb von 2 Stunden
+                    Bitte füllen Sie alle Felder mit * aus.<br /><br />
+                    Nach dem Absenden melden wir uns innerhalb von 2 Stunden bei Ihnen.
                   </p>
                 </div>
                 <div className="grid gap-3">

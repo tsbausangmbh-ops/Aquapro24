@@ -183,12 +183,12 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 10 KI-Beratungsassistent und OpenAI</h2>
+              <h2 className="text-xl font-semibold mb-4">§ 10 KI-Agent für die Kostenschätzung und OpenAI</h2>
               <p className="text-muted-foreground mb-4">
-                (1) Auf unserer Website setzen wir einen KI-gestützten Beratungsassistenten ein, 
-                der auf der Technologie von OpenAI basiert. Dieser Assistent dient der ersten 
-                Beratung zu Sanitär-, Heizungs- und Haustechnikfragen sowie zur unverbindlichen 
-                Preisschätzung.
+                (1) Auf unserer Website setzen wir einen KI-Agent für die Kostenschätzung ein, 
+                der auf der Technologie von OpenAI basiert.<br /><br />
+                Dieser Assistent dient der ersten Beratung zu Sanitär-, Heizungs- und Haustechnikfragen 
+                sowie zur unverbindlichen Kostenschätzung.
               </p>
               <p className="text-muted-foreground mb-4">
                 (2) Die vom KI-Assistenten genannten Preise sind unverbindliche Schätzungen 
