@@ -153,21 +153,6 @@ export default function WaermepumpePage() {
                     </div>
                   ))}
                 </div>
-                
-                <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-xl p-5 text-white mt-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                      <FileText className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold mb-1">BAFA & KfW Förderanträge inklusive!</h3>
-                      <p className="text-white/90 text-sm">
-                        Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme. 
-                        Sie müssen sich um nichts kümmern und erhalten bis zu 70% Ihrer Kosten zurück.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
               <div className="relative space-y-4">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -184,13 +169,21 @@ export default function WaermepumpePage() {
                     </Badge>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white">
-                  <h3 className="text-lg font-bold mb-3">Ihre Vorteile</h3>
+                <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-2xl p-6 text-white">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold">BAFA & KfW Förderanträge inklusive!</h3>
+                  </div>
+                  <p className="text-white/90 text-sm mb-4">
+                    Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme.
+                  </p>
                   <ul className="space-y-2">
-                    {benefits.slice(0, 4).map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-2 text-sm">
+                    {["Bis 70% Zuschuss sichern", "Komplette Antragstellung", "Schnelle Bearbeitung", "Alle Formulare inklusive"].map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm">
                         <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                        <span>{benefit}</span>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
