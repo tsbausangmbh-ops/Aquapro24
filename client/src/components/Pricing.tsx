@@ -397,7 +397,7 @@ export default function Pricing() {
                         value={problem}
                         onChange={(e) => setProblem(e.target.value)}
                         placeholder="z.B. 'Neue Dusche installieren', 'Bad komplett sanieren', 'Wasserhahn tropft'..."
-                        className="min-h-32 text-sm resize-none"
+                        className="min-h-40 text-sm resize-none"
                         data-testid="input-problem-description"
                       />
                       <Button 
