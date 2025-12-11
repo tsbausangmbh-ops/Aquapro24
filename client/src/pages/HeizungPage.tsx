@@ -139,7 +139,7 @@ export default function HeizungPage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="heizung" 
-                    buttonText="Termin buchen"
+                    buttonText="24h Buchungstermin"
                     buttonSize="lg"
                   />
                 </div>

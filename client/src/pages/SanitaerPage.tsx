@@ -153,7 +153,7 @@ export default function SanitaerPage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="sanitaer" 
-                    buttonText="Online Termin buchen"
+                    buttonText="24h Buchungstermin"
                     buttonSize="lg"
                   />
                 </div>

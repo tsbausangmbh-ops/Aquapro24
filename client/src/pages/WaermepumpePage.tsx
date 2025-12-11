@@ -142,7 +142,7 @@ export default function WaermepumpePage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="waermepumpe" 
-                    buttonText="24h Wartungstermin"
+                    buttonText="24h Buchungstermin"
                     buttonSize="lg"
                   />
                 </div>

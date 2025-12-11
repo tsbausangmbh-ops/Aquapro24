@@ -139,7 +139,7 @@ export default function BadPage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="bad" 
-                    buttonText="24h Wartungstermin"
+                    buttonText="24h Buchungstermin"
                     buttonSize="lg"
                   />
                 </div>

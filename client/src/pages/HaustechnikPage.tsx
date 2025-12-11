@@ -139,7 +139,7 @@ export default function HaustechnikPage() {
                   </Button>
                   <ServiceBooking 
                     serviceType="haustechnik" 
-                    buttonText="Termin buchen"
+                    buttonText="24h Buchungstermin"
                     buttonSize="lg"
                   />
                 </div>
