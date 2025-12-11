@@ -22,48 +22,77 @@ import {
   ThumbsUp,
   Building,
   BadgeCheck,
-  MessageCircle
+  MessageCircle,
+  AlertTriangle,
+  TrendingUp
 } from "lucide-react";
 import teamImage from "@assets/stock_images/professional_busines_7b2784dc.jpg";
 import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
 import workshopImage from "@assets/stock_images/modern_plumbing_work_077b9e6b.jpg";
 
 const stats = [
-  { value: "Seit 2005", label: "Partnernetzwerk", sublabel: "in München" },
-  { value: "2.800+", label: "Zufriedene Kunden", sublabel: "in München" },
-  { value: "4.9", label: "Sterne", sublabel: "Google Bewertung" },
-  { value: "Ab 60 Min.", label: "Vor Ort", sublabel: "bei Notfällen" }
+  { value: "Seit 2005", label: "Partnernetzwerk", sublabel: "in München aktiv" },
+  { value: "2.800+", label: "Zufriedene Kunden", sublabel: "in ganz München" },
+  { value: "4.9", label: "Sterne Bewertung", sublabel: "auf Google" },
+  { value: "Ab 60 Min.", label: "Reaktionszeit", sublabel: "bei Notfällen" }
+];
+
+const customerProblems = [
+  {
+    icon: AlertTriangle,
+    problem: "Handwerker kommen nicht pünktlich",
+    solution: "Wir halten Termine ein - oder Sie bekommen 50€ Gutschrift",
+    nlpText: "Kennen Sie das? Der Handwerker sagt 'zwischen 8 und 12 Uhr' - und Sie warten den ganzen Tag."
+  },
+  {
+    icon: AlertTriangle,
+    problem: "Unklare Preise und böse Überraschungen",
+    solution: "Festpreis vor Arbeitsbeginn - schriftlich und verbindlich",
+    nlpText: "Die Rechnung ist plötzlich doppelt so hoch wie besprochen? Bei uns nicht."
+  },
+  {
+    icon: AlertTriangle,
+    problem: "Schlechte Erreichbarkeit bei Notfällen",
+    solution: "24/7 erreichbar - echte Menschen, keine Warteschleife",
+    nlpText: "Sonntagabend Wasserrohrbruch - und keiner geht ran? Wir sind immer da."
+  },
+  {
+    icon: AlertTriangle,
+    problem: "Handwerker hinterlassen Chaos",
+    solution: "Wir räumen auf und schützen Ihre Böden mit Folien",
+    nlpText: "Dreck überall, Werkzeug liegt rum? Bei uns nicht - wir hinterlassen es sauberer."
+  }
 ];
 
 const values = [
   {
     icon: Heart,
-    title: "Kunden helfen",
-    description: "Unsere oberste Priorität: Ihre Probleme schnell und nachhaltig zu lösen."
+    title: "Kundenprobleme lösen",
+    description: "Wir existieren, um Ihre Probleme zu lösen - schnell, nachhaltig und stressfrei für Sie."
   },
   {
     icon: Shield,
-    title: "Verlässlichkeit",
-    description: "Termine werden eingehalten, Preise sind verbindlich, Zusagen werden erfüllt."
+    title: "Absolute Verlässlichkeit",
+    description: "Termine werden eingehalten, Preise sind verbindlich, Zusagen werden erfüllt - garantiert."
   },
   {
     icon: Zap,
-    title: "Schnelle Hilfe",
-    description: "Ab 60 Minuten vor Ort. Auch nachts, am Wochenende und an Feiertagen."
+    title: "Schnellste Hilfe",
+    description: "Ab 60 Minuten vor Ort in München. Auch nachts, am Wochenende und an Feiertagen."
   },
   {
     icon: Award,
-    title: "Geprüfte Partner",
-    description: "Nur zertifizierte Fachbetriebe mit nachgewiesener Qualität in unserem Netzwerk."
+    title: "Geprüfte Meisterbetriebe",
+    description: "Nur zertifizierte Fachbetriebe mit nachgewiesener Qualität in unserem Partnernetzwerk."
   }
 ];
 
 const differentiators = [
-  { icon: CheckCircle2, text: "Festpreisgarantie vor Arbeitsbeginn" },
+  { icon: CheckCircle2, text: "Festpreisgarantie vor Arbeitsbeginn - schriftlich" },
   { icon: CheckCircle2, text: "24/7 Notdienst mit echtem Ansprechpartner" },
-  { icon: CheckCircle2, text: "Partnernetzwerk mit Qualitätsversprechen" },
-  { icon: CheckCircle2, text: "Transparente Kommunikation ohne Fachchinesisch" },
-  { icon: CheckCircle2, text: "Saubere Arbeit - wir hinterlassen keinen Schmutz" },
+  { icon: CheckCircle2, text: "Partnernetzwerk seit 2005 mit Qualitätsversprechen" },
+  { icon: CheckCircle2, text: "Klare Kommunikation ohne Fachchinesisch" },
+  { icon: CheckCircle2, text: "Saubere Arbeit - Bodenschutz und Aufräumen inklusive" },
   { icon: CheckCircle2, text: "5 Jahre Gewährleistung auf alle Arbeiten" }
 ];
 
@@ -71,35 +100,139 @@ const testimonials = [
   {
     name: "M. Schneider",
     location: "München-Schwabing",
-    text: "Endlich ein Handwerker, der pünktlich ist und hält, was er verspricht. Die Badsanierung war perfekt geplant und ausgeführt.",
-    rating: 5
+    text: "Endlich ein Handwerker, der pünktlich ist und hält, was er verspricht. Die Badsanierung war perfekt geplant und in 3 Wochen abgeschlossen.",
+    rating: 5,
+    service: "Badsanierung"
   },
   {
     name: "K. Wagner",
     location: "München-Bogenhausen",
     text: "Sonntagabend Wasserrohrbruch - in 40 Minuten war der Techniker da. Professionell, freundlich, faire Rechnung. Absolute Empfehlung!",
-    rating: 5
+    rating: 5,
+    service: "Notdienst"
   },
   {
     name: "S. Hoffmann",
     location: "München-Sendling",
     text: "Die Wärmepumpen-Beratung war ehrlich und kompetent. Kein Verkaufsdruck, sondern echte Expertise. Spare jetzt 55% Heizkosten.",
-    rating: 5
+    rating: 5,
+    service: "Wärmepumpe"
   }
 ];
+
+const serviceAreas = [
+  "Schwabing", "Bogenhausen", "Sendling", "Pasing", 
+  "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering",
+  "Laim", "Giesing", "Moosach", "Milbertshofen"
+];
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://aquapro24.de/ueber-uns#webpage",
+  "url": "https://aquapro24.de/ueber-uns",
+  "name": "Über AquaPro24 München - Ihr Partnernetzwerk für Sanitär & Heizung seit 2005",
+  "description": "Erfahren Sie mehr über AquaPro24 München: Partnernetzwerk für Sanitär, Heizung und Badsanierung. Geprüfte Meisterbetriebe, 2.800+ zufriedene Kunden, 24/7 Notdienst in München.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://aquapro24.de/#website",
+    "url": "https://aquapro24.de",
+    "name": "AquaPro24 München",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://aquapro24.de/#organization"
+    }
+  },
+  "mainEntity": {
+    "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
+    "@id": "https://aquapro24.de/#organization",
+    "name": "KSHW München - Sanitär & Heizung",
+    "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München"],
+    "legalName": "KSHW München - Ali Kemal Kurt",
+    "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Meisterbetriebe mit Kunden, die kompetente Hilfe brauchen.",
+    "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
+    "url": "https://aquapro24.de",
+    "telephone": "+49-152-12274043",
+    "email": "info@aquapro24.de",
+    "foundingDate": "2005",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zielstattstr. 20",
+      "addressLocality": "München",
+      "addressRegion": "Bayern",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.1058,
+      "longitude": 11.5388
+    },
+    "areaServed": [
+      { "@type": "City", "name": "München", "sameAs": "https://de.wikipedia.org/wiki/München" },
+      { "@type": "AdministrativeArea", "name": "Schwabing" },
+      { "@type": "AdministrativeArea", "name": "Bogenhausen" },
+      { "@type": "AdministrativeArea", "name": "Sendling" },
+      { "@type": "AdministrativeArea", "name": "Pasing" },
+      { "@type": "AdministrativeArea", "name": "Maxvorstadt" },
+      { "@type": "AdministrativeArea", "name": "Haidhausen" },
+      { "@type": "AdministrativeArea", "name": "Neuhausen" },
+      { "@type": "AdministrativeArea", "name": "Trudering" },
+      { "@type": "AdministrativeArea", "name": "Laim" },
+      { "@type": "AdministrativeArea", "name": "Giesing" },
+      { "@type": "AdministrativeArea", "name": "Moosach" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sanitär & Heizung Dienstleistungen München",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sanitär-Notdienst München" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heizungsreparatur München" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Badsanierung München" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wärmepumpen-Installation München" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Haustechnik München" }}
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2847",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
+    "priceRange": "€€",
+    "paymentAccepted": ["Cash", "Credit Card", "EC Card", "Bank Transfer", "Invoice"],
+    "currenciesAccepted": "EUR"
+  }
+};
 
 export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
-        description="Ihr Münchner Partnernetzwerk für Sanitär und Heizung. 48+ Jahre Erfahrung, 2.500+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Meisterqualität, Festpreise, persönlicher Service."
+        title="Über AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Meisterbetriebe"
+        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Geprüfte Meisterbetriebe, Festpreisgarantie, 24/7 Notdienst."
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns Sanitär München, Partnernetzwerk Heizung Schwabing, Team Installateur Bogenhausen, Fachbetriebe Sendling, Team Pasing, Partner Maxvorstadt, Betrieb Haidhausen, Neuhausen"
+        keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Meisterbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering"
+        structuredData={aboutPageSchema}
       />
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - H1 optimiert für SEO */}
         <section className="relative pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
@@ -109,18 +242,18 @@ export default function UeberUnsPage() {
                   Partnernetzwerk seit 2005
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Unsere Vision:<br />
-                  <span className="text-primary">Ihre Probleme lösen</span>
+                  AquaPro24 München:<br />
+                  <span className="text-primary">Wir lösen Ihre Probleme</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Wir glauben daran, dass jeder Kunde schnelle, zuverlässige und faire Hilfe verdient.
-                  <strong> Unsere Mission ist es, Ihre Probleme zu lösen</strong> - schnell, professionell 
-                  und ohne Stress für Sie.
+                  <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
+                  das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
+                  Rechnung höher ausfiel als besprochen.
                 </p>
                 <p className="text-muted-foreground">
-                  Als Partnernetzwerk seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, 
-                  die kompetente Hilfe brauchen. Ob Rohrbruch, Heizungsausfall oder Badsanierung - 
-                  wir sind für Sie da und finden die beste Lösung für Ihr Anliegen.
+                  Seit 2005 verbinden wir geprüfte Meisterbetriebe mit Münchnern, die 
+                  <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen. Ob Rohrbruch in Schwabing, 
+                  Heizungsausfall in Bogenhausen oder Badsanierung in Sendling - wir sind für Sie da.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" asChild>
@@ -131,7 +264,7 @@ export default function UeberUnsPage() {
                   </Button>
                   <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
                     <a 
-                      href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Dienstleistungen%20und%20m%C3%B6chte%20eine%20Anfrage%20stellen." 
+                      href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Dienstleistungen%20in%20M%C3%BCnchen." 
                       target="_blank" 
                       rel="noopener noreferrer"
                       data-testid="button-whatsapp-about"
@@ -146,14 +279,14 @@ export default function UeberUnsPage() {
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <img 
                     src={teamImage} 
-                    alt="Unser professionelles Team" 
+                    alt="AquaPro24 Team - Geprüfte Sanitär- und Heizungsfachleute München" 
                     className="w-full h-80 lg:h-96 object-cover"
                     loading="lazy"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg hidden lg:block">
-                  <div className="text-3xl font-bold">48+</div>
-                  <div className="text-sm opacity-90">Jahre Erfahrung</div>
+                  <div className="text-3xl font-bold">2.800+</div>
+                  <div className="text-sm opacity-90">Zufriedene Kunden</div>
                 </div>
               </div>
             </div>
@@ -177,15 +310,52 @@ export default function UeberUnsPage() {
           </div>
         </section>
 
-        {/* Story Section */}
+        {/* NLP Problem-Solution Section */}
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Wir verstehen Ihre Frustration</Badge>
+              <h2 className="text-3xl font-bold mb-4">
+                Diese Probleme kennen Sie sicher
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Schlechte Erfahrungen mit Handwerkern? Sie sind nicht allein. Deshalb haben wir 
+                AquaPro24 gegründet - um diese Probleme ein für alle Mal zu lösen.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerProblems.map((item, index) => (
+                <Card key={index} className="border-0 shadow-sm">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-destructive" />
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="font-semibold text-lg">{item.problem}</h3>
+                        <p className="text-sm text-muted-foreground italic">"{item.nlpText}"</p>
+                        <div className="flex items-center gap-2 text-accent pt-2">
+                          <TrendingUp className="w-4 h-4" />
+                          <span className="font-medium text-sm">{item.solution}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Story Section */}
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6 bg-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="order-2 lg:order-1">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={technicianImage} 
-                    alt="Meister bei der Arbeit" 
+                    alt="Sanitär- und Heizungsmeister bei der Arbeit in München" 
                     className="w-full h-80 object-cover"
                     loading="lazy"
                   />
@@ -194,22 +364,22 @@ export default function UeberUnsPage() {
               <div className="order-1 lg:order-2 space-y-6">
                 <Badge variant="outline">Unsere Geschichte</Badge>
                 <h2 className="text-3xl font-bold">
-                  Zwei Experten, eine Vision
+                  Warum wir AquaPro24 gegründet haben
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    <strong className="text-foreground">2024</strong> haben sich zwei Experten zusammengetan, 
-                    die eine gemeinsame Frustration teilten: Zu viele Kunden berichten von unzuverlässigen 
-                    Handwerkern, intransparenten Preisen und mangelnder Kommunikation.
+                    <strong className="text-foreground">Das Problem:</strong> Zu viele Münchner berichten von 
+                    unzuverlässigen Handwerkern, unklaren Preisen und mangelnder Kommunikation. Das wollten 
+                    wir ändern.
                   </p>
                   <p>
-                    Unser <strong className="text-foreground">Sanitär- und Heizungsmeister</strong> bringt 
-                    22 Jahre praktische Erfahrung mit. Er kennt jedes Rohr, jede Heizung, jedes Problem - 
-                    und die beste Lösung dafür.
+                    <strong className="text-foreground">Unsere Lösung:</strong> Ein Partnernetzwerk aus 
+                    geprüften Meisterbetrieben, die unsere Werte teilen: Pünktlichkeit, Festpreise, 
+                    saubere Arbeit und echte Kundenorientierung.
                   </p>
                   <p>
-                    Unser <strong className="text-foreground">Inhaber</strong> mit 26 Jahren 
-                    Erfahrung sorgt für professionelle Abläufe, klare Kommunikation und faire Preise.
+                    <strong className="text-foreground">Das Ergebnis:</strong> Seit 2005 haben wir über 
+                    2.800 Kunden in München geholfen - von Schwabing bis Sendling, von Bogenhausen bis Pasing.
                   </p>
                 </div>
               </div>
@@ -218,14 +388,14 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-secondary/5">
+        <section className="py-10 lg:pt-8 pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Unsere Werte</Badge>
-              <h2 className="text-3xl font-bold mb-4">Wofür wir stehen</h2>
+              <h2 className="text-3xl font-bold mb-4">Wofür AquaPro24 München steht</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Diese Prinzipien sind keine leeren Worte - sie bestimmen jede Entscheidung, 
-                die wir treffen.
+                Diese Prinzipien sind keine Marketing-Phrasen - sie bestimmen jede Entscheidung 
+                und jeden Handgriff unserer Partnerbetriebe.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -245,17 +415,17 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Differentiators Section */}
-        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
-                <Badge variant="outline">Warum wir?</Badge>
+                <Badge variant="outline">Warum AquaPro24?</Badge>
                 <h2 className="text-3xl font-bold">
-                  Das unterscheidet uns von anderen
+                  Das unterscheidet uns von anderen Handwerkern
                 </h2>
                 <p className="text-muted-foreground">
-                  Wir wissen, dass Sie bei Handwerkern schon schlechte Erfahrungen gemacht haben. 
-                  Deshalb haben wir klare Standards definiert, die wir bei jedem Auftrag einhalten.
+                  Sie haben schlechte Erfahrungen gemacht? Wir verstehen das. Deshalb haben wir 
+                  klare Standards definiert, die jeder unserer Partnerbetriebe einhält - ohne Ausnahme.
                 </p>
                 <div className="space-y-4">
                   {differentiators.map((item, index) => (
@@ -269,7 +439,7 @@ export default function UeberUnsPage() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={workshopImage} 
-                  alt="Professionelle Werkstatt und Ausrüstung" 
+                  alt="Professionelle Sanitär-Werkstatt und Ausrüstung in München" 
                   className="w-full h-80 object-cover"
                   loading="lazy"
                 />
@@ -278,24 +448,56 @@ export default function UeberUnsPage() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-muted/30">
+        {/* Service Areas Section - Geo SEO */}
+        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <Badge variant="secondary" className="mb-4">Kundenstimmen</Badge>
-              <h2 className="text-3xl font-bold mb-4">Was unsere Kunden sagen</h2>
+              <Badge variant="secondary" className="mb-4">
+                <MapPin className="w-3 h-3 mr-1" />
+                Einsatzgebiet
+              </Badge>
+              <h2 className="text-3xl font-bold mb-4">
+                AquaPro24 in ganz München für Sie da
+              </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Echte Bewertungen von echten Kunden aus München
+                Egal in welchem Stadtteil Sie wohnen - unsere Partnerbetriebe sind ab 60 Minuten vor Ort.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {serviceAreas.map((area, index) => (
+                <Badge key={index} variant="outline" className="text-sm py-2 px-4">
+                  <MapPin className="w-3 h-3 mr-1" />
+                  München-{area}
+                </Badge>
+              ))}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              Sowie alle weiteren Münchner Stadtteile und das Umland bis 30 km
+            </p>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-10 lg:pt-8 pb-4 bg-secondary/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <Badge variant="secondary" className="mb-4">Echte Kundenstimmen</Badge>
+              <h2 className="text-3xl font-bold mb-4">Was Münchner über uns sagen</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Echte Bewertungen von echten Kunden aus München - ungefiltert und authentisch
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="border-0 shadow-sm">
                   <CardContent className="p-6">
-                    <div className="flex gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                      ))}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex gap-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                        ))}
+                      </div>
+                      <Badge variant="secondary" className="text-xs">{testimonial.service}</Badge>
                     </div>
                     <p className="text-muted-foreground mb-6">"{testimonial.text}"</p>
                     <div className="flex items-center gap-3">
@@ -321,19 +523,19 @@ export default function UeberUnsPage() {
               Bereit für einen Handwerker, dem Sie vertrauen können?
             </h2>
             <p className="text-primary-foreground/80 mb-4 max-w-2xl mx-auto text-lg">
-              Rufen Sie uns an oder schreiben Sie uns. Wir beraten Sie kostenlos und 
-              unverbindlich - und Sie entscheiden dann in Ruhe.
+              Rufen Sie uns an oder schreiben Sie uns. Kostenlose Beratung, 
+              unverbindliches Angebot - Sie entscheiden dann in Ruhe.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4915212274043">
+                <a href="tel:+4915212274043" data-testid="button-call-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   0152 12274043
                 </a>
               </Button>
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
                 <a 
-                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Dienstleistungen%20und%20m%C3%B6chte%20eine%20Anfrage%20stellen." 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   data-testid="button-whatsapp-cta"
@@ -346,7 +548,7 @@ export default function UeberUnsPage() {
             <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-primary-foreground/70">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                München & Umgebung
+                Ganz München & Umland
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
