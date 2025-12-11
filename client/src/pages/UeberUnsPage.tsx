@@ -35,24 +35,24 @@ const stats = [
 
 const values = [
   {
+    icon: Heart,
+    title: "Kunden helfen",
+    description: "Unsere oberste Priorität: Ihre Probleme schnell und nachhaltig zu lösen."
+  },
+  {
     icon: Shield,
     title: "Verlässlichkeit",
     description: "Termine werden eingehalten, Preise sind verbindlich, Zusagen werden erfüllt."
   },
   {
-    icon: Award,
-    title: "Meisterqualität",
-    description: "22 Jahre Meistererfahrung garantieren höchste handwerkliche Standards."
-  },
-  {
-    icon: Heart,
-    title: "Kundenorientierung",
-    description: "Ihre Zufriedenheit ist unser Maßstab - bei jedem Projekt, jedem Tag."
-  },
-  {
     icon: Zap,
-    title: "Schnelligkeit",
-    description: "Schnelle Hilfe vor Ort. Auch nachts, am Wochenende und an Feiertagen."
+    title: "Schnelle Hilfe",
+    description: "Ab 60 Minuten vor Ort. Auch nachts, am Wochenende und an Feiertagen."
+  },
+  {
+    icon: Award,
+    title: "Geprüfte Partner",
+    description: "Nur zertifizierte Fachbetriebe mit nachgewiesener Qualität in unserem Netzwerk."
   }
 ];
 
@@ -107,18 +107,18 @@ export default function UeberUnsPage() {
                   Partnernetzwerk seit 2005
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Meistertechnik trifft<br />
-                  <span className="text-primary">Unternehmergeist</span>
+                  Unsere Vision:<br />
+                  <span className="text-primary">Ihre Probleme lösen</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Wir sind kein gewöhnlicher Handwerksbetrieb. Bei uns verbinden sich 
-                  <strong> 22 Jahre Meistererfahrung</strong> im Sanitär- und Heizungshandwerk 
-                  mit <strong>26 Jahren kaufmännischer Expertise</strong>.
+                  Wir glauben daran, dass jeder Kunde schnelle, zuverlässige und faire Hilfe verdient.
+                  <strong> Unsere Mission ist es, Ihre Probleme zu lösen</strong> - schnell, professionell 
+                  und ohne Stress für Sie.
                 </p>
                 <p className="text-muted-foreground">
-                  Das Ergebnis: Höchste handwerkliche Qualität, professionelle Abwicklung 
-                  und faire, transparente Preise. Für Sie bedeutet das: weniger Stress, 
-                  mehr Sicherheit, bessere Ergebnisse.
+                  Als Partnernetzwerk seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, 
+                  die kompetente Hilfe brauchen. Ob Rohrbruch, Heizungsausfall oder Badsanierung - 
+                  wir sind für Sie da und finden die beste Lösung für Ihr Anliegen.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" asChild>
