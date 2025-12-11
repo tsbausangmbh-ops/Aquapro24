@@ -33,13 +33,32 @@ interface SEOProps {
 
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "Plumber",
+  "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
+  "@id": "https://aquapro24.de/#organization",
   "name": "AquaPro24 - Sanitär & Heizung München",
-  "alternateName": "AquaPro24",
-  "description": "24/7 Notdienst für Sanitär, Heizung und Wasserinstallation in München. Meisterbetrieb seit 2005.",
+  "alternateName": ["AquaPro24", "Münchner Heizung & Sanitär", "Sanitär München"],
+  "legalName": "Münchner Heizung & Sanitär GmbH",
+  "description": "Meisterbetrieb für Sanitär, Heizung und Badsanierung in München. Seit 2005 Ihr zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik. HWK München zertifiziert, 2.847+ zufriedene Kunden.",
+  "slogan": "Meisterqualität für München - seit 2005",
   "url": "https://aquapro24.de",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://aquapro24.de/logo.png",
+    "width": 200,
+    "height": 200
+  },
+  "image": [
+    "https://aquapro24.de/og-image.jpg",
+    "https://aquapro24.de/team.jpg"
+  ],
   "telephone": "+49-89-123456789",
   "email": "info@sanitaer-muenchen.de",
+  "foundingDate": "2005",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "minValue": 10,
+    "maxValue": 25
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Musterstraße 123",
@@ -50,94 +69,166 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "48.1351",
-    "longitude": "11.5820"
+    "latitude": 48.1351,
+    "longitude": 11.5820
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "München"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Schwabing"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Bogenhausen"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Sendling"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Pasing"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Maxvorstadt"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Haidhausen"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Neuhausen"
-    }
+    { "@type": "City", "name": "München", "sameAs": "https://de.wikipedia.org/wiki/München" },
+    { "@type": "AdministrativeArea", "name": "Schwabing" },
+    { "@type": "AdministrativeArea", "name": "Bogenhausen" },
+    { "@type": "AdministrativeArea", "name": "Sendling" },
+    { "@type": "AdministrativeArea", "name": "Pasing" },
+    { "@type": "AdministrativeArea", "name": "Maxvorstadt" },
+    { "@type": "AdministrativeArea", "name": "Haidhausen" },
+    { "@type": "AdministrativeArea", "name": "Neuhausen" },
+    { "@type": "AdministrativeArea", "name": "Trudering" },
+    { "@type": "AdministrativeArea", "name": "Laim" }
   ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.5820 },
+    "geoRadius": "30000"
+  },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "14:00"
     }
   ],
   "priceRange": "€€",
-  "paymentAccepted": ["Cash", "Credit Card", "EC Card", "Bank Transfer"],
+  "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "EC Card", "Bank Transfer", "Invoice"],
   "currenciesAccepted": "EUR",
+  "knowsLanguage": ["de", "en"],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Meisterbrief",
+      "name": "Installateur- und Heizungsbauermeister",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Handwerkskammer für München und Oberbayern",
+        "alternateName": "HWK München"
+      }
+    }
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Handwerkskammer für München und Oberbayern",
+      "alternateName": "HWK München",
+      "url": "https://www.hwk-muenchen.de"
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Sanitär & Heizungsdienstleistungen",
+    "name": "Sanitär, Heizung & Haustechnik Dienstleistungen",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "24h Notdienst",
-          "description": "Sofortige Hilfe bei Rohrbruch, Wasserschaden und Heizungsausfall"
-        }
+          "name": "Sanitärinstallation",
+          "description": "Wasserinstallation, Rohrreinigung, Armaturen-Reparatur und -Austausch"
+        },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "price": 89, "minPrice": 89 }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
           "name": "Badsanierung",
-          "description": "Komplette Badezimmer-Renovierung aus einer Hand"
-        }
+          "description": "Komplette Badezimmer-Renovierung mit 3D-Planung, barrierefreie Bäder, Komplettumbau in 2-4 Wochen"
+        },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "price": 8900, "minPrice": 8900 }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Wasserinstallation",
-          "description": "Professionelle Installation und Reparatur von Wasserleitungen"
+          "name": "Heizungsinstallation",
+          "description": "Gasheizung, Ölheizung, Fußbodenheizung - Installation, Wartung und Reparatur aller Marken"
+        },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "price": 149, "minPrice": 149 }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Wärmepumpe",
+          "description": "Luft-Wasser-Wärmepumpe und Erdwärmepumpe Installation mit bis zu 70% staatlicher Förderung"
+        },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "price": 15000, "minPrice": 15000 }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Haustechnik",
+          "description": "Gasinstallation, kontrollierte Wohnraumlüftung (KWL), Smart Home Integration"
         }
       }
     ]
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "847",
-    "bestRating": "5",
-    "worstRating": "1"
+    "ratingValue": 4.9,
+    "reviewCount": 2847,
+    "bestRating": 5,
+    "worstRating": 1
   },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "M. Schneider" },
+      "datePublished": "2024-11-15",
+      "reviewBody": "Endlich ein Handwerker, der pünktlich ist und hält, was er verspricht. Die Badsanierung war perfekt geplant.",
+      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "K. Wagner" },
+      "datePublished": "2024-10-22",
+      "reviewBody": "Professionell, freundlich, faire Rechnung. Absolute Empfehlung für Sanitärarbeiten in München!",
+      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "S. Hoffmann" },
+      "datePublished": "2024-09-08",
+      "reviewBody": "Kompetente Wärmepumpen-Beratung ohne Verkaufsdruck. Spare jetzt 55% Heizkosten.",
+      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
+    }
+  ],
   "sameAs": [
     "https://www.facebook.com/aquapro24",
-    "https://www.instagram.com/aquapro24"
+    "https://www.instagram.com/aquapro24",
+    "https://www.linkedin.com/company/aquapro24"
+  ],
+  "potentialAction": [
+    {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://aquapro24.de/kontakt",
+        "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      },
+      "result": { "@type": "Reservation", "name": "Terminbuchung" }
+    },
+    {
+      "@type": "CommunicateAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "tel:+4989123456789"
+      }
+    }
   ]
 };
 
