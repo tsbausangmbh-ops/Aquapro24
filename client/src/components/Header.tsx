@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Menu, X, Phone, Clock, MapPin, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Clock, MapPin, ChevronDown, Mail } from "lucide-react";
 import logoImage from "@assets/Icon_Logo_1765382090112.png";
 
 export default function Header() {
@@ -146,9 +146,11 @@ export default function Header() {
                 <Clock className="w-3 h-3" />
                 24/7 Notdienst
               </Badge>
-              <Button data-testid="button-call-header">
-                <Phone className="w-4 h-4 mr-2" />
-                Jetzt anrufen
+              <Button data-testid="button-email-header" asChild>
+                <a href="mailto:info@sanitaer-muenchen.de">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email schreiben
+                </a>
               </Button>
             </div>
 
