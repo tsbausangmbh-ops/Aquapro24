@@ -332,9 +332,9 @@ export default function HeizungPage() {
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Wartungstermin%20f%C3%BCr%20meine%20Heizung%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Wartungstermin
+                    Rückruf bitte
                   </a>
                 </Button>
               </div>

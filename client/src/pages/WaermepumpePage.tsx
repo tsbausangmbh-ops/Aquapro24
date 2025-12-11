@@ -367,9 +367,9 @@ export default function WaermepumpePage() {
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Beratungstermin%20f%C3%BCr%20W%C3%A4rmepumpen%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20W%C3%A4rmepumpe." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    24h Buchungstermin
+                    Rückruf bitte
                   </a>
                 </Button>
               </div>
