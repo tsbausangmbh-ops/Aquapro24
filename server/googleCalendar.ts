@@ -137,6 +137,89 @@ function getUrgencyLabel(urgency: string, isEmergency: string): string {
   }
 }
 
+// Get available time slots for a given date
+export interface TimeSlot {
+  time: string;
+  available: boolean;
+  label: string;
+}
+
+export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
+  const timeSlots: TimeSlot[] = [
+    { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
+    { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
+    { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+    { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+    { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+    { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+    { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+    { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
+    { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
+    { time: "17:00", available: true, label: "17:00 - 18:00 Uhr" },
+  ];
+
+  try {
+    const calendar = await getUncachableGoogleCalendarClient();
+    
+    // Parse the date and set time boundaries for the day
+    const startOfDay = new Date(date);
+    startOfDay.setHours(0, 0, 0, 0);
+    const endOfDay = new Date(date);
+    endOfDay.setHours(23, 59, 59, 999);
+
+    // Fetch events for the given date
+    const response = await calendar.events.list({
+      calendarId: 'primary',
+      timeMin: startOfDay.toISOString(),
+      timeMax: endOfDay.toISOString(),
+      singleEvents: true,
+      orderBy: 'startTime',
+      timeZone: 'Europe/Berlin',
+    });
+
+    const events = response.data.items || [];
+    
+    // Mark time slots as unavailable if they overlap with existing events
+    for (const event of events) {
+      if (event.start?.dateTime && event.end?.dateTime) {
+        const eventStart = new Date(event.start.dateTime);
+        const eventEnd = new Date(event.end.dateTime);
+        
+        for (const slot of timeSlots) {
+          const [slotHour] = slot.time.split(':').map(Number);
+          const slotStart = new Date(date);
+          slotStart.setHours(slotHour, 0, 0, 0);
+          const slotEnd = new Date(date);
+          slotEnd.setHours(slotHour + 1, 0, 0, 0);
+          
+          // Check if slot overlaps with event
+          if (slotStart < eventEnd && slotEnd > eventStart) {
+            slot.available = false;
+          }
+        }
+      }
+    }
+    
+    // Also mark past time slots as unavailable for today
+    const now = new Date();
+    const today = new Date().toISOString().split('T')[0];
+    if (date === today) {
+      for (const slot of timeSlots) {
+        const [slotHour] = slot.time.split(':').map(Number);
+        if (slotHour <= now.getHours()) {
+          slot.available = false;
+        }
+      }
+    }
+
+    return timeSlots;
+  } catch (error) {
+    console.error('Failed to fetch calendar events:', error);
+    // Return all slots as available if calendar query fails
+    return timeSlots;
+  }
+}
+
 function getEventStartTime(preferredDate: string | undefined, preferredTime: string | undefined, urgency: string, isEmergency: string): Date {
   const now = new Date();
   

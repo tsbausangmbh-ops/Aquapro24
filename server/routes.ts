@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import type { Server } from "http";
 import { storage } from "./storage";
-import { createCalendarEvent } from "./googleCalendar";
+import { createCalendarEvent, getAvailableTimeSlots } from "./googleCalendar";
 import OpenAI from "openai";
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
@@ -100,6 +100,39 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
     } catch (error) {
       console.error("Error fetching leads:", error);
       res.status(500).json({ success: false, error: "Failed to fetch leads" });
+    }
+  });
+
+  // Get available time slots for a specific date from Google Calendar
+  app.get("/api/calendar/available-slots", async (req, res) => {
+    try {
+      const { date } = req.query;
+      
+      if (!date || typeof date !== 'string') {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Date parameter is required (format: YYYY-MM-DD)" 
+        });
+      }
+
+      const timeSlots = await getAvailableTimeSlots(date);
+      res.json({ success: true, slots: timeSlots });
+    } catch (error) {
+      console.error("Error fetching available slots:", error);
+      // Return default slots if calendar is not connected
+      const defaultSlots = [
+        { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
+        { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
+        { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+        { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+        { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+        { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+        { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+        { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
+        { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
+        { time: "17:00", available: true, label: "17:00 - 18:00 Uhr" },
+      ];
+      res.json({ success: true, slots: defaultSlots });
     }
   });
 

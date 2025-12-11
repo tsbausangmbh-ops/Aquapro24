@@ -4,7 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Calendar, Clock, CheckCircle2, Send, Phone, X } from "lucide-react";
+import { Calendar, Clock, CheckCircle2, Send, Phone, X, Loader2 } from "lucide-react";
+
+interface TimeSlot {
+  time: string;
+  available: boolean;
+  label: string;
+}
 import {
   Dialog,
   DialogContent,
@@ -190,6 +196,43 @@ export default function ServiceBooking({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([]);
+  const [isLoadingSlots, setIsLoadingSlots] = useState(false);
+
+  // Fetch available time slots when date changes
+  useEffect(() => {
+    if (formData.preferredDate) {
+      setIsLoadingSlots(true);
+      setFormData(prev => ({ ...prev, preferredTime: "" })); // Reset time when date changes
+      
+      fetch(`/api/calendar/available-slots?date=${formData.preferredDate}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.success && data.slots) {
+            setTimeSlots(data.slots);
+          }
+        })
+        .catch(err => {
+          console.error("Failed to fetch time slots:", err);
+          // Set default slots on error
+          setTimeSlots([
+            { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
+            { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
+            { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+            { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+            { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+            { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+            { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+            { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
+            { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
+            { time: "17:00", available: true, label: "17:00 - 18:00 Uhr" },
+          ]);
+        })
+        .finally(() => {
+          setIsLoadingSlots(false);
+        });
+    }
+  }, [formData.preferredDate]);
 
   // Reset state when serviceType changes (e.g., navigating between pages)
   useEffect(() => {
@@ -427,7 +470,7 @@ export default function ServiceBooking({
               <div className="space-y-4 animate-fade-in">
                 <div>
                   <Label className="text-base font-medium">Wann passt es Ihnen?</Label>
-                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren Wunschtermin</p>
+                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren Wunschtermin - freie Zeiten werden aus dem Kalender geladen</p>
                 </div>
                 <div className="space-y-3">
                   <div>
@@ -441,22 +484,52 @@ export default function ServiceBooking({
                       data-testid="input-date"
                     />
                   </div>
-                  <div>
-                    <Label htmlFor="time">Bevorzugte Uhrzeit</Label>
-                    <Select value={formData.preferredTime} onValueChange={(v) => handleInputChange('preferredTime', v)}>
-                      <SelectTrigger data-testid="select-time">
-                        <SelectValue placeholder="Uhrzeit wählen" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="08:00-10:00">08:00 - 10:00 Uhr</SelectItem>
-                        <SelectItem value="10:00-12:00">10:00 - 12:00 Uhr</SelectItem>
-                        <SelectItem value="12:00-14:00">12:00 - 14:00 Uhr</SelectItem>
-                        <SelectItem value="14:00-16:00">14:00 - 16:00 Uhr</SelectItem>
-                        <SelectItem value="16:00-18:00">16:00 - 18:00 Uhr</SelectItem>
-                        <SelectItem value="flexibel">Flexibel</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                  
+                  {formData.preferredDate && (
+                    <div>
+                      <Label className="flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        Verfügbare Uhrzeiten
+                        {isLoadingSlots && <Loader2 className="w-4 h-4 animate-spin" />}
+                      </Label>
+                      {isLoadingSlots ? (
+                        <div className="flex items-center justify-center py-6">
+                          <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
+                          <span className="ml-2 text-muted-foreground">Kalender wird abgefragt...</span>
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-2 gap-2 mt-2 max-h-48 overflow-y-auto">
+                          {timeSlots.map((slot) => (
+                            <button
+                              key={slot.time}
+                              onClick={() => slot.available && handleInputChange('preferredTime', slot.time)}
+                              disabled={!slot.available}
+                              className={`p-2 text-sm text-center rounded-md border transition-all ${
+                                !slot.available
+                                  ? 'bg-muted text-muted-foreground cursor-not-allowed opacity-50 line-through'
+                                  : formData.preferredTime === slot.time
+                                    ? `${config.borderClass} ${config.bgClass}/10 border-2`
+                                    : 'border-border hover-elevate'
+                              }`}
+                              data-testid={`select-time-${slot.time}`}
+                            >
+                              <span className={formData.preferredTime === slot.time ? config.colorClass : ''}>
+                                {slot.label}
+                              </span>
+                              {!slot.available && (
+                                <span className="block text-xs text-destructive">belegt</span>
+                              )}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                      {!isLoadingSlots && timeSlots.filter(s => s.available).length === 0 && (
+                        <p className="text-sm text-destructive mt-2">
+                          An diesem Tag sind leider keine Termine mehr frei. Bitte wählen Sie ein anderes Datum.
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </div>
                 <div className="flex gap-2">
                   <Button variant="outline" onClick={() => setStep(1)} className="flex-1">
@@ -560,7 +633,7 @@ export default function ServiceBooking({
                     {serviceType === 'heizung' && formData.dringlichkeit && (
                       <p>Dringlichkeit: {formData.dringlichkeit}</p>
                     )}
-                    <p>{formData.preferredDate} um {formData.preferredTime}</p>
+                    <p>{formData.preferredDate} um {formData.preferredTime} Uhr</p>
                   </CardContent>
                 </Card>
 
