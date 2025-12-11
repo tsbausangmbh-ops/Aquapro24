@@ -112,7 +112,7 @@ export default function Header() {
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="nav-faq"
               >
-                FAQ & Preise
+                FAQ
               </Link>
               <Link 
                 href="/ratgeber"
@@ -190,7 +190,7 @@ export default function Header() {
                 className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                 data-testid="nav-mobile-faq"
               >
-                FAQ & Preise
+                FAQ
               </Link>
               <Link
                 href="/ratgeber"
