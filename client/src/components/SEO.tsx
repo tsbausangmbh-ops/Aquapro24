@@ -14,6 +14,11 @@ interface OfferSchema {
   priceRange: string;
 }
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -21,6 +26,8 @@ interface SEOProps {
   keywords?: string;
   ogImage?: string;
   structuredData?: object;
+  breadcrumbs?: BreadcrumbItem[];
+  aiSummary?: string;
   serviceSchema?: {
     name: string;
     description: string;
@@ -74,15 +81,31 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   "areaServed": [
     { "@type": "City", "name": "München", "sameAs": "https://de.wikipedia.org/wiki/München" },
-    { "@type": "AdministrativeArea", "name": "Schwabing" },
-    { "@type": "AdministrativeArea", "name": "Bogenhausen" },
-    { "@type": "AdministrativeArea", "name": "Sendling" },
-    { "@type": "AdministrativeArea", "name": "Pasing" },
-    { "@type": "AdministrativeArea", "name": "Maxvorstadt" },
-    { "@type": "AdministrativeArea", "name": "Haidhausen" },
-    { "@type": "AdministrativeArea", "name": "Neuhausen" },
-    { "@type": "AdministrativeArea", "name": "Trudering" },
-    { "@type": "AdministrativeArea", "name": "Laim" }
+    { "@type": "AdministrativeArea", "name": "Altstadt-Lehel", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Schwabing-West", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Schwabing-Freimann", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Bogenhausen", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Sendling", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Sendling-Westpark", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Pasing-Obermenzing", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Maxvorstadt", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Au-Haidhausen", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Neuhausen-Nymphenburg", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Trudering-Riem", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Laim", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Berg am Laim", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Ramersdorf-Perlach", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Moosach", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Milbertshofen-Am Hart", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Obergiesing-Fasangarten", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Untergiesing-Harlaching", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Hadern", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Schwanthalerhöhe", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Ludwigsvorstadt-Isarvorstadt", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Allach-Untermenzing", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Aubing-Lochhausen-Langwied", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Feldmoching-Hasenbergl", "containedInPlace": { "@type": "City", "name": "München" } }
   ],
   "serviceArea": {
     "@type": "GeoCircle",
