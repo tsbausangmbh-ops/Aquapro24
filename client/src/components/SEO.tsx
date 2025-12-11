@@ -283,6 +283,7 @@ export default function SEO({
   keywords,
   ogImage = "/og-image.jpg",
   structuredData,
+  breadcrumbs,
   serviceSchema
 }: SEOProps) {
   useEffect(() => {
@@ -430,6 +431,23 @@ export default function SEO({
       document.head.appendChild(serviceScript);
     }
 
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((item, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": item.name,
+          "item": item.url
+        }))
+      };
+      const breadcrumbScript = document.createElement("script");
+      breadcrumbScript.type = "application/ld+json";
+      breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+      document.head.appendChild(breadcrumbScript);
+    }
+
     if (structuredData) {
       const customScript = document.createElement("script");
       customScript.type = "application/ld+json";
@@ -441,7 +459,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, keywords, ogImage, structuredData, serviceSchema]);
+  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, serviceSchema]);
 
   return null;
 }
