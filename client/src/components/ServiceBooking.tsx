@@ -376,7 +376,10 @@ export default function ServiceBooking({
                   <Label className="text-base font-medium">
                     {serviceType === 'heizung' ? 'Was ist das Problem?' : 'Welche Leistung benötigen Sie?'}
                   </Label>
-                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren gewünschten Service</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    1. Wählen Sie Ihren gewünschten Service<br />
+                    2. Klicken Sie auf "Weiter"
+                  </p>
                 </div>
                 <div className="grid gap-2 max-h-48 overflow-y-auto">
                   {config.services.map((service) => (
@@ -470,7 +473,11 @@ export default function ServiceBooking({
               <div className="space-y-4 animate-fade-in">
                 <div>
                   <Label className="text-base font-medium">Wann passt es Ihnen?</Label>
-                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Ihren Wunschtermin - freie Zeiten werden aus dem Kalender geladen</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    1. Wählen Sie Ihr Wunschdatum<br />
+                    2. Freie Zeiten werden aus dem Kalender geladen<br />
+                    3. Wählen Sie eine verfügbare Uhrzeit
+                  </p>
                 </div>
                 <div className="space-y-3">
                   <div>
@@ -517,7 +524,7 @@ export default function ServiceBooking({
                                 {slot.label}
                               </span>
                               {!slot.available && (
-                                <span className="block text-xs text-destructive">belegt</span>
+                                <span className="block text-xs text-destructive">Der Termin ist vergeben</span>
                               )}
                             </button>
                           ))}
@@ -525,7 +532,8 @@ export default function ServiceBooking({
                       )}
                       {!isLoadingSlots && timeSlots.filter(s => s.available).length === 0 && (
                         <p className="text-sm text-destructive mt-2">
-                          An diesem Tag sind leider keine Termine mehr frei. Bitte wählen Sie ein anderes Datum.
+                          1. An diesem Tag sind leider keine Termine mehr frei.<br />
+                          2. Bitte wählen Sie ein anderes Datum.
                         </p>
                       )}
                     </div>
@@ -552,7 +560,11 @@ export default function ServiceBooking({
               <div className="space-y-4 animate-fade-in">
                 <div>
                   <Label className="text-base font-medium">Ihre Kontaktdaten</Label>
-                  <p className="text-sm text-muted-foreground mb-3">Damit wir Sie erreichen können</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    1. Füllen Sie alle Pflichtfelder aus (*)<br />
+                    2. Klicken Sie auf "Termin anfragen"<br />
+                    3. Wir melden uns innerhalb von 2 Stunden
+                  </p>
                 </div>
                 <div className="grid gap-3">
                   <div>

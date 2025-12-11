@@ -144,6 +144,9 @@ export interface TimeSlot {
   label: string;
 }
 
+// Buffer time in minutes before and after each appointment
+const BUFFER_MINUTES = 90;
+
 export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
   const timeSlots: TimeSlot[] = [
     { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
@@ -161,7 +164,7 @@ export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
   try {
     const calendar = await getUncachableGoogleCalendarClient();
     
-    // Parse the date and set time boundaries for the day
+    // Parse the date and set time boundaries for the day (including buffer from previous/next day)
     const startOfDay = new Date(date);
     startOfDay.setHours(0, 0, 0, 0);
     const endOfDay = new Date(date);
@@ -180,10 +183,15 @@ export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
     const events = response.data.items || [];
     
     // Mark time slots as unavailable if they overlap with existing events
+    // Including 90 minute buffer before and after each event
     for (const event of events) {
       if (event.start?.dateTime && event.end?.dateTime) {
         const eventStart = new Date(event.start.dateTime);
         const eventEnd = new Date(event.end.dateTime);
+        
+        // Add 90 minute buffer before and after the event
+        const bufferStart = new Date(eventStart.getTime() - BUFFER_MINUTES * 60 * 1000);
+        const bufferEnd = new Date(eventEnd.getTime() + BUFFER_MINUTES * 60 * 1000);
         
         for (const slot of timeSlots) {
           const [slotHour] = slot.time.split(':').map(Number);
@@ -192,8 +200,8 @@ export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
           const slotEnd = new Date(date);
           slotEnd.setHours(slotHour + 1, 0, 0, 0);
           
-          // Check if slot overlaps with event
-          if (slotStart < eventEnd && slotEnd > eventStart) {
+          // Check if slot overlaps with event + buffer zone (90 min before and after)
+          if (slotStart < bufferEnd && slotEnd > bufferStart) {
             slot.available = false;
           }
         }
