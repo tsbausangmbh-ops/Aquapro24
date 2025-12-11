@@ -86,14 +86,37 @@ export default function Footer() {
           ))}
         </div>
         
-        <div className="border-t border-background/10 mt-3 pt-2">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-background/10 mt-4 pt-4">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+            <div className="text-center">
+              <p className="text-sm font-semibold text-background">Partnernetzwerk</p>
+              <p className="text-xs text-background/60">Seit 2005</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-background">Ab 60 Min. da</p>
+              <p className="text-xs text-background/60">Wenn Sie uns rufen</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-background">Festpreis</p>
+              <p className="text-xs text-background/60">Keine Überraschungen</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-background">4.9 Sterne</p>
+              <p className="text-xs text-background/60">Google Bewertung</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-background">Lokal</p>
+              <p className="text-xs text-background/60">Echte Münchner</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-background">Geprüfte Partner</p>
+              <p className="text-xs text-background/60">Zertifiziert</p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 pt-2 border-t border-background/10">
             <div className="text-sm text-background/50 text-center md:text-left">
               <p>© {new Date().getFullYear()} AquaPro24. Alle Rechte vorbehalten.</p>
               <p className="text-xs mt-1">AquaPro24.de wird von KSHW München verwaltet und gesteuert.</p>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-background/50">
-              <span>Partnernetzwerk seit 2005</span>
             </div>
           </div>
         </div>
