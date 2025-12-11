@@ -183,7 +183,31 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 10 Datenschutz</h2>
+              <h2 className="text-xl font-semibold mb-4">§ 10 KI-Beratungsassistent und OpenAI</h2>
+              <p className="text-muted-foreground mb-4">
+                (1) Auf unserer Website setzen wir einen KI-gestützten Beratungsassistenten ein, 
+                der auf der Technologie von OpenAI basiert. Dieser Assistent dient der ersten 
+                Beratung zu Sanitär-, Heizungs- und Haustechnikfragen sowie zur unverbindlichen 
+                Preisschätzung.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                (2) Die vom KI-Assistenten genannten Preise sind unverbindliche Schätzungen 
+                (Netto-Preise zzgl. 19% MwSt.) und stellen kein verbindliches Angebot dar. 
+                Für ein verbindliches Angebot ist stets ein Vor-Ort-Termin erforderlich.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                (3) Die Nutzung des KI-Assistenten erfolgt auf eigenes Risiko. Wir übernehmen 
+                keine Haftung für die Richtigkeit, Vollständigkeit oder Aktualität der vom 
+                KI-Assistenten bereitgestellten Informationen.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                (4) Bei der Nutzung des KI-Assistenten werden Ihre Eingaben an OpenAI L.L.C. 
+                (USA) übermittelt. Weitere Informationen finden Sie in unserer Datenschutzerklärung.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4">§ 11 Datenschutz</h2>
               <p className="text-muted-foreground mb-4">
                 Die Erhebung und Verarbeitung personenbezogener Daten erfolgt gemäß unserer 
                 Datenschutzerklärung und den Bestimmungen der DSGVO.
@@ -191,7 +215,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 11 Schlussbestimmungen</h2>
+              <h2 className="text-xl font-semibold mb-4">§ 12 Schlussbestimmungen</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Es gilt das Recht der Bundesrepublik Deutschland.
               </p>

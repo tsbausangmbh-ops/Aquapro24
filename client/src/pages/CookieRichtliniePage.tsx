@@ -194,6 +194,21 @@ export default function CookieRichtliniePage() {
                     </a>
                   </p>
                 </div>
+                
+                <div className="border-l-2 border-secondary pl-4">
+                  <h3 className="font-medium">OpenAI KI-Beratungsassistent</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Unser KI-Beratungsassistent basiert auf der Technologie von OpenAI. Bei der Nutzung 
+                    des Chat-Assistenten werden Ihre Eingaben an OpenAI-Server übermittelt. OpenAI kann 
+                    dabei technische Cookies zur Funktionalität setzen.<br />
+                    <strong>Anbieter:</strong> OpenAI L.L.C., USA<br />
+                    <strong>Zweck:</strong> KI-gestützte Beratung zu Sanitär, Heizung und Haustechnik, 
+                    unverbindliche Preisschätzungen (Netto-Preise zzgl. 19% MwSt.)<br />
+                    <a href="https://openai.com/policies/privacy-policy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">
+                      Datenschutzerklärung von OpenAI
+                    </a>
+                  </p>
+                </div>
               </div>
             </section>
 

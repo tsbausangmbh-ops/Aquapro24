@@ -245,6 +245,31 @@ export default function DatenschutzPage() {
                 <strong>Drittlandtransfer:</strong> USA (Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO)<br />
                 <strong>Weitere Informationen:</strong> <a href="https://policies.google.com/privacy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>
               </p>
+
+              <h3 className="text-lg font-medium mb-2">KI-Beratungsassistent (OpenAI)</h3>
+              <p className="text-muted-foreground mb-4">
+                Auf unserer Website setzen wir einen KI-gestützten Beratungsassistenten ein, der auf 
+                der Technologie von OpenAI basiert. Dieser Assistent dient der ersten Beratung zu 
+                Sanitär-, Heizungs- und Haustechnikfragen sowie zur unverbindlichen Preisschätzung.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Verarbeitete Daten:</strong> Ihre Chat-Nachrichten und Eingaben werden zur 
+                Verarbeitung an die Server von OpenAI übermittelt. OpenAI verarbeitet diese Daten, 
+                um eine KI-generierte Antwort zu erstellen.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Anbieter:</strong> OpenAI L.L.C., 3180 18th Street, San Francisco, CA 94110, USA<br />
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Nutzung des Chats)<br />
+                <strong>Drittlandtransfer:</strong> USA (Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO)<br />
+                <strong>Speicherdauer:</strong> OpenAI speichert API-Anfragen für maximal 30 Tage zur Missbrauchserkennung, 
+                danach werden die Daten gelöscht. Wir speichern Chat-Verläufe nicht dauerhaft.<br />
+                <strong>Weitere Informationen:</strong> <a href="https://openai.com/policies/privacy-policy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">OpenAI Datenschutzerklärung</a>
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Hinweis:</strong> Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten 
+                (z.B. Gesundheitsdaten, Bankdaten) ein. Die vom KI-Assistenten genannten Preise sind 
+                unverbindliche Schätzungen (Netto-Preise zzgl. 19% MwSt.).
+              </p>
             </section>
 
             <section>
@@ -258,6 +283,7 @@ export default function DatenschutzPage() {
               <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
                 <li>Webhosting-Anbieter (Bereitstellung der Website)</li>
                 <li>Google Ireland Limited (Kalenderdienste)</li>
+                <li>OpenAI L.L.C. (KI-Beratungsassistent)</li>
                 <li>CRM-System-Anbieter (Kundenmanagement)</li>
               </ul>
 
