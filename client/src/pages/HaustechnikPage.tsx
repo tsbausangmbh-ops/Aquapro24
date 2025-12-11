@@ -352,7 +352,7 @@ export default function HaustechnikPage() {
                 <Button size="lg" asChild>
                   <a href="tel:+4915212274043" data-testid="button-call-haustechnik-cta">
                     <Phone className="w-5 h-5 mr-2" />
-                    089 123 456 789
+                    0152 12274043
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>

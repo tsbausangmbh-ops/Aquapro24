@@ -89,7 +89,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
               <a href="tel:+4915212274043">
                 <Button variant="secondary" className="w-full" data-testid="button-call-service-area">
                   <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen: 089 123 456 789
+                  Jetzt anrufen: 0152 12274043
                 </Button>
               </a>
             </div>

@@ -48,7 +48,7 @@ export default function Header() {
               data-testid="link-emergency-phone"
             >
               <Phone className="w-5 h-5" />
-              <span>089 123 456 789</span>
+              <span>0152 12274043</span>
             </a>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function Header() {
 
             <div className="hidden md:flex items-center gap-3">
               <Button data-testid="button-email-header" asChild>
-                <a href="mailto:info@sanitaer-muenchen.de">
+                <a href="mailto:info@kshw-muenchen.de">
                   <Mail className="w-4 h-4 mr-2" />
                   Email schreiben
                 </a>
@@ -221,7 +221,7 @@ export default function Header() {
               <Button className="mt-2" asChild data-testid="button-call-mobile">
                 <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />
-                  089 123 456 789
+                  0152 12274043
                 </a>
               </Button>
             </nav>

@@ -575,7 +575,7 @@ export default function Pricing() {
                     <Button 
                       variant="secondary"
                       className="w-full gap-2"
-                      onClick={() => window.location.href = 'mailto:info@sanitaer-muenchen.de?subject=Anfrage%20Sanitär%20Service'}
+                      onClick={() => window.location.href = 'mailto:info@kshw-muenchen.de?subject=Anfrage%20Sanitär%20Service'}
                       data-testid="button-email-inquiry"
                     >
                       <Mail className="w-4 h-4" />

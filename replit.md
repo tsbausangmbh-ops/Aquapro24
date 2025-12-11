@@ -1,8 +1,18 @@
-# Heizung & Sanitär Notdienst München
+# KSHW München - Sanitär & Heizung
 
 ## Overview
 
-A professional German-language website for a local heating and plumbing emergency service business in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert emergency service calls. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 emergency support.
+A professional German-language website for KSHW München (Inhaber: Ali Kemal Kurt), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
+
+## Company Information
+- **Company**: KSHW München
+- **Owner**: Ali Kemal Kurt  
+- **Address**: Zielstattstr. 20, 81379 München
+- **Phone**: 0152 12274043
+- **USt-IdNr**: DE356852204
+- **Type**: Einzelunternehmer (Sole Proprietor)
+- **Domain**: kshw-muenchen.de
+- **Established**: 2005 (Partnernetzwerk)
 
 ## User Preferences
 

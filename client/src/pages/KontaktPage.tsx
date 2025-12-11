@@ -33,22 +33,22 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    primary: "089 123 456 789",
+    primary: "0152 12274043",
     secondary: "24/7 Notdienst erreichbar",
     action: "tel:+4915212274043"
   },
   {
     icon: Mail,
     title: "E-Mail",
-    primary: "info@sanitaer-muenchen.de",
+    primary: "info@kshw-muenchen.de",
     secondary: "Antwort innerhalb 24h",
-    action: "mailto:info@sanitaer-muenchen.de"
+    action: "mailto:info@kshw-muenchen.de"
   },
   {
     icon: MapPin,
     title: "Adresse",
-    primary: "Musterstraße 123",
-    secondary: "80331 München",
+    primary: "Zielstattstr. 20",
+    secondary: "81379 München",
     action: "https://maps.google.com/?q=München"
   },
   {
@@ -115,7 +115,7 @@ export default function KontaktPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Kontakt | KSHW München - Sanitär & Heizung München"
-        description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 089 123 456 789. Kostenlose Beratung, schnelle Termine."
+        description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0152 12274043. Kostenlose Beratung, schnelle Termine."
         canonical="https://kshw-muenchen.de/kontakt"
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst, Badsanierung München Beratung"
       />
@@ -223,7 +223,7 @@ export default function KontaktPage() {
                         <Label htmlFor="street">Straße & Hausnummer *</Label>
                         <Input
                           id="street"
-                          placeholder="z.B. Musterstraße 123"
+                          placeholder="z.B. Zielstattstr. 20"
                           value={formData.street}
                           onChange={(e) => setFormData({ ...formData, street: e.target.value })}
                           required
@@ -235,7 +235,7 @@ export default function KontaktPage() {
                         <Label htmlFor="zipCity">PLZ & Ort *</Label>
                         <Input
                           id="zipCity"
-                          placeholder="z.B. 80333 München"
+                          placeholder="z.B. 81379 München"
                           value={formData.zipCity}
                           onChange={(e) => setFormData({ ...formData, zipCity: e.target.value })}
                           required
@@ -320,7 +320,7 @@ export default function KontaktPage() {
                           <Button className="bg-accent text-accent-foreground" asChild>
                             <a href="tel:+4915212274043" data-testid="button-emergency-call">
                               <Phone className="w-4 h-4 mr-2" />
-                              089 123 456 789
+                              0152 12274043
                             </a>
                           </Button>
                         </div>
@@ -405,8 +405,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium">Musterstraße 123</p>
-                        <p className="text-muted-foreground">80331 München</p>
+                        <p className="font-medium">Zielstattstr. 20</p>
+                        <p className="text-muted-foreground">81379 München</p>
                         <p className="text-muted-foreground">Deutschland</p>
                       </div>
                     </div>
@@ -414,7 +414,7 @@ export default function KontaktPage() {
                       <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
                         <a href="tel:+4915212274043" className="font-medium hover:text-secondary">
-                          089 123 456 789
+                          0152 12274043
                         </a>
                         <p className="text-sm text-muted-foreground">24/7 Notdienst</p>
                       </div>
@@ -422,8 +422,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <a href="mailto:info@sanitaer-muenchen.de" className="font-medium hover:text-secondary">
-                          info@sanitaer-muenchen.de
+                        <a href="mailto:info@kshw-muenchen.de" className="font-medium hover:text-secondary">
+                          info@kshw-muenchen.de
                         </a>
                         <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
                       </div>
@@ -441,7 +441,7 @@ export default function KontaktPage() {
                 </div>
                 <Button size="lg" className="w-full sm:w-auto" asChild>
                   <a 
-                    href="https://maps.google.com/?q=Musterstraße+123+80331+München" 
+                    href="https://maps.google.com/?q=Zielstattstr.+20+81379+München" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     data-testid="button-google-maps"
@@ -478,8 +478,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>Musterstraße 123</p>
-                        <p className="text-sm text-muted-foreground">80331 München</p>
+                        <p>Zielstattstr. 20</p>
+                        <p className="text-sm text-muted-foreground">81379 München</p>
                       </div>
                     </div>
                   </div>
@@ -487,14 +487,14 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>089 123 456 789</p>
-                        <p className="text-sm text-muted-foreground">Fax: 089 123 456 780</p>
+                        <p>0152 12274043</p>
+                        <p className="text-sm text-muted-foreground">Fax: 0152 12274043</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>info@sanitaer-muenchen.de</p>
+                        <p>info@kshw-muenchen.de</p>
                         <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
                       </div>
                     </div>
@@ -509,7 +509,7 @@ export default function KontaktPage() {
                       <span className="font-medium text-foreground">USt-IdNr:</span> DE123456789
                     </div>
                     <div>
-                      <span className="font-medium text-foreground">Geschäftsführer:</span> Max Mustermann
+                      <span className="font-medium text-foreground">Inhaber:</span> Ali Kemal Kurt
                     </div>
                   </div>
                 </div>

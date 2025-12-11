@@ -33,7 +33,7 @@ export default function DatenschutzPage() {
               <p className="text-sm text-muted-foreground">
                 Wir nehmen den Schutz Ihrer Daten ernst. Diese Seite erklärt, welche Daten wir erheben, 
                 warum wir das tun und welche Rechte Sie haben. Bei Fragen erreichen Sie uns unter 
-                info@sanitaer-muenchen.de oder 089 123 456 789.
+                info@kshw-muenchen.de oder 0152 12274043.
               </p>
             </CardContent>
           </Card>
@@ -46,22 +46,22 @@ export default function DatenschutzPage() {
               <h3 className="text-lg font-medium mb-2">Verantwortlicher gemäß Art. 4 Abs. 7 DSGVO</h3>
               <p className="text-muted-foreground mb-4">
                 KSHW München GmbH<br />
-                Musterstraße 123<br />
-                80331 München<br />
+                Zielstattstr. 20<br />
+                81379 München<br />
                 Deutschland<br />
                 <br />
                 <span className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" /> 089 123 456 789
+                  <Phone className="w-4 h-4" /> 0152 12274043
                 </span>
                 <span className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" /> info@sanitaer-muenchen.de
+                  <Mail className="w-4 h-4" /> info@kshw-muenchen.de
                 </span>
               </p>
 
               <h3 className="text-lg font-medium mb-2">Datenschutzbeauftragter</h3>
               <p className="text-muted-foreground mb-4">
                 Bei Fragen zum Datenschutz erreichen Sie unseren Datenschutzbeauftragten unter:<br />
-                E-Mail: datenschutz@sanitaer-muenchen.de
+                E-Mail: datenschutz@kshw-muenchen.de
               </p>
             </section>
 
@@ -350,18 +350,18 @@ export default function DatenschutzPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="mailto:datenschutz@sanitaer-muenchen.de" 
+                  href="mailto:datenschutz@kshw-muenchen.de" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                 >
                   <Mail className="w-4 h-4" />
-                  datenschutz@sanitaer-muenchen.de
+                  datenschutz@kshw-muenchen.de
                 </a>
                 <a 
                   href="tel:+4915212274043" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                 >
                   <Phone className="w-4 h-4" />
-                  089 123 456 789
+                  0152 12274043
                 </a>
               </div>
             </section>

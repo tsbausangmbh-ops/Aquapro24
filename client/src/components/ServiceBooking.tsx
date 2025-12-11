@@ -488,7 +488,7 @@ export default function ServiceBooking({
                       id="name"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      placeholder="Max Mustermann"
+                      placeholder="Ali Kemal Kurt"
                       data-testid="input-name"
                     />
                   </div>
@@ -500,7 +500,7 @@ export default function ServiceBooking({
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="089 123456"
+                        placeholder="0152 12274043"
                         data-testid="input-phone"
                       />
                     </div>
@@ -522,7 +522,7 @@ export default function ServiceBooking({
                       id="street"
                       value={formData.street}
                       onChange={(e) => handleInputChange('street', e.target.value)}
-                      placeholder="Musterstraße 12"
+                      placeholder="Zielstattstr. 20"
                       data-testid="input-street"
                     />
                   </div>
@@ -532,7 +532,7 @@ export default function ServiceBooking({
                       id="zipCity"
                       value={formData.zipCity}
                       onChange={(e) => handleInputChange('zipCity', e.target.value)}
-                      placeholder="80331 München"
+                      placeholder="81379 München"
                       data-testid="input-zip-city"
                     />
                   </div>
@@ -593,7 +593,7 @@ export default function ServiceBooking({
               <Button variant="outline" size="sm" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-booking">
                   <Phone className="w-4 h-4 mr-2" />
-                  089 123 456 789
+                  0152 12274043
                 </a>
               </Button>
             </div>

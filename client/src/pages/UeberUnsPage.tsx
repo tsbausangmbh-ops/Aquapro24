@@ -124,11 +124,11 @@ export default function UeberUnsPage() {
                   <Button size="lg" asChild>
                     <a href="tel:+4915212274043" data-testid="button-call-about">
                       <Phone className="w-5 h-5 mr-2" />
-                      089 123 456 789
+                      0152 12274043
                     </a>
                   </Button>
                   <Button size="lg" variant="secondary" asChild>
-                    <a href="mailto:info@sanitaer-muenchen.de" data-testid="button-email-about">
+                    <a href="mailto:info@kshw-muenchen.de" data-testid="button-email-about">
                       Anfrage senden
                     </a>
                   </Button>
@@ -198,7 +198,7 @@ export default function UeberUnsPage() {
                     und die beste Lösung dafür.
                   </p>
                   <p>
-                    Unser <strong className="text-foreground">Geschäftsführer</strong> mit 26 Jahren 
+                    Unser <strong className="text-foreground">Inhaber</strong> mit 26 Jahren 
                     Erfahrung sorgt für professionelle Abläufe, klare Kommunikation und faire Preise.
                   </p>
                 </div>
@@ -318,11 +318,11 @@ export default function UeberUnsPage() {
               <Button size="lg" variant="secondary" asChild>
                 <a href="tel:+4915212274043">
                   <Phone className="w-5 h-5 mr-2" />
-                  089 123 456 789
+                  0152 12274043
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground" asChild>
-                <a href="mailto:info@sanitaer-muenchen.de">
+                <a href="mailto:info@kshw-muenchen.de">
                   Anfrage senden
                 </a>
               </Button>

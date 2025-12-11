@@ -372,7 +372,7 @@ export default function SanitaerPage() {
               <Button size="lg" variant="outline" className="bg-background text-foreground" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  089 123 456 789
+                  0152 12274043
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>

@@ -397,7 +397,7 @@ export default function RatgeberPage() {
               <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90" asChild>
                 <a href="tel:+4915212274043">
                   <Phone className="w-5 h-5 mr-2" />
-                  089 123 456 789
+                  0152 12274043
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10" asChild>

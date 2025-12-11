@@ -53,10 +53,10 @@ export default function CookieRichtliniePage() {
               </p>
               <p className="text-muted-foreground mb-4">
                 KSHW München GmbH<br />
-                Musterstraße 123<br />
-                80331 München<br />
-                E-Mail: info@sanitaer-muenchen.de<br />
-                Telefon: 089 123 456 789
+                Zielstattstr. 20<br />
+                81379 München<br />
+                E-Mail: info@kshw-muenchen.de<br />
+                Telefon: 0152 12274043
               </p>
             </section>
 
@@ -278,8 +278,8 @@ export default function CookieRichtliniePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="secondary" asChild>
-                  <a href="mailto:datenschutz@sanitaer-muenchen.de">
-                    datenschutz@sanitaer-muenchen.de
+                  <a href="mailto:datenschutz@kshw-muenchen.de">
+                    datenschutz@kshw-muenchen.de
                   </a>
                 </Button>
                 <Button variant="outline" asChild>

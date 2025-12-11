@@ -31,7 +31,7 @@ export default function CTABanner() {
           >
             <a href="tel:+4915212274043">
               <Phone className="w-6 h-6" />
-              089 123 456 789
+              0152 12274043
             </a>
           </Button>
           <Button 
