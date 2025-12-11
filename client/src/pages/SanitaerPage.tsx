@@ -122,7 +122,6 @@ export default function SanitaerPage() {
         }}
       />
       <Header />
-      <TrustBar />
       
       <main className="flex-1">
         <section className="relative py-6 md:pt-8 pb-4 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
@@ -192,6 +191,8 @@ export default function SanitaerPage() {
             </div>
           </div>
         </section>
+
+        <TrustBar />
 
         <NLPSection
           problemTitle="Kennen Sie diese Probleme?"

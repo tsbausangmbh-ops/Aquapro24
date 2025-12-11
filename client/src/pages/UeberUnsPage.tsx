@@ -98,7 +98,6 @@ export default function UeberUnsPage() {
         keywords="Über uns Sanitär München, Partnernetzwerk Heizung Schwabing, Team Installateur Bogenhausen, Fachbetriebe Sendling, Team Pasing, Partner Maxvorstadt, Betrieb Haidhausen, Neuhausen"
       />
       <Header />
-      <TrustBar />
       <main>
         {/* Hero Section */}
         <section className="relative pt-8 pb-4 lg:pt-10 lg:pb-6">
@@ -160,6 +159,8 @@ export default function UeberUnsPage() {
             </div>
           </div>
         </section>
+
+        <TrustBar />
 
         {/* Stats Section */}
         <section className="pt-8 pb-4 bg-muted/30">

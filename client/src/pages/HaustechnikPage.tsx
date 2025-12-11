@@ -110,7 +110,6 @@ export default function HaustechnikPage() {
         }}
       />
       <Header />
-      <TrustBar />
       <main>
         <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-emerald-500/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -183,6 +182,8 @@ export default function HaustechnikPage() {
             </div>
           </div>
         </section>
+
+        <TrustBar />
 
         <NLPSection
           problemTitle="Typische Haustechnik-Herausforderungen"
