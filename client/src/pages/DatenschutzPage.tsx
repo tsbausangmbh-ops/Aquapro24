@@ -350,11 +350,11 @@ export default function DatenschutzPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="mailto:datenschutz@aquapro24.de" 
+                  href="mailto:info@aquapro24.de" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                 >
                   <Mail className="w-4 h-4" />
-                  datenschutz@aquapro24.de
+                  info@aquapro24.de
                 </a>
                 <a 
                   href="tel:+4915212274043" 
