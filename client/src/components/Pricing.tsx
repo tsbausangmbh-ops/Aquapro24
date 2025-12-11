@@ -350,7 +350,7 @@ export default function Pricing() {
                     <div className="space-y-4">
                       <div className="bg-card rounded-lg p-4 border border-card-border">
                         <p className="text-sm">
-                          Hallo! Ich bin Ihr virtueller Assistent. Ich helfe Ihnen gerne bei:
+                          Hallo! Ich bin Ihr virtueller Assistent. Ich beantworte Ihre Anfragen.
                         </p>
                         <ul className="text-sm text-muted-foreground mt-2 space-y-1">
                           <li className="flex items-center gap-2">
