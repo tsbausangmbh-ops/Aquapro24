@@ -25,9 +25,9 @@ export default function Impressum() {
           <div className="space-y-4">
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>
+                <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt gemäß § 5 TMG:</h2>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="text-foreground font-medium">KSHW München</p>
+                  <p className="text-foreground font-medium text-lg">KSHW München</p>
                   <p>Inhaber: Ali Kemal Kurt</p>
                   <p>Zielstattstr. 20</p>
                   <p>81379 München</p>
@@ -56,6 +56,17 @@ export default function Impressum() {
                     <MapPin className="w-4 h-4 text-secondary" />
                     <span>Zielstattstr. 20, 81379 München</span>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6 lg:p-8">
+                <h2 className="text-xl font-semibold mb-4">Betriebsverantwortung</h2>
+                <div className="space-y-2 text-muted-foreground">
+                  <p>
+                    Die Webseite AquaPro24.de wird von der KSHW München verwaltet, betrieben und technisch administriert.
+                  </p>
                 </div>
               </CardContent>
             </Card>
