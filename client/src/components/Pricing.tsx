@@ -328,7 +328,9 @@ export default function Pricing() {
                 </p>
                 <p className="text-sm text-muted-foreground mb-6 bg-muted/50 p-3 rounded-md">
                   <strong className="text-foreground">Hinweis:</strong> Bei kleinen Arbeiten wie WC-Montage, Armaturen-Austausch usw. erhalten Sie direkt am Telefon einen verbindlichen Festpreis.<br /><br />
-                  Bei größeren Projekten erstellen wir Ihnen nach einer kostenlosen Vor-Ort-Besichtigung ein detailliertes Angebot.
+                  Bei größeren Projekten erstellen wir Ihnen nach einer kostenlosen Vor-Ort-Besichtigung ein detailliertes Angebot.<br /><br />
+                  <strong className="text-foreground">Alle Preise sind Netto-Preise</strong> (zzgl. 19% MwSt.) und basieren auf den aktuellen Münchner Marktpreisen.<br /><br />
+                  <span className="text-xs">Beispiele: Tropfende Armatur ab 120 EUR netto | Rohrverstopfung ab 200 EUR netto | Heizungswartung ab 180 EUR netto</span>
                 </p>
                 <ul className="space-y-3">
                   {guarantees.map((guarantee, index) => (
