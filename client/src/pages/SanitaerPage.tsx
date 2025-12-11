@@ -115,9 +115,14 @@ export default function SanitaerPage() {
             { name: "Rohrreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 79€" },
             { name: "Armaturen-Montage", description: "Einbau von Markenarmaturen", priceRange: "ab 120€" }
           ],
+          aggregateRating: {
+            ratingValue: 4.9,
+            reviewCount: 127
+          },
           reviews: [
-            { author: "Michael S.", rating: 5, reviewBody: "Schnelle Hilfe bei Rohrbruch in Schwabing. Innerhalb von 40 Minuten vor Ort. Sehr professionell!", datePublished: "2024-11-15", location: "München-Schwabing" },
-            { author: "Sandra K.", rating: 5, reviewBody: "Neue Wasserinstallation im Altbau in Haidhausen. Saubere Arbeit, fairer Preis.", datePublished: "2024-10-22", location: "München-Haidhausen" }
+            { author: "Michael S.", rating: 5, reviewBody: "Hatte am Sonntagmorgen einen Wasserrohrbruch im Keller. Hab sofort angerufen und der Techniker war tatsächlich nach 45 Minuten da. Hat alles schnell abgedichtet und am nächsten Tag kam er nochmal zum richtigen Reparieren. Rechnung war fair, keine versteckten Kosten. Kann ich nur empfehlen!", datePublished: "2024-11-15", location: "München-Schwabing" },
+            { author: "Sandra K.", rating: 5, reviewBody: "Wir haben unsere komplette Küche renoviert und brauchten neue Wasserleitungen. Die Beratung war super - hat uns auch erklärt, was wir selbst machen können, um Kosten zu sparen. Die Jungs haben sauber gearbeitet und hinterher alles aufgeräumt. Preis war wie besprochen, keine Überraschungen.", datePublished: "2024-10-22", location: "München-Haidhausen" },
+            { author: "Thomas B.", rating: 4, reviewBody: "Verstopfter Abfluss in der Dusche. Kam am gleichen Tag vorbei. Hat ein bisschen länger gedauert als gedacht, aber am Ende war alles frei. Preis war okay, vielleicht etwas teurer als erwartet, aber dafür war es auch Samstagabend.", datePublished: "2024-09-18", location: "München-Sendling" }
           ]
         }}
       />

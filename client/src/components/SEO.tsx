@@ -19,6 +19,13 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface AggregateRatingSchema {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -35,6 +42,7 @@ interface SEOProps {
     areaServed: string[];
     offers?: OfferSchema[];
     reviews?: ReviewSchema[];
+    aggregateRating?: AggregateRatingSchema;
   };
 }
 
@@ -200,36 +208,6 @@ const LOCAL_BUSINESS_SCHEMA = {
       }
     ]
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 4.9,
-    "reviewCount": 2847,
-    "bestRating": 5,
-    "worstRating": 1
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "M. Schneider" },
-      "datePublished": "2024-11-15",
-      "reviewBody": "Endlich ein Handwerker, der pünktlich ist und hält, was er verspricht. Die Badsanierung war perfekt geplant.",
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "K. Wagner" },
-      "datePublished": "2024-10-22",
-      "reviewBody": "Professionell, freundlich, faire Rechnung. Absolute Empfehlung für Sanitärarbeiten in München!",
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "S. Hoffmann" },
-      "datePublished": "2024-09-08",
-      "reviewBody": "Kompetente Wärmepumpen-Beratung ohne Verkaufsdruck. Spare jetzt 55% Heizkosten.",
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
-    }
-  ],
   "sameAs": [
     "https://www.facebook.com/aquapro24",
     "https://www.instagram.com/aquapro24_muenchen",
@@ -412,6 +390,16 @@ export default function SEO({
         });
       }
 
+      if (serviceSchema.aggregateRating) {
+        serviceSchemaData["aggregateRating"] = {
+          "@type": "AggregateRating",
+          "ratingValue": serviceSchema.aggregateRating.ratingValue,
+          "reviewCount": serviceSchema.aggregateRating.reviewCount,
+          "bestRating": serviceSchema.aggregateRating.bestRating || 5,
+          "worstRating": serviceSchema.aggregateRating.worstRating || 1
+        };
+      }
+
       if (serviceSchema.reviews && serviceSchema.reviews.length > 0) {
         serviceSchemaData["review"] = serviceSchema.reviews.map(review => ({
           "@type": "Review",
@@ -419,10 +407,16 @@ export default function SEO({
             "@type": "Person",
             "name": review.author
           },
+          "itemReviewed": {
+            "@type": "Service",
+            "name": serviceSchema.name,
+            "@id": `https://aquapro24.de/#${serviceSchema.serviceType.toLowerCase().replace(/\s+/g, '-')}`
+          },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": review.rating,
-            "bestRating": 5
+            "bestRating": 5,
+            "worstRating": 1
           },
           "reviewBody": review.reviewBody,
           "datePublished": review.datePublished,

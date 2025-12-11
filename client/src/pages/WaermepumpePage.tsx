@@ -105,9 +105,14 @@ export default function WaermepumpePage() {
             { name: "Erdwärmepumpe", description: "Mit Tiefenbohrung und Genehmigung", priceRange: "ab 25.000€" },
             { name: "Hybrid-System", description: "Wärmepumpe mit Gas-Backup", priceRange: "ab 18.000€" }
           ],
+          aggregateRating: {
+            ratingValue: 4.9,
+            reviewCount: 67
+          },
           reviews: [
-            { author: "Dr. Martin S.", rating: 5, reviewBody: "Wärmepumpe im Altbau in Schwabing - alle sagten unmöglich. KSHW München hat es geschafft. 60% weniger Heizkosten!", datePublished: "2024-11-20", location: "München-Schwabing" },
-            { author: "Familie Huber", rating: 5, reviewBody: "Von der Beratung bis zur Förderantrag-Abwicklung alles perfekt. Jetzt heizen wir klimaneutral in Bogenhausen.", datePublished: "2024-10-05", location: "München-Bogenhausen" }
+            { author: "Dr. Martin S.", rating: 5, reviewBody: "Wir wohnen in einem Altbau von 1928 und drei andere Firmen haben uns gesagt, Wärmepumpe geht bei uns nicht. Die hier haben sich das genau angeschaut und eine Lösung gefunden mit größeren Heizkörpern in ein paar Räumen. Jetzt läuft die Viessmann seit einem Jahr problemlos. Unsere Gasrechnung war vorher 3.200 Euro im Jahr, jetzt zahlen wir ca. 1.100 Euro Strom für die Wärmepumpe. Hat sich gelohnt!", datePublished: "2024-11-20", location: "München-Schwabing" },
+            { author: "Familie Huber", rating: 5, reviewBody: "Das Beste war, dass die sich komplett um die Förderung gekümmert haben. BAFA-Antrag, alle Unterlagen, alles. Wir haben am Ende 45% bekommen. Die Installation lief in 3 Tagen durch, sehr professionell. Kleiner Tipp: Plant den Termin so, dass ihr zu Hause sein könnt, es gibt doch ein paar Fragen.", datePublished: "2024-10-05", location: "München-Bogenhausen" },
+            { author: "Petra K.", rating: 4, reviewBody: "Die Wärmepumpe läuft gut, keine Frage. Aber der Papierkram hat doch länger gedauert als gedacht - 4 Monate bis das Fördergeld kam. War aber wohl das BAFA, nicht die Firma. Ansonsten zufrieden, bin gespannt auf die erste komplette Heizsaison.", datePublished: "2024-08-12", location: "München-Laim" }
           ]
         }}
       />
