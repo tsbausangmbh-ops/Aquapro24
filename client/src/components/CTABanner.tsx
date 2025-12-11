@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, MapPin, Shield } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Shield } from "lucide-react";
 
 export default function CTABanner() {
   return (
@@ -37,14 +37,13 @@ export default function CTABanner() {
           <Button 
             size="lg" 
             className="gap-2 bg-emerald-600 text-white border-emerald-700"
-            onClick={() => {
-              const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
-              if (chatButton) chatButton.click();
-            }}
+            asChild
             data-testid="button-callback-cta"
           >
-            <Clock className="w-5 h-5" />
-            Rückruf bitte
+            <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-5 h-5" />
+              Rückruf bitte
+            </a>
           </Button>
         </div>
         

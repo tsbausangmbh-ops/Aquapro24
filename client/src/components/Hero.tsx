@@ -8,7 +8,8 @@ import {
   CheckCircle2,
   Thermometer,
   Droplets,
-  AlertTriangle
+  AlertTriangle,
+  MessageCircle
 } from "lucide-react";
 
 export default function Hero() {
@@ -58,14 +59,13 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 className="gap-2 bg-emerald-600 text-white border-emerald-700" 
-                onClick={() => {
-                  const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
-                  if (chatButton) chatButton.click();
-                }}
+                asChild
                 data-testid="button-callback-hero"
               >
-                <Clock className="w-4 h-4" />
-                Rückruf bitte
+                <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4" />
+                  Rückruf bitte
+                </a>
               </Button>
             </div>
             

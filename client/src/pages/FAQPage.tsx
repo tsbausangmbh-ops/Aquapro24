@@ -24,7 +24,8 @@ import {
   Users,
   Sparkles,
   Calendar,
-  Hammer
+  Hammer,
+  MessageCircle
 } from "lucide-react";
 
 const faqs = [
@@ -264,12 +265,11 @@ export default function FAQPage() {
                   089 123 456 789
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" onClick={() => {
-                const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
-                if (chatButton) chatButton.click();
-              }}>
-                <Clock className="w-5 h-5 mr-2" />
-                Rückruf anfordern
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Rückruf anfordern
+                </a>
               </Button>
               <Button size="lg" variant="secondary" asChild>
                 <a href="tel:+4989123456789" data-testid="button-emergency-faq">
