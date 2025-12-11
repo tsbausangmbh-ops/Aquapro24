@@ -45,7 +45,7 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-6 lg:py-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-6">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-4">
@@ -81,7 +81,7 @@ export default function Footer() {
           ))}
         </div>
         
-        <div className="border-t border-background/10 mt-4 pt-3">
+        <div className="border-t border-background/10 mt-3 pt-2">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/50">
               © {new Date().getFullYear()} Münchner Heizung & Sanitär GmbH. Alle Rechte vorbehalten.
