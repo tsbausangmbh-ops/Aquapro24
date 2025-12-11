@@ -89,15 +89,15 @@ export default function HaustechnikPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | Komplettservice"
-        description="Haustechnik München aus einer Hand: Wasserinstallation, Gasanlagen, kontrollierte Wohnraumlüftung, Smart Home. Ein Ansprechpartner für alles. 500+ Projekte in Schwabing, Bogenhausen, Sendling."
-        canonical="https://kshw-muenchen.de/haustechnik"
-        keywords="Haustechnik München, Wasserinstallation Schwabing, Gasinstallation Bogenhausen, Lüftungstechnik Sendling, Smart Home Pasing, Gebäudetechnik Maxvorstadt, Haustechnik Haidhausen, KWL Neuhausen"
+        title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | AquaPro24"
+        description="Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Kostenlose Beratung: 0152 12274043"
+        canonical="https://aquapro24.de/haustechnik"
+        keywords="Haustechnik München, Wasserinstallation Schwabing, Gasinstallation Bogenhausen, Lüftungstechnik Sendling, Smart Home München, Gebäudetechnik Pasing, Haustechnik Maxvorstadt, KWL Haidhausen, Wohnraumlüftung Neuhausen, Haustechnik Trudering, Gasinstallateur Laim, Haustechnik Giesing, Lüftungsanlage Moosach, Smart Home Milbertshofen, kontrollierte Wohnraumlüftung München"
         serviceSchema={{
-          name: "Haustechnik München",
-          description: "Komplette Haustechnik aus einer Hand in München - über 500 realisierte Projekte seit 2005",
+          name: "AquaPro24 Haustechnik München",
+          description: "Komplette Haustechnik München: Wasser, Gas, Lüftung, Smart Home aus einer Hand. 500+ Projekte seit 2005, zertifizierte Meisterbetriebe.",
           serviceType: "Building Services Engineering",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
             { name: "Kontrollierte Wohnraumlüftung", description: "KWL mit Wärmerückgewinnung", priceRange: "ab 3.500€" },
             { name: "Smart Home Heizungssteuerung", description: "Intelligente Steuerung per App", priceRange: "ab 500€" },

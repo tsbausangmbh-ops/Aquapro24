@@ -101,15 +101,15 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitärinstallation München | Wasserinstallation & Klempner | Partnernetzwerk seit 2005"
-        description="Professionelle Sanitärinstallation in München: Wasserinstallation, Rohrreinigung, Armaturen-Reparatur. Festpreisgarantie, 2.847+ zufriedene Kunden in Schwabing, Bogenhausen, Sendling. Geprüfte Partnerbetriebe."
-        canonical="https://kshw-muenchen.de/sanitaer"
-        keywords="Sanitär München, Wasserinstallation München, Klempner Schwabing, Rohrreinigung Bogenhausen, Sanitär Sendling, Wasserleitungen Pasing, Armaturen Maxvorstadt, Sanitärinstallation Haidhausen, Installateur Neuhausen"
+        title="Sanitär München | Klempner Notdienst 24/7 | Festpreis ab 89€ | AquaPro24"
+        description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0152 12274043"
+        canonical="https://aquapro24.de/sanitaer"
+        keywords="Sanitär München, Klempner Notdienst München, Rohrbruch München, Wasserinstallation Schwabing, Rohrreinigung Bogenhausen, Sanitär Notdienst Sendling, Klempner Pasing, Abfluss verstopft Maxvorstadt, Sanitärinstallation Haidhausen, Installateur Neuhausen, Klempner Trudering, Sanitär Laim, Rohrreinigung Giesing, Wasserschaden Moosach, Sanitär Milbertshofen"
         serviceSchema={{
-          name: "Sanitärinstallation München",
-          description: "Professionelle Sanitärinstallation und Wasserinstallation in München - Partnernetzwerk seit 2005 mit über 2.847 zufriedenen Kunden",
+          name: "AquaPro24 Sanitärservice München",
+          description: "Sanitär-Notdienst München: Rohrbruch, Verstopfung, Wasserschaden. 45 Min. Reaktionszeit, Festpreis, 24/7 erreichbar. Meisterbetrieb seit 2005.",
           serviceType: "Plumbing",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
             { name: "Wasserinstallation", description: "Professionelle Installation von Wasserleitungen", priceRange: "ab 89€" },
             { name: "Rohrreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 79€" },

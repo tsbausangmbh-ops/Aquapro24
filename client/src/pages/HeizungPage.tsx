@@ -89,15 +89,15 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung München | Installation, Wartung & Reparatur | Alle Marken | Partnernetzwerk"
-        description="Heizungsinstallation und Wartung in München: Gasheizung, Ölheizung, Fußbodenheizung. Förderberatung bis 70%, Festpreise. 1.200+ Heizungsanlagen in Schwabing, Bogenhausen, Sendling installiert."
-        canonical="https://kshw-muenchen.de/heizung"
-        keywords="Heizung München, Heizungsinstallation Schwabing, Heizungswartung Bogenhausen, Gasheizung Sendling, Heizungsreparatur Pasing, Fußbodenheizung Maxvorstadt, Heizungstausch Haidhausen, Heizung Neuhausen"
+        title="Heizung München | Notdienst 24/7 | Wartung ab 149€ | AquaPro24"
+        description="Heizung München: Notdienst bei Ausfall, Wartung, Reparatur, Neuinstallation. Alle Marken, 45 Min. vor Ort, Förderberatung bis 70%. 1.200+ Anlagen installiert. Tel: 0152 12274043"
+        canonical="https://aquapro24.de/heizung"
+        keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung Schwabing, Gasheizung Bogenhausen, Heizung kaputt Sendling, Heizungsinstallation Pasing, Fußbodenheizung Maxvorstadt, Heizungstausch Haidhausen, Heizung Neuhausen, Heizungsmonteur Trudering, Heizung reparieren Laim, Heizungswartung Giesing, Heizung Moosach, Heizungsservice Milbertshofen, Viessmann München, Vaillant München"
         serviceSchema={{
-          name: "Heizungsservice München",
-          description: "Heizungsinstallation, Wartung und Reparatur in München - über 1.200 installierte Anlagen seit 2005",
+          name: "AquaPro24 Heizungsservice München",
+          description: "Heizungsnotdienst München: 24/7 Reparatur, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus, Wolf.",
           serviceType: "HVAC",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
             { name: "Gasheizung Installation", description: "Moderne Gasbrennwerttechnik", priceRange: "ab 6.000€" },
             { name: "Heizungswartung", description: "Jährliche Inspektion und Optimierung", priceRange: "ab 149€" },

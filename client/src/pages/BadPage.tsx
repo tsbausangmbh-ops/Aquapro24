@@ -88,15 +88,15 @@ export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Badsanierung München | Komplettumbau zum Festpreis ab 8.900€ | 5 Jahre Garantie"
-        description="Badsanierung in München vom Partnernetzwerk: Komplettumbau in 2-4 Wochen, 3D-Planung inklusive, barrierefreie Bäder. 847+ renovierte Bäder in Schwabing, Bogenhausen, Sendling. Festpreis ohne Überraschungen."
-        canonical="https://kshw-muenchen.de/bad"
-        keywords="Badsanierung München, Bad renovieren Schwabing, Badezimmer sanieren Bogenhausen, Komplettbad Sendling, barrierefreies Bad Pasing, Badumbau Maxvorstadt, Badsanierung Haidhausen, Traumbad Neuhausen"
+        title="Badsanierung München | Festpreis ab 8.900€ | 3D-Planung gratis | AquaPro24"
+        description="Badsanierung München in 2-3 Wochen: Komplettumbau, barrierefreies Bad, Luxusbad. 847+ Traumbäder realisiert, 5 Jahre Garantie, KfW-Förderung. Kostenlose 3D-Planung! Tel: 0152 12274043"
+        canonical="https://aquapro24.de/bad"
+        keywords="Badsanierung München, Bad renovieren Schwabing, Badezimmer sanieren Bogenhausen, Komplettbad Sendling, barrierefreies Bad München, Badumbau Pasing, Badsanierung Maxvorstadt, Traumbad Haidhausen, Bad sanieren Neuhausen, Badsanierung Trudering, Badmodernisierung Laim, Badsanierung Giesing, Badezimmer Moosach, Bad erneuern Milbertshofen, seniorengerechtes Bad München"
         serviceSchema={{
-          name: "Badsanierung München",
-          description: "Komplette Badsanierung in München - von der 3D-Planung bis zur Abnahme. Über 847 renovierte Bäder seit 2005.",
+          name: "AquaPro24 Badsanierung München",
+          description: "Badsanierung München: Komplettumbau in 2-3 Wochen, 3D-Planung inklusive, barrierefreie Bäder mit KfW-Förderung. 847+ Traumbäder seit 2005.",
           serviceType: "Bathroom Renovation",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
             { name: "Komplettsanierung", description: "Komplettumbau mit Fliesen, Sanitär, Elektrik", priceRange: "ab 8.900€" },
             { name: "Teilsanierung", description: "Gezielte Modernisierung einzelner Bereiche", priceRange: "ab 2.500€" },

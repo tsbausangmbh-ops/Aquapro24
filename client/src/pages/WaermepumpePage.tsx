@@ -91,15 +91,15 @@ export default function WaermepumpePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Wärmepumpe München | Bis 70% Förderung 2024/2025 | Luft-Wasser & Erdwärme"
-        description="Wärmepumpe in München: Bis 70% staatliche Förderung, 50% Heizkosten sparen. Luft-Wasser-Wärmepumpe ab 15.000€. 320+ Installationen in Schwabing, Bogenhausen, Sendling. Zertifizierter Fachbetrieb."
-        canonical="https://kshw-muenchen.de/waermepumpe"
-        keywords="Wärmepumpe München, Luft-Wasser-Wärmepumpe Schwabing, Erdwärmepumpe Bogenhausen, Wärmepumpe Förderung Bayern, Heizungstausch Sendling, Wärmepumpe Pasing, klimaneutral Maxvorstadt, Wärmepumpe Haidhausen, Heizungstausch Neuhausen"
+        title="Wärmepumpe München | Bis 70% BAFA-Förderung 2025 | Ab 12.000€ | AquaPro24"
+        description="Wärmepumpe München: Bis 70% staatliche Förderung (BAFA/KfW), 50% Heizkosten sparen. Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. 320+ Installationen. Kostenlose Beratung: 0152 12274043"
+        canonical="https://aquapro24.de/waermepumpe"
+        keywords="Wärmepumpe München, Wärmepumpe Förderung 2025, BAFA Förderung Wärmepumpe München, Luft-Wasser-Wärmepumpe Schwabing, Erdwärmepumpe Bogenhausen, Wärmepumpe Altbau Sendling, Heizungstausch Förderung Pasing, Wärmepumpe Maxvorstadt, Wärmepumpe Installation Haidhausen, klimaneutral heizen Neuhausen, Wärmepumpe Trudering, Luftwärmepumpe Laim, Wärmepumpe Giesing, Wärmepumpe Moosach, Wärmepumpe Milbertshofen, Vaillant Wärmepumpe, Viessmann Wärmepumpe München"
         serviceSchema={{
-          name: "Wärmepumpen-Installation München",
-          description: "Installation von Wärmepumpen in München mit bis zu 70% Förderung - über 320 erfolgreiche Installationen",
+          name: "AquaPro24 Wärmepumpen München",
+          description: "Wärmepumpen-Installation München: Bis 70% BAFA/KfW-Förderung, Luft-Wasser & Erdwärme, komplette Antragstellung. 320+ erfolgreiche Installationen seit 2005.",
           serviceType: "Heat Pump Installation",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
             { name: "Luft-Wasser-Wärmepumpe", description: "Komplett-Installation inkl. Förderantrag", priceRange: "ab 15.000€" },
             { name: "Erdwärmepumpe", description: "Mit Tiefenbohrung und Genehmigung", priceRange: "ab 25.000€" },
