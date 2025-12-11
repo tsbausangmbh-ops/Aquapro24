@@ -40,6 +40,11 @@ export default function Home() {
         <Testimonials />
         <CTABanner />
       </main>
+      <div className="bg-muted/30 border-t py-3">
+        <p className="text-xs text-muted-foreground text-center px-4">
+          Hinweis: Die Webseite AquaPro24.de wird von der KSHW verwaltet und gesteuert.
+        </p>
+      </div>
       <Footer />
       <ChatWidget />
       <CookieBanner />
