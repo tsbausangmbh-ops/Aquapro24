@@ -21,7 +21,8 @@ import {
   Clock,
   Shield,
   Award,
-  Star
+  Star,
+  MessageCircle
 } from "lucide-react";
 import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
@@ -370,6 +371,12 @@ export default function SanitaerPage() {
                 <a href="tel:+4989123456789" data-testid="button-call-sanitaer-cta">
                   <Phone className="w-4 h-4 mr-2" />
                   089 123 456 789
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20f%C3%BCr%20Sanit%C3%A4rarbeiten%20vereinbaren." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  24h Buchungstermin
                 </a>
               </Button>
             </div>
