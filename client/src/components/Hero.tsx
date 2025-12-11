@@ -53,7 +53,7 @@ export default function Hero() {
               <Button size="lg" className="gap-2 text-base bg-red-600 text-white border-red-700" asChild data-testid="button-call-hero">
                 <a href="tel:+4915212274043">
                   <Phone className="w-5 h-5" />
-                  Jetzt Notdienst rufen
+                  Jetzt anrufen
                 </a>
               </Button>
               <Button 
