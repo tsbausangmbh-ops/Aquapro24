@@ -1,10 +1,11 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { 
   Check, 
   Clock, 
@@ -22,6 +23,11 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
+
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
 
 const pricingInfo = [
   {
@@ -151,12 +157,77 @@ export default function Pricing() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+  
+  // AI Chat state
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const availableDates = useMemo(() => generateAvailableDates(), []);
   const timeSlots = useMemo(() => generateTimeSlots(), []);
 
+  // Auto-scroll to bottom of chat
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
+  const sendMessage = async (content: string, isInitial = false) => {
+    if (!content.trim() && !isInitial) return;
+
+    const userMessage: ChatMessage = { role: "user", content: content.trim() };
+    
+    if (!isInitial) {
+      setMessages(prev => [...prev, userMessage]);
+    }
+    
+    setInputValue("");
+    setIsLoading(true);
+
+    try {
+      const messagesToSend = isInitial 
+        ? [userMessage]
+        : [...messages, userMessage];
+
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: messagesToSend }),
+      });
+
+      const data = await response.json();
+      
+      const assistantMessage: ChatMessage = {
+        role: "assistant",
+        content: data.message || "Entschuldigung, es gab einen Fehler.",
+      };
+
+      if (isInitial) {
+        setMessages([assistantMessage]);
+      } else {
+        setMessages(prev => [...prev, assistantMessage]);
+      }
+    } catch (error) {
+      console.error("Chat error:", error);
+      const errorMessage: ChatMessage = {
+        role: "assistant",
+        content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte rufen Sie uns an: 0152 12274043",
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChatSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    sendMessage(inputValue);
+  };
+
   const handleStartChat = () => {
     setStep("problem");
+    // Start the AI conversation
+    sendMessage("Hallo, ich brauche Hilfe mit einem Sanitär- oder Heizungsproblem.", true);
   };
 
   const handleProblemSubmit = () => {
@@ -233,6 +304,8 @@ export default function Pricing() {
     setPhone("");
     setEmail("");
     setAddress("");
+    setMessages([]);
+    setInputValue("");
   };
 
   const getSelectedDateLabel = () => {
@@ -390,25 +463,57 @@ export default function Pricing() {
 
                   {step === "problem" && (
                     <div className="space-y-3">
-                      <div className="bg-card rounded-lg p-3 border border-card-border">
-                        <p className="text-sm">Was kann ich für Sie tun?<br />Beschreiben Sie Ihr Anliegen:</p>
-                      </div>
-                      <Textarea
-                        value={problem}
-                        onChange={(e) => setProblem(e.target.value)}
-                        placeholder="z.B. 'Neue Dusche installieren', 'Bad komplett sanieren', 'Wasserhahn tropft'..."
-                        className="min-h-40 text-sm resize-none"
-                        data-testid="input-problem-description"
-                      />
-                      <Button 
-                        onClick={handleProblemSubmit}
-                        disabled={!problem.trim()}
-                        className="w-full gap-2"
-                        data-testid="button-get-price"
-                      >
-                        <ArrowRight className="w-4 h-4" />
-                        Weiter zur Preisschätzung
-                      </Button>
+                      {/* Chat Messages */}
+                      <ScrollArea className="h-64 pr-2">
+                        <div className="space-y-3">
+                          {messages.map((msg, index) => (
+                            <div
+                              key={index}
+                              className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                            >
+                              <div
+                                className={`max-w-[85%] rounded-lg p-3 text-sm ${
+                                  msg.role === "user"
+                                    ? "bg-secondary text-secondary-foreground"
+                                    : "bg-card border border-card-border"
+                                }`}
+                                style={{ whiteSpace: "pre-wrap" }}
+                                data-testid={`chat-message-${msg.role}-${index}`}
+                              >
+                                {msg.content}
+                              </div>
+                            </div>
+                          ))}
+                          {isLoading && (
+                            <div className="flex justify-start">
+                              <div className="bg-card border border-card-border rounded-lg p-3">
+                                <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
+                              </div>
+                            </div>
+                          )}
+                          <div ref={messagesEndRef} />
+                        </div>
+                      </ScrollArea>
+                      
+                      {/* Chat Input */}
+                      <form onSubmit={handleChatSubmit} className="flex gap-2">
+                        <Input
+                          value={inputValue}
+                          onChange={(e) => setInputValue(e.target.value)}
+                          placeholder="Ihre Nachricht..."
+                          className="flex-1 text-sm"
+                          disabled={isLoading}
+                          data-testid="input-chat-message"
+                        />
+                        <Button 
+                          type="submit"
+                          size="icon"
+                          disabled={!inputValue.trim() || isLoading}
+                          data-testid="button-send-chat"
+                        >
+                          <Send className="w-4 h-4" />
+                        </Button>
+                      </form>
                     </div>
                   )}
 
