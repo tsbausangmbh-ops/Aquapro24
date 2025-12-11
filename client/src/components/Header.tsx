@@ -38,7 +38,7 @@ export default function Header() {
             <div className="flex items-center gap-4 flex-wrap justify-center">
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />
-                <span className="font-medium">24/7 Onlinedienst</span>
+                <span className="font-medium">24/7 Online</span>
               </div>
               <div className="hidden sm:flex items-center gap-1.5">
                 <MapPin className="w-4 h-4" />
@@ -144,7 +144,7 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-3">
               <Badge variant="outline" className="gap-1 text-accent border-accent/30">
                 <Clock className="w-3 h-3" />
-                24/7 Onlinedienst
+                24/7 Online
               </Badge>
               <Button data-testid="button-email-header" asChild>
                 <a href="mailto:info@sanitaer-muenchen.de">
