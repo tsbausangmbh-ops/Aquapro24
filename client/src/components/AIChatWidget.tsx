@@ -140,7 +140,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
         <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
           <div 
             onClick={handleOpen}
-            className="bg-destructive text-destructive-foreground shadow-lg rounded-lg px-4 py-3 max-w-[200px] cursor-pointer hover-elevate"
+            className="bg-orange-500 text-white shadow-lg rounded-lg px-4 py-3 max-w-[200px] cursor-pointer hover-elevate"
             data-testid="label-ai-chat-hint"
           >
             <p className="text-sm font-medium">KI-Agent für Beratung</p>
@@ -148,7 +148,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
           </div>
           <Button
             onClick={handleOpen}
-            className={`${colors.bg} ${colors.text} rounded-full p-4 shadow-lg relative`}
+            className="bg-orange-500 text-white rounded-full p-4 shadow-lg relative"
             size="icon"
             style={{ width: "64px", height: "64px" }}
             data-testid="button-open-ai-chat"
@@ -164,7 +164,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
       {isOpen && (
         <div className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)]">
           <Card className="shadow-2xl border-0 overflow-hidden">
-            <CardHeader className={`${colors.bg} ${colors.text} p-4`}>
+            <CardHeader className="bg-orange-500 text-white p-4">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
