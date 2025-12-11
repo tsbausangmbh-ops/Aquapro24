@@ -8,7 +8,7 @@ const trustItems = [
   },
   {
     icon: Clock,
-    title: "In 30 Min. da",
+    title: "Ab 60 Min. da",
     subtitle: "Wenn Sie uns rufen",
   },
   {

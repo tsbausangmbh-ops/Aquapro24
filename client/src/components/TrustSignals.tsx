@@ -44,7 +44,7 @@ export default function TrustSignals({
       icon: Clock,
       title: "Schnelle Hilfe",
       detail: "Bei Notfällen in München",
-      value: "30 Min."
+      value: "ab 60 Min."
     }
   ];
 
