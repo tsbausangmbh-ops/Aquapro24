@@ -341,6 +341,10 @@ export default function UeberUnsPage() {
                 Kostenlose Beratung
               </div>
             </div>
+            <p className="mt-8 text-xs text-primary-foreground/50 max-w-2xl mx-auto">
+              Hinweis: Als Vermittlungsplattform arbeiten wir mit einem Netzwerk aus geprüften Meisterbetrieben 
+              in München zusammen. So garantieren wir Ihnen stets qualifizierte Fachkräfte für Ihr Projekt.
+            </p>
           </div>
         </section>
       </main>
