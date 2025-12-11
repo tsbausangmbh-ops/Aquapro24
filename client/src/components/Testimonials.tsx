@@ -128,23 +128,6 @@ export default function Testimonials() {
             </Card>
           ))}
         </div>
-        
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-2">
-            Werden auch Sie einer unserer zufriedenen Kunden.{" "}
-            <span className="text-foreground font-medium">Wenn Sie uns anrufen, helfen wir Ihnen genauso zuverlässig.</span>
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Alle Bewertungen sind echt und verifiziert.{" "}
-            <a 
-              href="#" 
-              className="text-secondary underline hover:no-underline"
-              data-testid="link-google-reviews"
-            >
-              Mehr auf Google lesen
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   );
