@@ -278,8 +278,8 @@ export default function CookieRichtliniePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="secondary" asChild>
-                  <a href="mailto:datenschutz@aquapro24.de">
-                    datenschutz@aquapro24.de
+                  <a href="mailto:info@aquapro24.de">
+                    info@aquapro24.de
                   </a>
                 </Button>
                 <Button variant="outline" asChild>
