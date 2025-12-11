@@ -6,7 +6,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://muenchner-heizung.de/</loc>
+    <loc>https://aquapro24.de/</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,14 +14,14 @@
   
   <!-- Service Pages - Primary Focus: Sanitaer/Water -->
   <url>
-    <loc>https://muenchner-heizung.de/sanitaer</loc>
+    <loc>https://aquapro24.de/sanitaer</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/bad</loc>
+    <loc>https://aquapro24.de/bad</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -29,21 +29,21 @@
   
   <!-- Service Pages - Secondary Focus: Heating -->
   <url>
-    <loc>https://muenchner-heizung.de/heizung</loc>
+    <loc>https://aquapro24.de/heizung</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/waermepumpe</loc>
+    <loc>https://aquapro24.de/waermepumpe</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/haustechnik</loc>
+    <loc>https://aquapro24.de/haustechnik</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -51,28 +51,28 @@
   
   <!-- Informational Pages -->
   <url>
-    <loc>https://muenchner-heizung.de/kontakt</loc>
+    <loc>https://aquapro24.de/kontakt</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/ueber-uns</loc>
+    <loc>https://aquapro24.de/ueber-uns</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/faq</loc>
+    <loc>https://aquapro24.de/faq</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/ratgeber</loc>
+    <loc>https://aquapro24.de/ratgeber</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
@@ -80,28 +80,28 @@
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://muenchner-heizung.de/impressum</loc>
+    <loc>https://aquapro24.de/impressum</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/datenschutz</loc>
+    <loc>https://aquapro24.de/datenschutz</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/agb</loc>
+    <loc>https://aquapro24.de/agb</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   
   <url>
-    <loc>https://muenchner-heizung.de/cookie-richtlinie</loc>
+    <loc>https://aquapro24.de/cookie-richtlinie</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
