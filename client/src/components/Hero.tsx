@@ -57,7 +57,7 @@ export default function Hero() {
               </Button>
               <Button 
                 size="lg" 
-                className="gap-2 bg-orange-500 text-white border-orange-600" 
+                className="gap-2 bg-emerald-600 text-white border-emerald-700" 
                 onClick={() => {
                   const chatButton = document.querySelector('[data-testid="button-toggle-chat"]') as HTMLButtonElement;
                   if (chatButton) chatButton.click();
