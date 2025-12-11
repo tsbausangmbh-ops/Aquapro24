@@ -365,7 +365,7 @@ export default function Pricing() {
                       </div>
                       <Button 
                         onClick={handleStartChat}
-                        className="w-full gap-2"
+                        className="w-full gap-2 bg-yellow-500 text-black border-yellow-600 hover:bg-yellow-400"
                         data-testid="button-start-chat"
                       >
                         <Send className="w-4 h-4" />
