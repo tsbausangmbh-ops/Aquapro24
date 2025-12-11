@@ -27,7 +27,6 @@ const footerLinks = {
       { label: "Über uns", href: "/ueber-uns" },
       { label: "FAQ & Preise", href: "/faq" },
       { label: "Ratgeber", href: "/ratgeber" },
-      { label: "Bewertungen", href: "#testimonials" },
       { label: "Kontakt", href: "#contact" },
     ],
   },
