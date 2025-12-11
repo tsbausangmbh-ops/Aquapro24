@@ -338,7 +338,7 @@ export default function Pricing() {
                       <Bot className="w-5 h-5 text-secondary-foreground" />
                     </div>
                     <div>
-                      <p className="font-semibold">KI-Terminassistent</p>
+                      <p className="font-semibold">AquaPro24 KI-Beratungsassistent</p>
                       <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span>Online - Antworten in Sekunden</span>
