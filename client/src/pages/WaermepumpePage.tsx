@@ -177,10 +177,10 @@ export default function WaermepumpePage() {
                     <h3 className="text-lg font-bold">BAFA & KfW Förderanträge inklusive!</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
-                    Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme.
+                    Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme. Inklusive kompletter Dokumentation.
                   </p>
                   <ul className="space-y-2">
-                    {["Bis 70% Zuschuss sichern", "Komplette Antragstellung", "Schnelle Bearbeitung", "Alle Formulare inklusive"].map((item) => (
+                    {["Bis 70% Zuschuss sichern", "Komplette Antragstellung", "Gesamte Dokumentation", "Alle Formulare inklusive"].map((item) => (
                       <li key={item} className="flex items-center gap-2 text-sm">
                         <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
                         <span>{item}</span>
