@@ -19,7 +19,8 @@ import {
   ArrowRight,
   Zap,
   TrendingDown,
-  Star
+  Star,
+  FileText
 } from "lucide-react";
 import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
@@ -151,6 +152,21 @@ export default function WaermepumpePage() {
                       <span>{item}</span>
                     </div>
                   ))}
+                </div>
+                
+                <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-xl p-5 text-white mt-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold mb-1">BAFA & KfW Förderanträge inklusive!</h3>
+                      <p className="text-white/90 text-sm">
+                        Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme. 
+                        Sie müssen sich um nichts kümmern und erhalten bis zu 70% Ihrer Kosten zurück.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="relative space-y-4">
