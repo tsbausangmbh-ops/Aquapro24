@@ -48,23 +48,25 @@ export default function DatenschutzPage() {
             {/* Inhaltsübersicht */}
             <section>
               <h2 className="text-xl font-semibold mb-4">Inhaltsübersicht</h2>
-              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 columns-1 md:columns-2">
                 <li><a href="#m716" className="text-secondary hover:underline">Präambel</a></li>
                 <li><a href="#m3" className="text-secondary hover:underline">Verantwortlicher</a></li>
                 <li><a href="#mOverview" className="text-secondary hover:underline">Übersicht der Verarbeitungen</a></li>
                 <li><a href="#m2427" className="text-secondary hover:underline">Maßgebliche Rechtsgrundlagen</a></li>
                 <li><a href="#m27" className="text-secondary hover:underline">Sicherheitsmaßnahmen</a></li>
-                <li><a href="#m25" className="text-secondary hover:underline">Übermittlung von personenbezogenen Daten</a></li>
+                <li><a href="#m25" className="text-secondary hover:underline">Übermittlung personenbezogener Daten</a></li>
                 <li><a href="#m24" className="text-secondary hover:underline">Internationale Datentransfers</a></li>
-                <li><a href="#m12" className="text-secondary hover:underline">Allgemeine Informationen zur Datenspeicherung und Löschung</a></li>
+                <li><a href="#m12" className="text-secondary hover:underline">Datenspeicherung und Löschung</a></li>
                 <li><a href="#m10" className="text-secondary hover:underline">Rechte der betroffenen Personen</a></li>
                 <li><a href="#m317" className="text-secondary hover:underline">Geschäftliche Leistungen</a></li>
-                <li><a href="#m225" className="text-secondary hover:underline">Bereitstellung des Onlineangebots und Webhosting</a></li>
+                <li><a href="#m326" className="text-secondary hover:underline">Zahlungsverfahren</a></li>
+                <li><a href="#m225" className="text-secondary hover:underline">Webhosting</a></li>
                 <li><a href="#m134" className="text-secondary hover:underline">Einsatz von Cookies</a></li>
                 <li><a href="#m182" className="text-secondary hover:underline">Kontakt- und Anfrageverwaltung</a></li>
-                <li><a href="#m263" className="text-secondary hover:underline">Webanalyse, Monitoring und Optimierung</a></li>
+                <li><a href="#m263" className="text-secondary hover:underline">Webanalyse und Optimierung</a></li>
                 <li><a href="#mKI" className="text-secondary hover:underline">KI-Chatbot und OpenAI</a></li>
                 <li><a href="#mGoogle" className="text-secondary hover:underline">Google Calendar Integration</a></li>
+                <li><a href="#mWhatsApp" className="text-secondary hover:underline">WhatsApp Business</a></li>
               </ul>
             </section>
 
@@ -138,6 +140,8 @@ export default function DatenschutzPage() {
                 <li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit</li>
                 <li>Informationstechnische Infrastruktur</li>
                 <li>KI-gestützte Beratung und Kostenschätzung</li>
+                <li>Büro- und Organisationsverfahren</li>
+                <li>Geschäftsprozesse und betriebswirtschaftliche Verfahren</li>
               </ul>
             </section>
 
@@ -145,10 +149,13 @@ export default function DatenschutzPage() {
             <section id="m2427">
               <h2 className="text-xl font-semibold mb-4">Maßgebliche Rechtsgrundlagen</h2>
               <p className="text-muted-foreground mb-4">
-                Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis 
-                wir personenbezogene Daten verarbeiten:
+                <strong>Maßgebliche Rechtsgrundlagen nach der DSGVO:</strong> Im Folgenden erhalten Sie eine 
+                Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. 
+                Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben 
+                in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten ferner im Einzelfall speziellere 
+                Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.
               </p>
-              <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <ul className="list-disc list-inside text-muted-foreground space-y-3">
                 <li>
                   <strong>Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)</strong> – Die betroffene Person 
                   hat ihre Einwilligung in die Verarbeitung der sie betreffenden personenbezogenen Daten 
@@ -157,7 +164,8 @@ export default function DatenschutzPage() {
                 <li>
                   <strong>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b DSGVO)</strong> – 
                   Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene 
-                  Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich.
+                  Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage 
+                  der betroffenen Person erfolgen.
                 </li>
                 <li>
                   <strong>Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c DSGVO)</strong> – 
@@ -167,9 +175,21 @@ export default function DatenschutzPage() {
                 <li>
                   <strong>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</strong> – 
                   Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen 
-                  oder eines Dritten erforderlich.
+                  oder eines Dritten notwendig, vorausgesetzt, dass die Interessen, Grundrechte und 
+                  Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten 
+                  verlangen, nicht überwiegen.
                 </li>
               </ul>
+              <p className="text-muted-foreground mt-4">
+                <strong>Nationale Datenschutzregelungen in Deutschland:</strong> Zusätzlich zu den 
+                Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland. 
+                Hierzu gehört insbesondere das Gesetz zum Schutz vor Missbrauch personenbezogener Daten 
+                bei der Datenverarbeitung (Bundesdatenschutzgesetz – BDSG). Das BDSG enthält insbesondere 
+                Spezialregelungen zum Recht auf Auskunft, zum Recht auf Löschung, zum Widerspruchsrecht, 
+                zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere 
+                Zwecke und zur Übermittlung sowie automatisierten Entscheidungsfindung im Einzelfall 
+                einschließlich Profiling.
+              </p>
             </section>
 
             {/* Sicherheitsmaßnahmen */}
@@ -186,14 +206,25 @@ export default function DatenschutzPage() {
                 Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und 
                 Verfügbarkeit von Daten durch Kontrolle des physischen und elektronischen Zugangs zu den 
                 Daten als auch des sie betreffenden Zugriffs, der Eingabe, der Weitergabe, der Sicherung 
-                der Verfügbarkeit und ihrer Trennung.
+                der Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die 
+                eine Wahrnehmung von Betroffenenrechten, die Löschung von Daten und Reaktionen auf die 
+                Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz personenbezogener 
+                Daten bereits bei der Entwicklung bzw. Auswahl von Hardware, Software sowie Verfahren 
+                entsprechend dem Prinzip des Datenschutzes, durch Technikgestaltung und durch 
+                datenschutzfreundliche Voreinstellungen.
               </p>
               <p className="text-muted-foreground">
-                <strong>TLS-/SSL-Verschlüsselung (HTTPS):</strong> Um die Daten der Nutzer, die über unsere 
-                Online-Dienste übertragen werden, vor unerlaubten Zugriffen zu schützen, setzen wir auf die 
-                TLS-/SSL-Verschlüsselungstechnologie. Diese verschlüsselt die Informationen, die zwischen 
-                der Website und dem Browser des Nutzers übertragen werden. Eine verschlüsselte Verbindung 
-                erkennen Sie an "https://" in der Adresszeile und dem Schloss-Symbol im Browser.
+                <strong>Sicherung von Online-Verbindungen durch TLS-/SSL-Verschlüsselungstechnologie (HTTPS):</strong>{" "}
+                Um die Daten der Nutzer, die über unsere Online-Dienste übertragen werden, vor unerlaubten 
+                Zugriffen zu schützen, setzen wir auf die TLS-/SSL-Verschlüsselungstechnologie. Secure 
+                Sockets Layer (SSL) und Transport Layer Security (TLS) sind die Eckpfeiler der sicheren 
+                Datenübertragung im Internet. Diese Technologien verschlüsseln die Informationen, die 
+                zwischen der Website oder App und dem Browser des Nutzers (oder zwischen zwei Servern) 
+                übertragen werden, wodurch die Daten vor unbefugtem Zugriff geschützt sind. TLS, als die 
+                weiterentwickelte und sicherere Version von SSL, gewährleistet, dass alle Datenübertragungen 
+                den höchsten Sicherheitsstandards entsprechen. Wenn eine Website durch ein SSL-/TLS-Zertifikat 
+                gesichert ist, wird dies durch die Anzeige von HTTPS in der URL signalisiert. Dies dient als 
+                ein Indikator für die Nutzer, dass ihre Daten sicher und verschlüsselt übertragen werden.
               </p>
             </section>
 
@@ -205,11 +236,17 @@ export default function DatenschutzPage() {
                 Stellen, Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt 
                 beziehungsweise ihnen gegenüber offengelegt werden. Zu den Empfängern dieser Daten können z. B. 
                 mit IT-Aufgaben beauftragte Dienstleister gehören oder Anbieter von Diensten und Inhalten, die 
-                in eine Website eingebunden sind.
+                in eine Website eingebunden sind. In solchen Fällen beachten wir die gesetzlichen Vorgaben und 
+                schließen insbesondere entsprechende Verträge bzw. Vereinbarungen, die dem Schutz Ihrer Daten 
+                dienen, mit den Empfängern Ihrer Daten ab.
               </p>
               <p className="text-muted-foreground">
-                In solchen Fällen beachten wir die gesetzlichen Vorgaben und schließen insbesondere entsprechende 
-                Verträge bzw. Vereinbarungen, die dem Schutz Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab.
+                <strong>Datenübermittlung innerhalb der Organisation:</strong> Wir können personenbezogene Daten 
+                an andere Abteilungen oder Einheiten innerhalb unserer Organisation übermitteln oder ihnen den 
+                Zugriff darauf gewähren. Sofern die Datenweitergabe zu administrativen Zwecken erfolgt, beruht 
+                sie auf unseren berechtigten unternehmerischen und betriebswirtschaftlichen Interessen oder 
+                erfolgt, sofern sie zur Erfüllung unserer vertragsbezogenen Verpflichtungen erforderlich ist 
+                beziehungsweise wenn eine Einwilligung der Betroffenen oder eine gesetzliche Erlaubnis vorliegt.
               </p>
             </section>
 
@@ -219,19 +256,41 @@ export default function DatenschutzPage() {
               <p className="text-muted-foreground mb-4">
                 <strong>Datenverarbeitung in Drittländern:</strong> Sofern wir Daten in ein Drittland 
                 (d. h. außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR)) 
-                übermitteln oder dies im Rahmen der Nutzung von Diensten Dritter geschieht, erfolgt dies 
-                stets im Einklang mit den gesetzlichen Vorgaben.
+                übermitteln oder dies im Rahmen der Nutzung von Diensten Dritter oder der Offenlegung bzw. 
+                Übermittlung von Daten an andere Personen, Stellen oder Unternehmen geschieht (was erkennbar 
+                wird anhand der Postadresse des jeweiligen Anbieters oder wenn in der Datenschutzerklärung 
+                ausdrücklich auf den Datentransfer in Drittländer hingewiesen wird), erfolgt dies stets im 
+                Einklang mit den gesetzlichen Vorgaben.
               </p>
               <p className="text-muted-foreground mb-4">
                 Für Datenübermittlungen in die USA stützen wir uns vorrangig auf das Data Privacy Framework (DPF), 
                 welches durch einen Angemessenheitsbeschluss der EU-Kommission vom 10.07.2023 als sicherer 
                 Rechtsrahmen anerkannt wurde. Zusätzlich haben wir mit den jeweiligen Anbietern 
-                Standardvertragsklauseln abgeschlossen, die den Vorgaben der EU-Kommission entsprechen.
+                Standardvertragsklauseln abgeschlossen, die den Vorgaben der EU-Kommission entsprechen und 
+                vertragliche Verpflichtungen zum Schutz Ihrer Daten festlegen.
               </p>
-              <p className="text-muted-foreground">
-                Weitere Informationen zum DPF finden Sie unter:{" "}
+              <p className="text-muted-foreground mb-4">
+                Diese zweifache Absicherung gewährleistet einen umfassenden Schutz Ihrer Daten: Das DPF bildet 
+                die primäre Schutzebene, während die Standardvertragsklauseln als zusätzliche Sicherheit dienen. 
+                Sollten sich Änderungen im Rahmen des DPF ergeben, greifen die Standardvertragsklauseln als 
+                zuverlässige Rückfalloption ein. So stellen wir sicher, dass Ihre Daten auch bei etwaigen 
+                politischen oder rechtlichen Veränderungen stets angemessen geschützt bleiben.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Bei den einzelnen Diensteanbietern informieren wir Sie darüber, ob sie nach dem DPF zertifiziert 
+                sind und ob Standardvertragsklauseln vorliegen. Weitere Informationen zum DPF und eine Liste 
+                der zertifizierten Unternehmen finden Sie auf der Website des US-Handelsministeriums unter:{" "}
                 <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
                   https://www.dataprivacyframework.gov/
+                </a> (in englischer Sprache).
+              </p>
+              <p className="text-muted-foreground">
+                Für Datenübermittlungen in andere Drittländer gelten entsprechende Sicherheitsmaßnahmen, 
+                insbesondere Standardvertragsklauseln, ausdrückliche Einwilligungen oder gesetzlich erforderliche 
+                Übermittlungen. Informationen zu Drittlandtransfers und geltenden Angemessenheitsbeschlüssen 
+                können Sie dem Informationsangebot der EU-Kommission entnehmen:{" "}
+                <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en?prefLang=de" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+                  EU-Kommission Datenschutz
                 </a>
               </p>
             </section>
@@ -242,16 +301,35 @@ export default function DatenschutzPage() {
               <p className="text-muted-foreground mb-4">
                 Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, 
                 sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen 
-                Grundlagen für die Verarbeitung bestehen.
+                Grundlagen für die Verarbeitung bestehen. Dies betrifft Fälle, in denen der ursprüngliche 
+                Verarbeitungszweck entfällt oder die Daten nicht mehr benötigt werden. Ausnahmen von dieser 
+                Regelung bestehen, wenn gesetzliche Pflichten oder besondere Interessen eine längere Aufbewahrung 
+                oder Archivierung der Daten erfordern.
               </p>
               <p className="text-muted-foreground mb-4">
                 Insbesondere müssen Daten, die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden 
-                müssen oder deren Speicherung notwendig ist zur Rechtsverfolgung, entsprechend archiviert werden.
+                müssen oder deren Speicherung notwendig ist zur Rechtsverfolgung oder zum Schutz der Rechte 
+                anderer natürlicher oder juristischer Personen, entsprechend archiviert werden.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Bei mehreren Angaben zur Aufbewahrungsdauer oder Löschungsfristen eines Datums, ist stets die 
+                längste Frist maßgeblich. Daten, die nicht mehr für den ursprünglich vorgesehenen Zweck, sondern 
+                aufgrund gesetzlicher Vorgaben oder anderer Gründe aufbewahrt werden, verarbeiten wir ausschließlich 
+                zu den Gründen, die ihre Aufbewahrung rechtfertigen.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                <strong>Fristbeginn mit Ablauf des Jahres:</strong> Beginnt eine Frist nicht ausdrücklich zu einem 
+                bestimmten Datum und beträgt sie mindestens ein Jahr, so startet sie automatisch am Ende des 
+                Kalenderjahres, in dem das fristauslösende Ereignis eingetreten ist. Im Fall laufender 
+                Vertragsverhältnisse, in deren Rahmen Daten gespeichert werden, ist das fristauslösende Ereignis 
+                der Zeitpunkt des Wirksamwerdens der Kündigung oder sonstige Beendigung des Rechtsverhältnisses.
               </p>
               <h3 className="text-lg font-medium mb-2">Aufbewahrungsfristen</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li><strong>Kontaktanfragen:</strong> 3 Jahre nach Abschluss</li>
                 <li><strong>Vertragsdaten:</strong> 10 Jahre (gemäß HGB/AO)</li>
+                <li><strong>Rechnungen:</strong> 10 Jahre</li>
+                <li><strong>Gewährleistungsdaten:</strong> 4 Jahre</li>
                 <li><strong>Server-Logs:</strong> 7 Tage</li>
                 <li><strong>Buchungsdaten:</strong> 6 Monate nach Terminabschluss</li>
                 <li><strong>KI-Chat-Verläufe:</strong> Werden nicht dauerhaft gespeichert; OpenAI speichert max. 30 Tage</li>
@@ -262,14 +340,19 @@ export default function DatenschutzPage() {
             <section id="m10">
               <h2 className="text-xl font-semibold mb-4">Rechte der betroffenen Personen</h2>
               <p className="text-muted-foreground mb-4">
-                Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere 
-                aus Art. 15 bis 21 DSGVO ergeben:
+                Rechte der betroffenen Personen aus der DSGVO: Ihnen stehen als Betroffene nach der DSGVO 
+                verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:
               </p>
-              <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <ul className="list-disc list-inside text-muted-foreground space-y-3">
                 <li>
                   <strong>Widerspruchsrecht:</strong> Sie haben das Recht, aus Gründen, die sich aus Ihrer 
                   besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden 
-                  personenbezogenen Daten Widerspruch einzulegen.
+                  personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, 
+                  Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. 
+                  Werden die Sie betreffenden personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, 
+                  haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung der Sie betreffenden 
+                  personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen; dies gilt auch für das 
+                  Profiling, soweit es mit solcher Direktwerbung in Verbindung steht.
                 </li>
                 <li>
                   <strong>Widerrufsrecht bei Einwilligungen:</strong> Sie haben das Recht, erteilte 
@@ -277,26 +360,38 @@ export default function DatenschutzPage() {
                 </li>
                 <li>
                   <strong>Auskunftsrecht:</strong> Sie haben das Recht, eine Bestätigung darüber zu verlangen, 
-                  ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten.
+                  ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere 
+                  Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.
                 </li>
                 <li>
-                  <strong>Recht auf Berichtigung:</strong> Sie haben das Recht, die Vervollständigung oder 
-                  Berichtigung Sie betreffender unrichtiger Daten zu verlangen.
+                  <strong>Recht auf Berichtigung:</strong> Sie haben entsprechend den gesetzlichen Vorgaben 
+                  das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie 
+                  betreffenden unrichtigen Daten zu verlangen.
                 </li>
                 <li>
-                  <strong>Recht auf Löschung und Einschränkung:</strong> Sie haben das Recht, zu verlangen, 
-                  dass Sie betreffende Daten unverzüglich gelöscht werden, bzw. eine Einschränkung der 
-                  Verarbeitung zu verlangen.
+                  <strong>Recht auf Löschung und Einschränkung der Verarbeitung:</strong> Sie haben nach 
+                  Maßgabe der gesetzlichen Vorgaben das Recht, zu verlangen, dass Sie betreffende Daten 
+                  unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe der gesetzlichen Vorgaben eine 
+                  Einschränkung der Verarbeitung der Daten zu verlangen.
                 </li>
                 <li>
-                  <strong>Recht auf Datenübertragbarkeit:</strong> Sie haben das Recht, Sie betreffende Daten 
-                  in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
+                  <strong>Recht auf Datenübertragbarkeit:</strong> Sie haben das Recht, Sie betreffende Daten, 
+                  die Sie uns bereitgestellt haben, nach Maßgabe der gesetzlichen Vorgaben in einem strukturierten, 
+                  gängigen und maschinenlesbaren Format zu erhalten oder deren Übermittlung an einen anderen 
+                  Verantwortlichen zu fordern.
                 </li>
                 <li>
-                  <strong>Beschwerderecht:</strong> Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde 
-                  zu beschweren. Zuständig ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA).
+                  <strong>Beschwerderecht bei der Aufsichtsbehörde:</strong> Sie haben unbeschadet eines 
+                  anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde 
+                  bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthaltsorts, 
+                  ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, wenn Sie der Ansicht sind, dass 
+                  die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die Vorgaben der DSGVO verstößt.
                 </li>
               </ul>
+              <p className="text-muted-foreground mt-4">
+                <strong>Zuständige Aufsichtsbehörde:</strong> Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), 
+                Promenade 18, 91522 Ansbach, Deutschland
+              </p>
             </section>
 
             {/* Geschäftliche Leistungen */}
@@ -306,19 +401,69 @@ export default function DatenschutzPage() {
                 Wir verarbeiten Daten unserer Vertrags- und Geschäftspartner, z. B. Kunden und Interessenten 
                 (zusammenfassend als „Vertragspartner" bezeichnet), im Rahmen von vertraglichen und 
                 vergleichbaren Rechtsverhältnissen sowie damit verbundenen Maßnahmen und im Hinblick auf 
-                die Kommunikation mit den Vertragspartnern.
+                die Kommunikation mit den Vertragspartnern (oder vorvertraglich), etwa zur Beantwortung von Anfragen.
               </p>
               <p className="text-muted-foreground mb-4">
                 Wir verwenden diese Daten, um unsere vertraglichen Verpflichtungen zu erfüllen. Dazu gehören 
-                insbesondere die Pflichten zur Erbringung der vereinbarten Leistungen (Sanitär, Heizung, 
-                Badsanierung, Wärmepumpen, Haustechnik), etwaige Aktualisierungspflichten und Abhilfe bei 
-                Gewährleistungs- und sonstigen Leistungsstörungen.
+                insbesondere die Pflichten zur Erbringung der vereinbarten Leistungen (Sanitärarbeiten, 
+                Heizungsinstallation, Badsanierung, Wärmepumpen, Haustechnik), etwaige Aktualisierungspflichten 
+                und Abhilfe bei Gewährleistungs- und sonstigen Leistungsstörungen. Darüber hinaus verwenden wir 
+                die Daten zur Wahrung unserer Rechte und zum Zwecke der mit diesen Pflichten verbundenen 
+                Verwaltungsaufgaben sowie der Unternehmensorganisation.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-4">
+                Zudem verarbeiten wir die Daten auf Grundlage unserer berechtigten Interessen sowohl an einer 
+                ordnungsgemäßen und betriebswirtschaftlichen Geschäftsführung als auch an Sicherheitsmaßnahmen 
+                zum Schutz unserer Vertragspartner und unseres Geschäftsbetriebs vor Missbrauch, Gefährdung 
+                ihrer Daten, Geheimnisse, Informationen und Rechte (z. B. zur Beteiligung von Telekommunikations-, 
+                Transport- und sonstigen Hilfsdiensten sowie Subunternehmern, Banken, Steuer- und Rechtsberatern, 
+                Zahlungsdienstleistern oder Finanzbehörden).
+              </p>
+              <p className="text-muted-foreground mb-4">
                 Wir löschen die Daten nach Ablauf gesetzlicher Gewährleistungs- und vergleichbarer Pflichten, 
                 d. h. grundsätzlich nach vier Jahren, es sei denn, dass die Daten aus gesetzlichen Gründen 
                 der Archivierung aufbewahrt werden müssen (etwa für Steuerzwecke im Regelfall zehn Jahre).
               </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Zahlungsdaten, Kontaktdaten, 
+                Vertragsdaten, Nutzungsdaten, Meta-/Kommunikationsdaten</li>
+                <li><strong>Betroffene Personen:</strong> Leistungsempfänger, Auftraggeber, Interessenten, 
+                Geschäfts- und Vertragspartner</li>
+                <li><strong>Zwecke:</strong> Erbringung vertraglicher Leistungen, Sicherheitsmaßnahmen, 
+                Kommunikation, Büro- und Organisationsverfahren</li>
+                <li><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b DSGVO), 
+                Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</li>
+              </ul>
+            </section>
+
+            {/* Zahlungsverfahren */}
+            <section id="m326">
+              <h2 className="text-xl font-semibold mb-4">Zahlungsverfahren</h2>
+              <p className="text-muted-foreground mb-4">
+                Im Rahmen von Vertrags- und sonstigen Rechtsbeziehungen, aufgrund gesetzlicher Pflichten oder 
+                sonst auf Grundlage unserer berechtigten Interessen bieten wir den betroffenen Personen 
+                effiziente und sichere Zahlungsmöglichkeiten an und setzen hierzu neben Banken und 
+                Kreditinstituten weitere Dienstleister ein (zusammenfassend "Zahlungsdienstleister"). 
+                Der Zahlungsverkehr erfolgt dabei entsprechend dem Stand der Technik ausschließlich über 
+                verschlüsselte Verbindungen, sodass die eingegebenen Daten während der Übermittlung vor 
+                unbefugtem Zugriff geschützt sind.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Zu den durch die Zahlungsdienstleister verarbeiteten Daten gehören Bestandsdaten, wie z. B. 
+                der Name und die Adresse, Bankdaten, wie z. B. Kontonummern, Passwörter, TANs und Prüfsummen 
+                sowie die Vertrags-, Summen- und empfängerbezogenen Angaben. Die Angaben sind erforderlich, 
+                um die Transaktionen durchzuführen. Die eingegebenen Daten werden jedoch nur durch die 
+                Zahlungsdienstleister verarbeitet und bei diesen gespeichert. D. h., wir erhalten keine 
+                konto- oder kreditkartenbezogenen Informationen, sondern lediglich Informationen mit 
+                Bestätigung oder Negativbeauskunftung der Zahlung.
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Zahlungsdaten, Vertragsdaten, 
+                Nutzungsdaten, Kontaktdaten</li>
+                <li><strong>Betroffene Personen:</strong> Leistungsempfänger, Geschäftspartner, Interessenten</li>
+                <li><strong>Zwecke:</strong> Erbringung vertraglicher Leistungen, Geschäftsprozesse</li>
+                <li><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b DSGVO)</li>
+              </ul>
             </section>
 
             {/* Webhosting */}
@@ -338,9 +483,11 @@ export default function DatenschutzPage() {
                 nebst Version, das Betriebssystem des Nutzers, Referrer URL und der anfragende Provider gehören.
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li><strong>Verarbeitete Datenarten:</strong> Nutzungsdaten, Meta-/Kommunikationsdaten, Protokolldaten</li>
-                <li><strong>Betroffene Personen:</strong> Nutzer</li>
-                <li><strong>Zwecke:</strong> Bereitstellung des Onlineangebotes, Sicherheitsmaßnahmen</li>
+                <li><strong>Verarbeitete Datenarten:</strong> Nutzungsdaten, Meta-/Kommunikationsdaten, 
+                Protokolldaten, Inhaltsdaten</li>
+                <li><strong>Betroffene Personen:</strong> Nutzer (Webseitenbesucher)</li>
+                <li><strong>Zwecke:</strong> Bereitstellung des Onlineangebotes, Nutzerfreundlichkeit, 
+                Sicherheitsmaßnahmen, Reichweitenmessung, Servermonitoring und Fehlererkennung</li>
                 <li><strong>Rechtsgrundlage:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</li>
                 <li><strong>Speicherdauer:</strong> 7 Tage</li>
               </ul>
@@ -350,20 +497,31 @@ export default function DatenschutzPage() {
             <section id="m134">
               <h2 className="text-xl font-semibold mb-4">Einsatz von Cookies</h2>
               <p className="text-muted-foreground mb-4">
-                Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden. Wir setzen 
-                Cookies und ähnliche Technologien ein, um die Funktionsfähigkeit unserer Website zu 
-                gewährleisten und die Nutzung zu analysieren.
+                Unter dem Begriff „Cookies" werden Funktionen, die Informationen auf Endgeräten der Nutzer 
+                speichern und aus ihnen auslesen, verstanden. Cookies können ferner in Bezug auf unterschiedliche 
+                Anliegen Einsatz finden, etwa zu Zwecken der Funktionsfähigkeit, der Sicherheit und des Komforts 
+                von Onlineangeboten sowie der Erstellung von Analysen der Besucherströme. Wir verwenden Cookies 
+                gemäß den gesetzlichen Vorschriften. Dazu holen wir, wenn erforderlich, vorab die Zustimmung 
+                der Nutzer ein. Ist eine Zustimmung nicht notwendig, setzen wir auf unsere berechtigten Interessen. 
+                Dies gilt, wenn das Speichern und Auslesen von Informationen unerlässlich ist, um ausdrücklich 
+                angeforderte Inhalte und Funktionen bereitstellen zu können.
               </p>
-              <h3 className="text-lg font-medium mb-2">Technisch notwendige Cookies</h3>
               <p className="text-muted-foreground mb-4">
-                Diese Cookies sind für den Betrieb der Website erforderlich und können nicht deaktiviert werden. 
-                Sie werden in der Regel nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt 
-                (z. B. Festlegen Ihrer Datenschutzeinstellungen, Anmelden).
+                <strong>Speicherdauer:</strong> Im Hinblick auf die Speicherdauer werden die folgenden Arten 
+                von Cookies unterschieden:
               </p>
-              <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li><strong>Rechtsgrundlage:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</li>
-                <li><strong>Speicherdauer:</strong> Session-Cookies werden nach Schließen des Browsers gelöscht</li>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-1">
+                <li><strong>Temporäre Cookies (Session-Cookies):</strong> Werden spätestens gelöscht, nachdem 
+                ein Nutzer ein Onlineangebot verlassen und sein Endgerät (Browser) geschlossen hat.</li>
+                <li><strong>Permanente Cookies:</strong> Bleiben auch nach dem Schließen des Endgeräts gespeichert. 
+                Die Speicherdauer kann bis zu zwei Jahre betragen.</li>
               </ul>
+              <p className="text-muted-foreground">
+                <strong>Allgemeine Hinweise zum Widerruf und Widerspruch (Opt-out):</strong> Nutzer können die 
+                von ihnen abgegebenen Einwilligungen jederzeit widerrufen und zudem einen Widerspruch gegen 
+                die Verarbeitung entsprechend den gesetzlichen Vorgaben, auch mittels der Privatsphäre-Einstellungen 
+                ihres Browsers, erklären.
+              </p>
             </section>
 
             {/* Kontakt */}
@@ -376,10 +534,12 @@ export default function DatenschutzPage() {
                 Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich ist.
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li><strong>Verarbeitete Datenarten:</strong> Kontaktdaten, Inhaltsdaten, Nutzungsdaten</li>
+                <li><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Kontaktdaten, Inhaltsdaten, 
+                Nutzungsdaten, Meta-/Kommunikationsdaten</li>
                 <li><strong>Betroffene Personen:</strong> Kommunikationspartner</li>
-                <li><strong>Zwecke:</strong> Kommunikation, Organisations- und Verwaltungsverfahren</li>
-                <li><strong>Rechtsgrundlage:</strong> Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b DSGVO)</li>
+                <li><strong>Zwecke:</strong> Kommunikation, Organisations- und Verwaltungsverfahren, Feedback</li>
+                <li><strong>Rechtsgrundlage:</strong> Vertragserfüllung und vorvertragliche Anfragen 
+                (Art. 6 Abs. 1 S. 1 lit. b DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</li>
                 <li><strong>Speicherdauer:</strong> 3 Jahre nach Abschluss der Anfrage</li>
               </ul>
             </section>
@@ -391,13 +551,16 @@ export default function DatenschutzPage() {
                 Die Webanalyse dient der Auswertung der Besucherströme unseres Onlineangebotes und kann 
                 Verhalten, Interessen oder demographische Informationen zu den Besuchern umfassen. 
                 Mit Hilfe der Reichweitenanalyse können wir z. B. erkennen, zu welcher Zeit unser 
-                Onlineangebot oder dessen Funktionen am häufigsten genutzt werden.
+                Onlineangebot oder dessen Funktionen am häufigsten genutzt werden, oder zur Wiederverwendung 
+                einladen. Ebenso können wir nachvollziehen, welche Bereiche der Optimierung bedürfen.
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li><strong>Verarbeitete Datenarten:</strong> Nutzungsdaten, Meta-/Kommunikationsdaten</li>
                 <li><strong>Betroffene Personen:</strong> Nutzer</li>
-                <li><strong>Zwecke:</strong> Reichweitenmessung, Optimierung</li>
-                <li><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)</li>
+                <li><strong>Zwecke:</strong> Reichweitenmessung, Profile mit nutzerbezogenen Informationen, 
+                Tracking, Konversionsmessung</li>
+                <li><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO), 
+                Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)</li>
               </ul>
             </section>
 
@@ -412,13 +575,15 @@ export default function DatenschutzPage() {
               <p className="text-muted-foreground mb-4">
                 <strong>Verarbeitete Daten:</strong> Ihre Chat-Nachrichten und Eingaben werden zur 
                 Verarbeitung an die Server von OpenAI übermittelt. OpenAI verarbeitet diese Daten, 
-                um eine KI-generierte Antwort zu erstellen.
+                um eine KI-generierte Antwort zu erstellen. Wir speichern Chat-Verläufe nicht dauerhaft 
+                auf unseren Servern.
               </p>
               <div className="bg-muted/30 rounded-lg p-4 mb-4">
                 <p className="text-sm text-muted-foreground">
                   <strong>Anbieter:</strong> OpenAI L.L.C., 3180 18th Street, San Francisco, CA 94110, USA<br />
                   <strong>Rechtsgrundlage:</strong> Einwilligung durch Nutzung des Chats (Art. 6 Abs. 1 S. 1 lit. a DSGVO)<br />
                   <strong>Drittlandtransfer:</strong> USA (Data Privacy Framework + Standardvertragsklauseln)<br />
+                  <strong>DPF-Zertifiziert:</strong> Ja<br />
                   <strong>Speicherdauer:</strong> OpenAI speichert API-Anfragen max. 30 Tage zur Missbrauchserkennung<br />
                   <strong>Weitere Informationen:</strong>{" "}
                   <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
@@ -427,9 +592,9 @@ export default function DatenschutzPage() {
                 </p>
               </div>
               <p className="text-muted-foreground">
-                <strong>Hinweis:</strong> Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten 
+                <strong>Wichtiger Hinweis:</strong> Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten 
                 (z.B. Gesundheitsdaten, Bankdaten) ein. Die vom KI-Assistenten genannten Preise sind 
-                unverbindliche Schätzungen (Netto-Preise zzgl. 19% MwSt.).
+                unverbindliche Schätzungen. Alle Preise verstehen sich als Netto-Preise zzgl. 19% MwSt.
               </p>
             </section>
 
@@ -437,20 +602,51 @@ export default function DatenschutzPage() {
             <section id="mGoogle">
               <h2 className="text-xl font-semibold mb-4">Google Calendar Integration</h2>
               <p className="text-muted-foreground mb-4">
-                Für die Terminbuchung nutzen wir Google Calendar. Bei der Terminbuchung werden Ihre 
-                Kontaktdaten und Terminwünsche an Google Ireland Limited übermittelt.
+                Für die Online-Terminbuchung nutzen wir Google Calendar. Bei der Terminbuchung werden Ihre 
+                Kontaktdaten und Terminwünsche an Google Ireland Limited übermittelt und dort gespeichert.
               </p>
               <div className="bg-muted/30 rounded-lg p-4 mb-4">
                 <p className="text-sm text-muted-foreground">
                   <strong>Anbieter:</strong> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland<br />
+                  <strong>Mutterunternehmen:</strong> Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA<br />
                   <strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b DSGVO)<br />
                   <strong>Drittlandtransfer:</strong> USA (Data Privacy Framework + Standardvertragsklauseln)<br />
+                  <strong>DPF-Zertifiziert:</strong> Ja<br />
                   <strong>Weitere Informationen:</strong>{" "}
                   <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
                     Google Datenschutzerklärung
                   </a>
                 </p>
               </div>
+              <p className="text-muted-foreground">
+                <strong>Verarbeitete Daten:</strong> Name, E-Mail-Adresse, Telefonnummer, gewünschter Termin, 
+                Serviceart, Adresse des Einsatzortes, optionale Beschreibung des Anliegens.
+              </p>
+            </section>
+
+            {/* WhatsApp */}
+            <section id="mWhatsApp">
+              <h2 className="text-xl font-semibold mb-4">WhatsApp Business</h2>
+              <p className="text-muted-foreground mb-4">
+                Wir bieten die Möglichkeit, uns über WhatsApp zu kontaktieren. Bei der Nutzung von WhatsApp 
+                werden Daten an WhatsApp Ireland Limited übermittelt.
+              </p>
+              <div className="bg-muted/30 rounded-lg p-4 mb-4">
+                <p className="text-sm text-muted-foreground">
+                  <strong>Anbieter:</strong> WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland<br />
+                  <strong>Mutterunternehmen:</strong> Meta Platforms, Inc., 1 Hacker Way, Menlo Park, CA 94025, USA<br />
+                  <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)<br />
+                  <strong>Drittlandtransfer:</strong> USA (Standardvertragsklauseln)<br />
+                  <strong>Weitere Informationen:</strong>{" "}
+                  <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+                    WhatsApp Datenschutzerklärung
+                  </a>
+                </p>
+              </div>
+              <p className="text-muted-foreground">
+                <strong>Hinweis:</strong> WhatsApp erhebt und verarbeitet Metadaten (z.B. Zeitpunkt der Nachricht, 
+                Telefonnummer). Für vertrauliche Informationen empfehlen wir die Kontaktaufnahme per E-Mail oder Telefon.
+              </p>
             </section>
 
             {/* Kontaktbox */}
