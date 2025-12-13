@@ -25,7 +25,7 @@ export default function Impressum() {
           <div className="space-y-4">
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt gemäß § 5 TMG:</h2>
+                <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="text-foreground font-medium text-lg">KSHW München</p>
                   <p>Inhaber: Ali Kemal Kurt</p>
@@ -93,7 +93,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Ali Kemal Kurt</p>
                   <p>Zielstattstr. 20</p>
@@ -131,8 +131,8 @@ export default function Impressum() {
                 <h2 className="text-xl font-semibold mb-4">Haftung für Inhalte</h2>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten 
-                    nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als 
+                    Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten 
+                    nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als 
                     Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde 
                     Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige 
                     Tätigkeit hinweisen.

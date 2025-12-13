@@ -23,7 +23,7 @@ export default function CookieRichtliniePage() {
               <Cookie className="w-3 h-3" />
               Cookie-Richtlinie
             </Badge>
-            <Badge variant="outline">Stand: Dezember 2025</Badge>
+            <Badge variant="outline">Stand: Januar 2025</Badge>
           </div>
           
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">Cookie-Richtlinie</h1>
