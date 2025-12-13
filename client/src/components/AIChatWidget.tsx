@@ -115,7 +115,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
       console.error("Chat error:", error);
       const errorMessage: Message = {
         role: "assistant",
-        content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte rufen Sie uns an: 0152 12274043",
+        content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte versuchen Sie es in wenigen Minuten erneut.",
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
