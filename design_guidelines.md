@@ -3,7 +3,7 @@
 ## Brand Identity
 
 ### Unternehmenstyp
-Lokaler Meisterbetrieb für Heizung, Sanitär und 24/7-Notdienst im Raum München. Fokus auf Vertrauen, Schnelligkeit und faire Preise.
+Lokales Partnernetzwerk für Heizung, Sanitär und 24/7-Notdienst im Raum München. Fokus auf Vertrauen, Schnelligkeit und faire Preise.
 
 ### Zielgruppe
 - Hausbesitzer und Mieter in München und Umgebung
@@ -42,7 +42,7 @@ Beweis durch andere:
 
 ### 6. Authority
 Expertise zeigen:
-- "Meisterbetrieb seit 1985"
+- "Partnernetzwerk seit 2005"
 - "Innungsmitglied der SHK München"
 - "Zertifizierter Viessmann/Buderus Partner"
 
@@ -102,7 +102,7 @@ Expertise zeigen:
 ### Structure
 1. **Sticky Header** mit Notdienst-Nummer (immer sichtbar)
 2. **Hero** mit emotionaler Ansprache + Sofort-CTA
-3. **Trust Bar** (Meisterbetrieb, 24/7, Festpreis)
+3. **Trust Bar** (Partnernetzwerk, 24/7, Festpreis)
 4. **Problem-Lösung** emotional + rational
 5. **Services** mit klaren Icons
 6. **Preistransparenz** 
@@ -138,7 +138,7 @@ Expertise zeigen:
 - Trust-Badges darunter (Meister, Bewertungen, Garantie)
 
 ### Trust Elements
-- Meisterbetrieb-Siegel
+- Partnernetzwerk-Siegel
 - SHK-Innungsmitglied
 - Google-Bewertung (4.9 Sterne)
 - "Keine versteckten Kosten"-Garantie
@@ -186,7 +186,7 @@ Expertise zeigen:
 ### Headlines
 - "Ihre Heizung macht Probleme? Wir lösen sie. Heute noch."
 - "Rohrbruch? Keine Panik. Wir sind in 30 Minuten da."
-- "Münchens Meisterbetrieb für Heizung & Sanitär"
+- "Münchens Partnernetzwerk für Heizung & Sanitär"
 
 ### CTAs
 - "Jetzt Notdienst rufen" (primary)
@@ -198,7 +198,7 @@ Expertise zeigen:
 - "Festpreis vor Arbeitsbeginn"
 - "Keine Anfahrtskosten im Stadtgebiet"
 - "Echte Münchner Handwerker"
-- "Meisterbetrieb seit 1985"
+- "Partnernetzwerk seit 2005"
 
 ### Problem Acknowledgment
 - "Wir wissen, wie stressig ein Heizungsausfall im Winter ist."

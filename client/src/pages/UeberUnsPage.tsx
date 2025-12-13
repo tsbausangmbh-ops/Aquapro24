@@ -82,7 +82,7 @@ const values = [
   },
   {
     icon: Award,
-    title: "Geprüfte Meisterbetriebe",
+    title: "Geprüfte Fachbetriebe",
     description: "Nur zertifizierte Fachbetriebe mit nachgewiesener Qualität in unserem Partnernetzwerk."
   }
 ];
@@ -132,7 +132,7 @@ const aboutPageSchema = {
   "@id": "https://aquapro24.de/ueber-uns#webpage",
   "url": "https://aquapro24.de/ueber-uns",
   "name": "Über AquaPro24 München - Ihr Partnernetzwerk für Sanitär & Heizung seit 2005",
-  "description": "Erfahren Sie mehr über AquaPro24 München: Partnernetzwerk für Sanitär, Heizung und Badsanierung. Geprüfte Meisterbetriebe, 2.800+ zufriedene Kunden, 24/7 Notdienst in München.",
+  "description": "Erfahren Sie mehr über AquaPro24 München: Partnernetzwerk für Sanitär, Heizung und Badsanierung. 2.800+ zufriedene Kunden, 24/7 Notdienst in München.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://aquapro24.de/#website",
@@ -149,7 +149,7 @@ const aboutPageSchema = {
     "name": "KSHW München - Sanitär & Heizung",
     "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München"],
     "legalName": "KSHW München - Ali Kemal Kurt",
-    "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Meisterbetriebe mit Kunden, die kompetente Hilfe brauchen.",
+    "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
     "url": "https://aquapro24.de",
     "telephone": "+49-152-12274043",
@@ -224,10 +224,10 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Meisterbetriebe"
+        title="Über AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
         description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0152 12274043"
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Meisterbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
+        keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
         structuredData={aboutPageSchema}
       />
       <Header />
@@ -251,7 +251,7 @@ export default function UeberUnsPage() {
                   Rechnung höher ausfiel als besprochen.
                 </p>
                 <p className="text-muted-foreground">
-                  Seit 2005 verbinden wir geprüfte Meisterbetriebe mit Münchnern, die 
+                  Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
                   <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen. Ob Rohrbruch in Schwabing, 
                   Heizungsausfall in Bogenhausen oder Badsanierung in Sendling - wir sind für Sie da.
                 </p>
@@ -374,7 +374,7 @@ export default function UeberUnsPage() {
                   </p>
                   <p>
                     <strong className="text-foreground">Unsere Lösung:</strong> Ein Partnernetzwerk aus 
-                    geprüften Meisterbetrieben, die unsere Werte teilen: Pünktlichkeit, Festpreise, 
+                    geprüften Fachbetrieben, die unsere Werte teilen: Pünktlichkeit, Festpreise, 
                     saubere Arbeit und echte Kundenorientierung.
                   </p>
                   <p>

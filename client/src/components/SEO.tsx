@@ -53,8 +53,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   "name": "AquaPro24 - Sanitär & Heizung München",
   "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München"],
   "legalName": "KSHW München - Ali Kemal Kurt",
-  "description": "AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen, Notdienst und Haustechnik. Geprüfte Meisterbetriebe, 2.847+ zufriedene Kunden, 4.9/5 Sterne Bewertung.",
-  "slogan": "Geprüfte Meisterbetriebe für München - 24/7 Notdienst",
+  "description": "AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen, Notdienst und Haustechnik. 2.847+ zufriedene Kunden, 4.9/5 Sterne Bewertung.",
+  "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
   "url": "https://aquapro24.de",
   "logo": {
     "@type": "ImageObject",
