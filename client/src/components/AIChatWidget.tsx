@@ -8,7 +8,6 @@ import {
   Send, 
   Bot, 
   User,
-  Phone,
   Loader2
 } from "lucide-react";
 
@@ -263,15 +262,6 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                     <Send className="w-4 h-4" />
                   </Button>
                 </form>
-                
-                <a
-                  href="tel:+4915212274043"
-                  className="flex items-center justify-center gap-2 mt-3 text-sm text-muted-foreground hover:text-foreground"
-                  data-testid="link-chat-phone"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Lieber anrufen? 0152 12274043</span>
-                </a>
                 
                 <p className="text-xs text-muted-foreground text-center mt-3 pt-3 border-t">
                   KI-gestützter Chatbot. Ihre Eingaben werden zur Beantwortung verarbeitet.{" "}
