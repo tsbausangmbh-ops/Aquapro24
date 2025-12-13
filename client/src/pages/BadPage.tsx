@@ -178,7 +178,7 @@ export default function BadPage() {
                   </div>
                 </div>
                 <div className="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-2xl p-6 text-white">
-                  <h3 className="text-lg font-bold mb-3">Warum wir?</h3>
+                  <p className="text-lg font-bold mb-3">Warum wir?</p>
                   <ul className="space-y-2">
                     {benefits.slice(0, 4).map((benefit) => (
                       <li key={benefit} className="flex items-center gap-2 text-sm">
