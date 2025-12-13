@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { 
   MessageCircle, 
   X, 
@@ -36,7 +36,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
   const [isLoading, setIsLoading] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   const colors = serviceCategory 
     ? SERVICE_CATEGORY_COLORS[serviceCategory] 
@@ -235,14 +235,22 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
               </div>
 
               <div className="p-4 border-t bg-background">
-                <form onSubmit={handleSubmit} className="flex gap-2">
-                  <Input
+                <form onSubmit={handleSubmit} className="flex gap-2 items-end">
+                  <Textarea
                     ref={inputRef}
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" && !e.shiftKey) {
+                        e.preventDefault();
+                        if (inputValue.trim() && !isLoading) {
+                          handleSubmit(e);
+                        }
+                      }
+                    }}
                     placeholder="Ihre Nachricht..."
                     disabled={isLoading}
-                    className="flex-1"
+                    className="flex-1 min-h-[60px] max-h-[100px] resize-none"
                     data-testid="input-chat-message"
                   />
                   <Button 
