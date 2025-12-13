@@ -272,6 +272,13 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                   <Phone className="w-4 h-4" />
                   <span>Lieber anrufen? 0152 12274043</span>
                 </a>
+                
+                <p className="text-xs text-muted-foreground text-center mt-3 pt-3 border-t">
+                  KI-gestützter Chatbot. Ihre Eingaben werden zur Beantwortung verarbeitet.{" "}
+                  <a href="/datenschutz#mKI" className="text-secondary hover:underline">
+                    Datenschutz
+                  </a>
+                </p>
               </div>
             </CardContent>
           </Card>
