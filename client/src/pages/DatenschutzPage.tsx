@@ -64,7 +64,7 @@ export default function DatenschutzPage() {
                 <li><a href="#m134" className="text-secondary hover:underline">Einsatz von Cookies</a></li>
                 <li><a href="#m182" className="text-secondary hover:underline">Kontakt- und Anfrageverwaltung</a></li>
                 <li><a href="#m263" className="text-secondary hover:underline">Webanalyse und Optimierung</a></li>
-                <li><a href="#mKI" className="text-secondary hover:underline">KI-Chatbot und OpenAI</a></li>
+                <li><a href="#mKI" className="text-secondary hover:underline">KI-Chatbot, OpenAI & EU AI Act</a></li>
                 <li><a href="#mGoogle" className="text-secondary hover:underline">Google Calendar Integration</a></li>
                 <li><a href="#mWhatsApp" className="text-secondary hover:underline">WhatsApp Business</a></li>
               </ul>
@@ -566,12 +566,34 @@ export default function DatenschutzPage() {
 
             {/* KI-Chatbot */}
             <section id="mKI">
-              <h2 className="text-xl font-semibold mb-4">KI-Chatbot und OpenAI</h2>
+              <h2 className="text-xl font-semibold mb-4">KI-Chatbot, OpenAI & EU AI Act</h2>
               <p className="text-muted-foreground mb-4">
                 Auf unserer Website setzen wir einen KI-gestützten Chatbot ein, der auf der Technologie 
                 von OpenAI basiert. Dieser Assistent dient der ersten Beratung zu Sanitär-, Heizungs- und 
                 Haustechnikfragen sowie zur unverbindlichen Kostenschätzung.
               </p>
+
+              <h3 className="text-lg font-medium mb-2 mt-6">EU AI Act Konformität (Verordnung (EU) 2024/1689)</h3>
+              <p className="text-muted-foreground mb-4">
+                Gemäß den Transparenzanforderungen des EU AI Act (in Kraft seit 1. August 2024, Transparenzpflichten 
+                seit 2. Februar 2025) informieren wir Sie:
+              </p>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
+                <p className="text-sm text-amber-800 dark:text-amber-200">
+                  <strong>Transparenzhinweis gemäß Art. 50 EU AI Act:</strong><br />
+                  Sie interagieren mit einem KI-System (Künstliche Intelligenz). Der Chat wird automatisch 
+                  von einem KI-Assistenten bearbeitet, nicht von einem Menschen. Menschliche Mitarbeiter 
+                  sind während unserer Geschäftszeiten telefonisch erreichbar unter 0152 12274043.
+                </p>
+              </div>
+              <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
+                <li><strong>Risikoklassifizierung:</strong> Unser Chatbot ist als KI-System mit begrenztem Risiko ("Limited Risk") gemäß Art. 50 EU AI Act eingestuft.</li>
+                <li><strong>Transparenzpflicht erfüllt:</strong> Sie werden vor und während der Nutzung darauf hingewiesen, dass Sie mit einem KI-System interagieren.</li>
+                <li><strong>Menschliche Alternative:</strong> Telefon (0152 12274043), E-Mail (info@aquapro24.de) und persönlicher Kontakt stehen jederzeit zur Verfügung.</li>
+                <li><strong>Keine automatisierten Entscheidungen:</strong> Der Chatbot trifft keine rechtlich bindenden Entscheidungen. Alle Preisangaben sind unverbindliche Schätzungen.</li>
+              </ul>
+
+              <h3 className="text-lg font-medium mb-2 mt-6">Datenverarbeitung durch OpenAI</h3>
               <p className="text-muted-foreground mb-4">
                 <strong>Verarbeitete Daten:</strong> Ihre Chat-Nachrichten und Eingaben werden zur 
                 Verarbeitung an die Server von OpenAI übermittelt. OpenAI verarbeitet diese Daten, 
