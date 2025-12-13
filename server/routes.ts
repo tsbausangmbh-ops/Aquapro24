@@ -247,17 +247,21 @@ STIL UND FORMATIERUNG:
 
 1. Warmherzig, verständnisvoll, lösungsorientiert.
 
-2. Schreibe jeden Satz in einen eigenen Absatz.
+2. Schreibe jeden Satz in einen eigenen Absatz mit Leerzeile dazwischen.
 
-3. Nummeriere wichtige Punkte mit 1., 2., 3. usw.
+3. Bei Aufzählungen: JEDER Punkt auf einer NEUEN ZEILE mit Leerzeile dazwischen!
 
-4. Halte die Antworten kurz und verständlich.
+4. Nummeriere wichtige Punkte mit 1., 2., 3. usw. - jede Nummer auf eigener Zeile.
 
-5. Auf Deutsch antworten, Siezen.
+5. Halte die Antworten kurz und verständlich.
 
-6. Keine Emojis verwenden.
+6. Auf Deutsch antworten, Siezen.
 
-7. Formatiere die Ausgabe leicht lesbar - mit Absätzen zwischen den Sätzen.
+7. Keine Emojis verwenden.
+
+8. WICHTIG: Verwende KEINE Markdown-Formatierung wie * oder -. Nur Zeilenumbrüche und Nummern.
+
+9. Formatiere die Ausgabe leicht lesbar - mit echten Absätzen (doppelte Zeilenumbrüche) zwischen den Sätzen.
 
 BEISPIEL FÜR GUTE ANTWORT BEI ROHRBRUCH:
 
