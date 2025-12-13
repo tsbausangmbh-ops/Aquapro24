@@ -3,6 +3,61 @@ import type { Server } from "http";
 import { storage } from "./storage";
 import { createCalendarEvent, getAvailableTimeSlots } from "./googleCalendar";
 import OpenAI from "openai";
+import nodemailer from "nodemailer";
+
+const emailTransporter = nodemailer.createTransport({
+  host: "smtp.1und1.de",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
+
+async function sendLeadNotificationEmail(leadData: any): Promise<void> {
+  if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    console.log("SMTP credentials not configured, skipping email notification");
+    return;
+  }
+
+  const emailText = `NEUE TERMINANFRAGE - AQUAPRO24
+
+URSACHE / PROBLEM:
+${leadData.problem || "Nicht angegeben"}
+
+KONTAKTDATEN:
+Name: ${leadData.name}
+Telefon: ${leadData.phone}
+E-Mail: ${leadData.email || "Nicht angegeben"}
+Adresse: ${leadData.address || "Nicht angegeben"}
+
+TERMIN:
+${leadData.appointmentDisplay || `${leadData.preferredDate || ""} ${leadData.preferredTime || ""}`.trim() || "Nicht angegeben"}
+
+GESCHÄTZTE KOSTEN:
+${leadData.estimatedPrice || "Wird ermittelt"}
+
+QUELLE: ${leadData.page_url || leadData.source || "Website"}
+ZEITPUNKT: ${leadData.timestamp || new Date().toISOString()}
+
+---
+Diese E-Mail wurde automatisch vom AquaPro24 Buchungssystem gesendet.`;
+
+  const mailOptions = {
+    from: process.env.SMTP_USER,
+    to: "info@aquapro24.de",
+    subject: `Neue Terminanfrage von ${leadData.name}`,
+    text: emailText,
+  };
+
+  try {
+    await emailTransporter.sendMail(mailOptions);
+    console.log("Lead notification email sent successfully to info@aquapro24.de");
+  } catch (error) {
+    console.error("Failed to send lead notification email:", error);
+  }
+}
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
 const openai = new OpenAI({
@@ -308,6 +363,10 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
       } catch (calendarError) {
         console.error("Failed to create calendar event:", calendarError);
       }
+      
+      sendLeadNotificationEmail(leadData).catch((err) => {
+        console.error("Failed to send email notification:", err);
+      });
       
       res.json({ success: true, id: lead.id, calendarEventId });
     } catch (error) {
