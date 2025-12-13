@@ -464,7 +464,7 @@ export default function Pricing() {
                   {step === "problem" && (
                     <div className="space-y-3">
                       {/* Chat Messages */}
-                      <ScrollArea className="h-64 pr-2">
+                      <ScrollArea className="h-80 pr-2">
                         <div className="space-y-3">
                           {messages.map((msg, index) => (
                             <div
@@ -496,12 +496,20 @@ export default function Pricing() {
                       </ScrollArea>
                       
                       {/* Chat Input */}
-                      <form onSubmit={handleChatSubmit} className="flex gap-2">
-                        <Input
+                      <form onSubmit={handleChatSubmit} className="flex gap-2 items-end">
+                        <Textarea
                           value={inputValue}
                           onChange={(e) => setInputValue(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" && !e.shiftKey) {
+                              e.preventDefault();
+                              if (inputValue.trim() && !isLoading) {
+                                handleChatSubmit(e);
+                              }
+                            }
+                          }}
                           placeholder="Ihre Nachricht..."
-                          className="flex-1 text-sm"
+                          className="flex-1 text-sm min-h-[60px] max-h-[120px] resize-none"
                           disabled={isLoading}
                           data-testid="input-chat-message"
                         />
