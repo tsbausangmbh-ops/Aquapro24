@@ -321,6 +321,28 @@ export default function SEO({
     updateMeta("geo.placename", "München");
     updateMeta("geo.position", "48.1351;11.5820");
     updateMeta("ICBM", "48.1351, 11.5820");
+    updateMeta("geo.country", "DE");
+    updateMeta("geo.a1", "Bayern");
+    updateMeta("geo.a2", "München");
+    updateMeta("geo.a3", "Obersendling");
+    
+    updateMeta("place:location:latitude", "48.1351", true);
+    updateMeta("place:location:longitude", "11.5820", true);
+    
+    updateMeta("business:contact_data:street_address", "Zielstattstr. 20", true);
+    updateMeta("business:contact_data:locality", "München", true);
+    updateMeta("business:contact_data:region", "Bayern", true);
+    updateMeta("business:contact_data:postal_code", "81379", true);
+    updateMeta("business:contact_data:country_name", "Deutschland", true);
+    updateMeta("business:contact_data:phone_number", "+49 152 12274043", true);
+    updateMeta("business:contact_data:email", "info@aquapro24.de", true);
+    
+    updateMeta("DC.coverage", "München, Bayern, Deutschland");
+    updateMeta("DC.coverage.spatial", "München");
+    updateMeta("DC.coverage.x.min", "11.3603");
+    updateMeta("DC.coverage.x.max", "11.7229");
+    updateMeta("DC.coverage.y.min", "48.0616");
+    updateMeta("DC.coverage.y.max", "48.2481");
     
     updateMeta("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     updateMeta("googlebot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
