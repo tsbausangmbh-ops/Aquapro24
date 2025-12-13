@@ -36,6 +36,8 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
   const [showPulse, setShowPulse] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const colors = serviceCategory 
     ? SERVICE_CATEGORY_COLORS[serviceCategory] 
@@ -55,20 +57,40 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
     }
   }, [isOpen]);
 
-  // ESC key handler at document level for accessibility
+  // ESC key handler and focus trap for accessibility
   useEffect(() => {
-    const handleEscapeKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isOpen) {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen || !dialogRef.current) return;
+      
+      if (e.key === "Escape") {
         setIsOpen(false);
+        return;
+      }
+      
+      // Focus trap - keep focus within dialog
+      if (e.key === "Tab") {
+        const focusableElements = dialogRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        
+        if (e.shiftKey && document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement?.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement?.focus();
+        }
       }
     };
     
     if (isOpen) {
-      document.addEventListener("keydown", handleEscapeKey);
+      document.addEventListener("keydown", handleKeyDown);
     }
     
     return () => {
-      document.removeEventListener("keydown", handleEscapeKey);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen]);
 
@@ -180,6 +202,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
 
       {isOpen && (
         <div 
+          ref={dialogRef}
           className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)]"
           role="dialog"
           aria-modal="true"
