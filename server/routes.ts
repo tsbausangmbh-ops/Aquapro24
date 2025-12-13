@@ -21,7 +21,9 @@ async function sendLeadNotificationEmail(leadData: any): Promise<void> {
     return;
   }
 
-  const emailText = `NEUE TERMINANFRAGE - AQUAPRO24
+  const terminInfo = leadData.appointmentDisplay || `${leadData.preferredDate || ""} ${leadData.preferredTime || ""}`.trim() || "Wird noch vereinbart";
+
+  const internalEmailText = `NEUE TERMINANFRAGE - AQUAPRO24
 
 URSACHE / PROBLEM:
 ${leadData.problem || "Nicht angegeben"}
@@ -33,7 +35,7 @@ E-Mail: ${leadData.email || "Nicht angegeben"}
 Adresse: ${leadData.address || "Nicht angegeben"}
 
 TERMIN:
-${leadData.appointmentDisplay || `${leadData.preferredDate || ""} ${leadData.preferredTime || ""}`.trim() || "Nicht angegeben"}
+${terminInfo}
 
 GESCHÄTZTE KOSTEN:
 ${leadData.estimatedPrice || "Wird ermittelt"}
@@ -44,18 +46,70 @@ ZEITPUNKT: ${leadData.timestamp || new Date().toISOString()}
 ---
 Diese E-Mail wurde automatisch vom AquaPro24 Buchungssystem gesendet.`;
 
-  const mailOptions = {
+  const internalMailOptions = {
     from: process.env.SMTP_USER,
     to: "info@aquapro24.de",
     subject: `Neue Terminanfrage von ${leadData.name}`,
-    text: emailText,
+    text: internalEmailText,
   };
 
   try {
-    await emailTransporter.sendMail(mailOptions);
+    await emailTransporter.sendMail(internalMailOptions);
     console.log("Lead notification email sent successfully to info@aquapro24.de");
   } catch (error) {
     console.error("Failed to send lead notification email:", error);
+  }
+
+  if (leadData.email && leadData.email.includes("@")) {
+    const customerEmailText = `Sehr geehrte/r ${leadData.name},
+
+vielen Dank für Ihre Anfrage bei AquaPro24!
+
+Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.
+
+IHRE ANFRAGE:
+${leadData.problem || "Sanitär-/Heizungsservice"}
+
+IHRE KONTAKTDATEN:
+Telefon: ${leadData.phone}
+Adresse: ${leadData.address || "Nicht angegeben"}
+
+GEWÜNSCHTER TERMIN:
+${terminInfo}
+
+GESCHÄTZTE KOSTEN:
+${leadData.estimatedPrice || "Wird bei Kontaktaufnahme besprochen"}
+
+WAS PASSIERT ALS NÄCHSTES?
+Unser Team wird Sie innerhalb der nächsten Stunden kontaktieren, um den Termin zu bestätigen und offene Fragen zu klären.
+
+Bei dringenden Notfällen erreichen Sie uns jederzeit unter:
+Telefon: 0152 12274043
+
+Mit freundlichen Grüßen,
+Ihr AquaPro24 Team
+
+---
+KSHW München
+Inhaber: Ali Kemal Kurt
+Zielstattstr. 20, 81379 München
+Tel: 0152 12274043
+E-Mail: info@aquapro24.de
+Web: aquapro24.de`;
+
+    const customerMailOptions = {
+      from: process.env.SMTP_USER,
+      to: leadData.email,
+      subject: `Ihre Anfrage bei AquaPro24 - Bestätigung`,
+      text: customerEmailText,
+    };
+
+    try {
+      await emailTransporter.sendMail(customerMailOptions);
+      console.log(`Customer confirmation email sent successfully to ${leadData.email}`);
+    } catch (error) {
+      console.error("Failed to send customer confirmation email:", error);
+    }
   }
 }
 
@@ -321,7 +375,35 @@ WICHTIGE REGELN:
 
 5. Zeige echtes Interesse am Menschen - nicht nur am Auftrag.
 
-6. Wenn jemand nur eine Frage hat und keine Buchung braucht, hilf ihm trotzdem freundlich.`;
+6. Wenn jemand nur eine Frage hat und keine Buchung braucht, hilf ihm trotzdem freundlich.
+
+RÜCKRUF-SERVICE (WICHTIG - IMMER ANBIETEN):
+
+Biete IMMER einen Rückruf an - besonders wenn:
+- Der Kunde unsicher ist
+- Das Problem komplex klingt
+- Der Kunde Fragen hat, die du nicht vollständig beantworten kannst
+- Der Kunde zögert
+
+Formulierungen für Rückruf-Angebot:
+- "Möchten Sie, dass wir Sie zurückrufen? Unser Fachmann kann Ihnen telefonisch noch besser helfen."
+- "Sollen wir Sie anrufen? Manchmal ist ein kurzes Gespräch einfacher als Tippen."
+- "Ich kann gerne einen Rückruf für Sie arrangieren - wann passt es Ihnen am besten?"
+
+Frage bei Interesse an Rückruf:
+1. Name
+2. Telefonnummer
+3. Bevorzugte Uhrzeit für den Rückruf
+4. Kurze Beschreibung des Anliegens
+
+Bestätige dann: "Perfekt! Wir rufen Sie [Zeitangabe] zurück. Sie erhalten auch eine Bestätigung per E-Mail."
+
+E-MAIL-BESTÄTIGUNG:
+
+Nach jeder Terminbuchung oder Rückruf-Anfrage:
+- Der Kunde erhält automatisch eine Bestätigungs-E-Mail
+- Wir erhalten eine Benachrichtigung mit allen Details
+- Erwähne dies dem Kunden: "Sie erhalten gleich eine Bestätigung per E-Mail an [E-Mail-Adresse]."`;
 
 interface ChatMessage {
   role: "user" | "assistant" | "system";
