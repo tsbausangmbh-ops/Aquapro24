@@ -55,6 +55,23 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
     }
   }, [isOpen]);
 
+  // ESC key handler at document level for accessibility
+  useEffect(() => {
+    const handleEscapeKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscapeKey);
+    }
+    
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const initialContext = serviceCategory 
@@ -151,28 +168,35 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
             size="icon"
             style={{ width: "64px", height: "64px" }}
             data-testid="button-open-ai-chat"
+            aria-label="Chat öffnen - Kostenlose Beratung durch KI-Assistent"
           >
             {showPulse && (
-              <span className="absolute inset-0 rounded-full animate-ping opacity-40 bg-current" />
+              <span className="absolute inset-0 rounded-full animate-ping opacity-40 bg-current" aria-hidden="true" />
             )}
-            <MessageCircle className="w-7 h-7" />
+            <MessageCircle className="w-7 h-7" aria-hidden="true" />
           </Button>
         </div>
       )}
 
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)]">
+        <div 
+          className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)]"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="chat-dialog-title"
+          aria-describedby="chat-dialog-description"
+        >
           <Card className="shadow-2xl border-0 overflow-hidden">
             <CardHeader className="bg-emerald-600 text-white p-4">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center" aria-hidden="true">
                     <Bot className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm">AquaPro24 KI-Assistent</p>
+                    <p className="font-semibold text-sm" id="chat-dialog-title">AquaPro24 KI-Assistent</p>
                     <div className="flex items-center gap-1.5 text-xs opacity-90">
-                      <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                      <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true" />
                       <span>KI-System | EU AI Act konform</span>
                     </div>
                   </div>
@@ -183,21 +207,27 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                   onClick={() => setIsOpen(false)}
                   className="text-current hover:bg-white/20"
                   data-testid="button-close-ai-chat"
+                  aria-label="Chat schließen"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5" aria-hidden="true" />
                 </Button>
               </div>
             </CardHeader>
 
             <CardContent className="p-0">
-              <div className="h-[350px] overflow-y-auto p-4 space-y-4 bg-muted/30">
+              <div 
+                className="h-[350px] overflow-y-auto p-4 space-y-4 bg-muted/30"
+                role="log"
+                aria-live="polite"
+                aria-label="Chat-Verlauf"
+              >
                 {messages.map((message, index) => (
                   <div
                     key={index}
                     className={`flex gap-2 ${message.role === "user" ? "justify-end" : "justify-start"}`}
                   >
                     {message.role === "assistant" && (
-                      <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`}>
+                      <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`} aria-hidden="true">
                         <Bot className={`w-4 h-4 ${colors.text}`} />
                       </div>
                     )}
@@ -212,7 +242,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                       {message.content}
                     </div>
                     {message.role === "user" && (
-                      <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <User className="w-4 h-4 text-muted-foreground" />
                       </div>
                     )}
@@ -220,12 +250,13 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                 ))}
                 
                 {isLoading && (
-                  <div className="flex gap-2 justify-start">
-                    <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`}>
+                  <div className="flex gap-2 justify-start" aria-label="Antwort wird geladen" role="status">
+                    <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`} aria-hidden="true">
                       <Bot className={`w-4 h-4 ${colors.text}`} />
                     </div>
                     <div className="bg-card border rounded-lg p-3">
-                      <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
+                      <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" aria-hidden="true" />
+                      <span className="sr-only">Antwort wird geladen...</span>
                     </div>
                   </div>
                 )}
@@ -251,6 +282,7 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                     disabled={isLoading}
                     className="flex-1 min-h-[60px] max-h-[100px] resize-none"
                     data-testid="input-chat-message"
+                    aria-label="Nachricht eingeben"
                   />
                   <Button 
                     type="submit" 
@@ -258,13 +290,14 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                     disabled={isLoading || !inputValue.trim()}
                     className={colors.bg}
                     data-testid="button-send-message"
+                    aria-label="Nachricht senden"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4" aria-hidden="true" />
                   </Button>
                 </form>
                 
-                <p className="text-xs text-muted-foreground text-center mt-3 pt-3 border-t">
-                  KI-gestützter Chatbot. Ihre Eingaben werden zur Beantwortung verarbeitet.{" "}
+                <p className="text-xs text-muted-foreground text-center mt-3 pt-3 border-t" id="chat-dialog-description">
+                  KI-gestützter Chatbot. Ihre Eingaben werden zur Beantwortung verarbeitet. Drücken Sie Escape zum Schließen.{" "}
                   <a href="/datenschutz#mKI" className="text-secondary hover:underline">
                     Datenschutz
                   </a>
