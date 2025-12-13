@@ -92,6 +92,7 @@ export default function BadPage() {
         description="Badsanierung München in 2-3 Wochen: Komplettumbau, barrierefreies Bad, Luxusbad. 847+ Traumbäder realisiert, 5 Jahre Garantie, KfW-Förderung. Kostenlose 3D-Planung! Tel: 0152 12274043"
         canonical="https://aquapro24.de/bad"
         keywords="Badsanierung München, Bad renovieren Schwabing, Badezimmer sanieren Bogenhausen, Komplettbad Sendling, barrierefreies Bad München, Badumbau Pasing, Badsanierung Maxvorstadt, Traumbad Haidhausen, Bad sanieren Neuhausen, Badsanierung Trudering, Badmodernisierung Laim, Badsanierung Giesing, Badezimmer Moosach, Bad erneuern Milbertshofen, seniorengerechtes Bad München"
+        aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 8.900€. Barrierefreie Bäder mit KfW-Förderung, 3D-Planung inklusive. 847+ Traumbäder realisiert, 5 Jahre Garantie. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Badsanierung", url: "https://aquapro24.de/bad" }

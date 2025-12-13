@@ -105,6 +105,7 @@ export default function SanitaerPage() {
         description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0152 12274043"
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Klempner Notdienst München, Rohrbruch München, Wasserinstallation Schwabing, Rohrreinigung Bogenhausen, Sanitär Notdienst Sendling, Klempner Pasing, Abfluss verstopft Maxvorstadt, Sanitärinstallation Haidhausen, Installateur Neuhausen, Klempner Trudering, Sanitär Laim, Rohrreinigung Giesing, Wasserschaden Moosach, Sanitär Milbertshofen"
+        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. Meisterbetrieb seit 2005, 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }

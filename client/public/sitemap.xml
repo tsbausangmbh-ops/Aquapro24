@@ -10,7 +10,7 @@
   <!-- Homepage - Primary Landing -->
   <url>
     <loc>https://aquapro24.de/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -24,7 +24,7 @@
   <!-- Service Pages - Core Services -->
   <url>
     <loc>https://aquapro24.de/sanitaer</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -36,7 +36,7 @@
   
   <url>
     <loc>https://aquapro24.de/bad</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -48,7 +48,7 @@
   
   <url>
     <loc>https://aquapro24.de/heizung</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -60,7 +60,7 @@
   
   <url>
     <loc>https://aquapro24.de/waermepumpe</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -72,7 +72,7 @@
   
   <url>
     <loc>https://aquapro24.de/haustechnik</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -85,42 +85,42 @@
   <!-- Geo-targeted Munich District Pages -->
   <url>
     <loc>https://aquapro24.de/#schwabing</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/#bogenhausen</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/#sendling</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/#pasing</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/#maxvorstadt</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/#haidhausen</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -128,28 +128,28 @@
   <!-- Informational Pages -->
   <url>
     <loc>https://aquapro24.de/kontakt</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/ueber-uns</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/faq</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/ratgeber</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -157,28 +157,28 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://aquapro24.de/impressum</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/datenschutz</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/agb</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/cookie-richtlinie</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>

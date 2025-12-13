@@ -284,6 +284,7 @@ export default function SEO({
   ogImage = "/og-image.jpg",
   structuredData,
   breadcrumbs,
+  aiSummary,
   serviceSchema
 }: SEOProps) {
   useEffect(() => {
@@ -307,16 +308,46 @@ export default function SEO({
     updateMeta("og:description", description, true);
     updateMeta("og:type", "website", true);
     updateMeta("og:locale", "de_DE", true);
+    updateMeta("og:site_name", "AquaPro24 München", true);
     if (ogImage) updateMeta("og:image", ogImage, true);
+    if (canonical) updateMeta("og:url", canonical, true);
     
     updateMeta("twitter:card", "summary_large_image");
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
+    updateMeta("twitter:site", "@aquapro24");
     
     updateMeta("geo.region", "DE-BY");
     updateMeta("geo.placename", "München");
     updateMeta("geo.position", "48.1351;11.5820");
     updateMeta("ICBM", "48.1351, 11.5820");
+    
+    updateMeta("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    updateMeta("googlebot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    updateMeta("bingbot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    
+    if (aiSummary) {
+      updateMeta("ai-summary", aiSummary);
+      updateMeta("abstract", aiSummary);
+      updateMeta("summary", aiSummary);
+      updateMeta("ai:description", aiSummary);
+      updateMeta("ai:content-type", "service-page");
+      updateMeta("ai:language", "de-DE");
+      updateMeta("ai:location", "München, Bayern, Deutschland");
+    }
+    
+    updateMeta("author", "AquaPro24 - KSHW München");
+    updateMeta("publisher", "KSHW München - Ali Kemal Kurt");
+    updateMeta("copyright", "2025 AquaPro24.de");
+    updateMeta("language", "de");
+    updateMeta("content-language", "de-DE");
+    updateMeta("audience", "Hausbesitzer, Mieter, Hausverwaltungen in München");
+    updateMeta("page-topic", "Sanitär, Heizung, Badsanierung, Haustechnik München");
+    updateMeta("page-type", "Service");
+    updateMeta("revisit-after", "7 days");
+    updateMeta("rating", "general");
+    updateMeta("distribution", "global");
+    updateMeta("coverage", "München, Bayern, Deutschland");
 
     let canonicalEl = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (canonical) {
@@ -459,7 +490,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, serviceSchema]);
+  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema]);
 
   return null;
 }
