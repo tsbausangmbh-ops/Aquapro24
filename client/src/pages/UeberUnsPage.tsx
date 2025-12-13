@@ -231,7 +231,7 @@ export default function UeberUnsPage() {
         structuredData={aboutPageSchema}
       />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section - H1 optimiert für SEO */}
         <section className="relative pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

@@ -246,7 +246,7 @@ export default function RatgeberPage() {
         keywords="Wasserschaden was tun München, Ratgeber Badsanierung Schwabing, Tipps Heizungswartung Bogenhausen, Wärmepumpe Förderung Bayern 2024, Sanitär Tipps Sendling, Ratgeber Pasing, Tipps Maxvorstadt, Guides Haidhausen, Ratgeber Neuhausen"
       />
       <Header />
-      <main>
+      <main id="main-content">
         <section className="relative py-10 lg:pt-8 pb-4 bg-gradient-to-br from-accent/10 via-background to-primary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">

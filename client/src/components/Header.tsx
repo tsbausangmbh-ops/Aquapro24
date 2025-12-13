@@ -32,6 +32,13 @@ export default function Header() {
 
   return (
     <>
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+        data-testid="link-skip-to-content"
+      >
+        Zum Hauptinhalt springen
+      </a>
       <div className="bg-primary text-primary-foreground py-2">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-2 md:gap-4 text-sm">
@@ -72,7 +79,7 @@ export default function Header() {
               </div>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-6" aria-label="Hauptnavigation">
               <Link 
                 href="/"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -83,15 +90,19 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
+                  aria-expanded={servicesOpen}
+                  aria-haspopup="true"
                   className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="nav-services"
                 >
                   Leistungen
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </button>
                 {servicesOpen && (
                   <div 
                     className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                    role="menu"
+                    aria-label="Leistungen Untermenü"
                     onMouseLeave={() => setServicesOpen(false)}
                   >
                     {servicePages.map((page) => (
@@ -152,16 +163,19 @@ export default function Header() {
               size="icon"
               className="lg:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
               data-testid="button-mobile-menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
             </Button>
           </div>
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-50">
-            <nav className="flex flex-col gap-1">
+          <div id="mobile-menu" className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-50">
+            <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}

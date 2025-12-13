@@ -16,7 +16,7 @@ export default function CookieRichtliniePage() {
         canonical="https://aquapro24.de/cookie-richtlinie"
       />
       <Header />
-      <main className="pt-8 pb-4 lg:pt-10 lg:pb-6">
+      <main id="main-content" className="pt-8 pb-4 lg:pt-10 lg:pb-6">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <Badge variant="secondary" className="gap-1">

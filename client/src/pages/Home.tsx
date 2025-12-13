@@ -34,7 +34,7 @@ export default function Home() {
         }}
       />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <TrustBar />
         <ProblemSolution />

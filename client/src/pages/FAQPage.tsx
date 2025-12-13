@@ -201,7 +201,7 @@ export default function FAQPage() {
         keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />
       <Header />
-      <main>
+      <main id="main-content">
         <section className="relative py-10 lg:pt-8 pb-6 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">

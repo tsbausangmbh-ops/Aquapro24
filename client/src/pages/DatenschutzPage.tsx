@@ -14,7 +14,7 @@ export default function DatenschutzPage() {
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
-      <main className="pt-8 pb-16 lg:pt-10">
+      <main id="main-content" className="pt-8 pb-16 lg:pt-10">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <Badge variant="secondary" className="gap-1">

@@ -133,7 +133,7 @@ export default function SanitaerPage() {
       />
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="relative py-6 md:pt-8 pb-4 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">

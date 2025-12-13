@@ -120,7 +120,7 @@ export default function KontaktPage() {
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst, Badsanierung München Beratung"
       />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section className="py-10 lg:pt-8 pb-4 bg-gradient-to-br from-secondary/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
