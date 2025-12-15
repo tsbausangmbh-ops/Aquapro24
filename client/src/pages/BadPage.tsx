@@ -30,22 +30,22 @@ const services = [
   {
     title: "Komplettsanierung",
     description: "Alles aus einer Hand: Abriss, Rohre, Fliesen, Sanitär, Elektrik - in nur 2-4 Wochen zum Traumbad.",
-    features: ["Ab 8.900€", "2-4 Wochen", "Festpreis", "5 Jahre Garantie"]
+    features: ["Ab 16.000€", "2-4 Wochen", "Festpreis", "5 Jahre Garantie"]
   },
   {
     title: "Teilsanierung",
     description: "Gezielt modernisieren: Dusche erneuern, WC tauschen oder neue Armaturen - schnell und sauber.",
-    features: ["Ab 2.500€", "1-5 Tage", "Minimal-Umbau", "Sofort nutzbar"]
+    features: ["Ab 4.500€", "1-5 Tage", "Minimal-Umbau", "Sofort nutzbar"]
   },
   {
     title: "Barrierefreies Bad",
     description: "Sicher und komfortabel: Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen - für alle Generationen.",
-    features: ["KfW-Förderung", "Zukunftssicher", "Mehr Bewegungsfreiheit", "Stolperfrei"]
+    features: ["Ab 20.000€", "KfW-Förderung", "Zukunftssicher", "Stolperfrei"]
   },
   {
     title: "Luxusbad Premium",
     description: "Exklusive Materialien, Markenarmaturen und smarte Technik für höchste Ansprüche.",
-    features: ["Designermarken", "Freistehende Wanne", "Regendusche XXL", "Smart Home"]
+    features: ["Ab 28.000€", "Designermarken", "Freistehende Wanne", "Regendusche XXL"]
   }
 ];
 
@@ -89,11 +89,11 @@ export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Badsanierung München | Festpreis ab 8.900€ | 3D-Planung gratis | AquaPro24"
-        description="Badsanierung München in 2-3 Wochen: Komplettumbau, barrierefreies Bad, Luxusbad. 847+ Traumbäder realisiert, 5 Jahre Garantie, KfW-Förderung. Kostenlose 3D-Planung! Tel: 0152 12274043"
+        title="Badsanierung München | Festpreis ab 16.000€ | 3D-Planung gratis | AquaPro24"
+        description="Badsanierung München in 2-3 Wochen: Komplettumbau ab 16.000€, barrierefreies Bad ab 20.000€, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie, KfW-Förderung. Tel: 0152 12274043"
         canonical="https://aquapro24.de/bad"
         keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, barrierefreies Bad München, Bad Schwabing, Badsanierung Bogenhausen, Bad Sendling, Badsanierung Pasing, Bad Maxvorstadt, Badsanierung Haidhausen, Bad Neuhausen, Badsanierung Trudering, Bad Laim, Badsanierung Giesing, Bad Moosach, Badsanierung Milbertshofen, Bad Nymphenburg, Badsanierung Perlach, Bad Solln, Badsanierung Hadern, Bad Allach, Badsanierung Aubing, Bad Feldmoching, Bad Isarvorstadt, Bad Lehel, Badumbau München, seniorengerechtes Bad München, Traumbad München, altersgerechtes Bad München, Badmodernisierung München, Bad erneuern München"
-        aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 8.900€. Barrierefreie Bäder mit KfW-Förderung, 3D-Planung inklusive. 847+ Traumbäder realisiert, 5 Jahre Garantie. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 16.000€. Barrierefreie Bäder ab 20.000€ mit KfW-Förderung, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Badsanierung", url: "https://aquapro24.de/bad" }
@@ -104,9 +104,10 @@ export default function BadPage() {
           serviceType: "Bathroom Renovation",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
-            { name: "Komplettsanierung", description: "Komplettumbau mit Fliesen, Sanitär, Elektrik", priceRange: "ab 8.900€" },
-            { name: "Teilsanierung", description: "Gezielte Modernisierung einzelner Bereiche", priceRange: "ab 2.500€" },
-            { name: "Barrierefreies Bad", description: "Seniorengerecht mit KfW-Förderung", priceRange: "ab 12.000€" }
+            { name: "Komplettsanierung", description: "Komplettumbau mit Fliesen, Sanitär, Elektrik", priceRange: "ab 16.000€" },
+            { name: "Teilsanierung", description: "Gezielte Modernisierung einzelner Bereiche", priceRange: "ab 4.500€" },
+            { name: "Barrierefreies Bad", description: "Seniorengerecht mit KfW-Förderung", priceRange: "ab 20.000€" },
+            { name: "Luxusbad Premium", description: "Exklusive Materialien und smarte Technik", priceRange: "ab 28.000€" }
           ],
           aggregateRating: {
             ratingValue: 4.8,
