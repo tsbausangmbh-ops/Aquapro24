@@ -174,43 +174,51 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
 
   return (
     <>
+      {/* Seitlicher Balken rechts - immer sichtbar wenn geschlossen */}
       {!isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
-          <div 
-            onClick={handleOpen}
-            className="bg-emerald-600 text-white shadow-lg rounded-lg px-4 py-3 max-w-[200px] cursor-pointer hover-elevate"
-            data-testid="label-ai-chat-hint"
-          >
-            <p className="text-sm font-medium">KI-Agent für Beratung</p>
-            <p className="text-xs opacity-90 mt-1">Kostenlose Tipps & 24h Buchung Online</p>
-          </div>
-          <Button
-            onClick={handleOpen}
-            className="bg-emerald-600 text-white rounded-full p-4 shadow-lg relative"
-            size="icon"
-            style={{ width: "64px", height: "64px" }}
-            data-testid="button-open-ai-chat"
-            aria-label="Chat öffnen - Kostenlose Beratung durch KI-Assistent"
-          >
+        <div 
+          onClick={handleOpen}
+          className="fixed right-0 top-1/2 -translate-y-1/2 z-50 cursor-pointer group"
+          data-testid="button-open-ai-chat"
+          role="button"
+          tabIndex={0}
+          aria-label="KI-Beratung öffnen - Kostenlose Beratung rund um die Uhr"
+          onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handleOpen(); }}
+        >
+          <div className="bg-emerald-600 text-white shadow-lg rounded-l-lg px-2 py-6 flex flex-col items-center gap-3 hover-elevate transition-all">
             {showPulse && (
-              <span className="absolute inset-0 rounded-full animate-ping opacity-40 bg-current" aria-hidden="true" />
+              <span className="absolute inset-0 rounded-l-lg animate-ping opacity-30 bg-emerald-600" aria-hidden="true" />
             )}
-            <MessageCircle className="w-7 h-7" aria-hidden="true" />
-          </Button>
+            <MessageCircle className="w-6 h-6" aria-hidden="true" />
+            <span 
+              className="writing-vertical text-sm font-medium whitespace-nowrap"
+              style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+            >
+              KI-Beratung
+            </span>
+            <span 
+              className="writing-vertical text-xs opacity-80 whitespace-nowrap"
+              style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+            >
+              24h Online
+            </span>
+          </div>
         </div>
       )}
 
+      {/* Chat-Panel - öffnet sich seitlich */}
       {isOpen && (
         <div 
           ref={dialogRef}
-          className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)]"
+          className="fixed right-0 top-0 h-full z-50 w-[380px] max-w-[calc(100vw-1rem)] shadow-2xl"
           role="dialog"
           aria-modal="true"
           aria-labelledby="chat-dialog-title"
           aria-describedby="chat-dialog-description"
         >
-          <Card className="shadow-2xl border-0 overflow-hidden">
-            <CardHeader className="bg-emerald-600 text-white p-4">
+          <div className="h-full flex flex-col bg-background border-l">
+            {/* Header */}
+            <div className="bg-emerald-600 text-white p-4 flex-shrink-0">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center" aria-hidden="true">
@@ -235,99 +243,99 @@ export default function AIChatWidget({ serviceCategory }: AIChatWidgetProps = {}
                   <X className="w-5 h-5" aria-hidden="true" />
                 </Button>
               </div>
-            </CardHeader>
+            </div>
 
-            <CardContent className="p-0">
-              <div 
-                className="h-[350px] overflow-y-auto p-4 space-y-4 bg-muted/30"
-                role="log"
-                aria-live="polite"
-                aria-label="Chat-Verlauf"
-              >
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`flex gap-2 ${message.role === "user" ? "justify-end" : "justify-start"}`}
-                  >
-                    {message.role === "assistant" && (
-                      <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`} aria-hidden="true">
-                        <Bot className={`w-4 h-4 ${colors.text}`} />
-                      </div>
-                    )}
-                    <div
-                      className={`max-w-[75%] rounded-lg p-3 text-sm whitespace-pre-line ${
-                        message.role === "user"
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-card border"
-                      }`}
-                      data-testid={`chat-message-${message.role}-${index}`}
-                    >
-                      {message.content}
-                    </div>
-                    {message.role === "user" && (
-                      <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center flex-shrink-0" aria-hidden="true">
-                        <User className="w-4 h-4 text-muted-foreground" />
-                      </div>
-                    )}
-                  </div>
-                ))}
-                
-                {isLoading && (
-                  <div className="flex gap-2 justify-start" aria-label="Antwort wird geladen" role="status">
+            {/* Messages */}
+            <div 
+              className="flex-1 overflow-y-auto p-4 space-y-4 bg-muted/30"
+              role="log"
+              aria-live="polite"
+              aria-label="Chat-Verlauf"
+            >
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`flex gap-2 ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                >
+                  {message.role === "assistant" && (
                     <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`} aria-hidden="true">
                       <Bot className={`w-4 h-4 ${colors.text}`} />
                     </div>
-                    <div className="bg-card border rounded-lg p-3">
-                      <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" aria-hidden="true" />
-                      <span className="sr-only">Antwort wird geladen...</span>
-                    </div>
-                  </div>
-                )}
-                
-                <div ref={messagesEndRef} />
-              </div>
-
-              <div className="p-4 border-t bg-background">
-                <form onSubmit={handleSubmit} className="flex gap-2 items-end">
-                  <Textarea
-                    ref={inputRef}
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" && !e.shiftKey) {
-                        e.preventDefault();
-                        if (inputValue.trim() && !isLoading) {
-                          handleSubmit(e);
-                        }
-                      }
-                    }}
-                    placeholder="Ihre Nachricht..."
-                    disabled={isLoading}
-                    className="flex-1 min-h-[60px] max-h-[100px] resize-none"
-                    data-testid="input-chat-message"
-                    aria-label="Nachricht eingeben"
-                  />
-                  <Button 
-                    type="submit" 
-                    size="icon"
-                    disabled={isLoading || !inputValue.trim()}
-                    className={colors.bg}
-                    data-testid="button-send-message"
-                    aria-label="Nachricht senden"
+                  )}
+                  <div
+                    className={`max-w-[75%] rounded-lg p-3 text-sm whitespace-pre-line ${
+                      message.role === "user"
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-card border"
+                    }`}
+                    data-testid={`chat-message-${message.role}-${index}`}
                   >
-                    <Send className="w-4 h-4" aria-hidden="true" />
-                  </Button>
-                </form>
-                
-                <p className="text-xs text-muted-foreground text-center mt-3 pt-3 border-t" id="chat-dialog-description">
-                  KI-gestützter Chatbot. Ihre Eingaben werden zur Beantwortung verarbeitet. Drücken Sie Escape zum Schließen.{" "}
-                  <a href="/datenschutz#mKI" className="text-secondary hover:underline">
-                    Datenschutz
-                  </a>
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+                    {message.content}
+                  </div>
+                  {message.role === "user" && (
+                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                      <User className="w-4 h-4 text-muted-foreground" />
+                    </div>
+                  )}
+                </div>
+              ))}
+              
+              {isLoading && (
+                <div className="flex gap-2 justify-start" aria-label="Antwort wird geladen" role="status">
+                  <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center flex-shrink-0`} aria-hidden="true">
+                    <Bot className={`w-4 h-4 ${colors.text}`} />
+                  </div>
+                  <div className="bg-card border rounded-lg p-3">
+                    <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" aria-hidden="true" />
+                    <span className="sr-only">Antwort wird geladen...</span>
+                  </div>
+                </div>
+              )}
+              
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input */}
+            <div className="p-4 border-t bg-background flex-shrink-0">
+              <form onSubmit={handleSubmit} className="flex gap-2 items-end">
+                <Textarea
+                  ref={inputRef}
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      if (inputValue.trim() && !isLoading) {
+                        handleSubmit(e);
+                      }
+                    }
+                  }}
+                  placeholder="Ihre Nachricht..."
+                  disabled={isLoading}
+                  className="flex-1 min-h-[60px] max-h-[100px] resize-none"
+                  data-testid="input-chat-message"
+                  aria-label="Nachricht eingeben"
+                />
+                <Button 
+                  type="submit" 
+                  size="icon"
+                  disabled={isLoading || !inputValue.trim()}
+                  className={colors.bg}
+                  data-testid="button-send-message"
+                  aria-label="Nachricht senden"
+                >
+                  <Send className="w-4 h-4" aria-hidden="true" />
+                </Button>
+              </form>
+              
+              <p className="text-xs text-muted-foreground text-center mt-3 pt-3 border-t" id="chat-dialog-description">
+                KI-gestützter Chatbot. Ihre Eingaben werden zur Beantwortung verarbeitet. Drücken Sie Escape zum Schließen.{" "}
+                <a href="/datenschutz#mKI" className="text-secondary hover:underline">
+                  Datenschutz
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       )}
     </>
