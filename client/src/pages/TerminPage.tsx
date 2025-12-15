@@ -96,7 +96,7 @@ export default function TerminPage() {
   const dateString = selectedDate ? format(selectedDate, "yyyy-MM-dd") : "";
 
   const { data: slotsData, isLoading: slotsLoading } = useQuery<{ success: boolean; slots: TimeSlot[] }>({
-    queryKey: ["/api/calendar/available-slots", dateString],
+    queryKey: [`/api/calendar/available-slots?date=${dateString}`],
     enabled: !!dateString,
   });
 
