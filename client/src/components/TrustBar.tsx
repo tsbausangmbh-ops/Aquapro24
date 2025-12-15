@@ -7,14 +7,14 @@ const trustItems = [
     subtitle: "Seit 2005",
   },
   {
-    icon: Clock,
-    title: "Ab 60 Min. da",
-    subtitle: "Wenn Sie uns rufen",
+    icon: Users,
+    title: "Geprüfte Partner",
+    subtitle: "Zertifizierte Betriebe",
   },
   {
     icon: Shield,
-    title: "Festpreis",
-    subtitle: "Keine Überraschungen",
+    title: "Qualitätsgarantie",
+    subtitle: "Auf alle Arbeiten",
   },
   {
     icon: Star,
@@ -23,13 +23,13 @@ const trustItems = [
   },
   {
     icon: MapPin,
-    title: "Lokal",
-    subtitle: "Echte Münchner",
+    title: "München",
+    subtitle: "Alle Stadtteile",
   },
   {
-    icon: Users,
-    title: "Geprüfte Partner",
-    subtitle: "Zertifiziert",
+    icon: Clock,
+    title: "Schnell vor Ort",
+    subtitle: "Termine kurzfristig",
   },
 ];
 
