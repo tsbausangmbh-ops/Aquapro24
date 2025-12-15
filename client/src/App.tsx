@@ -21,6 +21,9 @@ const CookieRichtliniePage = lazy(() => import("@/pages/CookieRichtliniePage"));
 const DatenschutzPage = lazy(() => import("@/pages/DatenschutzPage"));
 const AGBPage = lazy(() => import("@/pages/AGBPage"));
 const NotFound = lazy(() => import("@/pages/not-found"));
+const RohrreinigungPage = lazy(() => import("@/pages/RohrreinigungPage"));
+const ArmaturenPage = lazy(() => import("@/pages/ArmaturenPage"));
+const WarmwasserPage = lazy(() => import("@/pages/WarmwasserPage"));
 
 function PageLoader() {
   return (
@@ -43,6 +46,9 @@ function Router() {
         <Route path="/waermepumpe" component={WaermepumpePage} />
         <Route path="/haustechnik" component={HaustechnikPage} />
         <Route path="/sanitaer" component={SanitaerPage} />
+        <Route path="/rohrreinigung" component={RohrreinigungPage} />
+        <Route path="/armaturen" component={ArmaturenPage} />
+        <Route path="/warmwasser" component={WarmwasserPage} />
         <Route path="/ueber-uns" component={UeberUnsPage} />
         <Route path="/faq" component={FAQPage} />
         <Route path="/ratgeber" component={RatgeberPage} />

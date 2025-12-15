@@ -1,0 +1,389 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import AIChatWidget from "@/components/AIChatWidget";
+import SEO from "@/components/SEO";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
+import ServiceAreas from "@/components/ServiceAreas";
+import NLPSection from "@/components/NLPSection";
+import CustomerStories, { heizungStories } from "@/components/CustomerStories";
+import TrustBar from "@/components/TrustBar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Flame, 
+  Phone, 
+  CheckCircle2, 
+  Wrench,
+  ThermometerSun,
+  Zap,
+  Clock,
+  Shield,
+  Award,
+  Star,
+  MessageCircle,
+  Droplets,
+  Settings
+} from "lucide-react";
+import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
+import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
+import ServiceBooking from "@/components/ServiceBooking";
+import RelatedServices from "@/components/RelatedServices";
+
+export default function WarmwasserPage() {
+  const services = [
+    {
+      icon: Flame,
+      title: "Durchlauferhitzer",
+      description: "Installation, Wartung und Reparatur von elektrischen und Gas-Durchlauferhitzern aller Marken."
+    },
+    {
+      icon: ThermometerSun,
+      title: "Warmwasserspeicher",
+      description: "Einbau und Wartung von Warmwasserboilern von 5 bis 300 Liter Fassungsvermögen."
+    },
+    {
+      icon: Droplets,
+      title: "Warmwasser-Zirkulation",
+      description: "Installation von Zirkulationspumpen für sofort verfügbares Warmwasser an jeder Zapfstelle."
+    },
+    {
+      icon: Zap,
+      title: "Elektro-Boiler",
+      description: "Montage von Klein- und Untertischspeichern für Küche, Bad und Gäste-WC."
+    },
+    {
+      icon: Wrench,
+      title: "Reparatur & Wartung",
+      description: "Entstörung, Entkalkung und Wartung Ihrer Warmwasseranlage für optimale Lebensdauer."
+    },
+    {
+      icon: Settings,
+      title: "Energieberatung",
+      description: "Beratung zu energieeffizienten Warmwasserlösungen und möglichen Fördermitteln."
+    }
+  ];
+
+  const benefits = [
+    "Schnelle Hilfe bei Ausfall - auch am Wochenende",
+    "Alle Marken: Vaillant, Stiebel Eltron, Junkers & mehr",
+    "Festpreisgarantie ohne versteckte Kosten",
+    "Energieeffiziente Lösungen für niedrige Betriebskosten",
+    "Fachgerechte Installation nach Vorschriften",
+    "2 Jahre Gewährleistung auf unsere Arbeit"
+  ];
+
+  const faqItems = [
+    {
+      question: "Kein warmes Wasser mehr - wie schnell können Sie helfen?",
+      answer: "Bei Warmwasserausfall sind wir in der Regel innerhalb von 2-4 Stunden bei Ihnen in München. Am Wochenende und an Feiertagen ist unser Notdienst ebenfalls erreichbar."
+    },
+    {
+      question: "Was kostet ein neuer Durchlauferhitzer inklusive Einbau?",
+      answer: "Ein hochwertiger Durchlauferhitzer mit Installation kostet je nach Leistung ab ca. 600€. Wir erstellen Ihnen gerne ein individuelles Angebot mit Festpreis."
+    },
+    {
+      question: "Durchlauferhitzer oder Warmwasserspeicher - was ist besser?",
+      answer: "Das hängt von Ihrem Verbrauch ab. Durchlauferhitzer erwärmen Wasser nur bei Bedarf und sind platzsparend. Speicher bieten sofort heißes Wasser in großer Menge. Wir beraten Sie individuell."
+    },
+    {
+      question: "Mein Durchlauferhitzer macht nur noch lauwarmes Wasser - was tun?",
+      answer: "Das kann an Verkalkung, einem defekten Heizelement oder falscher Einstellung liegen. Oft lässt sich das Problem mit einer Wartung oder kleinen Reparatur beheben. Rufen Sie uns an!"
+    },
+    {
+      question: "Wie oft sollte ich meinen Warmwasserspeicher warten lassen?",
+      answer: "Wir empfehlen eine jährliche Wartung inklusive Entkalkung und Anodenkontrolle. Das verlängert die Lebensdauer erheblich und spart Energiekosten."
+    },
+    {
+      question: "Gibt es Förderungen für neue Warmwasserbereiter?",
+      answer: "Für bestimmte energieeffiziente Warmwasserlösungen, besonders in Verbindung mit erneuerbaren Energien, gibt es Fördermöglichkeiten. Wir beraten Sie gerne zu den aktuellen Programmen."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Warmwasser München | Durchlauferhitzer & Boiler Service | AquaPro24"
+        description="Warmwasser-Service München: Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren & installieren - Vaillant, Stiebel Eltron, Junkers. Tel: 0152 12274043"
+        canonical="https://aquapro24.de/warmwasser"
+        keywords="Warmwasser München, Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Durchlauferhitzer reparieren München, Boiler installieren München, kein warmes Wasser München, Warmwasser Notdienst München, Stiebel Eltron München, Vaillant München, Junkers München, Warmwasserbereiter München"
+        aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0152 12274043"
+        breadcrumbs={[
+          { name: "Home", url: "https://aquapro24.de/" },
+          { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }
+        ]}
+        serviceSchema={{
+          name: "AquaPro24 Warmwasser-Service München",
+          description: "Warmwasser-Service: Durchlauferhitzer, Boiler und Warmwasserspeicher - Installation, Reparatur und Wartung in München.",
+          serviceType: "WaterHeaterService",
+          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
+          offers: [
+            { name: "Durchlauferhitzer-Installation", description: "Einbau neuer Durchlauferhitzer", priceRange: "ab 200€" },
+            { name: "Boiler-Reparatur", description: "Reparatur von Warmwasserspeichern", priceRange: "ab 120€" },
+            { name: "Warmwasser-Wartung", description: "Jährliche Wartung und Entkalkung", priceRange: "ab 99€" }
+          ],
+          aggregateRating: {
+            ratingValue: 4.9,
+            reviewCount: 72
+          },
+          reviews: [
+            { author: "Klaus R.", rating: 5, reviewBody: "Durchlauferhitzer ging plötzlich nicht mehr - am gleichen Tag kam jemand und hat ihn repariert. War nur eine defekte Elektronik. Schnell und günstig!", datePublished: "2024-11-12", location: "München-Trudering" },
+            { author: "Sabine M.", rating: 5, reviewBody: "Haben uns einen neuen Warmwasserspeicher einbauen lassen. Gute Beratung, pünktliche Installation und der Preis war wie vereinbart. Sehr zufrieden!", datePublished: "2024-10-28", location: "München-Laim" }
+          ]
+        }}
+      />
+      <Header />
+      
+      <main id="main-content" className="flex-1">
+        <section className="relative py-6 md:pt-8 pb-4 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge variant="secondary" className="mb-4">
+                  <Flame className="w-3 h-3 mr-1" />
+                  Warmwasser-Service München
+                </Badge>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                  Warmwasser, Durchlauferhitzer & Boiler München
+                </h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                  <strong>Kein warmes Wasser? Durchlauferhitzer defekt?</strong> Wir wissen, wie unangenehm 
+                  das ist - besonders im Winter. Kaltes Duschen macht keinen Spaß.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Als Ihr Warmwasser-Spezialist in München reparieren und installieren wir Durchlauferhitzer, 
+                  Boiler und Warmwasserspeicher aller Marken - schnell und zuverlässig.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4915212274043" data-testid="button-call-warmwasser">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
+                  </Button>
+                  <ServiceBooking 
+                    serviceType="heizung" 
+                    buttonText="Termin buchen"
+                    buttonSize="lg"
+                  />
+                </div>
+              </div>
+              <div className="relative space-y-4">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={plumberImage1} 
+                    alt="Warmwasser-Service in München" 
+                    className="w-full h-72 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      <Star className="w-3 h-3 mr-1" />
+                      Alle Marken
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="rounded-xl overflow-hidden shadow-lg">
+                    <img 
+                      src={plumberImage2} 
+                      alt="Durchlauferhitzer Installation" 
+                      className="w-full h-32 object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center">
+                    <div className="text-2xl font-bold text-secondary">Schnelle Hilfe</div>
+                    <div className="text-sm text-muted-foreground">Bei Warmwasser-Ausfall</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <TrustBar />
+
+        <NLPSection
+          problemTitle="Kennen Sie diese Probleme?"
+          problems={[
+            "Kein warmes Wasser mehr - mitten im Winter",
+            "Der Durchlauferhitzer macht nur noch lauwarmes Wasser",
+            "Der Boiler macht komische Geräusche",
+            "Das Wasser wird nicht richtig heiß oder braucht ewig",
+            "Die Stromrechnung ist zu hoch wegen des alten Geräts"
+          ]}
+          solutionTitle="So lösen wir das für Sie"
+          solutions={[
+            "Schnelle Hilfe bei Ausfall - oft am selben Tag",
+            "Fachgerechte Reparatur oder Austausch defekter Geräte",
+            "Beratung zu energieeffizienten Neugeräten",
+            "Regelmäßige Wartung für lange Lebensdauer",
+            "Transparente Festpreise ohne Überraschungen"
+          ]}
+          futureState="...Sie haben wieder zuverlässig warmes Wasser, Ihr Gerät arbeitet effizient und Sie sparen Energiekosten. So soll es sein."
+          authorityText="Über 500 Warmwasseranlagen installiert und repariert in München"
+          urgencyText="Kein warmes Wasser? Wir helfen schnell!"
+          transformationSteps={[
+            "Sie rufen an und schildern das Problem - wir kommen schnellstmöglich.",
+            "Wir analysieren die Ursache und nennen Ihnen einen Festpreis für die Reparatur oder den Austausch.",
+            "Ihr Warmwasser funktioniert wieder zuverlässig - garantiert."
+          ]}
+        />
+
+        <CustomerStories 
+          stories={heizungStories}
+          title="Echte Geschichten von Münchner Kunden"
+          subtitle="Von der Notfall-Reparatur bis zur Neuinstallation"
+        />
+
+        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Unsere Warmwasser-Leistungen in München
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Vom kleinen Untertischboiler bis zum großen Warmwasserspeicher - 
+                wir sind Ihr Partner für alle Warmwasserlösungen.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <Card key={index} className="hover-elevate">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+                      <service.icon className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 md:pt-8 pb-4 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                  Warum Münchner uns vertrauen
+                </h2>
+                <div className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-card rounded-lg p-8 border">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <Award className="w-8 h-8 text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Marken-Experten</h3>
+                    <p className="text-muted-foreground text-sm">Vaillant, Stiebel Eltron, Junkers & mehr</p>
+                  </div>
+                </div>
+                <div className="space-y-4 text-sm">
+                  <div className="flex items-center gap-3">
+                    <Clock className="w-4 h-4 text-muted-foreground" />
+                    <span>Schnelle Hilfe bei Ausfall</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Shield className="w-4 h-4 text-muted-foreground" />
+                    <span>2 Jahre Gewährleistung</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Zap className="w-4 h-4 text-muted-foreground" />
+                    <span>Energieeffiziente Lösungen</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Warmwasser-Service in München - Ihr Spezialist für Durchlauferhitzer und Boiler
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Warmes Wasser ist ein Grundbedürfnis - und wenn es plötzlich fehlt, muss schnell Hilfe her. 
+                Als Ihr Warmwasser-Spezialist in München sind wir für Sie da: bei Ausfällen, für Wartungen 
+                oder wenn Sie ein neues Gerät brauchen.
+              </p>
+              <p>
+                Wir arbeiten mit allen gängigen Marken: Vaillant, Stiebel Eltron, Junkers/Bosch, AEG, Clage 
+                und viele mehr. Egal ob Ihr Durchlauferhitzer nicht mehr richtig heizt, Ihr Boiler merkwürdige 
+                Geräusche macht oder Sie ein komplett neues Gerät brauchen - wir helfen.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Durchlauferhitzer vs. Warmwasserspeicher</h3>
+              <p>
+                Welches System das richtige für Sie ist, hängt von Ihrem Verbrauchsverhalten ab. Durchlauferhitzer 
+                erwärmen das Wasser nur bei Bedarf und sind sehr platzsparend. Warmwasserspeicher (Boiler) 
+                halten eine große Menge heißes Wasser bereit und eignen sich besonders für Haushalte mit 
+                hohem Verbrauch. Wir beraten Sie gerne individuell.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Regelmäßige Wartung spart Geld</h3>
+              <p>
+                Kalk und Ablagerungen reduzieren die Effizienz Ihres Warmwasserbereiters erheblich. Eine 
+                jährliche Wartung inklusive Entkalkung sorgt dafür, dass Ihr Gerät effizient arbeitet und 
+                länger hält. Das spart Stromkosten und verhindert teure Reparaturen.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <ServiceAreas 
+          serviceName="Warmwasser-Service" 
+          highlightAreas={["Trudering", "Laim", "Giesing"]}
+        />
+
+        <ColorfulFAQ 
+          items={faqItems}
+          title="Häufige Fragen zum Warmwasser-Service"
+        />
+
+        <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Kein warmes Wasser? Wir helfen sofort!
+            </h2>
+            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
+              Durchlauferhitzer defekt, Boiler macht Probleme? Rufen Sie uns an - 
+              wir bringen Ihr Warmwasser wieder zum Laufen.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-warmwasser-cta">
+                  <Phone className="w-4 h-4 mr-2" />
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20ein%20Problem%20mit%20meinem%20Warmwasser." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp Nachricht
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <RelatedServices currentService="heizung" />
+      </main>
+
+      <Footer />
+      <AIChatWidget serviceCategory="heizung" />
+    </div>
+  );
+}
