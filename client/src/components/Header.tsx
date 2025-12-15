@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Menu, X, Phone, MapPin, ChevronDown, Mail } from "lucide-react";
+import { Menu, X, Phone, MapPin, ChevronDown, Mail, Calendar as CalendarIcon } from "lucide-react";
 import logoImage from "@assets/Logo_Transparent_1765467177950.png";
 
 export default function Header() {
@@ -150,6 +150,12 @@ export default function Header() {
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
+              <Button variant="outline" asChild data-testid="nav-termin">
+                <Link href="/termin">
+                  <CalendarIcon className="w-4 h-4 mr-2" />
+                  Termin buchen
+                </Link>
+              </Button>
               <Button data-testid="button-email-header" asChild>
                 <a href="mailto:info@aquapro24.de">
                   <Mail className="w-4 h-4 mr-2" />
@@ -232,6 +238,12 @@ export default function Header() {
                 Kontakt
               </Link>
               <hr className="my-2 border-border" />
+              <Button variant="outline" className="mt-2" asChild data-testid="nav-termin-mobile">
+                <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
+                  <CalendarIcon className="w-4 h-4 mr-2" />
+                  Termin buchen
+                </Link>
+              </Button>
               <Button className="mt-2" asChild data-testid="button-call-mobile">
                 <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />

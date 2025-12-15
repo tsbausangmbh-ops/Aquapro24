@@ -24,6 +24,7 @@ const NotFound = lazy(() => import("@/pages/not-found"));
 const RohrreinigungPage = lazy(() => import("@/pages/RohrreinigungPage"));
 const ArmaturenPage = lazy(() => import("@/pages/ArmaturenPage"));
 const WarmwasserPage = lazy(() => import("@/pages/WarmwasserPage"));
+const TerminPage = lazy(() => import("@/pages/TerminPage"));
 
 function PageLoader() {
   return (
@@ -53,6 +54,7 @@ function Router() {
         <Route path="/faq" component={FAQPage} />
         <Route path="/ratgeber" component={RatgeberPage} />
         <Route path="/kontakt" component={KontaktPage} />
+        <Route path="/termin" component={TerminPage} />
         <Route path="/cookie-richtlinie" component={CookieRichtliniePage} />
         <Route path="/datenschutz" component={DatenschutzPage} />
         <Route path="/agb" component={AGBPage} />
