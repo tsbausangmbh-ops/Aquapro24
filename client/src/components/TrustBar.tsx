@@ -28,8 +28,8 @@ const trustItems = [
   },
   {
     icon: Clock,
-    title: "Schnell vor Ort",
-    subtitle: "Termine kurzfristig",
+    title: "24h Online",
+    subtitle: "Termine buchen",
   },
 ];
 
