@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="border-t border-background/10 mt-4 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <div className="text-sm text-background/50 text-center md:text-left">
-              <p>© 2025 <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Extrucon GmbH</a> – Verwaltung & Betrieb durch <a href="https://komplettsanierungen-haus-wohnung.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHW München</a>.</p>
+              <p>© 2025 <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a> – Verwaltung & Betrieb durch <a href="https://komplettsanierungen-haus-wohnung.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHW München</a>.</p>
             </div>
           </div>
         </div>
