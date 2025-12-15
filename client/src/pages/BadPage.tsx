@@ -24,6 +24,7 @@ import {
 import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
+import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
@@ -348,6 +349,8 @@ export default function BadPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentService="bad" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="bad" />

@@ -4,21 +4,21 @@ const footerLinks = {
   services: {
     title: "Leistungen",
     links: [
-      { label: "Badsanierung", href: "#services" },
-      { label: "Wasserinstallation", href: "#services" },
-      { label: "Rohrreinigung", href: "#services" },
-      { label: "Armaturen & Sanitär", href: "#services" },
-      { label: "Heizungsservice", href: "#services" },
+      { label: "Badsanierung", href: "/bad" },
+      { label: "Sanitär & Installation", href: "/sanitaer" },
+      { label: "Heizung & Wartung", href: "/heizung" },
+      { label: "Wärmepumpe", href: "/waermepumpe" },
+      { label: "Haustechnik", href: "/haustechnik" },
     ],
   },
   areas: {
     title: "Einsatzgebiete",
     links: [
-      { label: "München Innenstadt", href: "#" },
-      { label: "Schwabing", href: "#" },
-      { label: "Bogenhausen", href: "#" },
-      { label: "Sendling", href: "#" },
-      { label: "Pasing", href: "#" },
+      { label: "München Zentrum", href: "/kontakt" },
+      { label: "Schwabing-West", href: "/kontakt" },
+      { label: "Bogenhausen", href: "/kontakt" },
+      { label: "Sendling", href: "/kontakt" },
+      { label: "Pasing-Obermenzing", href: "/kontakt" },
     ],
   },
   info: {
@@ -27,7 +27,7 @@ const footerLinks = {
       { label: "Über uns", href: "/ueber-uns" },
       { label: "FAQ & Preise", href: "/faq" },
       { label: "Ratgeber", href: "/ratgeber" },
-      { label: "Kontakt", href: "#contact" },
+      { label: "Kontakt", href: "/kontakt" },
     ],
   },
   legal: {

@@ -25,6 +25,7 @@ import {
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
+import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
@@ -351,6 +352,8 @@ export default function HeizungPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentService="heizung" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="heizung" />

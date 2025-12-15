@@ -25,6 +25,7 @@ import {
 import smartHomeImage1 from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import smartHomeImage2 from "@assets/stock_images/smart_home_technolog_6887dbb7.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
+import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
@@ -373,6 +374,8 @@ export default function HaustechnikPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentService="haustechnik" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="haustechnik" />

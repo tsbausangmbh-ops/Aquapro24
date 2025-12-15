@@ -27,6 +27,7 @@ import {
 import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
+import RelatedServices from "@/components/RelatedServices";
 
 export default function SanitaerPage() {
   const services = [
@@ -392,6 +393,8 @@ export default function SanitaerPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentService="sanitaer" />
       </main>
 
       <Footer />

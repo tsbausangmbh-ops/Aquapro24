@@ -27,6 +27,7 @@ import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.j
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
 import heatPumpImage3 from "@assets/stock_images/modern_white_heat_pu_786e8fed.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
+import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
@@ -386,6 +387,8 @@ export default function WaermepumpePage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentService="waermepumpe" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="waermepumpe" />
