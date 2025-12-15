@@ -25,8 +25,8 @@ import {
   Sparkles,
   Settings
 } from "lucide-react";
-import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
-import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
+import faucetImage1 from "@assets/generated_images/modern_chrome_faucet.png";
+import faucetImage2 from "@assets/generated_images/faucet_installation_work.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
@@ -171,8 +171,8 @@ export default function ArmaturenPage() {
               <div className="relative space-y-4">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src={plumberImage1} 
-                    alt="Armaturenmontage in München" 
+                    src={faucetImage1} 
+                    alt="Moderne Armatur in München" 
                     className="w-full h-72 object-cover"
                     loading="lazy"
                   />
@@ -186,7 +186,7 @@ export default function ArmaturenPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="rounded-xl overflow-hidden shadow-lg">
                     <img 
-                      src={plumberImage2} 
+                      src={faucetImage2} 
                       alt="Wasserhahn Installation" 
                       className="w-full h-32 object-cover"
                       loading="lazy"

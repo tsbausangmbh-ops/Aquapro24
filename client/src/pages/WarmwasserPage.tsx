@@ -25,8 +25,8 @@ import {
   Droplets,
   Settings
 } from "lucide-react";
-import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
-import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
+import waterHeaterImage1 from "@assets/generated_images/tankless_water_heater.png";
+import waterHeaterImage2 from "@assets/generated_images/water_boiler_installation.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
@@ -171,8 +171,8 @@ export default function WarmwasserPage() {
               <div className="relative space-y-4">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src={plumberImage1} 
-                    alt="Warmwasser-Service in München" 
+                    src={waterHeaterImage1} 
+                    alt="Moderner Durchlauferhitzer in München" 
                     className="w-full h-72 object-cover"
                     loading="lazy"
                   />
@@ -186,8 +186,8 @@ export default function WarmwasserPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="rounded-xl overflow-hidden shadow-lg">
                     <img 
-                      src={plumberImage2} 
-                      alt="Durchlauferhitzer Installation" 
+                      src={waterHeaterImage2} 
+                      alt="Warmwasserspeicher Installation" 
                       className="w-full h-32 object-cover"
                       loading="lazy"
                     />

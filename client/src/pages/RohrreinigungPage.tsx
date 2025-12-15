@@ -25,8 +25,8 @@ import {
   Zap,
   Camera
 } from "lucide-react";
-import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
-import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
+import drainImage1 from "@assets/generated_images/clean_modern_drain_grate.png";
+import drainImage2 from "@assets/generated_images/drain_cleaning_equipment.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
@@ -171,7 +171,7 @@ export default function RohrreinigungPage() {
               <div className="relative space-y-4">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src={plumberImage1} 
+                    src={drainImage1} 
                     alt="Professionelle Rohrreinigung in München" 
                     className="w-full h-72 object-cover"
                     loading="lazy"
@@ -186,7 +186,7 @@ export default function RohrreinigungPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="rounded-xl overflow-hidden shadow-lg">
                     <img 
-                      src={plumberImage2} 
+                      src={drainImage2} 
                       alt="Abflussreinigung mit Spezialgeräten" 
                       className="w-full h-32 object-cover"
                       loading="lazy"
