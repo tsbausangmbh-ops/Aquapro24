@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import { 
   Thermometer, 
   Droplets, 
@@ -10,7 +11,8 @@ import {
   PipetteIcon,
   Phone,
   Clock,
-  CheckCircle2
+  CheckCircle2,
+  ArrowRight
 } from "lucide-react";
 
 const services = [
@@ -20,6 +22,7 @@ const services = [
     description: "Komplette Badsanierung oder Teilrenovierung – modern, barrierefrei oder luxuriös nach Ihren Wünschen.",
     features: ["Komplettsanierung", "Barrierefreies Bad", "Designbäder"],
     emergency: false,
+    link: "/bad",
   },
   {
     icon: Droplets,
@@ -27,6 +30,7 @@ const services = [
     description: "Professionelle Installation von Wasserleitungen, Anschlüssen und Armaturen in Neubau und Bestand.",
     features: ["Neuinstallation", "Leitungserneuerung", "Anschlussarbeiten"],
     emergency: false,
+    link: "/sanitaer",
   },
   {
     icon: PipetteIcon,
@@ -34,6 +38,7 @@ const services = [
     description: "Verstopfte Abflüsse? Professionelle Reinigung mit moderner Technik und Kamerainspektion.",
     features: ["Hochdruckreinigung", "Kamerainspektion", "Wurzelentfernung"],
     emergency: true,
+    link: "/rohrreinigung",
   },
   {
     icon: Wrench,
@@ -41,6 +46,7 @@ const services = [
     description: "Montage und Austausch von Wasserhähnen, Duscharmaturen, WCs und Waschbecken.",
     features: ["Armaturentausch", "WC-Montage", "Waschbecken"],
     emergency: false,
+    link: "/armaturen",
   },
   {
     icon: Thermometer,
@@ -48,6 +54,7 @@ const services = [
     description: "Installation und Wartung von Durchlauferhitzern, Boilern und Warmwasserspeichern.",
     features: ["Durchlauferhitzer", "Boiler", "Speicheranlagen"],
     emergency: false,
+    link: "/warmwasser",
   },
   {
     icon: Flame,
@@ -55,6 +62,7 @@ const services = [
     description: "Wartung und Reparatur Ihrer Heizungsanlage – alle Hersteller und Systeme.",
     features: ["Wartung", "Reparatur", "Effizienzcheck"],
     emergency: false,
+    link: "/heizung",
   },
 ];
 
@@ -76,39 +84,45 @@ export default function Services() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           {services.map((service, index) => (
-            <Card key={index} className="group hover-elevate relative transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-              {service.emergency && (
-                <Badge 
-                  className="absolute -top-2 -right-2 bg-primary text-primary-foreground shadow-lg"
-                >
-                  <Clock className="w-3 h-3 mr-1" />
-                  Notdienst
-                </Badge>
-              )}
-              <CardHeader>
-                <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 group-hover:scale-110 transition-all duration-300">
-                  <service.icon className="w-7 h-7 text-secondary" />
-                </div>
-                <CardTitle data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-accent" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 pt-3 border-t border-border">
-                  <p className="text-xs text-secondary font-medium flex items-center gap-1.5">
-                    <Clock className="w-3 h-3" />
-                    24h Wartungstermin
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Link key={index} href={service.link} data-testid={`link-service-${index}`}>
+              <Card className="group hover-elevate relative transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer h-full">
+                {service.emergency && (
+                  <Badge 
+                    className="absolute -top-2 -right-2 bg-primary text-primary-foreground shadow-lg"
+                  >
+                    <Clock className="w-3 h-3 mr-1" />
+                    Notdienst
+                  </Badge>
+                )}
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 group-hover:scale-110 transition-all duration-300">
+                    <service.icon className="w-7 h-7 text-secondary" />
+                  </div>
+                  <CardTitle data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-accent" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
+                    <p className="text-xs text-secondary font-medium flex items-center gap-1.5">
+                      <Clock className="w-3 h-3" />
+                      24h Wartungstermin
+                    </p>
+                    <span className="text-xs text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Mehr erfahren
+                      <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
         
