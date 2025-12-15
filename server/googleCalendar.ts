@@ -148,6 +148,16 @@ export interface TimeSlot {
 const BUFFER_MINUTES = 90;
 
 export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
+  // Check if it's Saturday (6) or Sunday (0) - no appointments on weekends
+  const dateObj = new Date(date);
+  const dayOfWeek = dateObj.getDay();
+  
+  if (dayOfWeek === 0 || dayOfWeek === 6) {
+    // Return empty slots for weekends
+    return [];
+  }
+  
+  // Working hours: 08:00 - 16:30 (last appointment at 15:30)
   const timeSlots: TimeSlot[] = [
     { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
     { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
@@ -157,8 +167,7 @@ export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
     { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
     { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
     { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
-    { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
-    { time: "17:00", available: true, label: "17:00 - 18:00 Uhr" },
+    { time: "15:30", available: true, label: "15:30 - 16:30 Uhr" },
   ];
 
   try {
