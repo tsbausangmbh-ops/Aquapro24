@@ -44,7 +44,9 @@ import {
   ArrowLeft,
   Shield,
   Star,
+  MessageCircle,
 } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 const bookingSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
@@ -508,7 +510,27 @@ export default function TerminPage() {
               </Form>
             )}
 
-            <div className="mt-8 grid md:grid-cols-3 gap-4">
+            <div className="mt-8 p-6 bg-card rounded-lg border text-center">
+              <p className="text-muted-foreground mb-4">
+                Lieber persönlich? Schreiben Sie uns direkt per WhatsApp:
+              </p>
+              <Button 
+                asChild 
+                className="bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
+                data-testid="button-whatsapp-termin"
+              >
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Beratungstermin%20vereinbaren."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiWhatsapp className="w-5 h-5 mr-2" />
+                  WhatsApp schreiben
+                </a>
+              </Button>
+            </div>
+
+            <div className="mt-4 grid md:grid-cols-3 gap-4">
               <div className="flex items-center gap-3 p-4 bg-card rounded-lg border">
                 <Shield className="w-8 h-8 text-accent flex-shrink-0" />
                 <div>

@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, MapPin, ChevronDown, Mail, Calendar as CalendarIcon } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import logoImage from "@assets/Logo_Transparent_1765467177950.png";
 
 export default function Header() {
@@ -156,10 +157,18 @@ export default function Header() {
                   Termin buchen
                 </Link>
               </Button>
-              <Button data-testid="button-email-header" asChild>
-                <a href="mailto:info@aquapro24.de">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Email schreiben
+              <Button 
+                asChild 
+                className="bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
+                data-testid="button-whatsapp-header"
+              >
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiWhatsapp className="w-4 h-4 mr-2" />
+                  WhatsApp
                 </a>
               </Button>
             </div>
@@ -243,6 +252,20 @@ export default function Header() {
                   <CalendarIcon className="w-4 h-4 mr-2" />
                   Termin buchen
                 </Link>
+              </Button>
+              <Button 
+                className="mt-2 bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]" 
+                asChild 
+                data-testid="button-whatsapp-mobile"
+              >
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiWhatsapp className="w-4 h-4 mr-2" />
+                  WhatsApp schreiben
+                </a>
               </Button>
               <Button className="mt-2" asChild data-testid="button-call-mobile">
                 <a href="tel:+4915212274043">
