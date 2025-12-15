@@ -115,7 +115,7 @@ export default function FunnelJourney() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer" data-testid="button-funnel-whatsapp">
                 WhatsApp schreiben
               </a>
             </Button>
