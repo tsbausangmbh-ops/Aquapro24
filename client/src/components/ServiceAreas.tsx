@@ -69,7 +69,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">1</span>
-                <span><strong>Lokales Partnernetzwerk seit 2005</strong> - Wir kennen München und seine Gebäudestrukturen</span>
+                <span><strong>Lokale Fachbetriebe</strong> - Wir kennen München und seine Gebäudestrukturen</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">2</span>

@@ -90,7 +90,7 @@ const values = [
 const differentiators = [
   { icon: CheckCircle2, text: "Festpreisgarantie vor Arbeitsbeginn - schriftlich" },
   { icon: CheckCircle2, text: "24/7 Notdienst mit echtem Ansprechpartner" },
-  { icon: CheckCircle2, text: "Partnernetzwerk seit 2005 mit Qualitätsversprechen" },
+  { icon: CheckCircle2, text: "Geprüfte Fachbetriebe mit Qualitätsversprechen" },
   { icon: CheckCircle2, text: "Klare Kommunikation ohne Fachchinesisch" },
   { icon: CheckCircle2, text: "Saubere Arbeit - Bodenschutz und Aufräumen inklusive" },
   { icon: CheckCircle2, text: "5 Jahre Gewährleistung auf alle Arbeiten" }
@@ -224,7 +224,7 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über AquaPro24 München | Partnernetzwerk seit 2005 | Geprüfte Fachbetriebe"
+        title="Über AquaPro24 München | Geprüfte Fachbetriebe | Sanitär & Heizung"
         description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0152 12274043"
         canonical="https://aquapro24.de/ueber-uns"
         keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
@@ -239,7 +239,7 @@ export default function UeberUnsPage() {
               <div className="space-y-6">
                 <Badge variant="secondary" className="gap-2">
                   <BadgeCheck className="w-4 h-4" />
-                  Partnernetzwerk seit 2005
+                  Geprüfte Fachbetriebe München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
                   AquaPro24 München:<br />
