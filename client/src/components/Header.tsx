@@ -154,7 +154,7 @@ export default function Header() {
               <Button variant="outline" asChild data-testid="nav-termin">
                 <Link href="/termin">
                   <CalendarIcon className="w-4 h-4 mr-2" />
-                  Termin buchen
+                  24h Terminbuchung
                 </Link>
               </Button>
               <Button 
@@ -250,7 +250,7 @@ export default function Header() {
               <Button variant="outline" className="mt-2" asChild data-testid="nav-termin-mobile">
                 <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
                   <CalendarIcon className="w-4 h-4 mr-2" />
-                  Termin buchen
+                  24h Terminbuchung
                 </Link>
               </Button>
               <Button 
