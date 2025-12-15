@@ -55,7 +55,7 @@ export default function ProblemSolution() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Ihr Traumbad wartet – wir machen es Wirklichkeit
+            Sanitär & Bad – professionell und zuverlässig
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
             Von der Planung bis zur Fertigstellung – alles aus einer Hand
