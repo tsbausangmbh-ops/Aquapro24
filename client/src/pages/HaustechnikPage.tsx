@@ -215,7 +215,7 @@ export default function HaustechnikPage() {
           ]}
           futureState="...Ihre gesamte Haustechnik funktioniert perfekt zusammen, Sie haben einen Ansprechpartner für alles und Ihr Zuhause arbeitet intelligent für Sie. Wasserversorgung, Heizung und Lüftung spielen optimal zusammen - und Sie genießen einfach den Komfort."
           authorityText="Über 1.500 Haustechnik-Projekte in München realisiert"
-          urgencyText="Komplettberatung: Ein Termin für alle Gewerke"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Bedarfsanalyse: Wir erfassen alle Ihre Haustechnik-Anforderungen in einem Termin.",
             "Ganzheitliche Planung: Ein Konzept für Wasser, Gas, Lüftung und Smart Home - alles abgestimmt.",

@@ -224,7 +224,7 @@ export default function SanitaerPage() {
           ]}
           futureState="...Ihr Sanitärproblem ist gelöst, die Arbeit wurde sauber und professionell erledigt, und Sie haben einen fairen Preis bezahlt. So arbeiten wir - Tag für Tag für unsere Münchner Kunden."
           authorityText="Partnernetzwerk mit über 2.800 zufriedenen Kunden in München"
-          urgencyText="Heute noch freie Termine verfügbar"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Sie rufen an oder schreiben uns - wir sind sofort für Sie da und hören Ihnen zu.",
             "Wir kommen zum vereinbarten Termin, analysieren das Problem und nennen Ihnen den Festpreis.",

@@ -226,7 +226,7 @@ export default function WaermepumpePage() {
           ]}
           futureState="...Ihre neue Wärmepumpe läuft leise im Garten, Sie heizen klimaneutral und Ihre Heizkosten sind um die Hälfte gesunken. Jeden Monat sparen Sie Geld und tun etwas für die Umwelt. Mit KSHW München wird diese Vision Realität."
           authorityText="Über 200 Wärmepumpen in München installiert - zertifizierter Fachbetrieb"
-          urgencyText="Förderung sichern: BAFA-Antrag vor Heizungstausch nötig!"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Kostenloser Eignungscheck: Wir prüfen Ihr Haus und berechnen die optimale Wärmepumpe.",
             "Förderantrag & Planung: Wir übernehmen die BAFA-Beantragung und planen die Installation.",

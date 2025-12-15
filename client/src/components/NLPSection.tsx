@@ -107,7 +107,7 @@ export default function NLPSection({
           </p>
           
           {urgencyText && (
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary-foreground dark:text-foreground px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm mb-6 animate-pulse shadow-lg">
               <Clock className="w-4 h-4" />
               <span className="font-medium">{urgencyText}</span>
             </div>

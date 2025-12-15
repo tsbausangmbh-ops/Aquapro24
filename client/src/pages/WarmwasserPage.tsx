@@ -223,7 +223,7 @@ export default function WarmwasserPage() {
           ]}
           futureState="...Sie haben wieder zuverlässig warmes Wasser, Ihr Gerät arbeitet effizient und Sie sparen Energiekosten. So soll es sein."
           authorityText="Über 500 Warmwasseranlagen installiert und repariert in München"
-          urgencyText="Kein warmes Wasser? Wir helfen schnell!"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Sie rufen an und schildern das Problem - wir kommen schnellstmöglich.",
             "Wir analysieren die Ursache und nennen Ihnen einen Festpreis für die Reparatur oder den Austausch.",

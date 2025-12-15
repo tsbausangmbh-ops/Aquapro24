@@ -223,7 +223,7 @@ export default function HeizungPage() {
           ]}
           futureState="...Ihre Heizung läuft zuverlässig, Ihre Energiekosten sind gesunken und Sie haben einen vertrauenswürdigen Partner, der sich um alles kümmert. Bei uns ist das kein Wunschtraum - das ist Standard."
           authorityText="24/7 Notdienst - Schnelle Hilfe bei Heizungsausfall"
-          urgencyText="Heizungsnotfall? Wir sind ab 60 Min. da"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Anruf oder Chat: Schildern Sie kurz das Problem - wir sind rund um die Uhr erreichbar.",
             "Schnelle Diagnose: Unser Techniker kommt, prüft die Heizung und nennt Ihnen den Festpreis.",

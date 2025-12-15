@@ -223,7 +223,7 @@ export default function ArmaturenPage() {
           ]}
           futureState="...Ihre neue Armatur sitzt perfekt, alles ist dicht und Sie genießen wieder vollen Wasserkomfort. Und falls mal etwas nicht stimmt - wir geben 2 Jahre Gewährleistung."
           authorityText="Über 500 Armaturen montiert und repariert in München"
-          urgencyText="Schnelle Terminvergabe - oft am selben Tag"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Sie kontaktieren uns mit Ihrem Anliegen - Reparatur oder Neuinstallation.",
             "Wir kommen zum vereinbarten Termin und nennen Ihnen den Festpreis.",

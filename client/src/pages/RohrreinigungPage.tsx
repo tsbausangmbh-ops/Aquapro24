@@ -223,7 +223,7 @@ export default function RohrreinigungPage() {
           ]}
           futureState="...Ihr Abfluss läuft wieder frei, das Problem ist nachhaltig gelöst und Sie wissen, wie Sie Verstopfungen in Zukunft vermeiden können. So einfach kann es sein."
           authorityText="Über 2.800 gelöste Verstopfungen in München"
-          urgencyText="Schnelle Hilfe - oft innerhalb 60 Minuten"
+          urgencyText="Noch 3 Beratungstermine diese Woche frei"
           transformationSteps={[
             "Sie rufen an und schildern das Problem - wir kommen schnellstmöglich.",
             "Wir analysieren die Verstopfung und nennen Ihnen den Festpreis.",
