@@ -23,6 +23,7 @@ const services = [
     features: ["Komplettsanierung", "Barrierefreies Bad", "Designbäder"],
     emergency: false,
     link: "/bad",
+    priceInfo: "Ab 8.900€"
   },
   {
     icon: Droplets,
@@ -31,6 +32,7 @@ const services = [
     features: ["Neuinstallation", "Leitungserneuerung", "Anschlussarbeiten"],
     emergency: false,
     link: "/sanitaer",
+    priceInfo: "Ab 89€"
   },
   {
     icon: PipetteIcon,
@@ -39,6 +41,7 @@ const services = [
     features: ["Hochdruckreinigung", "Kamerainspektion", "Wurzelentfernung"],
     emergency: true,
     link: "/rohrreinigung",
+    priceInfo: "Ab 79€"
   },
   {
     icon: Wrench,
@@ -47,6 +50,7 @@ const services = [
     features: ["Armaturentausch", "WC-Montage", "Waschbecken"],
     emergency: false,
     link: "/armaturen",
+    priceInfo: "Ab 120€"
   },
   {
     icon: Thermometer,
@@ -55,6 +59,7 @@ const services = [
     features: ["Durchlauferhitzer", "Boiler", "Speicheranlagen"],
     emergency: false,
     link: "/warmwasser",
+    priceInfo: "Ab 250€"
   },
   {
     icon: Flame,
@@ -63,6 +68,7 @@ const services = [
     features: ["Wartung", "Reparatur", "Effizienzcheck"],
     emergency: false,
     link: "/heizung",
+    priceInfo: "Ab 149€"
   },
 ];
 
