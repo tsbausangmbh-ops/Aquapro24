@@ -69,11 +69,11 @@ export default function NewYearPopup() {
           className="w-full h-auto"
         />
         
-        {/* Gradient mit Website-Farben: Trust Blue */}
+        {/* Festliches Rot-Gradient für Neujahr */}
         <div 
           className="absolute inset-0"
           style={{ 
-            background: "linear-gradient(to top, rgba(30, 95, 148, 0.95), rgba(30, 95, 148, 0.5), transparent)" 
+            background: "linear-gradient(to top, rgba(139, 30, 30, 0.95), rgba(165, 42, 42, 0.6), transparent)" 
           }}
         />
         
@@ -87,10 +87,10 @@ export default function NewYearPopup() {
         </div>
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
-          {/* Action Orange für Überschrift */}
+          {/* Gold für Überschrift */}
           <h3 
             className="text-xl md:text-3xl font-bold mb-4"
-            style={{ color: "#E85D04" }}
+            style={{ color: "#FFD700" }}
           >
             Frohes neues Jahr {currentYear}!
           </h3>
@@ -106,10 +106,10 @@ export default function NewYearPopup() {
           <p className="text-sm md:text-base text-white/90">
             Wir wünschen Ihnen Gesundheit, Erfolg und ein wundervolles Jahr!
           </p>
-          {/* Action Orange für Team-Signatur */}
+          {/* Gold für Team-Signatur */}
           <p 
             className="text-base md:text-lg mt-4 font-semibold"
-            style={{ color: "#E85D04" }}
+            style={{ color: "#FFD700" }}
           >
             Ihr Team von KSHW München
           </p>
