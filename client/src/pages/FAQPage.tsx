@@ -198,7 +198,6 @@ export default function FAQPage() {
         title="Häufige Fragen (FAQ) | Sanitär & Heizung München | Ihr Partnernetzwerk"
         description="Antworten auf häufige Fragen zu Sanitär, Heizung und Badsanierung in München. Festpreisgarantie, Notdienst, Förderungen und mehr. Jetzt informieren!"
         canonical="https://kshw-muenchen.de/faq"
-        keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />
       <Header />
       <main id="main-content">

@@ -65,8 +65,9 @@ export default function NewYearPopup() {
         </button>
         <img 
           src={fireworksBackground} 
-          alt="Neujahrsgrüße" 
+          alt="Frohes Neues Jahr - AquaPro24 Sanitär und Heizung München wünscht ein erfolgreiches neues Jahr" 
           className="w-full h-auto"
+          loading="lazy"
         />
         
         {/* Blaues Gradient */}

@@ -61,8 +61,9 @@ export default function ChristmasPopup() {
       >
         <img 
           src={christmasBackground} 
-          alt="Weihnachtsgrüße" 
+          alt="Frohe Weihnachten - AquaPro24 Sanitär und Heizung München wünscht besinnliche Feiertage" 
           className="w-full h-auto"
+          loading="lazy"
         />
         
         {/* Blaues Gradient */}

@@ -30,7 +30,6 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
-  keywords?: string;
   ogImage?: string;
   structuredData?: object;
   breadcrumbs?: BreadcrumbItem[];
@@ -280,7 +279,6 @@ export default function SEO({
   title, 
   description, 
   canonical, 
-  keywords,
   ogImage = "/og-image.jpg",
   structuredData,
   breadcrumbs,
@@ -302,7 +300,6 @@ export default function SEO({
     };
 
     updateMeta("description", description);
-    if (keywords) updateMeta("keywords", keywords);
     
     updateMeta("og:title", title, true);
     updateMeta("og:description", description, true);
@@ -512,7 +509,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema]);
+  }, [title, description, canonical, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema]);
 
   return null;
 }

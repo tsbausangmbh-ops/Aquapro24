@@ -106,7 +106,6 @@ export default function ArmaturenPage() {
         title="Armaturen München | Wasserhahn Montage & Reparatur | AquaPro24"
         description="Armaturen München: Wasserhahn tropft? Neue Armatur einbauen? Wir montieren Grohe, Hansgrohe & Co. Festpreis ab 80€, schnelle Termine. Tel: 0152 12274043"
         canonical="https://aquapro24.de/armaturen"
-        keywords="Armaturen München, Wasserhahn einbauen München, Armatur montieren München, Wasserhahn tropft München, Grohe Montage München, Hansgrohe Installation München, Küchenarmatur München, Badarmatur München, Wasserhahn reparieren München, Armaturentausch München, Thermostatarmatur München, Duscharmatur München"
         aiSummary="AquaPro24 Armaturen-Service München: Montage und Reparatur aller Marken (Grohe, Hansgrohe, Geberit). Wasserhahn tropft? Neue Armatur? Festpreis ab 80€. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

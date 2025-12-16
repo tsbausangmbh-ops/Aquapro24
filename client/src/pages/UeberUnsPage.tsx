@@ -227,7 +227,6 @@ export default function UeberUnsPage() {
         title="Über AquaPro24 München | Geprüfte Fachbetriebe | Sanitär & Heizung"
         description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0152 12274043"
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
         structuredData={aboutPageSchema}
       />
       <Header />

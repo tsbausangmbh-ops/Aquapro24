@@ -117,7 +117,6 @@ export default function KontaktPage() {
         title="Kontakt | KSHW München - Sanitär & Heizung München"
         description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0152 12274043. Kostenlose Beratung, schnelle Termine."
         canonical="https://kshw-muenchen.de/kontakt"
-        keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst, Badsanierung München Beratung"
       />
       <Header />
       <main id="main-content">
