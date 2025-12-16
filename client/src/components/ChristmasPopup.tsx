@@ -93,10 +93,10 @@ export default function ChristmasPopup() {
         </button>
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
-          {/* Gold für Überschrift */}
+          {/* Rot für Überschrift */}
           <h3 
             className="text-xl md:text-3xl font-bold mb-4"
-            style={{ color: "#FFD700" }}
+            style={{ color: "#DC2626" }}
           >
             Frohe Weihnachten und ein gesundes und glückliches Jahr {nextYear}
           </h3>
