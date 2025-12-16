@@ -1,34 +1,29 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.png";
+import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
 
-function isChristmasSeason(): boolean {
+function isNewYearDay(): boolean {
   const now = new Date();
   const month = now.getMonth() + 1;
   const day = now.getDate();
 
-  return month === 12 && day >= 16 && day <= 26;
+  return month === 1 && day === 1;
 }
 
-function getCurrentYear(): number {
-  return new Date().getFullYear();
-}
-
-function getNextYear(): number {
-  return new Date().getFullYear() + 1;
-}
-
-export default function ChristmasPopup() {
+export default function NewYearPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-
-  const currentYear = getCurrentYear();
-  const nextYear = getNextYear();
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [lastYear, setLastYear] = useState(new Date().getFullYear() - 1);
 
   useEffect(() => {
-    if (!isChristmasSeason()) {
+    if (!isNewYearDay()) {
       return;
     }
+
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+    setLastYear(year - 1);
 
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -51,7 +46,7 @@ export default function ChristmasPopup() {
         isClosing ? "opacity-0" : "opacity-100"
       }`}
       onClick={handleClose}
-      data-testid="christmas-popup-overlay"
+      data-testid="newyear-popup-overlay"
     >
       <div 
         className={`relative max-w-4xl w-full mx-4 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 ${
@@ -59,9 +54,18 @@ export default function ChristmasPopup() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          type="button"
+          className="absolute z-50 text-white bg-black/30 rounded-full p-2"
+          style={{ top: "12px", right: "12px", left: "auto" }}
+          onClick={handleClose}
+          data-testid="button-close-newyear"
+        >
+          <X className="w-8 h-8" />
+        </button>
         <img 
-          src={christmasBackground} 
-          alt="Weihnachtsgrüße" 
+          src={fireworksBackground} 
+          alt="Neujahrsgrüße" 
           className="w-full h-auto"
         />
         
@@ -82,32 +86,25 @@ export default function ChristmasPopup() {
           </p>
         </div>
         
-        <button
-          type="button"
-          className="absolute z-50 text-white bg-black/30 rounded-full p-2"
-          style={{ top: "12px", right: "12px", left: "auto" }}
-          onClick={handleClose}
-          data-testid="button-close-christmas"
-        >
-          <X className="w-8 h-8" />
-        </button>
-        
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
           {/* Action Orange für Überschrift */}
           <h3 
             className="text-xl md:text-3xl font-bold mb-4"
             style={{ color: "#E85D04" }}
           >
-            Frohe Weihnachten und ein gesundes und glückliches Jahr {nextYear}
+            Frohes neues Jahr {currentYear}!
           </h3>
           <p className="text-base md:text-lg font-medium mb-3">
             Liebe Kunden und Kundinnen,
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
-            Wir sagen Danke für die gute Zusammenarbeit und das Vertrauen, das Sie uns {currentYear} entgegengebracht haben.
+            Danke für Ihr Vertrauen in {lastYear}. Ihre Zufriedenheit ist unser Antrieb.
+          </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            Auch {currentYear} stehen wir Ihnen als zuverlässiger Partner für alle Sanierungsprojekte zur Seite.
           </p>
           <p className="text-sm md:text-base text-white/90">
-            Wir freuen uns, auch im nächsten Jahr für Sie im Einsatz zu sein.
+            Wir wünschen Ihnen Gesundheit, Erfolg und ein wundervolles Jahr!
           </p>
           {/* Action Orange für Team-Signatur */}
           <p 

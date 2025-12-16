@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Loader2 } from "lucide-react";
 import ChristmasPopup from "@/components/ChristmasPopup";
+import NewYearPopup from "@/components/NewYearPopup";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Impressum = lazy(() => import("@/pages/Impressum"));
@@ -71,6 +72,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <ChristmasPopup />
+        <NewYearPopup />
         <Toaster />
         <Router />
       </TooltipProvider>
