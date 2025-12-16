@@ -65,11 +65,11 @@ export default function ChristmasPopup() {
           className="w-full h-auto"
         />
         
-        {/* Festliches Rot-Gradient für Weihnachten */}
+        {/* Blaues Gradient */}
         <div 
           className="absolute inset-0"
           style={{ 
-            background: "linear-gradient(to top, rgba(139, 30, 30, 0.95), rgba(165, 42, 42, 0.6), transparent)" 
+            background: "linear-gradient(to top, rgba(30, 58, 138, 0.95), rgba(59, 130, 246, 0.6), transparent)" 
           }}
         />
         
