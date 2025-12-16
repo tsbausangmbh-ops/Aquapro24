@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Loader2 } from "lucide-react";
+import ChristmasPopup from "@/components/ChristmasPopup";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Impressum = lazy(() => import("@/pages/Impressum"));
@@ -69,6 +70,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ChristmasPopup />
         <Toaster />
         <Router />
       </TooltipProvider>
