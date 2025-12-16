@@ -96,6 +96,30 @@ export default function SanitaerPage() {
     {
       question: "Geben Sie Garantie auf Ihre Sanitärarbeiten?",
       answer: "Ja, auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Bei Problemen kommen wir kostenlos zurück und beheben den Mangel. Auf eingebaute Materialien gelten zusätzlich die Herstellergarantien."
+    },
+    {
+      question: "Was tun bei einem Wasserschaden in der Wohnung?",
+      answer: "Bei einem Wasserschaden: 1. Hauptwasserhahn sofort zudrehen (meist im Keller oder unter der Spüle). 2. Strom in betroffenen Bereichen abschalten. 3. Uns anrufen unter 0152 12274043 - wir sind innerhalb von 60 Minuten da. 4. Wenn möglich, Wasser aufwischen und Möbel hochstellen. Wir dokumentieren den Schaden auch für Ihre Versicherung."
+    },
+    {
+      question: "Welche Wasserleitungen sind in Münchner Altbauten verbaut?",
+      answer: "In Münchner Altbauten (vor 1970) finden wir oft Blei-, Stahl- oder verzinkte Rohre. Diese sollten aus Gesundheits- und Korrosionsgründen ausgetauscht werden. Moderne Alternativen sind Kupfer, Edelstahl oder Kunststoff (PE-X, Mehrschichtverbund). Wir beraten Sie zur besten Lösung für Ihr Gebäude."
+    },
+    {
+      question: "Wie erkenne ich ein verstecktes Wasserleck?",
+      answer: "Anzeichen für versteckte Lecks sind: ungewöhnlich hohe Wasserrechnungen, feuchte Stellen an Wänden oder Decken, Schimmelbildung, muffiger Geruch, oder ein Wasserzähler der läuft obwohl alle Hähne geschlossen sind. Wir können mit modernen Leckortungsgeräten die genaue Stelle finden - ohne aufwändiges Aufbrechen."
+    },
+    {
+      question: "Kann ich meinen Wasserdruck selbst erhöhen?",
+      answer: "Niedrigen Wasserdruck kann verschiedene Ursachen haben: verkalkte Leitungen, zu kleine Rohrdurchmesser, defekte Druckminderer oder Probleme mit der Hauswasseranlage. Wir messen den Druck, finden die Ursache und können bei Bedarf eine Druckerhöhungsanlage installieren. Selbst daran arbeiten empfehlen wir nicht - das kann zu Rohrschäden führen."
+    },
+    {
+      question: "Was kostet ein neuer Wasseranschluss für die Küche?",
+      answer: "Ein neuer Wasseranschluss für Spüle und Geschirrspüler kostet je nach Entfernung zur bestehenden Leitung zwischen 350€ und 800€. Bei einer Küchenrenovierung können wir auch Warm- und Kaltwasserleitungen komplett neu verlegen. Wir erstellen Ihnen nach einer Vor-Ort-Begutachtung einen verbindlichen Festpreis."
+    },
+    {
+      question: "Führen Sie auch Legionellenprüfungen durch?",
+      answer: "Ja, wir führen Legionellenprüfungen nach Trinkwasserverordnung durch. Dies ist für Mehrfamilienhäuser mit zentraler Warmwasserbereitung alle 3 Jahre Pflicht. Die Probenahme kostet ab 180€, inklusive Laboranalyse und Dokumentation. Bei auffälligen Werten beraten wir Sie zu Sanierungsmaßnahmen."
     }
   ];
 

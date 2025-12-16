@@ -83,6 +83,30 @@ const faqItems = [
   {
     question: "Reparieren Sie alle Heizungsmarken?",
     answer: "Ja, wir reparieren und warten Heizungen aller Hersteller: Viessmann, Vaillant, Buderus, Wolf, Junkers, Bosch und viele mehr. Ersatzteile haben wir oft direkt dabei für schnelle Reparaturen."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Brennwert- und Niedertemperaturheizung?",
+    answer: "Brennwerttechnik nutzt auch die Wärme aus den Abgasen und erreicht bis zu 98% Wirkungsgrad - etwa 10-15% mehr als Niedertemperaturkessel. Bei einem Heizungstausch ist Brennwert heute Standard und oft förderfähig. Die Mehrkosten amortisieren sich durch geringeren Gasverbrauch meist in 3-5 Jahren."
+  },
+  {
+    question: "Muss ich beim Heizungstausch auch die Heizkörper wechseln?",
+    answer: "Nicht unbedingt. Für Brennwertheizungen können bestehende Heizkörper oft weitergenutzt werden. Bei Wärmepumpen hängt es von der Vorlauftemperatur ab - in gut gedämmten Häusern reichen oft die vorhandenen Heizkörper, bei Altbauten kann eine Vergrößerung oder Fußbodenheizung sinnvoll sein. Wir prüfen das vor Ort."
+  },
+  {
+    question: "Was tun wenn die Heizung gluckert oder pfeift?",
+    answer: "Gluckergeräusche deuten auf Luft im System hin - hier hilft oft das Entlüften der Heizkörper. Pfeifgeräusche können auf falsch eingestellte Thermostatventile oder einen zu hohen Pumpendruck hinweisen. Wenn Entlüften nicht hilft, sollten wir uns das System ansehen. Kosten für einen Vor-Ort-Check: ab 89€."
+  },
+  {
+    question: "Welche Förderung gibt es 2025 für neue Heizungen?",
+    answer: "2025 gibt es bis zu 70% staatliche Förderung (BAFA/KfW) für den Umstieg auf klimafreundliche Heizsysteme wie Wärmepumpen. Gasheizungen werden nicht mehr gefördert, Hybridlösungen teilweise. Die Förderung setzt sich aus Grundförderung (30%), Einkommensbonus (30%), Geschwindigkeitsbonus (20%) und Effizienzbonus zusammen. Wir übernehmen die komplette Antragstellung."
+  },
+  {
+    question: "Wie lange dauert eine Heizungsinstallation?",
+    answer: "Der Tausch einer Gasheizung gegen eine neue Brennwertheizung dauert typischerweise 1-2 Tage. Eine Wärmepumpeninstallation benötigt 2-4 Tage, je nach Umfang der Arbeiten. Wir planen so, dass die heizungslose Zeit minimal bleibt - oft können wir im Sommer/Herbst vorarbeiten und den eigentlichen Tausch an einem Tag durchführen."
+  },
+  {
+    question: "Was kostet ein hydraulischer Abgleich?",
+    answer: "Ein hydraulischer Abgleich kostet zwischen 400€ und 900€, je nach Anzahl der Heizkörper. Er sorgt für gleichmäßige Wärmeverteilung, senkt den Energieverbrauch um bis zu 15% und ist für viele Förderungen Voraussetzung. Bei alten Anlagen ohne Abgleich werden oft einzelne Räume nicht richtig warm oder überhitzen."
   }
 ];
 

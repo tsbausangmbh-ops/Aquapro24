@@ -82,6 +82,30 @@ const faqItems = [
   {
     question: "Welche Garantie geben Sie auf die Badsanierung?",
     answer: "Wir geben 5 Jahre Gewährleistung auf alle unsere Arbeiten. Bei Problemen kommen wir kostenlos zurück. Auf eingebaute Produkte gelten zusätzlich die Herstellergarantien."
+  },
+  {
+    question: "Was ist bei einer Badsanierung im Altbau zu beachten?",
+    answer: "Im Altbau müssen wir oft mit besonderen Gegebenheiten umgehen: alte Wasserleitungen (Blei, Stahl), niedrige Deckenhöhen, unebene Böden oder fehlende Abdichtungen. Wir prüfen alles vorab und beraten Sie ehrlich, welche Arbeiten notwendig sind. Oft lohnt es sich, bei der Sanierung auch die Leitungen zu erneuern."
+  },
+  {
+    question: "Welche Fliesenformate sind aktuell modern?",
+    answer: "Aktuell liegen Großformate (60x120cm oder größer) im Trend - sie wirken großzügig und haben weniger Fugen. Beliebte Looks sind Betonoptik, Naturstein-Look und warme Erdtöne. Wir zeigen Ihnen in unserer 3D-Planung verschiedene Optionen, damit Sie die perfekte Wahl treffen können."
+  },
+  {
+    question: "Wie funktioniert die 3D-Badplanung?",
+    answer: "Bei der kostenlosen Beratung vor Ort vermessen wir Ihr Bad und besprechen Ihre Wünsche. Daraus erstellen wir ein fotorealistisches 3D-Modell, in dem Sie Ihr neues Bad virtuell begehen können. So sehen Sie vorab genau, wie Fliesen, Sanitärobjekte und Beleuchtung zusammenwirken - und können Änderungen vornehmen, bevor die Arbeit beginnt."
+  },
+  {
+    question: "Was kostet eine bodengleiche Dusche?",
+    answer: "Eine bodengleiche Dusche inklusive Rinnenablauf, Fliesen und Glasabtrennung liegt zwischen 3.500€ und 6.000€, je nach Größe und Ausstattung. Im Altbau kann ein Aufbau nötig sein, wenn der Boden nicht genug Tiefe für den Ablauf bietet. Wir finden immer eine Lösung."
+  },
+  {
+    question: "Welche Förderung gibt es für barrierefreie Bäder?",
+    answer: "Die KfW fördert altersgerechte Umbauten mit dem Programm 455-B: Zuschuss bis 6.250€ oder zinsgünstiger Kredit. Voraussetzungen sind u.a. bodengleiche Dusche, breitere Türen, Haltegriffe. Auch Pflegekassen bezuschussen Umbauten mit bis zu 4.000€ pro Maßnahme. Wir beraten Sie zu allen Fördermöglichkeiten."
+  },
+  {
+    question: "Welche Armaturen-Marken verbauen Sie?",
+    answer: "Wir arbeiten mit allen namhaften Herstellern: Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit, Kaldewei und mehr. Von der preiswerten Basisausstattung bis zur Luxuslinie ist alles möglich. In der Beratung zeigen wir Ihnen verschiedene Optionen in unterschiedlichen Preisklassen."
   }
 ];
 

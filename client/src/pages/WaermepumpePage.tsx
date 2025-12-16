@@ -85,6 +85,30 @@ const faqItems = [
   {
     question: "Wie laut ist eine Wärmepumpe?",
     answer: "Moderne Luft-Wasser-Wärmepumpen sind sehr leise - vergleichbar mit einem Kühlschrank (35-50 dB). Erdwärmepumpen sind praktisch unhörbar. Wir achten bei der Platzierung auf optimale Schallschutz-Abstände."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Luft-Wasser und Erdwärmepumpe?",
+    answer: "Luft-Wasser-Wärmepumpen gewinnen Energie aus der Außenluft - sie sind günstiger (ab 12.000€) und schneller installiert (2-3 Tage), haben aber bei sehr tiefen Temperaturen einen etwas höheren Stromverbrauch. Erdwärmepumpen nutzen die konstante Erdtemperatur, sind effizienter (COP bis 5.0), aber teurer durch die nötigen Bohrungen. Wir beraten, welches System für Ihr Gebäude optimal ist."
+  },
+  {
+    question: "Wie hoch sind die Stromkosten einer Wärmepumpe?",
+    answer: "Eine Wärmepumpe verbraucht etwa 3.000-5.000 kWh Strom pro Jahr für ein Einfamilienhaus (150m²). Bei einem Strompreis von 30 Cent/kWh sind das 900-1.500€ jährlich - deutlich weniger als bei Gas (oft 2.500-3.500€). Mit eigenem PV-Strom können Sie die Kosten noch weiter senken."
+  },
+  {
+    question: "Kann ich meine Wärmepumpe mit Photovoltaik kombinieren?",
+    answer: "Ja, das ist die ideale Kombination! Der Solarstrom vom Dach betreibt die Wärmepumpe kostenlos. Mit einem Speicher können Sie auch abends/nachts günstigen Eigenstrom nutzen. Viele unserer Kunden erreichen so einen Autarkiegrad von 60-70% und senken ihre Heizkosten auf unter 500€ pro Jahr."
+  },
+  {
+    question: "Braucht eine Wärmepumpe eine Baugenehmigung in München?",
+    answer: "Für Luft-Wasser-Wärmepumpen ist in Bayern in der Regel keine Baugenehmigung erforderlich - sie gelten als genehmigungsfrei. Für Erdwärmepumpen brauchen Sie eine wasserrechtliche Erlaubnis für die Bohrung. Wir kümmern uns um alle Genehmigungen und Anmeldungen."
+  },
+  {
+    question: "Welche Wärmepumpen-Marken empfehlen Sie?",
+    answer: "Wir arbeiten mit allen führenden Herstellern: Vaillant, Viessmann, Bosch, Stiebel Eltron, Daikin und Wolf. Alle bieten hervorragende Qualität mit 5-10 Jahren Garantie. Die Wahl hängt von Ihren Anforderungen ab - ob besonders leise (Daikin), platzsparend (Bosch), oder mit integriertem Speicher (Viessmann). Wir beraten markenunabhängig."
+  },
+  {
+    question: "Wie oft muss eine Wärmepumpe gewartet werden?",
+    answer: "Eine jährliche Wartung (ab 249€) ist empfohlen, um volle Effizienz und Herstellergarantie zu erhalten. Dabei prüfen wir Kältemittelstand, Filter, Wärmetauscher und Steuerung. Die meisten Hersteller verlangen eine jährliche Wartung als Garantiebedingung. Wir bieten günstige Wartungsverträge mit Priorität im Störfall."
   }
 ];
 

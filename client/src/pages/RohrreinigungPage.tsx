@@ -97,6 +97,30 @@ export default function RohrreinigungPage() {
     {
       question: "Wie kann ich Verstopfungen vorbeugen?",
       answer: "Gießen Sie kein Fett in den Abfluss, verwenden Sie Haarsiebe in der Dusche und lassen Sie regelmäßig heißes Wasser laufen. Bei wiederkehrenden Problemen empfehlen wir eine professionelle Wartungsreinigung."
+    },
+    {
+      question: "Woran erkenne ich eine Verstopfung im Hauptkanal?",
+      answer: "Anzeichen sind: Wasser staut sich in mehreren Abflüssen gleichzeitig, unangenehmer Geruch aus den Abläufen, gurgelnde Geräusche beim Abfluss, oder Wasser tritt an ungewöhnlichen Stellen aus (z.B. im Keller). Bei diesen Symptomen sollten Sie sofort handeln - rufen Sie uns an."
+    },
+    {
+      question: "Was kostet eine Kanalreinigung im Mehrfamilienhaus?",
+      answer: "Die Reinigung des Hauptkanals in einem Mehrfamilienhaus kostet je nach Länge und Zugänglichkeit zwischen 350€ und 800€. Inklusive Kamerainspektion zur Dokumentation des Zustands liegen wir bei 450€ bis 950€. Für Hausverwaltungen bieten wir Rahmenverträge mit Vorzugskonditionen."
+    },
+    {
+      question: "Was ist eine Kamerainspektion und wann brauche ich sie?",
+      answer: "Bei einer Kamerainspektion fahren wir eine kleine Kamera durch Ihre Rohre und sehen in Echtzeit, was dort los ist: Verstopfungen, Wurzeleinwuchs, Rohrbrüche, Korrosion. Sie ist sinnvoll bei wiederkehrenden Problemen, vor dem Hauskauf oder nach einer Verstopfung, um die Ursache zu finden. Kosten: ab 99€."
+    },
+    {
+      question: "Können Baumwurzeln Rohre verstopfen?",
+      answer: "Ja, Wurzeleinwuchs ist ein häufiges Problem bei älteren Tonrohren. Wurzeln dringen durch kleine Risse in die Rohre ein und wachsen dort zu dichten Ballen. Wir entfernen die Wurzeln mechanisch mit speziellen Fräsen und können bei Bedarf das Rohr mit einem Inliner sanieren, ohne aufzugraben."
+    },
+    {
+      question: "Was mache ich bei einem Rückstau im Keller?",
+      answer: "Bei Rückstau: 1. Nicht spülen oder Wasser ablassen. 2. Elektrische Geräte vom Wasser fernhalten. 3. Uns anrufen. Ursache ist oft ein verstopfter Hauptkanal oder ein Rückstau im städtischen Kanalnetz. Als Langzeitschutz empfehlen wir den Einbau einer Rückstauklappe (ab 500€ installiert)."
+    },
+    {
+      question: "Bieten Sie Wartungsverträge für Rohrreinigung an?",
+      answer: "Ja, besonders für Gastronomiebetriebe, Friseure und Mehrfamilienhäuser sind regelmäßige Wartungsreinigungen sinnvoll. Wir kommen 1-4 mal jährlich zur präventiven Reinigung. Das verhindert Notfälle und ist günstiger als Akutbehandlungen. Preise ab 59€ pro Einsatz bei Wartungsvertrag."
     }
   ];
 

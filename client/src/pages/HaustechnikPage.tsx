@@ -83,6 +83,30 @@ const faqItems = [
   {
     question: "Wie lange dauert die Planung und Umsetzung?",
     answer: "Je nach Projektumfang planen wir 2-4 Wochen für die Konzeption. Die Umsetzung dauert bei einer Sanierung 1-3 Wochen, bei Neubauten arbeiten wir nach Ihrem Bauzeitenplan. Wir halten vereinbarte Termine ein."
+  },
+  {
+    question: "Was ist die Voraussetzung für eine Lüftungsanlage?",
+    answer: "Moderne dezentrale Lüftungen lassen sich in fast jedem Gebäude nachrüsten - mit zwei kleinen Kernbohrungen (16cm) pro Raum. Zentrale Anlagen benötigen Platz für das Lüftungsgerät und Kanäle, ideal bei Sanierung oder Neubau. Wir beraten, welches System für Ihr Gebäude geeignet ist."
+  },
+  {
+    question: "Welche Smart-Home-Systeme empfehlen Sie?",
+    answer: "Für die Heizungssteuerung bewähren sich tado°, Netatmo oder Homematic IP - alle lassen sich gut nachrüsten. Für umfassendere Automation setzen wir oft auf KNX (kabelgebunden, sehr zuverlässig) oder Homey/HomeAssistant (flexibel, viele Geräte). Wichtig: Das System sollte zu Ihren Anforderungen passen, nicht umgekehrt."
+  },
+  {
+    question: "Muss ich bei einem Gasanschluss etwas beachten?",
+    answer: "In München ist Stadtwerke München der Gasversorger. Für einen neuen Hausanschluss melden wir die Arbeiten dort an. Alle Gasarbeiten müssen von zertifizierten Betrieben durchgeführt werden (wir sind zugelassen). Nach Abschluss erfolgt eine Abnahme durch einen Sachkundigen. Wir kümmern uns um alle Formalitäten."
+  },
+  {
+    question: "Wie viel Energie spart eine Lüftung mit Wärmerückgewinnung?",
+    answer: "Moderne KWL-Anlagen gewinnen bis zu 90% der Wärme aus der Abluft zurück. Bei einem typischen Einfamilienhaus können Sie so 500-1.000€ Heizkosten pro Jahr sparen. Gleichzeitig verbessert sich die Luftqualität erheblich - wichtig für Allergiker und in stark gedämmten Häusern."
+  },
+  {
+    question: "Können Sie auch bestehende Haustechnik modernisieren?",
+    answer: "Ja, Modernisierung ist unser Schwerpunkt! Wir optimieren alte Heizungsanlagen, rüsten Lüftungen nach und integrieren Smart-Home-Steuerungen in bestehende Systeme. Oft lässt sich mit überschaubarem Aufwand viel Energie sparen. Wir analysieren Ihre Anlage und zeigen Potenziale auf."
+  },
+  {
+    question: "Was kostet ein hydraulischer Abgleich der Heizung?",
+    answer: "Ein hydraulischer Abgleich für ein Einfamilienhaus kostet zwischen 400€ und 900€ je nach Anzahl der Heizkörper. Er sorgt dafür, dass alle Räume gleichmäßig warm werden und spart bis zu 15% Energie. Für viele Förderprogramme ist der Abgleich Voraussetzung. Wir führen ihn als Teil der Heizungsoptimierung durch."
   }
 ];
 
