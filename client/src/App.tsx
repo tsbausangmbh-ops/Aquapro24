@@ -29,6 +29,8 @@ const WarmwasserPage = lazy(() => import("@/pages/WarmwasserPage"));
 const TerminPage = lazy(() => import("@/pages/TerminPage"));
 const StadtteileOverviewPage = lazy(() => import("@/pages/StadtteileOverviewPage"));
 const StadtteilPage = lazy(() => import("@/pages/StadtteilPage"));
+const NotdienstPage = lazy(() => import("@/pages/NotdienstPage"));
+const UmlandPage = lazy(() => import("@/pages/UmlandPage"));
 
 function PageLoader() {
   return (
@@ -61,6 +63,8 @@ function Router() {
         <Route path="/termin" component={TerminPage} />
         <Route path="/stadtteile" component={StadtteileOverviewPage} />
         <Route path="/stadtteil/:stadtteil" component={StadtteilPage} />
+        <Route path="/notdienst" component={NotdienstPage} />
+        <Route path="/umland/:ort" component={UmlandPage} />
         <Route path="/cookie-richtlinie" component={CookieRichtliniePage} />
         <Route path="/datenschutz" component={DatenschutzPage} />
         <Route path="/agb" component={AGBPage} />

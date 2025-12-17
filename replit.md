@@ -51,10 +51,19 @@ Preferred communication style: Simple, everyday language.
   - `CustomerStories.tsx`: 10 emotional success stories (2 per service) following problem/emotion/solution/result pattern, with specific savings amounts and timeframes
   - `TrustSignals.tsx`: Social proof (compact/detailed variants) with customer stats (2.847+), ratings (4.9/5), response times
 - **Service Pages**: 5 dedicated pages (Sanitär, Bad, Heizung, Wärmepumpe, Haustechnik) with unique SEO, customer stories, and NLP triggers per page
+- **Notdienst Page**: High-conversion emergency service page with 24/7 messaging, quick CTAs, and service cards
 - **Informational Pages**: 3 additional pages for company information and customer education
   - `UeberUnsPage.tsx`: Company history, team introduction, values, and timeline milestones
   - `FAQPage.tsx`: Pricing overview (4 categories) and frequently asked questions with accordion
   - `RatgeberPage.tsx`: Educational guides with detailed articles (Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpe)
+- **Local SEO Infrastructure**:
+  - `StadtteileOverviewPage.tsx`: Overview of all Munich districts with premium section
+  - `StadtteilPage.tsx`: Dynamic district pages (17 districts: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Sendling, Pasing, Neuhausen, Trudering, Laim, Giesing, Moosach, Milbertshofen + Premium: Lehel, Solln, Grünwald, Harlaching, Thalkirchen)
+  - `UmlandPage.tsx`: Surrounding area pages (10 locations: Starnberg, Dachau, Freising, Germering, Unterhaching, Ottobrunn, Unterschleißheim, Garching, Taufkirchen, Haar)
+- **Conversion Components**:
+  - `CallbackForm.tsx`: Compact callback request form on all service pages
+  - `FreeConsultationBanner.tsx`: Free consultation CTA banner
+  - `FloatingContactBar.tsx`: Mobile sticky phone button
 
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)

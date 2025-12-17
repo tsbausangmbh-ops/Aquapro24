@@ -130,6 +130,46 @@ const districts: Record<string, DistrictData> = {
     description: "Von der BMW-Welt bis zum Olympiapark - Milbertshofen ist ein vielseitiger Stadtteil. Wir betreuen hier sowohl Wohngebäude als auch Gewerbeobjekte.",
     neighborhoods: ["Milbertshofen", "Am Hart", "Olympiapark", "Petuelring"],
     specialties: ["Gewerbe-Sanitär", "Industrieheizung", "24h Notdienst"]
+  },
+  lehel: {
+    name: "Lehel",
+    slug: "lehel",
+    responseTime: "20 Min.",
+    description: "Das Lehel ist Münchens ältestes Villenviertel und eines der exklusivsten Wohngebiete der Stadt. Direkt an der Isar gelegen, betreuen wir hier historische Stadtvillen und luxuriöse Altbauwohnungen mit höchstem Anspruch an Qualität und Diskretion.",
+    neighborhoods: ["Lehel", "Widenmayerstraße", "Prinzregentenstraße", "Isarvorstadt"],
+    specialties: ["Premium-Badsanierung", "Historische Altbausanierung", "Smart-Home-Integration", "Wärmepumpen für Altbau"]
+  },
+  solln: {
+    name: "Solln",
+    slug: "solln",
+    responseTime: "40 Min.",
+    description: "Solln ist ein grünes Villenviertel im Münchner Süden mit großzügigen Einfamilienhäusern und gepflegten Gärten. Unsere Meisterbetriebe sind hier spezialisiert auf hochwertige Komplettsanierungen und moderne Heiztechnik.",
+    neighborhoods: ["Solln", "Prinz-Ludwigs-Höhe", "Warnberg", "Forstenried"],
+    specialties: ["Villa-Sanierung", "Pool-Technik", "Wärmepumpe mit Erdwärme", "Luxus-Wellness-Bäder"]
+  },
+  gruenwald: {
+    name: "Grünwald",
+    slug: "gruenwald",
+    responseTime: "45 Min.",
+    description: "Grünwald ist Deutschlands reichste Gemeinde und bekannt für exklusive Villen und Promi-Residenzen. Wir bieten hier Premium-Service auf höchstem Niveau - diskret, zuverlässig und mit erstklassigen Materialien.",
+    neighborhoods: ["Grünwald-Zentrum", "Geiselgasteig", "Bavaria Filmstadt", "Isarhochufer"],
+    specialties: ["Luxus-Komplettbäder", "Pool & Sauna", "Smarte Haustechnik", "Edle Armaturen & Design"]
+  },
+  harlaching: {
+    name: "Harlaching",
+    slug: "harlaching",
+    responseTime: "35 Min.",
+    description: "Harlaching ist ein ruhiges, grünes Wohnviertel an der Isar mit vielen Villen und dem bekannten Tierpark Hellabrunn. Wir betreuen hier gehobene Wohnimmobilien mit Fokus auf Qualität und Langlebigkeit.",
+    neighborhoods: ["Harlaching", "Menterschwaige", "Hellabrunn", "Geiselgasteig"],
+    specialties: ["Altbausanierung", "Garten-Bewässerung", "Fußbodenheizung", "Regenwassernutzung"]
+  },
+  thalkirchen: {
+    name: "Thalkirchen-Obersendling",
+    slug: "thalkirchen",
+    responseTime: "30 Min.",
+    description: "Thalkirchen-Obersendling bietet eine Mischung aus urbanem Wohnen und Naturnähe an der Isar. Vom Flaucher bis zum Tierpark sind wir hier regelmäßig für Sanitär- und Heizungsarbeiten im Einsatz.",
+    neighborhoods: ["Thalkirchen", "Obersendling", "Flaucher", "Siemenswerke"],
+    specialties: ["Altbau-Expertise", "Heizungsmodernisierung", "Rohrsanierung", "Warmwasser-Solar"]
   }
 };
 

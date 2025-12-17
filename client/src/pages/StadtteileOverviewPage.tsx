@@ -19,10 +19,17 @@ import {
   Calendar
 } from "lucide-react";
 
+const premiumDistricts = [
+  { name: "Lehel", slug: "lehel", time: "20 Min.", highlight: "Exklusives Villenviertel", premium: true },
+  { name: "Grünwald", slug: "gruenwald", time: "45 Min.", highlight: "Promi-Residenzen", premium: true },
+  { name: "Bogenhausen", slug: "bogenhausen", time: "35 Min.", highlight: "Premium-Service", premium: true },
+  { name: "Solln", slug: "solln", time: "40 Min.", highlight: "Villenviertel", premium: true },
+  { name: "Harlaching", slug: "harlaching", time: "35 Min.", highlight: "Gehobenes Wohnen", premium: true },
+];
+
 const districts = [
   { name: "Schwabing", slug: "schwabing", time: "30 Min.", highlight: "Altbau-Expertise" },
   { name: "Maxvorstadt", slug: "maxvorstadt", time: "25 Min.", highlight: "Zentrale Lage" },
-  { name: "Bogenhausen", slug: "bogenhausen", time: "35 Min.", highlight: "Premium-Service" },
   { name: "Haidhausen", slug: "haidhausen", time: "30 Min.", highlight: "Franzosenviertel" },
   { name: "Sendling", slug: "sendling", time: "35 Min.", highlight: "Notdienst 24/7" },
   { name: "Pasing", slug: "pasing", time: "40 Min.", highlight: "Einfamilienhaus" },
@@ -32,6 +39,7 @@ const districts = [
   { name: "Giesing", slug: "giesing", time: "35 Min.", highlight: "Rohrsanierung" },
   { name: "Moosach", slug: "moosach", time: "40 Min.", highlight: "Familienhaus" },
   { name: "Milbertshofen", slug: "milbertshofen", time: "35 Min.", highlight: "Gewerbe & Wohnen" },
+  { name: "Thalkirchen-Obersendling", slug: "thalkirchen", time: "30 Min.", highlight: "Isarnähe" },
 ];
 
 export default function StadtteileOverviewPage() {
@@ -90,10 +98,59 @@ export default function StadtteileOverviewPage() {
           </div>
         </section>
 
+        <section className="py-12 bg-gradient-to-b from-amber-50/50 to-background dark:from-amber-950/20 dark:to-background">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-8">
+              <Badge className="mb-3 bg-amber-100 text-amber-800 border-amber-300 dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-700">
+                <Star className="w-3 h-3 mr-1" />
+                Premium-Gebiete
+              </Badge>
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Gehobene Wohnlagen in München
+              </h2>
+              <p className="text-muted-foreground mt-2">
+                Spezialisierter Service für Villen und exklusive Immobilien
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+              {premiumDistricts.map((district, index) => (
+                <Link 
+                  key={index} 
+                  href={`/stadtteil/${district.slug}`}
+                  data-testid={`link-stadtteil-${district.slug}`}
+                >
+                  <Card className="group hover-elevate h-full cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-amber-200/50 dark:border-amber-800/30">
+                    <CardContent className="pt-6">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          <Star className="w-4 h-4 text-amber-500" />
+                          <h3 className="font-semibold">{district.name}</h3>
+                        </div>
+                        <Badge className="text-xs bg-amber-100 text-amber-800 border-amber-300 dark:bg-amber-900/30 dark:text-amber-300">
+                          {district.time}
+                        </Badge>
+                      </div>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {district.highlight}
+                      </p>
+                      <div className="flex items-center justify-between pt-3 border-t border-amber-200/30 dark:border-amber-800/20">
+                        <span className="text-xs text-muted-foreground">Premium-Service</span>
+                        <span className="text-xs text-amber-600 dark:text-amber-400 flex items-center gap-1 group-hover:gap-2 transition-all">
+                          Details <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Wählen Sie Ihren Stadtteil
+              Alle Münchner Stadtteile
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {districts.map((district, index) => (
