@@ -65,7 +65,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-semibold mb-4">Betriebsverantwortung</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>
-                    Die Webseite AquaPro24.de wird von AquaPro 24 verwaltet, betrieben und technisch administriert.
+                    Die Webseite AquaPro24.de wird von der ExtruCon GmbH verwaltet, betrieben und technisch administriert.
                   </p>
                 </div>
               </CardContent>
