@@ -355,16 +355,16 @@ export default function RohrreinigungPage() {
           title="Häufige Fragen zur Rohrreinigung"
         />
 
-        <section className="py-10 md:pt-8 pb-4 bg-blue-900 text-white">
+        <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Abfluss verstopft? Wir helfen sofort!
             </h2>
-            <p className="text-white/80 mb-4 max-w-2xl mx-auto">
+            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Ob Küche, Bad oder WC - bei verstopften Abflüssen sind wir in 60 Minuten da.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
-              <Button size="lg" className="bg-white text-blue-900 border-white gap-2" asChild>
+              <Button size="lg" className="bg-white text-secondary border-white gap-2" asChild>
                 <Link href="/termin">
                   <Calendar className="w-5 h-5" />
                   Beratungstermin buchen
@@ -373,7 +373,7 @@ export default function RohrreinigungPage() {
               <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
                 <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Rohrreinigung">
                   <MessageSquare className="w-5 h-5" />
-                  Email senden
+                  Kostenlos beraten lassen
                 </a>
               </Button>
             </div>

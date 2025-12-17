@@ -269,7 +269,7 @@ export default function FAQPage() {
               <Button size="lg" variant="outline" className="gap-2" asChild>
                 <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Anfrage">
                   <MessageSquare className="w-5 h-5" />
-                  Email senden
+                  Kostenlos beraten lassen
                 </a>
               </Button>
             </div>

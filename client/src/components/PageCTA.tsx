@@ -26,7 +26,7 @@ export default function PageCTA({
           <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto" asChild data-testid="button-kontakt-compact">
             <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Anfrage">
               <MessageSquare className="w-5 h-5" />
-              Email senden
+              Kostenlos beraten lassen
             </a>
           </Button>
         </div>
