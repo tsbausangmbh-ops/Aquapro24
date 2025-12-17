@@ -151,7 +151,7 @@ const aboutPageSchema = {
     "@id": "https://aquapro24.de/#organization",
     "name": "KSHW München - Sanitär & Heizung",
     "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München"],
-    "legalName": "KSHW München - Ali Kemal Kurt",
+    "legalName": "KSHW München - Mustafa Sakar",
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
     "url": "https://aquapro24.de",
@@ -160,10 +160,10 @@ const aboutPageSchema = {
     "foundingDate": "2005",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Zielstattstr. 20",
+      "streetAddress": "Hardenbergstr. 4",
       "addressLocality": "München",
       "addressRegion": "Bayern",
-      "postalCode": "81379",
+      "postalCode": "80992",
       "addressCountry": "DE"
     },
     "geo": {

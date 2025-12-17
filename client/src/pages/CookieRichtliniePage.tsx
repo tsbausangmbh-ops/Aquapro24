@@ -52,11 +52,11 @@ export default function CookieRichtliniePage() {
                 Verantwortlich für die Verwendung von Cookies auf dieser Website ist:
               </p>
               <p className="text-muted-foreground mb-4">
-                KSHW München<br />
-                Inhaber: Ali Kemal Kurt<br />
-                Zielstattstr. 20<br />
-                81379 München<br />
-                USt-IdNr: DE356852204<br />
+                AquaPro24<br />
+                Inhaber: Mustafa Sakar<br />
+                Hardenbergstr. 4<br />
+                80992 München<br />
+                USt-IdNr: folgt<br />
                 E-Mail: info@aquapro24.de<br />
                 Telefon: 0152 12274043
               </p>

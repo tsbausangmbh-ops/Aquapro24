@@ -47,8 +47,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    primary: "Zielstattstr. 20",
-    secondary: "81379 München",
+    primary: "Hardenbergstr. 4",
+    secondary: "80992 München",
     action: "https://maps.google.com/?q=München"
   },
   {
@@ -223,7 +223,7 @@ export default function KontaktPage() {
                         <Label htmlFor="street">Straße & Hausnummer *</Label>
                         <Input
                           id="street"
-                          placeholder="z.B. Zielstattstr. 20"
+                          placeholder="z.B. Hardenbergstr. 4"
                           value={formData.street}
                           onChange={(e) => setFormData({ ...formData, street: e.target.value })}
                           required
@@ -235,7 +235,7 @@ export default function KontaktPage() {
                         <Label htmlFor="zipCity">PLZ & Ort *</Label>
                         <Input
                           id="zipCity"
-                          placeholder="z.B. 81379 München"
+                          placeholder="z.B. 80992 München"
                           value={formData.zipCity}
                           onChange={(e) => setFormData({ ...formData, zipCity: e.target.value })}
                           required
@@ -400,13 +400,13 @@ export default function KontaktPage() {
               </Card>
               <div className="flex flex-col justify-center space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">KSHW München</h3>
+                  <h3 className="text-xl font-semibold mb-4">AquaPro24</h3>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium">Zielstattstr. 20</p>
-                        <p className="text-muted-foreground">81379 München</p>
+                        <p className="font-medium">Hardenbergstr. 4</p>
+                        <p className="text-muted-foreground">80992 München</p>
                         <p className="text-muted-foreground">Deutschland</p>
                       </div>
                     </div>
@@ -441,7 +441,7 @@ export default function KontaktPage() {
                 </div>
                 <Button size="lg" className="w-full sm:w-auto" asChild>
                   <a 
-                    href="https://maps.google.com/?q=Zielstattstr.+20+81379+München" 
+                    href="https://maps.google.com/?q=Hardenbergstr.+4+80992+München" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     data-testid="button-google-maps"
@@ -471,15 +471,15 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Building className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p className="font-semibold">KSHW München</p>
+                        <p className="font-semibold">AquaPro24</p>
                         <p className="text-sm text-muted-foreground">Sanitär & Heizung München</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>Zielstattstr. 20</p>
-                        <p className="text-sm text-muted-foreground">81379 München</p>
+                        <p>Hardenbergstr. 4</p>
+                        <p className="text-sm text-muted-foreground">80992 München</p>
                       </div>
                     </div>
                   </div>
@@ -503,13 +503,13 @@ export default function KontaktPage() {
                 <div className="border-t mt-8 pt-6 text-sm text-muted-foreground">
                   <div className="grid md:grid-cols-3 gap-6">
                     <div>
-                      <span className="font-medium text-foreground">Handelsregister:</span> HRB 123456
+                      <span className="font-medium text-foreground">Rechtsform:</span> Einzelunternehmer
                     </div>
                     <div>
-                      <span className="font-medium text-foreground">USt-IdNr:</span> DE123456789
+                      <span className="font-medium text-foreground">USt-IdNr:</span> folgt
                     </div>
                     <div>
-                      <span className="font-medium text-foreground">Inhaber:</span> Ali Kemal Kurt
+                      <span className="font-medium text-foreground">Inhaber:</span> Mustafa Sakar
                     </div>
                   </div>
                 </div>

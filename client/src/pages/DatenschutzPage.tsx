@@ -75,14 +75,14 @@ export default function DatenschutzPage() {
               <h2 className="text-xl font-semibold mb-4">Verantwortlicher</h2>
               <div className="bg-muted/30 rounded-lg p-6">
                 <p className="text-muted-foreground mb-2">
-                  <strong>KSHW München</strong><br />
-                  Inhaber: Ali Kemal Kurt<br />
-                  Zielstattstr. 20<br />
-                  81379 München<br />
+                  <strong>AquaPro24</strong><br />
+                  Inhaber: Mustafa Sakar<br />
+                  Hardenbergstr. 4<br />
+                  80992 München<br />
                   Deutschland
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  Vertretungsberechtigte Person: Ali Kemal Kurt
+                  Vertretungsberechtigte Person: Mustafa Sakar
                 </p>
                 <p className="text-muted-foreground mb-2">
                   E-Mail-Adresse: <a href="mailto:info@aquapro24.de" className="text-secondary hover:underline">info@aquapro24.de</a>
@@ -91,7 +91,7 @@ export default function DatenschutzPage() {
                   Telefon: <a href="tel:+4915212274043" className="text-secondary hover:underline">0152 12274043</a>
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  USt-IdNr: DE356852204
+                  USt-IdNr: folgt
                 </p>
                 <p className="text-muted-foreground">
                   Impressum: <a href="https://aquapro24.de/impressum" className="text-secondary hover:underline">https://aquapro24.de/impressum</a>

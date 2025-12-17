@@ -52,7 +52,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@id": "https://aquapro24.de/#organization",
   "name": "AquaPro24 - Sanitär & Heizung München",
   "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München"],
-  "legalName": "KSHW München - Ali Kemal Kurt",
+  "legalName": "KSHW München - Mustafa Sakar",
   "description": "AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen, Notdienst und Haustechnik. 2.847+ zufriedene Kunden, 4.9/5 Sterne Bewertung.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
   "url": "https://aquapro24.de",
@@ -76,10 +76,10 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Zielstattstr. 20",
+    "streetAddress": "Hardenbergstr. 4",
     "addressLocality": "München",
     "addressRegion": "Bayern",
-    "postalCode": "81379",
+    "postalCode": "80992",
     "addressCountry": "DE"
   },
   "geo": {
@@ -329,10 +329,10 @@ export default function SEO({
     updateMeta("place:location:latitude", "48.1351", true);
     updateMeta("place:location:longitude", "11.5820", true);
     
-    updateMeta("business:contact_data:street_address", "Zielstattstr. 20", true);
+    updateMeta("business:contact_data:street_address", "Hardenbergstr. 4", true);
     updateMeta("business:contact_data:locality", "München", true);
     updateMeta("business:contact_data:region", "Bayern", true);
-    updateMeta("business:contact_data:postal_code", "81379", true);
+    updateMeta("business:contact_data:postal_code", "80992", true);
     updateMeta("business:contact_data:country_name", "Deutschland", true);
     updateMeta("business:contact_data:phone_number", "+49 152 12274043", true);
     updateMeta("business:contact_data:email", "info@aquapro24.de", true);
@@ -359,7 +359,7 @@ export default function SEO({
     }
     
     updateMeta("author", "AquaPro24 - KSHW München");
-    updateMeta("publisher", "KSHW München - Ali Kemal Kurt");
+    updateMeta("publisher", "KSHW München - Mustafa Sakar");
     updateMeta("copyright", "2025 AquaPro24.de");
     updateMeta("language", "de");
     updateMeta("content-language", "de-DE");
@@ -402,9 +402,9 @@ export default function SEO({
           "@id": "https://aquapro24.de/#organization",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Zielstattstr. 20",
+            "streetAddress": "Hardenbergstr. 4",
             "addressLocality": "München",
-            "postalCode": "81379",
+            "postalCode": "80992",
             "addressRegion": "Bayern",
             "addressCountry": "DE"
           },

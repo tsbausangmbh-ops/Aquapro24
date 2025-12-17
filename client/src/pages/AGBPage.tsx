@@ -8,7 +8,7 @@ export default function AGBPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="AGB | Allgemeine Geschäftsbedingungen | AquaPro24 München | KSHW"
-        description="Allgemeine Geschäftsbedingungen von KSHW München (Inhaber: Ali Kemal Kurt) für Sanitär-, Heizungs- und Installationsarbeiten. DSGVO-konform. Tel: 0152 12274043"
+        description="Allgemeine Geschäftsbedingungen von KSHW München (Inhaber: Mustafa Sakar) für Sanitär-, Heizungs- und Installationsarbeiten. DSGVO-konform. Tel: 0152 12274043"
         canonical="https://aquapro24.de/agb"
       />
       <Header />
@@ -21,7 +21,7 @@ export default function AGBPage() {
               <h2 className="text-xl font-semibold mb-4">§ 1 Geltungsbereich</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
-                KSHW München, Inhaber: Ali Kemal Kurt, Zielstattstr. 20, 81379 München 
+                AquaPro24, Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München 
                 (nachfolgend "Auftragnehmer") und dem Kunden (nachfolgend "Auftraggeber") über 
                 Sanitär-, Heizungs- und Installationsarbeiten sowie damit verbundene Dienstleistungen. 
                 Diese AGB gelten sowohl für Privatkunden (Verbraucher) als auch für Geschäftskunden (B2B).
