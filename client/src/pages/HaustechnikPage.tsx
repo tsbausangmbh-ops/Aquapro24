@@ -368,10 +368,10 @@ export default function HaustechnikPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
-                <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Haustechnik">
+                <Link href="/kontakt">
                   <MessageSquare className="w-5 h-5" />
                   Kostenlos beraten lassen
-                </a>
+                </Link>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
