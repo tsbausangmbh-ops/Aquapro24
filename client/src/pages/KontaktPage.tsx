@@ -102,8 +102,8 @@ export default function KontaktPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Kontakt | AquaPro24 München - Sanitär & Heizung"
-        description="Kontaktieren Sie AquaPro24 für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0152 12274043."
+        title="Kontakt | AquaPro24 München | Sanitär & Heizung"
+        description="Kontakt zu AquaPro24 München: Sanitär, Heizung, Badsanierung. Hardenbergstr. 4, 80992 München. 24/7: 0152 12274043"
         canonical="https://aquapro24.de/kontakt"
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst"
       />

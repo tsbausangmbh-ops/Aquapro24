@@ -10,8 +10,8 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Impressum | AquaPro24 München | Sanitär & Heizung"
-        description="Impressum von AquaPro24 München. Angaben gemäß § 5 DDG: Inhaber Mustafa Sakar, Hardenbergstr. 4, 80992 München. Tel: 0152 12274043"
+        title="Impressum | AquaPro24 München | Mustafa Sakar"
+        description="Impressum AquaPro24 gemäß § 5 DDG. Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München. Tel: 0152 12274043"
         canonical="https://aquapro24.de/impressum"
         keywords="Impressum, AquaPro24, KSHW München, Sanitär München, Heizung München, Kontakt"
       />

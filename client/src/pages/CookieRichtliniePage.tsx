@@ -11,8 +11,8 @@ export default function CookieRichtliniePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Cookie-Richtlinie | DSGVO 2025 | AquaPro24 München"
-        description="Cookie-Richtlinie gemäß DSGVO und ePrivacy für AquaPro24 München. Informationen zu Cookies, KI-Chatbot, OpenAI und Ihre Einstellungsmöglichkeiten."
+        title="Cookie-Richtlinie | AquaPro24 München | DSGVO"
+        description="Cookie-Richtlinie AquaPro24 München: Welche Cookies wir nutzen, Ihre Einstellungen und Rechte gemäß DSGVO."
         canonical="https://aquapro24.de/cookie-richtlinie"
       />
       <Header />

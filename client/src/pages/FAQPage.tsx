@@ -197,8 +197,8 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Häufige Fragen (FAQ) | Sanitär & Heizung München | Ihr Partnernetzwerk"
-        description="Antworten auf häufige Fragen zu Sanitär, Heizung und Badsanierung in München. Festpreisgarantie, Notdienst, Förderungen und mehr. Jetzt informieren!"
+        title="FAQ | Häufige Fragen Sanitär & Heizung | AquaPro24"
+        description="Häufige Fragen zu Sanitär, Heizung & Badsanierung München. Preise, Notdienst, Förderungen erklärt. Tel: 0152 12274043"
         canonical="https://kshw-muenchen.de/faq"
         keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />

@@ -7,8 +7,8 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AGB | Allgemeine Geschäftsbedingungen | AquaPro24 München | KSHW"
-        description="Allgemeine Geschäftsbedingungen von KSHW München (Inhaber: Mustafa Sakar) für Sanitär-, Heizungs- und Installationsarbeiten. DSGVO-konform. Tel: 0152 12274043"
+        title="AGB | Geschäftsbedingungen | AquaPro24 München"
+        description="AGB von AquaPro24 München für Sanitär- und Heizungsarbeiten. Festpreise, Gewährleistung, Zahlungsbedingungen."
         canonical="https://aquapro24.de/agb"
       />
       <Header />

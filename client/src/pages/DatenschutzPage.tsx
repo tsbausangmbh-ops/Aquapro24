@@ -9,8 +9,8 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutzerklärung | DSGVO 2025 | AquaPro24 München"
-        description="Datenschutzerklärung gemäß DSGVO 2025 für AquaPro24 München. Informationen zur Verarbeitung personenbezogener Daten, KI-Chatbot, Ihre Rechte. Tel: 0152 12274043"
+        title="Datenschutz | DSGVO 2025 | AquaPro24 München"
+        description="Datenschutzerklärung AquaPro24 München gemäß DSGVO. Ihre Rechte, Datenverarbeitung, KI-Chatbot transparent erklärt."
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
