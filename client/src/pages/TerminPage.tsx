@@ -108,8 +108,95 @@ const ownershipOptions = [
   { value: "sonstige", label: "Sonstige", description: "Andere Beziehung" },
 ];
 
+// Gewerk-spezifische Problemauswahl - angepasst an den gewählten Service
+const problemOptionsByService: Record<string, Array<{ value: string; label: string; description: string }>> = {
+  sanitaer: [
+    { value: "wasserhahn-tropft", label: "Wasserhahn tropft", description: "Undichter oder tropfender Hahn" },
+    { value: "rohr-verstopft", label: "Rohr verstopft", description: "Abfluss oder Rohrleitung blockiert" },
+    { value: "toilette-defekt", label: "Toilette defekt", description: "Spülung, Dichtung oder sonstige Probleme" },
+    { value: "wasserschaden", label: "Wasserschaden", description: "Wasser tritt aus oder Feuchtigkeit" },
+    { value: "installation-neu", label: "Neuinstallation", description: "Neue Armaturen oder Leitungen" },
+    { value: "sonstiges-sanitaer", label: "Sonstiges", description: "Anderes Sanitär-Problem" },
+  ],
+  heizung: [
+    { value: "heizung-kalt", label: "Heizung wird nicht warm", description: "Heizkörper bleiben kalt" },
+    { value: "heizung-geraeusche", label: "Heizung macht Geräusche", description: "Gluckern, Klopfen, Pfeifen" },
+    { value: "heizung-wartung", label: "Heizungswartung", description: "Jährliche Wartung fällig" },
+    { value: "therme-stoerung", label: "Therme/Kessel Störung", description: "Fehlermeldung oder Ausfall" },
+    { value: "heizung-tausch", label: "Heizungsaustausch", description: "Neue Heizungsanlage gewünscht" },
+    { value: "sonstiges-heizung", label: "Sonstiges", description: "Anderes Heizungs-Problem" },
+  ],
+  bad: [
+    { value: "bad-komplett", label: "Komplettsanierung", description: "Komplettes Bad neu gestalten" },
+    { value: "bad-teilsanierung", label: "Teilsanierung", description: "Einzelne Bereiche erneuern" },
+    { value: "dusche-wanne", label: "Dusche/Wanne tauschen", description: "Dusche oder Badewanne erneuern" },
+    { value: "fliesen-neu", label: "Fliesen erneuern", description: "Neue Fliesen im Bad" },
+    { value: "bad-barrierefrei", label: "Barrierefreies Bad", description: "Altersgerechter Umbau" },
+    { value: "sonstiges-bad", label: "Sonstiges", description: "Andere Bad-Arbeiten" },
+  ],
+  waermepumpe: [
+    { value: "wp-beratung", label: "Beratung gewünscht", description: "Erstberatung zur Wärmepumpe" },
+    { value: "wp-neuinstallation", label: "Neuinstallation", description: "Wärmepumpe einbauen lassen" },
+    { value: "wp-stoerung", label: "Störung/Ausfall", description: "Wärmepumpe funktioniert nicht" },
+    { value: "wp-wartung", label: "Wartung", description: "Regelmäßige Wartung fällig" },
+    { value: "wp-foerderung", label: "Förderung prüfen", description: "Staatliche Förderung klären" },
+    { value: "sonstiges-wp", label: "Sonstiges", description: "Andere Wärmepumpen-Frage" },
+  ],
+  notdienst: [
+    { value: "rohrbruch", label: "Rohrbruch", description: "Wasserrohr geplatzt - NOTFALL" },
+    { value: "heizung-ausfall", label: "Heizungsausfall", description: "Komplett kein Heizung - NOTFALL" },
+    { value: "gas-geruch", label: "Gasgeruch", description: "Gasleck vermutet - NOTFALL" },
+    { value: "kein-warmwasser", label: "Kein Warmwasser", description: "Warmwasser ausgefallen" },
+    { value: "ueberschwemmung", label: "Überschwemmung", description: "Wasser steht im Raum" },
+    { value: "sonstiges-notfall", label: "Anderer Notfall", description: "Sonstiger dringender Fall" },
+  ],
+  beratung: [
+    { value: "sanierung-planung", label: "Sanierung planen", description: "Bad oder Heizung erneuern" },
+    { value: "energieberatung", label: "Energieberatung", description: "Heizkosten senken" },
+    { value: "foerderung-check", label: "Förderung prüfen", description: "Staatliche Zuschüsse" },
+    { value: "kostenvoranschlag", label: "Kostenvoranschlag", description: "Unverbindliche Schätzung" },
+    { value: "zweitmeinung", label: "Zweitmeinung", description: "Andere Meinung einholen" },
+    { value: "sonstiges-beratung", label: "Allgemeine Beratung", description: "Andere Fragen" },
+  ],
+};
+
+// Gewerk-spezifische Zusatzfragen
+const additionalQuestionsByService: Record<string, Array<{ value: string; label: string }>> = {
+  sanitaer: [
+    { value: "haupthahn-bekannt", label: "Ich weiß wo der Hauptwasserhahn ist" },
+    { value: "mehrere-betroffen", label: "Mehrere Räume/Etagen betroffen" },
+    { value: "schon-versucht", label: "Ich habe schon selbst versucht zu reparieren" },
+  ],
+  heizung: [
+    { value: "alle-heizkoerper", label: "Alle Heizkörper betroffen" },
+    { value: "einzelne-heizkoerper", label: "Nur einzelne Heizkörper betroffen" },
+    { value: "fehlermeldung", label: "Es gibt eine Fehlermeldung am Gerät" },
+  ],
+  bad: [
+    { value: "bad-bewohnt", label: "Bad wird noch täglich genutzt" },
+    { value: "asbest-moeglich", label: "Altbau vor 1990 (Asbest möglich)" },
+    { value: "barrierefrei-gewuenscht", label: "Barrierefreiheit wichtig" },
+  ],
+  waermepumpe: [
+    { value: "fussbodenheizung", label: "Fußbodenheizung vorhanden" },
+    { value: "gasheizung-vorhanden", label: "Aktuell Gas-/Ölheizung" },
+    { value: "photovoltaik", label: "Photovoltaik vorhanden/geplant" },
+  ],
+  notdienst: [
+    { value: "wasser-abgestellt", label: "Wasser bereits abgestellt" },
+    { value: "stromversorgung-ok", label: "Stromversorgung funktioniert" },
+    { value: "personen-gefahr", label: "Personen in Gefahr" },
+  ],
+  beratung: [
+    { value: "termin-vor-ort", label: "Vor-Ort-Termin gewünscht" },
+    { value: "telefonberatung", label: "Erstmal telefonische Beratung" },
+    { value: "angebote-vergleichen", label: "Ich vergleiche mehrere Angebote" },
+  ],
+};
+
 const stepLabels = [
   "Service",
+  "Problem",
   "Details",
   "Dringlichkeit",
   "Gebäude",
@@ -126,6 +213,8 @@ const stepLabels = [
 export default function TerminPage() {
   const [step, setStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const [selectedProblem, setSelectedProblem] = useState<string>("");
+  const [additionalInfo, setAdditionalInfo] = useState<string[]>([]);
   const { toast } = useToast();
 
   const form = useForm<BookingFormData>({
@@ -190,7 +279,7 @@ export default function TerminPage() {
         description: "Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.",
       });
       queryClient.invalidateQueries({ queryKey: ["/api/leads"] });
-      setStep(13);
+      setStep(14);
     },
     onError: () => {
       toast({
@@ -223,17 +312,18 @@ export default function TerminPage() {
   const getFieldsForStep = (currentStep: number): (keyof BookingFormData)[] => {
     switch (currentStep) {
       case 1: return ["serviceType"];
-      case 2: return ["problemDetails"];
-      case 3: return ["urgency"];
-      case 4: return ["propertyType"];
-      case 5: return ["ownershipType"];
-      case 6: return [];
-      case 7: return ["budget"];
-      case 8: return ["preferredDate"];
-      case 9: return ["preferredTime"];
-      case 10: return ["name", "phone"];
-      case 11: return ["address"];
-      case 12: return [];
+      case 2: return []; // Problem selection (sets problemDetails automatically)
+      case 3: return ["problemDetails"]; // Additional details
+      case 4: return ["urgency"];
+      case 5: return ["propertyType"];
+      case 6: return ["ownershipType"];
+      case 7: return []; // Access info (optional)
+      case 8: return ["budget"];
+      case 9: return ["preferredDate"];
+      case 10: return ["preferredTime"];
+      case 11: return ["name", "phone"];
+      case 12: return ["address"];
+      case 13: return []; // Summary
       default: return [];
     }
   };
@@ -241,9 +331,9 @@ export default function TerminPage() {
   const nextStep = async () => {
     const fields = getFieldsForStep(step);
     const valid = fields.length === 0 || await form.trigger(fields);
-    if (valid && step < 12) {
+    if (valid && step < 13) {
       setStep(step + 1);
-    } else if (valid && step === 12) {
+    } else if (valid && step === 13) {
       form.handleSubmit(onSubmit)();
     }
   };
@@ -318,7 +408,7 @@ export default function TerminPage() {
               </div>
             )}
 
-            {step === 13 ? (
+            {step === 14 ? (
               <Card className="max-w-lg mx-auto">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
@@ -390,27 +480,110 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 2: Problem Details */}
+                  {/* Step 2: Gewerk-spezifische Problemauswahl */}
                   {step === 2 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <FileText className="w-5 h-5" />
-                          Beschreiben Sie Ihr Anliegen
+                          {selectedService === "sanitaer" && "Was ist das Sanitär-Problem?"}
+                          {selectedService === "heizung" && "Was ist das Heizungs-Problem?"}
+                          {selectedService === "bad" && "Was möchten Sie im Bad machen?"}
+                          {selectedService === "waermepumpe" && "Was ist Ihr Wärmepumpen-Anliegen?"}
+                          {selectedService === "notdienst" && "Was ist der Notfall?"}
+                          {selectedService === "beratung" && "Wobei können wir Sie beraten?"}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid grid-cols-2 gap-3">
+                          {(problemOptionsByService[selectedService] || []).map((option) => (
+                            <Button
+                              key={option.value}
+                              type="button"
+                              variant={selectedProblem === option.value ? "default" : "outline"}
+                              className="h-auto py-4 px-4 flex flex-col items-start gap-1"
+                              onClick={() => {
+                                setSelectedProblem(option.value);
+                                form.setValue("problemDetails", option.label);
+                                setTimeout(() => nextStep(), 150);
+                              }}
+                              data-testid={`problem-${option.value}`}
+                            >
+                              <span className="font-semibold">{option.label}</span>
+                              <span className="text-xs text-muted-foreground">{option.description}</span>
+                            </Button>
+                          ))}
+                        </div>
+                        <div className="flex justify-start mt-6">
+                          <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            Zurück
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+
+                  {/* Step 3: Gewerk-spezifische Zusatzfragen */}
+                  {step === 3 && (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <FileText className="w-5 h-5" />
+                          Weitere Details (optional)
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-6">
+                        <div className="space-y-3">
+                          <p className="text-sm text-muted-foreground mb-4">
+                            Diese Informationen helfen uns, besser vorbereitet zu sein:
+                          </p>
+                          {(additionalQuestionsByService[selectedService] || []).map((question) => (
+                            <label
+                              key={question.value}
+                              className="flex items-center gap-3 p-3 rounded-md border cursor-pointer hover-elevate"
+                            >
+                              <input
+                                type="checkbox"
+                                checked={additionalInfo.includes(question.value)}
+                                onChange={(e) => {
+                                  if (e.target.checked) {
+                                    setAdditionalInfo([...additionalInfo, question.value]);
+                                  } else {
+                                    setAdditionalInfo(additionalInfo.filter(v => v !== question.value));
+                                  }
+                                }}
+                                className="w-5 h-5 rounded"
+                                data-testid={`checkbox-${question.value}`}
+                              />
+                              <span>{question.label}</span>
+                            </label>
+                          ))}
+                        </div>
+                        
                         <FormField
                           control={form.control}
                           name="problemDetails"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Was ist das Problem?</FormLabel>
+                              <FormLabel>Zusätzliche Informationen (optional)</FormLabel>
                               <FormControl>
                                 <Textarea
                                   {...field}
-                                  placeholder="Beschreiben Sie das Problem so detailliert wie möglich..."
-                                  className="min-h-[150px]"
+                                  value={field.value || ""}
+                                  onChange={(e) => {
+                                    const problemLabel = problemOptionsByService[selectedService]?.find(p => p.value === selectedProblem)?.label || "";
+                                    const additionalText = e.target.value;
+                                    if (additionalText && !additionalText.startsWith(problemLabel)) {
+                                      field.onChange(`${problemLabel}: ${additionalText}`);
+                                    } else if (!additionalText) {
+                                      field.onChange(problemLabel);
+                                    } else {
+                                      field.onChange(additionalText);
+                                    }
+                                  }}
+                                  placeholder="Falls Sie weitere Details ergänzen möchten..."
+                                  className="min-h-[80px]"
                                   data-testid="input-problem-details"
                                 />
                               </FormControl>
@@ -418,7 +591,8 @@ export default function TerminPage() {
                             </FormItem>
                           )}
                         />
-                        <div className="flex justify-between">
+                        
+                        <div className="flex justify-between gap-2">
                           <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
                             <ArrowLeft className="w-4 h-4 mr-2" />
                             Zurück
@@ -432,8 +606,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 3: Urgency */}
-                  {step === 3 && (
+                  {/* Step 4: Urgency */}
+                  {step === 4 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -479,8 +653,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 4: Property Type */}
-                  {step === 4 && (
+                  {/* Step 5: Property Type */}
+                  {step === 5 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -526,8 +700,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 5: Ownership Type */}
-                  {step === 5 && (
+                  {/* Step 6: Ownership Type */}
+                  {step === 6 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -573,8 +747,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 6: Access Info */}
-                  {step === 6 && (
+                  {/* Step 7: Access Info */}
+                  {step === 7 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -615,8 +789,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 7: Budget */}
-                  {step === 7 && (
+                  {/* Step 8: Budget */}
+                  {step === 8 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -662,8 +836,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 8: Date Selection */}
-                  {step === 8 && (
+                  {/* Step 9: Date Selection */}
+                  {step === 9 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -711,8 +885,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 9: Time Selection */}
-                  {step === 9 && (
+                  {/* Step 10: Time Selection */}
+                  {step === 10 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -777,8 +951,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 10: Name & Phone */}
-                  {step === 10 && (
+                  {/* Step 11: Name & Phone */}
+                  {step === 11 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -833,8 +1007,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 11: Address & Email */}
-                  {step === 11 && (
+                  {/* Step 12: Address & Email */}
+                  {step === 12 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -889,8 +1063,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 12: Summary & Confirmation */}
-                  {step === 12 && (
+                  {/* Step 13: Summary & Confirmation */}
+                  {step === 13 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
