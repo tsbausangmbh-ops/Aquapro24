@@ -270,7 +270,7 @@ export default function KontaktPage() {
 
         {/* Booking Form Section */}
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div>
               <div>
                 <h2 className="text-2xl font-bold mb-6 text-center">Online Terminbuchung</h2>
