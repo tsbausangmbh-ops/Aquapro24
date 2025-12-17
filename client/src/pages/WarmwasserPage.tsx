@@ -28,8 +28,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import waterHeaterImage1 from "@assets/generated_images/tankless_water_heater.png";
-import waterHeaterImage2 from "@assets/generated_images/water_boiler_installation.png";
+import waterHeaterImage1 from "@assets/stock_images/modern_water_heater__487ba404.jpg";
+import waterHeaterImage2 from "@assets/stock_images/modern_water_heater__fc3755e6.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 

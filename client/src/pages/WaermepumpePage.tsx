@@ -26,9 +26,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
-import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
-import heatPumpImage3 from "@assets/stock_images/modern_white_heat_pu_786e8fed.jpg";
+import heatPumpImage1 from "@assets/stock_images/heat_pump_outdoor_un_cea96608.jpg";
+import heatPumpImage2 from "@assets/stock_images/heat_pump_outdoor_un_7a91cc56.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 

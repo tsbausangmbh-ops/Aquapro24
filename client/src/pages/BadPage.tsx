@@ -24,8 +24,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
+import bathroomImage1 from "@assets/stock_images/modern_luxury_bathro_7081abb0.jpg";
+import bathroomImage2 from "@assets/stock_images/modern_luxury_bathro_d246aee4.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 

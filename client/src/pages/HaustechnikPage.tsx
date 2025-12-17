@@ -25,8 +25,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import smartHomeImage1 from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
-import smartHomeImage2 from "@assets/stock_images/smart_home_technolog_6887dbb7.jpg";
+import smartHomeImage1 from "@assets/stock_images/building_technology__3ac7515c.jpg";
+import smartHomeImage2 from "@assets/stock_images/building_technology__76202400.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 

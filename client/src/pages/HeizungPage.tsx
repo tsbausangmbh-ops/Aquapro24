@@ -25,8 +25,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
-import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
+import heatingImage1 from "@assets/stock_images/modern_gas_boiler_he_4c759be1.jpg";
+import heatingImage2 from "@assets/stock_images/modern_gas_boiler_he_c0a8e010.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
