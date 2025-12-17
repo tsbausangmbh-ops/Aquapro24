@@ -358,7 +358,7 @@ export default function HeizungPage() {
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
+              <Button size="lg" className="bg-white text-secondary border-white" asChild>
                 <Link href="/termin">
                   <Clock className="w-4 h-4 mr-2" />
                   24h Terminbuchung
