@@ -11,6 +11,7 @@ export default function CookieBanner() {
     necessary: true,
     functional: false,
     analytics: false,
+    marketing: false,
   });
 
   useEffect(() => {
@@ -26,9 +27,11 @@ export default function CookieBanner() {
       necessary: true,
       functional: true,
       analytics: true,
+      marketing: true,
       timestamp: new Date().toISOString(),
     };
     localStorage.setItem("cookie_consent", JSON.stringify(allConsent));
+    window.dispatchEvent(new Event("cookieConsentChanged"));
     setIsVisible(false);
   };
 
@@ -38,6 +41,7 @@ export default function CookieBanner() {
       timestamp: new Date().toISOString(),
     };
     localStorage.setItem("cookie_consent", JSON.stringify(consent));
+    window.dispatchEvent(new Event("cookieConsentChanged"));
     setIsVisible(false);
   };
 
@@ -46,9 +50,11 @@ export default function CookieBanner() {
       necessary: true,
       functional: false,
       analytics: false,
+      marketing: false,
       timestamp: new Date().toISOString(),
     };
     localStorage.setItem("cookie_consent", JSON.stringify(minimalConsent));
+    window.dispatchEvent(new Event("cookieConsentChanged"));
     setIsVisible(false);
   };
 
@@ -168,6 +174,22 @@ export default function CookieBanner() {
                     onChange={(e) => setPreferences({ ...preferences, analytics: e.target.checked })}
                     className="w-5 h-5 accent-secondary"
                     data-testid="checkbox-cookie-analytics"
+                  />
+                </label>
+
+                <label className="flex items-center justify-between p-3 rounded-md bg-muted/50 cursor-pointer hover-elevate">
+                  <div>
+                    <p className="font-medium text-sm">Marketing-Cookies</p>
+                    <p className="text-xs text-muted-foreground">
+                      Für saisonale Aktionen und Angebote
+                    </p>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={preferences.marketing}
+                    onChange={(e) => setPreferences({ ...preferences, marketing: e.target.checked })}
+                    className="w-5 h-5 accent-secondary"
+                    data-testid="checkbox-cookie-marketing"
                   />
                 </label>
               </div>

@@ -10,6 +10,17 @@ function isNewYearDay(): boolean {
   return month === 1 && day === 1;
 }
 
+function hasMarketingConsent(): boolean {
+  try {
+    const consent = localStorage.getItem("cookie_consent");
+    if (!consent) return false;
+    const parsed = JSON.parse(consent);
+    return parsed.marketing === true;
+  } catch {
+    return false;
+  }
+}
+
 export default function NewYearPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -17,18 +28,33 @@ export default function NewYearPopup() {
   const [lastYear, setLastYear] = useState(new Date().getFullYear() - 1);
 
   useEffect(() => {
-    if (!isNewYearDay()) {
-      return;
-    }
-
-    const year = new Date().getFullYear();
-    setCurrentYear(year);
-    setLastYear(year - 1);
-
-    const timer = setTimeout(() => {
+    const checkAndShow = () => {
+      if (!isNewYearDay()) return;
+      if (!hasMarketingConsent()) return;
+      
+      const year = new Date().getFullYear();
+      setCurrentYear(year);
+      setLastYear(year - 1);
       setIsVisible(true);
-    }, 1000);
-    return () => clearTimeout(timer);
+    };
+
+    const timer = setTimeout(checkAndShow, 1500);
+
+    const handleConsentChange = () => {
+      if (isNewYearDay() && hasMarketingConsent()) {
+        const year = new Date().getFullYear();
+        setCurrentYear(year);
+        setLastYear(year - 1);
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("cookieConsentChanged", handleConsentChange);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("cookieConsentChanged", handleConsentChange);
+    };
   }, []);
 
   const handleClose = () => {

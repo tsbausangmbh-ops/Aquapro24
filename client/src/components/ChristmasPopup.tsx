@@ -18,6 +18,17 @@ function getNextYear(): number {
   return new Date().getFullYear() + 1;
 }
 
+function hasMarketingConsent(): boolean {
+  try {
+    const consent = localStorage.getItem("cookie_consent");
+    if (!consent) return false;
+    const parsed = JSON.parse(consent);
+    return parsed.marketing === true;
+  } catch {
+    return false;
+  }
+}
+
 export default function ChristmasPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -26,14 +37,26 @@ export default function ChristmasPopup() {
   const nextYear = getNextYear();
 
   useEffect(() => {
-    if (!isChristmasSeason()) {
-      return;
-    }
-
-    const timer = setTimeout(() => {
+    const checkAndShow = () => {
+      if (!isChristmasSeason()) return;
+      if (!hasMarketingConsent()) return;
       setIsVisible(true);
-    }, 1000);
-    return () => clearTimeout(timer);
+    };
+
+    const timer = setTimeout(checkAndShow, 1500);
+
+    const handleConsentChange = () => {
+      if (isChristmasSeason() && hasMarketingConsent()) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("cookieConsentChanged", handleConsentChange);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("cookieConsentChanged", handleConsentChange);
+    };
   }, []);
 
   const handleClose = () => {
