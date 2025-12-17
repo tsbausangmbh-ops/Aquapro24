@@ -126,82 +126,50 @@ export default function WaermepumpePage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-orange-500/10 to-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div className="space-y-6">
-                <Badge className="gap-1 bg-orange-500 text-white">
-                  <Leaf className="w-3 h-3" />
-                  Wärmepumpe München
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Wärmepumpe vom Partnernetzwerk
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
-                  klimaneutral und sparen Sie dabei bis zu 50% Ihrer Heizkosten.
-                </p>
-                <p className="text-muted-foreground">
-                  Jetzt ist der beste Zeitpunkt: Bis zu 70% staatliche Förderung, fachgerechte 
-                  Installation durch unser Partnernetzwerk und ein verbindlicher Festpreis ohne 
-                  Überraschungen. Wir kümmern uns um alles - von der Beratung bis zur Förderantragstellung.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Kostenlose Beratung
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="waermepumpe" 
-                    buttonText="24h Buchungstermin"
-                    buttonSize="lg"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  {["Bis 70% Förderung", "Festpreis", "Zertifiziert"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle2 className="w-4 h-4 text-accent" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+        <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heatPumpImage1})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
+            <div className="max-w-2xl space-y-6">
+              <Badge className="gap-1 bg-green-600 text-white border-0">
+                <Leaf className="w-3 h-3" />
+                Wärmepumpe München
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white">
+                Wärmepumpe vom Partnernetzwerk
+              </h1>
+              <p className="text-lg lg:text-xl text-white/90">
+                <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
+                klimaneutral und sparen Sie dabei bis zu 50% Ihrer Heizkosten.
+              </p>
+              <p className="text-white/80">
+                Jetzt ist der beste Zeitpunkt: Bis zu 70% staatliche Förderung, fachgerechte 
+                Installation durch unser Partnernetzwerk und ein verbindlicher Festpreis ohne 
+                Überraschungen.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Button size="lg" className="bg-white text-black" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Kostenlose Beratung
+                  </a>
+                </Button>
+                <ServiceBooking 
+                  serviceType="waermepumpe" 
+                  buttonText="24h Buchungstermin"
+                  buttonSize="lg"
+                />
               </div>
-              <div className="relative space-y-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={heatPumpImage1} 
-                    alt="Wärmepumpe Installation" 
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-secondary text-secondary-foreground shadow-lg">
-                      <Zap className="w-3 h-3 mr-1" />
-                      Energiewende
-                    </Badge>
+              <div className="flex flex-wrap gap-4 pt-4">
+                {["Bis 70% Förderung", "Festpreis", "Zertifiziert"].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-white/90">
+                    <CheckCircle2 className="w-4 h-4 text-green-400" />
+                    <span>{item}</span>
                   </div>
-                </div>
-                <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-2xl p-6 text-white">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                      <FileText className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-lg font-bold">BAFA & KfW Förderanträge inklusive!</h3>
-                  </div>
-                  <p className="text-white/90 text-sm mb-4">
-                    Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme. Inklusive kompletter Dokumentation.
-                  </p>
-                  <ul className="space-y-2">
-                    {["Bis 70% Zuschuss sichern", "Komplette Antragstellung", "Gesamte Dokumentation", "Alle Formulare inklusive"].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                ))}
               </div>
             </div>
           </div>

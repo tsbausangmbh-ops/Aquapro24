@@ -125,74 +125,49 @@ export default function BadPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-cyan-500/10 to-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div className="space-y-6">
-                <Badge className="gap-1 bg-cyan-600 text-white">
-                  <Droplets className="w-3 h-3" />
-                  Badsanierung München
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Badsanierung vom Partnernetzwerk
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
-                  ohne versteckte Kosten, ohne böse Überraschungen.
-                </p>
-                <p className="text-muted-foreground">
-                  Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
-                  Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Partnernetzwerk. 
-                  Sie lehnen sich zurück und freuen sich auf Ihr Traumbad.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-bad">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt beraten lassen
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="bad" 
-                    buttonText="24h Buchungstermin"
-                    buttonSize="lg"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  {["Schneller Termin", "Festpreis", "5 Jahre Garantie"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle2 className="w-4 h-4 text-accent" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+        <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${bathroomImage1})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
+            <div className="max-w-2xl space-y-6">
+              <Badge className="gap-1 bg-cyan-600 text-white border-0">
+                <Droplets className="w-3 h-3" />
+                Badsanierung München
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white">
+                Badsanierung vom Partnernetzwerk
+              </h1>
+              <p className="text-lg lg:text-xl text-white/90">
+                <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
+                ohne versteckte Kosten, ohne böse Überraschungen.
+              </p>
+              <p className="text-white/80">
+                Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
+                Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Partnernetzwerk.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Button size="lg" className="bg-white text-black" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-bad">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Jetzt beraten lassen
+                  </a>
+                </Button>
+                <ServiceBooking 
+                  serviceType="bad" 
+                  buttonText="24h Buchungstermin"
+                  buttonSize="lg"
+                />
               </div>
-              <div className="relative space-y-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={bathroomImage1} 
-                    alt="Modernes Badezimmer nach Sanierung" 
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-primary text-primary-foreground shadow-lg">
-                      <Star className="w-3 h-3 mr-1" />
-                      Top bewertet
-                    </Badge>
+              <div className="flex flex-wrap gap-4 pt-4">
+                {["Schneller Termin", "Festpreis", "5 Jahre Garantie"].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-white/90">
+                    <CheckCircle2 className="w-4 h-4 text-green-400" />
+                    <span>{item}</span>
                   </div>
-                </div>
-                <div className="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-2xl p-6 text-white">
-                  <p className="text-lg font-bold mb-3">Warum wir?</p>
-                  <ul className="space-y-2">
-                    {benefits.slice(0, 4).map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                ))}
               </div>
             </div>
           </div>

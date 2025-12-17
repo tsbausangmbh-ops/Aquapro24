@@ -125,81 +125,49 @@ export default function HeizungPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-red-500/10 to-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div className="space-y-6">
-                <Badge className="gap-1 bg-red-600 text-white">
-                  <Flame className="w-3 h-3" />
-                  Heizung München
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Heizung - Wärme für Ihr Zuhause
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
-                  unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.
-                </p>
-                <p className="text-muted-foreground">
-                  Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige 
-                  Wärme in Ihrem Zuhause - zuverlässig, effizient und mit 24/7 Notdienst.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-heizung">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt anrufen
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="heizung" 
-                    buttonText="24h Buchungstermin"
-                    buttonSize="lg"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  {["24/7 Notdienst", "Alle Marken", "Festpreis"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle2 className="w-4 h-4 text-accent" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+        <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heatingImage1})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
+            <div className="max-w-2xl space-y-6">
+              <Badge className="gap-1 bg-red-600 text-white border-0">
+                <Flame className="w-3 h-3" />
+                Heizung München
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white">
+                Heizung - Wärme für Ihr Zuhause
+              </h1>
+              <p className="text-lg lg:text-xl text-white/90">
+                <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
+                unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.
+              </p>
+              <p className="text-white/80">
+                Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige 
+                Wärme in Ihrem Zuhause - zuverlässig, effizient und mit 24/7 Notdienst.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Button size="lg" className="bg-white text-black" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-heizung">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Jetzt anrufen
+                  </a>
+                </Button>
+                <ServiceBooking 
+                  serviceType="heizung" 
+                  buttonText="24h Buchungstermin"
+                  buttonSize="lg"
+                />
               </div>
-              <div className="relative space-y-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={heatingImage1} 
-                    alt="Moderne Heizungsanlage" 
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-secondary text-secondary-foreground shadow-lg">
-                      <Star className="w-3 h-3 mr-1" />
-                      Geprüfte Partner
-                    </Badge>
+              <div className="flex flex-wrap gap-4 pt-4">
+                {["24/7 Notdienst", "Alle Marken", "Festpreis"].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-white/90">
+                    <CheckCircle2 className="w-4 h-4 text-green-400" />
+                    <span>{item}</span>
                   </div>
-                </div>
-                <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-2xl p-6 text-white">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                      <FileText className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-lg font-bold">KfW & BAFA Förderanträge inklusive!</h3>
-                  </div>
-                  <p className="text-white/90 text-sm mb-4">
-                    Bei einer neuen Heizung stellen wir alle Förderanträge für Sie – KfW, BAFA und weitere Programme. Inklusive kompletter Dokumentation.
-                  </p>
-                  <ul className="space-y-2">
-                    {["Bis 70% Zuschuss möglich", "Komplette Antragstellung", "Gesamte Dokumentation", "Alle Formulare inklusive"].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                ))}
               </div>
             </div>
           </div>
