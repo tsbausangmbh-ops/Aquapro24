@@ -177,7 +177,8 @@ Host: https://aquapro24.de
 # ============================================
 # CONTACT & SUPPORT
 # ============================================
-# AquaPro24 - Sanitär & Heizung München
-# Tel: 0152 12274043
+# AquaPro 24 - Sanitär & Heizung München
+# Inhaber: Mustafa Sakar
+# Tel: 0173 5994699
 # E-Mail: info@aquapro24.de
-# Adresse: Zielstattstr. 20, 81379 München
+# Adresse: Hardenbergstr. 4, 80992 München
