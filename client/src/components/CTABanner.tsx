@@ -37,7 +37,7 @@ export default function CTABanner() {
           </Button>
           <Button 
             size="lg" 
-            className="gap-2 bg-red-600 hover:bg-red-700 text-white border-red-700"
+            className="gap-2 bg-green-600 hover:bg-green-700 text-white border-green-700"
             asChild
             data-testid="button-callback-cta"
           >

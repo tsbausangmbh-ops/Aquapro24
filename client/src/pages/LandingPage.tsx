@@ -125,7 +125,7 @@ export default function LandingPage() {
                       0173 5994699
                     </a>
                   </Button>
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
                     <Link href="/termin" data-testid="button-callback-landing">
                       <Phone className="w-5 h-5 mr-2" />
                       Rückruf anfordern
@@ -268,7 +268,7 @@ export default function LandingPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
                 <Link href="/termin" data-testid="button-callback-landing-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   Rückruf anfordern

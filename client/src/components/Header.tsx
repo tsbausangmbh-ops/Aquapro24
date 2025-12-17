@@ -165,7 +165,7 @@ export default function Header() {
               </Button>
               <Button 
                 asChild 
-                className="bg-red-600 hover:bg-red-700 text-white border-red-700"
+                className="bg-green-600 hover:bg-green-700 text-white border-green-700"
                 data-testid="button-callback-header"
               >
                 <Link href="/termin">
@@ -264,7 +264,7 @@ export default function Header() {
                 </Link>
               </Button>
               <Button 
-                className="mt-2 bg-red-600 hover:bg-red-700 text-white border-red-700" 
+                className="mt-2 bg-green-600 hover:bg-green-700 text-white border-green-700" 
                 asChild 
                 data-testid="button-callback-mobile"
               >

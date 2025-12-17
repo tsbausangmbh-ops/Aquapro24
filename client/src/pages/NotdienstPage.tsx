@@ -105,7 +105,7 @@ export default function NotdienstPage() {
                     0173 5994699
                   </a>
                 </Button>
-                <Button size="lg" className="bg-white text-red-700 border-white/80 text-lg px-8 py-6" asChild>
+                <Button size="lg" className="bg-white text-green-700 border-white/80 text-lg px-8 py-6" asChild>
                   <Link href="/termin" data-testid="button-callback-notdienst">
                     <Phone className="w-5 h-5 mr-2" />
                     Rückruf anfordern
@@ -251,7 +251,7 @@ export default function NotdienstPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-white text-red-700 border-white" asChild>
+              <Button size="lg" className="bg-white text-green-700 border-white" asChild>
                 <Link href="/termin" data-testid="button-callback-notdienst-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   Rückruf anfordern

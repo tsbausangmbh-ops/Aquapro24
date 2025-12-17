@@ -261,7 +261,7 @@ export default function UeberUnsPage() {
                       0173 5994699
                     </a>
                   </Button>
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                     <Link href="/termin" data-testid="button-rueckruf-about">
                       <Phone className="w-5 h-5 mr-2" />
                       Rückruf anfordern
@@ -527,7 +527,7 @@ export default function UeberUnsPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                 <Link href="/termin" data-testid="button-rueckruf-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   Rückruf anfordern

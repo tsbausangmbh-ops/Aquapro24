@@ -18,7 +18,7 @@ export default function FloatingContactBar() {
           className="flex flex-col items-center justify-center py-3 gap-1 text-foreground hover-elevate active-elevate-2"
           data-testid="floating-callback"
         >
-          <Calendar className="w-5 h-5 text-red-600" />
+          <Calendar className="w-5 h-5 text-green-600" />
           <span className="text-xs font-medium">Rückruf</span>
         </Link>
       </div>

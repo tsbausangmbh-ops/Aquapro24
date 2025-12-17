@@ -101,7 +101,7 @@ function SEOContent() {
               0173 5994699
             </a>
           </Button>
-          <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
             <Link href="/termin" data-testid="button-callback-seo-cta">
               <Phone className="w-4 h-4 mr-2" />
               Rückruf anfordern
