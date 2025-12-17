@@ -345,7 +345,7 @@ export default function HeizungPage() {
                 </a>
               </Button>
               <Button size="lg" className="bg-white text-secondary border-white" asChild>
-                <Link href="/kontakt">
+                <Link href="/termin">
                   <Clock className="w-4 h-4 mr-2" />
                   24h Terminbuchung
                 </Link>

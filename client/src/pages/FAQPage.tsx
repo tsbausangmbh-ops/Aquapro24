@@ -261,16 +261,16 @@ export default function FAQPage() {
             
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Button size="lg" className="gap-2" asChild>
-                <Link href="/kontakt">
+                <Link href="/termin">
                   <Calendar className="w-5 h-5" />
                   Beratungstermin buchen
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="gap-2" asChild>
-                <Link href="/kontakt">
+                <a href="mailto:info@aquapro24.de?subject=Beratungsanfrage">
                   <MessageSquare className="w-5 h-5" />
                   Kostenlos beraten lassen
-                </Link>
+                </a>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
@@ -281,7 +281,7 @@ export default function FAQPage() {
                 </a>
               </Button>
               <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
-                <Link href="/kontakt">
+                <Link href="/termin">
                   <Clock className="w-5 h-5 mr-2" />
                   24h Terminbuchung
                 </Link>

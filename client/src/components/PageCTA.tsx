@@ -18,7 +18,7 @@ export default function PageCTA({
       <div className="bg-muted/50 rounded-lg p-6 mt-8">
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" className="gap-2 w-full sm:w-auto" asChild data-testid="button-termin-compact">
-            <Link href="/kontakt">
+            <Link href="/termin">
               <Calendar className="w-5 h-5" />
               Beratungstermin buchen
             </Link>
@@ -54,7 +54,7 @@ export default function PageCTA({
               Wählen Sie online Ihren Wunschtermin mit Kalender-Funktion
             </p>
             <Button className="w-full gap-2" asChild data-testid="button-termin-full">
-              <Link href="/kontakt">
+              <Link href="/termin">
                 <Calendar className="w-4 h-4" />
                 Termin wählen
               </Link>
