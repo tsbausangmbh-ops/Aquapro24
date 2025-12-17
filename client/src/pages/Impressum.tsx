@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail, Phone, MapPin } from "lucide-react";
@@ -8,6 +9,12 @@ import { Link } from "wouter";
 export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Impressum | AquaPro24 München | Sanitär & Heizung"
+        description="Impressum von AquaPro24 München (KSHW München). Angaben gemäß § 5 DDG: Inhaber Ali Kemal Kurt, Zielstattstr. 20, 81379 München. Tel: 0152 12274043"
+        canonical="https://aquapro24.de/impressum"
+        keywords="Impressum, AquaPro24, KSHW München, Sanitär München, Heizung München, Kontakt"
+      />
       <Header />
       <main id="main-content" className="pt-8 pb-4 lg:pt-10 lg:pb-6">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
