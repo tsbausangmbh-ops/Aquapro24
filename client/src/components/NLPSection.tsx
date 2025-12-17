@@ -22,7 +22,7 @@ export default function NLPSection({
   solutions,
   futureState,
   ctaText = "Jetzt kostenlos beraten lassen",
-  ctaHref = "tel:+4915212274043",
+  ctaHref = "tel:+4917359994699",
   urgencyText,
   authorityText,
   transformationSteps

@@ -225,7 +225,7 @@ export default function UeberUnsPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Über AquaPro24 München | Geprüfte Fachbetriebe | Sanitär & Heizung"
-        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0152 12274043"
+        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0173 5994699"
         canonical="https://aquapro24.de/ueber-uns"
         structuredData={aboutPageSchema}
       />
@@ -256,14 +256,14 @@ export default function UeberUnsPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-about">
+                    <a href="tel:+4917359994699" data-testid="button-call-about">
                       <Phone className="w-5 h-5 mr-2" />
-                      0152 12274043
+                      0173 5994699
                     </a>
                   </Button>
                   <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
                     <a 
-                      href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Dienstleistungen%20in%20M%C3%BCnchen." 
+                      href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Dienstleistungen%20in%20M%C3%BCnchen." 
                       target="_blank" 
                       rel="noopener noreferrer"
                       data-testid="button-whatsapp-about"
@@ -527,14 +527,14 @@ export default function UeberUnsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-cta">
                   <Phone className="w-5 h-5 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
                 <a 
-                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
+                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   data-testid="button-whatsapp-cta"

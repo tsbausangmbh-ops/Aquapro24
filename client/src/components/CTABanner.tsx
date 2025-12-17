@@ -29,9 +29,9 @@ export default function CTABanner() {
             asChild
             data-testid="button-call-cta"
           >
-            <a href="tel:+4915212274043">
+            <a href="tel:+4917359994699">
               <Phone className="w-6 h-6" />
-              0152 12274043
+              0173 5994699
             </a>
           </Button>
           <Button 

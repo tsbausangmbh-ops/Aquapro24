@@ -104,9 +104,9 @@ export default function ArmaturenPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Armaturen München | Wasserhahn Montage & Reparatur | AquaPro24"
-        description="Armaturen München: Wasserhahn tropft? Neue Armatur einbauen? Wir montieren Grohe, Hansgrohe & Co. Festpreis ab 80€, schnelle Termine. Tel: 0152 12274043"
+        description="Armaturen München: Wasserhahn tropft? Neue Armatur einbauen? Wir montieren Grohe, Hansgrohe & Co. Festpreis ab 80€, schnelle Termine. Tel: 0173 5994699"
         canonical="https://aquapro24.de/armaturen"
-        aiSummary="AquaPro24 Armaturen-Service München: Montage und Reparatur aller Marken (Grohe, Hansgrohe, Geberit). Wasserhahn tropft? Neue Armatur? Festpreis ab 80€. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Armaturen-Service München: Montage und Reparatur aller Marken (Grohe, Hansgrohe, Geberit). Wasserhahn tropft? Neue Armatur? Festpreis ab 80€. Kontakt: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Armaturen", url: "https://aquapro24.de/armaturen" }
@@ -155,7 +155,7 @@ export default function ArmaturenPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-armaturen">
+                    <a href="tel:+4917359994699" data-testid="button-call-armaturen">
                       <Phone className="w-4 h-4 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -363,13 +363,13 @@ export default function ArmaturenPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-armaturen-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-armaturen-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20brauche%20Hilfe%20mit%20meinen%20Armaturen." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20brauche%20Hilfe%20mit%20meinen%20Armaturen." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp Nachricht
                 </a>

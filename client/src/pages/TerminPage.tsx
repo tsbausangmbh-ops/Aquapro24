@@ -520,7 +520,7 @@ export default function TerminPage() {
                 data-testid="button-whatsapp-termin"
               >
                 <a 
-                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Beratungstermin%20vereinbaren."
+                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Beratungstermin%20vereinbaren."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

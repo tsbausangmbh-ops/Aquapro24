@@ -70,7 +70,7 @@ export default function NotdienstPage() {
     <div className="min-h-screen bg-background pb-16 md:pb-0">
       <SEO
         title="24h Notdienst Sanitär & Heizung München | Sofort-Hilfe | AquaPro24"
-        description="24/7 Notdienst für Sanitär und Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall? Wir sind in 30-60 Minuten bei Ihnen. Festpreisgarantie. Jetzt anrufen: 0152 12274043"
+        description="24/7 Notdienst für Sanitär und Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall? Wir sind in 30-60 Minuten bei Ihnen. Festpreisgarantie. Jetzt anrufen: 0173 5994699"
         canonical="https://aquapro24.de/notdienst"
       />
       <Header />
@@ -101,13 +101,13 @@ export default function NotdienstPage() {
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button size="lg" className="bg-white text-red-700 border-white/80 text-lg px-8 py-6" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-notdienst-hero">
+                  <a href="tel:+4917359994699" data-testid="button-call-notdienst-hero">
                     <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                    0152 12274043
+                    0173 5994699
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-500 text-white border-emerald-600 text-lg px-8 py-6" asChild>
-                  <a href="https://wa.me/4915212274043?text=NOTFALL%3A%20Bitte%20dringend%20zur%C3%BCckrufen!" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-notdienst">
+                  <a href="https://wa.me/4917359994699?text=NOTFALL%3A%20Bitte%20dringend%20zur%C3%BCckrufen!" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-notdienst">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Notfall
                   </a>
@@ -156,7 +156,7 @@ export default function NotdienstPage() {
                         <div className="flex items-center justify-between">
                           <span className="font-semibold text-primary">{service.price}</span>
                           <Button size="sm" asChild>
-                            <a href="tel:+4915212274043" data-testid={`button-call-${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                            <a href="tel:+4917359994699" data-testid={`button-call-${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
                               <Phone className="w-3 h-3 mr-1" />
                               Jetzt anrufen
                             </a>
@@ -247,13 +247,13 @@ export default function NotdienstPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-white text-red-700 border-white text-lg" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-notdienst-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-notdienst-cta">
                   <Phone className="w-5 h-5 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-500 text-white border-emerald-600" asChild>
-                <a href="https://wa.me/4915212274043?text=NOTFALL%3A%20Bitte%20dringend%20zur%C3%BCckrufen!" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-notdienst-cta">
+                <a href="https://wa.me/4917359994699?text=NOTFALL%3A%20Bitte%20dringend%20zur%C3%BCckrufen!" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-notdienst-cta">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp
                 </a>

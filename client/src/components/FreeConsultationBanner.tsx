@@ -20,7 +20,7 @@ export default function FreeConsultationBanner({ variant = "full", className = "
           Erstberatung & Kostenvoranschlag gratis
         </span>
         <Button size="sm" asChild className="bg-green-600 hover:bg-green-700" data-testid="button-free-consultation-inline">
-          <a href="tel:+4915212274043">
+          <a href="tel:+4917359994699">
             <Phone className="w-4 h-4 mr-1" />
             Jetzt anrufen
           </a>
@@ -43,9 +43,9 @@ export default function FreeConsultationBanner({ variant = "full", className = "
             </div>
           </div>
           <Button variant="secondary" asChild data-testid="button-free-consultation-compact">
-            <a href="tel:+4915212274043">
+            <a href="tel:+4917359994699">
               <Phone className="w-4 h-4 mr-2" />
-              0152 12274043
+              0173 5994699
             </a>
           </Button>
         </div>
@@ -93,9 +93,9 @@ export default function FreeConsultationBanner({ variant = "full", className = "
               asChild
               data-testid="button-free-consultation-call"
             >
-              <a href="tel:+4915212274043">
+              <a href="tel:+4917359994699">
                 <Phone className="w-5 h-5 mr-2" />
-                0152 12274043
+                0173 5994699
               </a>
             </Button>
             <Button 

@@ -109,13 +109,13 @@ export default function FunnelJourney() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <a href="tel:+4915212274043" data-testid="button-funnel-call">
+              <a href="tel:+4917359994699" data-testid="button-funnel-call">
                 <Phone className="w-4 h-4 mr-2" />
-                0152 12274043
+                0173 5994699
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer" data-testid="button-funnel-whatsapp">
+              <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer" data-testid="button-funnel-whatsapp">
                 WhatsApp schreiben
               </a>
             </Button>

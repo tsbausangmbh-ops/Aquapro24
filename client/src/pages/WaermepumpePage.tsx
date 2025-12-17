@@ -117,9 +117,9 @@ export default function WaermepumpePage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Wärmepumpe München | Bis 70% BAFA-Förderung 2025 | Ab 12.000€ | AquaPro24"
-        description="Wärmepumpe München: Bis 70% staatliche Förderung (BAFA/KfW), 50% Heizkosten sparen. Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. 320+ Installationen. Kostenlose Beratung: 0152 12274043"
+        description="Wärmepumpe München: Bis 70% staatliche Förderung (BAFA/KfW), 50% Heizkosten sparen. Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. 320+ Installationen. Kostenlose Beratung: 0173 5994699"
         canonical="https://aquapro24.de/waermepumpe"
-        aiSummary="AquaPro24 Wärmepumpe München: Bis 70% BAFA/KfW-Förderung 2025, Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. Komplette Förderantragstellung inklusive. 320+ Installationen. Alle Münchner Stadtteile. Kostenlose Beratung: 0152 12274043"
+        aiSummary="AquaPro24 Wärmepumpe München: Bis 70% BAFA/KfW-Förderung 2025, Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. Komplette Förderantragstellung inklusive. 320+ Installationen. Alle Münchner Stadtteile. Kostenlose Beratung: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" }
@@ -169,7 +169,7 @@ export default function WaermepumpePage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
+                    <a href="tel:+4917359994699" data-testid="button-call-waermepumpe">
                       <Phone className="w-5 h-5 mr-2" />
                       Kostenlose Beratung
                     </a>
@@ -395,13 +395,13 @@ export default function WaermepumpePage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe-cta">
+                  <a href="tel:+4917359994699" data-testid="button-call-waermepumpe-cta">
                     <Phone className="w-5 h-5 mr-2" />
-                    0152 12274043
+                    0173 5994699
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20W%C3%A4rmepumpe." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20W%C3%A4rmepumpe." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Rückruf bitte
                   </a>

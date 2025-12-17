@@ -51,7 +51,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@id": "https://aquapro24.de/#organization",
   "name": "AquaPro24 - Sanitär & Heizung München",
   "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München"],
-  "legalName": "KSHW München - Ali Kemal Kurt",
+  "legalName": "AquaPro 24 - Mustafa Sakar",
   "description": "AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen, Notdienst und Haustechnik. 2.847+ zufriedene Kunden, 4.9/5 Sterne Bewertung.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
   "url": "https://aquapro24.de",
@@ -65,7 +65,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://aquapro24.de/og-image.jpg",
     "https://aquapro24.de/team.jpg"
   ],
-  "telephone": "+49-152-12274043",
+  "telephone": "+49-173-5994699",
   "email": "info@aquapro24.de",
   "foundingDate": "2005",
   "numberOfEmployees": {
@@ -75,10 +75,10 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Zielstattstr. 20",
+    "streetAddress": "Hardenbergstr. 4",
     "addressLocality": "München",
     "addressRegion": "Bayern",
-    "postalCode": "81379",
+    "postalCode": "80992",
     "addressCountry": "DE"
   },
   "geo": {
@@ -211,7 +211,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://www.facebook.com/aquapro24",
     "https://www.instagram.com/aquapro24_muenchen",
     "https://www.linkedin.com/company/aquapro24",
-    "https://wa.me/4915212274043"
+    "https://wa.me/4917359994699"
   ],
   "potentialAction": [
     {
@@ -227,7 +227,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "CommunicateAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "tel:+4915212274043"
+        "urlTemplate": "tel:+4917359994699"
       }
     },
     {
@@ -242,7 +242,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+49-152-12274043",
+      "telephone": "+49-173-5994699",
       "contactType": "customer service",
       "availableLanguage": ["German", "English"],
       "areaServed": "DE-BY",
@@ -255,7 +255,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+49-152-12274043",
+      "telephone": "+49-173-5994699",
       "contactType": "emergency",
       "availableLanguage": "German",
       "areaServed": "DE-BY"

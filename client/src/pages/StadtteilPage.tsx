@@ -209,7 +209,7 @@ export default function StadtteilPage() {
     <div className="min-h-screen bg-background pb-16 md:pb-0">
       <SEO
         title={`Sanitär & Heizung ${district.name} | 24h Notdienst | AquaPro24 München`}
-        description={`Sanitär und Heizung in München ${district.name}. Notdienst 24/7, Festpreisgarantie, Anfahrt in ${district.responseTime}. Badsanierung, Rohrreinigung, Heizungswartung. Jetzt anrufen: 0152 12274043`}
+        description={`Sanitär und Heizung in München ${district.name}. Notdienst 24/7, Festpreisgarantie, Anfahrt in ${district.responseTime}. Badsanierung, Rohrreinigung, Heizungswartung. Jetzt anrufen: 0173 5994699`}
         canonical={`https://aquapro24.de/stadtteil/${district.slug}`}
       />
       <Header />
@@ -251,13 +251,13 @@ export default function StadtteilPage() {
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-hero">
+                    <a href="tel:+4917359994699" data-testid="button-call-hero">
                       <Phone className="w-4 h-4 mr-2" />
-                      0152 12274043
+                      0173 5994699
                     </a>
                   </Button>
                   <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                    <a href="https://wa.me/4915212274043" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-hero">
+                    <a href="https://wa.me/4917359994699" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-hero">
                       <MessageCircle className="w-4 h-4 mr-2" />
                       WhatsApp
                     </a>
@@ -369,9 +369,9 @@ export default function StadtteilPage() {
             </div>
             <div className="flex flex-wrap gap-4 mt-8">
               <Button size="lg" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen: 0152 12274043
+                  Jetzt anrufen: 0173 5994699
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>

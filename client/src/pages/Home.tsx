@@ -96,13 +96,13 @@ function SEOContent() {
         </div>
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-            <a href="tel:+4915212274043" data-testid="button-call-seo-cta">
+            <a href="tel:+4917359994699" data-testid="button-call-seo-cta">
               <Phone className="w-4 h-4 mr-2" />
-              0152 12274043
+              0173 5994699
             </a>
           </Button>
           <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-            <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf." target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-seo-cta">
+            <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf." target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-seo-cta">
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp Rückruf
             </a>
@@ -165,9 +165,9 @@ export default function Home() {
     <div className="min-h-screen bg-background pb-16 md:pb-0">
       <SEO 
         title="Sanitär & Heizung München | Notdienst 24/7 | Festpreis ab 89€ | AquaPro24"
-        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung. 2.847+ zufriedene Kunden. Notdienst 24/7, Festpreisgarantie, alle 12 Stadtbezirke. Jetzt anrufen: 0152 12274043"
+        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung. 2.847+ zufriedene Kunden. Notdienst 24/7, Festpreisgarantie, alle 12 Stadtbezirke. Jetzt anrufen: 0173 5994699"
         canonical="https://aquapro24.de"
-        aiSummary="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen. Seit 2005 in München, 2.847+ zufriedene Kunden, 4.9/5 Sterne. 24/7 Notdienst, Festpreisgarantie, alle 25 Münchner Stadtteile. Sanitär ab 89€, Badsanierung ab 8.900€, Wärmepumpe mit bis 70% Förderung. Kontakt: 0152 12274043, info@aquapro24.de"
+        aiSummary="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen. Seit 2005 in München, 2.847+ zufriedene Kunden, 4.9/5 Sterne. 24/7 Notdienst, Festpreisgarantie, alle 25 Münchner Stadtteile. Sanitär ab 89€, Badsanierung ab 8.900€, Wärmepumpe mit bis 70% Förderung. Kontakt: 0173 5994699, info@aquapro24.de"
         serviceSchema={{
           name: "AquaPro24 München - Sanitär & Heizung",
           description: "Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen in München seit 2005. Über 2.847 zufriedene Kunden, Festpreisgarantie, 24/7 Notdienst.",

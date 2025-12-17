@@ -128,9 +128,9 @@ export default function RohrreinigungPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Rohrreinigung München | Abfluss verstopft? 24/7 Notdienst | AquaPro24"
-        description="Rohrreinigung München: Verstopfter Abfluss? Wir sind in 60 Min. da! Küchenabfluss, Dusche, WC - professionelle Reinigung mit Hochdruck. Festpreis ab 79€. Tel: 0152 12274043"
+        description="Rohrreinigung München: Verstopfter Abfluss? Wir sind in 60 Min. da! Küchenabfluss, Dusche, WC - professionelle Reinigung mit Hochdruck. Festpreis ab 79€. Tel: 0173 5994699"
         canonical="https://aquapro24.de/rohrreinigung"
-        aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 79€. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 79€. Kontakt: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Rohrreinigung", url: "https://aquapro24.de/rohrreinigung" }
@@ -179,7 +179,7 @@ export default function RohrreinigungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung">
+                    <a href="tel:+4917359994699" data-testid="button-call-rohrreinigung">
                       <Phone className="w-4 h-4 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -386,13 +386,13 @@ export default function RohrreinigungPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-rohrreinigung-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20einen%20verstopften%20Abfluss%20und%20bitte%20um%20Hilfe." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20einen%20verstopften%20Abfluss%20und%20bitte%20um%20Hilfe." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp Nachricht
                 </a>

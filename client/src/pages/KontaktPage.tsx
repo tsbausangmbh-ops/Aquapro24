@@ -33,9 +33,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    primary: "0152 12274043",
+    primary: "0173 5994699",
     secondary: "24/7 Notdienst erreichbar",
-    action: "tel:+4915212274043"
+    action: "tel:+4917359994699"
   },
   {
     icon: Mail,
@@ -115,7 +115,7 @@ export default function KontaktPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Kontakt | KSHW München - Sanitär & Heizung München"
-        description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0152 12274043. Kostenlose Beratung, schnelle Termine."
+        description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0173 5994699. Kostenlose Beratung, schnelle Termine."
         canonical="https://kshw-muenchen.de/kontakt"
       />
       <Header />
@@ -317,9 +317,9 @@ export default function KontaktPage() {
                             Bei Rohrbruch, Wasserschaden oder Heizungsausfall erreichen Sie uns rund um die Uhr.
                           </p>
                           <Button className="bg-accent text-accent-foreground" asChild>
-                            <a href="tel:+4915212274043" data-testid="button-emergency-call">
+                            <a href="tel:+4917359994699" data-testid="button-emergency-call">
                               <Phone className="w-4 h-4 mr-2" />
-                              0152 12274043
+                              0173 5994699
                             </a>
                           </Button>
                         </div>
@@ -412,8 +412,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <a href="tel:+4915212274043" className="font-medium hover:text-secondary">
-                          0152 12274043
+                        <a href="tel:+4917359994699" className="font-medium hover:text-secondary">
+                          0173 5994699
                         </a>
                         <p className="text-sm text-muted-foreground">24/7 Notdienst</p>
                       </div>
@@ -486,8 +486,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>0152 12274043</p>
-                        <p className="text-sm text-muted-foreground">Fax: 0152 12274043</p>
+                        <p>0173 5994699</p>
+                        <p className="text-sm text-muted-foreground">Fax: 0173 5994699</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">

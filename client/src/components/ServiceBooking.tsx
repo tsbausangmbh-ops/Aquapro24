@@ -584,7 +584,7 @@ export default function ServiceBooking({
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="0152 12274043"
+                        placeholder="0173 5994699"
                         data-testid="input-phone"
                       />
                     </div>
@@ -675,9 +675,9 @@ export default function ServiceBooking({
             <div className="pt-4 border-t text-center">
               <p className="text-sm text-muted-foreground mb-2">Lieber telefonisch?</p>
               <Button variant="outline" size="sm" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-booking">
+                <a href="tel:+4917359994699" data-testid="button-call-booking">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
             </div>

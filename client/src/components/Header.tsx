@@ -51,12 +51,12 @@ export default function Header() {
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
             <a 
-              href="tel:+4915212274043" 
+              href="tel:+4917359994699" 
               className="flex items-center gap-2 font-bold text-base md:text-lg hover:underline"
               data-testid="link-emergency-phone"
             >
               <Phone className="w-5 h-5" />
-              <span>0152 12274043</span>
+              <span>0173 5994699</span>
             </a>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function Header() {
                 data-testid="button-whatsapp-header"
               >
                 <a 
-                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
+                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -274,7 +274,7 @@ export default function Header() {
                 data-testid="button-whatsapp-mobile"
               >
                 <a 
-                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
+                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -283,9 +283,9 @@ export default function Header() {
                 </a>
               </Button>
               <Button className="mt-2" asChild data-testid="button-call-mobile">
-                <a href="tel:+4915212274043">
+                <a href="tel:+4917359994699">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
             </nav>

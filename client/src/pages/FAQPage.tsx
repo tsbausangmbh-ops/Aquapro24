@@ -217,7 +217,7 @@ export default function FAQPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-faq">
+                  <a href="tel:+4917359994699" data-testid="button-call-faq">
                     <Phone className="w-5 h-5 mr-2" />
                     Kostenlos beraten lassen
                   </a>
@@ -259,9 +259,9 @@ export default function FAQPage() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-bottom">
+                <a href="tel:+4917359994699" data-testid="button-call-bottom">
                   <Phone className="w-5 h-5 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
@@ -271,7 +271,7 @@ export default function FAQPage() {
                 </a>
               </Button>
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4915212274043" data-testid="button-emergency-faq">
+                <a href="tel:+4917359994699" data-testid="button-emergency-faq">
                   <AlertTriangle className="w-5 h-5 mr-2" />
                   Notdienst
                 </a>

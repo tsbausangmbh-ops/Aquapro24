@@ -27,10 +27,10 @@ export default function Impressum() {
               <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h2>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="text-foreground font-medium text-lg">KSHW München</p>
-                  <p>Inhaber: Ali Kemal Kurt</p>
-                  <p>Zielstattstr. 20</p>
-                  <p>81379 München</p>
+                  <p className="text-foreground font-medium text-lg">AquaPro 24</p>
+                  <p>Inhaber: Mustafa Sakar</p>
+                  <p>Hardenbergstr. 4</p>
+                  <p>80992 München</p>
                   <p>Deutschland</p>
                 </div>
               </CardContent>
@@ -42,8 +42,8 @@ export default function Impressum() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-4 h-4 text-secondary" />
-                    <a href="tel:+4915212274043" className="hover:text-secondary transition-colors">
-                      0152 12274043
+                    <a href="tel:+4917359994699" className="hover:text-secondary transition-colors">
+                      0173 5994699
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
@@ -54,7 +54,7 @@ export default function Impressum() {
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="w-4 h-4 text-secondary" />
-                    <span>Zielstattstr. 20, 81379 München</span>
+                    <span>Hardenbergstr. 4, 80992 München</span>
                   </div>
                 </div>
               </CardContent>
@@ -65,7 +65,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-semibold mb-4">Betriebsverantwortung</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>
-                    Die Webseite AquaPro24.de wird von der KSHW München verwaltet, betrieben und technisch administriert.
+                    Die Webseite AquaPro24.de wird von AquaPro 24 verwaltet, betrieben und technisch administriert.
                   </p>
                 </div>
               </CardContent>
@@ -76,17 +76,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-semibold mb-4">Unternehmensform</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Einzelunternehmer</p>
-                  <p>Inhaber: Ali Kemal Kurt</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Umsatzsteuer-ID</h2>
-                <div className="space-y-2 text-muted-foreground">
-                  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
-                  <p className="text-foreground font-medium">DE356852204</p>
+                  <p>Inhaber: Mustafa Sakar</p>
                 </div>
               </CardContent>
             </Card>
@@ -95,9 +85,9 @@ export default function Impressum() {
               <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Ali Kemal Kurt</p>
-                  <p>Zielstattstr. 20</p>
-                  <p>81379 München</p>
+                  <p>Mustafa Sakar</p>
+                  <p>Hardenbergstr. 4</p>
+                  <p>80992 München</p>
                 </div>
               </CardContent>
             </Card>

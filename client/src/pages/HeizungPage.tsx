@@ -117,9 +117,9 @@ export default function HeizungPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Heizung München | Notdienst 24/7 | Wartung ab 149€ | AquaPro24"
-        description="Heizung München: Notdienst bei Ausfall, Wartung, Reparatur, Neuinstallation. Alle Marken, 45 Min. vor Ort, Förderberatung bis 70%. 1.200+ Anlagen installiert. Tel: 0152 12274043"
+        description="Heizung München: Notdienst bei Ausfall, Wartung, Reparatur, Neuinstallation. Alle Marken, 45 Min. vor Ort, Förderberatung bis 70%. 1.200+ Anlagen installiert. Tel: 0173 5994699"
         canonical="https://aquapro24.de/heizung"
-        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }
@@ -168,7 +168,7 @@ export default function HeizungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-heizung">
+                    <a href="tel:+4917359994699" data-testid="button-call-heizung">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -362,13 +362,13 @@ export default function HeizungPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
+                  <a href="tel:+4917359994699" data-testid="button-call-heizung-cta">
                     <Phone className="w-5 h-5 mr-2" />
-                    0152 12274043
+                    0173 5994699
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Rückruf bitte
                   </a>

@@ -2,16 +2,15 @@
 
 ## Overview
 
-A professional German-language website for KSHW München (Inhaber: Ali Kemal Kurt), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
+A professional German-language website for AquaPro 24 (Inhaber: Mustafa Sakar), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
 
 ## Company Information
-- **Company**: KSHW München
-- **Owner**: Ali Kemal Kurt  
-- **Address**: Zielstattstr. 20, 81379 München
-- **Phone**: 0152 12274043
-- **USt-IdNr**: DE356852204
+- **Company**: AquaPro 24
+- **Owner**: Mustafa Sakar  
+- **Address**: Hardenbergstr. 4, 80992 München
+- **Phone**: 0173 5994699
 - **Type**: Einzelunternehmer (Sole Proprietor)
-- **Domain**: aquapro24.de (verwaltet und gesteuert von KSHW München)
+- **Domain**: aquapro24.de
 - **Established**: 2005 (Partnernetzwerk)
 
 ## User Preferences

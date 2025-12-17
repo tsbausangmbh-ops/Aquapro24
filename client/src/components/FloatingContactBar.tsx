@@ -6,7 +6,7 @@ export default function FloatingContactBar() {
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-md border-t border-border shadow-lg">
       <div className="grid grid-cols-3 divide-x divide-border">
         <a
-          href="tel:+4915212274043"
+          href="tel:+4917359994699"
           className="flex flex-col items-center justify-center py-3 gap-1 text-foreground hover-elevate active-elevate-2"
           data-testid="floating-call"
         >
@@ -14,7 +14,7 @@ export default function FloatingContactBar() {
           <span className="text-xs font-medium">Anrufen</span>
         </a>
         <a
-          href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf."
+          href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf."
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-3 gap-1 text-foreground hover-elevate active-elevate-2"

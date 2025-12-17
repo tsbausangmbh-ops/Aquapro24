@@ -101,7 +101,7 @@ export default function SanitaerPage() {
     },
     {
       question: "Was tun bei einem Wasserschaden in der Wohnung?",
-      answer: "Bei einem Wasserschaden: 1. Hauptwasserhahn sofort zudrehen (meist im Keller oder unter der Spüle). 2. Strom in betroffenen Bereichen abschalten. 3. Uns anrufen unter 0152 12274043 - wir sind innerhalb von 60 Minuten da. 4. Wenn möglich, Wasser aufwischen und Möbel hochstellen. Wir dokumentieren den Schaden auch für Ihre Versicherung."
+      answer: "Bei einem Wasserschaden: 1. Hauptwasserhahn sofort zudrehen (meist im Keller oder unter der Spüle). 2. Strom in betroffenen Bereichen abschalten. 3. Uns anrufen unter 0173 5994699 - wir sind innerhalb von 60 Minuten da. 4. Wenn möglich, Wasser aufwischen und Möbel hochstellen. Wir dokumentieren den Schaden auch für Ihre Versicherung."
     },
     {
       question: "Welche Wasserleitungen sind in Münchner Altbauten verbaut?",
@@ -129,9 +129,9 @@ export default function SanitaerPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Sanitär München | Klempner Notdienst 24/7 | Festpreis ab 89€ | AquaPro24"
-        description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0152 12274043"
+        description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0173 5994699"
         canonical="https://aquapro24.de/sanitaer"
-        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }
@@ -182,7 +182,7 @@ export default function SanitaerPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-sanitaer">
+                    <a href="tel:+4917359994699" data-testid="button-call-sanitaer">
                       <Phone className="w-4 h-4 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -404,13 +404,13 @@ export default function SanitaerPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-sanitaer-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Rückruf bitte
                 </a>

@@ -115,9 +115,9 @@ export default function HaustechnikPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | AquaPro24"
-        description="Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Kostenlose Beratung: 0152 12274043"
+        description="Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Kostenlose Beratung: 0173 5994699"
         canonical="https://aquapro24.de/haustechnik"
-        aiSummary="AquaPro24 Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Alle Münchner Stadtteile. Kostenlose Beratung: 0152 12274043"
+        aiSummary="AquaPro24 Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Alle Münchner Stadtteile. Kostenlose Beratung: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Haustechnik", url: "https://aquapro24.de/haustechnik" }
@@ -166,7 +166,7 @@ export default function HaustechnikPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-haustechnik">
+                    <a href="tel:+4917359994699" data-testid="button-call-haustechnik">
                       <Phone className="w-5 h-5 mr-2" />
                       Jetzt anfragen
                     </a>
@@ -382,13 +382,13 @@ export default function HaustechnikPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-haustechnik-cta">
+                  <a href="tel:+4917359994699" data-testid="button-call-haustechnik-cta">
                     <Phone className="w-5 h-5 mr-2" />
-                    0152 12274043
+                    0173 5994699
                   </a>
                 </Button>
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Haustechnik." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Haustechnik." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Rückruf bitte
                   </a>

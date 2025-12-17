@@ -58,7 +58,7 @@ export default function CookieRichtliniePage() {
                 81379 München<br />
                 USt-IdNr: DE356852204<br />
                 E-Mail: info@aquapro24.de<br />
-                Telefon: 0152 12274043
+                Telefon: 0173 5994699
               </p>
             </section>
 

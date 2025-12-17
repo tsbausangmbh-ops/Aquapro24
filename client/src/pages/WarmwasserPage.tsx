@@ -104,9 +104,9 @@ export default function WarmwasserPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Warmwasser München | Durchlauferhitzer & Boiler Service | AquaPro24"
-        description="Warmwasser-Service München: Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren & installieren - Vaillant, Stiebel Eltron, Junkers. Tel: 0152 12274043"
+        description="Warmwasser-Service München: Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren & installieren - Vaillant, Stiebel Eltron, Junkers. Tel: 0173 5994699"
         canonical="https://aquapro24.de/warmwasser"
-        aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0173 5994699"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }
@@ -155,7 +155,7 @@ export default function WarmwasserPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-warmwasser">
+                    <a href="tel:+4917359994699" data-testid="button-call-warmwasser">
                       <Phone className="w-4 h-4 mr-2" />
                       Jetzt anrufen
                     </a>
@@ -363,13 +363,13 @@ export default function WarmwasserPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-warmwasser-cta">
+                <a href="tel:+4917359994699" data-testid="button-call-warmwasser-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  0173 5994699
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20ein%20Problem%20mit%20meinem%20Warmwasser." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20ein%20Problem%20mit%20meinem%20Warmwasser." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp Nachricht
                 </a>
