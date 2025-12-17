@@ -115,10 +115,10 @@ export default function FunnelJourney() {
                 0152 12274043
               </a>
             </Button>
-            <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
-              <Link href="/rueckruf" data-testid="button-funnel-rueckruf">
-                <Phone className="w-4 h-4 mr-2" />
-                Rückruf bitte
+            <Button size="lg" className="bg-secondary text-secondary-foreground" asChild>
+              <Link href="/termin" data-testid="button-funnel-kalender">
+                <Clock className="w-4 h-4 mr-2" />
+                Online Kalender
               </Link>
             </Button>
           </div>
