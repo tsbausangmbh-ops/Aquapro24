@@ -88,8 +88,7 @@ export default function FreeConsultationBanner({ variant = "full", className = "
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              variant="secondary" 
-              className="text-green-700 font-semibold"
+              className="bg-white text-green-700 font-semibold border-white"
               asChild
               data-testid="button-free-consultation-call"
             >
