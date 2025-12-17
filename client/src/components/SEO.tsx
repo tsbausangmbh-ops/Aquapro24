@@ -356,7 +356,7 @@ export default function SEO({
     
     updateMeta("author", "AquaPro24 - KSHW München");
     updateMeta("publisher", "KSHW München - Ali Kemal Kurt");
-    updateMeta("copyright", "2025 AquaPro24.de");
+    updateMeta("copyright", "2025 ExtruCon GmbH - Inhaber: Mustafa Sakar");
     updateMeta("language", "de");
     updateMeta("content-language", "de-DE");
     updateMeta("audience", "Hausbesitzer, Mieter, Hausverwaltungen in München");
