@@ -7,6 +7,8 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { heizungStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
+import CallbackForm from "@/components/CallbackForm";
+import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -377,6 +379,14 @@ export default function HeizungPage() {
         </section>
 
         <RelatedServices currentService="heizung" />
+
+        <section className="py-12 bg-background">
+          <div className="max-w-2xl mx-auto px-4 lg:px-8">
+            <CallbackForm />
+          </div>
+        </section>
+
+        <FreeConsultationBanner variant="compact" className="mx-4 lg:mx-8 mb-8 max-w-7xl lg:mx-auto" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="heizung" />

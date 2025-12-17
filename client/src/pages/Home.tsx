@@ -13,6 +13,9 @@ import AIChatWidget from "@/components/AIChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import SEO from "@/components/SEO";
 import FloatingContactBar from "@/components/FloatingContactBar";
+import GoogleReviews from "@/components/GoogleReviews";
+import CallbackForm from "@/components/CallbackForm";
+import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Link } from "wouter";
 import { MapPin, Users, Clock, Shield, Award, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -186,9 +189,16 @@ export default function Home() {
         <FunnelJourney />
         <MythBuster />
         <Services />
+        <FreeConsultationBanner />
         <Pricing />
         <Testimonials />
+        <GoogleReviews />
         <ServiceAreas />
+        <section className="py-12 bg-background">
+          <div className="max-w-2xl mx-auto px-4 lg:px-8">
+            <CallbackForm />
+          </div>
+        </section>
         <SEOContent />
         <CTABanner />
       </main>
