@@ -99,7 +99,7 @@ export default function FreeConsultationBanner({ variant = "full", className = "
             </Button>
             <Button 
               size="lg" 
-              className="bg-red-600 text-white border-red-700"
+              className="bg-green-600 hover:bg-green-700 text-white border-green-700"
               asChild
               data-testid="button-free-consultation-termin"
             >
