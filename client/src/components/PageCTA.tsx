@@ -24,10 +24,10 @@ export default function PageCTA({
             </Link>
           </Button>
           <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto" asChild data-testid="button-kontakt-compact">
-            <Link href="/kontakt">
+            <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Anfrage">
               <MessageSquare className="w-5 h-5" />
               Kostenlos beraten lassen
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
@@ -70,10 +70,10 @@ export default function PageCTA({
               Schildern Sie Ihr Anliegen - wir melden uns schnellstmöglich
             </p>
             <Button variant="outline" className="w-full gap-2" asChild data-testid="button-kontakt-full">
-              <Link href="/kontakt">
+              <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Anfrage">
                 <MessageSquare className="w-4 h-4" />
-                Kontaktformular
-              </Link>
+                E-Mail schreiben
+              </a>
             </Button>
           </div>
         </div>
