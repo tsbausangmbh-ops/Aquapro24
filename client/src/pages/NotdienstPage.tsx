@@ -13,7 +13,6 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import {
   Phone,
-  MessageCircle,
   Clock,
   AlertTriangle,
   Shield,
@@ -106,11 +105,11 @@ export default function NotdienstPage() {
                     0173 5994699
                   </a>
                 </Button>
-                <Button size="lg" className="bg-emerald-500 text-white border-emerald-600 text-lg px-8 py-6" asChild>
-                  <a href="https://wa.me/4917359994699?text=NOTFALL%3A%20Bitte%20dringend%20zur%C3%BCckrufen!" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-notdienst">
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp Notfall
-                  </a>
+                <Button size="lg" className="bg-white text-red-700 border-white/80 text-lg px-8 py-6" asChild>
+                  <Link href="/termin" data-testid="button-callback-notdienst">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Rückruf anfordern
+                  </Link>
                 </Button>
               </div>
 
@@ -252,11 +251,11 @@ export default function NotdienstPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-500 text-white border-emerald-600" asChild>
-                <a href="https://wa.me/4917359994699?text=NOTFALL%3A%20Bitte%20dringend%20zur%C3%BCckrufen!" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-notdienst-cta">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp
-                </a>
+              <Button size="lg" className="bg-white text-red-700 border-white" asChild>
+                <Link href="/termin" data-testid="button-callback-notdienst-cta">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Rückruf anfordern
+                </Link>
               </Button>
             </div>
           </div>

@@ -210,8 +210,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "sameAs": [
     "https://www.facebook.com/aquapro24",
     "https://www.instagram.com/aquapro24_muenchen",
-    "https://www.linkedin.com/company/aquapro24",
-    "https://wa.me/4917359994699"
+    "https://www.linkedin.com/company/aquapro24"
   ],
   "potentialAction": [
     {

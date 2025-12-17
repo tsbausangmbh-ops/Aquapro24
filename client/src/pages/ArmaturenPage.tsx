@@ -10,6 +10,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import { 
   Droplets, 
   Phone, 
@@ -21,7 +22,6 @@ import {
   Shield,
   Award,
   Star,
-  MessageCircle,
   Sparkles,
   Settings
 } from "lucide-react";
@@ -368,11 +368,11 @@ export default function ArmaturenPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20brauche%20Hilfe%20mit%20meinen%20Armaturen." target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp Nachricht
-                </a>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                <Link href="/termin">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Rückruf anfordern
+                </Link>
               </Button>
             </div>
           </div>

@@ -17,7 +17,7 @@ import GoogleReviews from "@/components/GoogleReviews";
 import CallbackForm from "@/components/CallbackForm";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Link } from "wouter";
-import { MapPin, Users, Clock, Shield, Award, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Users, Clock, Shield, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function SEOContent() {
@@ -101,11 +101,11 @@ function SEOContent() {
               0173 5994699
             </a>
           </Button>
-          <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-            <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf." target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-seo-cta">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp Rückruf
-            </a>
+          <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+            <Link href="/termin" data-testid="button-callback-seo-cta">
+              <Phone className="w-4 h-4 mr-2" />
+              Rückruf anfordern
+            </Link>
           </Button>
         </div>
       </div>

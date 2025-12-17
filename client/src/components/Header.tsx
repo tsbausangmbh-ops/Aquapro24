@@ -3,7 +3,6 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, MapPin, ChevronDown, Mail, Calendar as CalendarIcon } from "lucide-react";
-import { SiWhatsapp } from "react-icons/si";
 import logoImage from "@assets/Logo_Transparent_1765467177950.png";
 
 export default function Header() {
@@ -166,17 +165,13 @@ export default function Header() {
               </Button>
               <Button 
                 asChild 
-                className="bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
-                data-testid="button-whatsapp-header"
+                className="bg-red-600 hover:bg-red-700 text-white border-red-700"
+                data-testid="button-callback-header"
               >
-                <a 
-                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiWhatsapp className="w-4 h-4 mr-2" />
-                  WhatsApp
-                </a>
+                <Link href="/termin">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Rückruf
+                </Link>
               </Button>
             </div>
 
@@ -269,18 +264,14 @@ export default function Header() {
                 </Link>
               </Button>
               <Button 
-                className="mt-2 bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]" 
+                className="mt-2 bg-red-600 hover:bg-red-700 text-white border-red-700" 
                 asChild 
-                data-testid="button-whatsapp-mobile"
+                data-testid="button-callback-mobile"
               >
-                <a 
-                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiWhatsapp className="w-4 h-4 mr-2" />
-                  WhatsApp schreiben
-                </a>
+                <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
+                  <Phone className="w-4 h-4 mr-2" />
+                  Rückruf anfordern
+                </Link>
               </Button>
               <Button className="mt-2" asChild data-testid="button-call-mobile">
                 <a href="tel:+4917359994699">

@@ -66,7 +66,6 @@ export default function DatenschutzPage() {
                 <li><a href="#m263" className="text-secondary hover:underline">Webanalyse und Optimierung</a></li>
                 <li><a href="#mKI" className="text-secondary hover:underline">KI-Chatbot, OpenAI & EU AI Act</a></li>
                 <li><a href="#mGoogle" className="text-secondary hover:underline">Google Calendar Integration</a></li>
-                <li><a href="#mWhatsApp" className="text-secondary hover:underline">WhatsApp Business</a></li>
               </ul>
             </section>
 
@@ -640,31 +639,6 @@ export default function DatenschutzPage() {
               <p className="text-muted-foreground">
                 <strong>Verarbeitete Daten:</strong> Name, E-Mail-Adresse, Telefonnummer, gewünschter Termin, 
                 Serviceart, Adresse des Einsatzortes, optionale Beschreibung des Anliegens.
-              </p>
-            </section>
-
-            {/* WhatsApp */}
-            <section id="mWhatsApp">
-              <h2 className="text-xl font-semibold mb-4">WhatsApp Business</h2>
-              <p className="text-muted-foreground mb-4">
-                Wir bieten die Möglichkeit, uns über WhatsApp zu kontaktieren. Bei der Nutzung von WhatsApp 
-                werden Daten an WhatsApp Ireland Limited übermittelt.
-              </p>
-              <div className="bg-muted/30 rounded-lg p-4 mb-4">
-                <p className="text-sm text-muted-foreground">
-                  <strong>Anbieter:</strong> WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland<br />
-                  <strong>Mutterunternehmen:</strong> Meta Platforms, Inc., 1 Hacker Way, Menlo Park, CA 94025, USA<br />
-                  <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)<br />
-                  <strong>Drittlandtransfer:</strong> USA (Standardvertragsklauseln)<br />
-                  <strong>Weitere Informationen:</strong>{" "}
-                  <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
-                    WhatsApp Datenschutzerklärung
-                  </a>
-                </p>
-              </div>
-              <p className="text-muted-foreground">
-                <strong>Hinweis:</strong> WhatsApp erhebt und verarbeitet Metadaten (z.B. Zeitpunkt der Nachricht, 
-                Telefonnummer). Für vertrauliche Informationen empfehlen wir die Kontaktaufnahme per E-Mail oder Telefon.
               </p>
             </section>
 

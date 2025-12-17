@@ -12,6 +12,7 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import { 
   Droplets, 
   Phone, 
@@ -23,8 +24,7 @@ import {
   Clock,
   Shield,
   Award,
-  Star,
-  MessageCircle
+  Star
 } from "lucide-react";
 import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
@@ -409,11 +409,11 @@ export default function SanitaerPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r." target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Rückruf bitte
-                </a>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                <Link href="/termin">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Rückruf anfordern
+                </Link>
               </Button>
             </div>
           </div>

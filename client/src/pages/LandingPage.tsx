@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Phone,
-  MessageCircle,
   CheckCircle2,
   Star,
   Clock,
@@ -126,11 +125,11 @@ export default function LandingPage() {
                       0173 5994699
                     </a>
                   </Button>
-                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-700 text-lg px-8" asChild>
-                    <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-landing">
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      WhatsApp
-                    </a>
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
+                    <Link href="/termin" data-testid="button-callback-landing">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Rückruf anfordern
+                    </Link>
                   </Button>
                 </div>
 
@@ -259,7 +258,7 @@ export default function LandingPage() {
               Jetzt kostenlos beraten lassen!
             </h2>
             <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
-              Rufen Sie uns an oder schreiben Sie per WhatsApp. Wir melden uns schnellstmöglich 
+              Rufen Sie uns an oder fordern Sie einen Rückruf an. Wir melden uns schnellstmöglich 
               und besprechen Ihre Situation - kostenlos und unverbindlich.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -269,11 +268,11 @@ export default function LandingPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-700 text-lg px-8" asChild>
-                <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-landing-cta">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp schreiben
-                </a>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
+                <Link href="/termin" data-testid="button-callback-landing-cta">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Rückruf anfordern
+                </Link>
               </Button>
             </div>
           </div>

@@ -6,6 +6,7 @@ import TrustBar from "@/components/TrustBar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { 
   Award, 
   Users, 
@@ -22,7 +23,6 @@ import {
   ThumbsUp,
   Building,
   BadgeCheck,
-  MessageCircle,
   AlertTriangle,
   TrendingUp
 } from "lucide-react";
@@ -261,16 +261,11 @@ export default function UeberUnsPage() {
                       0173 5994699
                     </a>
                   </Button>
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
-                    <a 
-                      href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Dienstleistungen%20in%20M%C3%BCnchen." 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      data-testid="button-whatsapp-about"
-                    >
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      Anfrage per WhatsApp
-                    </a>
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                    <Link href="/termin" data-testid="button-rueckruf-about">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Rückruf anfordern
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -532,16 +527,11 @@ export default function UeberUnsPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
-                <a 
-                  href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  data-testid="button-whatsapp-cta"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Anfrage per WhatsApp
-                </a>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                <Link href="/termin" data-testid="button-rueckruf-cta">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Rückruf anfordern
+                </Link>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-primary-foreground/70">

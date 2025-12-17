@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import {
   Phone,
-  MessageCircle,
   Clock,
   MapPin,
   Shield,
@@ -87,11 +86,11 @@ export default function StadtteileOverviewPage() {
                     0173 5994699
                   </a>
                 </Button>
-                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4917359994699" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-hero">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp
-                  </a>
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                  <Link href="/termin" data-testid="button-rueckruf-hero">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Rückruf anfordern
+                  </Link>
                 </Button>
               </div>
             </div>

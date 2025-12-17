@@ -4,6 +4,7 @@ import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { 
   Phone, 
   HelpCircle,
@@ -24,8 +25,7 @@ import {
   Users,
   Sparkles,
   Calendar,
-  Hammer,
-  MessageCircle
+  Hammer
 } from "lucide-react";
 
 const faqs = [
@@ -264,11 +264,11 @@ export default function FAQPage() {
                   0173 5994699
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-5 h-5 mr-2" />
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                <Link href="/termin">
+                  <Phone className="w-5 h-5 mr-2" />
                   Rückruf anfordern
-                </a>
+                </Link>
               </Button>
               <Button size="lg" variant="secondary" asChild>
                 <a href="tel:+4917359994699" data-testid="button-emergency-faq">

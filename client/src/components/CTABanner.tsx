@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, MapPin, Shield } from "lucide-react";
+import { Phone, MapPin, Shield } from "lucide-react";
+import { Link } from "wouter";
 
 export default function CTABanner() {
   return (
@@ -36,14 +37,14 @@ export default function CTABanner() {
           </Button>
           <Button 
             size="lg" 
-            className="gap-2 bg-emerald-600 text-white border-emerald-700"
+            className="gap-2 bg-red-600 hover:bg-red-700 text-white border-red-700"
             asChild
             data-testid="button-callback-cta"
           >
-            <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5" />
-              Rückruf bitte
-            </a>
+            <Link href="/termin">
+              <Phone className="w-5 h-5" />
+              Rückruf anfordern
+            </Link>
           </Button>
         </div>
         

@@ -10,6 +10,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import { 
   Phone, 
   CheckCircle2, 
@@ -20,8 +21,7 @@ import {
   Zap,
   TrendingDown,
   Star,
-  FileText,
-  MessageCircle
+  FileText
 } from "lucide-react";
 import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
@@ -400,11 +400,11 @@ export default function WaermepumpePage() {
                     0173 5994699
                   </a>
                 </Button>
-                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20W%C3%A4rmepumpe." target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Rückruf bitte
-                  </a>
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                  <Link href="/termin">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Rückruf anfordern
+                  </Link>
                 </Button>
               </div>
             </div>

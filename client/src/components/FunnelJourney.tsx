@@ -1,6 +1,7 @@
 import { Phone, FileText, Wrench, CheckCircle2, ArrowRight, Clock, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 
 const journeySteps = [
   {
@@ -114,10 +115,11 @@ export default function FunnelJourney() {
                 0173 5994699
               </a>
             </Button>
-            <Button size="lg" className="bg-emerald-500 text-white border-emerald-600" asChild>
-              <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener noreferrer" data-testid="button-funnel-whatsapp">
-                WhatsApp schreiben
-              </a>
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+              <Link href="/termin" data-testid="button-funnel-callback">
+                <Phone className="w-4 h-4 mr-2" />
+                Rückruf anfordern
+              </Link>
             </Button>
           </div>
         </div>

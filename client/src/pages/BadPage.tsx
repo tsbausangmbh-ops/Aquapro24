@@ -12,6 +12,7 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import { 
   Phone, 
   CheckCircle2, 
@@ -20,8 +21,7 @@ import {
   Clock,
   ShieldCheck,
   Star,
-  ArrowRight,
-  MessageCircle
+  ArrowRight
 } from "lucide-react";
 import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
@@ -365,11 +365,11 @@ export default function BadPage() {
                     0173 5994699
                   </a>
                 </Button>
-                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4917359994699?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Badsanierung." target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Rückruf bitte
-                  </a>
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
+                  <Link href="/termin">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Rückruf anfordern
+                  </Link>
                 </Button>
               </div>
             </div>
