@@ -329,43 +329,41 @@ export default function HeizungPage() {
           title="Häufige Fragen zum Heizungsservice"
         />
 
-        <section className="pt-8 pb-4 bg-muted/30">
+        <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
-            <div className="max-w-2xl mx-auto space-y-6">
-              <ShieldCheck className="w-12 h-12 text-primary mx-auto" />
-              <h2 className="text-3xl font-bold">Heizung defekt? Wir helfen sofort!</h2>
-              <p className="text-muted-foreground">
-                Unser 24/7 Notdienst ist für Sie da. Rufen Sie uns an und wir kümmern uns 
-                schnellstmöglich um Ihre Heizung. In München und Umgebung meist innerhalb einer Stunde vor Ort.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-4">
-                <Button size="lg" className="gap-2" asChild>
-                  <Link href="/termin">
-                    <Calendar className="w-5 h-5" />
-                    Beratungstermin buchen
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="gap-2" asChild>
-                  <Link href="/kontakt">
-                    <MessageSquare className="w-5 h-5" />
-                    Kostenlos beraten lassen
-                  </Link>
-                </Button>
-              </div>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" variant="outline" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0152 12274043
-                  </a>
-                </Button>
-                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp
-                  </a>
-                </Button>
-              </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Heizung defekt? Wir helfen sofort!
+            </h2>
+            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
+              Unser 24/7 Notdienst ist für Sie da. In München und Umgebung meist innerhalb einer Stunde vor Ort.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Button size="lg" className="bg-white text-secondary border-white gap-2" asChild>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  Beratungstermin buchen
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
+                <Link href="/kontakt">
+                  <MessageSquare className="w-5 h-5" />
+                  Kostenlos beraten lassen
+                </Link>
+              </Button>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
+                  <Phone className="w-4 h-4 mr-2" />
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp
+                </a>
+              </Button>
             </div>
           </div>
         </section>
