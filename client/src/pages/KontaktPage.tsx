@@ -47,9 +47,9 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    primary: "Zielstattstr. 20",
-    secondary: "81379 München",
-    action: "https://maps.google.com/?q=München"
+    primary: "Hardenbergstr. 4",
+    secondary: "80992 München",
+    action: "https://maps.google.com/?q=Hardenbergstr.+4+80992+München"
   },
   {
     icon: Clock,
@@ -222,7 +222,7 @@ export default function KontaktPage() {
                         <Label htmlFor="street">Straße & Hausnummer *</Label>
                         <Input
                           id="street"
-                          placeholder="z.B. Zielstattstr. 20"
+                          placeholder="z.B. Musterstraße 10"
                           value={formData.street}
                           onChange={(e) => setFormData({ ...formData, street: e.target.value })}
                           required
@@ -234,7 +234,7 @@ export default function KontaktPage() {
                         <Label htmlFor="zipCity">PLZ & Ort *</Label>
                         <Input
                           id="zipCity"
-                          placeholder="z.B. 81379 München"
+                          placeholder="z.B. 80992 München"
                           value={formData.zipCity}
                           onChange={(e) => setFormData({ ...formData, zipCity: e.target.value })}
                           required
@@ -404,8 +404,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium">Zielstattstr. 20</p>
-                        <p className="text-muted-foreground">81379 München</p>
+                        <p className="font-medium">Hardenbergstr. 4</p>
+                        <p className="text-muted-foreground">80992 München</p>
                         <p className="text-muted-foreground">Deutschland</p>
                       </div>
                     </div>
@@ -440,7 +440,7 @@ export default function KontaktPage() {
                 </div>
                 <Button size="lg" className="w-full sm:w-auto" asChild>
                   <a 
-                    href="https://maps.google.com/?q=Zielstattstr.+20+81379+München" 
+                    href="https://maps.google.com/?q=Hardenbergstr.+4+80992+München" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     data-testid="button-google-maps"
@@ -477,8 +477,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>Zielstattstr. 20</p>
-                        <p className="text-sm text-muted-foreground">81379 München</p>
+                        <p>Hardenbergstr. 4</p>
+                        <p className="text-sm text-muted-foreground">80992 München</p>
                       </div>
                     </div>
                   </div>
@@ -487,7 +487,6 @@ export default function KontaktPage() {
                       <Phone className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <p>0173 5994699</p>
-                        <p className="text-sm text-muted-foreground">Fax: 0173 5994699</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -502,13 +501,7 @@ export default function KontaktPage() {
                 <div className="border-t mt-8 pt-6 text-sm text-muted-foreground">
                   <div className="grid md:grid-cols-3 gap-6">
                     <div>
-                      <span className="font-medium text-foreground">Handelsregister:</span> HRB 123456
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">USt-IdNr:</span> DE123456789
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">Inhaber:</span> Ali Kemal Kurt
+                      <span className="font-medium text-foreground">Inhaber:</span> Mustafa Sakar
                     </div>
                   </div>
                 </div>

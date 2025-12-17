@@ -606,7 +606,7 @@ export default function ServiceBooking({
                       id="street"
                       value={formData.street}
                       onChange={(e) => handleInputChange('street', e.target.value)}
-                      placeholder="Zielstattstr. 20"
+                      placeholder="Musterstraße 10"
                       data-testid="input-street"
                     />
                   </div>
@@ -616,7 +616,7 @@ export default function ServiceBooking({
                       id="zipCity"
                       value={formData.zipCity}
                       onChange={(e) => handleInputChange('zipCity', e.target.value)}
-                      placeholder="81379 München"
+                      placeholder="80992 München"
                       data-testid="input-zip-city"
                     />
                   </div>

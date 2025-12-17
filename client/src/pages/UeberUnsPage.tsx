@@ -153,15 +153,15 @@ const aboutPageSchema = {
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
     "url": "https://aquapro24.de",
-    "telephone": "+49-152-12274043",
+    "telephone": "+49-173-5994699",
     "email": "info@aquapro24.de",
     "foundingDate": "2005",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Zielstattstr. 20",
+      "streetAddress": "Hardenbergstr. 4",
       "addressLocality": "München",
       "addressRegion": "Bayern",
-      "postalCode": "81379",
+      "postalCode": "80992",
       "addressCountry": "DE"
     },
     "geo": {

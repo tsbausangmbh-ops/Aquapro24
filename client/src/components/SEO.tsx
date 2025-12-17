@@ -325,12 +325,12 @@ export default function SEO({
     updateMeta("place:location:latitude", "48.1351", true);
     updateMeta("place:location:longitude", "11.5820", true);
     
-    updateMeta("business:contact_data:street_address", "Zielstattstr. 20", true);
+    updateMeta("business:contact_data:street_address", "Hardenbergstr. 4", true);
     updateMeta("business:contact_data:locality", "München", true);
     updateMeta("business:contact_data:region", "Bayern", true);
-    updateMeta("business:contact_data:postal_code", "81379", true);
+    updateMeta("business:contact_data:postal_code", "80992", true);
     updateMeta("business:contact_data:country_name", "Deutschland", true);
-    updateMeta("business:contact_data:phone_number", "+49 152 12274043", true);
+    updateMeta("business:contact_data:phone_number", "+49 173 5994699", true);
     updateMeta("business:contact_data:email", "info@aquapro24.de", true);
     
     updateMeta("DC.coverage", "München, Bayern, Deutschland");
@@ -398,13 +398,13 @@ export default function SEO({
           "@id": "https://aquapro24.de/#organization",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Zielstattstr. 20",
+            "streetAddress": "Hardenbergstr. 4",
             "addressLocality": "München",
-            "postalCode": "81379",
+            "postalCode": "80992",
             "addressRegion": "Bayern",
             "addressCountry": "DE"
           },
-          "telephone": "+49-152-12274043"
+          "telephone": "+49-173-5994699"
         },
         "areaServed": serviceSchema.areaServed.map(area => ({
           "@type": area === "München" ? "City" : "AdministrativeArea",
