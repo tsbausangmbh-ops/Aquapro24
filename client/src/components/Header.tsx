@@ -148,6 +148,13 @@ export default function Header() {
               >
                 Kontakt
               </Link>
+              <Link 
+                href="/stadtteile"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="nav-stadtteile"
+              >
+                Stadtteile
+              </Link>
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
@@ -245,6 +252,14 @@ export default function Header() {
                 data-testid="nav-mobile-kontakt"
               >
                 Kontakt
+              </Link>
+              <Link
+                href="/stadtteile"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                data-testid="nav-mobile-stadtteile"
+              >
+                Stadtteile
               </Link>
               <hr className="my-2 border-border" />
               <Button variant="outline" className="mt-2" asChild data-testid="nav-termin-mobile">

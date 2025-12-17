@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import SEO from "@/components/SEO";
+import FloatingContactBar from "@/components/FloatingContactBar";
 import { Link } from "wouter";
 import { MapPin, Users, Clock, Shield, Award, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -158,7 +159,7 @@ function ServiceAreas() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16 md:pb-0">
       <SEO 
         title="Sanitär & Heizung München | Notdienst 24/7 | Festpreis ab 89€ | AquaPro24"
         description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung. 2.847+ zufriedene Kunden. Notdienst 24/7, Festpreisgarantie, alle 12 Stadtbezirke. Jetzt anrufen: 0152 12274043"
@@ -194,6 +195,7 @@ export default function Home() {
       <Footer />
       <AIChatWidget />
       <CookieBanner />
+      <FloatingContactBar />
     </div>
   );
 }
