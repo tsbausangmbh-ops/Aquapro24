@@ -9,7 +9,7 @@ import {
   ShowerHead,
   Flame,
   PipetteIcon,
-  Calendar,
+  Phone,
   Clock,
   CheckCircle2,
   ArrowRight
@@ -23,7 +23,6 @@ const services = [
     features: ["Komplettsanierung", "Barrierefreies Bad", "Designbäder"],
     emergency: false,
     link: "/bad",
-    priceInfo: "Ab 8.900€"
   },
   {
     icon: Droplets,
@@ -32,7 +31,6 @@ const services = [
     features: ["Neuinstallation", "Leitungserneuerung", "Anschlussarbeiten"],
     emergency: false,
     link: "/sanitaer",
-    priceInfo: "Ab 89€"
   },
   {
     icon: PipetteIcon,
@@ -41,7 +39,6 @@ const services = [
     features: ["Hochdruckreinigung", "Kamerainspektion", "Wurzelentfernung"],
     emergency: true,
     link: "/rohrreinigung",
-    priceInfo: "Ab 79€"
   },
   {
     icon: Wrench,
@@ -50,7 +47,6 @@ const services = [
     features: ["Armaturentausch", "WC-Montage", "Waschbecken"],
     emergency: false,
     link: "/armaturen",
-    priceInfo: "Ab 120€"
   },
   {
     icon: Thermometer,
@@ -59,7 +55,6 @@ const services = [
     features: ["Durchlauferhitzer", "Boiler", "Speicheranlagen"],
     emergency: false,
     link: "/warmwasser",
-    priceInfo: "Ab 250€"
   },
   {
     icon: Flame,
@@ -68,7 +63,6 @@ const services = [
     features: ["Wartung", "Reparatur", "Effizienzcheck"],
     emergency: false,
     link: "/heizung",
-    priceInfo: "Ab 149€"
   },
 ];
 
@@ -137,10 +131,10 @@ export default function Services() {
             <span className="text-foreground font-medium">Stellen Sie sich vor:</span> Heute Abend funktioniert alles wieder. Rufen Sie jetzt an!
           </p>
           <Button size="lg" className="gap-2" asChild data-testid="button-call-services">
-            <Link href="/termin">
-              <Calendar className="w-5 h-5" />
-              24h Terminbuchung
-            </Link>
+            <a href="tel:+4915212274043">
+              <Phone className="w-5 h-5" />
+              0152 12274043
+            </a>
           </Button>
         </div>
       </div>

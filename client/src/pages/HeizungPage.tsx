@@ -7,12 +7,9 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { heizungStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
-import CallbackForm from "@/components/CallbackForm";
-import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Phone, 
   CheckCircle2, 
@@ -23,7 +20,7 @@ import {
   ArrowRight,
   Thermometer,
   FileText,
-  Calendar
+  MessageCircle
 } from "lucide-react";
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
@@ -86,30 +83,6 @@ const faqItems = [
   {
     question: "Reparieren Sie alle Heizungsmarken?",
     answer: "Ja, wir reparieren und warten Heizungen aller Hersteller: Viessmann, Vaillant, Buderus, Wolf, Junkers, Bosch und viele mehr. Ersatzteile haben wir oft direkt dabei für schnelle Reparaturen."
-  },
-  {
-    question: "Was ist der Unterschied zwischen Brennwert- und Niedertemperaturheizung?",
-    answer: "Brennwerttechnik nutzt auch die Wärme aus den Abgasen und erreicht bis zu 98% Wirkungsgrad - etwa 10-15% mehr als Niedertemperaturkessel. Bei einem Heizungstausch ist Brennwert heute Standard und oft förderfähig. Die Mehrkosten amortisieren sich durch geringeren Gasverbrauch meist in 3-5 Jahren."
-  },
-  {
-    question: "Muss ich beim Heizungstausch auch die Heizkörper wechseln?",
-    answer: "Nicht unbedingt. Für Brennwertheizungen können bestehende Heizkörper oft weitergenutzt werden. Bei Wärmepumpen hängt es von der Vorlauftemperatur ab - in gut gedämmten Häusern reichen oft die vorhandenen Heizkörper, bei Altbauten kann eine Vergrößerung oder Fußbodenheizung sinnvoll sein. Wir prüfen das vor Ort."
-  },
-  {
-    question: "Was tun wenn die Heizung gluckert oder pfeift?",
-    answer: "Gluckergeräusche deuten auf Luft im System hin - hier hilft oft das Entlüften der Heizkörper. Pfeifgeräusche können auf falsch eingestellte Thermostatventile oder einen zu hohen Pumpendruck hinweisen. Wenn Entlüften nicht hilft, sollten wir uns das System ansehen. Kosten für einen Vor-Ort-Check: ab 89€."
-  },
-  {
-    question: "Welche Förderung gibt es 2025 für neue Heizungen?",
-    answer: "2025 gibt es bis zu 70% staatliche Förderung (BAFA/KfW) für den Umstieg auf klimafreundliche Heizsysteme wie Wärmepumpen. Gasheizungen werden nicht mehr gefördert, Hybridlösungen teilweise. Die Förderung setzt sich aus Grundförderung (30%), Einkommensbonus (30%), Geschwindigkeitsbonus (20%) und Effizienzbonus zusammen. Wir übernehmen die komplette Antragstellung."
-  },
-  {
-    question: "Wie lange dauert eine Heizungsinstallation?",
-    answer: "Der Tausch einer Gasheizung gegen eine neue Brennwertheizung dauert typischerweise 1-2 Tage. Eine Wärmepumpeninstallation benötigt 2-4 Tage, je nach Umfang der Arbeiten. Wir planen so, dass die heizungslose Zeit minimal bleibt - oft können wir im Sommer/Herbst vorarbeiten und den eigentlichen Tausch an einem Tag durchführen."
-  },
-  {
-    question: "Was kostet ein hydraulischer Abgleich?",
-    answer: "Ein hydraulischer Abgleich kostet zwischen 400€ und 900€, je nach Anzahl der Heizkörper. Er sorgt für gleichmäßige Wärmeverteilung, senkt den Energieverbrauch um bis zu 15% und ist für viele Förderungen Voraussetzung. Bei alten Anlagen ohne Abgleich werden oft einzelne Räume nicht richtig warm oder überhitzen."
   }
 ];
 
@@ -118,9 +91,10 @@ export default function HeizungPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Heizung München | Notdienst 24/7 | Wartung ab 149€ | AquaPro24"
-        description="Heizung München: Notdienst bei Ausfall, Wartung, Reparatur, Neuinstallation. Alle Marken, 45 Min. vor Ort, Förderberatung bis 70%. 1.200+ Anlagen installiert. Tel: 0173 5994699"
+        description="Heizung München: Notdienst bei Ausfall, Wartung, Reparatur, Neuinstallation. Alle Marken, 45 Min. vor Ort, Förderberatung bis 70%. 1.200+ Anlagen installiert. Tel: 0152 12274043"
         canonical="https://aquapro24.de/heizung"
-        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0173 5994699"
+        keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München, Gasheizung München, Heizung Schwabing, Heizung Bogenhausen, Heizung Sendling, Heizung Pasing, Heizung Maxvorstadt, Heizung Haidhausen, Heizung Neuhausen, Heizung Trudering, Heizung Laim, Heizung Giesing, Heizung Moosach, Heizung Milbertshofen, Heizung Nymphenburg, Heizung Perlach, Heizung Solln, Heizung Hadern, Heizung Allach, Heizung Aubing, Heizung Feldmoching, Heizung Isarvorstadt, Heizung Lehel, Heizungsmonteur München, Heizungsinstallation München, Fußbodenheizung München, Heizung defekt München, Heizung reparieren München, Viessmann München, Vaillant München, Buderus München, Heizung Notdienst Schwabing, Heizungsreparatur Bogenhausen"
+        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }
@@ -169,10 +143,10 @@ export default function HeizungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-heizung">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-heizung">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="heizung" 
@@ -363,16 +337,16 @@ export default function HeizungPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/termin" data-testid="button-call-heizung-cta">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    24h Terminbuchung
-                  </Link>
+                  <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 12274043
+                  </a>
                 </Button>
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                  <Link href="/termin">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Rückruf anfordern
-                  </Link>
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Rückruf bitte
+                  </a>
                 </Button>
               </div>
             </div>
@@ -380,14 +354,6 @@ export default function HeizungPage() {
         </section>
 
         <RelatedServices currentService="heizung" />
-
-        <section className="py-12 bg-background">
-          <div className="max-w-2xl mx-auto px-4 lg:px-8">
-            <CallbackForm />
-          </div>
-        </section>
-
-        <FreeConsultationBanner variant="compact" className="mx-4 lg:mx-8 mb-8 max-w-7xl lg:mx-auto" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="heizung" />

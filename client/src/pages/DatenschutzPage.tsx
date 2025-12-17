@@ -10,7 +10,7 @@ export default function DatenschutzPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Datenschutzerklärung | DSGVO 2025 | AquaPro24 München"
-        description="Datenschutzerklärung gemäß DSGVO 2025 für AquaPro24 München. Informationen zur Verarbeitung personenbezogener Daten, KI-Chatbot, Ihre Rechte. Tel: 0173 5994699"
+        description="Datenschutzerklärung gemäß DSGVO 2025 für AquaPro24 München. Informationen zur Verarbeitung personenbezogener Daten, KI-Chatbot, Ihre Rechte. Tel: 0152 12274043"
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
@@ -66,6 +66,7 @@ export default function DatenschutzPage() {
                 <li><a href="#m263" className="text-secondary hover:underline">Webanalyse und Optimierung</a></li>
                 <li><a href="#mKI" className="text-secondary hover:underline">KI-Chatbot, OpenAI & EU AI Act</a></li>
                 <li><a href="#mGoogle" className="text-secondary hover:underline">Google Calendar Integration</a></li>
+                <li><a href="#mWhatsApp" className="text-secondary hover:underline">WhatsApp Business</a></li>
               </ul>
             </section>
 
@@ -74,20 +75,23 @@ export default function DatenschutzPage() {
               <h2 className="text-xl font-semibold mb-4">Verantwortlicher</h2>
               <div className="bg-muted/30 rounded-lg p-6">
                 <p className="text-muted-foreground mb-2">
-                  <strong>AquaPro 24</strong><br />
-                  Inhaber: Mustafa Sakar<br />
-                  Hardenbergstr. 4<br />
-                  80992 München<br />
+                  <strong>KSHW München</strong><br />
+                  Inhaber: Ali Kemal Kurt<br />
+                  Zielstattstr. 20<br />
+                  81379 München<br />
                   Deutschland
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  Vertretungsberechtigte Person: Mustafa Sakar
+                  Vertretungsberechtigte Person: Ali Kemal Kurt
                 </p>
                 <p className="text-muted-foreground mb-2">
                   E-Mail-Adresse: <a href="mailto:info@aquapro24.de" className="text-secondary hover:underline">info@aquapro24.de</a>
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  Telefon: <a href="tel:+4917359994699" className="text-secondary hover:underline">0173 5994699</a>
+                  Telefon: <a href="tel:+4915212274043" className="text-secondary hover:underline">0152 12274043</a>
+                </p>
+                <p className="text-muted-foreground mb-2">
+                  USt-IdNr: DE356852204
                 </p>
                 <p className="text-muted-foreground">
                   Impressum: <a href="https://aquapro24.de/impressum" className="text-secondary hover:underline">https://aquapro24.de/impressum</a>
@@ -579,13 +583,13 @@ export default function DatenschutzPage() {
                   <strong>Transparenzhinweis gemäß Art. 50 EU AI Act:</strong><br />
                   Sie interagieren mit einem KI-System (Künstliche Intelligenz). Der Chat wird automatisch 
                   von einem KI-Assistenten bearbeitet, nicht von einem Menschen. Menschliche Mitarbeiter 
-                  sind während unserer Geschäftszeiten telefonisch erreichbar unter 0173 5994699.
+                  sind während unserer Geschäftszeiten telefonisch erreichbar unter 0152 12274043.
                 </p>
               </div>
               <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
                 <li><strong>Risikoklassifizierung:</strong> Unser Chatbot ist als KI-System mit begrenztem Risiko ("Limited Risk") gemäß Art. 50 EU AI Act eingestuft.</li>
                 <li><strong>Transparenzpflicht erfüllt:</strong> Sie werden vor und während der Nutzung darauf hingewiesen, dass Sie mit einem KI-System interagieren.</li>
-                <li><strong>Menschliche Alternative:</strong> Telefon (0173 5994699), E-Mail (info@aquapro24.de) und persönlicher Kontakt stehen jederzeit zur Verfügung.</li>
+                <li><strong>Menschliche Alternative:</strong> Telefon (0152 12274043), E-Mail (info@aquapro24.de) und persönlicher Kontakt stehen jederzeit zur Verfügung.</li>
                 <li><strong>Keine automatisierten Entscheidungen:</strong> Der Chatbot trifft keine rechtlich bindenden Entscheidungen. Alle Preisangaben sind unverbindliche Schätzungen.</li>
               </ul>
 
@@ -642,6 +646,31 @@ export default function DatenschutzPage() {
               </p>
             </section>
 
+            {/* WhatsApp */}
+            <section id="mWhatsApp">
+              <h2 className="text-xl font-semibold mb-4">WhatsApp Business</h2>
+              <p className="text-muted-foreground mb-4">
+                Wir bieten die Möglichkeit, uns über WhatsApp zu kontaktieren. Bei der Nutzung von WhatsApp 
+                werden Daten an WhatsApp Ireland Limited übermittelt.
+              </p>
+              <div className="bg-muted/30 rounded-lg p-4 mb-4">
+                <p className="text-sm text-muted-foreground">
+                  <strong>Anbieter:</strong> WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland<br />
+                  <strong>Mutterunternehmen:</strong> Meta Platforms, Inc., 1 Hacker Way, Menlo Park, CA 94025, USA<br />
+                  <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)<br />
+                  <strong>Drittlandtransfer:</strong> USA (Standardvertragsklauseln)<br />
+                  <strong>Weitere Informationen:</strong>{" "}
+                  <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+                    WhatsApp Datenschutzerklärung
+                  </a>
+                </p>
+              </div>
+              <p className="text-muted-foreground">
+                <strong>Hinweis:</strong> WhatsApp erhebt und verarbeitet Metadaten (z.B. Zeitpunkt der Nachricht, 
+                Telefonnummer). Für vertrauliche Informationen empfehlen wir die Kontaktaufnahme per E-Mail oder Telefon.
+              </p>
+            </section>
+
             {/* Kontaktbox */}
             <section className="bg-muted/30 rounded-lg p-6 mt-8">
               <h2 className="text-xl font-semibold mb-4">Fragen zum Datenschutz?</h2>
@@ -658,11 +687,11 @@ export default function DatenschutzPage() {
                   info@aquapro24.de
                 </a>
                 <a 
-                  href="tel:+4917359994699" 
+                  href="tel:+4915212274043" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                   data-testid="link-privacy-phone"
                 >
-                  0173 5994699
+                  0152 12274043
                 </a>
               </div>
             </section>

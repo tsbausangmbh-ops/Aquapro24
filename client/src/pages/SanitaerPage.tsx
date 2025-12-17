@@ -7,12 +7,9 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
-import CallbackForm from "@/components/CallbackForm";
-import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Droplets, 
   Phone, 
@@ -25,7 +22,7 @@ import {
   Shield,
   Award,
   Star,
-  Calendar
+  MessageCircle
 } from "lucide-react";
 import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
@@ -99,30 +96,6 @@ export default function SanitaerPage() {
     {
       question: "Geben Sie Garantie auf Ihre Sanitärarbeiten?",
       answer: "Ja, auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Bei Problemen kommen wir kostenlos zurück und beheben den Mangel. Auf eingebaute Materialien gelten zusätzlich die Herstellergarantien."
-    },
-    {
-      question: "Was tun bei einem Wasserschaden in der Wohnung?",
-      answer: "Bei einem Wasserschaden: 1. Hauptwasserhahn sofort zudrehen (meist im Keller oder unter der Spüle). 2. Strom in betroffenen Bereichen abschalten. 3. Uns anrufen unter 0173 5994699 - wir sind innerhalb von 60 Minuten da. 4. Wenn möglich, Wasser aufwischen und Möbel hochstellen. Wir dokumentieren den Schaden auch für Ihre Versicherung."
-    },
-    {
-      question: "Welche Wasserleitungen sind in Münchner Altbauten verbaut?",
-      answer: "In Münchner Altbauten (vor 1970) finden wir oft Blei-, Stahl- oder verzinkte Rohre. Diese sollten aus Gesundheits- und Korrosionsgründen ausgetauscht werden. Moderne Alternativen sind Kupfer, Edelstahl oder Kunststoff (PE-X, Mehrschichtverbund). Wir beraten Sie zur besten Lösung für Ihr Gebäude."
-    },
-    {
-      question: "Wie erkenne ich ein verstecktes Wasserleck?",
-      answer: "Anzeichen für versteckte Lecks sind: ungewöhnlich hohe Wasserrechnungen, feuchte Stellen an Wänden oder Decken, Schimmelbildung, muffiger Geruch, oder ein Wasserzähler der läuft obwohl alle Hähne geschlossen sind. Wir können mit modernen Leckortungsgeräten die genaue Stelle finden - ohne aufwändiges Aufbrechen."
-    },
-    {
-      question: "Kann ich meinen Wasserdruck selbst erhöhen?",
-      answer: "Niedrigen Wasserdruck kann verschiedene Ursachen haben: verkalkte Leitungen, zu kleine Rohrdurchmesser, defekte Druckminderer oder Probleme mit der Hauswasseranlage. Wir messen den Druck, finden die Ursache und können bei Bedarf eine Druckerhöhungsanlage installieren. Selbst daran arbeiten empfehlen wir nicht - das kann zu Rohrschäden führen."
-    },
-    {
-      question: "Was kostet ein neuer Wasseranschluss für die Küche?",
-      answer: "Ein neuer Wasseranschluss für Spüle und Geschirrspüler kostet je nach Entfernung zur bestehenden Leitung zwischen 350€ und 800€. Bei einer Küchenrenovierung können wir auch Warm- und Kaltwasserleitungen komplett neu verlegen. Wir erstellen Ihnen nach einer Vor-Ort-Begutachtung einen verbindlichen Festpreis."
-    },
-    {
-      question: "Führen Sie auch Legionellenprüfungen durch?",
-      answer: "Ja, wir führen Legionellenprüfungen nach Trinkwasserverordnung durch. Dies ist für Mehrfamilienhäuser mit zentraler Warmwasserbereitung alle 3 Jahre Pflicht. Die Probenahme kostet ab 180€, inklusive Laboranalyse und Dokumentation. Bei auffälligen Werten beraten wir Sie zu Sanierungsmaßnahmen."
     }
   ];
 
@@ -130,9 +103,10 @@ export default function SanitaerPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Sanitär München | Klempner Notdienst 24/7 | Festpreis ab 89€ | AquaPro24"
-        description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0173 5994699"
+        description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0152 12274043"
         canonical="https://aquapro24.de/sanitaer"
-        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0173 5994699"
+        keywords="Sanitär München, Klempner München, Klempner Notdienst München, Rohrbruch München, Sanitär Notdienst, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, Installateur München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Sanitär Solln, Klempner Hadern, Sanitär Allach, Klempner Aubing, Sanitär Feldmoching, Klempner Isarvorstadt, Sanitär Lehel, Klempner Westpark, Wasserhahn tropft München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Sanitär Notdienst Schwabing, Klempner Notdienst Bogenhausen"
+        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }
@@ -183,10 +157,10 @@ export default function SanitaerPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-sanitaer">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-sanitaer">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="sanitaer" 
@@ -404,31 +378,23 @@ export default function SanitaerPage() {
               rufen Sie uns an und wir kümmern uns darum. Über 847 zufriedene Kunden in München.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin" data-testid="button-call-sanitaer-cta">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin">
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  Rückruf anfordern
-                </Link>
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Rückruf bitte
+                </a>
               </Button>
             </div>
           </div>
         </section>
 
         <RelatedServices currentService="sanitaer" />
-
-        <section className="py-12 bg-background">
-          <div className="max-w-2xl mx-auto px-4 lg:px-8">
-            <CallbackForm />
-          </div>
-        </section>
-
-        <FreeConsultationBanner variant="compact" className="mx-4 lg:mx-8 mb-8 max-w-7xl lg:mx-auto" />
       </main>
 
       <Footer />

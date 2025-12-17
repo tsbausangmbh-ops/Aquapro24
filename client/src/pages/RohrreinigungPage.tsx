@@ -10,7 +10,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   PipetteIcon, 
   Phone, 
@@ -22,9 +21,9 @@ import {
   Shield,
   Award,
   Star,
+  MessageCircle,
   Zap,
-  Camera,
-  Calendar
+  Camera
 } from "lucide-react";
 import drainImage1 from "@assets/generated_images/clean_modern_drain_grate.png";
 import drainImage2 from "@assets/generated_images/drain_cleaning_equipment.png";
@@ -98,30 +97,6 @@ export default function RohrreinigungPage() {
     {
       question: "Wie kann ich Verstopfungen vorbeugen?",
       answer: "Gießen Sie kein Fett in den Abfluss, verwenden Sie Haarsiebe in der Dusche und lassen Sie regelmäßig heißes Wasser laufen. Bei wiederkehrenden Problemen empfehlen wir eine professionelle Wartungsreinigung."
-    },
-    {
-      question: "Woran erkenne ich eine Verstopfung im Hauptkanal?",
-      answer: "Anzeichen sind: Wasser staut sich in mehreren Abflüssen gleichzeitig, unangenehmer Geruch aus den Abläufen, gurgelnde Geräusche beim Abfluss, oder Wasser tritt an ungewöhnlichen Stellen aus (z.B. im Keller). Bei diesen Symptomen sollten Sie sofort handeln - rufen Sie uns an."
-    },
-    {
-      question: "Was kostet eine Kanalreinigung im Mehrfamilienhaus?",
-      answer: "Die Reinigung des Hauptkanals in einem Mehrfamilienhaus kostet je nach Länge und Zugänglichkeit zwischen 350€ und 800€. Inklusive Kamerainspektion zur Dokumentation des Zustands liegen wir bei 450€ bis 950€. Für Hausverwaltungen bieten wir Rahmenverträge mit Vorzugskonditionen."
-    },
-    {
-      question: "Was ist eine Kamerainspektion und wann brauche ich sie?",
-      answer: "Bei einer Kamerainspektion fahren wir eine kleine Kamera durch Ihre Rohre und sehen in Echtzeit, was dort los ist: Verstopfungen, Wurzeleinwuchs, Rohrbrüche, Korrosion. Sie ist sinnvoll bei wiederkehrenden Problemen, vor dem Hauskauf oder nach einer Verstopfung, um die Ursache zu finden. Kosten: ab 99€."
-    },
-    {
-      question: "Können Baumwurzeln Rohre verstopfen?",
-      answer: "Ja, Wurzeleinwuchs ist ein häufiges Problem bei älteren Tonrohren. Wurzeln dringen durch kleine Risse in die Rohre ein und wachsen dort zu dichten Ballen. Wir entfernen die Wurzeln mechanisch mit speziellen Fräsen und können bei Bedarf das Rohr mit einem Inliner sanieren, ohne aufzugraben."
-    },
-    {
-      question: "Was mache ich bei einem Rückstau im Keller?",
-      answer: "Bei Rückstau: 1. Nicht spülen oder Wasser ablassen. 2. Elektrische Geräte vom Wasser fernhalten. 3. Uns anrufen. Ursache ist oft ein verstopfter Hauptkanal oder ein Rückstau im städtischen Kanalnetz. Als Langzeitschutz empfehlen wir den Einbau einer Rückstauklappe (ab 500€ installiert)."
-    },
-    {
-      question: "Bieten Sie Wartungsverträge für Rohrreinigung an?",
-      answer: "Ja, besonders für Gastronomiebetriebe, Friseure und Mehrfamilienhäuser sind regelmäßige Wartungsreinigungen sinnvoll. Wir kommen 1-4 mal jährlich zur präventiven Reinigung. Das verhindert Notfälle und ist günstiger als Akutbehandlungen. Preise ab 59€ pro Einsatz bei Wartungsvertrag."
     }
   ];
 
@@ -129,9 +104,10 @@ export default function RohrreinigungPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Rohrreinigung München | Abfluss verstopft? 24/7 Notdienst | AquaPro24"
-        description="Rohrreinigung München: Verstopfter Abfluss? Wir sind in 60 Min. da! Küchenabfluss, Dusche, WC - professionelle Reinigung mit Hochdruck. Festpreis ab 79€. Tel: 0173 5994699"
+        description="Rohrreinigung München: Verstopfter Abfluss? Wir sind in 60 Min. da! Küchenabfluss, Dusche, WC - professionelle Reinigung mit Hochdruck. Festpreis ab 79€. Tel: 0152 12274043"
         canonical="https://aquapro24.de/rohrreinigung"
-        aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 79€. Kontakt: 0173 5994699"
+        keywords="Rohrreinigung München, Abfluss verstopft München, Kanalreinigung München, Abflussreinigung München, verstopfte Toilette München, Rohrreinigung Notdienst München, Abfluss frei bekommen München, Küchenabfluss verstopft München, Dusche verstopft München, WC verstopft München, Hochdruckspülung München, Rohrfrei München"
+        aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 79€. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Rohrreinigung", url: "https://aquapro24.de/rohrreinigung" }
@@ -180,10 +156,10 @@ export default function RohrreinigungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-rohrreinigung">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="sanitaer" 
@@ -386,17 +362,17 @@ export default function RohrreinigungPage() {
               Rufen Sie jetzt an!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin" data-testid="button-call-rohrreinigung-cta">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin">
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  Rückruf anfordern
-                </Link>
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20einen%20verstopften%20Abfluss%20und%20bitte%20um%20Hilfe." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp Nachricht
+                </a>
               </Button>
             </div>
           </div>

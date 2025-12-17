@@ -10,7 +10,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Phone, 
   CheckCircle2, 
@@ -21,7 +20,7 @@ import {
   ArrowRight,
   Home,
   Gauge,
-  Calendar
+  MessageCircle
 } from "lucide-react";
 import smartHomeImage1 from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import smartHomeImage2 from "@assets/stock_images/smart_home_technolog_6887dbb7.jpg";
@@ -84,30 +83,6 @@ const faqItems = [
   {
     question: "Wie lange dauert die Planung und Umsetzung?",
     answer: "Je nach Projektumfang planen wir 2-4 Wochen für die Konzeption. Die Umsetzung dauert bei einer Sanierung 1-3 Wochen, bei Neubauten arbeiten wir nach Ihrem Bauzeitenplan. Wir halten vereinbarte Termine ein."
-  },
-  {
-    question: "Was ist die Voraussetzung für eine Lüftungsanlage?",
-    answer: "Moderne dezentrale Lüftungen lassen sich in fast jedem Gebäude nachrüsten - mit zwei kleinen Kernbohrungen (16cm) pro Raum. Zentrale Anlagen benötigen Platz für das Lüftungsgerät und Kanäle, ideal bei Sanierung oder Neubau. Wir beraten, welches System für Ihr Gebäude geeignet ist."
-  },
-  {
-    question: "Welche Smart-Home-Systeme empfehlen Sie?",
-    answer: "Für die Heizungssteuerung bewähren sich tado°, Netatmo oder Homematic IP - alle lassen sich gut nachrüsten. Für umfassendere Automation setzen wir oft auf KNX (kabelgebunden, sehr zuverlässig) oder Homey/HomeAssistant (flexibel, viele Geräte). Wichtig: Das System sollte zu Ihren Anforderungen passen, nicht umgekehrt."
-  },
-  {
-    question: "Muss ich bei einem Gasanschluss etwas beachten?",
-    answer: "In München ist Stadtwerke München der Gasversorger. Für einen neuen Hausanschluss melden wir die Arbeiten dort an. Alle Gasarbeiten müssen von zertifizierten Betrieben durchgeführt werden (wir sind zugelassen). Nach Abschluss erfolgt eine Abnahme durch einen Sachkundigen. Wir kümmern uns um alle Formalitäten."
-  },
-  {
-    question: "Wie viel Energie spart eine Lüftung mit Wärmerückgewinnung?",
-    answer: "Moderne KWL-Anlagen gewinnen bis zu 90% der Wärme aus der Abluft zurück. Bei einem typischen Einfamilienhaus können Sie so 500-1.000€ Heizkosten pro Jahr sparen. Gleichzeitig verbessert sich die Luftqualität erheblich - wichtig für Allergiker und in stark gedämmten Häusern."
-  },
-  {
-    question: "Können Sie auch bestehende Haustechnik modernisieren?",
-    answer: "Ja, Modernisierung ist unser Schwerpunkt! Wir optimieren alte Heizungsanlagen, rüsten Lüftungen nach und integrieren Smart-Home-Steuerungen in bestehende Systeme. Oft lässt sich mit überschaubarem Aufwand viel Energie sparen. Wir analysieren Ihre Anlage und zeigen Potenziale auf."
-  },
-  {
-    question: "Was kostet ein hydraulischer Abgleich der Heizung?",
-    answer: "Ein hydraulischer Abgleich für ein Einfamilienhaus kostet zwischen 400€ und 900€ je nach Anzahl der Heizkörper. Er sorgt dafür, dass alle Räume gleichmäßig warm werden und spart bis zu 15% Energie. Für viele Förderprogramme ist der Abgleich Voraussetzung. Wir führen ihn als Teil der Heizungsoptimierung durch."
   }
 ];
 
@@ -116,9 +91,10 @@ export default function HaustechnikPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Haustechnik München | Wasser, Gas, Lüftung, Smart Home | AquaPro24"
-        description="Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Kostenlose Beratung: 0173 5994699"
+        description="Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Kostenlose Beratung: 0152 12274043"
         canonical="https://aquapro24.de/haustechnik"
-        aiSummary="AquaPro24 Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Alle Münchner Stadtteile. Kostenlose Beratung: 0173 5994699"
+        keywords="Haustechnik München, Gasinstallation München, Lüftungstechnik München, Smart Home München, Gebäudetechnik München, Wasserinstallation München, Haustechnik Schwabing, Haustechnik Bogenhausen, Haustechnik Sendling, Haustechnik Pasing, Haustechnik Maxvorstadt, Haustechnik Haidhausen, Haustechnik Neuhausen, Haustechnik Trudering, Haustechnik Laim, Haustechnik Giesing, Haustechnik Moosach, Haustechnik Milbertshofen, Haustechnik Nymphenburg, Haustechnik Perlach, Haustechnik Solln, Haustechnik Hadern, Haustechnik Allach, Haustechnik Aubing, Haustechnik Feldmoching, Haustechnik Isarvorstadt, Haustechnik Lehel, Gasinstallateur München, KWL München, kontrollierte Wohnraumlüftung München, Smart Home Heizung München, Lüftungsanlage München"
+        aiSummary="AquaPro24 Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Alle Münchner Stadtteile. Kostenlose Beratung: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Haustechnik", url: "https://aquapro24.de/haustechnik" }
@@ -167,10 +143,10 @@ export default function HaustechnikPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-haustechnik">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-haustechnik">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Jetzt anfragen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="haustechnik" 
@@ -383,16 +359,16 @@ export default function HaustechnikPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/termin" data-testid="button-call-haustechnik-cta">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    24h Terminbuchung
-                  </Link>
+                  <a href="tel:+4915212274043" data-testid="button-call-haustechnik-cta">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 12274043
+                  </a>
                 </Button>
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                  <Link href="/termin">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Rückruf anfordern
-                  </Link>
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Haustechnik." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Rückruf bitte
+                  </a>
                 </Button>
               </div>
             </div>

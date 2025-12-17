@@ -10,7 +10,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Flame, 
   Phone, 
@@ -22,9 +21,9 @@ import {
   Shield,
   Award,
   Star,
+  MessageCircle,
   Droplets,
-  Settings,
-  Calendar
+  Settings
 } from "lucide-react";
 import waterHeaterImage1 from "@assets/generated_images/tankless_water_heater.png";
 import waterHeaterImage2 from "@assets/generated_images/water_boiler_installation.png";
@@ -105,9 +104,10 @@ export default function WarmwasserPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Warmwasser München | Durchlauferhitzer & Boiler Service | AquaPro24"
-        description="Warmwasser-Service München: Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren & installieren - Vaillant, Stiebel Eltron, Junkers. Tel: 0173 5994699"
+        description="Warmwasser-Service München: Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren & installieren - Vaillant, Stiebel Eltron, Junkers. Tel: 0152 12274043"
         canonical="https://aquapro24.de/warmwasser"
-        aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0173 5994699"
+        keywords="Warmwasser München, Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Durchlauferhitzer reparieren München, Boiler installieren München, kein warmes Wasser München, Warmwasser Notdienst München, Stiebel Eltron München, Vaillant München, Junkers München, Warmwasserbereiter München"
+        aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }
@@ -156,10 +156,10 @@ export default function WarmwasserPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-warmwasser">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-warmwasser">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="heizung" 
@@ -363,17 +363,17 @@ export default function WarmwasserPage() {
               wir bringen Ihr Warmwasser wieder zum Laufen.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin" data-testid="button-call-warmwasser-cta">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin">
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-warmwasser-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  Rückruf anfordern
-                </Link>
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20ein%20Problem%20mit%20meinem%20Warmwasser." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp Nachricht
+                </a>
               </Button>
             </div>
           </div>

@@ -211,7 +211,7 @@ export default function Pricing() {
       console.error("Chat error:", error);
       const errorMessage: ChatMessage = {
         role: "assistant",
-        content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte rufen Sie uns an: 0173 5994699",
+        content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte rufen Sie uns an: 0152 12274043",
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {

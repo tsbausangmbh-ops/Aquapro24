@@ -584,7 +584,7 @@ export default function ServiceBooking({
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="0173 5994699"
+                        placeholder="0152 12274043"
                         data-testid="input-phone"
                       />
                     </div>
@@ -606,7 +606,7 @@ export default function ServiceBooking({
                       id="street"
                       value={formData.street}
                       onChange={(e) => handleInputChange('street', e.target.value)}
-                      placeholder="Musterstraße 10"
+                      placeholder="Zielstattstr. 20"
                       data-testid="input-street"
                     />
                   </div>
@@ -616,7 +616,7 @@ export default function ServiceBooking({
                       id="zipCity"
                       value={formData.zipCity}
                       onChange={(e) => handleInputChange('zipCity', e.target.value)}
-                      placeholder="80992 München"
+                      placeholder="81379 München"
                       data-testid="input-zip-city"
                     />
                   </div>
@@ -675,9 +675,9 @@ export default function ServiceBooking({
             <div className="pt-4 border-t text-center">
               <p className="text-sm text-muted-foreground mb-2">Lieber telefonisch?</p>
               <Button variant="outline" size="sm" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-booking">
+                <a href="tel:+4915212274043" data-testid="button-call-booking">
                   <Phone className="w-4 h-4 mr-2" />
-                  0173 5994699
+                  0152 12274043
                 </a>
               </Button>
             </div>

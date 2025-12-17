@@ -2,15 +2,16 @@
 
 ## Overview
 
-A professional German-language website for AquaPro 24 (Inhaber: Mustafa Sakar), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
+A professional German-language website for KSHW München (Inhaber: Ali Kemal Kurt), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
 
 ## Company Information
-- **Company**: AquaPro 24
-- **Owner**: Mustafa Sakar  
-- **Address**: Hardenbergstr. 4, 80992 München
-- **Phone**: 0173 5994699
+- **Company**: KSHW München
+- **Owner**: Ali Kemal Kurt  
+- **Address**: Zielstattstr. 20, 81379 München
+- **Phone**: 0152 12274043
+- **USt-IdNr**: DE356852204
 - **Type**: Einzelunternehmer (Sole Proprietor)
-- **Domain**: aquapro24.de
+- **Domain**: aquapro24.de (verwaltet und gesteuert von KSHW München)
 - **Established**: 2005 (Partnernetzwerk)
 
 ## User Preferences
@@ -50,19 +51,10 @@ Preferred communication style: Simple, everyday language.
   - `CustomerStories.tsx`: 10 emotional success stories (2 per service) following problem/emotion/solution/result pattern, with specific savings amounts and timeframes
   - `TrustSignals.tsx`: Social proof (compact/detailed variants) with customer stats (2.847+), ratings (4.9/5), response times
 - **Service Pages**: 5 dedicated pages (Sanitär, Bad, Heizung, Wärmepumpe, Haustechnik) with unique SEO, customer stories, and NLP triggers per page
-- **Notdienst Page**: High-conversion emergency service page with 24/7 messaging, quick CTAs, and service cards
 - **Informational Pages**: 3 additional pages for company information and customer education
   - `UeberUnsPage.tsx`: Company history, team introduction, values, and timeline milestones
   - `FAQPage.tsx`: Pricing overview (4 categories) and frequently asked questions with accordion
   - `RatgeberPage.tsx`: Educational guides with detailed articles (Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpe)
-- **Local SEO Infrastructure**:
-  - `StadtteileOverviewPage.tsx`: Overview of all Munich districts with premium section
-  - `StadtteilPage.tsx`: Dynamic district pages (17 districts: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Sendling, Pasing, Neuhausen, Trudering, Laim, Giesing, Moosach, Milbertshofen + Premium: Lehel, Solln, Grünwald, Harlaching, Thalkirchen)
-  - `UmlandPage.tsx`: Surrounding area pages (10 locations: Starnberg, Dachau, Freising, Germering, Unterhaching, Ottobrunn, Unterschleißheim, Garching, Taufkirchen, Haar)
-- **Conversion Components**:
-  - `CallbackForm.tsx`: Compact callback request form on all service pages
-  - `FreeConsultationBanner.tsx`: Free consultation CTA banner
-  - `FloatingContactBar.tsx`: Mobile sticky phone button
 
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)

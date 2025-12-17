@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, MapPin, ChevronDown, Mail, Calendar as CalendarIcon } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import logoImage from "@assets/Logo_Transparent_1765467177950.png";
 
 export default function Header() {
@@ -49,14 +50,14 @@ export default function Header() {
               </div>
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
-            <Link 
-              href="/termin" 
+            <a 
+              href="tel:+4915212274043" 
               className="flex items-center gap-2 font-bold text-base md:text-lg hover:underline"
               data-testid="link-emergency-phone"
             >
-              <CalendarIcon className="w-5 h-5" />
-              <span>24h Terminbuchung</span>
-            </Link>
+              <Phone className="w-5 h-5" />
+              <span>0152 12274043</span>
+            </a>
           </div>
         </div>
       </div>
@@ -147,13 +148,6 @@ export default function Header() {
               >
                 Kontakt
               </Link>
-              <Link 
-                href="/stadtteile"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="nav-stadtteile"
-              >
-                Stadtteile
-              </Link>
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
@@ -165,13 +159,17 @@ export default function Header() {
               </Button>
               <Button 
                 asChild 
-                className="bg-green-600 hover:bg-green-700 text-white border-green-700"
-                data-testid="button-callback-header"
+                className="bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
+                data-testid="button-whatsapp-header"
               >
-                <Link href="/termin">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Rückruf
-                </Link>
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiWhatsapp className="w-4 h-4 mr-2" />
+                  WhatsApp
+                </a>
               </Button>
             </div>
 
@@ -248,14 +246,6 @@ export default function Header() {
               >
                 Kontakt
               </Link>
-              <Link
-                href="/stadtteile"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                data-testid="nav-mobile-stadtteile"
-              >
-                Stadtteile
-              </Link>
               <hr className="my-2 border-border" />
               <Button variant="outline" className="mt-2" asChild data-testid="nav-termin-mobile">
                 <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
@@ -264,20 +254,24 @@ export default function Header() {
                 </Link>
               </Button>
               <Button 
-                className="mt-2 bg-green-600 hover:bg-green-700 text-white border-green-700" 
+                className="mt-2 bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]" 
                 asChild 
-                data-testid="button-callback-mobile"
+                data-testid="button-whatsapp-mobile"
               >
-                <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
-                  <Phone className="w-4 h-4 mr-2" />
-                  Rückruf anfordern
-                </Link>
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiWhatsapp className="w-4 h-4 mr-2" />
+                  WhatsApp schreiben
+                </a>
               </Button>
               <Button className="mt-2" asChild data-testid="button-call-mobile">
-                <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
-                  <CalendarIcon className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
-                </Link>
+                <a href="tel:+4915212274043">
+                  <Phone className="w-4 h-4 mr-2" />
+                  0152 12274043
+                </a>
               </Button>
             </nav>
           </div>

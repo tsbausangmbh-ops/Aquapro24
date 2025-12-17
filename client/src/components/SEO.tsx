@@ -30,6 +30,7 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
+  keywords?: string;
   ogImage?: string;
   structuredData?: object;
   breadcrumbs?: BreadcrumbItem[];
@@ -51,7 +52,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@id": "https://aquapro24.de/#organization",
   "name": "AquaPro24 - Sanitär & Heizung München",
   "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München"],
-  "legalName": "AquaPro 24 - Mustafa Sakar",
+  "legalName": "KSHW München - Ali Kemal Kurt",
   "description": "AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen, Notdienst und Haustechnik. 2.847+ zufriedene Kunden, 4.9/5 Sterne Bewertung.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
   "url": "https://aquapro24.de",
@@ -65,7 +66,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://aquapro24.de/og-image.jpg",
     "https://aquapro24.de/team.jpg"
   ],
-  "telephone": "+49-173-5994699",
+  "telephone": "+49-152-12274043",
   "email": "info@aquapro24.de",
   "foundingDate": "2005",
   "numberOfEmployees": {
@@ -75,10 +76,10 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Hardenbergstr. 4",
+    "streetAddress": "Zielstattstr. 20",
     "addressLocality": "München",
     "addressRegion": "Bayern",
-    "postalCode": "80992",
+    "postalCode": "81379",
     "addressCountry": "DE"
   },
   "geo": {
@@ -210,7 +211,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   "sameAs": [
     "https://www.facebook.com/aquapro24",
     "https://www.instagram.com/aquapro24_muenchen",
-    "https://www.linkedin.com/company/aquapro24"
+    "https://www.linkedin.com/company/aquapro24",
+    "https://wa.me/4915212274043"
   ],
   "potentialAction": [
     {
@@ -226,7 +228,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "CommunicateAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "tel:+4917359994699"
+        "urlTemplate": "tel:+4915212274043"
       }
     },
     {
@@ -241,7 +243,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+49-173-5994699",
+      "telephone": "+49-152-12274043",
       "contactType": "customer service",
       "availableLanguage": ["German", "English"],
       "areaServed": "DE-BY",
@@ -254,7 +256,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+49-173-5994699",
+      "telephone": "+49-152-12274043",
       "contactType": "emergency",
       "availableLanguage": "German",
       "areaServed": "DE-BY"
@@ -278,6 +280,7 @@ export default function SEO({
   title, 
   description, 
   canonical, 
+  keywords,
   ogImage = "/og-image.jpg",
   structuredData,
   breadcrumbs,
@@ -299,6 +302,7 @@ export default function SEO({
     };
 
     updateMeta("description", description);
+    if (keywords) updateMeta("keywords", keywords);
     
     updateMeta("og:title", title, true);
     updateMeta("og:description", description, true);
@@ -325,12 +329,12 @@ export default function SEO({
     updateMeta("place:location:latitude", "48.1351", true);
     updateMeta("place:location:longitude", "11.5820", true);
     
-    updateMeta("business:contact_data:street_address", "Hardenbergstr. 4", true);
+    updateMeta("business:contact_data:street_address", "Zielstattstr. 20", true);
     updateMeta("business:contact_data:locality", "München", true);
     updateMeta("business:contact_data:region", "Bayern", true);
-    updateMeta("business:contact_data:postal_code", "80992", true);
+    updateMeta("business:contact_data:postal_code", "81379", true);
     updateMeta("business:contact_data:country_name", "Deutschland", true);
-    updateMeta("business:contact_data:phone_number", "+49 173 5994699", true);
+    updateMeta("business:contact_data:phone_number", "+49 152 12274043", true);
     updateMeta("business:contact_data:email", "info@aquapro24.de", true);
     
     updateMeta("DC.coverage", "München, Bayern, Deutschland");
@@ -356,7 +360,7 @@ export default function SEO({
     
     updateMeta("author", "AquaPro24 - KSHW München");
     updateMeta("publisher", "KSHW München - Ali Kemal Kurt");
-    updateMeta("copyright", "2025 ExtruCon GmbH - Inhaber: Mustafa Sakar");
+    updateMeta("copyright", "2025 AquaPro24.de");
     updateMeta("language", "de");
     updateMeta("content-language", "de-DE");
     updateMeta("audience", "Hausbesitzer, Mieter, Hausverwaltungen in München");
@@ -398,13 +402,13 @@ export default function SEO({
           "@id": "https://aquapro24.de/#organization",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Hardenbergstr. 4",
+            "streetAddress": "Zielstattstr. 20",
             "addressLocality": "München",
-            "postalCode": "80992",
+            "postalCode": "81379",
             "addressRegion": "Bayern",
             "addressCountry": "DE"
           },
-          "telephone": "+49-173-5994699"
+          "telephone": "+49-152-12274043"
         },
         "areaServed": serviceSchema.areaServed.map(area => ({
           "@type": area === "München" ? "City" : "AdministrativeArea",
@@ -508,7 +512,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema]);
+  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema]);
 
   return null;
 }

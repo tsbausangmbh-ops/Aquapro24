@@ -10,7 +10,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Phone, 
   CheckCircle2, 
@@ -22,7 +21,7 @@ import {
   TrendingDown,
   Star,
   FileText,
-  Calendar
+  MessageCircle
 } from "lucide-react";
 import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
@@ -86,30 +85,6 @@ const faqItems = [
   {
     question: "Wie laut ist eine Wärmepumpe?",
     answer: "Moderne Luft-Wasser-Wärmepumpen sind sehr leise - vergleichbar mit einem Kühlschrank (35-50 dB). Erdwärmepumpen sind praktisch unhörbar. Wir achten bei der Platzierung auf optimale Schallschutz-Abstände."
-  },
-  {
-    question: "Was ist der Unterschied zwischen Luft-Wasser und Erdwärmepumpe?",
-    answer: "Luft-Wasser-Wärmepumpen gewinnen Energie aus der Außenluft - sie sind günstiger (ab 12.000€) und schneller installiert (2-3 Tage), haben aber bei sehr tiefen Temperaturen einen etwas höheren Stromverbrauch. Erdwärmepumpen nutzen die konstante Erdtemperatur, sind effizienter (COP bis 5.0), aber teurer durch die nötigen Bohrungen. Wir beraten, welches System für Ihr Gebäude optimal ist."
-  },
-  {
-    question: "Wie hoch sind die Stromkosten einer Wärmepumpe?",
-    answer: "Eine Wärmepumpe verbraucht etwa 3.000-5.000 kWh Strom pro Jahr für ein Einfamilienhaus (150m²). Bei einem Strompreis von 30 Cent/kWh sind das 900-1.500€ jährlich - deutlich weniger als bei Gas (oft 2.500-3.500€). Mit eigenem PV-Strom können Sie die Kosten noch weiter senken."
-  },
-  {
-    question: "Kann ich meine Wärmepumpe mit Photovoltaik kombinieren?",
-    answer: "Ja, das ist die ideale Kombination! Der Solarstrom vom Dach betreibt die Wärmepumpe kostenlos. Mit einem Speicher können Sie auch abends/nachts günstigen Eigenstrom nutzen. Viele unserer Kunden erreichen so einen Autarkiegrad von 60-70% und senken ihre Heizkosten auf unter 500€ pro Jahr."
-  },
-  {
-    question: "Braucht eine Wärmepumpe eine Baugenehmigung in München?",
-    answer: "Für Luft-Wasser-Wärmepumpen ist in Bayern in der Regel keine Baugenehmigung erforderlich - sie gelten als genehmigungsfrei. Für Erdwärmepumpen brauchen Sie eine wasserrechtliche Erlaubnis für die Bohrung. Wir kümmern uns um alle Genehmigungen und Anmeldungen."
-  },
-  {
-    question: "Welche Wärmepumpen-Marken empfehlen Sie?",
-    answer: "Wir arbeiten mit allen führenden Herstellern: Vaillant, Viessmann, Bosch, Stiebel Eltron, Daikin und Wolf. Alle bieten hervorragende Qualität mit 5-10 Jahren Garantie. Die Wahl hängt von Ihren Anforderungen ab - ob besonders leise (Daikin), platzsparend (Bosch), oder mit integriertem Speicher (Viessmann). Wir beraten markenunabhängig."
-  },
-  {
-    question: "Wie oft muss eine Wärmepumpe gewartet werden?",
-    answer: "Eine jährliche Wartung (ab 249€) ist empfohlen, um volle Effizienz und Herstellergarantie zu erhalten. Dabei prüfen wir Kältemittelstand, Filter, Wärmetauscher und Steuerung. Die meisten Hersteller verlangen eine jährliche Wartung als Garantiebedingung. Wir bieten günstige Wartungsverträge mit Priorität im Störfall."
   }
 ];
 
@@ -118,9 +93,10 @@ export default function WaermepumpePage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Wärmepumpe München | Bis 70% BAFA-Förderung 2025 | Ab 12.000€ | AquaPro24"
-        description="Wärmepumpe München: Bis 70% staatliche Förderung (BAFA/KfW), 50% Heizkosten sparen. Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. 320+ Installationen. Kostenlose Beratung: 0173 5994699"
+        description="Wärmepumpe München: Bis 70% staatliche Förderung (BAFA/KfW), 50% Heizkosten sparen. Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. 320+ Installationen. Kostenlose Beratung: 0152 12274043"
         canonical="https://aquapro24.de/waermepumpe"
-        aiSummary="AquaPro24 Wärmepumpe München: Bis 70% BAFA/KfW-Förderung 2025, Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. Komplette Förderantragstellung inklusive. 320+ Installationen. Alle Münchner Stadtteile. Kostenlose Beratung: 0173 5994699"
+        keywords="Wärmepumpe München, Wärmepumpe Förderung 2025, BAFA Förderung Wärmepumpe München, Luft-Wasser-Wärmepumpe München, Erdwärmepumpe München, Wärmepumpe Schwabing, Wärmepumpe Bogenhausen, Wärmepumpe Sendling, Wärmepumpe Pasing, Wärmepumpe Maxvorstadt, Wärmepumpe Haidhausen, Wärmepumpe Neuhausen, Wärmepumpe Trudering, Wärmepumpe Laim, Wärmepumpe Giesing, Wärmepumpe Moosach, Wärmepumpe Milbertshofen, Wärmepumpe Nymphenburg, Wärmepumpe Perlach, Wärmepumpe Solln, Wärmepumpe Hadern, Wärmepumpe Allach, Wärmepumpe Aubing, Wärmepumpe Feldmoching, Wärmepumpe Isarvorstadt, Wärmepumpe Lehel, Wärmepumpe Altbau München, Heizungstausch Förderung München, klimaneutral heizen München, Vaillant Wärmepumpe München, Viessmann Wärmepumpe München, KfW Förderung Wärmepumpe München"
+        aiSummary="AquaPro24 Wärmepumpe München: Bis 70% BAFA/KfW-Förderung 2025, Luft-Wasser ab 12.000€, Montage in 2-3 Tagen. Komplette Förderantragstellung inklusive. 320+ Installationen. Alle Münchner Stadtteile. Kostenlose Beratung: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" }
@@ -170,10 +146,10 @@ export default function WaermepumpePage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-waermepumpe">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Kostenlose Beratung
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="waermepumpe" 
@@ -396,16 +372,16 @@ export default function WaermepumpePage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/termin" data-testid="button-call-waermepumpe-cta">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    24h Terminbuchung
-                  </Link>
+                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe-cta">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 12274043
+                  </a>
                 </Button>
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                  <Link href="/termin">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Rückruf anfordern
-                  </Link>
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20W%C3%A4rmepumpe." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Rückruf bitte
+                  </a>
                 </Button>
               </div>
             </div>

@@ -6,7 +6,6 @@ import TrustBar from "@/components/TrustBar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 import { 
   Award, 
   Users, 
@@ -23,9 +22,9 @@ import {
   ThumbsUp,
   Building,
   BadgeCheck,
+  MessageCircle,
   AlertTriangle,
-  TrendingUp,
-  Calendar
+  TrendingUp
 } from "lucide-react";
 import teamImage from "@assets/stock_images/professional_busines_7b2784dc.jpg";
 import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
@@ -153,15 +152,15 @@ const aboutPageSchema = {
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
     "url": "https://aquapro24.de",
-    "telephone": "+49-173-5994699",
+    "telephone": "+49-152-12274043",
     "email": "info@aquapro24.de",
     "foundingDate": "2005",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Hardenbergstr. 4",
+      "streetAddress": "Zielstattstr. 20",
       "addressLocality": "München",
       "addressRegion": "Bayern",
-      "postalCode": "80992",
+      "postalCode": "81379",
       "addressCountry": "DE"
     },
     "geo": {
@@ -226,8 +225,9 @@ export default function UeberUnsPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Über AquaPro24 München | Geprüfte Fachbetriebe | Sanitär & Heizung"
-        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0173 5994699"
+        description="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung & Badsanierung seit 2005. 2.800+ zufriedene Kunden, 24/7 Notdienst, Festpreisgarantie. Jetzt anrufen: 0152 12274043"
         canonical="https://aquapro24.de/ueber-uns"
+        keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
         structuredData={aboutPageSchema}
       />
       <Header />
@@ -257,16 +257,21 @@ export default function UeberUnsPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-about">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24h Terminbuchung
-                    </Link>
-                  </Button>
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                    <Link href="/termin" data-testid="button-rueckruf-about">
+                    <a href="tel:+4915212274043" data-testid="button-call-about">
                       <Phone className="w-5 h-5 mr-2" />
-                      Rückruf anfordern
-                    </Link>
+                      0152 12274043
+                    </a>
+                  </Button>
+                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
+                    <a 
+                      href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Dienstleistungen%20in%20M%C3%BCnchen." 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      data-testid="button-whatsapp-about"
+                    >
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Anfrage per WhatsApp
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -523,16 +528,21 @@ export default function UeberUnsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/termin" data-testid="button-call-cta">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  24h Terminbuchung
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                <Link href="/termin" data-testid="button-rueckruf-cta">
+                <a href="tel:+4915212274043" data-testid="button-call-cta">
                   <Phone className="w-5 h-5 mr-2" />
-                  Rückruf anfordern
-                </Link>
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
+                <a 
+                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  data-testid="button-whatsapp-cta"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Anfrage per WhatsApp
+                </a>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-primary-foreground/70">

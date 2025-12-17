@@ -7,12 +7,9 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { badStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
-import CallbackForm from "@/components/CallbackForm";
-import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Phone, 
   CheckCircle2, 
@@ -22,7 +19,7 @@ import {
   ShieldCheck,
   Star,
   ArrowRight,
-  Calendar
+  MessageCircle
 } from "lucide-react";
 import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
@@ -85,30 +82,6 @@ const faqItems = [
   {
     question: "Welche Garantie geben Sie auf die Badsanierung?",
     answer: "Wir geben 5 Jahre Gewährleistung auf alle unsere Arbeiten. Bei Problemen kommen wir kostenlos zurück. Auf eingebaute Produkte gelten zusätzlich die Herstellergarantien."
-  },
-  {
-    question: "Was ist bei einer Badsanierung im Altbau zu beachten?",
-    answer: "Im Altbau müssen wir oft mit besonderen Gegebenheiten umgehen: alte Wasserleitungen (Blei, Stahl), niedrige Deckenhöhen, unebene Böden oder fehlende Abdichtungen. Wir prüfen alles vorab und beraten Sie ehrlich, welche Arbeiten notwendig sind. Oft lohnt es sich, bei der Sanierung auch die Leitungen zu erneuern."
-  },
-  {
-    question: "Welche Fliesenformate sind aktuell modern?",
-    answer: "Aktuell liegen Großformate (60x120cm oder größer) im Trend - sie wirken großzügig und haben weniger Fugen. Beliebte Looks sind Betonoptik, Naturstein-Look und warme Erdtöne. Wir zeigen Ihnen in unserer 3D-Planung verschiedene Optionen, damit Sie die perfekte Wahl treffen können."
-  },
-  {
-    question: "Wie funktioniert die 3D-Badplanung?",
-    answer: "Bei der kostenlosen Beratung vor Ort vermessen wir Ihr Bad und besprechen Ihre Wünsche. Daraus erstellen wir ein fotorealistisches 3D-Modell, in dem Sie Ihr neues Bad virtuell begehen können. So sehen Sie vorab genau, wie Fliesen, Sanitärobjekte und Beleuchtung zusammenwirken - und können Änderungen vornehmen, bevor die Arbeit beginnt."
-  },
-  {
-    question: "Was kostet eine bodengleiche Dusche?",
-    answer: "Eine bodengleiche Dusche inklusive Rinnenablauf, Fliesen und Glasabtrennung liegt zwischen 3.500€ und 6.000€, je nach Größe und Ausstattung. Im Altbau kann ein Aufbau nötig sein, wenn der Boden nicht genug Tiefe für den Ablauf bietet. Wir finden immer eine Lösung."
-  },
-  {
-    question: "Welche Förderung gibt es für barrierefreie Bäder?",
-    answer: "Die KfW fördert altersgerechte Umbauten mit dem Programm 455-B: Zuschuss bis 6.250€ oder zinsgünstiger Kredit. Voraussetzungen sind u.a. bodengleiche Dusche, breitere Türen, Haltegriffe. Auch Pflegekassen bezuschussen Umbauten mit bis zu 4.000€ pro Maßnahme. Wir beraten Sie zu allen Fördermöglichkeiten."
-  },
-  {
-    question: "Welche Armaturen-Marken verbauen Sie?",
-    answer: "Wir arbeiten mit allen namhaften Herstellern: Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit, Kaldewei und mehr. Von der preiswerten Basisausstattung bis zur Luxuslinie ist alles möglich. In der Beratung zeigen wir Ihnen verschiedene Optionen in unterschiedlichen Preisklassen."
   }
 ];
 
@@ -117,9 +90,10 @@ export default function BadPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Badsanierung München | Festpreis ab 16.000€ | 3D-Planung gratis | AquaPro24"
-        description="Badsanierung München in 2-3 Wochen: Komplettumbau ab 16.000€, barrierefreies Bad ab 20.000€, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie, KfW-Förderung. Tel: 0173 5994699"
+        description="Badsanierung München in 2-3 Wochen: Komplettumbau ab 16.000€, barrierefreies Bad ab 20.000€, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie, KfW-Förderung. Tel: 0152 12274043"
         canonical="https://aquapro24.de/bad"
-        aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 16.000€. Barrierefreie Bäder ab 20.000€ mit KfW-Förderung, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie. Kontakt: 0173 5994699"
+        keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, barrierefreies Bad München, Bad Schwabing, Badsanierung Bogenhausen, Bad Sendling, Badsanierung Pasing, Bad Maxvorstadt, Badsanierung Haidhausen, Bad Neuhausen, Badsanierung Trudering, Bad Laim, Badsanierung Giesing, Bad Moosach, Badsanierung Milbertshofen, Bad Nymphenburg, Badsanierung Perlach, Bad Solln, Badsanierung Hadern, Bad Allach, Badsanierung Aubing, Bad Feldmoching, Bad Isarvorstadt, Bad Lehel, Badumbau München, seniorengerechtes Bad München, Traumbad München, altersgerechtes Bad München, Badmodernisierung München, Bad erneuern München"
+        aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 16.000€. Barrierefreie Bäder ab 20.000€ mit KfW-Förderung, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Badsanierung", url: "https://aquapro24.de/bad" }
@@ -170,10 +144,10 @@ export default function BadPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-bad">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-bad">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Jetzt beraten lassen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="bad" 
@@ -361,16 +335,16 @@ export default function BadPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/termin" data-testid="button-call-bad-cta">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    24h Terminbuchung
-                  </Link>
+                  <a href="tel:+4915212274043" data-testid="button-call-bad-cta">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 12274043
+                  </a>
                 </Button>
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                  <Link href="/termin">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Rückruf anfordern
-                  </Link>
+                <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                  <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Badsanierung." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Rückruf bitte
+                  </a>
                 </Button>
               </div>
             </div>
@@ -378,14 +352,6 @@ export default function BadPage() {
         </section>
 
         <RelatedServices currentService="bad" />
-
-        <section className="py-12 bg-background">
-          <div className="max-w-2xl mx-auto px-4 lg:px-8">
-            <CallbackForm />
-          </div>
-        </section>
-
-        <FreeConsultationBanner variant="compact" className="mx-4 lg:mx-8 mb-8 max-w-7xl lg:mx-auto" />
       </main>
       <Footer />
       <AIChatWidget serviceCategory="bad" />

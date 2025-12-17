@@ -10,7 +10,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
 import { 
   Droplets, 
   Phone, 
@@ -22,9 +21,9 @@ import {
   Shield,
   Award,
   Star,
+  MessageCircle,
   Sparkles,
-  Settings,
-  Calendar
+  Settings
 } from "lucide-react";
 import faucetImage1 from "@assets/generated_images/modern_chrome_faucet.png";
 import faucetImage2 from "@assets/generated_images/faucet_installation_work.png";
@@ -105,9 +104,10 @@ export default function ArmaturenPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Armaturen München | Wasserhahn Montage & Reparatur | AquaPro24"
-        description="Armaturen München: Wasserhahn tropft? Neue Armatur einbauen? Wir montieren Grohe, Hansgrohe & Co. Festpreis ab 80€, schnelle Termine. Tel: 0173 5994699"
+        description="Armaturen München: Wasserhahn tropft? Neue Armatur einbauen? Wir montieren Grohe, Hansgrohe & Co. Festpreis ab 80€, schnelle Termine. Tel: 0152 12274043"
         canonical="https://aquapro24.de/armaturen"
-        aiSummary="AquaPro24 Armaturen-Service München: Montage und Reparatur aller Marken (Grohe, Hansgrohe, Geberit). Wasserhahn tropft? Neue Armatur? Festpreis ab 80€. Kontakt: 0173 5994699"
+        keywords="Armaturen München, Wasserhahn einbauen München, Armatur montieren München, Wasserhahn tropft München, Grohe Montage München, Hansgrohe Installation München, Küchenarmatur München, Badarmatur München, Wasserhahn reparieren München, Armaturentausch München, Thermostatarmatur München, Duscharmatur München"
+        aiSummary="AquaPro24 Armaturen-Service München: Montage und Reparatur aller Marken (Grohe, Hansgrohe, Geberit). Wasserhahn tropft? Neue Armatur? Festpreis ab 80€. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Armaturen", url: "https://aquapro24.de/armaturen" }
@@ -156,10 +156,10 @@ export default function ArmaturenPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <Link href="/termin" data-testid="button-call-armaturen">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043" data-testid="button-call-armaturen">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                   <ServiceBooking 
                     serviceType="sanitaer" 
@@ -363,17 +363,17 @@ export default function ArmaturenPage() {
               wir kümmern uns darum.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin" data-testid="button-call-armaturen-cta">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                <Link href="/termin">
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-armaturen-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  Rückruf anfordern
-                </Link>
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20brauche%20Hilfe%20mit%20meinen%20Armaturen." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp Nachricht
+                </a>
               </Button>
             </div>
           </div>

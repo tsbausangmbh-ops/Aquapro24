@@ -10,7 +10,7 @@
   <!-- Homepage - Primary Landing -->
   <url>
     <loc>https://aquapro24.de/</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -24,7 +24,7 @@
   <!-- Service Pages - Core Services -->
   <url>
     <loc>https://aquapro24.de/sanitaer</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -36,7 +36,7 @@
   
   <url>
     <loc>https://aquapro24.de/bad</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -48,7 +48,7 @@
   
   <url>
     <loc>https://aquapro24.de/heizung</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -60,7 +60,7 @@
   
   <url>
     <loc>https://aquapro24.de/waermepumpe</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -72,7 +72,7 @@
   
   <url>
     <loc>https://aquapro24.de/haustechnik</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -81,232 +81,46 @@
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
-
-  <url>
-    <loc>https://aquapro24.de/rohrreinigung</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/armaturen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/warmwasser</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <!-- Stadtteile Overview Page -->
-  <url>
-    <loc>https://aquapro24.de/stadtteile</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
   
   <!-- Geo-targeted Munich District Pages -->
   <url>
-    <loc>https://aquapro24.de/stadtteil/schwabing</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/maxvorstadt</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/bogenhausen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/haidhausen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/sendling</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/pasing</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/neuhausen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/trudering</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/laim</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/giesing</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/moosach</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/milbertshofen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <!-- Premium District Pages (High-Income Areas) -->
-  <url>
-    <loc>https://aquapro24.de/stadtteil/lehel</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/solln</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/gruenwald</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/harlaching</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/stadtteil/thalkirchen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <!-- Notdienst (Emergency Service) Page - High Priority -->
-  <url>
-    <loc>https://aquapro24.de/notdienst</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  
-  <!-- Umland Pages (Surrounding Areas - 20km Radius) -->
-  <url>
-    <loc>https://aquapro24.de/umland/starnberg</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://aquapro24.de/#schwabing</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/umland/dachau</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://aquapro24.de/#bogenhausen</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/umland/freising</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://aquapro24.de/#sendling</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/umland/germering</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://aquapro24.de/#pasing</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/umland/unterhaching</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://aquapro24.de/#maxvorstadt</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/umland/ottobrunn</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/umland/unterschleissheim</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/umland/garching</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/umland/taufkirchen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/umland/haar</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://aquapro24.de/#haidhausen</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -314,72 +128,57 @@
   <!-- Informational Pages -->
   <url>
     <loc>https://aquapro24.de/kontakt</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/ueber-uns</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/faq</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/ratgeber</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/termin</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <!-- Google Ads Landing Page -->
-  <url>
-    <loc>https://aquapro24.de/angebot</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
   </url>
   
   <!-- Legal Pages -->
   <url>
     <loc>https://aquapro24.de/impressum</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/datenschutz</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/agb</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   
   <url>
     <loc>https://aquapro24.de/cookie-richtlinie</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>

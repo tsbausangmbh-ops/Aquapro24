@@ -19,10 +19,8 @@ import {
   Clock,
   Euro,
   ThermometerSun,
-  Wrench,
-  Calendar
+  Wrench
 } from "lucide-react";
-import { Link } from "wouter";
 import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
@@ -245,6 +243,7 @@ export default function RatgeberPage() {
         title="Ratgeber | Sanitär, Heizung, Wasserschaden, Wärmepumpe | Expertentipps München"
         description="Expertenwissen vom Münchner Partnernetzwerk: Wasserschaden Erste Hilfe, Badsanierung planen, Heizung richtig warten, Wärmepumpe Förderung 2024/2025. Praktische Tipps für Hausbesitzer."
         canonical="https://kshw-muenchen.de/ratgeber"
+        keywords="Wasserschaden was tun München, Ratgeber Badsanierung Schwabing, Tipps Heizungswartung Bogenhausen, Wärmepumpe Förderung Bayern 2024, Sanitär Tipps Sendling, Ratgeber Pasing, Tipps Maxvorstadt, Guides Haidhausen, Ratgeber Neuhausen"
       />
       <Header />
       <main id="main-content">
@@ -374,10 +373,10 @@ export default function RatgeberPage() {
                     </div>
                   </div>
                   <Button asChild>
-                    <Link href="/termin">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      24h Terminbuchung
-                    </Link>
+                    <a href="tel:+4915212274043">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -396,16 +395,16 @@ export default function RatgeberPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/termin">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  24h Terminbuchung
-                </Link>
+                <a href="tel:+4915212274043">
+                  <Phone className="w-5 h-5 mr-2" />
+                  0152 12274043
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10" asChild>
-                <Link href="/faq">
+                <a href="/faq">
                   Zu den FAQ
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

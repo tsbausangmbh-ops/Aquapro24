@@ -4,7 +4,6 @@ import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 import { 
   Phone, 
   HelpCircle,
@@ -25,7 +24,8 @@ import {
   Users,
   Sparkles,
   Calendar,
-  Hammer
+  Hammer,
+  MessageCircle
 } from "lucide-react";
 
 const faqs = [
@@ -198,6 +198,7 @@ export default function FAQPage() {
         title="Häufige Fragen (FAQ) | Sanitär & Heizung München | Ihr Partnernetzwerk"
         description="Antworten auf häufige Fragen zu Sanitär, Heizung und Badsanierung in München. Festpreisgarantie, Notdienst, Förderungen und mehr. Jetzt informieren!"
         canonical="https://kshw-muenchen.de/faq"
+        keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />
       <Header />
       <main id="main-content">
@@ -217,10 +218,10 @@ export default function FAQPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/termin" data-testid="button-call-faq">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    24h Terminbuchung
-                  </Link>
+                  <a href="tel:+4915212274043" data-testid="button-call-faq">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Kostenlos beraten lassen
+                  </a>
                 </Button>
               </div>
             </div>
@@ -259,22 +260,22 @@ export default function FAQPage() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="/termin" data-testid="button-call-bottom">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  24h Terminbuchung
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
-                <Link href="/termin">
+                <a href="tel:+4915212274043" data-testid="button-call-bottom">
                   <Phone className="w-5 h-5 mr-2" />
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 mr-2" />
                   Rückruf anfordern
-                </Link>
+                </a>
               </Button>
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/termin" data-testid="button-emergency-faq">
+                <a href="tel:+4915212274043" data-testid="button-emergency-faq">
                   <AlertTriangle className="w-5 h-5 mr-2" />
                   Notdienst
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

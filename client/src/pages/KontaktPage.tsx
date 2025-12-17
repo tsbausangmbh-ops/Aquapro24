@@ -33,9 +33,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    primary: "0173 5994699",
+    primary: "0152 12274043",
     secondary: "24/7 Notdienst erreichbar",
-    action: "tel:+4917359994699"
+    action: "tel:+4915212274043"
   },
   {
     icon: Mail,
@@ -47,9 +47,9 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    primary: "Hardenbergstr. 4",
-    secondary: "80992 München",
-    action: "https://maps.google.com/?q=Hardenbergstr.+4+80992+München"
+    primary: "Zielstattstr. 20",
+    secondary: "81379 München",
+    action: "https://maps.google.com/?q=München"
   },
   {
     icon: Clock,
@@ -115,8 +115,9 @@ export default function KontaktPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Kontakt | KSHW München - Sanitär & Heizung München"
-        description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0173 5994699. Kostenlose Beratung, schnelle Termine."
+        description="Kontaktieren Sie uns für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst unter 0152 12274043. Kostenlose Beratung, schnelle Termine."
         canonical="https://kshw-muenchen.de/kontakt"
+        keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst, Badsanierung München Beratung"
       />
       <Header />
       <main id="main-content">
@@ -222,7 +223,7 @@ export default function KontaktPage() {
                         <Label htmlFor="street">Straße & Hausnummer *</Label>
                         <Input
                           id="street"
-                          placeholder="z.B. Musterstraße 10"
+                          placeholder="z.B. Zielstattstr. 20"
                           value={formData.street}
                           onChange={(e) => setFormData({ ...formData, street: e.target.value })}
                           required
@@ -234,7 +235,7 @@ export default function KontaktPage() {
                         <Label htmlFor="zipCity">PLZ & Ort *</Label>
                         <Input
                           id="zipCity"
-                          placeholder="z.B. 80992 München"
+                          placeholder="z.B. 81379 München"
                           value={formData.zipCity}
                           onChange={(e) => setFormData({ ...formData, zipCity: e.target.value })}
                           required
@@ -317,9 +318,9 @@ export default function KontaktPage() {
                             Bei Rohrbruch, Wasserschaden oder Heizungsausfall erreichen Sie uns rund um die Uhr.
                           </p>
                           <Button className="bg-accent text-accent-foreground" asChild>
-                            <a href="tel:+4917359994699" data-testid="button-emergency-call">
+                            <a href="tel:+4915212274043" data-testid="button-emergency-call">
                               <Phone className="w-4 h-4 mr-2" />
-                              0173 5994699
+                              0152 12274043
                             </a>
                           </Button>
                         </div>
@@ -404,16 +405,16 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium">Hardenbergstr. 4</p>
-                        <p className="text-muted-foreground">80992 München</p>
+                        <p className="font-medium">Zielstattstr. 20</p>
+                        <p className="text-muted-foreground">81379 München</p>
                         <p className="text-muted-foreground">Deutschland</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <div>
-                        <a href="tel:+4917359994699" className="font-medium hover:text-secondary">
-                          0173 5994699
+                        <a href="tel:+4915212274043" className="font-medium hover:text-secondary">
+                          0152 12274043
                         </a>
                         <p className="text-sm text-muted-foreground">24/7 Notdienst</p>
                       </div>
@@ -440,7 +441,7 @@ export default function KontaktPage() {
                 </div>
                 <Button size="lg" className="w-full sm:w-auto" asChild>
                   <a 
-                    href="https://maps.google.com/?q=Hardenbergstr.+4+80992+München" 
+                    href="https://maps.google.com/?q=Zielstattstr.+20+81379+München" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     data-testid="button-google-maps"
@@ -477,8 +478,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>Hardenbergstr. 4</p>
-                        <p className="text-sm text-muted-foreground">80992 München</p>
+                        <p>Zielstattstr. 20</p>
+                        <p className="text-sm text-muted-foreground">81379 München</p>
                       </div>
                     </div>
                   </div>
@@ -486,7 +487,8 @@ export default function KontaktPage() {
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
-                        <p>0173 5994699</p>
+                        <p>0152 12274043</p>
+                        <p className="text-sm text-muted-foreground">Fax: 0152 12274043</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -501,7 +503,13 @@ export default function KontaktPage() {
                 <div className="border-t mt-8 pt-6 text-sm text-muted-foreground">
                   <div className="grid md:grid-cols-3 gap-6">
                     <div>
-                      <span className="font-medium text-foreground">Inhaber:</span> Mustafa Sakar
+                      <span className="font-medium text-foreground">Handelsregister:</span> HRB 123456
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">USt-IdNr:</span> DE123456789
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Inhaber:</span> Ali Kemal Kurt
                     </div>
                   </div>
                 </div>
