@@ -116,9 +116,9 @@ export default function FunnelJourney() {
               </a>
             </Button>
             <Button size="lg" className="bg-secondary text-secondary-foreground" asChild>
-              <Link href="/termin" data-testid="button-funnel-kalender">
+              <Link href="/termin" data-testid="button-funnel-buchung">
                 <Clock className="w-4 h-4 mr-2" />
-                Online Kalender
+                24h Buchungstermin
               </Link>
             </Button>
           </div>
