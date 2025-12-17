@@ -25,8 +25,10 @@ import {
   Sparkles,
   Calendar,
   Hammer,
-  MessageCircle
+  MessageCircle,
+  MessageSquare
 } from "lucide-react";
+import { Link } from "wouter";
 
 const faqs = [
   {
@@ -253,28 +255,35 @@ export default function FAQPage() {
         <section className="py-10 lg:py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Noch Fragen?</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Wir beraten Sie gerne persönlich - kostenlos und unverbindlich. 
-              Rufen Sie uns an oder fordern Sie einen Rückruf an.
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Wir beraten Sie gerne persönlich - kostenlos und unverbindlich.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" asChild>
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Button size="lg" className="gap-2" asChild>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  Beratungstermin buchen
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="gap-2" asChild>
+                <Link href="/kontakt">
+                  <MessageSquare className="w-5 h-5" />
+                  Kostenlos beraten lassen
+                </Link>
+              </Button>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" variant="outline" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-bottom">
                   <Phone className="w-5 h-5 mr-2" />
                   0152 12274043
                 </a>
               </Button>
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4989123456789?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  Rückruf anfordern
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4915212274043" data-testid="button-emergency-faq">
-                  <AlertTriangle className="w-5 h-5 mr-2" />
-                  Notdienst
+                  WhatsApp
                 </a>
               </Button>
             </div>

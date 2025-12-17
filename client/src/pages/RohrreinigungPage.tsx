@@ -23,8 +23,11 @@ import {
   Star,
   MessageCircle,
   Zap,
-  Camera
+  Camera,
+  Calendar,
+  MessageSquare
 } from "lucide-react";
+import { Link } from "wouter";
 import drainImage1 from "@assets/generated_images/clean_modern_drain_grate.png";
 import drainImage2 from "@assets/generated_images/drain_cleaning_equipment.png";
 import ServiceBooking from "@/components/ServiceBooking";
@@ -358,9 +361,22 @@ export default function RohrreinigungPage() {
               Abfluss verstopft? Wir helfen sofort!
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
-              Ob Küche, Bad oder WC - bei verstopften Abflüssen sind wir in 60 Minuten da. 
-              Rufen Sie jetzt an!
+              Ob Küche, Bad oder WC - bei verstopften Abflüssen sind wir in 60 Minuten da.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Button size="lg" className="bg-white text-secondary border-white gap-2" asChild>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  Beratungstermin buchen
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
+                <Link href="/kontakt">
+                  <MessageSquare className="w-5 h-5" />
+                  Kostenlos beraten lassen
+                </Link>
+              </Button>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung-cta">
@@ -371,7 +387,7 @@ export default function RohrreinigungPage() {
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
                 <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20einen%20verstopften%20Abfluss%20und%20bitte%20um%20Hilfe." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp Nachricht
+                  WhatsApp
                 </a>
               </Button>
             </div>

@@ -24,8 +24,11 @@ import {
   BadgeCheck,
   MessageCircle,
   AlertTriangle,
-  TrendingUp
+  TrendingUp,
+  Calendar,
+  MessageSquare
 } from "lucide-react";
+import { Link } from "wouter";
 import teamImage from "@assets/stock_images/professional_busines_7b2784dc.jpg";
 import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
 import workshopImage from "@assets/stock_images/modern_plumbing_work_077b9e6b.jpg";
@@ -523,9 +526,23 @@ export default function UeberUnsPage() {
               Bereit für einen Handwerker, dem Sie vertrauen können?
             </h2>
             <p className="text-primary-foreground/80 mb-4 max-w-2xl mx-auto text-lg">
-              Rufen Sie uns an oder schreiben Sie uns. Kostenlose Beratung, 
-              unverbindliches Angebot - Sie entscheiden dann in Ruhe.
+              Vereinbaren Sie jetzt einen Beratungstermin oder kontaktieren Sie uns direkt. 
+              Kostenlose Beratung, unverbindliches Angebot - Sie entscheiden dann in Ruhe.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Button size="lg" className="bg-white text-primary border-white gap-2" asChild>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  Beratungstermin buchen
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
+                <Link href="/kontakt">
+                  <MessageSquare className="w-5 h-5" />
+                  Kostenlos beraten lassen
+                </Link>
+              </Button>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-cta">
@@ -533,7 +550,7 @@ export default function UeberUnsPage() {
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
                 <a 
                   href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
                   target="_blank" 
@@ -541,7 +558,7 @@ export default function UeberUnsPage() {
                   data-testid="button-whatsapp-cta"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  Anfrage per WhatsApp
+                  WhatsApp
                 </a>
               </Button>
             </div>

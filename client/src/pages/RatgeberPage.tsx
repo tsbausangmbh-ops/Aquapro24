@@ -19,8 +19,12 @@ import {
   Clock,
   Euro,
   ThermometerSun,
-  Wrench
+  Wrench,
+  Calendar,
+  MessageSquare,
+  MessageCircle
 } from "lucide-react";
+import { Link } from "wouter";
 import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
@@ -393,17 +397,31 @@ export default function RatgeberPage() {
               Unser Team steht Ihnen für alle Fragen rund um Sanitär, Heizung und Haustechnik 
               zur Verfügung. Kostenlose Beratung - auch vor Ort.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Button size="lg" className="bg-white text-secondary border-white gap-2" asChild>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  Beratungstermin buchen
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
+                <Link href="/kontakt">
+                  <MessageSquare className="w-5 h-5" />
+                  Kostenlos beraten lassen
+                </Link>
+              </Button>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90" asChild>
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043">
                   <Phone className="w-5 h-5 mr-2" />
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10" asChild>
-                <a href="/faq">
-                  Zu den FAQ
-                  <ArrowRight className="w-4 h-4 ml-2" />
+              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
+                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  WhatsApp
                 </a>
               </Button>
             </div>

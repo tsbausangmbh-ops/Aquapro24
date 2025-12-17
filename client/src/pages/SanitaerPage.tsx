@@ -22,8 +22,11 @@ import {
   Shield,
   Award,
   Star,
-  MessageCircle
+  MessageCircle,
+  Calendar,
+  MessageSquare
 } from "lucide-react";
+import { Link } from "wouter";
 import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
@@ -375,8 +378,22 @@ export default function SanitaerPage() {
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Ob tropfender Wasserhahn, verstopfter Abfluss oder neue Sanitärinstallation - 
-              rufen Sie uns an und wir kümmern uns darum. Über 847 zufriedene Kunden in München.
+              wir kümmern uns darum. Über 847 zufriedene Kunden in München.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Button size="lg" className="bg-white text-secondary border-white gap-2" asChild>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  Beratungstermin buchen
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
+                <Link href="/kontakt">
+                  <MessageSquare className="w-5 h-5" />
+                  Kostenlos beraten lassen
+                </Link>
+              </Button>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
@@ -387,7 +404,7 @@ export default function SanitaerPage() {
               <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
                 <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Sanit%C3%A4r." target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  Rückruf bitte
+                  WhatsApp
                 </a>
               </Button>
             </div>

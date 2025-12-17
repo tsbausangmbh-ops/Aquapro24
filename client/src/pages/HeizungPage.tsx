@@ -20,8 +20,11 @@ import {
   ArrowRight,
   Thermometer,
   FileText,
-  MessageCircle
+  MessageCircle,
+  Calendar,
+  MessageSquare
 } from "lucide-react";
+import { Link } from "wouter";
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
@@ -335,8 +338,22 @@ export default function HeizungPage() {
                 Unser 24/7 Notdienst ist für Sie da. Rufen Sie uns an und wir kümmern uns 
                 schnellstmöglich um Ihre Heizung. In München und Umgebung meist innerhalb einer Stunde vor Ort.
               </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-4">
+                <Button size="lg" className="gap-2" asChild>
+                  <Link href="/termin">
+                    <Calendar className="w-5 h-5" />
+                    Beratungstermin buchen
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="gap-2" asChild>
+                  <Link href="/kontakt">
+                    <MessageSquare className="w-5 h-5" />
+                    Kostenlos beraten lassen
+                  </Link>
+                </Button>
+              </div>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" asChild>
+                <Button size="lg" variant="outline" asChild>
                   <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
                     <Phone className="w-5 h-5 mr-2" />
                     0152 12274043
@@ -345,7 +362,7 @@ export default function HeizungPage() {
                 <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
                   <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20bitte%20um%20R%C3%BCckruf%20zum%20Thema%20Heizung." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Rückruf bitte
+                    WhatsApp
                   </a>
                 </Button>
               </div>
