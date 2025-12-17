@@ -520,17 +520,17 @@ export default function UeberUnsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-primary text-primary-foreground">
+        <section className="py-10 lg:pt-8 pb-4 bg-blue-900 text-white">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Bereit für einen Handwerker, dem Sie vertrauen können?
             </h2>
-            <p className="text-primary-foreground/80 mb-4 max-w-2xl mx-auto text-lg">
+            <p className="text-white/80 mb-4 max-w-2xl mx-auto text-lg">
               Vereinbaren Sie jetzt einen Beratungstermin oder kontaktieren Sie uns direkt. 
               Kostenlose Beratung, unverbindliches Angebot - Sie entscheiden dann in Ruhe.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
-              <Button size="lg" className="bg-white text-primary border-white gap-2" asChild>
+              <Button size="lg" className="bg-white text-blue-900 border-white gap-2" asChild>
                 <Link href="/termin">
                   <Calendar className="w-5 h-5" />
                   Beratungstermin buchen
@@ -544,7 +544,7 @@ export default function UeberUnsPage() {
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="secondary" asChild>
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   0152 12274043
@@ -562,7 +562,7 @@ export default function UeberUnsPage() {
                 </a>
               </Button>
             </div>
-            <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-primary-foreground/70">
+            <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-white/70">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 Ganz München & Umland
