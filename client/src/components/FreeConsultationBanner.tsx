@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone, CheckCircle, Clock, Shield } from "lucide-react";
+import { Phone, CheckCircle, Clock, Shield, Calendar } from "lucide-react";
 import { Link } from "wouter";
 
 interface FreeConsultationBannerProps {
@@ -20,10 +20,10 @@ export default function FreeConsultationBanner({ variant = "full", className = "
           Erstberatung & Kostenvoranschlag gratis
         </span>
         <Button size="sm" asChild className="bg-green-600 hover:bg-green-700" data-testid="button-free-consultation-inline">
-          <a href="tel:+4917359994699">
-            <Phone className="w-4 h-4 mr-1" />
-            Jetzt anrufen
-          </a>
+          <Link href="/termin">
+            <Calendar className="w-4 h-4 mr-1" />
+            24h Terminbuchung
+          </Link>
         </Button>
       </div>
     );
@@ -43,10 +43,10 @@ export default function FreeConsultationBanner({ variant = "full", className = "
             </div>
           </div>
           <Button variant="secondary" asChild data-testid="button-free-consultation-compact">
-            <a href="tel:+4917359994699">
-              <Phone className="w-4 h-4 mr-2" />
-              0173 5994699
-            </a>
+            <Link href="/termin">
+              <Calendar className="w-4 h-4 mr-2" />
+              24h Terminbuchung
+            </Link>
           </Button>
         </div>
       </div>
@@ -92,10 +92,10 @@ export default function FreeConsultationBanner({ variant = "full", className = "
               asChild
               data-testid="button-free-consultation-call"
             >
-              <a href="tel:+4917359994699">
-                <Phone className="w-5 h-5 mr-2" />
-                0173 5994699
-              </a>
+              <Link href="/termin">
+                <Calendar className="w-5 h-5 mr-2" />
+                24h Terminbuchung
+              </Link>
             </Button>
             <Button 
               size="lg" 

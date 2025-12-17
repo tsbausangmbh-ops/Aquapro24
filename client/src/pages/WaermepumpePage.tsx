@@ -21,7 +21,8 @@ import {
   Zap,
   TrendingDown,
   Star,
-  FileText
+  FileText,
+  Calendar
 } from "lucide-react";
 import heatPumpImage1 from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import heatPumpImage2 from "@assets/stock_images/heat_pump_installati_c7c6b6db.jpg";
@@ -169,10 +170,10 @@ export default function WaermepumpePage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-waermepumpe">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Kostenlose Beratung
-                    </a>
+                    <Link href="/termin" data-testid="button-call-waermepumpe">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <ServiceBooking 
                     serviceType="waermepumpe" 
@@ -395,10 +396,10 @@ export default function WaermepumpePage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4917359994699" data-testid="button-call-waermepumpe-cta">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0173 5994699
-                  </a>
+                  <Link href="/termin" data-testid="button-call-waermepumpe-cta">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    24h Terminbuchung
+                  </Link>
                 </Button>
                 <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                   <Link href="/termin">

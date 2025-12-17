@@ -49,14 +49,14 @@ export default function Header() {
               </div>
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
-            <a 
-              href="tel:+4917359994699" 
+            <Link 
+              href="/termin" 
               className="flex items-center gap-2 font-bold text-base md:text-lg hover:underline"
               data-testid="link-emergency-phone"
             >
-              <Phone className="w-5 h-5" />
-              <span>0173 5994699</span>
-            </a>
+              <CalendarIcon className="w-5 h-5" />
+              <span>24h Terminbuchung</span>
+            </Link>
           </div>
         </div>
       </div>
@@ -274,10 +274,10 @@ export default function Header() {
                 </Link>
               </Button>
               <Button className="mt-2" asChild data-testid="button-call-mobile">
-                <a href="tel:+4917359994699">
-                  <Phone className="w-4 h-4 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
+                  <CalendarIcon className="w-4 h-4 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
             </nav>
           </div>

@@ -23,7 +23,8 @@ import {
   Award,
   Star,
   Sparkles,
-  Settings
+  Settings,
+  Calendar
 } from "lucide-react";
 import faucetImage1 from "@assets/generated_images/modern_chrome_faucet.png";
 import faucetImage2 from "@assets/generated_images/faucet_installation_work.png";
@@ -155,10 +156,10 @@ export default function ArmaturenPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-armaturen">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Jetzt anrufen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-armaturen">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <ServiceBooking 
                     serviceType="sanitaer" 
@@ -363,10 +364,10 @@ export default function ArmaturenPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-armaturen-cta">
-                  <Phone className="w-4 h-4 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin" data-testid="button-call-armaturen-cta">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                 <Link href="/termin">

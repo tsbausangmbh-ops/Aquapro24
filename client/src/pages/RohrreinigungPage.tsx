@@ -23,7 +23,8 @@ import {
   Award,
   Star,
   Zap,
-  Camera
+  Camera,
+  Calendar
 } from "lucide-react";
 import drainImage1 from "@assets/generated_images/clean_modern_drain_grate.png";
 import drainImage2 from "@assets/generated_images/drain_cleaning_equipment.png";
@@ -179,10 +180,10 @@ export default function RohrreinigungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-rohrreinigung">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Jetzt anrufen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-rohrreinigung">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <ServiceBooking 
                     serviceType="sanitaer" 
@@ -386,10 +387,10 @@ export default function RohrreinigungPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-rohrreinigung-cta">
-                  <Phone className="w-4 h-4 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin" data-testid="button-call-rohrreinigung-cta">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                 <Link href="/termin">

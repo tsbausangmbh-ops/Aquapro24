@@ -165,10 +165,10 @@ export default function UmlandPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-notfound">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen
-                </a>
+                <Link href="/termin" data-testid="button-call-notfound">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link href="/" data-testid="link-back-home">Zurück zur Startseite</Link>
@@ -230,10 +230,10 @@ export default function UmlandPage() {
 
                 <div className="flex flex-wrap gap-3">
                   <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-hero">
-                      <Phone className="w-4 h-4 mr-2" />
-                      0173 5994699
-                    </a>
+                    <Link href="/termin" data-testid="button-call-hero">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                     <Link href="/termin" data-testid="button-rueckruf-hero">
@@ -332,15 +332,9 @@ export default function UmlandPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-cta">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0173 5994699
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground" asChild>
-                <Link href="/termin" data-testid="button-termin-cta">
+                <Link href="/termin" data-testid="button-call-cta">
                   <Calendar className="w-5 h-5 mr-2" />
-                  Online-Termin
+                  24h Terminbuchung
                 </Link>
               </Button>
             </div>

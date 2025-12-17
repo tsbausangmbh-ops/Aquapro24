@@ -15,7 +15,8 @@ import {
   Wrench,
   Droplets,
   Flame,
-  Home
+  Home,
+  Calendar
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -81,11 +82,10 @@ export default function LandingPage() {
             <span className="font-bold text-lg hidden sm:block">AquaPro24</span>
           </Link>
           <Button className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-            <a href="tel:+4917359994699" data-testid="button-call-header">
-              <Phone className="w-4 h-4 mr-2" />
-              <span className="hidden sm:inline">0173 5994699</span>
-              <span className="sm:hidden">Anrufen</span>
-            </a>
+            <Link href="/termin" data-testid="button-call-header">
+              <Calendar className="w-4 h-4 mr-2" />
+              <span>24h Terminbuchung</span>
+            </Link>
           </Button>
         </div>
       </header>
@@ -120,10 +120,10 @@ export default function LandingPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-landing-hero">
-                      <Phone className="w-5 h-5 mr-2" />
-                      0173 5994699
-                    </a>
+                    <Link href="/termin" data-testid="button-call-landing-hero">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
                     <Link href="/termin" data-testid="button-callback-landing">
@@ -151,10 +151,10 @@ export default function LandingPage() {
                     ))}
                   </div>
                   <Button size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-landing-form">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt anrufen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-landing-form">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -209,10 +209,10 @@ export default function LandingPage() {
                 </div>
                 <div className="mt-8">
                   <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-landing-benefits">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Kostenlos beraten lassen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-landing-benefits">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -263,10 +263,10 @@ export default function LandingPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-landing-cta">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin" data-testid="button-call-landing-cta">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
                 <Link href="/termin" data-testid="button-callback-landing-cta">

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Shield } from "lucide-react";
+import { Phone, MapPin, Shield, Calendar } from "lucide-react";
 import { Link } from "wouter";
 
 export default function CTABanner() {
@@ -30,10 +30,10 @@ export default function CTABanner() {
             asChild
             data-testid="button-call-cta"
           >
-            <a href="tel:+4917359994699">
-              <Phone className="w-6 h-6" />
-              0173 5994699
-            </a>
+            <Link href="/termin">
+              <Calendar className="w-6 h-6" />
+              24h Terminbuchung
+            </Link>
           </Button>
           <Button 
             size="lg" 

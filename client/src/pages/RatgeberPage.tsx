@@ -19,8 +19,10 @@ import {
   Clock,
   Euro,
   ThermometerSun,
-  Wrench
+  Wrench,
+  Calendar
 } from "lucide-react";
+import { Link } from "wouter";
 import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
@@ -372,10 +374,10 @@ export default function RatgeberPage() {
                     </div>
                   </div>
                   <Button asChild>
-                    <a href="tel:+4917359994699">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Jetzt anrufen
-                    </a>
+                    <Link href="/termin">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -394,16 +396,16 @@ export default function RatgeberPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90" asChild>
-                <a href="tel:+4917359994699">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10" asChild>
-                <a href="/faq">
+                <Link href="/faq">
                   Zu den FAQ
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

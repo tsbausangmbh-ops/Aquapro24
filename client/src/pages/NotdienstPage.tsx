@@ -23,7 +23,8 @@ import {
   CheckCircle2,
   Zap,
   MapPin,
-  Timer
+  Timer,
+  Calendar
 } from "lucide-react";
 
 const emergencyServices = [
@@ -100,10 +101,10 @@ export default function NotdienstPage() {
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button size="lg" className="bg-white text-red-700 border-white/80 text-lg px-8 py-6" asChild>
-                  <a href="tel:+4917359994699" data-testid="button-call-notdienst-hero">
-                    <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                    0173 5994699
-                  </a>
+                  <Link href="/termin" data-testid="button-call-notdienst-hero">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    24h Terminbuchung
+                  </Link>
                 </Button>
                 <Button size="lg" className="bg-white text-green-700 border-white/80 text-lg px-8 py-6" asChild>
                   <Link href="/termin" data-testid="button-callback-notdienst">
@@ -155,10 +156,10 @@ export default function NotdienstPage() {
                         <div className="flex items-center justify-between">
                           <span className="font-semibold text-primary">{service.price}</span>
                           <Button size="sm" asChild>
-                            <a href="tel:+4917359994699" data-testid={`button-call-${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                              <Phone className="w-3 h-3 mr-1" />
-                              Jetzt anrufen
-                            </a>
+                            <Link href="/termin" data-testid={`button-call-${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                              <Calendar className="w-3 h-3 mr-1" />
+                              Termin
+                            </Link>
                           </Button>
                         </div>
                       </div>
@@ -246,10 +247,10 @@ export default function NotdienstPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-white text-red-700 border-white text-lg" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-notdienst-cta">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin" data-testid="button-call-notdienst-cta">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button size="lg" className="bg-white text-green-700 border-white" asChild>
                 <Link href="/termin" data-testid="button-callback-notdienst-cta">

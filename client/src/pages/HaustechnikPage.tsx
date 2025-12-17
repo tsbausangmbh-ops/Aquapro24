@@ -20,7 +20,8 @@ import {
   Star,
   ArrowRight,
   Home,
-  Gauge
+  Gauge,
+  Calendar
 } from "lucide-react";
 import smartHomeImage1 from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import smartHomeImage2 from "@assets/stock_images/smart_home_technolog_6887dbb7.jpg";
@@ -166,10 +167,10 @@ export default function HaustechnikPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-haustechnik">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt anfragen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-haustechnik">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <ServiceBooking 
                     serviceType="haustechnik" 
@@ -382,10 +383,10 @@ export default function HaustechnikPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4917359994699" data-testid="button-call-haustechnik-cta">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0173 5994699
-                  </a>
+                  <Link href="/termin" data-testid="button-call-haustechnik-cta">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    24h Terminbuchung
+                  </Link>
                 </Button>
                 <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                   <Link href="/termin">

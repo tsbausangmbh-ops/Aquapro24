@@ -22,7 +22,8 @@ import {
   Star,
   ArrowRight,
   Thermometer,
-  FileText
+  FileText,
+  Calendar
 } from "lucide-react";
 import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
@@ -168,10 +169,10 @@ export default function HeizungPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-heizung">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt anrufen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-heizung">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <ServiceBooking 
                     serviceType="heizung" 
@@ -362,10 +363,10 @@ export default function HeizungPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4917359994699" data-testid="button-call-heizung-cta">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0173 5994699
-                  </a>
+                  <Link href="/termin" data-testid="button-call-heizung-cta">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    24h Terminbuchung
+                  </Link>
                 </Button>
                 <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                   <Link href="/termin">

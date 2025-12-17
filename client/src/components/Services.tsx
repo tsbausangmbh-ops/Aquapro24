@@ -9,7 +9,7 @@ import {
   ShowerHead,
   Flame,
   PipetteIcon,
-  Phone,
+  Calendar,
   Clock,
   CheckCircle2,
   ArrowRight
@@ -137,10 +137,10 @@ export default function Services() {
             <span className="text-foreground font-medium">Stellen Sie sich vor:</span> Heute Abend funktioniert alles wieder. Rufen Sie jetzt an!
           </p>
           <Button size="lg" className="gap-2" asChild data-testid="button-call-services">
-            <a href="tel:+4917359994699">
-              <Phone className="w-5 h-5" />
-              0173 5994699
-            </a>
+            <Link href="/termin">
+              <Calendar className="w-5 h-5" />
+              24h Terminbuchung
+            </Link>
           </Button>
         </div>
       </div>

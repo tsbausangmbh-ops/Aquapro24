@@ -8,7 +8,8 @@ import {
   CheckCircle2,
   Thermometer,
   Droplets,
-  AlertTriangle
+  AlertTriangle,
+  Calendar
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -51,10 +52,10 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-3">
               <Button size="lg" className="gap-2 text-base bg-red-600 text-white border-red-700" asChild data-testid="button-call-hero">
-                <a href="tel:+4917359994699">
-                  <Phone className="w-5 h-5" />
-                  Jetzt anrufen
-                </a>
+                <Link href="/termin">
+                  <Calendar className="w-5 h-5" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button 
                 size="lg" 

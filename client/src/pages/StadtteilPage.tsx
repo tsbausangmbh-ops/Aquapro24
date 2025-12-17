@@ -250,21 +250,15 @@ export default function StadtteilPage() {
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-hero">
-                      <Phone className="w-4 h-4 mr-2" />
-                      0173 5994699
-                    </a>
+                    <Link href="/termin" data-testid="button-call-hero">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                     <Link href="/termin" data-testid="button-rueckruf-hero">
                       <Phone className="w-4 h-4 mr-2" />
                       Rückruf anfordern
-                    </Link>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="/termin" data-testid="button-termin-hero">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Termin buchen
                     </Link>
                   </Button>
                 </div>
@@ -368,15 +362,9 @@ export default function StadtteilPage() {
             </div>
             <div className="flex flex-wrap gap-4 mt-8">
               <Button size="lg" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-cta">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen: 0173 5994699
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/termin" data-testid="button-termin-cta">
+                <Link href="/termin" data-testid="button-call-cta">
                   <Calendar className="w-4 h-4 mr-2" />
-                  Online-Termin buchen
+                  24h Terminbuchung
                 </Link>
               </Button>
             </div>

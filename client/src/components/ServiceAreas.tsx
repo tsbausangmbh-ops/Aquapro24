@@ -1,5 +1,6 @@
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 interface ServiceAreasProps {
   serviceName: string;
@@ -86,12 +87,12 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
             </ul>
             
             <div className="mt-6 pt-4 border-t">
-              <a href="tel:+4917359994699">
+              <Link href="/termin">
                 <Button variant="secondary" className="w-full" data-testid="button-call-service-area">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen: 0173 5994699
+                  <Calendar className="w-4 h-4 mr-2" />
+                  24h Terminbuchung
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

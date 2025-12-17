@@ -24,7 +24,8 @@ import {
   Building,
   BadgeCheck,
   AlertTriangle,
-  TrendingUp
+  TrendingUp,
+  Calendar
 } from "lucide-react";
 import teamImage from "@assets/stock_images/professional_busines_7b2784dc.jpg";
 import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
@@ -256,10 +257,10 @@ export default function UeberUnsPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-about">
-                      <Phone className="w-5 h-5 mr-2" />
-                      0173 5994699
-                    </a>
+                    <Link href="/termin" data-testid="button-call-about">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                     <Link href="/termin" data-testid="button-rueckruf-about">
@@ -522,10 +523,10 @@ export default function UeberUnsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4917359994699" data-testid="button-call-cta">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0173 5994699
-                </a>
+                <Link href="/termin" data-testid="button-call-cta">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                 <Link href="/termin" data-testid="button-rueckruf-cta">

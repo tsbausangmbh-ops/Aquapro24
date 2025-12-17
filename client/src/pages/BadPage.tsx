@@ -21,7 +21,8 @@ import {
   Clock,
   ShieldCheck,
   Star,
-  ArrowRight
+  ArrowRight,
+  Calendar
 } from "lucide-react";
 import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
@@ -169,10 +170,10 @@ export default function BadPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
-                    <a href="tel:+4917359994699" data-testid="button-call-bad">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt beraten lassen
-                    </a>
+                    <Link href="/termin" data-testid="button-call-bad">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                   <ServiceBooking 
                     serviceType="bad" 
@@ -360,10 +361,10 @@ export default function BadPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4917359994699" data-testid="button-call-bad-cta">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0173 5994699
-                  </a>
+                  <Link href="/termin" data-testid="button-call-bad-cta">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    24h Terminbuchung
+                  </Link>
                 </Button>
                 <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
                   <Link href="/termin">
