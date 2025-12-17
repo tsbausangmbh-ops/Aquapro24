@@ -1,0 +1,108 @@
+1️⃣ Klare Prioritäten – welche Seiten Geld bringen
+🔥 PRIO 1 – Lead-Seiten (direkt Umsatz)
+
+Diese Seiten müssen Top-optimiert sein (SEO + Conversion):
+
+Startseite – https://089dach.de/
+
+Leistungen (Übersicht) – /leistungen
+
+Dachsanierung – /leistungen/dachsanierung
+
+Dachfenster – /leistungen/dachfenster
+
+Reparaturservice – /leistungen/reparaturservice
+
+Spenglerei – /leistungen/spenglerei
+
+Kontakt – /kontakt
+
+Rückruf – /rueckruf
+
+👉 Ziel: Anfragen generieren
+👉 Pflicht: Telefon, Rückruf, Trust-Elemente, Referenzen, klare CTA
+
+🟡 PRIO 2 – SEO-Verstärker (Google liebt das)
+
+Diese Seiten bringen Sichtbarkeit & Vertrauen:
+
+Energieberatung – /leistungen/energieberatung
+
+Wartung – /leistungen/wartung
+
+Referenzen – /referenzen
+
+Über uns – /ueber-uns
+
+FAQ – /faq
+
+👉 Ziel: Rankings + Seriosität
+👉 Pflicht: echte Inhalte, Bilder, strukturierte Texte
+
+🧠 PRIO 3 – Content & Expertenstatus
+
+Wichtig für langfristiges SEO, aber kein direkter Abschluss:
+
+Ratgeber – /ratgeber
+
+Dämmung – /ratgeber/daemmung
+
+Leckortung – /ratgeber/leckortung
+
+Beratung – /ratgeber/beratung
+
+Dämmung Info – /daemmung-info
+
+Heizkostenrechner – /heizkostenrechner
+
+👉 Ziel: Google-Autorität
+👉 Pflicht: hochwertige Texte (800–1.200 Wörter)
+
+📍 PRIO 4 – Lokale SEO-Hebel (sehr stark!)
+
+Extrem wichtig für München:
+
+Stadtteile – /stadtteile
+
+Dachdecker Pasing
+
+Dachdecker Laim
+
+Dachdecker Schwabing
+
+Dachdecker Sendling
+
+Dachdecker Gräfelfing
+
+👉 Ziel: „Dachdecker + Stadtteil“ Rankings
+👉 Pflicht: individuelle Texte, keine Duplikate!
+
+2️⃣ Technische Sofort-Checks (SEHR wichtig)
+
+Das solltest du sofort prüfen lassen:
+
+❗ 502 / Bad Gateway Fehler → Hosting / Server prüfen
+
+✅ sitemap.xml öffentlich & stabil erreichbar
+
+✅ robots.txt vorhanden
+
+✅ SSL sauber
+
+✅ Ladezeit < 2,5 Sekunden
+
+✅ Mobil optimiert (70 % der Anfragen!)
+
+3️⃣ Conversion-Optimierung (mehr Anfragen ohne mehr Traffic)
+
+Pflichtmaßnahmen:
+
+☎️ Telefon immer sichtbar (Sticky)
+
+🔁 Rückrufformular auf jeder Seite
+
+⭐ Google-Bewertungen einbauen
+
+📸 echte Projektbilder
+
+🧾 „Kostenlose Erstberatung“ klar hervorheben
