@@ -28,8 +28,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import drainImage1 from "@assets/stock_images/professional_drain_c_0dff8904.jpg";
-import drainImage2 from "@assets/stock_images/professional_drain_c_8e799d37.jpg";
+import drainImage1 from "@assets/generated_images/clean_modern_drain_grate.png";
+import drainImage2 from "@assets/generated_images/drain_cleaning_equipment.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 

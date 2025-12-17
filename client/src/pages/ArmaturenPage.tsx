@@ -28,8 +28,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import faucetImage1 from "@assets/stock_images/modern_chrome_bathro_28b94208.jpg";
-import faucetImage2 from "@assets/stock_images/modern_chrome_bathro_e22235b8.jpg";
+import faucetImage1 from "@assets/generated_images/modern_chrome_faucet.png";
+import faucetImage2 from "@assets/generated_images/faucet_installation_work.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 

@@ -138,49 +138,69 @@ export default function SanitaerPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${plumberImage1})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
-            <div className="max-w-2xl space-y-6">
-              <Badge className="gap-1 bg-blue-600 text-white border-0">
-                <Droplets className="w-3 h-3" />
-                Sanitär-Fachbetrieb München
-              </Badge>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white">
-                Sanitärinstallation & Wasserinstallation München
-              </h1>
-              <p className="text-lg lg:text-xl text-white/90">
-                <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
-                Situationen und wissen, wie stressig sie sein können.
-              </p>
-              <p className="text-white/80">
-                Als Münchner Partnernetzwerk mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
-                schnell, sauber und zum Festpreis.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-2">
-                <Button size="lg" className="bg-white text-black" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-sanitaer">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Jetzt anrufen
-                  </a>
-                </Button>
-                <ServiceBooking 
-                  serviceType="sanitaer" 
-                  buttonText="24h Buchungstermin"
-                  buttonSize="lg"
-                />
+        <section className="relative py-6 md:pt-8 pb-4 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge variant="secondary" className="mb-4">
+                  <Droplets className="w-3 h-3 mr-1" />
+                  Sanitär-Fachbetrieb München
+                </Badge>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                  Sanitärinstallation & Wasserinstallation München
+                </h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                  <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
+                  Situationen und wissen, wie stressig sie sein können.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Als Münchner Partnernetzwerk mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
+                  schnell, sauber und zum Festpreis. Stellen Sie sich vor: In wenigen Stunden ist alles 
+                  repariert und Sie können sich wieder auf die wichtigen Dinge konzentrieren.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4915212274043" data-testid="button-call-sanitaer">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Jetzt anrufen
+                    </a>
+                  </Button>
+                  <ServiceBooking 
+                    serviceType="sanitaer" 
+                    buttonText="24h Buchungstermin"
+                    buttonSize="lg"
+                  />
+                </div>
               </div>
-              <div className="flex flex-wrap gap-4 pt-4">
-                {["24/7 Notdienst", "Festpreis", "20+ Jahre Erfahrung"].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm text-white/90">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <span>{item}</span>
+              <div className="relative space-y-4">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={plumberImage1} 
+                    alt="Professioneller Sanitär-Fachmann bei der Arbeit" 
+                    className="w-full h-72 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      <Star className="w-3 h-3 mr-1" />
+                      Geprüfte Partner
+                    </Badge>
                   </div>
-                ))}
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="rounded-xl overflow-hidden shadow-lg">
+                    <img 
+                      src={plumberImage2} 
+                      alt="Sanitärinstallation in München" 
+                      className="w-full h-32 object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center">
+                    <div className="text-2xl font-bold text-secondary">20+ Jahre</div>
+                    <div className="text-sm text-muted-foreground">Erfahrung in München</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
