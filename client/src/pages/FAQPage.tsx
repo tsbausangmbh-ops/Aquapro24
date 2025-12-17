@@ -197,8 +197,8 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="FAQ | Häufige Fragen Sanitär & Heizung | AquaPro24"
-        description="Häufige Fragen zu Sanitär, Heizung & Badsanierung München. Preise, Notdienst, Förderungen erklärt. Tel: 0152 12274043"
+        title="FAQ Sanitär & Heizung München | Preise & Förderung"
+        description="Häufige Fragen: Was kostet ein Klempner? Heizungswartung Preise? BAFA-Förderung? Alle Antworten für München."
         canonical="https://kshw-muenchen.de/faq"
         keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />

@@ -351,8 +351,8 @@ export default function TerminPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Online Termin buchen | AquaPro24 München"
-        description="Termin online buchen bei AquaPro24 München. Echtzeit-Kalender, transparente Preise, 24/7 Notdienst. Schnell & einfach."
+        title="Termin buchen | Sanitär & Heizung München | Online"
+        description="Sanitär & Heizung Termin online buchen München. Echtzeit-Verfügbarkeit, transparente Preise, Bestätigung per E-Mail."
         canonical="https://aquapro24.de/termin"
         keywords="Termin buchen München, Sanitär Termin, Heizung Termin, Klempner München online buchen"
       />

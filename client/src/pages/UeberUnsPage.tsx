@@ -227,8 +227,8 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | AquaPro24 München | Seit 2005"
-        description="AquaPro24 München: Partnernetzwerk für Sanitär & Heizung seit 2005. 2.800+ Kunden, 24/7 Notdienst. Tel: 0152 12274043"
+        title="Über uns | Sanitär & Heizung München | Seit 2005"
+        description="Partnernetzwerk für Sanitär & Heizung München seit 2005. Geprüfte Fachbetriebe, 2.800+ zufriedene Kunden, Festpreisgarantie."
         canonical="https://aquapro24.de/ueber-uns"
         keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
         structuredData={aboutPageSchema}

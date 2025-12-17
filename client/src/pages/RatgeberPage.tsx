@@ -244,8 +244,8 @@ export default function RatgeberPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Ratgeber | Sanitär & Heizung Tipps | AquaPro24 München"
-        description="Expertentipps: Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpen-Förderung 2025. Praktisches Wissen für Hausbesitzer."
+        title="Ratgeber Sanitär & Heizung | Tipps vom Experten München"
+        description="Wasserschaden Erste Hilfe, Badsanierung planen, Heizungswartung Tipps, Wärmepumpen-Förderung 2025. Expertenwissen gratis."
         canonical="https://kshw-muenchen.de/ratgeber"
         keywords="Wasserschaden was tun München, Ratgeber Badsanierung Schwabing, Tipps Heizungswartung Bogenhausen, Wärmepumpe Förderung Bayern 2024, Sanitär Tipps Sendling, Ratgeber Pasing, Tipps Maxvorstadt, Guides Haidhausen, Ratgeber Neuhausen"
       />

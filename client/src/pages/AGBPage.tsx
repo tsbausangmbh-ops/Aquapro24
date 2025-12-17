@@ -7,8 +7,8 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AGB | Geschäftsbedingungen | AquaPro24 München"
-        description="AGB von AquaPro24 München für Sanitär- und Heizungsarbeiten. Festpreise, Gewährleistung, Zahlungsbedingungen."
+        title="AGB | Sanitär & Heizung München | Geschäftsbedingungen"
+        description="Allgemeine Geschäftsbedingungen für Sanitär- und Heizungsarbeiten München. Festpreise, Gewährleistung, Rechte."
         canonical="https://aquapro24.de/agb"
       />
       <Header />
