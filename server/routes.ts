@@ -554,6 +554,62 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
     }
   });
 
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, email, phone, subject, message } = req.body;
+      
+      if (!name || !email || !subject || !message) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Bitte füllen Sie alle Pflichtfelder aus." 
+        });
+      }
+
+      const contactMessage = await storage.createContactMessage({
+        name,
+        email,
+        phone: phone || undefined,
+        subject,
+        message,
+      });
+
+      // Send email notification
+      if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+        const emailText = `NEUE KONTAKTANFRAGE - AQUAPRO24
+
+VON:
+Name: ${name}
+E-Mail: ${email}
+Telefon: ${phone || "Nicht angegeben"}
+
+BETREFF:
+${subject}
+
+NACHRICHT:
+${message}
+
+---
+Diese E-Mail wurde automatisch vom AquaPro24 Kontaktformular gesendet.`;
+
+        try {
+          await emailTransporter.sendMail({
+            from: process.env.SMTP_USER,
+            to: "info@aquapro24.de",
+            subject: `Kontaktanfrage: ${subject}`,
+            text: emailText,
+          });
+        } catch (emailError) {
+          console.error("Failed to send contact email:", emailError);
+        }
+      }
+
+      res.json({ success: true, id: contactMessage.id });
+    } catch (error) {
+      console.error("Error creating contact message:", error);
+      res.status(500).json({ success: false, error: "Fehler beim Senden der Nachricht." });
+    }
+  });
+
   app.post("/api/chat", async (req, res) => {
     try {
       const { messages } = req.body as { messages: ChatMessage[] };

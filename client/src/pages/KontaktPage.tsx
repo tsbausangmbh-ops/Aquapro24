@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
@@ -5,6 +6,11 @@ import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 import { 
   Phone, 
   Mail, 
@@ -14,6 +20,8 @@ import {
   Calendar as CalendarIcon,
   Shield,
   Star,
+  Send,
+  Loader2,
 } from "lucide-react";
 
 const contactInfo = [
@@ -48,6 +56,49 @@ const contactInfo = [
 ];
 
 export default function KontaktPage() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast({
+        title: "Fehler",
+        description: "Bitte füllen Sie alle Pflichtfelder aus.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await apiRequest("POST", "/api/contact", formData);
+      
+      toast({
+        title: "Nachricht gesendet",
+        description: "Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.",
+      });
+      
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Fehler",
+        description: "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -103,6 +154,108 @@ export default function KontaktPage() {
                 </Card>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <section className="py-12 bg-muted/30">
+          <div className="max-w-3xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">Schreiben Sie uns</h2>
+              <p className="text-muted-foreground">
+                Haben Sie eine Frage oder möchten Sie ein Angebot? Wir antworten innerhalb von 24 Stunden.
+              </p>
+            </div>
+            
+            <Card>
+              <CardContent className="p-6">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name *</Label>
+                      <Input
+                        id="name"
+                        placeholder="Ihr vollständiger Name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        required
+                        data-testid="input-contact-name"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">E-Mail *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="ihre@email.de"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                        data-testid="input-contact-email"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Telefon (optional)</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="0152 12345678"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        data-testid="input-contact-phone"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="subject">Betreff *</Label>
+                      <Input
+                        id="subject"
+                        placeholder="Worum geht es?"
+                        value={formData.subject}
+                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        required
+                        data-testid="input-contact-subject"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Ihre Nachricht *</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Beschreiben Sie Ihr Anliegen..."
+                      rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      required
+                      data-testid="input-contact-message"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                    data-testid="button-contact-submit"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Wird gesendet...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Nachricht senden
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
