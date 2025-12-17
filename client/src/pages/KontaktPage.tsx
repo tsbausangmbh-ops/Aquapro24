@@ -329,11 +329,10 @@ export default function KontaktPage() {
 
         {/* Booking Form Section */}
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-6">
-              {/* Main Booking Form */}
-              <div className="lg:col-span-2">
-                <h2 className="text-2xl font-bold mb-6">Online Terminbuchung</h2>
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <div>
+              <div>
+                <h2 className="text-2xl font-bold mb-6 text-center">Online Terminbuchung</h2>
                 
                 {/* Progress Steps - Compact */}
                 {step <= 8 && (
@@ -875,72 +874,59 @@ export default function KontaktPage() {
                 )}
               </div>
 
-              {/* Sidebar */}
-              <div className="space-y-6">
-                {/* Trust Signals */}
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Shield className="w-8 h-8 text-accent" />
-                      <div>
-                        <h3 className="font-semibold">Ihre Vorteile</h3>
-                        <p className="text-sm text-muted-foreground">Bei AquaPro24</p>
-                      </div>
-                    </div>
-                    <ul className="space-y-3 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                        <span>Kostenlose Erstberatung</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                        <span>Transparente Festpreise</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                        <span>24/7 Notdienst verfügbar</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                        <span>Zertifizierte Meisterbetriebe</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                        <span>Garantie auf alle Arbeiten</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+            </div>
+          </div>
+        </section>
 
-                {/* Rating */}
-                <Card>
-                  <CardContent className="p-6 text-center">
-                    <div className="flex justify-center gap-1 mb-2">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="font-semibold">4.9 von 5 Sternen</p>
-                    <p className="text-sm text-muted-foreground">Basierend auf 2.847+ Bewertungen</p>
-                  </CardContent>
-                </Card>
+        {/* Benefits Section - Full Width */}
+        <section className="py-12 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl font-bold text-center mb-8">Das erwartet Sie</h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+              {[
+                { text: "Kostenlose Erstberatung am Telefon" },
+                { text: "Verbindliche Terminzusage" },
+                { text: "Transparente Festpreise vor Arbeitsbeginn" },
+                { text: "Pünktliche und saubere Arbeit" },
+                { text: "Rückruf innerhalb von 2 Stunden (tagsüber)" },
+                { text: "Meisterbetrieb-Qualität" },
+              ].map((benefit, index) => (
+                <div key={index} className="flex flex-col items-center text-center p-4">
+                  <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent" />
+                  </div>
+                  <p className="text-sm font-medium">{benefit.text}</p>
+                </div>
+              ))}
+            </div>
 
-                {/* Direct Contact */}
-                <Card className="bg-primary text-primary-foreground">
-                  <CardContent className="p-6 text-center">
-                    <Phone className="w-8 h-8 mx-auto mb-3" />
-                    <p className="text-sm mb-2">Lieber telefonisch?</p>
-                    <a 
-                      href="tel:+4915212274043" 
-                      className="text-xl font-bold block hover:underline"
-                      data-testid="link-phone-sidebar"
-                    >
-                      0152 12274043
-                    </a>
-                    <p className="text-xs mt-2 opacity-90">24/7 erreichbar</p>
-                  </CardContent>
-                </Card>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {/* Garantie */}
+              <Card>
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                    <Shield className="w-7 h-7 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">2 Jahre Garantie</h3>
+                    <p className="text-sm text-muted-foreground">Auf alle unsere Arbeiten gewähren wir eine zweijährige Garantie.</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Bewertung */}
+              <Card>
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center shrink-0">
+                    <Star className="w-7 h-7 fill-yellow-400 text-yellow-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">4.9/5 Sterne Bewertung</h3>
+                    <p className="text-sm text-muted-foreground">Über 2.847 zufriedene Kunden in München vertrauen uns.</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
