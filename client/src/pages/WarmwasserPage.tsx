@@ -106,8 +106,8 @@ export default function WarmwasserPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Warmwasser München | Durchlauferhitzer & Boiler Service | AquaPro24"
-        description="Warmwasser-Service München: Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren & installieren - Vaillant, Stiebel Eltron, Junkers. Tel: 0152 12274043"
+        title="Warmwasser München | Durchlauferhitzer Service | AquaPro24"
+        description="Kein Warmwasser? Durchlauferhitzer & Boiler Reparatur München. Vaillant, Stiebel Eltron, Junkers. Schnelle Hilfe: 0152 12274043"
         canonical="https://aquapro24.de/warmwasser"
         keywords="Warmwasser München, Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Durchlauferhitzer reparieren München, Boiler installieren München, kein warmes Wasser München, Warmwasser Notdienst München, Stiebel Eltron München, Vaillant München, Junkers München, Warmwasserbereiter München"
         aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0152 12274043"

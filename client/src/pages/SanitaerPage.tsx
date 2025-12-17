@@ -105,8 +105,8 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitär München | Klempner Notdienst 24/7 | Festpreis ab 89€ | AquaPro24"
-        description="Sanitär-Notdienst München: Rohrbruch, verstopfter Abfluss, tropfender Wasserhahn - wir helfen sofort! 45 Min. vor Ort, Festpreis, alle Stadtteile. 847+ zufriedene Kunden. Tel: 0152 12274043"
+        title="Sanitär München | Klempner Notdienst 24/7 | AquaPro24"
+        description="Sanitär-Notdienst München: Rohrbruch, verstopfte Abflüsse, Wasserhahn-Reparatur. In 45 Min. vor Ort. Festpreis ab 89€. Tel: 0152 12274043"
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Klempner München, Klempner Notdienst München, Rohrbruch München, Sanitär Notdienst, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, Installateur München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Sanitär Solln, Klempner Hadern, Sanitär Allach, Klempner Aubing, Sanitär Feldmoching, Klempner Isarvorstadt, Sanitär Lehel, Klempner Westpark, Wasserhahn tropft München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Sanitär Notdienst Schwabing, Klempner Notdienst Bogenhausen"
         aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
