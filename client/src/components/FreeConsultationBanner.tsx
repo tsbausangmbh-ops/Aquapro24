@@ -19,7 +19,7 @@ export default function FreeConsultationBanner({ variant = "full", className = "
         <span className="font-medium text-green-800 dark:text-green-100">
           Erstberatung & Kostenvoranschlag gratis
         </span>
-        <Button size="sm" asChild className="bg-green-600 hover:bg-green-700" data-testid="button-free-consultation-inline">
+        <Button size="sm" asChild className="bg-red-600 hover:bg-red-700" data-testid="button-free-consultation-inline">
           <Link href="/termin">
             <Calendar className="w-4 h-4 mr-1" />
             24h Terminbuchung
@@ -99,7 +99,7 @@ export default function FreeConsultationBanner({ variant = "full", className = "
             </Button>
             <Button 
               size="lg" 
-              className="bg-green-600 hover:bg-green-700 text-white border-green-700"
+              className="bg-red-600 hover:bg-red-700 text-white border-green-700"
               asChild
               data-testid="button-free-consultation-termin"
             >

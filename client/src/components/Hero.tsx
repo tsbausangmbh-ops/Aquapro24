@@ -51,7 +51,7 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button size="lg" className="gap-2 text-base bg-green-600 hover:bg-green-700 text-white border-green-700" asChild data-testid="button-call-hero">
+              <Button size="lg" className="gap-2 text-base bg-red-600 hover:bg-red-700 text-white border-red-700" asChild data-testid="button-call-hero">
                 <Link href="/termin">
                   <Calendar className="w-5 h-5" />
                   24h Terminbuchung
@@ -59,7 +59,7 @@ export default function Hero() {
               </Button>
               <Button 
                 size="lg" 
-                className="gap-2 bg-green-600 hover:bg-green-700 text-white border-green-700" 
+                className="gap-2 bg-red-600 hover:bg-red-700 text-white border-red-700" 
                 asChild
                 data-testid="button-callback-hero"
               >

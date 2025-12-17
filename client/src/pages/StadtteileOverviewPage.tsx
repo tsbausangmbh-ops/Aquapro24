@@ -80,13 +80,13 @@ export default function StadtteileOverviewPage() {
                 </div>
               </div>
               <div className="flex flex-wrap justify-center gap-3">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
                   <Link href="/termin" data-testid="button-call-hero">
                     <Calendar className="w-4 h-4 mr-2" />
                     24h Terminbuchung
                   </Link>
                 </Button>
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
                   <Link href="/termin" data-testid="button-rueckruf-hero">
                     <Phone className="w-4 h-4 mr-2" />
                     Rückruf anfordern

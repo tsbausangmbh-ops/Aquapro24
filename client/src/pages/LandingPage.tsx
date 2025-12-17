@@ -81,7 +81,7 @@ export default function LandingPage() {
             </div>
             <span className="font-bold text-lg hidden sm:block">AquaPro24</span>
           </Link>
-          <Button className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
+          <Button className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
             <Link href="/termin" data-testid="button-call-header">
               <Calendar className="w-4 h-4 mr-2" />
               <span>24h Terminbuchung</span>
@@ -119,13 +119,13 @@ export default function LandingPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
                     <Link href="/termin" data-testid="button-call-landing-hero">
                       <Calendar className="w-5 h-5 mr-2" />
                       24h Terminbuchung
                     </Link>
                   </Button>
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
                     <Link href="/termin" data-testid="button-callback-landing">
                       <Phone className="w-5 h-5 mr-2" />
                       Rückruf anfordern
@@ -150,7 +150,7 @@ export default function LandingPage() {
                       </div>
                     ))}
                   </div>
-                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg" asChild>
+                  <Button size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg" asChild>
                     <Link href="/termin" data-testid="button-call-landing-form">
                       <Calendar className="w-5 h-5 mr-2" />
                       24h Terminbuchung
@@ -208,7 +208,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <div className="mt-8">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700" asChild>
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700" asChild>
                     <Link href="/termin" data-testid="button-call-landing-benefits">
                       <Calendar className="w-5 h-5 mr-2" />
                       24h Terminbuchung
@@ -262,13 +262,13 @@ export default function LandingPage() {
               und besprechen Ihre Situation - kostenlos und unverbindlich.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
                 <Link href="/termin" data-testid="button-call-landing-cta">
                   <Calendar className="w-5 h-5 mr-2" />
                   24h Terminbuchung
                 </Link>
               </Button>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white border-green-700 text-lg px-8" asChild>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white border-red-700 text-lg px-8" asChild>
                 <Link href="/termin" data-testid="button-callback-landing-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   Rückruf anfordern
