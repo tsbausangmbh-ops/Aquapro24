@@ -58,7 +58,7 @@ export default function Hero() {
               </Button>
               <Button 
                 size="lg" 
-                className="gap-2 bg-blue-600 text-white border-blue-700" 
+                className="gap-2 bg-secondary text-secondary-foreground" 
                 asChild
                 data-testid="button-termin-hero"
               >
