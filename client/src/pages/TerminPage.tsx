@@ -50,6 +50,8 @@ const bookingSchema = z.object({
   problemDetails: z.string().min(10, "Bitte beschreiben Sie Ihr Anliegen (min. 10 Zeichen)"),
   urgency: z.string().min(1, "Bitte wählen Sie die Dringlichkeit"),
   propertyType: z.string().min(1, "Bitte wählen Sie den Gebäudetyp"),
+  ownershipType: z.string().min(1, "Bitte wählen Sie Ihren Status"),
+  accessInfo: z.string().optional(),
   budget: z.string().min(1, "Bitte wählen Sie einen Budget-Rahmen"),
   preferredDate: z.string().min(1, "Bitte wählen Sie ein Datum"),
   preferredTime: z.string().min(1, "Bitte wählen Sie eine Uhrzeit"),
@@ -99,15 +101,26 @@ const budgetOptions = [
   { value: "beratung", label: "Erstmal beraten", description: "Kosten noch unklar" },
 ];
 
+const ownershipOptions = [
+  { value: "eigentuemer", label: "Eigentümer", description: "Ich besitze die Immobilie" },
+  { value: "mieter", label: "Mieter", description: "Ich bin Mieter" },
+  { value: "verwalter", label: "Hausverwaltung", description: "Ich verwalte die Immobilie" },
+  { value: "sonstige", label: "Sonstige", description: "Andere Beziehung" },
+];
+
 const stepLabels = [
   "Service",
   "Details",
   "Dringlichkeit",
   "Gebäude",
+  "Status",
+  "Zugang",
   "Budget",
   "Datum",
   "Uhrzeit",
-  "Kontakt"
+  "Name",
+  "Adresse",
+  "Prüfen"
 ];
 
 export default function TerminPage() {
@@ -122,6 +135,8 @@ export default function TerminPage() {
       problemDetails: "",
       urgency: "",
       propertyType: "",
+      ownershipType: "",
+      accessInfo: "",
       budget: "",
       preferredDate: "",
       preferredTime: "",
@@ -141,23 +156,22 @@ export default function TerminPage() {
 
   const bookingMutation = useMutation({
     mutationFn: async (data: BookingFormData) => {
-      return apiRequest("/api/leads", {
-        method: "POST",
-        body: JSON.stringify({
-          name: data.name,
-          phone: data.phone,
-          email: data.email || undefined,
-          address: data.address,
-          serviceTypes: [data.serviceType],
-          description: data.problemDetails,
-          preferredDate: data.preferredDate,
-          preferredTime: data.preferredTime,
-          urgency: data.urgency,
-          propertyType: data.propertyType,
-          budget: data.budget,
-          source: "termin-page-8step",
-          isEmergency: data.urgency === "sofort" ? "akut" : "normal",
-        }),
+      return apiRequest("POST", "/api/leads", {
+        name: data.name,
+        phone: data.phone,
+        email: data.email || undefined,
+        address: data.address,
+        serviceTypes: [data.serviceType],
+        description: data.problemDetails,
+        preferredDate: data.preferredDate,
+        preferredTime: data.preferredTime,
+        urgency: data.urgency,
+        propertyType: data.propertyType,
+        ownershipType: data.ownershipType,
+        accessInfo: data.accessInfo,
+        budget: data.budget,
+        source: "termin-page-12step",
+        isEmergency: data.urgency === "sofort" ? "akut" : "normal",
       });
     },
     onSuccess: () => {
@@ -166,7 +180,7 @@ export default function TerminPage() {
         description: "Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.",
       });
       queryClient.invalidateQueries({ queryKey: ["/api/leads"] });
-      setStep(9);
+      setStep(13);
     },
     onError: () => {
       toast({
@@ -202,20 +216,24 @@ export default function TerminPage() {
       case 2: return ["problemDetails"];
       case 3: return ["urgency"];
       case 4: return ["propertyType"];
-      case 5: return ["budget"];
-      case 6: return ["preferredDate"];
-      case 7: return ["preferredTime"];
-      case 8: return ["name", "phone", "address"];
+      case 5: return ["ownershipType"];
+      case 6: return [];
+      case 7: return ["budget"];
+      case 8: return ["preferredDate"];
+      case 9: return ["preferredTime"];
+      case 10: return ["name", "phone"];
+      case 11: return ["address"];
+      case 12: return [];
       default: return [];
     }
   };
 
   const nextStep = async () => {
     const fields = getFieldsForStep(step);
-    const valid = await form.trigger(fields);
-    if (valid && step < 8) {
+    const valid = fields.length === 0 || await form.trigger(fields);
+    if (valid && step < 12) {
       setStep(step + 1);
-    } else if (valid && step === 8) {
+    } else if (valid && step === 12) {
       form.handleSubmit(onSubmit)();
     }
   };
@@ -264,16 +282,16 @@ export default function TerminPage() {
             <h2 className="text-2xl font-bold mb-6 text-center">Online Terminbuchung</h2>
             
             {/* Progress Steps */}
-            {step <= 8 && (
+            {step <= 12 && (
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium">Schritt {step} von 8</span>
+                  <span className="text-sm font-medium">Schritt {step} von 12</span>
                   <span className="text-sm text-muted-foreground">{stepLabels[step - 1]}</span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-2">
                   <div 
                     className="bg-primary h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${(step / 8) * 100}%` }}
+                    style={{ width: `${(step / 12) * 100}%` }}
                   />
                 </div>
                 <div className="flex justify-between mt-2">
@@ -290,7 +308,7 @@ export default function TerminPage() {
               </div>
             )}
 
-            {step === 9 ? (
+            {step === 13 ? (
               <Card className="max-w-lg mx-auto">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
@@ -498,8 +516,97 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 5: Budget */}
+                  {/* Step 5: Ownership Type */}
                   {step === 5 && (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <User className="w-5 h-5" />
+                          Sind Sie Eigentümer oder Mieter?
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <FormField
+                          control={form.control}
+                          name="ownershipType"
+                          render={({ field }) => (
+                            <FormItem>
+                              <div className="grid grid-cols-2 gap-3">
+                                {ownershipOptions.map((option) => (
+                                  <Button
+                                    key={option.value}
+                                    type="button"
+                                    variant={field.value === option.value ? "default" : "outline"}
+                                    className="h-auto py-4 px-4 flex flex-col items-start gap-1"
+                                    onClick={() => {
+                                      selectOption("ownershipType", option.value);
+                                      setTimeout(() => nextStep(), 150);
+                                    }}
+                                    data-testid={`ownership-${option.value}`}
+                                  >
+                                    <span className="font-semibold">{option.label}</span>
+                                    <span className="text-xs text-muted-foreground">{option.description}</span>
+                                  </Button>
+                                ))}
+                              </div>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <div className="flex justify-start mt-6">
+                          <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            Zurück
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+
+                  {/* Step 6: Access Info */}
+                  {step === 6 && (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <MapPin className="w-5 h-5" />
+                          Zugang zum Gebäude
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-6">
+                        <FormField
+                          control={form.control}
+                          name="accessInfo"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Gibt es besondere Hinweise zum Zugang? (optional)</FormLabel>
+                              <FormControl>
+                                <Textarea
+                                  {...field}
+                                  placeholder="z.B. Hinterhaus, 3. Stock ohne Aufzug, Schlüssel beim Nachbarn..."
+                                  className="min-h-[100px]"
+                                  data-testid="input-access-info"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <div className="flex justify-between">
+                          <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            Zurück
+                          </Button>
+                          <Button type="button" onClick={nextStep} data-testid="button-next">
+                            Weiter
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+
+                  {/* Step 7: Budget */}
+                  {step === 7 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -545,8 +652,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 6: Date Selection */}
-                  {step === 6 && (
+                  {/* Step 8: Date Selection */}
+                  {step === 8 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -594,8 +701,8 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 7: Time Selection */}
-                  {step === 7 && (
+                  {/* Step 9: Time Selection */}
+                  {step === 9 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
@@ -660,66 +767,72 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 8: Contact Details */}
-                  {step === 8 && (
+                  {/* Step 10: Name & Phone */}
+                  {step === 10 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <User className="w-5 h-5" />
-                          Ihre Kontaktdaten
+                          Wie heißen Sie?
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-4">
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <FormField
-                            control={form.control}
-                            name="name"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Name *</FormLabel>
-                                <FormControl>
-                                  <div className="relative">
-                                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                                    <Input {...field} placeholder="Ihr Name" className="pl-10" data-testid="input-name" />
-                                  </div>
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          <FormField
-                            control={form.control}
-                            name="phone"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Telefon *</FormLabel>
-                                <FormControl>
-                                  <div className="relative">
-                                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                                    <Input {...field} type="tel" placeholder="Ihre Telefonnummer" className="pl-10" data-testid="input-phone" />
-                                  </div>
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
                         <FormField
                           control={form.control}
-                          name="email"
+                          name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>E-Mail (optional)</FormLabel>
+                              <FormLabel>Ihr Name *</FormLabel>
                               <FormControl>
                                 <div className="relative">
-                                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                                  <Input {...field} type="email" placeholder="ihre@email.de" className="pl-10" data-testid="input-email" />
+                                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                  <Input {...field} placeholder="Vor- und Nachname" className="pl-10" data-testid="input-name" />
                                 </div>
                               </FormControl>
                               <FormMessage />
                             </FormItem>
                           )}
                         />
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Telefonnummer *</FormLabel>
+                              <FormControl>
+                                <div className="relative">
+                                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                  <Input {...field} type="tel" placeholder="Für Rückfragen und Terminbestätigung" className="pl-10" data-testid="input-phone" />
+                                </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <div className="flex justify-between mt-6">
+                          <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            Zurück
+                          </Button>
+                          <Button type="button" onClick={nextStep} data-testid="button-next">
+                            Weiter
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+
+                  {/* Step 11: Address & Email */}
+                  {step === 11 && (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <MapPin className="w-5 h-5" />
+                          Wo sollen wir hinkommen?
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
                         <FormField
                           control={form.control}
                           name="address"
@@ -729,23 +842,74 @@ export default function TerminPage() {
                               <FormControl>
                                 <div className="relative">
                                   <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                                  <Input {...field} placeholder="Straße, PLZ Ort" className="pl-10" data-testid="input-address" />
+                                  <Input {...field} placeholder="Straße, Hausnummer, PLZ Ort" className="pl-10" data-testid="input-address" />
                                 </div>
                               </FormControl>
                               <FormMessage />
                             </FormItem>
                           )}
                         />
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>E-Mail (optional)</FormLabel>
+                              <FormControl>
+                                <div className="relative">
+                                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                  <Input {...field} type="email" placeholder="Für Terminbestätigung per E-Mail" className="pl-10" data-testid="input-email" />
+                                </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <div className="flex justify-between mt-6">
+                          <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            Zurück
+                          </Button>
+                          <Button type="button" onClick={nextStep} data-testid="button-next">
+                            Weiter
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
 
-                        {/* Summary */}
-                        <div className="bg-muted/50 rounded-lg p-4 mt-6">
-                          <p className="font-medium mb-2">Zusammenfassung:</p>
-                          <div className="text-sm text-muted-foreground space-y-1">
+                  {/* Step 12: Summary & Confirmation */}
+                  {step === 12 && (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <CheckCircle2 className="w-5 h-5" />
+                          Ihre Anfrage prüfen
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div className="bg-muted/50 rounded-lg p-4">
+                          <p className="font-medium mb-3">Zusammenfassung Ihrer Anfrage:</p>
+                          <div className="text-sm space-y-2">
                             <p><strong>Service:</strong> {serviceTypes.find(s => s.value === form.getValues("serviceType"))?.label}</p>
+                            <p><strong>Problem:</strong> {form.getValues("problemDetails")?.substring(0, 100)}{form.getValues("problemDetails")?.length > 100 ? "..." : ""}</p>
                             <p><strong>Dringlichkeit:</strong> {urgencyOptions.find(u => u.value === form.getValues("urgency"))?.label}</p>
                             <p><strong>Gebäude:</strong> {propertyTypes.find(p => p.value === form.getValues("propertyType"))?.label}</p>
+                            <p><strong>Status:</strong> {ownershipOptions.find(o => o.value === form.getValues("ownershipType"))?.label}</p>
                             <p><strong>Budget:</strong> {budgetOptions.find(b => b.value === form.getValues("budget"))?.label}</p>
                             <p><strong>Termin:</strong> {selectedDate ? format(selectedDate, "dd. MMMM yyyy", { locale: de }) : ""} um {form.getValues("preferredTime")} Uhr</p>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-secondary/10 rounded-lg p-4">
+                          <p className="font-medium mb-3">Ihre Kontaktdaten:</p>
+                          <div className="text-sm space-y-2">
+                            <p><strong>Name:</strong> {form.getValues("name")}</p>
+                            <p><strong>Telefon:</strong> {form.getValues("phone")}</p>
+                            <p><strong>E-Mail:</strong> {form.getValues("email") || "Nicht angegeben"}</p>
+                            <p><strong>Adresse:</strong> {form.getValues("address")}</p>
+                            {form.getValues("accessInfo") && <p><strong>Zugang:</strong> {form.getValues("accessInfo")}</p>}
                           </div>
                         </div>
 

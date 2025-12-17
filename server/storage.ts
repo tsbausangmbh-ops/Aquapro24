@@ -6,8 +6,16 @@ export interface Lead {
   problem: string;
   address: string;
   urgency: string;
+  propertyType?: string;
+  ownershipType?: string;
+  accessInfo?: string;
+  budget?: string;
+  preferredDate?: string;
+  preferredTime?: string;
   source: string;
   pageUrl?: string;
+  isEmergency?: string;
+  serviceTypes?: string[];
   createdAt: Date;
 }
 

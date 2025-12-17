@@ -472,12 +472,20 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
       const lead = await storage.createLead({
         name: leadData.name,
         phone: leadData.phone,
-        email: leadData.email,
-        problem: leadData.problem || leadData.serviceTypes?.join(', ') || '',
+        email: leadData.email || "",
+        problem: leadData.problem || leadData.description || leadData.serviceTypes?.join(', ') || '',
         address: leadData.address,
         urgency: leadData.urgency,
+        propertyType: leadData.propertyType,
+        ownershipType: leadData.ownershipType,
+        accessInfo: leadData.accessInfo,
+        budget: leadData.budget,
+        preferredDate: leadData.preferredDate,
+        preferredTime: leadData.preferredTime,
         source: leadData.source || "website",
         pageUrl: leadData.page_url,
+        isEmergency: leadData.isEmergency,
+        serviceTypes: leadData.serviceTypes,
         createdAt: new Date(),
       });
       
