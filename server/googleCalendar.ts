@@ -1,23 +1,8 @@
 // Google Calendar Integration for Replit
+// Single calendar approach: All events in primary calendar, filtered by service type (Gewerk)
 import { google } from 'googleapis';
 
 let connectionSettings: any;
-
-// Calendar mapping for different service types (Gewerke)
-// Each service can have its own calendar for separate availability
-const SERVICE_CALENDAR_MAP: Record<string, string> = {
-  sanitaer: process.env.CALENDAR_SANITAER || 'primary',
-  heizung: process.env.CALENDAR_HEIZUNG || 'primary',
-  bad: process.env.CALENDAR_BAD || 'primary',
-  waermepumpe: process.env.CALENDAR_WAERMEPUMPE || 'primary',
-  notdienst: process.env.CALENDAR_NOTDIENST || 'primary',
-  beratung: process.env.CALENDAR_BERATUNG || 'primary',
-  haustechnik: process.env.CALENDAR_HAUSTECHNIK || 'primary',
-};
-
-export function getCalendarIdForService(serviceType: string): string {
-  return SERVICE_CALENDAR_MAP[serviceType] || 'primary';
-}
 
 async function getAccessToken() {
   if (connectionSettings && connectionSettings.settings.expires_at && new Date(connectionSettings.settings.expires_at).getTime() > Date.now()) {
@@ -88,10 +73,9 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     const serviceLabel = data.serviceTypes.join(', ') || 'Sanitär-Anfrage';
     const urgencyLabel = getUrgencyLabel(data.urgency, data.isEmergency);
     
-    // Get the calendar ID for the primary service type
-    const primaryService = data.serviceTypes[0] || 'sanitaer';
-    const calendarId = getCalendarIdForService(primaryService);
-    console.log(`Creating event in calendar for service "${primaryService}": ${calendarId}`);
+    // Always use primary calendar - service type is included in the event title for filtering
+    const calendarId = 'primary';
+    console.log(`Creating event in primary calendar for services: ${serviceLabel}`);
     
     const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
     const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
@@ -192,6 +176,26 @@ function getBudgetLabel(budget: string): string {
   }
 }
 
+// Map service type codes to German labels for filtering calendar events by Gewerk
+function getServiceLabel(serviceType: string): string {
+  switch (serviceType.toLowerCase()) {
+    case 'sanitaer':
+    case 'sanitär':
+      return 'Sanitär';
+    case 'heizung':
+      return 'Heizung';
+    case 'bad':
+      return 'Bad';
+    case 'waermepumpe':
+    case 'wärmepumpe':
+      return 'Wärmepumpe';
+    case 'haustechnik':
+      return 'Haustechnik';
+    default:
+      return serviceType;
+  }
+}
+
 // Get available time slots for a given date
 export interface TimeSlot {
   time: string;
@@ -225,9 +229,9 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     { time: "15:30", available: true, label: "15:30 - 16:30 Uhr" },
   ];
 
-  // Get the calendar ID for the specific service type (Gewerk)
-  const calendarId = serviceType ? getCalendarIdForService(serviceType) : 'primary';
-  console.log(`Checking calendar for service "${serviceType || 'default'}": ${calendarId}`);
+  // Always use primary calendar, but filter events by service type (Gewerk)
+  const calendarId = 'primary';
+  console.log(`Checking calendar for service "${serviceType || 'all'}"`);
 
   try {
     const calendar = await getUncachableGoogleCalendarClient();
@@ -238,7 +242,7 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     const endOfDay = new Date(date);
     endOfDay.setHours(23, 59, 59, 999);
 
-    // Fetch events for the given date from the service-specific calendar
+    // Fetch all events for the given date from the primary calendar
     const response = await calendar.events.list({
       calendarId: calendarId,
       timeMin: startOfDay.toISOString(),
@@ -248,9 +252,21 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
       timeZone: 'Europe/Berlin',
     });
 
-    const events = response.data.items || [];
+    const allEvents = response.data.items || [];
     
-    // Mark time slots as unavailable if they overlap with existing events
+    // Filter events by service type (Gewerk) - only block slots for matching service
+    // Event titles are formatted like "🔧 Name - Sanitär" or "🔧 Name - Heizung, Bad"
+    const events = serviceType 
+      ? allEvents.filter(event => {
+          const summary = event.summary?.toLowerCase() || '';
+          const serviceLabel = getServiceLabel(serviceType).toLowerCase();
+          return summary.includes(serviceLabel);
+        })
+      : allEvents;
+    
+    console.log(`Found ${allEvents.length} total events, ${events.length} for service "${serviceType || 'all'}"`);
+    
+    // Mark time slots as unavailable if they overlap with existing events for this Gewerk
     // Including 90 minute buffer before and after each event
     for (const event of events) {
       if (event.start?.dateTime && event.end?.dateTime) {
