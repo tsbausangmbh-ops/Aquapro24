@@ -41,7 +41,7 @@ export default function CTABanner() {
             asChild
             data-testid="button-termin-cta"
           >
-            <Link href="/termin">
+            <Link href="/kontakt">
               <Clock className="w-5 h-5" />
               24h Terminbuchung
             </Link>

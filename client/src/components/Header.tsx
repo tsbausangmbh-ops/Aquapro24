@@ -152,7 +152,7 @@ export default function Header() {
 
             <div className="hidden md:flex items-center gap-3">
               <Button variant="outline" asChild data-testid="nav-termin">
-                <Link href="/termin">
+                <Link href="/kontakt">
                   <CalendarIcon className="w-4 h-4 mr-2" />
                   24h Terminbuchung
                 </Link>
@@ -244,7 +244,7 @@ export default function Header() {
               </Link>
               <hr className="my-2 border-border" />
               <Button variant="outline" className="mt-2" asChild data-testid="nav-termin-mobile">
-                <Link href="/termin" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/kontakt" onClick={() => setMobileMenuOpen(false)}>
                   <CalendarIcon className="w-4 h-4 mr-2" />
                   24h Terminbuchung
                 </Link>

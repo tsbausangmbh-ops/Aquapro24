@@ -388,7 +388,7 @@ export default function SanitaerPage() {
                 </a>
               </Button>
               <Button size="lg" className="bg-white text-secondary border-white" asChild>
-                <Link href="/termin">
+                <Link href="/kontakt">
                   <Clock className="w-4 h-4 mr-2" />
                   24h Terminbuchung
                 </Link>

@@ -261,7 +261,7 @@ export default function FAQPage() {
             
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Button size="lg" className="gap-2" asChild>
-                <Link href="/termin">
+                <Link href="/kontakt">
                   <Calendar className="w-5 h-5" />
                   Beratungstermin buchen
                 </Link>
@@ -281,7 +281,7 @@ export default function FAQPage() {
                 </a>
               </Button>
               <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
-                <Link href="/termin">
+                <Link href="/kontakt">
                   <Clock className="w-5 h-5 mr-2" />
                   24h Terminbuchung
                 </Link>

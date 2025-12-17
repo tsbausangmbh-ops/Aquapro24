@@ -116,7 +116,7 @@ export default function FunnelJourney() {
               </a>
             </Button>
             <Button size="lg" className="bg-secondary text-secondary-foreground" asChild>
-              <Link href="/termin" data-testid="button-funnel-buchung">
+              <Link href="/kontakt" data-testid="button-funnel-buchung">
                 <Clock className="w-4 h-4 mr-2" />
                 24h Buchungstermin
               </Link>

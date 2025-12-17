@@ -62,7 +62,7 @@ export default function Hero() {
                 asChild
                 data-testid="button-termin-hero"
               >
-                <Link href="/termin">
+                <Link href="/kontakt">
                   <Clock className="w-4 h-4" />
                   24h Terminbuchung
                 </Link>
