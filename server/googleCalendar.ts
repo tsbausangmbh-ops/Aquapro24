@@ -3,6 +3,22 @@ import { google } from 'googleapis';
 
 let connectionSettings: any;
 
+// Calendar mapping for different service types (Gewerke)
+// Each service can have its own calendar for separate availability
+const SERVICE_CALENDAR_MAP: Record<string, string> = {
+  sanitaer: process.env.CALENDAR_SANITAER || 'primary',
+  heizung: process.env.CALENDAR_HEIZUNG || 'primary',
+  bad: process.env.CALENDAR_BAD || 'primary',
+  waermepumpe: process.env.CALENDAR_WAERMEPUMPE || 'primary',
+  notdienst: process.env.CALENDAR_NOTDIENST || 'primary',
+  beratung: process.env.CALENDAR_BERATUNG || 'primary',
+  haustechnik: process.env.CALENDAR_HAUSTECHNIK || 'primary',
+};
+
+export function getCalendarIdForService(serviceType: string): string {
+  return SERVICE_CALENDAR_MAP[serviceType] || 'primary';
+}
+
 async function getAccessToken() {
   if (connectionSettings && connectionSettings.settings.expires_at && new Date(connectionSettings.settings.expires_at).getTime() > Date.now()) {
     return connectionSettings.settings.access_token;
@@ -60,6 +76,9 @@ export interface CalendarEventData {
   preferredDate?: string;
   preferredTime?: string;
   estimatedPrice?: string;
+  ownershipType?: string;
+  accessInfo?: string;
+  budget?: string;
 }
 
 export async function createCalendarEvent(data: CalendarEventData): Promise<string | null> {
@@ -69,12 +88,20 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     const serviceLabel = data.serviceTypes.join(', ') || 'Sanitär-Anfrage';
     const urgencyLabel = getUrgencyLabel(data.urgency, data.isEmergency);
     
+    // Get the calendar ID for the primary service type
+    const primaryService = data.serviceTypes[0] || 'sanitaer';
+    const calendarId = getCalendarIdForService(primaryService);
+    console.log(`Creating event in calendar for service "${primaryService}": ${calendarId}`);
+    
     const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
     const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
     
     const appointmentInfo = data.preferredDate && data.preferredTime 
       ? `${data.preferredDate} um ${data.preferredTime} Uhr`
       : data.preferredDate || data.preferredTime || 'Nicht angegeben';
+    
+    const ownershipLabel = data.ownershipType ? getOwnershipLabel(data.ownershipType) : '';
+    const budgetLabel = data.budget ? getBudgetLabel(data.budget) : '';
     
     const eventDescription = `
 KUNDENANFRAGE - ${urgencyLabel}
@@ -83,8 +110,11 @@ Kunde: ${data.name}
 Telefon: ${data.phone}
 ${data.email ? `E-Mail: ${data.email}` : ''}
 Adresse: ${data.address}
+${ownershipLabel ? `Status: ${ownershipLabel}` : ''}
+${data.accessInfo ? `Zugang: ${data.accessInfo}` : ''}
 
 Leistungen: ${serviceLabel}
+${budgetLabel ? `Budget: ${budgetLabel}` : ''}
 Geschätzte Kosten: ${data.estimatedPrice || 'Vor Ort ermitteln'}
 
 ${data.description ? `Beschreibung:\n${data.description}` : ''}
@@ -93,7 +123,7 @@ Terminwunsch: ${appointmentInfo}
     `.trim();
 
     const event = await calendar.events.insert({
-      calendarId: 'primary',
+      calendarId: calendarId,
       requestBody: {
         summary: `🔧 ${data.name} - ${serviceLabel}`,
         description: eventDescription,
@@ -133,7 +163,32 @@ function getUrgencyLabel(urgency: string, isEmergency: string): string {
     case 'sofort': return 'SOFORT';
     case 'heute': return 'HEUTE';
     case 'woche': return 'Diese Woche';
+    case 'dringend': return 'Dringend';
+    case 'bald': return 'Bald';
+    case 'flexibel': return 'Flexibel';
     default: return 'Geplant';
+  }
+}
+
+function getOwnershipLabel(ownership: string): string {
+  switch (ownership) {
+    case 'eigentuemer': return 'Eigentümer';
+    case 'mieter': return 'Mieter';
+    case 'verwalter': return 'Hausverwaltung';
+    case 'sonstige': return 'Sonstige';
+    default: return ownership;
+  }
+}
+
+function getBudgetLabel(budget: string): string {
+  switch (budget) {
+    case 'unter-500': return 'Unter 500 Euro';
+    case '500-1500': return '500 - 1.500 Euro';
+    case '1500-5000': return '1.500 - 5.000 Euro';
+    case '5000-15000': return '5.000 - 15.000 Euro';
+    case 'ueber-15000': return 'Über 15.000 Euro';
+    case 'beratung': return 'Erstmal beraten';
+    default: return budget;
   }
 }
 
@@ -147,7 +202,7 @@ export interface TimeSlot {
 // Buffer time in minutes before and after each appointment
 const BUFFER_MINUTES = 90;
 
-export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
+export async function getAvailableTimeSlots(date: string, serviceType?: string): Promise<TimeSlot[]> {
   // Check if it's Saturday (6) or Sunday (0) - no appointments on weekends
   const dateObj = new Date(date);
   const dayOfWeek = dateObj.getDay();
@@ -170,6 +225,10 @@ export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
     { time: "15:30", available: true, label: "15:30 - 16:30 Uhr" },
   ];
 
+  // Get the calendar ID for the specific service type (Gewerk)
+  const calendarId = serviceType ? getCalendarIdForService(serviceType) : 'primary';
+  console.log(`Checking calendar for service "${serviceType || 'default'}": ${calendarId}`);
+
   try {
     const calendar = await getUncachableGoogleCalendarClient();
     
@@ -179,9 +238,9 @@ export async function getAvailableTimeSlots(date: string): Promise<TimeSlot[]> {
     const endOfDay = new Date(date);
     endOfDay.setHours(23, 59, 59, 999);
 
-    // Fetch events for the given date
+    // Fetch events for the given date from the service-specific calendar
     const response = await calendar.events.list({
-      calendarId: 'primary',
+      calendarId: calendarId,
       timeMin: startOfDay.toISOString(),
       timeMax: endOfDay.toISOString(),
       singleEvents: true,

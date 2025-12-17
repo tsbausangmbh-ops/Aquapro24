@@ -503,6 +503,9 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
           preferredDate: leadData.preferredDate,
           preferredTime: leadData.preferredTime,
           estimatedPrice: leadData.estimatedPrice,
+          ownershipType: leadData.ownershipType,
+          accessInfo: leadData.accessInfo,
+          budget: leadData.budget,
         });
       } catch (calendarError) {
         console.error("Failed to create calendar event:", calendarError);
@@ -532,7 +535,7 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
   // Get available time slots for a specific date from Google Calendar
   app.get("/api/calendar/available-slots", async (req, res) => {
     try {
-      const { date } = req.query;
+      const { date, service } = req.query;
       
       if (!date || typeof date !== 'string') {
         return res.status(400).json({ 
@@ -541,8 +544,9 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
         });
       }
 
-      const timeSlots = await getAvailableTimeSlots(date);
-      res.json({ success: true, slots: timeSlots });
+      const serviceType = typeof service === 'string' ? service : undefined;
+      const timeSlots = await getAvailableTimeSlots(date, serviceType);
+      res.json({ success: true, slots: timeSlots, service: serviceType || 'default' });
     } catch (error) {
       console.error("Error fetching available slots:", error);
       // Return default slots if calendar is not connected

@@ -148,10 +148,20 @@ export default function TerminPage() {
   });
 
   const dateString = selectedDate ? format(selectedDate, "yyyy-MM-dd") : "";
+  const selectedService = form.watch("serviceType");
 
-  const { data: slotsData, isLoading: slotsLoading } = useQuery<{ success: boolean; slots: TimeSlot[] }>({
-    queryKey: [`/api/calendar/available-slots?date=${dateString}`],
-    enabled: !!dateString,
+  // Query available slots for the selected date AND service type (Gewerk-spezifisch)
+  const { data: slotsData, isLoading: slotsLoading } = useQuery<{ success: boolean; slots: TimeSlot[]; service?: string }>({
+    queryKey: ['/api/calendar/available-slots', dateString, selectedService],
+    queryFn: async () => {
+      const params = new URLSearchParams({ date: dateString });
+      if (selectedService) {
+        params.append('service', selectedService);
+      }
+      const response = await fetch(`/api/calendar/available-slots?${params.toString()}`);
+      return response.json();
+    },
+    enabled: !!dateString && !!selectedService,
   });
 
   const bookingMutation = useMutation({
