@@ -35,10 +35,8 @@ import {
   Mail, 
   MapPin, 
   Clock, 
-  MessageSquare,
   CheckCircle2,
   Building,
-  Car,
   Calendar as CalendarIcon,
   User,
   Wrench,
@@ -46,19 +44,26 @@ import {
   ArrowLeft,
   Shield,
   Star,
+  AlertTriangle,
+  Home,
+  Euro,
+  FileText,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 
 const bookingSchema = z.object({
+  serviceType: z.string().min(1, "Bitte wählen Sie einen Service"),
+  problemDetails: z.string().min(10, "Bitte beschreiben Sie Ihr Anliegen (min. 10 Zeichen)"),
+  urgency: z.string().min(1, "Bitte wählen Sie die Dringlichkeit"),
+  propertyType: z.string().min(1, "Bitte wählen Sie den Gebäudetyp"),
+  budget: z.string().min(1, "Bitte wählen Sie einen Budget-Rahmen"),
+  preferredDate: z.string().min(1, "Bitte wählen Sie ein Datum"),
+  preferredTime: z.string().min(1, "Bitte wählen Sie eine Uhrzeit"),
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein").optional().or(z.literal("")),
   address: z.string().min(5, "Bitte geben Sie Ihre Adresse ein"),
-  serviceType: z.string().min(1, "Bitte wählen Sie einen Service"),
-  description: z.string().min(10, "Bitte beschreiben Sie Ihr Anliegen (min. 10 Zeichen)"),
-  preferredDate: z.string().min(1, "Bitte wählen Sie ein Datum"),
-  preferredTime: z.string().min(1, "Bitte wählen Sie eine Uhrzeit"),
 });
 
 type BookingFormData = z.infer<typeof bookingSchema>;
@@ -70,12 +75,35 @@ interface TimeSlot {
 }
 
 const serviceTypes = [
-  { value: "sanitaer", label: "Sanitär & Klempner" },
-  { value: "heizung", label: "Heizung & Wartung" },
-  { value: "bad", label: "Badsanierung" },
-  { value: "waermepumpe", label: "Wärmepumpe" },
-  { value: "notdienst", label: "Notdienst (dringend)" },
-  { value: "beratung", label: "Kostenlose Beratung" },
+  { value: "sanitaer", label: "Sanitär & Klempner", icon: Wrench },
+  { value: "heizung", label: "Heizung & Wartung", icon: Home },
+  { value: "bad", label: "Badsanierung", icon: Home },
+  { value: "waermepumpe", label: "Wärmepumpe", icon: Home },
+  { value: "notdienst", label: "Notdienst (dringend)", icon: AlertTriangle },
+  { value: "beratung", label: "Kostenlose Beratung", icon: FileText },
+];
+
+const urgencyOptions = [
+  { value: "flexibel", label: "Flexibel", description: "Innerhalb der nächsten 2-4 Wochen" },
+  { value: "bald", label: "Bald", description: "Innerhalb der nächsten 1-2 Wochen" },
+  { value: "dringend", label: "Dringend", description: "Innerhalb weniger Tage" },
+  { value: "sofort", label: "Notfall", description: "Heute oder morgen" },
+];
+
+const propertyTypes = [
+  { value: "wohnung", label: "Wohnung", description: "Mietwohnung oder Eigentum" },
+  { value: "haus", label: "Einfamilienhaus", description: "Eigenes Haus" },
+  { value: "mehrfamilienhaus", label: "Mehrfamilienhaus", description: "Vermieter / Hausverwaltung" },
+  { value: "gewerbe", label: "Gewerbe", description: "Geschäft, Büro, Praxis" },
+];
+
+const budgetOptions = [
+  { value: "unter-500", label: "Unter 500 Euro", description: "Kleine Reparaturen" },
+  { value: "500-1500", label: "500 - 1.500 Euro", description: "Mittlere Arbeiten" },
+  { value: "1500-5000", label: "1.500 - 5.000 Euro", description: "Größere Projekte" },
+  { value: "5000-15000", label: "5.000 - 15.000 Euro", description: "Sanierungen" },
+  { value: "ueber-15000", label: "Über 15.000 Euro", description: "Komplettsanierung" },
+  { value: "beratung", label: "Erstmal beraten", description: "Kosten noch unklar" },
 ];
 
 const contactInfo = [
@@ -109,19 +137,15 @@ const contactInfo = [
   }
 ];
 
-const serviceAreas = [
-  "München Zentrum",
-  "Schwabing",
-  "Bogenhausen",
-  "Sendling",
-  "Pasing",
-  "Laim",
-  "Neuhausen",
-  "Maxvorstadt",
-  "Haidhausen",
-  "Trudering",
-  "Giesing",
-  "Moosach"
+const stepLabels = [
+  "Service",
+  "Details",
+  "Dringlichkeit",
+  "Gebäude",
+  "Budget",
+  "Datum",
+  "Uhrzeit",
+  "Kontakt"
 ];
 
 export default function KontaktPage() {
@@ -132,14 +156,17 @@ export default function KontaktPage() {
   const form = useForm<BookingFormData>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
+      serviceType: "",
+      problemDetails: "",
+      urgency: "",
+      propertyType: "",
+      budget: "",
+      preferredDate: "",
+      preferredTime: "",
       name: "",
       phone: "",
       email: "",
       address: "",
-      serviceType: "",
-      description: "",
-      preferredDate: "",
-      preferredTime: "",
     },
   });
 
@@ -160,11 +187,14 @@ export default function KontaktPage() {
           email: data.email || undefined,
           address: data.address,
           serviceTypes: [data.serviceType],
-          description: data.description,
+          description: data.problemDetails,
           preferredDate: data.preferredDate,
           preferredTime: data.preferredTime,
-          source: "kontakt-page",
-          isEmergency: data.serviceType === "notdienst",
+          urgency: data.urgency,
+          propertyType: data.propertyType,
+          budget: data.budget,
+          source: "kontakt-page-8step",
+          isEmergency: data.urgency === "sofort" ? "akut" : "normal",
         }),
       });
     },
@@ -174,7 +204,7 @@ export default function KontaktPage() {
         description: "Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.",
       });
       queryClient.invalidateQueries({ queryKey: ["/api/leads"] });
-      setStep(4);
+      setStep(9);
     },
     onError: () => {
       toast({
@@ -190,6 +220,9 @@ export default function KontaktPage() {
     if (date) {
       form.setValue("preferredDate", format(date, "yyyy-MM-dd"));
       form.setValue("preferredTime", "");
+    } else {
+      form.setValue("preferredDate", "");
+      form.setValue("preferredTime", "");
     }
   };
 
@@ -201,18 +234,36 @@ export default function KontaktPage() {
     bookingMutation.mutate(data);
   };
 
+  const getFieldsForStep = (currentStep: number): (keyof BookingFormData)[] => {
+    switch (currentStep) {
+      case 1: return ["serviceType"];
+      case 2: return ["problemDetails"];
+      case 3: return ["urgency"];
+      case 4: return ["propertyType"];
+      case 5: return ["budget"];
+      case 6: return ["preferredDate"];
+      case 7: return ["preferredTime"];
+      case 8: return ["name", "phone", "address"];
+      default: return [];
+    }
+  };
+
   const nextStep = async () => {
-    if (step === 1) {
-      const valid = await form.trigger(["serviceType", "description"]);
-      if (valid) setStep(2);
-    } else if (step === 2) {
-      const valid = await form.trigger(["preferredDate", "preferredTime"]);
-      if (valid) setStep(3);
+    const fields = getFieldsForStep(step);
+    const valid = await form.trigger(fields);
+    if (valid && step < 8) {
+      setStep(step + 1);
+    } else if (valid && step === 8) {
+      form.handleSubmit(onSubmit)();
     }
   };
 
   const prevStep = () => {
     if (step > 1) setStep(step - 1);
+  };
+
+  const selectOption = (field: keyof BookingFormData, value: string) => {
+    form.setValue(field, value);
   };
 
   const availableSlots = slotsData?.slots?.filter(slot => slot.available) || [];
@@ -284,34 +335,34 @@ export default function KontaktPage() {
               <div className="lg:col-span-2">
                 <h2 className="text-2xl font-bold mb-6">Online Terminbuchung</h2>
                 
-                {/* Progress Steps */}
-                <div className="flex justify-center mb-8">
-                  <div className="flex items-center gap-2">
-                    {[1, 2, 3].map((s) => (
-                      <div key={s} className="flex items-center">
-                        <div
-                          className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                            step >= s
-                              ? "bg-primary text-primary-foreground"
-                              : "bg-muted text-muted-foreground"
-                          }`}
-                          data-testid={`step-indicator-${s}`}
+                {/* Progress Steps - Compact */}
+                {step <= 8 && (
+                  <div className="mb-8">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium">Schritt {step} von 8</span>
+                      <span className="text-sm text-muted-foreground">{stepLabels[step - 1]}</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div 
+                        className="bg-primary h-2 rounded-full transition-all duration-300"
+                        style={{ width: `${(step / 8) * 100}%` }}
+                      />
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      {stepLabels.map((label, index) => (
+                        <div 
+                          key={index}
+                          className={`text-xs ${step > index ? 'text-primary font-medium' : 'text-muted-foreground'}`}
+                          data-testid={`step-label-${index + 1}`}
                         >
-                          {step > s ? <CheckCircle2 className="w-5 h-5" /> : s}
+                          {index + 1}
                         </div>
-                        {s < 3 && (
-                          <div
-                            className={`w-12 h-1 mx-2 ${
-                              step > s ? "bg-primary" : "bg-muted"
-                            }`}
-                          />
-                        )}
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
-                {step === 4 ? (
+                {step === 9 ? (
                   <Card className="max-w-lg mx-auto">
                     <CardContent className="p-8 text-center">
                       <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
@@ -322,13 +373,16 @@ export default function KontaktPage() {
                         Ihre Terminanfrage wurde erfolgreich übermittelt. Wir prüfen die 
                         Verfügbarkeit und melden uns innerhalb weniger Stunden bei Ihnen.
                       </p>
-                      <div className="bg-muted/50 rounded-lg p-4 mb-6 text-left">
+                      <div className="bg-muted/50 rounded-lg p-4 mb-6 text-left space-y-2">
                         <p className="font-medium mb-2">Ihre Anfrage:</p>
                         <p className="text-sm text-muted-foreground">
-                          {serviceTypes.find(s => s.value === form.getValues("serviceType"))?.label}
+                          <strong>Service:</strong> {serviceTypes.find(s => s.value === form.getValues("serviceType"))?.label}
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          {form.getValues("preferredDate")} um {form.getValues("preferredTime")} Uhr
+                          <strong>Termin:</strong> {form.getValues("preferredDate")} um {form.getValues("preferredTime")} Uhr
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Budget:</strong> {budgetOptions.find(b => b.value === form.getValues("budget"))?.label}
                         </p>
                       </div>
                       <Button asChild>
@@ -339,52 +393,69 @@ export default function KontaktPage() {
                 ) : (
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)}>
+                      {/* Step 1: Service Selection */}
                       {step === 1 && (
                         <Card>
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <Wrench className="w-5 h-5" />
-                              Schritt 1: Was können wir für Sie tun?
+                              Welchen Service benötigen Sie?
                             </CardTitle>
                           </CardHeader>
-                          <CardContent className="space-y-6">
+                          <CardContent>
                             <FormField
                               control={form.control}
                               name="serviceType"
                               render={({ field }) => (
                                 <FormItem>
-                                  <FormLabel>Service auswählen</FormLabel>
-                                  <Select onValueChange={field.onChange} value={field.value}>
-                                    <FormControl>
-                                      <SelectTrigger data-testid="select-service">
-                                        <SelectValue placeholder="Bitte wählen..." />
-                                      </SelectTrigger>
-                                    </FormControl>
-                                    <SelectContent>
-                                      {serviceTypes.map((type) => (
-                                        <SelectItem key={type.value} value={type.value}>
-                                          {type.label}
-                                        </SelectItem>
-                                      ))}
-                                    </SelectContent>
-                                  </Select>
+                                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    {serviceTypes.map((type) => (
+                                      <Button
+                                        key={type.value}
+                                        type="button"
+                                        variant={field.value === type.value ? "default" : "outline"}
+                                        className="h-auto py-4 px-4 flex flex-col items-center gap-2"
+                                        onClick={() => {
+                                          selectOption("serviceType", type.value);
+                                          setTimeout(() => nextStep(), 150);
+                                        }}
+                                        data-testid={`service-${type.value}`}
+                                      >
+                                        <type.icon className="w-6 h-6" />
+                                        <span className="text-sm text-center">{type.label}</span>
+                                      </Button>
+                                    ))}
+                                  </div>
                                   <FormMessage />
                                 </FormItem>
                               )}
                             />
+                          </CardContent>
+                        </Card>
+                      )}
 
+                      {/* Step 2: Problem Details */}
+                      {step === 2 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <FileText className="w-5 h-5" />
+                              Beschreiben Sie Ihr Anliegen
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-6">
                             <FormField
                               control={form.control}
-                              name="description"
+                              name="problemDetails"
                               render={({ field }) => (
                                 <FormItem>
-                                  <FormLabel>Beschreiben Sie Ihr Anliegen</FormLabel>
+                                  <FormLabel>Was ist das Problem?</FormLabel>
                                   <FormControl>
                                     <Textarea
                                       {...field}
-                                      placeholder="Was ist das Problem? Wie dringend ist es? Weitere Details..."
-                                      className="min-h-[120px]"
-                                      data-testid="input-description"
+                                      placeholder="Beschreiben Sie das Problem so detailliert wie möglich. Z.B.: Wasserhahn tropft seit 2 Tagen, Heizung wird nicht warm, etc."
+                                      className="min-h-[150px]"
+                                      data-testid="input-problem-details"
                                     />
                                   </FormControl>
                                   <FormMessage />
@@ -392,102 +463,12 @@ export default function KontaktPage() {
                               )}
                             />
 
-                            <div className="flex justify-end">
-                              <Button type="button" onClick={nextStep} data-testid="button-next-step1">
-                                Weiter
-                                <ArrowRight className="w-4 h-4 ml-2" />
-                              </Button>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      )}
-
-                      {step === 2 && (
-                        <Card>
-                          <CardHeader>
-                            <CardTitle className="flex items-center gap-2">
-                              <CalendarIcon className="w-5 h-5" />
-                              Schritt 2: Wunschtermin wählen
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent>
-                            <div className="grid md:grid-cols-2 gap-6">
-                              <div>
-                                <FormField
-                                  control={form.control}
-                                  name="preferredDate"
-                                  render={() => (
-                                    <FormItem>
-                                      <FormLabel>Datum auswählen</FormLabel>
-                                      <FormControl>
-                                        <Calendar
-                                          mode="single"
-                                          selected={selectedDate}
-                                          onSelect={handleDateSelect}
-                                          disabled={(date) =>
-                                            isBefore(date, startOfToday()) ||
-                                            date > addDays(new Date(), 60)
-                                          }
-                                          locale={de}
-                                          className="rounded-md border"
-                                          data-testid="calendar-picker"
-                                        />
-                                      </FormControl>
-                                      <FormMessage />
-                                    </FormItem>
-                                  )}
-                                />
-                              </div>
-
-                              <div>
-                                <FormField
-                                  control={form.control}
-                                  name="preferredTime"
-                                  render={({ field }) => (
-                                    <FormItem>
-                                      <FormLabel>Uhrzeit auswählen</FormLabel>
-                                      {!selectedDate ? (
-                                        <p className="text-sm text-muted-foreground py-4">
-                                          Bitte wählen Sie zuerst ein Datum
-                                        </p>
-                                      ) : slotsLoading ? (
-                                        <p className="text-sm text-muted-foreground py-4">
-                                          Lade verfügbare Zeiten aus Google Kalender...
-                                        </p>
-                                      ) : availableSlots.length === 0 ? (
-                                        <p className="text-sm text-muted-foreground py-4">
-                                          Keine freien Termine an diesem Tag. Bitte wählen Sie einen anderen Tag.
-                                        </p>
-                                      ) : (
-                                        <div className="grid grid-cols-2 gap-2">
-                                          {availableSlots.map((slot) => (
-                                            <Button
-                                              key={slot.time}
-                                              type="button"
-                                              variant={field.value === slot.time ? "default" : "outline"}
-                                              className="justify-start"
-                                              onClick={() => handleTimeSelect(slot.time)}
-                                              data-testid={`time-slot-${slot.time}`}
-                                            >
-                                              <Clock className="w-4 h-4 mr-2" />
-                                              {slot.label}
-                                            </Button>
-                                          ))}
-                                        </div>
-                                      )}
-                                      <FormMessage />
-                                    </FormItem>
-                                  )}
-                                />
-                              </div>
-                            </div>
-
-                            <div className="flex justify-between mt-6">
-                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev-step2">
+                            <div className="flex justify-between">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
                                 <ArrowLeft className="w-4 h-4 mr-2" />
                                 Zurück
                               </Button>
-                              <Button type="button" onClick={nextStep} data-testid="button-next-step2">
+                              <Button type="button" onClick={nextStep} data-testid="button-next">
                                 Weiter
                                 <ArrowRight className="w-4 h-4 ml-2" />
                               </Button>
@@ -496,22 +477,284 @@ export default function KontaktPage() {
                         </Card>
                       )}
 
+                      {/* Step 3: Urgency */}
                       {step === 3 && (
                         <Card>
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
-                              <User className="w-5 h-5" />
-                              Schritt 3: Ihre Kontaktdaten
+                              <AlertTriangle className="w-5 h-5" />
+                              Wie dringend ist es?
                             </CardTitle>
                           </CardHeader>
-                          <CardContent className="space-y-6">
+                          <CardContent>
+                            <FormField
+                              control={form.control}
+                              name="urgency"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <div className="grid grid-cols-2 gap-3">
+                                    {urgencyOptions.map((option) => (
+                                      <Button
+                                        key={option.value}
+                                        type="button"
+                                        variant={field.value === option.value ? "default" : "outline"}
+                                        className="h-auto py-4 px-4 flex flex-col items-start gap-1"
+                                        onClick={() => {
+                                          selectOption("urgency", option.value);
+                                          setTimeout(() => nextStep(), 150);
+                                        }}
+                                        data-testid={`urgency-${option.value}`}
+                                      >
+                                        <span className="font-semibold">{option.label}</span>
+                                        <span className="text-xs text-muted-foreground">{option.description}</span>
+                                      </Button>
+                                    ))}
+                                  </div>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <div className="flex justify-between mt-6">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                                <ArrowLeft className="w-4 h-4 mr-2" />
+                                Zurück
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      )}
+
+                      {/* Step 4: Property Type */}
+                      {step === 4 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <Building className="w-5 h-5" />
+                              Um welche Art von Gebäude handelt es sich?
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <FormField
+                              control={form.control}
+                              name="propertyType"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <div className="grid grid-cols-2 gap-3">
+                                    {propertyTypes.map((option) => (
+                                      <Button
+                                        key={option.value}
+                                        type="button"
+                                        variant={field.value === option.value ? "default" : "outline"}
+                                        className="h-auto py-4 px-4 flex flex-col items-start gap-1"
+                                        onClick={() => {
+                                          selectOption("propertyType", option.value);
+                                          setTimeout(() => nextStep(), 150);
+                                        }}
+                                        data-testid={`property-${option.value}`}
+                                      >
+                                        <span className="font-semibold">{option.label}</span>
+                                        <span className="text-xs text-muted-foreground">{option.description}</span>
+                                      </Button>
+                                    ))}
+                                  </div>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <div className="flex justify-between mt-6">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                                <ArrowLeft className="w-4 h-4 mr-2" />
+                                Zurück
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      )}
+
+                      {/* Step 5: Budget */}
+                      {step === 5 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <Euro className="w-5 h-5" />
+                              Welches Budget haben Sie vorgesehen?
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <FormField
+                              control={form.control}
+                              name="budget"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    {budgetOptions.map((option) => (
+                                      <Button
+                                        key={option.value}
+                                        type="button"
+                                        variant={field.value === option.value ? "default" : "outline"}
+                                        className="h-auto py-4 px-4 flex flex-col items-start gap-1"
+                                        onClick={() => {
+                                          selectOption("budget", option.value);
+                                          setTimeout(() => nextStep(), 150);
+                                        }}
+                                        data-testid={`budget-${option.value}`}
+                                      >
+                                        <span className="font-semibold">{option.label}</span>
+                                        <span className="text-xs text-muted-foreground">{option.description}</span>
+                                      </Button>
+                                    ))}
+                                  </div>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <div className="flex justify-between mt-6">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                                <ArrowLeft className="w-4 h-4 mr-2" />
+                                Zurück
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      )}
+
+                      {/* Step 6: Date Selection */}
+                      {step === 6 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <CalendarIcon className="w-5 h-5" />
+                              Wann passt es Ihnen am besten?
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <FormField
+                              control={form.control}
+                              name="preferredDate"
+                              render={() => (
+                                <FormItem>
+                                  <FormLabel>Wählen Sie ein Datum</FormLabel>
+                                  <FormControl>
+                                    <Calendar
+                                      mode="single"
+                                      selected={selectedDate}
+                                      onSelect={(date) => {
+                                        handleDateSelect(date);
+                                        if (date) {
+                                          setTimeout(() => nextStep(), 150);
+                                        }
+                                      }}
+                                      disabled={(date) =>
+                                        isBefore(date, startOfToday()) ||
+                                        date > addDays(new Date(), 60)
+                                      }
+                                      locale={de}
+                                      className="rounded-md border mx-auto"
+                                      data-testid="calendar-picker"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <div className="flex justify-between mt-6">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                                <ArrowLeft className="w-4 h-4 mr-2" />
+                                Zurück
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      )}
+
+                      {/* Step 7: Time Selection */}
+                      {step === 7 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <Clock className="w-5 h-5" />
+                              Wählen Sie eine Uhrzeit
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <FormField
+                              control={form.control}
+                              name="preferredTime"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <p className="text-sm text-muted-foreground mb-4">
+                                    Datum: {selectedDate ? format(selectedDate, "dd. MMMM yyyy", { locale: de }) : ""}
+                                  </p>
+                                  {slotsLoading ? (
+                                    <p className="text-sm text-muted-foreground py-4">
+                                      Lade verfügbare Zeiten aus Google Kalender...
+                                    </p>
+                                  ) : availableSlots.length === 0 ? (
+                                    <div className="text-center py-4">
+                                      <p className="text-sm text-muted-foreground mb-4">
+                                        Keine freien Termine an diesem Tag. Bitte wählen Sie einen anderen Tag.
+                                      </p>
+                                      <Button type="button" variant="outline" onClick={prevStep}>
+                                        <ArrowLeft className="w-4 h-4 mr-2" />
+                                        Anderes Datum wählen
+                                      </Button>
+                                    </div>
+                                  ) : (
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                      {availableSlots.map((slot) => (
+                                        <Button
+                                          key={slot.time}
+                                          type="button"
+                                          variant={field.value === slot.time ? "default" : "outline"}
+                                          className="justify-start"
+                                          onClick={() => {
+                                            handleTimeSelect(slot.time);
+                                            setTimeout(() => nextStep(), 150);
+                                          }}
+                                          data-testid={`time-slot-${slot.time}`}
+                                        >
+                                          <Clock className="w-4 h-4 mr-2" />
+                                          {slot.label}
+                                        </Button>
+                                      ))}
+                                    </div>
+                                  )}
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <div className="flex justify-between mt-6">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
+                                <ArrowLeft className="w-4 h-4 mr-2" />
+                                Zurück
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      )}
+
+                      {/* Step 8: Contact Details */}
+                      {step === 8 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <User className="w-5 h-5" />
+                              Ihre Kontaktdaten
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
                             <div className="grid md:grid-cols-2 gap-4">
                               <FormField
                                 control={form.control}
                                 name="name"
                                 render={({ field }) => (
                                   <FormItem>
-                                    <FormLabel>Name</FormLabel>
+                                    <FormLabel>Name *</FormLabel>
                                     <FormControl>
                                       <div className="relative">
                                         <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -533,7 +776,7 @@ export default function KontaktPage() {
                                 name="phone"
                                 render={({ field }) => (
                                   <FormItem>
-                                    <FormLabel>Telefon</FormLabel>
+                                    <FormLabel>Telefon *</FormLabel>
                                     <FormControl>
                                       <div className="relative">
                                         <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -564,7 +807,7 @@ export default function KontaktPage() {
                                       <Input
                                         {...field}
                                         type="email"
-                                        placeholder="Ihre E-Mail-Adresse"
+                                        placeholder="ihre@email.de"
                                         className="pl-10"
                                         data-testid="input-email"
                                       />
@@ -580,13 +823,13 @@ export default function KontaktPage() {
                               name="address"
                               render={({ field }) => (
                                 <FormItem>
-                                  <FormLabel>Adresse des Einsatzortes</FormLabel>
+                                  <FormLabel>Adresse *</FormLabel>
                                   <FormControl>
                                     <div className="relative">
                                       <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                       <Input
                                         {...field}
-                                        placeholder="Straße, Hausnummer, PLZ, Ort"
+                                        placeholder="Straße, PLZ Ort"
                                         className="pl-10"
                                         data-testid="input-address"
                                       />
@@ -597,25 +840,28 @@ export default function KontaktPage() {
                               )}
                             />
 
-                            <div className="bg-muted/50 rounded-lg p-4">
-                              <p className="font-medium mb-2">Ihre Buchung:</p>
-                              <p className="text-sm text-muted-foreground">
-                                {serviceTypes.find(s => s.value === form.getValues("serviceType"))?.label}
-                              </p>
-                              <p className="text-sm text-muted-foreground">
-                                {form.getValues("preferredDate")} um {form.getValues("preferredTime")} Uhr
-                              </p>
+                            {/* Summary */}
+                            <div className="bg-muted/50 rounded-lg p-4 mt-6">
+                              <p className="font-medium mb-2">Zusammenfassung:</p>
+                              <div className="text-sm text-muted-foreground space-y-1">
+                                <p><strong>Service:</strong> {serviceTypes.find(s => s.value === form.getValues("serviceType"))?.label}</p>
+                                <p><strong>Dringlichkeit:</strong> {urgencyOptions.find(u => u.value === form.getValues("urgency"))?.label}</p>
+                                <p><strong>Gebäude:</strong> {propertyTypes.find(p => p.value === form.getValues("propertyType"))?.label}</p>
+                                <p><strong>Budget:</strong> {budgetOptions.find(b => b.value === form.getValues("budget"))?.label}</p>
+                                <p><strong>Termin:</strong> {selectedDate ? format(selectedDate, "dd. MMMM yyyy", { locale: de }) : ""} um {form.getValues("preferredTime")} Uhr</p>
+                              </div>
                             </div>
 
-                            <div className="flex justify-between">
-                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev-step3">
+                            <div className="flex justify-between mt-6">
+                              <Button type="button" variant="outline" onClick={prevStep} data-testid="button-prev">
                                 <ArrowLeft className="w-4 h-4 mr-2" />
                                 Zurück
                               </Button>
-                              <Button
-                                type="submit"
+                              <Button 
+                                type="button" 
+                                onClick={nextStep}
                                 disabled={bookingMutation.isPending}
-                                data-testid="button-submit-booking"
+                                data-testid="button-submit"
                               >
                                 {bookingMutation.isPending ? "Wird gesendet..." : "Termin anfragen"}
                                 <CheckCircle2 className="w-4 h-4 ml-2" />
@@ -629,237 +875,108 @@ export default function KontaktPage() {
                 )}
               </div>
 
-              {/* Sidebar Info */}
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Schneller Kontakt</h3>
-                  <Card className="bg-accent/5 border-accent/20">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                          <Phone className="w-6 h-6 text-accent" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-lg mb-1">Notdienst 24/7</h3>
-                          <p className="text-muted-foreground text-sm mb-3">
-                            Bei Rohrbruch, Wasserschaden oder Heizungsausfall erreichen Sie uns rund um die Uhr.
-                          </p>
-                          <Button className="bg-accent text-accent-foreground" asChild>
-                            <a href="tel:+4915212274043" data-testid="button-emergency-call">
-                              <Phone className="w-4 h-4 mr-2" />
-                              0152 12274043
-                            </a>
-                          </Button>
-                        </div>
+              {/* Sidebar */}
+              <div className="space-y-6">
+                {/* Trust Signals */}
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Shield className="w-8 h-8 text-accent" />
+                      <div>
+                        <h3 className="font-semibold">Ihre Vorteile</h3>
+                        <p className="text-sm text-muted-foreground">Bei AquaPro24</p>
                       </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                    </div>
+                    <ul className="space-y-3 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                        <span>Kostenlose Erstberatung</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                        <span>Transparente Festpreise</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                        <span>24/7 Notdienst verfügbar</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                        <span>Zertifizierte Meisterbetriebe</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                        <span>Garantie auf alle Arbeiten</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
 
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Unser Einzugsgebiet</h3>
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-3 mb-4">
-                        <Car className="w-5 h-5 text-secondary mt-0.5" />
-                        <p className="text-sm text-muted-foreground">
-                          Wir sind in ganz München und Umgebung für Sie unterwegs. 
-                          Innerhalb Münchens ist die Anfahrt zu normalen Geschäftszeiten kostenlos.
-                        </p>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {serviceAreas.map((area, index) => (
-                          <Badge key={index} variant="secondary" className="text-xs">
-                            {area}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                {/* Rating */}
+                <Card>
+                  <CardContent className="p-6 text-center">
+                    <div className="flex justify-center gap-1 mb-2">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="font-semibold">4.9 von 5 Sternen</p>
+                    <p className="text-sm text-muted-foreground">Basierend auf 2.847+ Bewertungen</p>
+                  </CardContent>
+                </Card>
 
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Das erwartet Sie</h3>
-                  <div className="space-y-3">
-                    {[
-                      "Kostenlose Erstberatung am Telefon",
-                      "Verbindliche Terminzusage",
-                      "Transparente Festpreise vor Arbeitsbeginn",
-                      "Pünktliche und saubere Arbeit",
-                      "Rückruf innerhalb von 2 Stunden (tagsüber)"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-secondary/5 rounded-lg p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Shield className="w-5 h-5 text-secondary" />
-                    <span className="font-medium">2 Jahre Garantie</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Auf alle unsere Arbeiten gewähren wir eine zweijährige Garantie.
-                  </p>
-                </div>
-
-                <div className="bg-muted/30 rounded-lg p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Star className="w-5 h-5 text-primary fill-primary" />
-                    <span className="font-medium">4.9/5 Sterne Bewertung</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Über 2.847 zufriedene Kunden in München vertrauen uns.
-                  </p>
-                </div>
+                {/* Direct Contact */}
+                <Card className="bg-primary text-primary-foreground">
+                  <CardContent className="p-6 text-center">
+                    <Phone className="w-8 h-8 mx-auto mb-3" />
+                    <p className="text-sm mb-2">Lieber telefonisch?</p>
+                    <a 
+                      href="tel:+4915212274043" 
+                      className="text-xl font-bold block hover:underline"
+                      data-testid="link-phone-sidebar"
+                    >
+                      0152 12274043
+                    </a>
+                    <p className="text-xs mt-2 opacity-90">24/7 erreichbar</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Standort & Karte */}
-        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
+        {/* Service Areas */}
+        <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-4">Unser Standort in München</h2>
-              <p className="text-muted-foreground">
-                Zentral gelegen - schnell bei Ihnen
-              </p>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-6">
-              <Card>
-                <CardContent className="p-0 overflow-hidden rounded-lg">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.531506!2d11.5754!3d48.1371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA4JzEzLjYiTiAxMcKwMzQnMzEuNCJF!5e0!3m2!1sde!2sde!4v1"
-                    width="100%"
-                    height="350"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Standort AquaPro24 München"
-                    className="w-full"
-                  />
-                </CardContent>
-              </Card>
-              <div className="flex flex-col justify-center space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">AquaPro24</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium">Hardenbergstr. 4</p>
-                        <p className="text-muted-foreground">80992 München</p>
-                        <p className="text-muted-foreground">Deutschland</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <a href="tel:+4915212274043" className="font-medium hover:text-secondary">
-                          0152 12274043
-                        </a>
-                        <p className="text-sm text-muted-foreground">24/7 Notdienst</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Mail className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <a href="mailto:info@aquapro24.de" className="font-medium hover:text-secondary">
-                          info@aquapro24.de
-                        </a>
-                        <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Clock className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium">Öffnungszeiten Büro</p>
-                        <p className="text-sm text-muted-foreground">Mo - Fr: 7:00 - 18:00 Uhr</p>
-                        <p className="text-sm text-muted-foreground">Sa: 8:00 - 12:00 Uhr</p>
-                        <p className="text-sm text-accent font-medium">Notdienst: 24/7 erreichbar</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Button size="lg" className="w-full sm:w-auto" asChild>
-                  <a 
-                    href="https://maps.google.com/?q=Hardenbergstr.+4+80992+München" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    data-testid="button-google-maps"
-                  >
-                    <MapPin className="w-4 h-4 mr-2" />
-                    Route planen
-                  </a>
-                </Button>
-              </div>
+            <h2 className="text-xl font-bold text-center mb-6">Wir sind in ganz München für Sie da</h2>
+            <div className="flex flex-wrap justify-center gap-2">
+              {["München Zentrum", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Laim", "Neuhausen", "Maxvorstadt", "Haidhausen", "Trudering", "Giesing", "Moosach"].map((area) => (
+                <Badge key={area} variant="secondary">
+                  <MapPin className="w-3 h-3 mr-1" />
+                  {area}
+                </Badge>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Company Info Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-muted/30">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-4">Unternehmensdaten</h2>
-              <p className="text-muted-foreground">
-                Für Geschäftskunden und offizielle Korrespondenz
-              </p>
-            </div>
+        {/* Google Maps */}
+        <section className="py-8 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <h2 className="text-xl font-bold text-center mb-6">So finden Sie uns</h2>
             <Card>
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <Building className="w-5 h-5 text-muted-foreground mt-0.5" />
-                      <div>
-                        <p className="font-semibold">AquaPro24</p>
-                        <p className="text-sm text-muted-foreground">Sanitär & Heizung München</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-muted-foreground mt-0.5" />
-                      <div>
-                        <p>Hardenbergstr. 4</p>
-                        <p className="text-sm text-muted-foreground">80992 München</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-muted-foreground mt-0.5" />
-                      <div>
-                        <p>0152 12274043</p>
-                        <p className="text-sm text-muted-foreground">Fax: 0152 12274043</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Mail className="w-5 h-5 text-muted-foreground mt-0.5" />
-                      <div>
-                        <p>info@aquapro24.de</p>
-                        <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="border-t mt-8 pt-6 text-sm text-muted-foreground">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div>
-                      <span className="font-medium text-foreground">Rechtsform:</span> Einzelunternehmer
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">USt-IdNr:</span> folgt
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">Inhaber:</span> Mustafa Sakar
-                    </div>
-                  </div>
-                </div>
+              <CardContent className="p-0 overflow-hidden rounded-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.6!2d11.5!3d48.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEwJzEyLjAiTiAxMcKwMzAnMDAuMCJF!5e0!3m2!1sde!2sde!4v1"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="AquaPro24 Standort in München"
+                  data-testid="map-embed"
+                />
               </CardContent>
             </Card>
           </div>
