@@ -418,11 +418,11 @@ export default function RatgeberPage() {
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Sanit%C3%A4r%2FHeizung." target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp
-                </a>
+              <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
+                <Link href="/termin">
+                  <Clock className="w-5 h-5 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
             </div>
           </div>

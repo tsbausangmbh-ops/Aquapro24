@@ -265,16 +265,11 @@ export default function UeberUnsPage() {
                       0152 12274043
                     </a>
                   </Button>
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600" asChild>
-                    <a 
-                      href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Dienstleistungen%20in%20M%C3%BCnchen." 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      data-testid="button-whatsapp-about"
-                    >
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      Anfrage per WhatsApp
-                    </a>
+                  <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
+                    <Link href="/termin">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -544,22 +539,17 @@ export default function UeberUnsPage() {
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="secondary" asChild>
+              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-cta">
                   <Phone className="w-5 h-5 mr-2" />
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-emerald-600 text-white border-emerald-700" asChild>
-                <a 
-                  href="https://wa.me/4915212274043?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20kostenlose%20Beratung%20von%20AquaPro24%20M%C3%BCnchen." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  data-testid="button-whatsapp-cta"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp
-                </a>
+              <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
+                <Link href="/termin">
+                  <Clock className="w-5 h-5 mr-2" />
+                  24h Terminbuchung
+                </Link>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mt-10 text-sm text-primary-foreground/70">
