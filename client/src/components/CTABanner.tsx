@@ -37,7 +37,7 @@ export default function CTABanner() {
           </Button>
           <Button 
             size="lg" 
-            className="gap-2 bg-blue-600 text-white border-blue-700 text-lg py-6"
+            className="gap-2 bg-white text-secondary border-white text-lg py-6"
             asChild
             data-testid="button-termin-cta"
           >
