@@ -106,36 +106,6 @@ const budgetOptions = [
   { value: "beratung", label: "Erstmal beraten", description: "Kosten noch unklar" },
 ];
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Telefon",
-    primary: "0152 12274043",
-    secondary: "24/7 Notdienst erreichbar",
-    action: "tel:+4915212274043"
-  },
-  {
-    icon: Mail,
-    title: "E-Mail",
-    primary: "info@aquapro24.de",
-    secondary: "Antwort innerhalb 24h",
-    action: "mailto:info@aquapro24.de"
-  },
-  {
-    icon: MapPin,
-    title: "Adresse",
-    primary: "Hardenbergstr. 4",
-    secondary: "80992 München",
-    action: "https://maps.google.com/?q=München"
-  },
-  {
-    icon: Clock,
-    title: "Öffnungszeiten",
-    primary: "Mo-Fr: 7:00 - 18:00",
-    secondary: "Notdienst: 24/7",
-    action: null
-  }
-];
 
 const stepLabels = [
   "Service",
@@ -297,35 +267,6 @@ export default function KontaktPage() {
           </div>
         </section>
 
-        {/* Contact Cards */}
-        <section className="pt-8 pb-4">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="text-center hover-elevate">
-                  <CardContent className="p-6">
-                    <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                      <info.icon className="w-7 h-7 text-secondary" />
-                    </div>
-                    <h3 className="font-semibold mb-2">{info.title}</h3>
-                    {info.action ? (
-                      <a 
-                        href={info.action} 
-                        className="text-primary font-medium hover:underline block"
-                        data-testid={`link-contact-${info.title.toLowerCase()}`}
-                      >
-                        {info.primary}
-                      </a>
-                    ) : (
-                      <p className="font-medium">{info.primary}</p>
-                    )}
-                    <p className="text-sm text-muted-foreground mt-1">{info.secondary}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Booking Form Section */}
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
