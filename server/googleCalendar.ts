@@ -229,9 +229,8 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     { time: "15:30", available: true, label: "15:30 - 16:30 Uhr" },
   ];
 
-  // Always use primary calendar, but filter events by service type (Gewerk)
+  // Single calendar for all services - if a slot is taken, it's blocked for all Gewerke
   const calendarId = 'primary';
-  console.log(`Checking calendar for service "${serviceType || 'all'}"`);
 
   try {
     const calendar = await getUncachableGoogleCalendarClient();
@@ -252,21 +251,13 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
       timeZone: 'Europe/Berlin',
     });
 
-    const allEvents = response.data.items || [];
+    const events = response.data.items || [];
     
-    // Filter events by service type (Gewerk) - only block slots for matching service
-    // Event titles are formatted like "🔧 Name - Sanitär" or "🔧 Name - Heizung, Bad"
-    const events = serviceType 
-      ? allEvents.filter(event => {
-          const summary = event.summary?.toLowerCase() || '';
-          const serviceLabel = getServiceLabel(serviceType).toLowerCase();
-          return summary.includes(serviceLabel);
-        })
-      : allEvents;
+    // All events block all time slots regardless of service type (Gewerk)
+    // One calendar for all - if a slot is taken, it's taken for everyone
+    console.log(`Found ${events.length} events for date ${date}`);
     
-    console.log(`Found ${allEvents.length} total events, ${events.length} for service "${serviceType || 'all'}"`);
-    
-    // Mark time slots as unavailable if they overlap with existing events for this Gewerk
+    // Mark time slots as unavailable if they overlap with existing events
     // Including 90 minute buffer before and after each event
     for (const event of events) {
       if (event.start?.dateTime && event.end?.dateTime) {
