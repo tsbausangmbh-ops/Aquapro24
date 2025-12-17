@@ -370,7 +370,7 @@ export default function HaustechnikPage() {
               <Button size="lg" variant="outline" className="border-white text-white gap-2" asChild>
                 <a href="mailto:info@aquapro24.de?subject=Kostenlose%20Beratung%20Haustechnik">
                   <MessageSquare className="w-5 h-5" />
-                  Kostenlos beraten lassen
+                  Email senden
                 </a>
               </Button>
             </div>
