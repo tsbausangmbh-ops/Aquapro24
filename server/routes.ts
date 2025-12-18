@@ -729,16 +729,16 @@ KOMMUNIKATIONSSTIL:
 - Konkrete Beispiele und Preisrahmen nennen
 - Keine Fachbegriffe ohne Erklärung
 
-PREISRAHMEN (netto, München, Stand 12/2025 + 30% Aufschlag):
-- Teilsanierung: ab 6.500 EUR
-- Komplettsanierung klein (bis 5m²): 12.000-20.000 EUR
-- Komplettsanierung mittel (5-8m²): 17.000-32.000 EUR
-- Komplettsanierung groß (über 8m²): 32.000-55.000 EUR
-- Barrierefreies Bad: ab 26.000 EUR (KfW-Förderung möglich)
-- Luxusbad Premium: ab 38.000 EUR
-- Pro Quadratmeter Standard: 1.200-3.300 EUR
-- Pro Quadratmeter Komfort: 3.300-4.600 EUR
-- Pro Quadratmeter Premium: 4.600-6.500 EUR
+PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Teilsanierung: ab 6.800 EUR
+- Komplettsanierung klein (bis 5m²): 12.600-21.000 EUR
+- Komplettsanierung mittel (5-8m²): 17.900-33.600 EUR
+- Komplettsanierung groß (über 8m²): 33.600-57.800 EUR
+- Barrierefreies Bad: ab 27.300 EUR (KfW-Förderung möglich)
+- Luxusbad Premium: ab 39.900 EUR
+- Pro Quadratmeter Standard: 1.260-3.465 EUR
+- Pro Quadratmeter Komfort: 3.465-4.830 EUR
+- Pro Quadratmeter Premium: 4.830-6.825 EUR
 
 TYPISCHE DAUER:
 - Teilsanierung: 1-5 Tage
@@ -779,13 +779,13 @@ KOMMUNIKATIONSSTIL:
 - Soforthilfe-Tipps wo möglich
 - Realistische Preise nennen
 
-PREISRAHMEN (netto, München, Stand 12/2025 + 30% Aufschlag):
-- Stundensatz Installateur: 105-120 EUR
-- Anfahrt + 1. Stunde: 160-235 EUR
-- Kleine Reparaturen (Armatur, WC): 160-260 EUR
-- Mittlere Reparaturen (Rohrverstopfung): 260-520 EUR
-- Rohrbruch/Wasserschaden: 520-1.040 EUR
-- Neue Wasserleitungen pro Meter: 105-195 EUR
+PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Stundensatz Installateur: 110-126 EUR
+- Anfahrt + 1. Stunde: 168-247 EUR
+- Kleine Reparaturen (Armatur, WC): 168-273 EUR
+- Mittlere Reparaturen (Rohrverstopfung): 273-546 EUR
+- Rohrbruch/Wasserschaden: 546-1.092 EUR
+- Neue Wasserleitungen pro Meter: 110-205 EUR
 - Notdienst-Zuschlag (Wochenende/Feiertage): +50%
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
@@ -822,14 +822,14 @@ KOMMUNIKATIONSSTIL:
 - Kompetent aber verständlich
 - Förderungen und Einsparpotenziale betonen
 
-PREISRAHMEN (netto, München, Stand 12/2025 + 30% Aufschlag):
-- Heizungswartung Gas/Öl: 210-365 EUR
-- Heizung reparieren: 325-780 EUR
-- Stundensatz Heizungsbauer: 105-120 EUR
-- Neue Gastherme: 12.000-20.000 EUR
-- Neue Heizungsanlage komplett: 12.000-24.000 EUR
-- Hydraulischer Abgleich: 520-1.040 EUR
-- Austausch Heizkessel: 5.200-7.800 EUR
+PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Heizungswartung Gas/Öl: 221-383 EUR
+- Heizung reparieren: 341-819 EUR
+- Stundensatz Heizungsbauer: 110-126 EUR
+- Neue Gastherme: 12.600-21.000 EUR
+- Neue Heizungsanlage komplett: 12.600-25.200 EUR
+- Hydraulischer Abgleich: 546-1.092 EUR
+- Austausch Heizkessel: 5.460-8.190 EUR
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
 
@@ -866,13 +866,13 @@ KOMMUNIKATIONSSTIL:
 - Förderungen immer erwähnen
 - Wirtschaftlichkeit betonen
 
-PREISRAHMEN (netto, vor Förderung, Stand 12/2025 + 30% Aufschlag):
-- Luft-Wasser-Wärmepumpe komplett: 20.000-39.000 EUR
-- Sole-Wasser-Wärmepumpe (Erdwärme): 26.000-65.000 EUR
-- Wasser-Wasser-Wärmepumpe: 29.000-59.000 EUR
-- Jährliche Betriebskosten: 1.000-2.000 EUR
+PREISRAHMEN (netto, vor Förderung, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Luft-Wasser-Wärmepumpe komplett: 21.000-41.000 EUR
+- Sole-Wasser-Wärmepumpe (Erdwärme): 27.300-68.250 EUR
+- Wasser-Wasser-Wärmepumpe: 30.450-61.950 EUR
+- Jährliche Betriebskosten: 1.050-2.100 EUR
 - KfW-Förderung (nicht mehr BAFA): bis zu 70% möglich! (max. 21.000 EUR Zuschuss)
-- Eigenanteil nach Förderung: ab ca. 9.000-15.000 EUR möglich
+- Eigenanteil nach Förderung: ab ca. 9.500-16.000 EUR möglich
 - Jährliche Einsparung: 40-60% gegenüber Gas
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
@@ -916,12 +916,12 @@ SOFORTHILFE-TIPPS:
 - Saugglocke richtig anwenden
 - Siphon unter dem Waschbecken prüfen
 
-PREISRAHMEN (netto, München, Stand 12/2025 + 30% Aufschlag):
-- Einfache Rohrreinigung: 160-260 EUR
-- Maschinelle Reinigung: 260-520 EUR
-- Kanalreinigung: 390-780 EUR
-- Kamerainspektion: 195-325 EUR
-- Hochdruckspülung: 260-520 EUR
+PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Einfache Rohrreinigung: 168-273 EUR
+- Maschinelle Reinigung: 273-546 EUR
+- Kanalreinigung: 410-819 EUR
+- Kamerainspektion: 205-341 EUR
+- Hochdruckspülung: 273-546 EUR
 - Notdienst-Zuschlag: +50%
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
@@ -938,12 +938,12 @@ KOMMUNIKATIONSSTIL:
 - IMMER formelle Anrede "Sie"
 - Praktisch und verständlich
 
-PREISRAHMEN (netto, München, Stand 12/2025 + 30% Aufschlag):
-- Durchlauferhitzer inkl. Montage: 650-1.300 EUR
-- Boiler 80-150L inkl. Montage: 900-1.800 EUR
-- Warmwasserspeicher inkl. Montage: 2.000-4.000 EUR
-- Reparatur: 195-520 EUR
-- Entkalkung: 160-260 EUR
+PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Durchlauferhitzer inkl. Montage: 683-1.365 EUR
+- Boiler 80-150L inkl. Montage: 945-1.890 EUR
+- Warmwasserspeicher inkl. Montage: 2.100-4.200 EUR
+- Reparatur: 205-546 EUR
+- Entkalkung: 168-273 EUR
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
 
@@ -959,12 +959,12 @@ KOMMUNIKATIONSSTIL:
 - IMMER formelle Anrede "Sie"
 - Design und Funktionalität verbinden
 
-PREISRAHMEN (netto, München, Stand 12/2025 + 30% Aufschlag):
-- Einfache Armatur inkl. Montage: 130-325 EUR
-- Hochwertige Markenarmatur inkl. Montage: 260-650 EUR
-- Thermostat-Armatur inkl. Montage: 390-780 EUR
-- Reparatur/Dichtung: 105-195 EUR
-- Anfahrt + 1. Stunde: 160-235 EUR
+PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
+- Einfache Armatur inkl. Montage: 137-341 EUR
+- Hochwertige Markenarmatur inkl. Montage: 273-683 EUR
+- Thermostat-Armatur inkl. Montage: 410-819 EUR
+- Reparatur/Dichtung: 110-205 EUR
+- Anfahrt + 1. Stunde: 168-247 EUR
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`
   };
