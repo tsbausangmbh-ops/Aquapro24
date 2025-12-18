@@ -990,6 +990,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 - Erkläre, wie sich der Preis zusammensetzt
 - WICHTIG: Betone IMMER dass es sich um eine unverbindliche Schätzung handelt
 - Sage klar: "Dies ist eine grobe Schätzung ohne Gewähr - der tatsächliche Preis kann abweichen"
+- Sage IMMER: "Alle Preise verstehen sich netto zzgl. 19% MwSt."
 - Sage IMMER: "Ein verbindlicher Preis ist erst nach einer Besichtigung vor Ort möglich"
 - Biete an, einen kostenlosen Besichtigungstermin zu vereinbaren
 
