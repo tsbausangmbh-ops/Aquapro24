@@ -780,7 +780,7 @@ KOMMUNIKATIONSSTIL:
 - Realistische Preise nennen
 
 PREISRAHMEN (netto, München, Stand 2025 + 30% Aufschlag + 5% für 2026):
-- Stundensatz Installateur: 110-126 EUR
+- Stundensatz Installateur: 85-120 EUR
 - Anfahrt + 1. Stunde: 168-247 EUR
 - Kleine Reparaturen (Armatur, WC): 168-273 EUR
 - Mittlere Reparaturen (Rohrverstopfung): 273-546 EUR
