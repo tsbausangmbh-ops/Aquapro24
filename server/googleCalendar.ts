@@ -109,7 +109,7 @@ Terminwunsch: ${appointmentInfo}
     const event = await calendar.events.insert({
       calendarId: calendarId,
       requestBody: {
-        summary: `🔧 ${data.name} - ${serviceLabel}`,
+        summary: `AquaPro24 - Kunde - ${serviceLabel}`,
         description: eventDescription,
         location: data.address,
         start: {
