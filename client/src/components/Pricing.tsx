@@ -32,37 +32,37 @@ interface ChatMessage {
 const pricingInfo = [
   {
     title: "Anfahrtspauschale",
-    price: "ab 49 €",
+    price: "ab 51 €",
     note: "netto, Raum München",
     icon: Clock,
     isPackage: true,
     packageContents: [
-      "0–10 km: 49 € netto",
-      "10–20 km: 69 € netto",
-      "20–30 km: 89 € netto",
+      "0–10 km: 51 € netto",
+      "10–20 km: 71 € netto",
+      "20–30 km: 92 € netto",
     ],
   },
   {
     title: "Jede weitere Stunde",
-    price: "ab 89 €",
+    price: "ab 92 €",
     note: "netto, je nach Einsatzzeit",
     icon: Euro,
     isPackage: true,
     packageContents: [
-      "Werktags 08:00 – 16:30 Uhr: 89 € netto",
-      "Werktags 16:30 – 22:00 Uhr: 149 € netto",
-      "WE / Feiertage: 199 € netto",
+      "Werktags 08:00 – 16:30 Uhr: 92 € netto",
+      "Werktags 16:30 – 22:00 Uhr: 154 € netto",
+      "WE / Feiertage: 205 € netto",
     ],
   },
   {
     title: "Notdienst-Paket",
-    price: "299 €",
+    price: "308 €",
     note: "Anfahrt + 1. Arbeitsstunde",
     icon: AlertCircle,
     isPackage: true,
     isHighlighted: true,
     packageContents: [
-      "Anfahrt + 1. Arbeitsstunde: 299 € netto",
+      "Anfahrt + 1. Arbeitsstunde: 308 € netto",
       "Störungsanalyse",
       "Sofortige Ersthilfe / Reparaturversuch",
       "Materialeinsatz nach Verbrauch (separat)",
@@ -80,17 +80,17 @@ const guarantees = [
 ];
 
 const priceEstimates: { keywords: string[]; service: string; minPrice: number; maxPrice: number }[] = [
-  { keywords: ["bad", "badsanierung", "dusche", "badewanne", "fliesen", "badezimmer"], service: "Badsanierung", minPrice: 180, maxPrice: 420 },
-  { keywords: ["wasserinstallation", "wasserleitung", "wasseranschluss", "installation"], service: "Wasserinstallation", minPrice: 120, maxPrice: 320 },
-  { keywords: ["rohrbruch", "wasserrohr", "rohr", "leck", "undicht", "wasser", "rohrreinigung"], service: "Rohr-Service", minPrice: 95, maxPrice: 280 },
-  { keywords: ["verstopf", "abfluss", "toilette", "wc", "klo", "verstopfung"], service: "Rohrreinigung", minPrice: 85, maxPrice: 180 },
-  { keywords: ["wasserhahn", "armatur", "tropf", "mischbatterie"], service: "Armaturenservice", minPrice: 75, maxPrice: 150 },
-  { keywords: ["boiler", "warmwasser", "durchlauferhitzer", "speicher"], service: "Warmwasseranlage", minPrice: 110, maxPrice: 280 },
-  { keywords: ["heizung", "heizkörper", "thermostat", "heizungsausfall", "kalt", "warm", "wartung"], service: "Heizungsservice", minPrice: 90, maxPrice: 250 },
-  { keywords: ["sanitär", "waschbecken", "spüle", "küche"], service: "Sanitärarbeiten", minPrice: 90, maxPrice: 220 },
+  { keywords: ["bad", "badsanierung", "dusche", "badewanne", "fliesen", "badezimmer"], service: "Badsanierung", minPrice: 190, maxPrice: 445 },
+  { keywords: ["wasserinstallation", "wasserleitung", "wasseranschluss", "installation"], service: "Wasserinstallation", minPrice: 127, maxPrice: 339 },
+  { keywords: ["rohrbruch", "wasserrohr", "rohr", "leck", "undicht", "wasser", "rohrreinigung"], service: "Rohr-Service", minPrice: 101, maxPrice: 297 },
+  { keywords: ["verstopf", "abfluss", "toilette", "wc", "klo", "verstopfung"], service: "Rohrreinigung", minPrice: 90, maxPrice: 191 },
+  { keywords: ["wasserhahn", "armatur", "tropf", "mischbatterie"], service: "Armaturenservice", minPrice: 79, maxPrice: 159 },
+  { keywords: ["boiler", "warmwasser", "durchlauferhitzer", "speicher"], service: "Warmwasseranlage", minPrice: 117, maxPrice: 297 },
+  { keywords: ["heizung", "heizkörper", "thermostat", "heizungsausfall", "kalt", "warm", "wartung"], service: "Heizungsservice", minPrice: 95, maxPrice: 265 },
+  { keywords: ["sanitär", "waschbecken", "spüle", "küche"], service: "Sanitärarbeiten", minPrice: 95, maxPrice: 233 },
 ];
 
-const MARKUP = 1.20;
+const MARKUP = 1.41;
 
 function estimatePrice(problemDescription: string): { service: string; minPrice: number; maxPrice: number } | null {
   const lowerProblem = problemDescription.toLowerCase();
@@ -403,7 +403,7 @@ export default function Pricing() {
                   <strong className="text-foreground">Hinweis:</strong> Bei kleinen Arbeiten wie WC-Montage, Armaturen-Austausch usw. erhalten Sie direkt am Telefon einen verbindlichen Festpreis.<br /><br />
                   Bei größeren Projekten erstellen wir Ihnen nach einer kostenlosen Vor-Ort-Besichtigung ein detailliertes Angebot.<br /><br />
                   <strong className="text-foreground">Alle Preise sind Netto-Preise</strong> (zzgl. 19% MwSt.) und basieren auf den aktuellen Münchner Marktpreisen.<br /><br />
-                  <span className="text-xs">Beispiele: Tropfende Armatur ab 120 EUR netto | Rohrverstopfung ab 200 EUR netto | Heizungswartung ab 180 EUR netto</span>
+                  <span className="text-xs">Beispiele: Tropfende Armatur ab 124 EUR netto | Rohrverstopfung ab 206 EUR netto | Heizungswartung ab 185 EUR netto</span>
                 </p>
                 <ul className="space-y-3">
                   {guarantees.map((guarantee, index) => (
