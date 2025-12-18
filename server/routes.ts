@@ -252,13 +252,15 @@ Erfasse nacheinander:
 
 1. Vollständiger Name
 
-2. Adresse (Straße, PLZ, Ort, Etage)
+2. Stadtteil in München (z.B. Moosach, Schwabing, Bogenhausen, Sendling, Thalkirchen, Pasing, etc.)
 
-3. Telefonnummer (wichtig für Rückruf)
+3. Adresse (Straße, Hausnummer, Etage)
 
-4. E-Mail-Adresse
+4. Telefonnummer (wichtig für Rückruf)
 
-5. Gewünschter Termin (Datum, Zeitfenster)
+5. E-Mail-Adresse
+
+6. Gewünschter Termin (Datum, Zeitfenster)
 
 TERMINVEREINBARUNG:
 
