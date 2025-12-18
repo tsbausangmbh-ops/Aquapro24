@@ -9,8 +9,8 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutzerklärung | DSGVO 2025 | Sanitär München"
-        description="Datenschutzerklärung gemäß DSGVO: Ihre Rechte, Datenverarbeitung, Cookies. Transparent und verständlich erklärt."
+        title="Ihre Daten sind bei uns sicher | Datenschutz"
+        description="Wir nehmen Datenschutz ernst. Hier erfahren Sie, wie wir Ihre Daten schützen und welche Rechte Sie haben. Transparent erklärt."
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
