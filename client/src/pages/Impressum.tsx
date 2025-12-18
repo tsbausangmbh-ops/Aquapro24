@@ -128,6 +128,20 @@ export default function Impressum() {
                     vor Ort festgelegt. Stand: Dezember 2025.
                   </p>
                 </div>
+                <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg">
+                  <h3 className="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                    KI-Hinweis gemäß EU AI Act (Art. 50)
+                  </h3>
+                  <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
+                    <strong>Transparenzhinweis:</strong> KSHW München setzt zur Unterstützung der Geschäftsprozesse 
+                    KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und 
+                    Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten 
+                    Mitarbeitern getroffen und verantwortet.
+                  </p>
+                  <p className="text-xs text-blue-600 dark:text-blue-400">
+                    <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
+                  </p>
+                </div>
               </CardContent>
             </Card>
 

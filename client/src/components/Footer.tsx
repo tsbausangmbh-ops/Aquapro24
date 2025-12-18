@@ -92,10 +92,15 @@ export default function Footer() {
               <p>© 2025 <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a> – Verwaltung & Betrieb durch Mustafa Sakar.</p>
             </div>
           </div>
-          <div className="mt-3 pt-3 border-t border-background/10">
+          <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
             <p className="text-xs text-background/40 text-center">
               KI-Hinweis: Preisschätzungen unserer KI-Berater enthalten einen Beratungsaufschlag von 30% gegenüber den Website-Basispreisen. 
               Alle Preise netto zzgl. 19% MwSt. – unverbindliche Schätzungen. <a href="/datenschutz#mKI" className="hover:text-primary underline">Mehr erfahren</a>
+            </p>
+            <p className="text-xs text-background/40 text-center">
+              KI-Hinweis gemäß EU AI Act (Art. 50): KSHW München setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
+              Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen. 
+              <a href="/impressum" className="hover:text-primary underline ml-1">Details im Impressum</a>
             </p>
           </div>
         </div>

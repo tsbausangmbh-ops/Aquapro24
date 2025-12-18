@@ -618,13 +618,27 @@ export default function DatenschutzPage() {
                 (z.B. Gesundheitsdaten, Bankdaten) ein. Die vom KI-Assistenten genannten Preise sind 
                 unverbindliche Schätzungen. Alle Preise verstehen sich als Netto-Preise zzgl. 19% MwSt.
               </p>
-              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
                 <p className="text-sm text-amber-800 dark:text-amber-200">
                   <strong>Hinweis zur Preisgestaltung bei KI-Beratung:</strong> Die von unseren KI-Beratern 
                   genannten Preisschätzungen enthalten einen Beratungsaufschlag von 30% gegenüber den auf 
                   unserer Website angegebenen Basispreisen. Dies dient der Vergütung der KI-gestützten 
                   Beratungsleistung. Die endgültigen Preise werden erst nach einer persönlichen Besichtigung 
                   vor Ort verbindlich festgelegt. Stand: Dezember 2025.
+                </p>
+              </div>
+              <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                  KI-Hinweis gemäß EU AI Act (Art. 50)
+                </h4>
+                <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
+                  <strong>Transparenzhinweis:</strong> KSHW München setzt zur Unterstützung der Geschäftsprozesse 
+                  KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und 
+                  Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten 
+                  Mitarbeitern getroffen und verantwortet.
+                </p>
+                <p className="text-xs text-blue-600 dark:text-blue-400">
+                  <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
                 </p>
               </div>
             </section>
