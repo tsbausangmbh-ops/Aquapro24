@@ -122,9 +122,9 @@ export default function WarmwasserPage() {
           serviceType: "WaterHeaterService",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
           offers: [
-            { name: "Durchlauferhitzer-Installation", description: "Einbau neuer Durchlauferhitzer", priceRange: "ab 200€" },
-            { name: "Boiler-Reparatur", description: "Reparatur von Warmwasserspeichern", priceRange: "ab 120€" },
-            { name: "Warmwasser-Wartung", description: "Jährliche Wartung und Entkalkung", priceRange: "ab 99€" }
+            { name: "Durchlauferhitzer-Installation", description: "Einbau neuer Durchlauferhitzer", priceRange: "ab 206€" },
+            { name: "Boiler-Reparatur", description: "Reparatur von Warmwasserspeichern", priceRange: "ab 124€" },
+            { name: "Warmwasser-Wartung", description: "Jährliche Wartung und Entkalkung", priceRange: "ab 102€" }
           ],
           aggregateRating: {
             ratingValue: 4.9,

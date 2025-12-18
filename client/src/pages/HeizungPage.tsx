@@ -98,20 +98,20 @@ export default function HeizungPage() {
         description="Heizung ausgefallen und Sie frieren? Unser Techniker repariert alle Marken vor Ort. Festpreis, keine versteckten Kosten. Rufen Sie jetzt an."
         canonical="https://aquapro24.de/heizung"
         keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München, Gasheizung München, Heizung Schwabing, Heizung Bogenhausen, Heizung Sendling, Heizung Pasing, Heizung Maxvorstadt, Heizung Haidhausen, Heizung Neuhausen, Heizung Trudering, Heizung Laim, Heizung Giesing, Heizung Moosach, Heizung Milbertshofen, Heizung Nymphenburg, Heizung Perlach, Heizung Solln, Heizung Hadern, Heizung Allach, Heizung Aubing, Heizung Feldmoching, Heizung Isarvorstadt, Heizung Lehel, Heizungsmonteur München, Heizungsinstallation München, Fußbodenheizung München, Heizung defekt München, Heizung reparieren München, Viessmann München, Vaillant München, Buderus München, Heizung Notdienst Schwabing, Heizungsreparatur Bogenhausen"
-        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 154€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }
         ]}
         serviceSchema={{
           name: "AquaPro24 Heizungsservice München",
-          description: "Heizungsnotdienst München: 24/7 Reparatur, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus, Wolf.",
+          description: "Heizungsnotdienst München: 24/7 Reparatur, Wartung ab 154€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus, Wolf.",
           serviceType: "HVAC",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
-            { name: "Gasheizung Installation", description: "Moderne Gasbrennwerttechnik", priceRange: "ab 6.000€" },
-            { name: "Heizungswartung", description: "Jährliche Inspektion und Optimierung", priceRange: "ab 149€" },
-            { name: "Heizungsreparatur", description: "Schnelle Reparatur aller Marken", priceRange: "ab 89€" }
+            { name: "Gasheizung Installation", description: "Moderne Gasbrennwerttechnik", priceRange: "ab 6.180€" },
+            { name: "Heizungswartung", description: "Jährliche Inspektion und Optimierung", priceRange: "ab 154€" },
+            { name: "Heizungsreparatur", description: "Schnelle Reparatur aller Marken", priceRange: "ab 92€" }
           ],
           aggregateRating: {
             ratingValue: 4.9,

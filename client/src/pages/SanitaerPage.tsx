@@ -83,7 +83,7 @@ export default function SanitaerPage() {
     },
     {
       question: "Was kostet eine Sanitärinstallation in München?",
-      answer: "Die Kosten hängen vom Umfang der Arbeiten ab. Kleine Reparaturen beginnen ab 89€, größere Installationen werden nach Aufwand berechnet. Wir bieten Ihnen vorab einen transparenten Festpreis - ohne versteckte Kosten."
+      answer: "Die Kosten hängen vom Umfang der Arbeiten ab. Kleine Reparaturen beginnen ab 92€, größere Installationen werden nach Aufwand berechnet. Wir bieten Ihnen vorab einen transparenten Festpreis - ohne versteckte Kosten."
     },
     {
       question: "Arbeiten Sie auch mit Markenarmaturen wie Grohe oder Hansgrohe?",
@@ -107,10 +107,10 @@ export default function SanitaerPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Abfluss verstopft? Rohr undicht? Sanitär München hilft"
-        description="Wasser läuft nicht ab oder tropft ständig? Wir beheben Ihr Sanitär-Problem noch heute. Festpreis ab 89€, transparent und fair. Jetzt Termin sichern."
+        description="Wasser läuft nicht ab oder tropft ständig? Wir beheben Ihr Sanitär-Problem noch heute. Festpreis ab 92€, transparent und fair. Jetzt Termin sichern."
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Klempner München, Klempner Notdienst München, Rohrbruch München, Sanitär Notdienst, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, Installateur München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Sanitär Solln, Klempner Hadern, Sanitär Allach, Klempner Aubing, Sanitär Feldmoching, Klempner Isarvorstadt, Sanitär Lehel, Klempner Westpark, Wasserhahn tropft München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Sanitär Notdienst Schwabing, Klempner Notdienst Bogenhausen"
-        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 89€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 92€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }
@@ -121,9 +121,9 @@ export default function SanitaerPage() {
           serviceType: "Plumbing",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
           offers: [
-            { name: "Wasserinstallation", description: "Professionelle Installation von Wasserleitungen", priceRange: "ab 89€" },
-            { name: "Rohrreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 79€" },
-            { name: "Armaturen-Montage", description: "Einbau von Markenarmaturen", priceRange: "ab 120€" }
+            { name: "Wasserinstallation", description: "Professionelle Installation von Wasserleitungen", priceRange: "ab 92€" },
+            { name: "Rohrreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 81€" },
+            { name: "Armaturen-Montage", description: "Einbau von Markenarmaturen", priceRange: "ab 124€" }
           ],
           aggregateRating: {
             ratingValue: 4.9,

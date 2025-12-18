@@ -84,7 +84,7 @@ export default function RohrreinigungPage() {
     },
     {
       question: "Was kostet eine Rohrreinigung in München?",
-      answer: "Eine einfache Abflussreinigung beginnt ab 79€. Der genaue Preis hängt von der Art der Verstopfung ab. Wir nennen Ihnen vor Arbeitsbeginn einen verbindlichen Festpreis - ohne versteckte Kosten."
+      answer: "Eine einfache Abflussreinigung beginnt ab 81€. Der genaue Preis hängt von der Art der Verstopfung ab. Wir nennen Ihnen vor Arbeitsbeginn einen verbindlichen Festpreis - ohne versteckte Kosten."
     },
     {
       question: "Funktioniert die Rohrreinigung auch bei hartnäckigen Verstopfungen?",
@@ -107,11 +107,11 @@ export default function RohrreinigungPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Abfluss verstopft? Rohrreinigung München ab 79€"
-        description="Wasser staut sich in Küche oder Bad? Wir lösen die Verstopfung professionell und schnell. Festpreis ab 79€. Heute noch frei. Jetzt anrufen."
+        title="Abfluss verstopft? Rohrreinigung München ab 81€"
+        description="Wasser staut sich in Küche oder Bad? Wir lösen die Verstopfung professionell und schnell. Festpreis ab 81€. Heute noch frei. Jetzt anrufen."
         canonical="https://aquapro24.de/rohrreinigung"
         keywords="Rohrreinigung München, Abfluss verstopft München, Kanalreinigung München, Abflussreinigung München, verstopfte Toilette München, Rohrreinigung Notdienst München, Abfluss frei bekommen München, Küchenabfluss verstopft München, Dusche verstopft München, WC verstopft München, Hochdruckspülung München, Rohrfrei München"
-        aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 79€. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 81€. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Rohrreinigung", url: "https://aquapro24.de/rohrreinigung" }
@@ -122,9 +122,9 @@ export default function RohrreinigungPage() {
           serviceType: "DrainCleaning",
           areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach"],
           offers: [
-            { name: "Abflussreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 79€" },
-            { name: "Hochdruckspülung", description: "Intensive Rohrreinigung", priceRange: "ab 149€" },
-            { name: "Kamerainspektion", description: "Rohrinspektion mit Kamera", priceRange: "ab 99€" }
+            { name: "Abflussreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 81€" },
+            { name: "Hochdruckspülung", description: "Intensive Rohrreinigung", priceRange: "ab 154€" },
+            { name: "Kamerainspektion", description: "Rohrinspektion mit Kamera", priceRange: "ab 102€" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
@@ -197,7 +197,7 @@ export default function RohrreinigungPage() {
                     />
                   </div>
                   <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center">
-                    <div className="text-2xl font-bold text-secondary">ab 79€</div>
+                    <div className="text-2xl font-bold text-secondary">ab 81€</div>
                     <div className="text-sm text-muted-foreground">Festpreis Rohrreinigung</div>
                   </div>
                 </div>
