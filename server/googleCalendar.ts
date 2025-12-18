@@ -70,7 +70,10 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
   try {
     const calendar = await getUncachableGoogleCalendarClient();
     
-    const serviceLabel = data.serviceTypes.join(', ') || 'Sanitär-Anfrage';
+    const capitalizedServices = data.serviceTypes.map(service => 
+      service.charAt(0).toUpperCase() + service.slice(1)
+    );
+    const serviceLabel = capitalizedServices.join(', ') || 'Sanitär-Anfrage';
     const urgencyLabel = getUrgencyLabel(data.urgency, data.isEmergency);
     
     // Always use primary calendar - service type is included in the event title for filtering
