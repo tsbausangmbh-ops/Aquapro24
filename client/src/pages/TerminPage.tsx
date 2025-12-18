@@ -323,7 +323,7 @@ export default function TerminPage() {
 
   const getFieldsForStep = (currentStep: number): (keyof BookingFormData)[] => {
     switch (currentStep) {
-      case 1: return ["serviceType"];
+      case 1: return ["serviceType", "stadtteil"];
       case 2: return []; // Problem selection (sets problemDetails automatically)
       case 3: return ["problemDetails"]; // Additional details
       case 4: return ["urgency"];
@@ -334,7 +334,7 @@ export default function TerminPage() {
       case 9: return ["preferredDate"];
       case 10: return ["preferredTime"];
       case 11: return ["name", "phone"];
-      case 12: return ["stadtteil", "address"];
+      case 12: return ["address"];
       case 13: return []; // Summary
       default: return [];
     }
@@ -451,32 +451,30 @@ export default function TerminPage() {
             ) : (
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                  {/* Step 1: Service Selection */}
+                  {/* Step 1: Service Selection + Stadtteil */}
                   {step === 1 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <Wrench className="w-5 h-5" />
-                          Welchen Service benötigen Sie?
+                          Was benötigen Sie und wo?
                         </CardTitle>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="space-y-6">
                         <FormField
                           control={form.control}
                           name="serviceType"
                           render={({ field }) => (
                             <FormItem>
-                              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                              <FormLabel>Welchen Service benötigen Sie? *</FormLabel>
+                              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
                                 {serviceTypes.map((type) => (
                                   <Button
                                     key={type.value}
                                     type="button"
                                     variant={field.value === type.value ? "default" : "outline"}
                                     className="h-auto py-4 px-4 flex flex-col items-center gap-2"
-                                    onClick={() => {
-                                      selectOption("serviceType", type.value);
-                                      setTimeout(() => nextStep(), 150);
-                                    }}
+                                    onClick={() => selectOption("serviceType", type.value)}
                                     data-testid={`service-${type.value}`}
                                   >
                                     <type.icon className="w-6 h-6" />
@@ -488,6 +486,41 @@ export default function TerminPage() {
                             </FormItem>
                           )}
                         />
+                        
+                        <FormField
+                          control={form.control}
+                          name="stadtteil"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>In welchem Stadtteil? *</FormLabel>
+                              <FormControl>
+                                <select 
+                                  {...field}
+                                  className="w-full h-10 px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                                  data-testid="select-stadtteil-step1"
+                                >
+                                  <option value="">Bitte Stadtteil wählen...</option>
+                                  {muenchnerStadtteile.map((stadtteil) => (
+                                    <option key={stadtteil} value={stadtteil}>{stadtteil}</option>
+                                  ))}
+                                </select>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <div className="flex justify-end mt-6">
+                          <Button 
+                            type="button" 
+                            onClick={nextStep}
+                            disabled={!form.watch("serviceType") || !form.watch("stadtteil")}
+                            data-testid="button-next"
+                          >
+                            Weiter
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </div>
                       </CardContent>
                     </Card>
                   )}
@@ -1019,38 +1052,17 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 12: Stadtteil, Address & Email */}
+                  {/* Step 12: Address & Email */}
                   {step === 12 && (
                     <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <MapPin className="w-5 h-5" />
-                          Wo sollen wir hinkommen?
+                          Ihre genaue Adresse
                         </CardTitle>
+                        <p className="text-sm text-muted-foreground">Stadtteil: {form.watch("stadtteil")}</p>
                       </CardHeader>
                       <CardContent className="space-y-4">
-                        <FormField
-                          control={form.control}
-                          name="stadtteil"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Stadtteil *</FormLabel>
-                              <FormControl>
-                                <select 
-                                  {...field}
-                                  className="w-full h-10 px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                                  data-testid="select-stadtteil"
-                                >
-                                  <option value="">Bitte Stadtteil wählen...</option>
-                                  {muenchnerStadtteile.map((stadtteil) => (
-                                    <option key={stadtteil} value={stadtteil}>{stadtteil}</option>
-                                  ))}
-                                </select>
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
                         <FormField
                           control={form.control}
                           name="address"
