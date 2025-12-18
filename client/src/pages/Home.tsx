@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Rohrbruch? Abfluss verstopft? Ihr Klempner in München"
+        title="Rohrbruch? Abfluss verstopft? Ihr Sanitär in München"
         description="Wasserschaden, undichte Leitung, verstopfter Abfluss? Wir lösen Ihr Problem schnell und zuverlässig. Festpreis, keine bösen Überraschungen."
         canonical="https://aquapro24.de"
         keywords="Sanitär München, Klempner München Notdienst, Heizung reparieren München, Installateur München, Wasserinstallation Schwabing, Rohrreinigung Bogenhausen, Badsanierung Sendling, Wärmepumpe München Förderung, Sanitär Pasing, Klempner Maxvorstadt, Heizungswartung Haidhausen, Sanitärnotdienst Neuhausen, Installateur Trudering, Klempner Laim, Heizung Giesing, Sanitär Moosach, Installateur Milbertshofen"
