@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
+import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
@@ -239,6 +240,8 @@ export default function ArmaturenPage() {
           title="Echte Geschichten von Münchner Kunden"
           subtitle="Von der kleinen Reparatur bis zur kompletten Neuausstattung"
         />
+
+        <ServiceAdvisor serviceType="armaturen" />
 
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

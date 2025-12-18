@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
+import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import ColorfulFAQ from "@/components/ColorfulFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
@@ -239,6 +240,8 @@ export default function HeizungPage() {
           title="Heizungsnotfälle gelöst: Echte Kundengeschichten"
           subtitle="So haben wir anderen Münchnern in der Kälte geholfen"
         />
+
+        <ServiceAdvisor serviceType="heizung" />
 
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
