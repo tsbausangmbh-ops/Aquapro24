@@ -83,9 +83,20 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
     const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
     
-    const appointmentInfo = data.preferredDate && data.preferredTime 
-      ? `${data.preferredDate} um ${data.preferredTime} Uhr`
-      : data.preferredDate || data.preferredTime || 'Nicht angegeben';
+    const formatDateGerman = (dateStr: string): string => {
+      const date = new Date(dateStr);
+      const day = date.getDate().toString().padStart(2, '0');
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}.${month}.${year}`;
+    };
+    
+    const formattedDate = data.preferredDate ? formatDateGerman(data.preferredDate) : '';
+    const formattedTime = data.preferredTime || '';
+    
+    const appointmentInfo = formattedDate && formattedTime 
+      ? `${formattedDate}, ${formattedTime} Uhr`
+      : formattedDate || formattedTime || 'Nicht angegeben';
     
     const ownershipLabel = data.ownershipType ? getOwnershipLabel(data.ownershipType) : '';
     const budgetLabel = data.budget ? getBudgetLabel(data.budget) : '';

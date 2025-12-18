@@ -21,7 +21,19 @@ async function sendLeadNotificationEmail(leadData: any): Promise<void> {
     return;
   }
 
-  const terminInfo = leadData.appointmentDisplay || `${leadData.preferredDate || ""} ${leadData.preferredTime || ""}`.trim() || "Wird noch vereinbart";
+  const formatDateGerman = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}.${month}.${year}`;
+  };
+
+  const formattedDate = leadData.preferredDate ? formatDateGerman(leadData.preferredDate) : '';
+  const formattedTime = leadData.preferredTime || '';
+  const terminInfo = leadData.appointmentDisplay || 
+    (formattedDate && formattedTime ? `${formattedDate}, ${formattedTime} Uhr` : formattedDate || formattedTime) || 
+    "Wird noch vereinbart";
 
   const internalEmailText = `NEUE TERMINANFRAGE - AQUAPRO24
 
@@ -41,7 +53,15 @@ GESCHÄTZTE KOSTEN:
 ${leadData.estimatedPrice || "Wird ermittelt"}
 
 QUELLE: ${leadData.page_url || leadData.source || "Website"}
-ZEITPUNKT: ${leadData.timestamp || new Date().toISOString()}
+ZEITPUNKT: ${(() => {
+    const now = new Date();
+    const day = now.getDate().toString().padStart(2, '0');
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const year = now.getFullYear();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    return `${day}.${month}.${year}, ${hours}:${minutes} Uhr`;
+  })()}
 
 ---
 Diese E-Mail wurde automatisch vom AquaPro24 Buchungssystem gesendet.`;
