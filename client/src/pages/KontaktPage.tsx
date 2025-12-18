@@ -102,7 +102,7 @@ export default function KontaktPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Kontakt | Sanitär & Heizung München | 24/7 erreichbar"
+        title="Kontakt | Sanitär & Heizung München | Jetzt anrufen"
         description="Sanitär & Heizung München kontaktieren: Notdienst 24/7, Beratung, Terminvereinbarung. Hardenbergstr. 4, 80992 München."
         canonical="https://aquapro24.de/kontakt"
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst"

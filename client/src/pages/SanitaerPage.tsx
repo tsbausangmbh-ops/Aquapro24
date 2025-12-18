@@ -105,7 +105,7 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Klempner München | Sanitär Notdienst 24/7 | Ab 89€"
+        title="Klempner München | Sanitär Reparatur | Ab 89€"
         description="Klempner Notdienst München: Rohrbruch beheben, Abfluss verstopft, Wasserhahn reparieren. 45 Min. vor Ort, Festpreis. Jetzt anrufen!"
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Klempner München, Klempner Notdienst München, Rohrbruch München, Sanitär Notdienst, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, Installateur München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Sanitär Solln, Klempner Hadern, Sanitär Allach, Klempner Aubing, Sanitär Feldmoching, Klempner Isarvorstadt, Sanitär Lehel, Klempner Westpark, Wasserhahn tropft München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Sanitär Notdienst Schwabing, Klempner Notdienst Bogenhausen"

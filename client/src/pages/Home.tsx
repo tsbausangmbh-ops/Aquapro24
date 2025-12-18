@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär & Heizung München | 24/7 Notdienst | Festpreis"
+        title="Sanitär & Heizung München | Festpreis | Schneller Service"
         description="Sanitär & Heizung München: Rohrbruch, Heizungsausfall, Badsanierung. 24/7 Notdienst, Festpreisgarantie, 45 Min. vor Ort. Tel: 0152 12274043"
         canonical="https://aquapro24.de"
         keywords="Sanitär München, Klempner München Notdienst, Heizung reparieren München, Installateur München, Wasserinstallation Schwabing, Rohrreinigung Bogenhausen, Badsanierung Sendling, Wärmepumpe München Förderung, Sanitär Pasing, Klempner Maxvorstadt, Heizungswartung Haidhausen, Sanitärnotdienst Neuhausen, Installateur Trudering, Klempner Laim, Heizung Giesing, Sanitär Moosach, Installateur Milbertshofen"
