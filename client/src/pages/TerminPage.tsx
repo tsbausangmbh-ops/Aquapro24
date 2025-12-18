@@ -58,8 +58,19 @@ const bookingSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein").optional().or(z.literal("")),
+  stadtteil: z.string().min(1, "Bitte wählen Sie Ihren Stadtteil"),
   address: z.string().min(5, "Bitte geben Sie Ihre Adresse ein"),
 });
+
+const muenchnerStadtteile = [
+  "Allach-Untermenzing", "Altstadt-Lehel", "Au-Haidhausen", "Aubing-Lochhausen-Langwied",
+  "Berg am Laim", "Bogenhausen", "Feldmoching-Hasenbergl", "Hadern", "Laim",
+  "Ludwigsvorstadt-Isarvorstadt", "Maxvorstadt", "Milbertshofen-Am Hart", "Moosach",
+  "Neuhausen-Nymphenburg", "Obergiesing-Fasangarten", "Pasing-Obermenzing", "Perlach",
+  "Ramersdorf-Perlach", "Schwabing-Freimann", "Schwabing-West", "Schwanthalerhöhe",
+  "Sendling", "Sendling-Westpark", "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+  "Trudering-Riem", "Untergiesing-Harlaching"
+];
 
 type BookingFormData = z.infer<typeof bookingSchema>;
 
@@ -232,6 +243,7 @@ export default function TerminPage() {
       name: "",
       phone: "",
       email: "",
+      stadtteil: "",
       address: "",
     },
   });
@@ -322,7 +334,7 @@ export default function TerminPage() {
       case 9: return ["preferredDate"];
       case 10: return ["preferredTime"];
       case 11: return ["name", "phone"];
-      case 12: return ["address"];
+      case 12: return ["stadtteil", "address"];
       case 13: return []; // Summary
       default: return [];
     }
@@ -1007,7 +1019,7 @@ export default function TerminPage() {
                     </Card>
                   )}
 
-                  {/* Step 12: Address & Email */}
+                  {/* Step 12: Stadtteil, Address & Email */}
                   {step === 12 && (
                     <Card>
                       <CardHeader>
@@ -1019,14 +1031,36 @@ export default function TerminPage() {
                       <CardContent className="space-y-4">
                         <FormField
                           control={form.control}
+                          name="stadtteil"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Stadtteil *</FormLabel>
+                              <FormControl>
+                                <select 
+                                  {...field}
+                                  className="w-full h-10 px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                                  data-testid="select-stadtteil"
+                                >
+                                  <option value="">Bitte Stadtteil wählen...</option>
+                                  {muenchnerStadtteile.map((stadtteil) => (
+                                    <option key={stadtteil} value={stadtteil}>{stadtteil}</option>
+                                  ))}
+                                </select>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
                           name="address"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Adresse *</FormLabel>
+                              <FormLabel>Straße & Hausnummer *</FormLabel>
                               <FormControl>
                                 <div className="relative">
                                   <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                                  <Input {...field} placeholder="Straße, Hausnummer, PLZ Ort" className="pl-10" data-testid="input-address" />
+                                  <Input {...field} placeholder="z.B. Leopoldstraße 42" className="pl-10" data-testid="input-address" />
                                 </div>
                               </FormControl>
                               <FormMessage />
@@ -1092,6 +1126,7 @@ export default function TerminPage() {
                             <p><strong>Name:</strong> {form.getValues("name")}</p>
                             <p><strong>Telefon:</strong> {form.getValues("phone")}</p>
                             <p><strong>E-Mail:</strong> {form.getValues("email") || "Nicht angegeben"}</p>
+                            <p><strong>Stadtteil:</strong> {form.getValues("stadtteil")}</p>
                             <p><strong>Adresse:</strong> {form.getValues("address")}</p>
                             {form.getValues("accessInfo") && <p><strong>Zugang:</strong> {form.getValues("accessInfo")}</p>}
                           </div>
