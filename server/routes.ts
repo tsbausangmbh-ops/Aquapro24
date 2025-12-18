@@ -551,19 +551,53 @@ export async function registerRoutes(server: Server, app: Express): Promise<void
       res.json({ success: true, slots: timeSlots, service: serviceType || 'default' });
     } catch (error) {
       console.error("Error fetching available slots:", error);
-      // Return default slots if calendar is not connected
-      const defaultSlots = [
-        { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
-        { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
-        { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
-        { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
-        { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
-        { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
-        { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
-        { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
-        { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
-        { time: "17:00", available: true, label: "17:00 - 18:00 Uhr" },
-      ];
+      // Return default slots with 60% busy simulation if calendar is not connected
+      const dateStr = typeof req.query.date === 'string' ? req.query.date : new Date().toISOString().split('T')[0];
+      const dateObj = new Date(dateStr);
+      const dayOfWeek = dateObj.getDay();
+      
+      // Sunday - no appointments
+      if (dayOfWeek === 0) {
+        res.json({ success: true, slots: [] });
+        return;
+      }
+      
+      let defaultSlots;
+      if (dayOfWeek === 6) {
+        // Saturday: 10:00 - 15:00
+        defaultSlots = [
+          { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+          { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+          { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+          { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+          { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+        ];
+      } else {
+        // Monday-Friday: 08:00 - 17:00
+        defaultSlots = [
+          { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
+          { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
+          { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+          { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+          { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+          { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+          { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+          { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
+          { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
+        ];
+      }
+      
+      // Simulate 60% busy (rotating weekly)
+      const weekNumber = Math.floor(dateObj.getTime() / (7 * 24 * 60 * 60 * 1000));
+      const dayOfYear = Math.floor((dateObj.getTime() - new Date(dateObj.getFullYear(), 0, 0).getTime()) / (24 * 60 * 60 * 1000));
+      const seed = (weekNumber * 7 + dayOfWeek + dayOfYear) % 100;
+      const busyCount = Math.floor(defaultSlots.length * 0.6);
+      
+      for (let i = 0; i < busyCount; i++) {
+        const slotIndex = (seed + i * 3 + Math.floor(seed / (i + 1))) % defaultSlots.length;
+        defaultSlots[slotIndex].available = false;
+      }
+      
       res.json({ success: true, slots: defaultSlots });
     }
   });

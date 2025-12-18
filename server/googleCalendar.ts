@@ -206,28 +206,79 @@ export interface TimeSlot {
 // Buffer time in minutes before and after each appointment
 const BUFFER_MINUTES = 90;
 
+// Generate a deterministic "busy" pattern based on date and week number
+// 60% of slots show as busy, rotating weekly
+function getSimulatedBusySlots(date: string, totalSlots: number): Set<number> {
+  const dateObj = new Date(date);
+  const weekNumber = Math.floor(dateObj.getTime() / (7 * 24 * 60 * 60 * 1000));
+  const dayOfYear = Math.floor((dateObj.getTime() - new Date(dateObj.getFullYear(), 0, 0).getTime()) / (24 * 60 * 60 * 1000));
+  
+  // Use week number and day to create a rotating pattern
+  const seed = (weekNumber * 7 + dateObj.getDay() + dayOfYear) % 100;
+  
+  const busyCount = Math.floor(totalSlots * 0.6); // 60% busy
+  const busySlots = new Set<number>();
+  
+  // Deterministic selection of which slots are "busy" based on the seed
+  for (let i = 0; i < busyCount; i++) {
+    // Use a simple hash-like approach to pick slots deterministically
+    const slotIndex = (seed + i * 3 + Math.floor(seed / (i + 1))) % totalSlots;
+    busySlots.add(slotIndex);
+  }
+  
+  // If we haven't reached 60%, fill in more slots
+  let extraIndex = 0;
+  while (busySlots.size < busyCount && extraIndex < totalSlots) {
+    const nextSlot = (seed + extraIndex * 7) % totalSlots;
+    busySlots.add(nextSlot);
+    extraIndex++;
+  }
+  
+  return busySlots;
+}
+
 export async function getAvailableTimeSlots(date: string, serviceType?: string): Promise<TimeSlot[]> {
-  // Check if it's Saturday (6) or Sunday (0) - no appointments on weekends
   const dateObj = new Date(date);
   const dayOfWeek = dateObj.getDay();
   
-  if (dayOfWeek === 0 || dayOfWeek === 6) {
-    // Return empty slots for weekends
+  // Sunday (0) - no appointments
+  if (dayOfWeek === 0) {
     return [];
   }
   
-  // Working hours: 08:00 - 16:30 (last appointment at 15:30)
-  const timeSlots: TimeSlot[] = [
-    { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
-    { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
-    { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
-    { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
-    { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
-    { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
-    { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
-    { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
-    { time: "15:30", available: true, label: "15:30 - 16:30 Uhr" },
-  ];
+  let timeSlots: TimeSlot[];
+  
+  // Saturday (6): 10:00 - 15:00 (last appointment at 14:00)
+  if (dayOfWeek === 6) {
+    timeSlots = [
+      { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+      { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+      { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+      { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+      { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+    ];
+  } else {
+    // Monday-Friday: 08:00 - 17:00 (last appointment at 16:00)
+    timeSlots = [
+      { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
+      { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
+      { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
+      { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
+      { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
+      { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
+      { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
+      { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
+      { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
+    ];
+  }
+  
+  // Apply simulated 60% busy pattern (rotating weekly)
+  const busySlots = getSimulatedBusySlots(date, timeSlots.length);
+  for (let i = 0; i < timeSlots.length; i++) {
+    if (busySlots.has(i)) {
+      timeSlots[i].available = false;
+    }
+  }
 
   // Single calendar for all services - if a slot is taken, it's blocked for all Gewerke
   const calendarId = 'primary';
