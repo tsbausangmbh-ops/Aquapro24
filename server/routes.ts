@@ -217,40 +217,40 @@ Nach den 3 Fragen:
 
 Verwende Alltagssprache - keine Fachbegriffe ohne Erklärung.
 
-PREISSCHÄTZUNG (Münchner Preise + 30% Zuschlag, alle Preise NETTO):
+PREISSCHÄTZUNG (Münchner Preise + 30% Beratungsaufschlag, alle Preise NETTO):
 
 Berechne: Anfahrt + Arbeitszeit + grobe Materialpauschale nach Münchner Durchschnittspreisen + 30% Zuschlag.
 
 Preisrichtlinien:
 
-Anfahrt + 1. Arbeitsstunde: 120-180 EUR netto
+Anfahrt + 1. Arbeitsstunde: 156-234 EUR netto
 
-Jede weitere Stunde: 65-85 EUR netto
+Jede weitere Stunde: 85-110 EUR netto
 
-Kleine Reparaturen (Tropfende Armatur, WC-Reparatur): 120-200 EUR netto
+Kleine Reparaturen (Tropfende Armatur, WC-Reparatur): 156-260 EUR netto
 
-Mittlere Reparaturen (Rohrverstopfung, Thermostat): 200-400 EUR netto
+Mittlere Reparaturen (Rohrverstopfung, Thermostat): 260-520 EUR netto
 
-Rohrbruch/Wasserschaden: 400-800 EUR netto
+Rohrbruch/Wasserschaden: 520-1.040 EUR netto
 
-Heizungswartung: 180-280 EUR netto
+Heizungswartung: 234-364 EUR netto
 
-Heizung reparieren: 250-600 EUR netto
+Heizung reparieren: 325-780 EUR netto
 
-Neue Heizungsanlage: 8.000-18.000 EUR netto
+Neue Heizungsanlage: 10.400-23.400 EUR netto
 
-Wärmepumpe komplett: 18.000-35.000 EUR netto (vor Förderung)
+Wärmepumpe komplett: 23.400-45.500 EUR netto (vor Förderung)
 
-Badsanierung klein (bis 5m²): 8.000-15.000 EUR netto
+Badsanierung klein (bis 5m²): 10.400-19.500 EUR netto
 
-Badsanierung mittel (5-8m²): 15.000-25.000 EUR netto
+Badsanierung mittel (5-8m²): 19.500-32.500 EUR netto
 
-Badsanierung groß (über 8m²): 25.000-45.000 EUR netto
+Badsanierung groß (über 8m²): 32.500-58.500 EUR netto
 
 Notdienst-Aufschlag (Wochenende/Nacht): +50%
 
 Beispielausgabe:
-"Voraussichtliche Kosten: ca. 180-240 EUR netto zzgl. 19% MwSt."
+"Voraussichtliche Kosten: ca. 234-312 EUR netto zzgl. 19% MwSt."
 
 WICHTIGE HINWEISE:
 
@@ -749,16 +749,16 @@ KOMMUNIKATIONSSTIL:
 - Konkrete Beispiele und Preisrahmen nennen
 - Keine Fachbegriffe ohne Erklärung
 
-PREISRAHMEN (netto, München, Stand 12.2025):
-- Teilsanierung: ab 7.000 EUR
-- Komplettsanierung klein (bis 5m²): 13.000-21.600 EUR
-- Komplettsanierung mittel (5-8m²): 18.400-34.600 EUR
-- Komplettsanierung groß (über 8m²): 34.600-59.500 EUR
-- Barrierefreies Bad: ab 28.100 EUR (KfW-Förderung möglich)
-- Luxusbad Premium: ab 41.100 EUR
-- Pro Quadratmeter Standard: 1.300-3.570 EUR
-- Pro Quadratmeter Komfort: 3.570-4.980 EUR
-- Pro Quadratmeter Premium: 4.980-7.030 EUR
+PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+- Teilsanierung: ab 9.100 EUR
+- Komplettsanierung klein (bis 5m²): 16.900-28.100 EUR
+- Komplettsanierung mittel (5-8m²): 23.900-45.000 EUR
+- Komplettsanierung groß (über 8m²): 45.000-77.400 EUR
+- Barrierefreies Bad: ab 36.500 EUR (KfW-Förderung möglich)
+- Luxusbad Premium: ab 53.400 EUR
+- Pro Quadratmeter Standard: 1.690-4.640 EUR
+- Pro Quadratmeter Komfort: 4.640-6.470 EUR
+- Pro Quadratmeter Premium: 6.470-9.140 EUR
 
 TYPISCHE DAUER:
 - Teilsanierung: 1-5 Tage
@@ -799,13 +799,13 @@ KOMMUNIKATIONSSTIL:
 - Soforthilfe-Tipps wo möglich
 - Realistische Preise nennen
 
-PREISRAHMEN (netto, München, Stand 12.2025):
-- Stundensatz Installateur: 88-124 EUR
-- Anfahrt + 1. Stunde: 173-254 EUR
-- Kleine Reparaturen (Armatur, WC): 173-281 EUR
-- Mittlere Reparaturen (Rohrverstopfung): 281-562 EUR
-- Rohrbruch/Wasserschaden: 562-1.125 EUR
-- Neue Wasserleitungen pro Meter: 113-211 EUR
+PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+- Stundensatz Installateur: 115-161 EUR
+- Anfahrt + 1. Stunde: 225-330 EUR
+- Kleine Reparaturen (Armatur, WC): 225-365 EUR
+- Mittlere Reparaturen (Rohrverstopfung): 365-730 EUR
+- Rohrbruch/Wasserschaden: 730-1.460 EUR
+- Neue Wasserleitungen pro Meter: 147-274 EUR
 - Notdienst-Zuschlag (Wochenende/Feiertage): +50%
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
@@ -842,14 +842,14 @@ KOMMUNIKATIONSSTIL:
 - Kompetent aber verständlich
 - Förderungen und Einsparpotenziale betonen
 
-PREISRAHMEN (netto, München, Stand 12.2025):
-- Heizungswartung Gas/Öl: 228-395 EUR
-- Heizung reparieren: 351-844 EUR
-- Stundensatz Heizungsbauer: 113-130 EUR
-- Neue Gastherme: 13.000-21.600 EUR
-- Neue Heizungsanlage komplett: 13.000-26.000 EUR
-- Hydraulischer Abgleich: 562-1.125 EUR
-- Austausch Heizkessel: 5.620-8.440 EUR
+PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+- Heizungswartung Gas/Öl: 296-514 EUR
+- Heizung reparieren: 456-1.097 EUR
+- Stundensatz Heizungsbauer: 147-169 EUR
+- Neue Gastherme: 16.900-28.100 EUR
+- Neue Heizungsanlage komplett: 16.900-33.800 EUR
+- Hydraulischer Abgleich: 730-1.460 EUR
+- Austausch Heizkessel: 7.300-10.970 EUR
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
 
@@ -886,13 +886,13 @@ KOMMUNIKATIONSSTIL:
 - Förderungen immer erwähnen
 - Wirtschaftlichkeit betonen
 
-PREISRAHMEN (netto, vor Förderung, Stand 12.2025):
-- Luft-Wasser-Wärmepumpe komplett: 21.600-42.200 EUR
-- Sole-Wasser-Wärmepumpe (Erdwärme): 28.100-70.300 EUR
-- Wasser-Wasser-Wärmepumpe: 31.400-63.800 EUR
-- Jährliche Betriebskosten: 1.080-2.160 EUR
+PREISRAHMEN (netto, vor Förderung, Stand 12.2025, +30% Beratungsaufschlag):
+- Luft-Wasser-Wärmepumpe komplett: 28.100-54.900 EUR
+- Sole-Wasser-Wärmepumpe (Erdwärme): 36.500-91.400 EUR
+- Wasser-Wasser-Wärmepumpe: 40.800-83.000 EUR
+- Jährliche Betriebskosten: 1.400-2.800 EUR
 - KfW-Förderung (nicht mehr BAFA): bis zu 70% möglich! (max. 21.000 EUR Zuschuss)
-- Eigenanteil nach Förderung: ab ca. 9.800-16.500 EUR möglich
+- Eigenanteil nach Förderung: ab ca. 12.700-21.500 EUR möglich
 - Jährliche Einsparung: 40-60% gegenüber Gas
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
@@ -936,12 +936,12 @@ SOFORTHILFE-TIPPS:
 - Saugglocke richtig anwenden
 - Siphon unter dem Waschbecken prüfen
 
-PREISRAHMEN (netto, München, Stand 12.2025):
-- Einfache Rohrreinigung: 173-281 EUR
-- Maschinelle Reinigung: 281-562 EUR
-- Kanalreinigung: 422-844 EUR
-- Kamerainspektion: 211-351 EUR
-- Hochdruckspülung: 281-562 EUR
+PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+- Einfache Rohrreinigung: 225-365 EUR
+- Maschinelle Reinigung: 365-730 EUR
+- Kanalreinigung: 549-1.097 EUR
+- Kamerainspektion: 274-456 EUR
+- Hochdruckspülung: 365-730 EUR
 - Notdienst-Zuschlag: +50%
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
@@ -958,12 +958,12 @@ KOMMUNIKATIONSSTIL:
 - IMMER formelle Anrede "Sie"
 - Praktisch und verständlich
 
-PREISRAHMEN (netto, München, Stand 12.2025):
-- Durchlauferhitzer inkl. Montage: 703-1.406 EUR
-- Boiler 80-150L inkl. Montage: 973-1.947 EUR
-- Warmwasserspeicher inkl. Montage: 2.163-4.326 EUR
-- Reparatur: 211-562 EUR
-- Entkalkung: 173-281 EUR
+PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+- Durchlauferhitzer inkl. Montage: 914-1.828 EUR
+- Boiler 80-150L inkl. Montage: 1.265-2.531 EUR
+- Warmwasserspeicher inkl. Montage: 2.812-5.624 EUR
+- Reparatur: 274-730 EUR
+- Entkalkung: 225-365 EUR
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`,
 
@@ -979,12 +979,12 @@ KOMMUNIKATIONSSTIL:
 - IMMER formelle Anrede "Sie"
 - Design und Funktionalität verbinden
 
-PREISRAHMEN (netto, München, Stand 12.2025):
-- Einfache Armatur inkl. Montage: 141-351 EUR
-- Hochwertige Markenarmatur inkl. Montage: 281-703 EUR
-- Thermostat-Armatur inkl. Montage: 422-844 EUR
-- Reparatur/Dichtung: 113-211 EUR
-- Anfahrt + 1. Stunde: 173-254 EUR
+PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+- Einfache Armatur inkl. Montage: 183-456 EUR
+- Hochwertige Markenarmatur inkl. Montage: 365-914 EUR
+- Thermostat-Armatur inkl. Montage: 549-1.097 EUR
+- Reparatur/Dichtung: 147-274 EUR
+- Anfahrt + 1. Stunde: 225-330 EUR
 
 Hinweis: Alle Preise netto zzgl. 19% MwSt. - unverbindliche Schätzung ohne Gewähr. Verbindlicher Preis erst nach Besichtigung.`
   };
