@@ -111,6 +111,28 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
+                <h2 className="text-xl font-semibold mb-4">Hinweis zur KI-Beratung</h2>
+                <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+                  <p>
+                    Auf dieser Website setzen wir KI-gestützte Berater ein, die auf Basis von OpenAI-Technologie 
+                    unverbindliche Kostenschätzungen für Sanitär-, Heizungs- und Haustechnikleistungen erstellen.
+                  </p>
+                  <p>
+                    <strong>Preishinweis:</strong> Die von den KI-Beratern genannten Preisschätzungen enthalten 
+                    einen Beratungsaufschlag von 30% gegenüber den auf unserer Website angegebenen Basispreisen. 
+                    Dies dient der Vergütung der KI-gestützten Beratungsleistung.
+                  </p>
+                  <p>
+                    Alle genannten Preise sind unverbindliche Schätzungen (netto zzgl. 19% MwSt.) und dienen 
+                    nur zur Orientierung. Verbindliche Preise werden erst nach einer persönlichen Besichtigung 
+                    vor Ort festgelegt. Stand: Dezember 2025.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Streitschlichtung</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>

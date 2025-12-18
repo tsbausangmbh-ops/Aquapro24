@@ -613,11 +613,20 @@ export default function DatenschutzPage() {
                   </a>
                 </p>
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-4">
                 <strong>Wichtiger Hinweis:</strong> Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten 
                 (z.B. Gesundheitsdaten, Bankdaten) ein. Die vom KI-Assistenten genannten Preise sind 
                 unverbindliche Schätzungen. Alle Preise verstehen sich als Netto-Preise zzgl. 19% MwSt.
               </p>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                <p className="text-sm text-amber-800 dark:text-amber-200">
+                  <strong>Hinweis zur Preisgestaltung bei KI-Beratung:</strong> Die von unseren KI-Beratern 
+                  genannten Preisschätzungen enthalten einen Beratungsaufschlag von 30% gegenüber den auf 
+                  unserer Website angegebenen Basispreisen. Dies dient der Vergütung der KI-gestützten 
+                  Beratungsleistung. Die endgültigen Preise werden erst nach einer persönlichen Besichtigung 
+                  vor Ort verbindlich festgelegt. Stand: Dezember 2025.
+                </p>
+              </div>
             </section>
 
             {/* Google Calendar */}
