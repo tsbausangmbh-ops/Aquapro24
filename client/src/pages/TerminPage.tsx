@@ -363,8 +363,8 @@ export default function TerminPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Jetzt Termin sichern | Schnelle Hilfe für Ihr Problem"
-        description="Kein Warten in der Warteschleife. Buchen Sie online Ihren Wunschtermin. Freie Zeiten in Echtzeit, Bestätigung sofort."
+        title="Termin online buchen | Sanitär München sofort"
+        description="Kein Warten in der Warteschleife. Buchen Sie Ihren Wunschtermin online. Freie Zeiten in Echtzeit, sofortige Bestätigung per E-Mail."
         canonical="https://aquapro24.de/termin"
         keywords="Termin buchen München, Sanitär Termin, Heizung Termin, Klempner München online buchen"
       />

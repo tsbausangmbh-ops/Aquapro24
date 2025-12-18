@@ -11,8 +11,8 @@ export default function CookieRichtliniePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Cookies auf unserer Website | Was wir nutzen"
-        description="Nur notwendige Cookies für eine bessere Nutzung. Kein Tracking, keine Werbung. Einfach erklärt, DSGVO-konform."
+        title="Cookie-Richtlinie | AquaPro24 München"
+        description="Cookie-Richtlinie DSGVO-konform. Nur technisch notwendige Cookies. Kein Tracking, keine Werbung. Einfach und transparent erklärt."
         canonical="https://aquapro24.de/cookie-richtlinie"
       />
       <Header />

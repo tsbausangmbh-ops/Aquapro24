@@ -93,8 +93,8 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung kalt? Wir bringen Wärme zurück | München"
-        description="Frieren müssen Sie nicht. Heizungsausfall? Unser Techniker kommt schnell und repariert vor Ort. Festpreis, alle Marken."
+        title="Heizung defekt? Kalt in der Wohnung? München hilft"
+        description="Heizung ausgefallen und Sie frieren? Unser Techniker repariert alle Marken vor Ort. Festpreis, keine versteckten Kosten. Rufen Sie jetzt an."
         canonical="https://aquapro24.de/heizung"
         keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München, Gasheizung München, Heizung Schwabing, Heizung Bogenhausen, Heizung Sendling, Heizung Pasing, Heizung Maxvorstadt, Heizung Haidhausen, Heizung Neuhausen, Heizung Trudering, Heizung Laim, Heizung Giesing, Heizung Moosach, Heizung Milbertshofen, Heizung Nymphenburg, Heizung Perlach, Heizung Solln, Heizung Hadern, Heizung Allach, Heizung Aubing, Heizung Feldmoching, Heizung Isarvorstadt, Heizung Lehel, Heizungsmonteur München, Heizungsinstallation München, Fußbodenheizung München, Heizung defekt München, Heizung reparieren München, Viessmann München, Vaillant München, Buderus München, Heizung Notdienst Schwabing, Heizungsreparatur Bogenhausen"
         aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 149€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0152 12274043"

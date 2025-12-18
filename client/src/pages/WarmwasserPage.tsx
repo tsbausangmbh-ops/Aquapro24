@@ -106,8 +106,8 @@ export default function WarmwasserPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Kein Warmwasser? Wir reparieren Ihren Durchlauferhitzer"
-        description="Kalte Dusche am Morgen? Das muss nicht sein. Wir reparieren Durchlauferhitzer & Boiler schnell. Alle Marken, Festpreis."
+        title="Kein Warmwasser? Durchlauferhitzer Reparatur München"
+        description="Kalte Dusche am Morgen? Wir reparieren Durchlauferhitzer und Boiler aller Marken schnell und zuverlässig. Festpreis. Jetzt anrufen."
         canonical="https://aquapro24.de/warmwasser"
         keywords="Warmwasser München, Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Durchlauferhitzer reparieren München, Boiler installieren München, kein warmes Wasser München, Warmwasser Notdienst München, Stiebel Eltron München, Vaillant München, Junkers München, Warmwasserbereiter München"
         aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0152 12274043"

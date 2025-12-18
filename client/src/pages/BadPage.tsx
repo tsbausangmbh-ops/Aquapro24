@@ -92,8 +92,8 @@ export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Traumbad statt Altbau-Frust | Badsanierung München"
-        description="Ihr Bad ist alt und unpraktisch? In 2-3 Wochen haben Sie Ihr Wunschbad. Festpreis, 3D-Vorschau, keine Baustellen-Chaos."
+        title="Altes Bad nervt? Badsanierung München in 2-3 Wochen"
+        description="Ihr Bad ist veraltet und unpraktisch? Wir sanieren komplett in 2-3 Wochen. Festpreis, 3D-Planung inklusive. Jetzt kostenlos beraten lassen."
         canonical="https://aquapro24.de/bad"
         keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, barrierefreies Bad München, Bad Schwabing, Badsanierung Bogenhausen, Bad Sendling, Badsanierung Pasing, Bad Maxvorstadt, Badsanierung Haidhausen, Bad Neuhausen, Badsanierung Trudering, Bad Laim, Badsanierung Giesing, Bad Moosach, Badsanierung Milbertshofen, Bad Nymphenburg, Badsanierung Perlach, Bad Solln, Badsanierung Hadern, Bad Allach, Badsanierung Aubing, Bad Feldmoching, Bad Isarvorstadt, Bad Lehel, Badumbau München, seniorengerechtes Bad München, Traumbad München, altersgerechtes Bad München, Badmodernisierung München, Bad erneuern München"
         aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 16.000€. Barrierefreie Bäder ab 20.000€ mit KfW-Förderung, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie. Kontakt: 0152 12274043"

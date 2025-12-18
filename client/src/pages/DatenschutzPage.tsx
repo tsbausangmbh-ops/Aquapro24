@@ -9,8 +9,8 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Ihre Daten sind bei uns sicher | Datenschutz"
-        description="Wir nehmen Datenschutz ernst. Hier erfahren Sie, wie wir Ihre Daten schützen und welche Rechte Sie haben. Transparent erklärt."
+        title="Datenschutz | AquaPro24 München DSGVO"
+        description="Datenschutzerklärung gemäß DSGVO. Erfahren Sie, wie wir Ihre Daten schützen und welche Rechte Sie haben. Transparent und verständlich."
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />

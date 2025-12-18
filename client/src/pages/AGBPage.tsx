@@ -7,8 +7,8 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Faire Bedingungen | AGB für unsere Kunden"
-        description="Transparente Geschäftsbedingungen: Festpreise, 2 Jahre Garantie, klare Regeln. Wissen, woran man ist - vor dem ersten Handgriff."
+        title="AGB | AquaPro24 Sanitär München"
+        description="Allgemeine Geschäftsbedingungen: Festpreise, 2 Jahre Garantie, transparente Regeln. Faire Bedingungen für unsere Kunden in München."
         canonical="https://aquapro24.de/agb"
       />
       <Header />
