@@ -236,13 +236,13 @@ export default function SanitaerPage() {
           ]}
         />
 
+        <ServiceAdvisor serviceType="sanitaer" />
+
         <CustomerStories 
           stories={sanitaerStories}
           title="Echte Geschichten von Münchner Kunden"
           subtitle="Diese Situationen kennen viele - lesen Sie, wie wir helfen konnten"
         />
-
-        <ServiceAdvisor serviceType="sanitaer" />
 
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

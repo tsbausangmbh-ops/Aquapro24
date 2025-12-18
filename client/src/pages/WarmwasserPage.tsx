@@ -235,13 +235,13 @@ export default function WarmwasserPage() {
           ]}
         />
 
+        <ServiceAdvisor serviceType="warmwasser" />
+
         <CustomerStories 
           stories={heizungStories}
           title="Echte Geschichten von Münchner Kunden"
           subtitle="Von der Notfall-Reparatur bis zur Neuinstallation"
         />
-
-        <ServiceAdvisor serviceType="warmwasser" />
 
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

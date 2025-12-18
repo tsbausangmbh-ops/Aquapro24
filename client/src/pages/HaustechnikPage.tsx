@@ -227,13 +227,13 @@ export default function HaustechnikPage() {
           ]}
         />
 
+        <ServiceAdvisor serviceType="haustechnik" />
+
         <CustomerStories 
           stories={haustechnikStories}
           title="Haustechnik aus einer Hand: Erfolgsgeschichten"
           subtitle="So haben wir komplexe Projekte für Münchner Kunden gelöst"
         />
-
-        <ServiceAdvisor serviceType="haustechnik" />
 
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

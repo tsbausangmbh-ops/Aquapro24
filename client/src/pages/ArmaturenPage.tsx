@@ -235,13 +235,13 @@ export default function ArmaturenPage() {
           ]}
         />
 
+        <ServiceAdvisor serviceType="armaturen" />
+
         <CustomerStories 
           stories={sanitaerStories}
           title="Echte Geschichten von Münchner Kunden"
           subtitle="Von der kleinen Reparatur bis zur kompletten Neuausstattung"
         />
-
-        <ServiceAdvisor serviceType="armaturen" />
 
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
