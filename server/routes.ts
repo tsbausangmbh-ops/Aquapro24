@@ -6,7 +6,7 @@ import OpenAI from "openai";
 import nodemailer from "nodemailer";
 
 const emailTransporter = nodemailer.createTransport({
-  host: "smtp.1und1.de",
+  host: "smtp.ionos.de",
   port: 587,
   secure: false,
   auth: {
