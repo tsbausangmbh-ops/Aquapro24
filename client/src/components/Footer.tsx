@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="border-t border-background/10 mt-4 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <div className="text-sm text-background/50 text-center md:text-left">
-              <p>© 2025 <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a> – Verwaltung & Betrieb durch Mustafa Sakar.</p>
+              <p>© 2025 AquaPro24 – Verwaltung & Betrieb durch Mustafa Sakar.</p>
             </div>
             <div className="text-sm text-background/50 text-center md:text-right">
               <p>Webdesign powered by <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a></p>
