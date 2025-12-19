@@ -45,6 +45,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/bad" component={BadPage} />
+        <Route path="/badsanierung" component={BadPage} />
         <Route path="/heizung" component={HeizungPage} />
         <Route path="/waermepumpe" component={WaermepumpePage} />
         <Route path="/haustechnik" component={HaustechnikPage} />
