@@ -131,7 +131,7 @@ export default function HaustechnikPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-10 lg:py-16 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${smartHomeImage1})` }}

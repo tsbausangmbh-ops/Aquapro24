@@ -12,7 +12,7 @@ import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative py-16 lg:py-24 overflow-hidden">
+    <section className="relative py-10 lg:py-16 overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
