@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Loader2 } from "lucide-react";
 import ChristmasPopup from "@/components/ChristmasPopup";
 import NewYearPopup from "@/components/NewYearPopup";
+import { BackButton } from "@/components/BackButton";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Impressum = lazy(() => import("@/pages/Impressum"));
@@ -74,6 +75,7 @@ function App() {
       <TooltipProvider>
         <ChristmasPopup />
         <NewYearPopup />
+        <BackButton />
         <Toaster />
         <Router />
       </TooltipProvider>
