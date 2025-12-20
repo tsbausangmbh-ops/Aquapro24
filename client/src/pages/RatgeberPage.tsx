@@ -252,29 +252,60 @@ export default function RatgeberPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center opacity-70"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4 gap-1">
-                <BookOpen className="w-3 h-3" />
-                Ratgeber & Tipps
-              </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
-                Ratgeber - Expertenwissen für Ihr Zuhause
-              </h1>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 
-                Wissen aus über 35 Jahren Erfahrung in München.
-              </p>
-              <p className="text-white/80">
-                Von der Ersten Hilfe bei Wasserschäden bis zur Frage, ob sich eine Wärmepumpe 
-                für Sie lohnt - hier finden Sie fundierte Antworten.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge variant="secondary" className="mb-4 gap-1">
+                  <BookOpen className="w-3 h-3" />
+                  Ratgeber & Tipps
+                </Badge>
+                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                  Ratgeber - Expertenwissen für Ihr Zuhause
+                </h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                  <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 
+                  Wissen aus über 35 Jahren Erfahrung in München.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Von der Ersten Hilfe bei Wasserschäden bis zur Frage, ob sich eine Wärmepumpe 
+                  für Sie lohnt - hier finden Sie fundierte Antworten.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4915212274043">
+                      <Phone className="w-5 h-5 mr-2" />
+                      0152 12274043
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="secondary" asChild>
+                    <Link href="/termin">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24h Terminbuchung
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative space-y-4 hidden lg:block">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={heroImage} 
+                    alt="Ratgeber für Sanitär und Heizung" 
+                    className="w-full h-72 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      <Lightbulb className="w-3 h-3 mr-1" />
+                      Expertenwissen
+                    </Badge>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

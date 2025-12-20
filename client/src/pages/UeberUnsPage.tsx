@@ -32,6 +32,7 @@ import { Link } from "wouter";
 import teamImage from "@assets/stock_images/professional_busines_7b2784dc.jpg";
 import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
 import workshopImage from "@assets/stock_images/modern_plumbing_work_077b9e6b.jpg";
+import ServiceBooking from "@/components/ServiceBooking";
 
 const stats = [
   { value: "Seit 2005", label: "Partnernetzwerk", sublabel: "in München aktiv" },
@@ -236,44 +237,70 @@ export default function UeberUnsPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section - H1 optimiert für SEO */}
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center opacity-70"
             style={{ backgroundImage: `url(${teamImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge variant="secondary" className="gap-2 mb-4">
-                <BadgeCheck className="w-4 h-4" />
-                Geprüfte Fachbetriebe München
-              </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                AquaPro24 München:<br />
-                <span className="text-primary">Wir lösen Ihre Probleme</span>
-              </h1>
-              <p className="text-lg text-white/90 leading-relaxed mb-4">
-                <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
-                das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
-                Rechnung höher ausfiel als besprochen.
-              </p>
-              <p className="text-lg text-white/80 mb-6">
-                Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
-                <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-about">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0152 12274043
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
-                  <Link href="/termin">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    24h Terminbuchung
-                  </Link>
-                </Button>
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge variant="secondary" className="gap-2 mb-4">
+                  <BadgeCheck className="w-4 h-4" />
+                  Geprüfte Fachbetriebe München
+                </Badge>
+                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                  AquaPro24 München:<br />
+                  <span className="text-primary">Wir lösen Ihre Probleme</span>
+                </h1>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
+                  das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
+                  Rechnung höher ausfiel als besprochen.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
+                  <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4915212274043" data-testid="button-call-about">
+                      <Phone className="w-5 h-5 mr-2" />
+                      0152 12274043
+                    </a>
+                  </Button>
+                  <ServiceBooking 
+                    serviceType="allgemein" 
+                    buttonText="24h Terminbuchung"
+                    buttonSize="lg"
+                  />
+                </div>
+              </div>
+              <div className="relative space-y-4 hidden lg:block">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={teamImage} 
+                    alt="Das AquaPro24 Team" 
+                    className="w-full h-72 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      <Star className="w-3 h-3 mr-1" />
+                      Seit 2005
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center text-center">
+                    <div className="text-2xl font-bold text-secondary">2.800+</div>
+                    <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
+                  </div>
+                  <div className="bg-primary/10 rounded-xl p-4 flex flex-col justify-center text-center">
+                    <div className="text-2xl font-bold text-primary">20+ Jahre</div>
+                    <div className="text-sm text-muted-foreground">Erfahrung</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

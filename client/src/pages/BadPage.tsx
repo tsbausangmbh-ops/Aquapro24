@@ -132,7 +132,7 @@ export default function BadPage() {
       <main id="main-content">
         <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-40"
+            className="absolute inset-0 bg-cover bg-center opacity-70"
             style={{ backgroundImage: `url(${bathroomImage1})` }}
           />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
