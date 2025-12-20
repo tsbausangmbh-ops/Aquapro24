@@ -246,7 +246,7 @@ export default function HeizungPage() {
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Unsere Heizungs-Leistungen in München</h2>
+              <h2 className="text-3xl font-bold mb-4">Heizung München: Leistungen, Kosten & Notdienst</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Neuinstallation bis zur Reparatur - wir sind Ihr zuverlässiger Partner für alle Heizungsfragen.
               </p>
@@ -282,7 +282,7 @@ export default function HeizungPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Heizungsservice in München - Ihr zuverlässiger Partner für wohlige Wärme
+              Heizungsreparatur München: Kosten, Ablauf & Wartung
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -335,7 +335,7 @@ export default function HeizungPage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Heizung defekt? Wir helfen sofort!
+              Heizung Notdienst München – 24/7 erreichbar
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Unser 24/7 Notdienst ist für Sie da. In München und Umgebung meist innerhalb einer Stunde vor Ort.

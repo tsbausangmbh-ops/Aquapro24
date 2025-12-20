@@ -238,7 +238,7 @@ export default function HaustechnikPage() {
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Haustechnik-Leistungen in München</h2>
+              <h2 className="text-3xl font-bold mb-4">Haustechnik München: Leistungen & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Moderne Haustechnik für Komfort, Sicherheit und Energieeffizienz in Ihrem Zuhause.
               </p>
@@ -302,7 +302,7 @@ export default function HaustechnikPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Haustechnik in München - Alles aus einer Hand für Ihr Zuhause
+              Haustechnik München: Kosten, Smart Home & Gasinstallation
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -357,7 +357,7 @@ export default function HaustechnikPage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Ihr Projekt - unsere Expertise
+              Haustechnik München anfragen – Kostenlose Beratung
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Ob Neubau, Sanierung oder Modernisierung - wir planen und realisieren Ihre 

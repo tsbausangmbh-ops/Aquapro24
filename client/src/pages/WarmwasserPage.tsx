@@ -247,7 +247,7 @@ export default function WarmwasserPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Unsere Warmwasser-Leistungen in München
+                Warmwasser München: Leistungen & Festpreise
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Vom kleinen Untertischboiler bis zum großen Warmwasserspeicher - 
@@ -276,7 +276,7 @@ export default function WarmwasserPage() {
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Warum Münchner uns vertrauen
+                  Boiler & Durchlauferhitzer München: Unsere Vorteile
                 </h2>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -319,7 +319,7 @@ export default function WarmwasserPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Warmwasser-Service in München - Ihr Spezialist für Durchlauferhitzer und Boiler
+              Durchlauferhitzer München: Kosten, Wartung & Austausch
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -362,7 +362,7 @@ export default function WarmwasserPage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Kein warmes Wasser? Wir helfen sofort!
+              Warmwasser Notdienst München – Schnelle Hilfe
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Durchlauferhitzer defekt, Boiler macht Probleme? Wir bringen Ihr Warmwasser wieder zum Laufen.

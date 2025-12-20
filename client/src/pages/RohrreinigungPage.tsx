@@ -247,7 +247,7 @@ export default function RohrreinigungPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Unsere Rohrreinigung-Leistungen in München
+                Rohrreinigung München: Leistungen & Festpreise
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Egal ob Küche, Bad oder Keller - wir haben die richtige Lösung 
@@ -276,7 +276,7 @@ export default function RohrreinigungPage() {
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Warum Münchner uns vertrauen
+                  Abflussreinigung München: Warum uns Kunden empfehlen
                 </h2>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -319,7 +319,7 @@ export default function RohrreinigungPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Professionelle Rohrreinigung in München - Ihr Notdienst
+              Rohrreinigung München Kosten: Preise & Ablauf
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -361,7 +361,7 @@ export default function RohrreinigungPage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Abfluss verstopft? Wir helfen sofort!
+              Rohrreinigung Notdienst München – 60 Min. vor Ort
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Ob Küche, Bad oder WC - bei verstopften Abflüssen sind wir in 60 Minuten da.

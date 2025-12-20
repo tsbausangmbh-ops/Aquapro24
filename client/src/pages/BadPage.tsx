@@ -239,7 +239,7 @@ export default function BadPage() {
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Unsere Bad-Leistungen in München</h2>
+              <h2 className="text-3xl font-bold mb-4">Badsanierung München: Unsere Leistungen & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Kompetente Beratung, professionelle Ausführung und erstklassiger Service - alles aus einer Hand.
               </p>
@@ -275,7 +275,7 @@ export default function BadPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Badsanierung in München - Vom Altbad zum Traumbad
+              Kosten Badsanierung München: Was kostet ein neues Bad?
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -332,7 +332,7 @@ export default function BadPage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Bereit für Ihr neues Bad?
+              Badsanierung München anfragen – Kostenlose Beratung
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Lassen Sie sich unverbindlich beraten. Wir kommen zu Ihnen und erstellen ein 

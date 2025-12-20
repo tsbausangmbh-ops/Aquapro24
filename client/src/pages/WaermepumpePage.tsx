@@ -249,7 +249,7 @@ export default function WaermepumpePage() {
         <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Wärmepumpen-Leistungen in München</h2>
+              <h2 className="text-3xl font-bold mb-4">Wärmepumpe München: Kosten, Förderung & Installation</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung über die Installation bis zur Wartung - wir begleiten Sie auf dem Weg zur klimafreundlichen Heizung.
               </p>
@@ -313,7 +313,7 @@ export default function WaermepumpePage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Wärmepumpe in München - Klimaneutral heizen und bis zu 50% sparen
+              Wärmepumpe installieren München: Kosten, Ablauf & BAFA-Förderung
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -370,7 +370,7 @@ export default function WaermepumpePage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Jetzt auf Wärmepumpe umsteigen!
+              Wärmepumpe München anfragen – Kostenlose Förderberatung
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Nutzen Sie die attraktiven Förderprogramme. Wir beraten Sie kostenlos und 

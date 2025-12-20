@@ -248,7 +248,7 @@ export default function SanitaerPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Unsere Sanitär-Leistungen in München
+                Sanitär München: Leistungen & Festpreise
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Vom kleinen Reparaturauftrag bis zur kompletten Neuinstallation - 
@@ -277,7 +277,7 @@ export default function SanitaerPage() {
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Warum Münchner uns vertrauen
+                  Klempner München: Warum uns über 2.800 Kunden vertrauen
                 </h2>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -321,7 +321,7 @@ export default function SanitaerPage() {
         <section className="pt-8 pb-4 md:pt-8 md:pb-4">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Professionelle Sanitärinstallation in München - Ihr Partnernetzwerk
+              Sanitärinstallation München: Kosten, Ablauf & Garantie
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -377,7 +377,7 @@ export default function SanitaerPage() {
         <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Sanitär-Problem in München? Wir helfen sofort!
+              Sanitär Notdienst München – Jetzt Termin vereinbaren
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Ob tropfender Wasserhahn, verstopfter Abfluss oder neue Sanitärinstallation - 
