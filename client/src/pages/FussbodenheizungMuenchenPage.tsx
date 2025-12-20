@@ -7,6 +7,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/stock_images/underfloor_heating_i_77879d46.jpg";
 import { 
   Thermometer, 
   Phone, 
@@ -102,17 +103,22 @@ export default function FussbodenheizungMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-amber-500/10 via-background to-orange-500/5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-amber-600 text-white">
                 <Thermometer className="w-3 h-3 mr-1" />
                 Fußbodenheizung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                 Fußbodenheizung München – Nachrüstung & Modernisierung
               </h1>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-white/90 mb-6">
                 Fußbodenheizung bedeutet Komfort – aber nur, wenn Aufbauhöhe, Regelung und Untergrund 
                 richtig geplant sind. AquaPro24 hilft in München bei Nachrüstung, Umbau und Integration 
                 in moderne Heizsysteme. Wir prüfen gemeinsam, was technisch sinnvoll ist und wie sich 
@@ -125,7 +131,7 @@ export default function FussbodenheizungMuenchenPage() {
                     0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
                   <Link href="/kontakt" data-testid="link-kontakt-fussbodenheizung">
                     <Mail className="w-4 h-4 mr-2" />
                     Anfrage senden

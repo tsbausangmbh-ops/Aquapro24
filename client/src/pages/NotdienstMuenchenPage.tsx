@@ -8,6 +8,7 @@ import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.jpg";
 import { 
   AlertTriangle, 
   Phone, 
@@ -103,23 +104,28 @@ export default function NotdienstMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-red-600/15 via-background to-orange-500/10">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-red-600 text-white">
                 <AlertTriangle className="w-3 h-3 mr-1" />
                 Notdienst München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                 Sanitär & Heizung Notdienst München – schnelle Hilfe bei Rohrbruch & Ausfall
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-lg text-white/90 mb-4">
                 Bei Rohrbruch, Wasseraustritt oder Heizungsausfall zählt Tempo – aber auch eine saubere 
                 Einschätzung. AquaPro24 bietet Notdienst-Optionen in München und Umgebung. Damit wir 
                 schnell priorisieren können, senden Sie uns bitte Fotos/Videos, Adresse, Erreichbarkeit 
                 vor Ort und eine Kurzbeschreibung (Was ist passiert? Seit wann? Wie stark?).
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-white/80 mb-6">
                 Sie erhalten schnell eine Rückmeldung mit Verfügbarkeit, Vorgehen und – wenn möglich – 
                 einer transparenten Einschätzung zu Aufwand/Preisrahmen.
               </p>
@@ -130,7 +136,7 @@ export default function NotdienstMuenchenPage() {
                     0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
                   <Link href="/kontakt" data-testid="link-kontakt-notdienst">
                     <Mail className="w-4 h-4 mr-2" />
                     Notfall melden

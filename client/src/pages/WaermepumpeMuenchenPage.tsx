@@ -7,6 +7,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/stock_images/heat_pump_installati_53374252.jpg";
 import { 
   Leaf, 
   Phone, 
@@ -104,23 +105,28 @@ export default function WaermepumpeMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-orange-500/10 via-background to-green-500/5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-orange-500 text-white">
                 <Leaf className="w-3 h-3 mr-1" />
                 Wärmepumpe München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                 Wärmepumpe München – Beratung, Planung & Umsetzung
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-lg text-white/90 mb-4">
                 Sie möchten in München auf Wärmepumpe umstellen? Entscheidend sind Gebäudedaten, 
                 Heizlast, Hydraulik und die richtige Einbindung ins System. AquaPro24 unterstützt 
                 Sie bei der Planung und Umsetzung – inklusive sinnvoller Vorbereitung (z. B. 
                 Anpassungen an Verteilung/Regelung) und transparenter Schritte.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-white/80 mb-6">
                 Senden Sie uns für die Ersteinschätzung: Baujahr, Wohnfläche, Heizkörper/Fußbodenheizung, 
                 aktuelles System und – falls vorhanden – Energieausweis. So können wir realistisch 
                 beurteilen, welche Lösung passt.
@@ -132,7 +138,7 @@ export default function WaermepumpeMuenchenPage() {
                     0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
                   <Link href="/kontakt" data-testid="link-kontakt-waermepumpe">
                     <Mail className="w-4 h-4 mr-2" />
                     Anfrage senden

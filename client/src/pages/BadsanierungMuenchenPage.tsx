@@ -7,6 +7,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/stock_images/modern_luxury_bathro_fe230232.jpg";
 import { 
   Droplets, 
   Phone, 
@@ -103,23 +104,28 @@ export default function BadsanierungMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-cyan-500/10 via-background to-blue-500/5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-cyan-600 text-white">
                 <Droplets className="w-3 h-3 mr-1" />
                 Badsanierung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                 Badsanierung München – modern, sauber geplant, stressfrei umgesetzt
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-lg text-white/90 mb-4">
                 Eine Badsanierung ist mehr als neue Fliesen – sie ist Koordination, Timing und saubere 
                 Ausführung. AquaPro24 begleitet Ihre Badsanierung in München von der Planung bis zur 
                 Übergabe: Bestandsaufnahme, Empfehlungen zur Ausstattung, Ablaufplan und Umsetzung 
                 mit geprüften Gewerken.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-white/80 mb-6">
                 Damit Sie schneller ein Angebot erhalten, senden Sie uns bitte: Raummaße (oder Grundriss), 
                 Fotos, Wunschstil (modern/klassisch), und ob es um Teil- oder Komplettsanierung geht. 
                 Wir melden uns mit einem konkreten Vorschlag zum weiteren Vorgehen.
@@ -131,7 +137,7 @@ export default function BadsanierungMuenchenPage() {
                     0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
                   <Link href="/kontakt" data-testid="link-kontakt-badsanierung">
                     <Mail className="w-4 h-4 mr-2" />
                     Bad-Wünsche senden
