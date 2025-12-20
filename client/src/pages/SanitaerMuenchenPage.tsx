@@ -22,6 +22,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import FAQ from "@/components/FAQ";
 
 export default function SanitaerMuenchenPage() {
   const leistungen = [
@@ -205,6 +206,31 @@ export default function SanitaerMuenchenPage() {
           </div>
         </section>
 
+        <FAQ 
+          title="Häufige Fragen zu Sanitär in München"
+          items={[
+            {
+              question: "Welche Sanitärarbeiten übernehmen Sie in München?",
+              answer: "Wir übernehmen Reparaturen, Neuinstallationen und Sanierungen – z. B. Armaturen, WC, Waschtisch, Leitungen, Anschlüsse für Küche und Bad."
+            },
+            {
+              question: "Helfen Sie auch bei kleinen Reparaturen?",
+              answer: "Ja. Auch kleinere Defekte wie tropfende Armaturen oder defekte Spülkästen übernehmen wir zuverlässig."
+            },
+            {
+              question: "Wie schnell bekomme ich einen Termin?",
+              answer: "Nach Ihrer Anfrage melden wir uns zeitnah mit realistischen Terminoptionen – abhängig von Aufwand und Dringlichkeit."
+            },
+            {
+              question: "Was sollte ich bei der Anfrage mitschicken?",
+              answer: "Adresse, kurze Problembeschreibung und wenn möglich Fotos. Das beschleunigt die Einschätzung erheblich."
+            },
+            {
+              question: "Arbeiten Sie mit Festpreisen?",
+              answer: "Für viele Standardarbeiten nennen wir vorab einen klaren Preisrahmen oder Festpreis – transparent und nachvollziehbar."
+            }
+          ]}
+        />
         <TrustBar />
         <ServiceAreas serviceName="Sanitär" />
         <RelatedServices currentService="sanitaer" />

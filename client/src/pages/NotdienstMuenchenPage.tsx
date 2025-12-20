@@ -23,6 +23,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import FAQ from "@/components/FAQ";
 
 export default function NotdienstMuenchenPage() {
   const notfaelle = [
@@ -205,6 +206,31 @@ export default function NotdienstMuenchenPage() {
           </div>
         </section>
 
+        <FAQ 
+          title="Häufige Fragen zum Notdienst in München"
+          items={[
+            {
+              question: "Wann sollte ich den Notdienst kontaktieren?",
+              answer: "Bei Rohrbruch, Wasseraustritt, Heizungsausfall oder akuten Schäden, die sofortiges Handeln erfordern."
+            },
+            {
+              question: "Wie schnell reagieren Sie im Notfall?",
+              answer: "Nach Ihrer Anfrage melden wir uns schnellstmöglich mit einer Einschätzung zur Verfügbarkeit."
+            },
+            {
+              question: "Was sollte ich im Notfall mitschicken?",
+              answer: "Adresse, Fotos/Videos, kurze Beschreibung des Schadens und Ihre Erreichbarkeit vor Ort."
+            },
+            {
+              question: "Ist der Notdienst rund um die Uhr verfügbar?",
+              answer: "Notdienst-Anfragen sind grundsätzlich auch außerhalb der regulären Zeiten möglich – je nach Situation und Verfügbarkeit."
+            },
+            {
+              question: "Sind Notdienste teurer?",
+              answer: "Notdienste können mit Zuschlägen verbunden sein. Wir kommunizieren dies transparent vorab."
+            }
+          ]}
+        />
         <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
         <ServiceAreas serviceName="Notdienst" />

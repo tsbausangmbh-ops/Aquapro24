@@ -8,6 +8,7 @@ import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import CookieBanner from "@/components/CookieBanner";
@@ -64,6 +65,32 @@ export default function Home() {
         <Services />
         <Pricing />
         <Testimonials />
+        <FAQ 
+          title="Häufige Fragen zu AquaPro24 München"
+          subtitle="Alles Wichtige auf einen Blick"
+          items={[
+            {
+              question: "Was genau macht AquaPro24 in München?",
+              answer: "AquaPro24 koordiniert Sanitär-, Heizungs- und Modernisierungsarbeiten in München – von Reparaturen bis zur Komplettsanierung – mit geprüften Fachbetrieben und klaren Abläufen."
+            },
+            {
+              question: "Arbeiten Sie direkt oder mit Partnerbetrieben?",
+              answer: "Je nach Projekt arbeiten wir mit einem festen Netzwerk geprüfter Meisterbetriebe. So stellen wir Qualität, Verfügbarkeit und saubere Umsetzung sicher."
+            },
+            {
+              question: "Wie läuft eine Anfrage ab?",
+              answer: "Sie senden uns Ihre Anfrage per E-Mail oder Formular, idealerweise mit Fotos und Eckdaten. Wir melden uns zeitnah mit einer Einschätzung und dem nächsten Schritt."
+            },
+            {
+              question: "Sind auch kurzfristige Termine möglich?",
+              answer: "Ja, je nach Auslastung und Art der Arbeit sind kurzfristige Termine – insbesondere bei Reparaturen oder Notfällen – möglich."
+            },
+            {
+              question: "In welchen Stadtteilen von München sind Sie tätig?",
+              answer: "Wir arbeiten im gesamten Stadtgebiet München sowie im Umkreis (z. B. Schwabing, Bogenhausen, Giesing, Sendling, Pasing, Laim, Moosach)."
+            }
+          ]}
+        />
         <CTABanner />
       </main>
       <Footer />

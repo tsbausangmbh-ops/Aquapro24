@@ -22,6 +22,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import FAQ from "@/components/FAQ";
 
 export default function BadsanierungMuenchenPage() {
   const schritte = [
@@ -208,6 +209,31 @@ export default function BadsanierungMuenchenPage() {
           </div>
         </section>
 
+        <FAQ 
+          title="Häufige Fragen zur Badsanierung in München"
+          items={[
+            {
+              question: "Machen Sie komplette oder auch teilweise Badsanierungen?",
+              answer: "Beides. Von einzelnen Gewerken bis zur vollständigen Komplettsanierung Ihres Badezimmers in München."
+            },
+            {
+              question: "Übernehmen Sie die komplette Koordination?",
+              answer: "Ja. Planung, Ablauf, Gewerke-Koordination und Umsetzung laufen zentral über AquaPro24."
+            },
+            {
+              question: "Wie lange dauert eine Badsanierung?",
+              answer: "Das hängt vom Umfang ab. Nach Sichtung Ihrer Angaben erhalten Sie einen realistischen Zeitplan."
+            },
+            {
+              question: "Was benötige ich für eine erste Einschätzung?",
+              answer: "Fotos, Raumgröße, gewünschter Umfang (Teil oder Komplett), sowie besondere Wünsche (z. B. bodengleiche Dusche)."
+            },
+            {
+              question: "Kann ich mein Bad während der Sanierung nutzen?",
+              answer: "Je nach Umfang ist eine eingeschränkte Nutzung möglich – wir besprechen das vorab transparent."
+            }
+          ]}
+        />
         <TrustBar />
         <ServiceAreas serviceName="Badsanierung" />
         <RelatedServices currentService="bad" />

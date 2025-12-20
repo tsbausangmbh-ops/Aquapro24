@@ -21,6 +21,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import FAQ from "@/components/FAQ";
 
 export default function FussbodenheizungMuenchenPage() {
   const vorteile = [
@@ -199,6 +200,31 @@ export default function FussbodenheizungMuenchenPage() {
           </div>
         </section>
 
+        <FAQ 
+          title="Häufige Fragen zur Fußbodenheizung in München"
+          items={[
+            {
+              question: "Kann eine Fußbodenheizung nachgerüstet werden?",
+              answer: "Ja, abhängig von Aufbauhöhe, Untergrund und Nutzung. Wir prüfen die technische Machbarkeit."
+            },
+            {
+              question: "Eignet sich Fußbodenheizung für Altbauwohnungen?",
+              answer: "In vielen Fällen ja – besonders bei Sanierungen mit angepasstem Aufbau."
+            },
+            {
+              question: "Wie lange dauert der Einbau?",
+              answer: "Das hängt vom System und der Fläche ab. Nach Prüfung nennen wir Ihnen einen realistischen Zeitrahmen."
+            },
+            {
+              question: "Kann die Fußbodenheizung mit meiner bestehenden Heizung kombiniert werden?",
+              answer: "Ja, häufig ist eine Kombination möglich – wir prüfen das im Einzelfall."
+            },
+            {
+              question: "Ist eine Fußbodenheizung energieeffizient?",
+              answer: "Ja, besonders in Kombination mit modernen Heizsystemen wie Wärmepumpen."
+            }
+          ]}
+        />
         <TrustBar />
         <ServiceAreas serviceName="Fußbodenheizung" />
         <RelatedServices currentService="heizung" />

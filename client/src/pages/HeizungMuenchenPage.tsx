@@ -22,6 +22,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import FAQ from "@/components/FAQ";
 
 export default function HeizungMuenchenPage() {
   const leistungen = [
@@ -206,6 +207,31 @@ export default function HeizungMuenchenPage() {
           </div>
         </section>
 
+        <FAQ 
+          title="Häufige Fragen zu Heizung in München"
+          items={[
+            {
+              question: "Welche Heizungsleistungen bieten Sie an?",
+              answer: "Reparatur, Austausch, Modernisierung, Optimierung bestehender Anlagen sowie Vorbereitung für neue Systeme wie Wärmepumpen."
+            },
+            {
+              question: "Reparieren Sie auch bestehende Heizungen?",
+              answer: "Ja, wir reparieren und prüfen bestehende Heizsysteme – unabhängig vom Hersteller, sofern technisch möglich."
+            },
+            {
+              question: "Wie kann ich die Heizungsanfrage beschleunigen?",
+              answer: "Bitte senden Sie uns Fotos vom Gerät, Typenschild und ggf. Fehlercodes. So können wir schneller reagieren."
+            },
+            {
+              question: "Bieten Sie auch komplette Heizungsmodernisierungen an?",
+              answer: "Ja, inklusive Planung, Koordination und Umsetzung mit geprüften Fachbetrieben in München."
+            },
+            {
+              question: "Sind kurzfristige Heizungsreparaturen möglich?",
+              answer: "Bei Ausfällen oder dringenden Störungen versuchen wir, schnell eine Lösung oder Übergangslösung zu organisieren."
+            }
+          ]}
+        />
         <TrustBar />
         <ServiceAreas serviceName="Heizung" />
         <RelatedServices currentService="heizung" />

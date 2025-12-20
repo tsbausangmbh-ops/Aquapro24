@@ -22,6 +22,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import FAQ from "@/components/FAQ";
 
 export default function WaermepumpeMuenchenPage() {
   const schritte = [
@@ -209,6 +210,31 @@ export default function WaermepumpeMuenchenPage() {
           </div>
         </section>
 
+        <FAQ 
+          title="Häufige Fragen zu Wärmepumpen in München"
+          items={[
+            {
+              question: "Ist mein Haus für eine Wärmepumpe geeignet?",
+              answer: "Das hängt u. a. von Baujahr, Dämmung, Heizflächen und System ab. Wir prüfen das vorab anhand Ihrer Angaben."
+            },
+            {
+              question: "Übernehmen Sie auch die Planung?",
+              answer: "Ja. Wir unterstützen bei Planung, Auslegung und Umsetzung der Wärmepumpe."
+            },
+            {
+              question: "Kann eine Wärmepumpe mit Fußbodenheizung kombiniert werden?",
+              answer: "Ja, das ist sogar eine sehr effiziente Kombination – besonders bei Sanierungen."
+            },
+            {
+              question: "Welche Infos brauche ich für eine Anfrage?",
+              answer: "Wohnfläche, Baujahr, aktuelles Heizsystem, Heizkörper oder Fußbodenheizung sowie Fotos (falls möglich)."
+            },
+            {
+              question: "Beraten Sie auch zu Fördermöglichkeiten?",
+              answer: "Wir geben Ihnen eine Orientierung, welche Förderungen grundsätzlich infrage kommen."
+            }
+          ]}
+        />
         <TrustBar />
         <ServiceAreas serviceName="Wärmepumpe" />
         <RelatedServices currentService="waermepumpe" />
