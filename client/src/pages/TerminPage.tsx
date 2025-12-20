@@ -44,6 +44,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
+import heroImage from "@assets/stock_images/professional_plumber__tried_and_true__9bd32a7c.jpg";
 
 const bookingSchema = z.object({
   serviceType: z.string().min(1, "Bitte wählen Sie einen Service"),
@@ -371,25 +372,38 @@ export default function TerminPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="py-6 lg:pt-8 pb-4 bg-gradient-to-br from-secondary/10 to-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4">
                 <CalendarIcon className="w-3 h-3 mr-1" />
                 Online Terminbuchung
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                Termin buchen
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+                Termin online buchen
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/90 mb-4">
                 Buchen Sie online Ihren Wunschtermin. Wir prüfen die Verfügbarkeit in Echtzeit und melden uns bei Ihnen.
               </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-termin">
+                    <Phone className="w-4 h-4 mr-2" />
+                    0152 12274043
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Booking Form Section */}
-        <section className="pt-8 pb-12 lg:pt-10 lg:pb-16">
+        <section className="py-6 lg:py-8">
           <div className="max-w-3xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6 text-center">Online Terminbuchung</h2>
             
