@@ -137,72 +137,43 @@ export default function ArmaturenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-40"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${faucetImage1})` }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div>
-                <Badge variant="secondary" className="mb-4">
-                  <Droplets className="w-3 h-3 mr-1" />
-                  Armaturen-Service München
-                </Badge>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                  Armaturen Montage & Reparatur München
-                </h1>
-                <p className="text-lg text-muted-foreground mb-4">
-                  <strong>Wasserhahn tropft? Neue Armatur gekauft und brauchen Hilfe beim Einbau?</strong> 
-                  Wir sind Ihre Spezialisten für alle Armaturenarbeiten in München.
-                </p>
-                <p className="text-lg text-muted-foreground mb-4">
-                  Von der einfachen Reparatur bis zur Installation hochwertiger Markenarmaturen - 
-                  unsere erfahrenen Installateure arbeiten schnell, sauber und zum Festpreis.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-armaturen">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Jetzt anrufen
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="sanitaer" 
-                    buttonText="Termin buchen"
-                    buttonSize="lg"
-                  />
-                </div>
-              </div>
-              <div className="relative space-y-4 hidden lg:block">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={faucetImage1} 
-                    alt="Moderne Armatur in München" 
-                    className="w-full h-72 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-primary text-primary-foreground shadow-lg">
-                      <Star className="w-3 h-3 mr-1" />
-                      Alle Marken
-                    </Badge>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={faucetImage2} 
-                      alt="Wasserhahn Installation" 
-                      className="w-full h-32 object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center">
-                    <div className="text-2xl font-bold text-secondary">ab 80€</div>
-                    <div className="text-sm text-muted-foreground">Festpreis Montage</div>
-                  </div>
-                </div>
+            <div className="max-w-3xl">
+              <Badge variant="secondary" className="mb-4 gap-1">
+                <Droplets className="w-3 h-3" />
+                Armaturen-Service München
+              </Badge>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+                Armaturen Montage & Reparatur München
+              </h1>
+              <p className="text-lg text-white/90 mb-4">
+                <strong>Wasserhahn tropft? Neue Armatur gekauft und brauchen Hilfe beim Einbau?</strong> 
+                Wir sind Ihre Spezialisten für alle Armaturenarbeiten in München.
+              </p>
+              <p className="text-white/80 mb-6">
+                Von der einfachen Reparatur bis zur Installation hochwertiger Markenarmaturen - 
+                unsere erfahrenen Installateure arbeiten schnell, sauber und zum Festpreis.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-armaturen">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Jetzt anrufen
+                  </a>
+                </Button>
+                <ServiceBooking 
+                  serviceType="sanitaer" 
+                  buttonText="Termin buchen"
+                  buttonSize="lg"
+                  buttonVariant="outline"
+                  buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
+                />
               </div>
             </div>
           </div>

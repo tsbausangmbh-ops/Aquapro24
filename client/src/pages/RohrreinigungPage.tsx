@@ -146,72 +146,43 @@ export default function RohrreinigungPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-40"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${drainImage1})` }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div>
-                <Badge variant="secondary" className="mb-4">
-                  <PipetteIcon className="w-3 h-3 mr-1" />
-                  Rohrreinigung München
-                </Badge>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                  Rohrreinigung & Abflussreinigung München
-                </h1>
-                <p className="text-lg text-muted-foreground mb-4">
-                  <strong>Abfluss verstopft? Wasser steht in der Dusche oder Spüle?</strong> Das ist nicht nur 
-                  nervig, sondern auch unhygienisch. Aber keine Sorge - wir lösen das Problem schnell.
-                </p>
-                <p className="text-lg text-muted-foreground mb-4">
-                  Mit modernster Technik - von der Spirale bis zur Hochdruckspülung - beseitigen wir jede 
-                  Verstopfung. Und das oft innerhalb einer Stunde nach Ihrem Anruf.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Jetzt anrufen
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="sanitaer" 
-                    buttonText="24h Buchungstermin"
-                    buttonSize="lg"
-                  />
-                </div>
-              </div>
-              <div className="relative space-y-4 hidden lg:block">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={drainImage1} 
-                    alt="Professionelle Rohrreinigung in München" 
-                    className="w-full h-72 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-primary text-primary-foreground shadow-lg">
-                      <Star className="w-3 h-3 mr-1" />
-                      60 Min. Reaktionszeit
-                    </Badge>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={drainImage2} 
-                      alt="Abflussreinigung mit Spezialgeräten" 
-                      className="w-full h-32 object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="bg-secondary/10 rounded-xl p-4 flex flex-col justify-center">
-                    <div className="text-2xl font-bold text-secondary">ab 81€</div>
-                    <div className="text-sm text-muted-foreground">Festpreis Rohrreinigung</div>
-                  </div>
-                </div>
+            <div className="max-w-3xl">
+              <Badge variant="secondary" className="mb-4 gap-1">
+                <PipetteIcon className="w-3 h-3" />
+                Rohrreinigung München
+              </Badge>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+                Rohrreinigung & Abflussreinigung München
+              </h1>
+              <p className="text-lg text-white/90 mb-4">
+                <strong>Abfluss verstopft? Wasser steht in der Dusche oder Spüle?</strong> Das ist nicht nur 
+                nervig, sondern auch unhygienisch. Aber keine Sorge - wir lösen das Problem schnell.
+              </p>
+              <p className="text-white/80 mb-6">
+                Mit modernster Technik - von der Spirale bis zur Hochdruckspülung - beseitigen wir jede 
+                Verstopfung. Und das oft innerhalb einer Stunde nach Ihrem Anruf.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-rohrreinigung">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Jetzt anrufen
+                  </a>
+                </Button>
+                <ServiceBooking 
+                  serviceType="sanitaer" 
+                  buttonText="24h Buchungstermin"
+                  buttonSize="lg"
+                  buttonVariant="outline"
+                  buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
+                />
               </div>
             </div>
           </div>

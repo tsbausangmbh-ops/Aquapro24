@@ -130,69 +130,43 @@ export default function BadPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-40"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${bathroomImage1})` }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div>
-                <Badge className="gap-1 bg-cyan-600 text-white mb-4">
-                  <Droplets className="w-3 h-3" />
-                  Badsanierung München
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                  Badsanierung München – Komplettumbau in 2-4 Wochen
-                </h1>
-                <p className="text-lg text-muted-foreground mb-4">
-                  <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
-                  ohne versteckte Kosten, ohne böse Überraschungen.
-                </p>
-                <p className="text-lg text-muted-foreground mb-4">
-                  Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
-                  Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Partnernetzwerk.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-bad">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Jetzt beraten lassen
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="bad" 
-                    buttonText="24h Buchungstermin"
-                    buttonSize="lg"
-                  />
-                </div>
-              </div>
-              <div className="relative space-y-4 hidden lg:block">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={bathroomImage1} 
-                    alt="Modernes Badezimmer nach Sanierung" 
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-primary text-primary-foreground shadow-lg">
-                      <Star className="w-3 h-3 mr-1" />
-                      Top bewertet
-                    </Badge>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-2xl p-6 text-white">
-                  <p className="text-lg font-bold mb-3">Warum wir?</p>
-                  <ul className="space-y-2">
-                    {benefits.slice(0, 3).map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="max-w-3xl">
+              <Badge className="gap-1 bg-cyan-600 text-white mb-4">
+                <Droplets className="w-3 h-3" />
+                Badsanierung München
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+                Badsanierung München – Komplettumbau in 2-4 Wochen
+              </h1>
+              <p className="text-lg text-white/90 mb-4">
+                <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
+                ohne versteckte Kosten, ohne böse Überraschungen.
+              </p>
+              <p className="text-white/80 mb-6">
+                Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
+                Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Partnernetzwerk.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-bad">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Jetzt beraten lassen
+                  </a>
+                </Button>
+                <ServiceBooking 
+                  serviceType="bad" 
+                  buttonText="24h Buchungstermin"
+                  buttonSize="lg"
+                  buttonVariant="outline"
+                  buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
+                />
               </div>
             </div>
           </div>

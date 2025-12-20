@@ -166,9 +166,10 @@ const serviceConfigs: Record<ServiceType, ServiceConfig> = {
 interface ServiceBookingProps {
   serviceType: ServiceType;
   buttonText?: string;
-  buttonVariant?: 'default' | 'outline' | 'secondary';
+  buttonVariant?: 'default' | 'outline' | 'secondary' | 'ghost';
   buttonSize?: 'default' | 'sm' | 'lg';
   className?: string;
+  buttonClassName?: string;
 }
 
 export default function ServiceBooking({
@@ -176,7 +177,8 @@ export default function ServiceBooking({
   buttonText = "24h Buchungstermin",
   buttonVariant = 'default',
   buttonSize = 'default',
-  className = ""
+  className = "",
+  buttonClassName = ""
 }: ServiceBookingProps) {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
@@ -326,7 +328,8 @@ export default function ServiceBooking({
       <DialogTrigger asChild>
         <Button 
           size={buttonSize}
-          className={`${buttonStyles[serviceType]} ${className}`}
+          variant={buttonVariant}
+          className={`${buttonClassName || (buttonVariant === 'outline' ? '' : buttonStyles[serviceType])} ${className}`}
           data-testid={`button-booking-${serviceType}`}
         >
           <Calendar className="w-4 h-4 mr-2" />
