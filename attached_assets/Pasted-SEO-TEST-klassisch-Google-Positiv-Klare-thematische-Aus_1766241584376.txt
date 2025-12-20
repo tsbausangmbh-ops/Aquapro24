@@ -1,0 +1,153 @@
+SEO-TEST (klassisch Google)
+✅ Positiv
+
+Klare thematische Ausrichtung: Sanitär · Heizung · Notdienst
+
+Domainname gut merkbar
+
+Dienstleistungen mit hoher Suchintention (Notfall, Reparatur)
+
+❌ Kritische SEO-Schwächen
+
+Meta-Titel & Descriptions nicht sauber optimiert
+
+Mehrere Leistungen auf einer Seite vermischt
+
+Kein klarer Seiten-Fokus pro Keyword
+
+Texte zu kurz / zu oberflächlich
+
+H1/H2/H3-Struktur nicht konsequent
+
+Interne Verlinkung schwach
+
+🔧 SEO-Pflichtmaßnahmen
+
+1 Seite = 1 Hauptleistung
+
+Separate Seiten für:
+
+Sanitär Notdienst München
+
+Heizung Notdienst München
+
+Badsanierung
+
+Wartung & Reparatur
+
+Texte auf 1.000–1.500 Wörter
+
+Jede Seite mit:
+
+Ablauf
+
+Kosten
+
+Vorteile
+
+CTA
+
+SEO-Status: ⚠️ grundsätzlich brauchbar, aber nicht wettbewerbsfähig
+
+2️⃣ GEO-TEST (Lokale Sichtbarkeit)
+❌ Aktueller GEO-Status
+
+München nicht dominant genug
+
+Stadtteile kaum integriert
+
+Kein sauberes LocalBusiness-Schema
+
+areaServed nicht klar definiert
+
+➡️ Für Notdienst-Keywords ist das extrem kritisch.
+
+🔧 GEO-Pflichtmaßnahmen
+
+„München“ 6–10× pro Seite
+
+Stadtteile organisch im Text:
+
+Schwabing
+
+Bogenhausen
+
+Sendling
+
+Neuhausen
+
+Giesing
+
+LocalBusiness / PlumbingHeatingContractor Schema
+
+areaServed: München + 25 km
+
+Öffnungszeiten (Notdienst!)
+
+Telefonnummer prominent
+
+GEO-Status: ❌ lokal deutlich unter Potenzial
+
+3️⃣ KI-TEST (ChatGPT · Gemini · Perplexity)
+❌ KI-Erkennbarkeit
+
+Keine strukturierten FAQ-Blöcke
+
+Texte nicht antwort-orientiert
+
+Keine klaren Experten-Signale
+
+Notdienst-Ablauf nicht klar beschrieben
+
+Keine zitierfähigen Aussagen
+
+➡️ KI kann AquaPro24 aktuell kaum empfehlen oder zitieren.
+
+🔧 KI-Pflichtmaßnahmen
+
+6–8 FAQs pro Hauptseite, z. B.:
+
+Was kostet ein Sanitär-Notdienst in München?
+
+Wie schnell sind Sie vor Ort?
+
+Gibt es einen Festpreis?
+
+Arbeiten Sie auch nachts / am Wochenende?
+
+Abschnitt „Warum AquaPro24?“
+
+Erfahrung
+
+Notdienst-Organisation
+
+Transparente Kosten
+
+Klare Abläufe
+
+KI-Status: ❌ nahezu unsichtbar
+
+4️⃣ CONVERSION-TEST (Anfragen & Vertrauen)
+❌ Schwächen
+
+Notdienst-Ablauf nicht klar genug
+
+Kosten-Sicherheit fehlt
+
+CTA nicht konsequent führend
+
+Zu wenig Vertrauen für Notfälle
+
+🔧 Pflicht
+
+„So funktioniert unser Notdienst“ (5 Schritte)
+
+Klare Aussagen zu:
+
+Erreichbarkeit
+
+Reaktionszeit
+
+Kosten / Transparenz
+
+Starker CTA pro Seite
