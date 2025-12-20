@@ -29,6 +29,7 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
 
 const faqs = [
   {
@@ -204,17 +205,22 @@ export default function FAQPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-10 lg:pt-8 pb-6 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
                 <HelpCircle className="w-3 h-3" />
                 20 Häufige Fragen
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
                 Ihre Fragen - Unsere Antworten
               </h1>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-white/90 mb-6">
                 Hier finden Sie Antworten auf die häufigsten Fragen - mit echten Beispielen 
                 von Kunden, denen wir geholfen haben.
               </p>

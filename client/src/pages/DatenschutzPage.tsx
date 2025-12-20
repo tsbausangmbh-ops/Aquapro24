@@ -4,6 +4,7 @@ import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Shield } from "lucide-react";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
 
 export default function DatenschutzPage() {
   return (
@@ -14,17 +15,29 @@ export default function DatenschutzPage() {
         canonical="https://aquapro24.de/datenschutz"
       />
       <Header />
-      <main id="main-content" className="pt-8 pb-16 lg:pt-10">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Badge variant="secondary" className="gap-1">
-              <Shield className="w-3 h-3" />
-              DSGVO-konform
-            </Badge>
-            <Badge variant="outline">Stand: Dezember 2025</Badge>
+      <main id="main-content">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Badge variant="secondary" className="gap-1">
+                  <Shield className="w-3 h-3" />
+                  DSGVO-konform
+                </Badge>
+                <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
+              </div>
+              <h1 className="text-3xl lg:text-4xl font-bold text-white">Datenschutzerklärung</h1>
+            </div>
           </div>
-          
-          <h1 className="text-3xl lg:text-4xl font-bold mb-8">Datenschutzerklärung</h1>
+        </section>
+
+        <div className="py-8 lg:py-12">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
 
           <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
             
@@ -718,6 +731,7 @@ export default function DatenschutzPage() {
                 </a>
               </div>
             </section>
+            </div>
           </div>
         </div>
       </main>

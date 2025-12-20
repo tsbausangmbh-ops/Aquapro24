@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
+import { Badge } from "@/components/ui/badge";
+import { FileText } from "lucide-react";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
 
 export default function AGBPage() {
   return (
@@ -12,11 +15,27 @@ export default function AGBPage() {
         canonical="https://aquapro24.de/agb"
       />
       <Header />
-      <main id="main-content" className="pt-8 pb-4 lg:pt-10 lg:pb-6">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Allgemeine Geschäftsbedingungen (AGB)</h1>
-          
-          <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
+      <main id="main-content">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
+              <Badge variant="secondary" className="mb-4 gap-1">
+                <FileText className="w-3 h-3" />
+                Rechtliches
+              </Badge>
+              <h1 className="text-3xl lg:text-4xl font-bold text-white">Allgemeine Geschäftsbedingungen (AGB)</h1>
+            </div>
+          </div>
+        </section>
+
+        <div className="py-8 lg:py-12">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
             <section>
               <h2 className="text-xl font-semibold mb-4">§ 1 Geltungsbereich</h2>
               <p className="text-muted-foreground mb-4">
@@ -231,6 +250,7 @@ export default function AGBPage() {
                 Stand: Dezember 2025
               </p>
             </section>
+            </div>
           </div>
         </div>
       </main>

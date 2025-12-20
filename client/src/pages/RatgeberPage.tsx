@@ -29,6 +29,7 @@ import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.jp
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
 import plumberImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
 
 const guides = [
   {
@@ -251,21 +252,26 @@ export default function RatgeberPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-10 lg:pt-8 pb-4 bg-gradient-to-br from-accent/10 via-background to-primary/5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
                 <BookOpen className="w-3 h-3" />
                 Ratgeber & Tipps
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
                 Ratgeber - Expertenwissen für Ihr Zuhause
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-lg text-white/90 mb-4">
                 <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 
                 Wissen aus über 35 Jahren Erfahrung in München.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-white/80">
                 Von der Ersten Hilfe bei Wasserschäden bis zur Frage, ob sich eine Wärmepumpe 
                 für Sie lohnt - hier finden Sie fundierte Antworten.
               </p>

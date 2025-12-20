@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cookie, Shield, Settings, Info } from "lucide-react";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
 
 export default function CookieRichtliniePage() {
   return (
@@ -16,17 +17,29 @@ export default function CookieRichtliniePage() {
         canonical="https://aquapro24.de/cookie-richtlinie"
       />
       <Header />
-      <main id="main-content" className="pt-8 pb-4 lg:pt-10 lg:pb-6">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Badge variant="secondary" className="gap-1">
-              <Cookie className="w-3 h-3" />
-              Cookie-Richtlinie
-            </Badge>
-            <Badge variant="outline">Stand: Dezember 2025</Badge>
+      <main id="main-content">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Badge variant="secondary" className="gap-1">
+                  <Cookie className="w-3 h-3" />
+                  Cookie-Richtlinie
+                </Badge>
+                <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
+              </div>
+              <h1 className="text-3xl lg:text-4xl font-bold text-white">Cookie-Richtlinie</h1>
+            </div>
           </div>
-          
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Cookie-Richtlinie</h1>
+        </section>
+
+        <div className="py-8 lg:py-12">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
           
           <Card className="mb-4 bg-muted/30">
             <CardContent className="p-6">
@@ -306,6 +319,7 @@ export default function CookieRichtliniePage() {
                 </Button>
               </div>
             </section>
+            </div>
           </div>
         </div>
       </main>

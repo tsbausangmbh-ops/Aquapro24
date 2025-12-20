@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail, Phone, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, Mail, Phone, MapPin, FileText } from "lucide-react";
 import { Link } from "wouter";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
 
 export default function Impressum() {
   return (
@@ -16,20 +18,39 @@ export default function Impressum() {
         keywords="Impressum, AquaPro24, KSHW München, Sanitär München, Heizung München, Kontakt"
       />
       <Header />
-      <main id="main-content" className="pt-8 pb-4 lg:pt-10 lg:pb-6">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <Button variant="ghost" className="mb-6 gap-2" asChild>
-            <Link href="/">
-              <ArrowLeft className="w-4 h-4" />
-              Zurück zur Startseite
-            </Link>
-          </Button>
+      <main id="main-content">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
+              <Badge variant="secondary" className="mb-4 gap-1">
+                <FileText className="w-3 h-3" />
+                Rechtliches
+              </Badge>
+              <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
+                Impressum
+              </h1>
+              <p className="text-lg text-white/80">
+                Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
+              </p>
+            </div>
+          </div>
+        </section>
 
-          <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Impressum
-          </h1>
+        <div className="py-8 lg:py-12">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <Button variant="ghost" className="mb-6 gap-2" asChild>
+              <Link href="/">
+                <ArrowLeft className="w-4 h-4" />
+                Zurück zur Startseite
+              </Link>
+            </Button>
 
-          <div className="space-y-4">
+            <div className="space-y-4">
             <Card>
               <CardContent className="p-6 lg:p-8">
                 <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h2>
@@ -233,6 +254,7 @@ export default function Impressum() {
                 </div>
               </CardContent>
             </Card>
+            </div>
           </div>
         </div>
       </main>
