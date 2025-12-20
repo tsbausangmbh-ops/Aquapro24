@@ -132,42 +132,69 @@ export default function HeizungPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center opacity-40"
             style={{ backgroundImage: `url(${heatingImage1})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge className="gap-1 bg-red-600 text-white mb-4">
-                <Flame className="w-3 h-3" />
-                Heizung München
-              </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                Heizung München – 24/7 Notdienst & Wartung
-              </h1>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
-                unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.
-              </p>
-              <p className="text-lg text-white/80 mb-6">
-                Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige 
-                Wärme in Ihrem Zuhause - zuverlässig, effizient und mit 24/7 Notdienst.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-heizung">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Jetzt anrufen
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
-                  <Link href="/termin">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Termin buchen
-                  </Link>
-                </Button>
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge className="gap-1 bg-red-600 text-white mb-4">
+                  <Flame className="w-3 h-3" />
+                  Heizung München
+                </Badge>
+                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                  Heizung München – 24/7 Notdienst & Wartung
+                </h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                  <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
+                  unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige 
+                  Wärme in Ihrem Zuhause - zuverlässig, effizient und mit 24/7 Notdienst.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4915212274043" data-testid="button-call-heizung">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Jetzt anrufen
+                    </a>
+                  </Button>
+                  <ServiceBooking 
+                    serviceType="heizung" 
+                    buttonText="24h Buchungstermin"
+                    buttonSize="lg"
+                  />
+                </div>
+              </div>
+              <div className="relative space-y-4 hidden lg:block">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={heatingImage1} 
+                    alt="Moderne Heizungsanlage" 
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-secondary text-secondary-foreground shadow-lg">
+                      <Star className="w-3 h-3 mr-1" />
+                      Geprüfte Partner
+                    </Badge>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-2xl p-6 text-white">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold">KfW & BAFA Förderanträge inklusive!</h3>
+                  </div>
+                  <p className="text-white/90 text-sm">
+                    Bei einer neuen Heizung stellen wir alle Förderanträge für Sie.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

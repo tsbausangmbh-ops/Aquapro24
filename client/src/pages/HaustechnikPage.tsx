@@ -131,42 +131,69 @@ export default function HaustechnikPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-6 md:pt-8 pb-4 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center opacity-40"
             style={{ backgroundImage: `url(${smartHomeImage1})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge className="gap-1 bg-emerald-600 text-white mb-4">
-                <Settings className="w-3 h-3" />
-                Haustechnik München
-              </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                Haustechnik München – Komplettservice aus einer Hand
-              </h1>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Mehrere Handwerker koordinieren? Unterschiedliche Ansprechpartner?</strong> Das 
-                kostet Zeit, Nerven und oft auch mehr Geld als nötig.
-              </p>
-              <p className="text-lg text-white/80 mb-6">
-                Von der Wasserinstallation über Gastechnik bis zur intelligenten Haussteuerung - wir 
-                sind Ihr Komplettanbieter für moderne Haustechnik in München.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-haustechnik">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Jetzt anfragen
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
-                  <Link href="/termin">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Termin buchen
-                  </Link>
-                </Button>
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge className="gap-1 bg-emerald-600 text-white mb-4">
+                  <Settings className="w-3 h-3" />
+                  Haustechnik München
+                </Badge>
+                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                  Haustechnik München – Komplettservice aus einer Hand
+                </h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                  <strong>Mehrere Handwerker koordinieren? Unterschiedliche Ansprechpartner?</strong> Das 
+                  kostet Zeit, Nerven und oft auch mehr Geld als nötig.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Von der Wasserinstallation über Gastechnik bis zur intelligenten Haussteuerung - wir 
+                  sind Ihr Komplettanbieter für moderne Haustechnik in München.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" asChild>
+                    <a href="tel:+4915212274043" data-testid="button-call-haustechnik">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Jetzt anfragen
+                    </a>
+                  </Button>
+                  <ServiceBooking 
+                    serviceType="haustechnik" 
+                    buttonText="24h Buchungstermin"
+                    buttonSize="lg"
+                  />
+                </div>
+              </div>
+              <div className="relative space-y-4 hidden lg:block">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={smartHomeImage1} 
+                    alt="Smart Home Haustechnik Steuerung" 
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      <Star className="w-3 h-3 mr-1" />
+                      Komplettanbieter
+                    </Badge>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl p-6 text-white">
+                  <h3 className="text-lg font-bold mb-3">Unsere Stärken</h3>
+                  <ul className="space-y-2">
+                    {benefits.slice(0, 3).map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
