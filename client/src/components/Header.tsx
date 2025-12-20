@@ -16,6 +16,9 @@ export default function Header() {
     { label: "Badsanierung", href: "/bad" },
     { label: "Heizung", href: "/heizung" },
     { label: "Wärmepumpe", href: "/waermepumpe" },
+    { label: "Rohrreinigung", href: "/rohrreinigung" },
+    { label: "Armaturen", href: "/armaturen" },
+    { label: "Warmwasser", href: "/warmwasser" },
     { label: "Haustechnik", href: "/haustechnik" },
   ];
 

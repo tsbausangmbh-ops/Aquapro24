@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Droplets, Bath, Flame, Thermometer, Home } from "lucide-react";
+import { ArrowRight, Droplets, Bath, Flame, Thermometer, Home, PipetteIcon, Wrench, Waves } from "lucide-react";
 
 interface Service {
   slug: string;
@@ -46,11 +46,32 @@ const allServices: Service[] = [
     shortDescription: "Elektrik, Klimaanlage, Smart Home",
     icon: Home,
     color: "bg-emerald-600"
+  },
+  {
+    slug: "rohrreinigung",
+    title: "Rohrreinigung",
+    shortDescription: "Verstopfung, Kanalreinigung, Notdienst",
+    icon: PipetteIcon,
+    color: "bg-amber-600"
+  },
+  {
+    slug: "armaturen",
+    title: "Armaturen",
+    shortDescription: "Wasserhähne, Duschsysteme, Montage",
+    icon: Wrench,
+    color: "bg-indigo-600"
+  },
+  {
+    slug: "warmwasser",
+    title: "Warmwasser",
+    shortDescription: "Boiler, Durchlauferhitzer, Speicher",
+    icon: Waves,
+    color: "bg-rose-600"
   }
 ];
 
 interface RelatedServicesProps {
-  currentService: "sanitaer" | "bad" | "heizung" | "waermepumpe" | "haustechnik";
+  currentService: "sanitaer" | "bad" | "heizung" | "waermepumpe" | "haustechnik" | "rohrreinigung" | "armaturen" | "warmwasser";
 }
 
 export default function RelatedServices({ currentService }: RelatedServicesProps) {

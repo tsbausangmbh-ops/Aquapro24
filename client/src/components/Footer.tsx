@@ -4,10 +4,13 @@ const footerLinks = {
   services: {
     title: "Leistungen",
     links: [
-      { label: "Badsanierung", href: "/bad" },
       { label: "Sanitär & Installation", href: "/sanitaer" },
+      { label: "Badsanierung", href: "/bad" },
       { label: "Heizung & Wartung", href: "/heizung" },
       { label: "Wärmepumpe", href: "/waermepumpe" },
+      { label: "Rohrreinigung", href: "/rohrreinigung" },
+      { label: "Armaturen", href: "/armaturen" },
+      { label: "Warmwasser", href: "/warmwasser" },
       { label: "Haustechnik", href: "/haustechnik" },
     ],
   },

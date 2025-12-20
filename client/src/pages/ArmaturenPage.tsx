@@ -384,7 +384,7 @@ export default function ArmaturenPage() {
           </div>
         </section>
 
-        <RelatedServices currentService="sanitaer" />
+        <RelatedServices currentService="armaturen" />
       </main>
 
       <Footer />

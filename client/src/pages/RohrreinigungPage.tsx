@@ -394,7 +394,7 @@ export default function RohrreinigungPage() {
           </div>
         </section>
 
-        <RelatedServices currentService="sanitaer" />
+        <RelatedServices currentService="rohrreinigung" />
       </main>
 
       <Footer />

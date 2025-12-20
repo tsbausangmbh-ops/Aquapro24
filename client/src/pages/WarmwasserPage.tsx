@@ -384,7 +384,7 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <RelatedServices currentService="heizung" />
+        <RelatedServices currentService="warmwasser" />
       </main>
 
       <Footer />
