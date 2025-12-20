@@ -117,23 +117,21 @@ export default function ArmaturenPage() {
           { name: "Armaturen", url: "https://aquapro24.de/armaturen" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Armaturen-Service München",
+          name: "Armaturen Montage & Reparatur München",
           description: "Armaturen-Montage und Reparatur in München. Alle Marken, schnelle Termine, Festpreis.",
-          serviceType: "PlumbingFixtureInstallation",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
-          offers: [
-            { name: "Armaturenmontage", description: "Einbau von Waschtisch- und Küchenarmaturen", priceRange: "ab 80€" },
-            { name: "Armaturenreparatur", description: "Reparatur tropfender Armaturen", priceRange: "ab 60€" },
-            { name: "Duschsystem-Montage", description: "Installation kompletter Duschsysteme", priceRange: "ab 150€" }
+          serviceType: "Armaturen/Sanitär",
+          urlSlug: "armaturen",
+          catalogName: "Armaturen-Leistungen",
+          serviceOffers: [
+            { name: "Armaturenmontage Küche & Bad" },
+            { name: "Wasserhahn tropft - Reparatur" },
+            { name: "Duschsystem-Installation" },
+            { name: "Thermostatarmatur Einbau" }
           ],
           aggregateRating: {
             ratingValue: 4.8,
             reviewCount: 64
-          },
-          reviews: [
-            { author: "Andreas F.", rating: 5, reviewBody: "Hab eine neue Hansgrohe-Armatur für die Küche gekauft und brauchte jemanden zum Einbauen. Kam am nächsten Tag, schnell erledigt und alles funktioniert perfekt. Klare Empfehlung!", datePublished: "2024-11-10", location: "München-Pasing" },
-            { author: "Maria H.", rating: 5, reviewBody: "Unser Wasserhahn im Bad hat ewig getropft. Der Monteur hat die Kartusche getauscht und alles ist wieder dicht. Günstig und schnell - genau so soll es sein.", datePublished: "2024-10-05", location: "München-Neuhausen" }
-          ]
+          }
         }}
       />
       <Header />

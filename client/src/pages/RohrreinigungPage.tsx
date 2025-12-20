@@ -126,23 +126,21 @@ export default function RohrreinigungPage() {
           { name: "Rohrreinigung", url: "https://aquapro24.de/rohrreinigung" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Rohrreinigung München",
+          name: "Rohrreinigung & Abflussreinigung München",
           description: "Rohrreinigung und Abflussreinigung in München. 60 Min. Reaktionszeit, Festpreis, 24/7 erreichbar.",
-          serviceType: "DrainCleaning",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach"],
-          offers: [
-            { name: "Abflussreinigung", description: "Beseitigung von Verstopfungen", priceRange: "ab 81€" },
-            { name: "Hochdruckspülung", description: "Intensive Rohrreinigung", priceRange: "ab 154€" },
-            { name: "Kamerainspektion", description: "Rohrinspektion mit Kamera", priceRange: "ab 102€" }
+          serviceType: "Rohrreinigung/Sanitär",
+          urlSlug: "rohrreinigung",
+          catalogName: "Rohrreinigung-Leistungen",
+          serviceOffers: [
+            { name: "Verstopfung / Ablaufproblem Soforthilfe" },
+            { name: "Hochdruckspülung für hartnäckige Ablagerungen" },
+            { name: "Kamerainspektion zur Problemanalyse" },
+            { name: "WC / Toilette entstopfen" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
             reviewCount: 89
-          },
-          reviews: [
-            { author: "Peter M.", rating: 5, reviewBody: "Sonntagnacht war unser WC komplett verstopft. Hab angerufen und eine Stunde später war der Techniker da. Hat alles schnell erledigt und der Preis war fair. Top Service!", datePublished: "2024-11-20", location: "München-Bogenhausen" },
-            { author: "Lisa W.", rating: 5, reviewBody: "Die Küchenspüle war seit Tagen verstopft, nichts hat geholfen. Der Monteur kam am selben Tag und hat mit der Spirale alles freigemacht. Sehr sauber gearbeitet!", datePublished: "2024-10-15", location: "München-Schwabing" }
-          ]
+          }
         }}
       />
       <Header />

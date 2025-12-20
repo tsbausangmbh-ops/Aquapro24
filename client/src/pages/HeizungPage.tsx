@@ -113,24 +113,21 @@ export default function HeizungPage() {
           { name: "Heizung", url: "https://aquapro24.de/heizung" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Heizungsservice München",
+          name: "Heizung Notdienst & Wartung München",
           description: "Heizungsnotdienst München: 24/7 Reparatur, Wartung ab 154€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus, Wolf.",
-          serviceType: "HVAC",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
-          offers: [
-            { name: "Gasheizung Installation", description: "Moderne Gasbrennwerttechnik", priceRange: "ab 6.180€" },
-            { name: "Heizungswartung", description: "Jährliche Inspektion und Optimierung", priceRange: "ab 154€" },
-            { name: "Heizungsreparatur", description: "Schnelle Reparatur aller Marken", priceRange: "ab 92€" }
+          serviceType: "Heizung/HVAC",
+          urlSlug: "heizung",
+          catalogName: "Heizungs-Leistungen",
+          serviceOffers: [
+            { name: "Heizungsstörung / Ausfall Notdienst" },
+            { name: "Heizungswartung & Inspektion" },
+            { name: "Heizungsreparatur alle Marken" },
+            { name: "Heizungsmodernisierung mit Förderung" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
             reviewCount: 156
-          },
-          reviews: [
-            { author: "Thomas B.", rating: 5, reviewBody: "Unsere alte Heizung hat im Januar den Geist aufgegeben - natürlich an einem Freitagabend. Am Montag kam der Techniker zur Begutachtung, Mittwoch war die neue Viessmann drin. Hat uns vorher ehrlich gesagt, was wir erwarten können und was nicht. Die alte Heizung war 28 Jahre alt, da hätte sich reparieren nicht mehr gelohnt. Sehr fair!", datePublished: "2024-11-02", location: "München-Bogenhausen" },
-            { author: "Ingrid W.", rating: 5, reviewBody: "Lasse seit 5 Jahren immer im Herbst die Wartung machen. Der Termin wird rechtzeitig vereinbart, der Monteur ist pünktlich und erklärt auch, was er macht. Bisher keine Ausfälle gehabt, das ist mir das Geld wert. Einmal hat er sogar ein kleines Problem gefunden, bevor es zum großen wurde.", datePublished: "2024-10-10", location: "München-Pasing" },
-            { author: "Markus L.", rating: 4, reviewBody: "Heizung ging nicht mehr an, Notdienst gerufen. War relativ schnell da (ca. 1 Stunde). Problem war ein kaputtes Ventil. Reparatur hat geklappt, allerdings fand ich den Notdienst-Aufschlag schon happig. Aber gut, war halt Sonntag und wir hatten wieder warm.", datePublished: "2024-09-25", location: "München-Trudering" }
-          ]
+          }
         }}
       />
       <Header />

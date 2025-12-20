@@ -112,24 +112,21 @@ export default function HaustechnikPage() {
           { name: "Haustechnik", url: "https://aquapro24.de/haustechnik" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Haustechnik München",
+          name: "Haustechnik München Komplettservice",
           description: "Komplette Haustechnik München: Wasser, Gas, Lüftung, Smart Home aus einer Hand. 500+ Projekte seit 2005, zertifizierte Fachbetriebe.",
-          serviceType: "Building Services Engineering",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
-          offers: [
-            { name: "Kontrollierte Wohnraumlüftung", description: "KWL mit Wärmerückgewinnung", priceRange: "ab 3.500€" },
-            { name: "Smart Home Heizungssteuerung", description: "Intelligente Steuerung per App", priceRange: "ab 500€" },
-            { name: "Gasinstallation", description: "Zertifizierte Gasarbeiten", priceRange: "ab 250€" }
+          serviceType: "Haustechnik/Gebäudetechnik",
+          urlSlug: "haustechnik",
+          catalogName: "Haustechnik-Leistungen",
+          serviceOffers: [
+            { name: "Gasinstallation zertifiziert" },
+            { name: "Kontrollierte Wohnraumlüftung (KWL)" },
+            { name: "Smart Home Heizungssteuerung" },
+            { name: "Komplettplanung Neubau/Sanierung" }
           ],
           aggregateRating: {
             ratingValue: 4.8,
             reviewCount: 43
-          },
-          reviews: [
-            { author: "Architekturbüro Meier", rating: 5, reviewBody: "Wir arbeiten öfter mit denen zusammen für unsere Projekte. Bei der Villa in Bogenhausen war alles dabei: Fußbodenheizung, Lüftung mit Wärmerückgewinnung, Smart Home. Die Koordination mit Elektrikern und Trockenbauleuten hat super geklappt. Termine wurden eingehalten, was in der Branche nicht selbstverständlich ist. Können wir als Architekturbüro empfehlen.", datePublished: "2024-09-28", location: "München-Bogenhausen" },
-            { author: "Stefan R.", rating: 5, reviewBody: "Hab mir Smart Home nachrüsten lassen - Heizung, Jalousien und Licht. Muss sagen, war erst skeptisch ob das im Altbau geht ohne alles aufzureißen. Ging aber mit Funk-Lösungen. Jetzt kann ich von unterwegs die Heizung regeln. Der Techniker hat sich auch Zeit genommen, mir die App zu erklären. Bin begeistert!", datePublished: "2024-11-08", location: "München-Maxvorstadt" },
-            { author: "Hausverw. Berger", rating: 4, reviewBody: "Lüftungsanlage für Mehrfamilienhaus. Technisch einwandfrei, die Mieter sind zufrieden. Ein paar Abstimmungstermine hätten besser kommuniziert werden können, aber das Ergebnis stimmt. Arbeiten wieder mit denen.", datePublished: "2024-07-15", location: "München-Giesing" }
-          ]
+          }
         }}
       />
       <Header />

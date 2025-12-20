@@ -10,8 +10,12 @@ interface ReviewSchema {
 
 interface OfferSchema {
   name: string;
-  description: string;
-  priceRange: string;
+  description?: string;
+  priceRange?: string;
+}
+
+interface ServiceOfferItem {
+  name: string;
 }
 
 interface BreadcrumbItem {
@@ -39,7 +43,10 @@ interface SEOProps {
     name: string;
     description: string;
     serviceType: string;
-    areaServed: string[];
+    urlSlug: string;
+    catalogName?: string;
+    serviceOffers: ServiceOfferItem[];
+    areaServed?: string[];
     offers?: OfferSchema[];
     reviews?: ReviewSchema[];
     aggregateRating?: AggregateRatingSchema;
@@ -399,56 +406,27 @@ export default function SEO({
       const serviceSchemaData: Record<string, unknown> = {
         "@context": "https://schema.org",
         "@type": "Service",
+        "@id": `https://aquapro24.de/${serviceSchema.urlSlug}/#service`,
         "name": serviceSchema.name,
         "description": serviceSchema.description,
         "serviceType": serviceSchema.serviceType,
-        "provider": {
-          "@type": "Plumber",
-          "name": "AquaPro24 - Sanitär & Heizung München",
-          "@id": "https://aquapro24.de/#organization",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Hardenbergstr. 4",
-            "addressLocality": "München",
-            "postalCode": "80992",
-            "addressRegion": "Bayern",
-            "addressCountry": "DE"
-          },
-          "telephone": "+49-152-12274043"
-        },
-        "areaServed": serviceSchema.areaServed.map(area => ({
-          "@type": area === "München" ? "City" : "AdministrativeArea",
-          "name": area
-        })),
-        "availableChannel": {
-          "@type": "ServiceChannel",
-          "servicePhone": "+49-152-12274043",
-          "serviceUrl": "https://aquapro24.de",
-          "availableLanguage": "German"
-        },
-        "termsOfService": "https://aquapro24.de/agb",
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
+        "provider": { "@id": "https://aquapro24.de/#localbusiness" },
+        "areaServed": [
+          { "@type": "City", "name": "München" },
+          { "@type": "AdministrativeArea", "name": "Landkreis München" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": serviceSchema.catalogName || `${serviceSchema.name} Leistungen`,
+          "itemListElement": serviceSchema.serviceOffers.map(offer => ({
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": offer.name
+            }
+          }))
         }
       };
-
-      if (serviceSchema.offers && serviceSchema.offers.length > 0) {
-        serviceSchemaData["offers"] = serviceSchema.offers.map(offer => {
-          const numericPrice = parseFloat(offer.priceRange.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
-          return {
-            "@type": "Offer",
-            "name": offer.name,
-            "description": `${offer.description} - ${offer.priceRange}`,
-            "priceCurrency": "EUR",
-            "price": numericPrice,
-            "priceValidUntil": "2025-12-31",
-            "availability": "https://schema.org/InStock"
-          };
-        });
-      }
 
       if (serviceSchema.aggregateRating) {
         serviceSchemaData["aggregateRating"] = {
@@ -466,11 +444,6 @@ export default function SEO({
           "author": {
             "@type": "Person",
             "name": review.author
-          },
-          "itemReviewed": {
-            "@type": "Service",
-            "name": serviceSchema.name,
-            "@id": `https://aquapro24.de/#${serviceSchema.serviceType.toLowerCase().replace(/\s+/g, '-')}`
           },
           "reviewRating": {
             "@type": "Rating",

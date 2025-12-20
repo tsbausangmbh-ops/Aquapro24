@@ -111,25 +111,21 @@ export default function BadPage() {
           { name: "Badsanierung", url: "https://aquapro24.de/bad" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Badsanierung München",
+          name: "Badsanierung München",
           description: "Badsanierung München: Komplettumbau in 2-3 Wochen, 3D-Planung inklusive, barrierefreie Bäder mit KfW-Förderung. 847+ Traumbäder seit 2005.",
-          serviceType: "Bathroom Renovation",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
-          offers: [
-            { name: "Komplettsanierung", description: "Komplettumbau mit Fliesen, Sanitär, Elektrik", priceRange: "ab 16.000€" },
-            { name: "Teilsanierung", description: "Gezielte Modernisierung einzelner Bereiche", priceRange: "ab 4.500€" },
-            { name: "Barrierefreies Bad", description: "Seniorengerecht mit KfW-Förderung", priceRange: "ab 20.000€" },
-            { name: "Luxusbad Premium", description: "Exklusive Materialien und smarte Technik", priceRange: "ab 28.000€" }
+          serviceType: "Badsanierung",
+          urlSlug: "bad",
+          catalogName: "Badsanierung-Leistungen",
+          serviceOffers: [
+            { name: "Komplettsanierung in 2-4 Wochen" },
+            { name: "Teilsanierung & Modernisierung" },
+            { name: "Barrierefreies Bad mit KfW-Förderung" },
+            { name: "3D-Planung & Visualisierung" }
           ],
           aggregateRating: {
             ratingValue: 4.8,
             reviewCount: 89
-          },
-          reviews: [
-            { author: "Familie Weber", rating: 5, reviewBody: "Also wir haben lang überlegt, ob wir das Bad selbst machen oder machen lassen. Zum Glück haben wir uns für die Profis entschieden! Das 3D-Modell war super, da konnten wir alles vorher sehen. 2,5 Wochen und fertig war das neue Bad. Bisschen staubig war's, aber die haben jeden Tag aufgeräumt. Preis war am Ende sogar etwas unter dem Angebot.", datePublished: "2024-10-28", location: "München-Schwabing" },
-            { author: "Renate M.", rating: 5, reviewBody: "Meine Mutter (82) brauchte dringend ein Bad ohne Schwellen und mit Haltegriffen. Der Berater hat sich viel Zeit genommen und alles genau erklärt. Hat sogar bei den KfW-Anträgen geholfen. Jetzt kann Mama wieder alleine duschen - das war uns das Wichtigste. Danke!", datePublished: "2024-09-15", location: "München-Sendling" },
-            { author: "Klaus D.", rating: 4, reviewBody: "Badezimmer komplett neu gemacht. Qualität ist top, da gibt's nichts zu meckern. Einziger Punkt: Die Handwerker waren manchmal erst um 9 da statt um 8. Ansonsten aber sehr zufrieden, die Fliesen sehen toll aus.", datePublished: "2024-08-20", location: "München-Neuhausen" }
-          ]
+          }
         }}
       />
       <Header />

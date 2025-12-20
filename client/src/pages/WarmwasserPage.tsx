@@ -117,23 +117,21 @@ export default function WarmwasserPage() {
           { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Warmwasser-Service München",
+          name: "Warmwasser & Durchlauferhitzer München",
           description: "Warmwasser-Service: Durchlauferhitzer, Boiler und Warmwasserspeicher - Installation, Reparatur und Wartung in München.",
-          serviceType: "WaterHeaterService",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen"],
-          offers: [
-            { name: "Durchlauferhitzer-Installation", description: "Einbau neuer Durchlauferhitzer", priceRange: "ab 206€" },
-            { name: "Boiler-Reparatur", description: "Reparatur von Warmwasserspeichern", priceRange: "ab 124€" },
-            { name: "Warmwasser-Wartung", description: "Jährliche Wartung und Entkalkung", priceRange: "ab 102€" }
+          serviceType: "Warmwasser/Heizung",
+          urlSlug: "warmwasser",
+          catalogName: "Warmwasser-Leistungen",
+          serviceOffers: [
+            { name: "Durchlauferhitzer Installation & Reparatur" },
+            { name: "Boiler / Warmwasserspeicher Service" },
+            { name: "Warmwasser-Wartung & Entkalkung" },
+            { name: "Warmwasserausfall Notdienst" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
             reviewCount: 72
-          },
-          reviews: [
-            { author: "Klaus R.", rating: 5, reviewBody: "Durchlauferhitzer ging plötzlich nicht mehr - am gleichen Tag kam jemand und hat ihn repariert. War nur eine defekte Elektronik. Schnell und günstig!", datePublished: "2024-11-12", location: "München-Trudering" },
-            { author: "Sabine M.", rating: 5, reviewBody: "Haben uns einen neuen Warmwasserspeicher einbauen lassen. Gute Beratung, pünktliche Installation und der Preis war wie vereinbart. Sehr zufrieden!", datePublished: "2024-10-28", location: "München-Laim" }
-          ]
+          }
         }}
       />
       <Header />

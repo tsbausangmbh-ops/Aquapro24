@@ -114,24 +114,21 @@ export default function WaermepumpePage() {
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" }
         ]}
         serviceSchema={{
-          name: "AquaPro24 Wärmepumpen München",
+          name: "Wärmepumpe München mit Förderung",
           description: "Wärmepumpen-Installation München: Bis 70% BAFA/KfW-Förderung, Luft-Wasser & Erdwärme, komplette Antragstellung. 320+ erfolgreiche Installationen seit 2005.",
-          serviceType: "Heat Pump Installation",
-          areaServed: ["München", "Schwabing", "Bogenhausen", "Sendling", "Pasing", "Maxvorstadt", "Haidhausen", "Neuhausen", "Trudering", "Laim", "Giesing", "Moosach", "Milbertshofen"],
-          offers: [
-            { name: "Luft-Wasser-Wärmepumpe", description: "Komplett-Installation inkl. Förderantrag", priceRange: "ab 15.000€" },
-            { name: "Erdwärmepumpe", description: "Mit Tiefenbohrung und Genehmigung", priceRange: "ab 25.000€" },
-            { name: "Hybrid-System", description: "Wärmepumpe mit Gas-Backup", priceRange: "ab 18.000€" }
+          serviceType: "Wärmepumpe/Heizung",
+          urlSlug: "waermepumpe",
+          catalogName: "Wärmepumpen-Leistungen",
+          serviceOffers: [
+            { name: "Luft-Wasser-Wärmepumpe Installation" },
+            { name: "Erdwärmepumpe mit Tiefenbohrung" },
+            { name: "BAFA/KfW Förderantragstellung" },
+            { name: "Hybrid-System (Wärmepumpe + Gas)" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
             reviewCount: 67
-          },
-          reviews: [
-            { author: "Dr. Martin S.", rating: 5, reviewBody: "Wir wohnen in einem Altbau von 1928 und drei andere Firmen haben uns gesagt, Wärmepumpe geht bei uns nicht. Die hier haben sich das genau angeschaut und eine Lösung gefunden mit größeren Heizkörpern in ein paar Räumen. Jetzt läuft die Viessmann seit einem Jahr problemlos. Unsere Gasrechnung war vorher 3.200 Euro im Jahr, jetzt zahlen wir ca. 1.100 Euro Strom für die Wärmepumpe. Hat sich gelohnt!", datePublished: "2024-11-20", location: "München-Schwabing" },
-            { author: "Familie Huber", rating: 5, reviewBody: "Das Beste war, dass die sich komplett um die Förderung gekümmert haben. BAFA-Antrag, alle Unterlagen, alles. Wir haben am Ende 45% bekommen. Die Installation lief in 3 Tagen durch, sehr professionell. Kleiner Tipp: Plant den Termin so, dass ihr zu Hause sein könnt, es gibt doch ein paar Fragen.", datePublished: "2024-10-05", location: "München-Bogenhausen" },
-            { author: "Petra K.", rating: 4, reviewBody: "Die Wärmepumpe läuft gut, keine Frage. Aber der Papierkram hat doch länger gedauert als gedacht - 4 Monate bis das Fördergeld kam. War aber wohl das BAFA, nicht die Firma. Ansonsten zufrieden, bin gespannt auf die erste komplette Heizsaison.", datePublished: "2024-08-12", location: "München-Laim" }
-          ]
+          }
         }}
       />
       <Header />
