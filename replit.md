@@ -44,7 +44,7 @@ Preferred communication style: Simple, everyday language.
 - **Page Components**: Feature components (Hero, Services, Pricing, Testimonials, ChatWidget) in `client/src/components/`
 - **SEO Components**: Dedicated SEO infrastructure for search optimization
   - `SEO.tsx`: Meta tags, titles, descriptions, Open Graph, canonical URLs, LocalBusiness JSON-LD
-  - `FAQ.tsx`: FAQ accordion with FAQPage schema.org markup for rich snippets
+  - `FAQ.tsx`: FAQ accordion with FAQPage schema.org markup for rich snippets (integrated on all 7 pages with 5 service-specific FAQs each)
   - `ServiceAreas.tsx`: Munich district geo-targeting with response times
 - **NLP Psychology Components**: Customer persuasion infrastructure
   - `NLPSection.tsx`: Problem-solution framework with authority badges, urgency triggers, transformation steps (3-step journey visualization)
