@@ -236,7 +236,7 @@ export default function UeberUnsPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section - H1 optimiert für SEO */}
-        <section className="relative py-10 lg:py-16 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${teamImage})` }}
@@ -374,7 +374,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-10 lg:pt-8 pb-4">
+        <section className="py-6 lg:pt-8 pb-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Unsere Werte</Badge>
@@ -464,7 +464,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-secondary/5">
+        <section className="py-6 lg:pt-8 pb-4 bg-secondary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Echte Kundenstimmen</Badge>
@@ -503,7 +503,7 @@ export default function UeberUnsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-primary text-primary-foreground">
+        <section className="py-6 lg:pt-8 pb-4 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Bereit für einen Handwerker, dem Sie vertrauen können?

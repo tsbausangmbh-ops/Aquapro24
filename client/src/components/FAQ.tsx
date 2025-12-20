@@ -31,7 +31,7 @@ export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQP
   };
 
   return (
-    <section className="py-10 bg-muted/30" data-testid="section-faq">
+    <section className="py-6 bg-muted/30" data-testid="section-faq">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-5">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">{title}</h2>

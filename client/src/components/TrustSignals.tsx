@@ -89,7 +89,7 @@ export default function TrustSignals({
   }
 
   return (
-    <section className="py-10 md:py-12" data-testid="section-trust-signals">
+    <section className="py-6 md:py-6" data-testid="section-trust-signals">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-6">
           <Badge variant="secondary" className="mb-4">

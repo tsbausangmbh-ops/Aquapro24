@@ -21,7 +21,7 @@ const myths = [
 
 export default function MythBuster() {
   return (
-    <section className="py-12 bg-muted/20" data-testid="section-myth-buster">
+    <section className="py-6 bg-muted/20" data-testid="section-myth-buster">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-10">
           <Badge className="mb-4 bg-red-600 text-white">

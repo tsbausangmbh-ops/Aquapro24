@@ -104,7 +104,7 @@ export default function NotdienstMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-10 lg:py-16 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -147,7 +147,7 @@ export default function NotdienstMuenchenPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
               Typische Notfälle
@@ -168,7 +168,7 @@ export default function NotdienstMuenchenPage() {
           </div>
         </section>
 
-        <section className="py-12">
+        <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">

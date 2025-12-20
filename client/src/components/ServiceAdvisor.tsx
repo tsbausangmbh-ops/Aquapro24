@@ -218,7 +218,7 @@ export default function ServiceAdvisor({ serviceType }: ServiceAdvisorProps) {
   };
 
   return (
-    <section className={`py-12 ${config.bgColor}`} data-testid="section-service-advisor">
+    <section className={`py-6 ${config.bgColor}`} data-testid="section-service-advisor">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-6">

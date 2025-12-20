@@ -35,7 +35,7 @@ const journeySteps = [
 
 export default function FunnelJourney() {
   return (
-    <section className="py-12 bg-gradient-to-b from-muted/30 to-background" data-testid="section-funnel-journey">
+    <section className="py-6 bg-gradient-to-b from-muted/30 to-background" data-testid="section-funnel-journey">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-10">
           <Badge variant="outline" className="mb-4">

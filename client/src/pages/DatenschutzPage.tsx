@@ -16,7 +16,7 @@ export default function DatenschutzPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-16 lg:py-20 overflow-hidden">
+        <section className="relative py-8 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -36,7 +36,7 @@ export default function DatenschutzPage() {
           </div>
         </section>
 
-        <div className="py-8 lg:py-12">
+        <div className="py-8 lg:py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
 
           <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">

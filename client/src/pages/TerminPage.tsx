@@ -371,7 +371,7 @@ export default function TerminPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="py-10 lg:pt-8 pb-4 bg-gradient-to-br from-secondary/10 to-background">
+        <section className="py-6 lg:pt-8 pb-4 bg-gradient-to-br from-secondary/10 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <Badge variant="secondary" className="mb-4">
@@ -1169,7 +1169,7 @@ export default function TerminPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold text-center mb-8">Das erwartet Sie</h2>
             

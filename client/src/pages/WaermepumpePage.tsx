@@ -133,7 +133,7 @@ export default function WaermepumpePage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-10 lg:py-16 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heatPumpImage1})` }}
@@ -333,7 +333,7 @@ export default function WaermepumpePage() {
           title="Häufige Fragen zu Wärmepumpen"
         />
 
-        <section className="py-10 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
+        <section className="py-6 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Wärmepumpe München anfragen – Kostenlose Förderberatung

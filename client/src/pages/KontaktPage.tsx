@@ -111,7 +111,7 @@ export default function KontaktPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative py-10 lg:py-16 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -138,7 +138,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Contact Cards */}
-        <section className="py-12">
+        <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {contactInfo.map((info, index) => (
@@ -168,7 +168,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="max-w-3xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">Schreiben Sie uns</h2>
@@ -270,7 +270,7 @@ export default function KontaktPage() {
         </section>
 
         {/* CTA for Booking */}
-        <section className="py-12 bg-primary text-primary-foreground">
+        <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <CalendarIcon className="w-12 h-12 mx-auto mb-4 opacity-90" />
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
@@ -288,7 +288,7 @@ export default function KontaktPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold text-center mb-8">Das erwartet Sie</h2>
             

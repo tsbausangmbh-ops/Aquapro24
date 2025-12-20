@@ -28,7 +28,7 @@ export default function NLPSection({
   transformationSteps
 }: NLPSectionProps) {
   return (
-    <section className="py-10" data-testid="section-nlp-problem-solution">
+    <section className="py-6" data-testid="section-nlp-problem-solution">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {authorityText && (
           <div className="text-center mb-4">

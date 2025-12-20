@@ -205,7 +205,7 @@ export default function FAQPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-10 lg:py-16 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -236,7 +236,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="py-10 lg:py-14">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {faqs.map((faq, index) => (
@@ -258,7 +258,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="py-10 lg:py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
+        <section className="py-6 lg:py-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Noch Fragen?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
