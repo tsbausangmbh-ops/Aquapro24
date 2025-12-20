@@ -78,28 +78,36 @@ export default function SanitaerPage() {
 
   const faqItems = [
     {
-      question: "Wie schnell können Sie bei einem Wasserrohrbruch in München vor Ort sein?",
-      answer: "Bei einem Notfall wie Wasserrohrbruch sind wir in der Regel innerhalb von 60-90 Minuten bei Ihnen in München. Unser 24/7 Notdienst steht rund um die Uhr bereit - auch an Wochenenden und Feiertagen."
+      question: "Was kostet ein Sanitär-Notdienst in München?",
+      answer: "Unser Sanitär-Notdienst in München arbeitet mit transparenten Festpreisen. Die Anfahrtspauschale beträgt 49€, einfache Reparaturen starten ab 92€. Vor Arbeitsbeginn nennen wir Ihnen den verbindlichen Gesamtpreis - ohne versteckte Kosten oder Nachforderungen. Bei AquaPro24 zahlen Sie nur, was vorher vereinbart wurde."
     },
     {
-      question: "Was kostet eine Sanitärinstallation in München?",
-      answer: "Die Kosten hängen vom Umfang der Arbeiten ab. Kleine Reparaturen beginnen ab 92€, größere Installationen werden nach Aufwand berechnet. Wir bieten Ihnen vorab einen transparenten Festpreis - ohne versteckte Kosten."
+      question: "Wie schnell ist der Sanitär-Notdienst in München vor Ort?",
+      answer: "Bei Notfällen wie Rohrbruch oder Wasseraustritt sind wir in der Regel innerhalb von 60 Minuten bei Ihnen in München. Unser Einsatzgebiet umfasst alle Münchner Stadtteile: Schwabing, Bogenhausen, Sendling, Neuhausen, Giesing, Pasing, Laim, Trudering und weitere. Auch nachts und am Wochenende erreichbar unter 0152 12274043."
     },
     {
-      question: "Arbeiten Sie auch mit Markenarmaturen wie Grohe oder Hansgrohe?",
-      answer: "Ja, wir installieren und reparieren Armaturen aller führenden Hersteller wie Grohe, Hansgrohe, Geberit, Villeroy & Boch und viele weitere. Wir beraten Sie gerne zur passenden Auswahl."
+      question: "Gibt es einen Festpreis für Sanitärarbeiten?",
+      answer: "Ja, bei AquaPro24 erhalten Sie immer einen verbindlichen Festpreis vor Arbeitsbeginn. Unser Techniker analysiert das Problem vor Ort und nennt Ihnen den Gesamtpreis. Dieser Preis gilt - auch wenn die Arbeit länger dauert als geplant. Keine Überraschungen, keine versteckten Kosten."
     },
     {
-      question: "Bieten Sie auch Wartungsverträge für Sanitäranlagen an?",
-      answer: "Ja, wir bieten maßgeschneiderte Wartungsverträge für private Haushalte und Gewerbe. Regelmäßige Wartung beugt teuren Schäden vor und erhält den Wert Ihrer Sanitäranlagen."
+      question: "Arbeitet der Sanitär-Notdienst auch nachts und am Wochenende?",
+      answer: "Ja, unser 24/7 Sanitär-Notdienst ist rund um die Uhr erreichbar - 365 Tage im Jahr. Auch an Feiertagen, Samstagen und Sonntagen sowie nachts zwischen 22 und 6 Uhr sind wir für Sie da. Rufen Sie uns an: 0152 12274043. Für Notfälle wie Rohrbruch, Wasseraustritt oder schwere Verstopfungen."
     },
     {
-      question: "Können Sie auch verstopfte Abflüsse reinigen?",
-      answer: "Selbstverständlich! Wir beseitigen Verstopfungen in Waschbecken, Duschen, WCs und Abwasserleitungen. Mit professioneller Ausrüstung lösen wir auch hartnäckige Verstopfungen schnell und sauber."
+      question: "Welche Sanitär-Leistungen bieten Sie in München an?",
+      answer: "Wir bieten das komplette Sanitär-Spektrum: Rohrbruch-Reparatur, Abfluss-Entstopfung, WC-Installation, Waschbecken-Montage, Armaturenaustausch, Wasserleitung verlegen, Warmwasser-Reparatur und Badsanierung. Unsere Installateure arbeiten mit allen Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch."
     },
     {
-      question: "Geben Sie Garantie auf Ihre Sanitärarbeiten?",
-      answer: "Ja, auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Bei Problemen kommen wir kostenlos zurück und beheben den Mangel. Auf eingebaute Materialien gelten zusätzlich die Herstellergarantien."
+      question: "Wie läuft ein Sanitär-Einsatz bei AquaPro24 ab?",
+      answer: "1. Sie rufen an (0152 12274043) und schildern das Problem. 2. Wir vereinbaren einen Termin - bei Notfällen sofort. 3. Unser Techniker kommt pünktlich und analysiert die Situation. 4. Sie erhalten einen Festpreis vor Arbeitsbeginn. 5. Die Arbeit wird sauber erledigt, Sie zahlen nur den vereinbarten Preis."
+    },
+    {
+      question: "Warum sollte ich AquaPro24 für Sanitärarbeiten wählen?",
+      answer: "AquaPro24 bietet: Festpreisgarantie ohne Nachforderungen, 60-Minuten-Reaktionszeit bei Notfällen, 2 Jahre Gewährleistung auf alle Arbeiten, geprüfte Fachhandwerker aus München, saubere Arbeit mit Oberflächenschutz, und über 2.800 zufriedene Kunden in München. Wir sind Ihr lokaler Partner seit 2005."
+    },
+    {
+      question: "Geben Sie Garantie auf Sanitärarbeiten in München?",
+      answer: "Ja, auf alle unsere Sanitärarbeiten geben wir 2 Jahre Gewährleistung. Sollte innerhalb dieser Zeit etwas mit unserer Arbeit nicht stimmen, kommen wir kostenlos zurück und beheben das Problem. Zusätzlich gelten die Herstellergarantien auf eingebaute Materialien und Armaturen."
     }
   ];
 

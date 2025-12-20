@@ -67,28 +67,36 @@ const benefits = [
 
 const faqItems = [
   {
-    question: "Lohnt sich eine Wärmepumpe in München?",
-    answer: "Ja, Wärmepumpen sind in München sehr effizient. Mit bis zu 70% staatlicher Förderung und 50% Heizkosten-Ersparnis amortisiert sich die Investition oft in 7-10 Jahren. Das milde bayerische Klima begünstigt zudem die Effizienz."
+    question: "Was kostet eine Wärmepumpe in München?",
+    answer: "Wärmepumpe München Kosten: Luft-Wasser ab 12.000€, Erdwärme ab 18.000€ (vor Förderung). Mit BAFA/KfW-Förderung bis 70% zahlen Sie effektiv nur 30-50% der Kosten. Beispiel: 15.000€ Wärmepumpe mit 70% Förderung = nur 4.500€ Eigenanteil."
   },
   {
-    question: "Welche Förderung gibt es für Wärmepumpen 2024/2025?",
-    answer: "Aktuell erhalten Sie bis zu 70% Förderung durch BAFA und KfW. Die Grundförderung beträgt 30%, plus Boni für Einkommensgruppen (30%), Geschwindigkeitsbonus (20%) und Effizienzbonus (5%). Wir helfen bei der Antragstellung."
+    question: "Wie hoch ist die Wärmepumpen-Förderung 2025 in München?",
+    answer: "Wärmepumpe Förderung 2025: Bis zu 70% durch BAFA und KfW. Zusammensetzung: 30% Grundförderung + 30% Einkommensbonus + 20% Geschwindigkeitsbonus + 5% Effizienzbonus. AquaPro24 übernimmt die komplette Antragstellung bei BAFA und KfW - kostenlos."
+  },
+  {
+    question: "Ist mein Altbau in München für eine Wärmepumpe geeignet?",
+    answer: "Die meisten Münchner Altbauten sind für Wärmepumpen geeignet. Ideal: gute Dämmung und Fußbodenheizung. Aber auch mit normalen Heizkörpern funktioniert es oft. Wir prüfen Ihr Gebäude kostenlos und ehrlich - wenn es nicht sinnvoll ist, sagen wir Ihnen das direkt."
+  },
+  {
+    question: "Wie lange dauert die Wärmepumpen-Installation?",
+    answer: "Luft-Wasser-Wärmepumpe: 2-3 Tage Installation. Erdwärmepumpe: 1-2 Wochen (inkl. Bohrung). Wir planen den Heizungsumstieg so, dass Sie nur minimal ohne Heizung sind - meist an einem Tag. Termingerechte Fertigstellung garantiert."
+  },
+  {
+    question: "Wie viel spart man mit einer Wärmepumpe in München?",
+    answer: "Mit einer Wärmepumpe sparen Sie durchschnittlich 50% Heizkosten. Beispiel: Gasrechnung 2.400€/Jahr → Stromkosten Wärmepumpe ca. 1.200€/Jahr. Zusätzlich: keine CO2-Steuer, kein Gasanschluss mehr nötig, unabhängig von Gaspreisschwankungen."
+  },
+  {
+    question: "Wie läuft die Wärmepumpen-Installation bei AquaPro24 ab?",
+    answer: "1. Kostenloser Eignungscheck vor Ort. 2. Förderantrag bei BAFA/KfW (übernehmen wir). 3. Detaillierte Planung und Festpreisangebot. 4. Termingerechte Installation in 2-3 Tagen. 5. Einweisung und 5 Jahre Garantie. 6. Optional: Wartungsvertrag."
+  },
+  {
+    question: "Warum AquaPro24 für die Wärmepumpe wählen?",
+    answer: "AquaPro24 bietet: Kostenloser Eignungscheck, komplette Förderantragstellung, Festpreisgarantie, 320+ installierte Wärmepumpen in München, 5 Jahre Gewährleistung, alle Marken (Vaillant, Viessmann, Bosch). Zertifizierter Fachbetrieb seit 2005."
   },
   {
     question: "Funktioniert eine Wärmepumpe auch bei Minusgraden?",
-    answer: "Moderne Luft-Wasser-Wärmepumpen arbeiten effizient bis -20°C. In München mit durchschnittlich milden Wintern sind sie daher bestens geeignet. Bei Bedarf empfehlen wir Hybrid-Systeme für extreme Kältephasen."
-  },
-  {
-    question: "Wie lange dauert die Installation einer Wärmepumpe?",
-    answer: "Eine Luft-Wasser-Wärmepumpe wird in der Regel in 2-3 Tagen installiert. Erdwärmepumpen benötigen wegen der Bohrungen 1-2 Wochen. Wir planen alles so, dass Ihr Heizungsbetrieb minimal unterbrochen wird."
-  },
-  {
-    question: "Ist mein Haus für eine Wärmepumpe geeignet?",
-    answer: "Die meisten Gebäude sind geeignet. Ideal sind gut gedämmte Häuser mit Fußbodenheizung. Aber auch Altbauten mit Heizkörpern können oft umgerüstet werden. Wir prüfen Ihr Gebäude kostenlos und beraten ehrlich."
-  },
-  {
-    question: "Wie laut ist eine Wärmepumpe?",
-    answer: "Moderne Luft-Wasser-Wärmepumpen sind sehr leise - vergleichbar mit einem Kühlschrank (35-50 dB). Erdwärmepumpen sind praktisch unhörbar. Wir achten bei der Platzierung auf optimale Schallschutz-Abstände."
+    answer: "Ja, moderne Luft-Wasser-Wärmepumpen arbeiten effizient bis -20°C. Das milde Münchner Klima ist optimal für Wärmepumpen. Bei extremen Kältephasen empfehlen wir Hybrid-Systeme mit elektrischer Unterstützung. Erdwärmepumpen funktionieren unabhängig von der Außentemperatur."
   }
 ];
 

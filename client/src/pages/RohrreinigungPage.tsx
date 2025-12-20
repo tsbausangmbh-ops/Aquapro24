@@ -79,28 +79,36 @@ export default function RohrreinigungPage() {
 
   const faqItems = [
     {
-      question: "Wie schnell können Sie bei einem verstopften Abfluss in München vor Ort sein?",
-      answer: "Bei Verstopfungen sind wir in der Regel innerhalb von 60-90 Minuten bei Ihnen in München. Unser Notdienst ist 24/7 erreichbar - auch an Wochenenden und Feiertagen."
-    },
-    {
       question: "Was kostet eine Rohrreinigung in München?",
-      answer: "Eine einfache Abflussreinigung beginnt ab 81€. Der genaue Preis hängt von der Art der Verstopfung ab. Wir nennen Ihnen vor Arbeitsbeginn einen verbindlichen Festpreis - ohne versteckte Kosten."
+      answer: "Rohrreinigung München Kosten: Einfache Verstopfung ab 81€, Küchenabfluss ab 97€, WC-Entstopfung ab 113€, Hochdruckspülung ab 178€. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Festpreis. Keine versteckten Kosten, keine Anfahrtsgebühr bei Auftrag."
     },
     {
-      question: "Funktioniert die Rohrreinigung auch bei hartnäckigen Verstopfungen?",
-      answer: "Ja, mit unserer professionellen Ausrüstung lösen wir auch die hartnäckigsten Verstopfungen. Wir arbeiten mit Spiralen, Hochdruckspülgeräten und Kamerainspektionen - da bleibt keine Verstopfung ungelöst."
+      question: "Wie schnell ist der Rohrreinigung-Notdienst in München vor Ort?",
+      answer: "Bei verstopftem Abfluss sind wir in der Regel innerhalb von 60 Minuten bei Ihnen in München. Unser 24/7 Notdienst ist rund um die Uhr erreichbar. Einsatzgebiet: alle Münchner Stadtteile - Schwabing, Sendling, Bogenhausen, Pasing, Giesing und weitere."
     },
     {
-      question: "Kann ich selbst versuchen, die Verstopfung zu lösen?",
-      answer: "Bei leichten Verstopfungen können Hausmittel wie heißes Wasser mit Spülmittel oder ein Pümpel helfen. Vermeiden Sie aber aggressive Chemikalien - sie können Rohre beschädigen. Wenn nichts hilft, rufen Sie uns an."
+      question: "Arbeitet der Rohrreinigung-Notdienst auch nachts?",
+      answer: "Ja, unser 24/7 Rohrreinigung-Notdienst ist 365 Tage im Jahr erreichbar - auch nachts zwischen 22 und 6 Uhr, an Wochenenden und Feiertagen. Ein überflutetes Bad oder eine verstopfte Toilette ist ein Notfall. Telefon: 0152 12274043."
+    },
+    {
+      question: "Welche Verstopfungen können Sie in München lösen?",
+      answer: "Wir lösen alle Verstopfungen: Küche (Fett, Essensreste), Bad (Haare, Seife, Kalk), WC (Hygieneartikel, Papier), Fallrohr, Hauptkanal, Außenabfluss. Mit Spirale, Hochdruckspülung und Kamerainspektion - da bleibt keine Verstopfung ungelöst."
     },
     {
       question: "Nutzen Sie Chemikalien zur Rohrreinigung?",
-      answer: "Nein, wir arbeiten fast ausschließlich mechanisch mit Spiralen und Hochdruck. Das ist effektiver, schonender für Ihre Rohre und umweltfreundlicher als chemische Reiniger."
+      answer: "Nein, wir arbeiten zu 100% mechanisch und umweltfreundlich. Unsere Methoden: flexible Spiralen für einfache Verstopfungen, Hochdruckspülgeräte für hartnäckige Ablagerungen, Kamerainspektion zur Lokalisierung. Das ist schonender für Ihre Rohre und effektiver als chemische Reiniger."
     },
     {
-      question: "Wie kann ich Verstopfungen vorbeugen?",
-      answer: "Gießen Sie kein Fett in den Abfluss, verwenden Sie Haarsiebe in der Dusche und lassen Sie regelmäßig heißes Wasser laufen. Bei wiederkehrenden Problemen empfehlen wir eine professionelle Wartungsreinigung."
+      question: "Wie läuft eine Rohrreinigung bei AquaPro24 ab?",
+      answer: "1. Anruf unter 0152 12274043 - wir sind 24/7 erreichbar. 2. Techniker kommt in 60 Minuten. 3. Analyse der Verstopfung. 4. Festpreis vor Arbeitsbeginn. 5. Professionelle Beseitigung. 6. Tipps zur Vorbeugung. 7. Garantie auf die Beseitigung."
+    },
+    {
+      question: "Warum AquaPro24 für Rohrreinigung wählen?",
+      answer: "AquaPro24 bietet: 60 Min. Reaktionszeit, 24/7 Notdienst, Festpreisgarantie, umweltfreundliche Methoden, Kamerainspektion verfügbar, über 2.800 gelöste Verstopfungen in München. Keine Anfahrtskosten bei Auftrag. Ihr lokaler Partner seit 2005."
+    },
+    {
+      question: "Wie kann ich Verstopfungen in München vorbeugen?",
+      answer: "Tipps: Kein Fett in den Küchenabfluss, Haarsiebe in Dusche/Badewanne verwenden, regelmäßig heißes Wasser durchlaufen lassen, keine Hygieneartikel ins WC. Bei wiederkehrenden Problemen: professionelle Wartungsreinigung alle 1-2 Jahre empfohlen."
     }
   ];
 

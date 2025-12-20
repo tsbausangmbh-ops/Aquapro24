@@ -64,28 +64,36 @@ const benefits = [
 
 const faqItems = [
   {
-    question: "Wie lange dauert eine komplette Badsanierung in München?",
-    answer: "Eine Standard-Badsanierung dauert in der Regel 2-3 Wochen. Bei aufwändigeren Projekten kann es auch 4 Wochen dauern. Wir erstellen Ihnen einen genauen Zeitplan und halten uns daran."
-  },
-  {
     question: "Was kostet eine Badsanierung in München?",
-    answer: "Die Kosten hängen von Größe und Ausstattung ab. Ein Standard-Bad (6-8m²) beginnt ab ca. 8.000€. Wir erstellen Ihnen ein detailliertes Festpreisangebot nach der kostenlosen Beratung vor Ort."
+    answer: "Badsanierung München Kosten: Standard-Bad (6-8m²) ab 16.000€, Komfort-Bad ab 22.000€, Luxus-Bad ab 28.000€. Barrierefreie Bäder ab 20.000€ mit möglicher KfW-Förderung. Bei AquaPro24 erhalten Sie einen verbindlichen Festpreis nach kostenloser Vor-Ort-Beratung - ohne versteckte Kosten."
   },
   {
-    question: "Bieten Sie auch barrierefreie Badsanierung an?",
-    answer: "Ja, wir sind spezialisiert auf barrierefreie und seniorengerechte Bäder. Bodengleiche Duschen, Haltegriffe, erhöhte WCs - wir beraten Sie zu allen Möglichkeiten und Förderprogrammen."
+    question: "Wie lange dauert eine Badsanierung in München?",
+    answer: "Eine komplette Badsanierung dauert bei uns 2-3 Wochen. Wir erstellen vorab einen detaillierten Zeitplan und halten uns daran. Bei größeren Projekten (z.B. Wellness-Bad) kann es 4 Wochen dauern. Während der Sanierung richten wir ein Provisorium ein, sodass Sie in Ihrer Wohnung bleiben können."
   },
   {
-    question: "Kann ich während der Badsanierung in meiner Wohnung bleiben?",
-    answer: "In den meisten Fällen ja. Wir richten ein provisorisches WC ein und arbeiten zügig, damit die Einschränkungen minimal bleiben. Bei Bedarf planen wir Etappen ein."
+    question: "Gibt es einen Festpreis für die Badsanierung?",
+    answer: "Ja, bei AquaPro24 erhalten Sie immer einen verbindlichen Festpreis vor Arbeitsbeginn. Nach der kostenlosen 3D-Planung wissen Sie exakt, was Ihr neues Bad kostet. Keine Nachforderungen, keine Überraschungen - der Preis gilt, auch wenn wir länger brauchen."
   },
   {
-    question: "Übernehmen Sie auch die Entsorgung der alten Sanitärobjekte?",
-    answer: "Selbstverständlich! Die fachgerechte Entsorgung aller Altmaterialien ist in unserem Angebot enthalten. Sie müssen sich um nichts kümmern."
+    question: "Bieten Sie barrierefreie Badsanierung in München an?",
+    answer: "Ja, wir sind spezialisiert auf barrierefreie und seniorengerechte Bäder in München. Leistungen: bodengleiche Duschen, rutschfeste Fliesen, Haltegriffe, erhöhte WCs, unterfahrbare Waschtische. Fördermöglichkeiten: KfW-Zuschüsse bis 6.250€. Wir unterstützen Sie bei der Antragstellung."
   },
   {
-    question: "Welche Garantie geben Sie auf die Badsanierung?",
-    answer: "Wir geben 5 Jahre Gewährleistung auf alle unsere Arbeiten. Bei Problemen kommen wir kostenlos zurück. Auf eingebaute Produkte gelten zusätzlich die Herstellergarantien."
+    question: "Wie läuft eine Badsanierung bei AquaPro24 ab?",
+    answer: "1. Kostenlose Beratung vor Ort in München. 2. 3D-Visualisierung Ihres neuen Bades. 3. Verbindliches Festpreisangebot. 4. Koordination aller Gewerke aus einer Hand. 5. Termingerechte Fertigstellung in 2-3 Wochen. 6. Übergabe mit 5 Jahren Garantie."
+  },
+  {
+    question: "Warum sollte ich AquaPro24 für die Badsanierung wählen?",
+    answer: "AquaPro24 bietet: Alles aus einer Hand (kein Handwerker-Stress), 3D-Planung inklusive, Festpreisgarantie, 847+ sanierte Bäder in München, 5 Jahre Gewährleistung, termingerechte Fertigstellung. Wir koordinieren Sanitär, Fliesen, Elektrik und Maler - Sie haben nur einen Ansprechpartner."
+  },
+  {
+    question: "Welche Garantie gibt es auf die Badsanierung?",
+    answer: "Wir geben 5 Jahre Gewährleistung auf alle Badsanierungsarbeiten. Sollte innerhalb dieser Zeit etwas nicht stimmen, kommen wir kostenlos und beheben das Problem. Zusätzlich gelten die Herstellergarantien auf Armaturen, Sanitärobjekte und Fliesen."
+  },
+  {
+    question: "In welchen Münchner Stadtteilen bieten Sie Badsanierung an?",
+    answer: "Wir sanieren Bäder in ganz München: Schwabing, Bogenhausen, Sendling, Neuhausen, Giesing, Pasing, Laim, Trudering, Maxvorstadt, Haidhausen, Moosach, Milbertshofen, Nymphenburg und alle weiteren Stadtteile. Kostenlose Beratung: 0152 12274043."
   }
 ];
 

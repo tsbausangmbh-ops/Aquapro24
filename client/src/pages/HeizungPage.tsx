@@ -65,28 +65,36 @@ const benefits = [
 
 const faqItems = [
   {
-    question: "Wie schnell kommen Sie bei einem Heizungsausfall in München?",
-    answer: "Bei einem Heizungsnotfall sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen. Unser 24/7 Notdienst ist auch an Wochenenden und Feiertagen erreichbar - besonders wichtig in kalten Winternächten."
+    question: "Was kostet ein Heizungs-Notdienst in München?",
+    answer: "Heizungs-Notdienst München Kosten: Anfahrt 49€, Diagnose ab 89€, Reparaturen ab 154€. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Festpreis. Keine versteckten Kosten, keine Nachforderungen. Der Preis gilt auch nachts und am Wochenende."
   },
   {
-    question: "Was kostet eine neue Heizung in München?",
-    answer: "Die Kosten variieren je nach System und Größe. Eine neue Gasheizung beginnt ab ca. 6.000€, Wärmepumpen ab ca. 15.000€. Wir beraten Sie zu Fördermöglichkeiten, die bis zu 40% der Kosten abdecken können."
+    question: "Wie schnell ist der Heizungs-Notdienst in München vor Ort?",
+    answer: "Bei Heizungsausfall sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen in München. Unser 24/7 Notdienst ist rund um die Uhr erreichbar - auch nachts, an Wochenenden und Feiertagen. Einsatzgebiet: alle Münchner Stadtteile inkl. Schwabing, Bogenhausen, Sendling, Pasing."
   },
   {
-    question: "Lohnt sich der Austausch meiner alten Heizung?",
-    answer: "Heizungen über 15-20 Jahre sollten geprüft werden. Moderne Systeme sparen bis zu 30% Energie. Wir erstellen Ihnen eine kostenlose Wirtschaftlichkeitsberechnung - oft amortisiert sich die Investition in 5-8 Jahren."
+    question: "Arbeitet der Heizungs-Notdienst auch nachts und am Wochenende?",
+    answer: "Ja, unser 24/7 Heizungs-Notdienst ist 365 Tage im Jahr erreichbar. Auch Heiligabend, Silvester und nachts zwischen 22 und 6 Uhr. Ein Heizungsausfall im Winter ist ein Notfall - wir lassen Sie nicht im Kalten sitzen. Telefon: 0152 12274043."
   },
   {
-    question: "Welche Heizung ist die beste für mein Haus?",
-    answer: "Das hängt von vielen Faktoren ab: Gebäudegröße, Dämmung, vorhandene Anschlüsse, Budget. Wir beraten Sie neutral zu allen Optionen - Gas, Wärmepumpe, Pellets oder Hybrid - und finden die optimale Lösung."
+    question: "Welche Heizungsmarken reparieren Sie in München?",
+    answer: "Wir reparieren alle Heizungsmarken: Viessmann, Vaillant, Buderus, Wolf, Junkers/Bosch, Brötje, Weishaupt, Kermi, und viele weitere. Unsere Techniker führen die häufigsten Ersatzteile direkt mit - für schnelle Reparatur noch am selben Tag."
   },
   {
-    question: "Wie oft sollte die Heizung gewartet werden?",
-    answer: "Mindestens einmal jährlich vor der Heizperiode. Regelmäßige Wartung erhält die Effizienz, senkt Verbrauch und beugt teuren Reparaturen vor. Wir bieten günstige Wartungsverträge mit Priorität im Notfall."
+    question: "Was kostet eine Heizungswartung in München?",
+    answer: "Heizungswartung München ab 154€ inkl. Anfahrt. Leistungen: Brenner reinigen, Filter tauschen, Druck prüfen, Sicherheitscheck, Protokoll. Eine jährliche Wartung spart bis 15% Heizkosten und beugt teuren Reparaturen vor. Wartungsverträge mit Notfall-Priorität verfügbar."
   },
   {
-    question: "Reparieren Sie alle Heizungsmarken?",
-    answer: "Ja, wir reparieren und warten Heizungen aller Hersteller: Viessmann, Vaillant, Buderus, Wolf, Junkers, Bosch und viele mehr. Ersatzteile haben wir oft direkt dabei für schnelle Reparaturen."
+    question: "Wie läuft ein Heizungs-Einsatz bei AquaPro24 ab?",
+    answer: "1. Anruf unter 0152 12274043 - wir sind 24/7 erreichbar. 2. Terminvereinbarung - bei Notfällen sofort. 3. Techniker kommt pünktlich und analysiert das Problem. 4. Festpreis vor Arbeitsbeginn. 5. Reparatur direkt vor Ort. 6. Sie haben wieder Wärme - garantiert."
+  },
+  {
+    question: "Warum sollte ich AquaPro24 für Heizungsarbeiten wählen?",
+    answer: "AquaPro24 bietet: 24/7 Notdienst, 45-60 Min. Reaktionszeit, Festpreisgarantie, alle Heizungsmarken, 2 Jahre Gewährleistung, geprüfte Fachhandwerker. Über 1.200 Heizungsanlagen in München installiert und repariert. Ihr lokaler Partner seit 2005."
+  },
+  {
+    question: "Gibt es Förderung für eine neue Heizung in München?",
+    answer: "Ja, für den Heizungstausch gibt es bis zu 40% staatliche Förderung (BAFA/KfW). Gasheizung: geringe Förderung, Wärmepumpe: bis 70% Förderung möglich. Wir beraten neutral zu allen Optionen und unterstützen bei der Antragstellung - kostenlos."
   }
 ];
 

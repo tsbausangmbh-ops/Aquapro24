@@ -65,28 +65,36 @@ const benefits = [
 
 const faqItems = [
   {
+    question: "Was kostet Haustechnik in München?",
+    answer: "Haustechnik München Kosten: Wasserinstallation ab 92€/Std., Gasinstallation ab 108€/Std., Lüftungsanlage (KWL) ab 4.500€, Smart-Home-Basis ab 500€. Bei Komplett-Projekten erstellen wir ein individuelles Festpreisangebot nach kostenloser Vor-Ort-Beratung."
+  },
+  {
     question: "Was umfasst Haustechnik alles?",
-    answer: "Haustechnik umfasst alle technischen Systeme in Ihrem Gebäude: Wasserinstallation, Gasanlagen, Heizung, Lüftung, und zunehmend auch Smart-Home-Systeme. Als Komplettanbieter decken wir alle Bereiche ab."
+    answer: "Haustechnik München umfasst: Wasserinstallation (Trink- und Abwasser), Gasinstallation (Leitungen, Geräte, Sicherheitsprüfung), Lüftungsanlagen (KWL mit Wärmerückgewinnung), Smart-Home-Systeme (Heizungssteuerung, Automatisierung). AquaPro24 bietet alles aus einer Hand."
   },
   {
-    question: "Bieten Sie auch Komplettlösungen für Neubauten an?",
-    answer: "Ja, wir planen und realisieren die komplette Haustechnik für Neubauten - von den ersten Entwürfen bis zur Abnahme. Ein Ansprechpartner für alles spart Zeit, Geld und Nerven."
+    question: "Bieten Sie Haustechnik-Komplettlösungen für Neubauten in München an?",
+    answer: "Ja, wir planen und realisieren die komplette Haustechnik für Neubauten in München: Wasserinstallation, Heizung, Lüftung, Gas, Smart Home. Ein Ansprechpartner koordiniert alle Gewerke - das spart Zeit, Geld und vermeidet Koordinationsprobleme zwischen verschiedenen Handwerkern."
   },
   {
-    question: "Wie funktioniert eine kontrollierte Wohnraumlüftung?",
-    answer: "Eine KWL tauscht verbrauchte Luft automatisch gegen frische Außenluft aus. Die Wärmerückgewinnung nutzt die Wärme der Abluft, um die Frischluft zu erwärmen. So sparen Sie Heizkosten und haben immer frische Luft."
+    question: "Was kostet eine Lüftungsanlage (KWL) in München?",
+    answer: "Kontrollierte Wohnraumlüftung München: Zentrale KWL ab 4.500€, dezentrale Lüftung ab 1.500€ pro Raum. Vorteile: Frische Luft ohne offene Fenster, Wärmerückgewinnung spart bis 30% Heizkosten, Pollenfilter für Allergiker. Förderung durch KfW möglich."
   },
   {
-    question: "Was kostet eine Smart-Home-Nachrüstung?",
-    answer: "Eine Basis-Ausstattung mit intelligenter Heizungssteuerung beginnt ab ca. 500€. Komplette Systeme mit Licht, Beschattung und Sicherheit liegen je nach Umfang bei 2.000-10.000€. Wir beraten Sie zu sinnvollen Einstiegsmöglichkeiten."
+    question: "Sind Sie für Gasinstallationen in München zertifiziert?",
+    answer: "Ja, AquaPro24 ist zertifizierter Gasinstallateur in München. Leistungen: Gasleitungen verlegen, Gasgeräte anschließen, vorgeschriebene Sicherheitsprüfungen durchführen, Gasherde und Gasöfen installieren. Alle Arbeiten nach aktuellen DVGW-Sicherheitsstandards."
   },
   {
-    question: "Arbeiten Sie auch an Gasinstallationen?",
-    answer: "Ja, wir sind zertifiziert für alle Gasarbeiten. Von der Gasleitung über Gasgeräte bis zur vorgeschriebenen Sicherheitsprüfung - alles aus einer Hand und nach aktuellen Sicherheitsstandards."
+    question: "Wie läuft ein Haustechnik-Projekt bei AquaPro24 ab?",
+    answer: "1. Kostenlose Beratung vor Ort in München. 2. Detaillierte Planung und Festpreisangebot. 3. Koordination aller Gewerke aus einer Hand. 4. Termingerechte Umsetzung. 5. Abnahme und Einweisung. 6. 2-5 Jahre Gewährleistung je nach Leistung."
   },
   {
-    question: "Wie lange dauert die Planung und Umsetzung?",
-    answer: "Je nach Projektumfang planen wir 2-4 Wochen für die Konzeption. Die Umsetzung dauert bei einer Sanierung 1-3 Wochen, bei Neubauten arbeiten wir nach Ihrem Bauzeitenplan. Wir halten vereinbarte Termine ein."
+    question: "Warum AquaPro24 für Haustechnik wählen?",
+    answer: "AquaPro24 bietet: Alles aus einer Hand (kein Handwerker-Stress), ein Ansprechpartner für alle Gewerke, Festpreisgarantie, 1.500+ Projekte in München, zertifizierte Fachbetriebe, 25+ Jahre Erfahrung. Alle Münchner Stadtteile: Schwabing, Bogenhausen, Sendling, Pasing."
+  },
+  {
+    question: "In welchen Münchner Stadtteilen bieten Sie Haustechnik an?",
+    answer: "Wir arbeiten in ganz München: Schwabing, Bogenhausen, Sendling, Neuhausen, Giesing, Pasing, Laim, Trudering, Maxvorstadt, Haidhausen, Moosach, Milbertshofen, Nymphenburg und alle weiteren Stadtteile. Kostenlose Beratung: 0152 12274043."
   }
 ];
 
