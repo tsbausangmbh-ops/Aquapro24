@@ -205,7 +205,7 @@ export default function NotdienstMuenchenPage() {
           </div>
         </section>
 
-        <EmergencyProcess />
+        <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
         <ServiceAreas serviceName="Notdienst" />
         <RelatedServices currentService="sanitaer" />
