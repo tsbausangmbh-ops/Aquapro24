@@ -28,6 +28,12 @@ const RohrreinigungPage = lazy(() => import("@/pages/RohrreinigungPage"));
 const ArmaturenPage = lazy(() => import("@/pages/ArmaturenPage"));
 const WarmwasserPage = lazy(() => import("@/pages/WarmwasserPage"));
 const TerminPage = lazy(() => import("@/pages/TerminPage"));
+const SanitaerMuenchenPage = lazy(() => import("@/pages/SanitaerMuenchenPage"));
+const HeizungMuenchenPage = lazy(() => import("@/pages/HeizungMuenchenPage"));
+const BadsanierungMuenchenPage = lazy(() => import("@/pages/BadsanierungMuenchenPage"));
+const WaermepumpeMuenchenPage = lazy(() => import("@/pages/WaermepumpeMuenchenPage"));
+const FussbodenheizungMuenchenPage = lazy(() => import("@/pages/FussbodenheizungMuenchenPage"));
+const NotdienstMuenchenPage = lazy(() => import("@/pages/NotdienstMuenchenPage"));
 
 function PageLoader() {
   return (
@@ -63,6 +69,12 @@ function Router() {
         <Route path="/datenschutz" component={DatenschutzPage} />
         <Route path="/agb" component={AGBPage} />
         <Route path="/impressum" component={Impressum} />
+        <Route path="/sanitaer-muenchen" component={SanitaerMuenchenPage} />
+        <Route path="/heizung-muenchen" component={HeizungMuenchenPage} />
+        <Route path="/badsanierung-muenchen" component={BadsanierungMuenchenPage} />
+        <Route path="/waermepumpe-muenchen" component={WaermepumpeMuenchenPage} />
+        <Route path="/fussbodenheizung-muenchen" component={FussbodenheizungMuenchenPage} />
+        <Route path="/notdienst-muenchen" component={NotdienstMuenchenPage} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
