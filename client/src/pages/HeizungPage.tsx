@@ -135,7 +135,7 @@ export default function HeizungPage() {
                   Heizung München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Heizung - Wärme für Ihr Zuhause
+                  Heizung München – 24/7 Notdienst & Wartung
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 

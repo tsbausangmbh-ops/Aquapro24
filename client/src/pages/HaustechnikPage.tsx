@@ -135,7 +135,7 @@ export default function HaustechnikPage() {
                   Haustechnik München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Haustechnik - Alles aus einer Hand
+                  Haustechnik München – Komplettservice aus einer Hand
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Mehrere Handwerker koordinieren? Unterschiedliche Ansprechpartner?</strong> Das 

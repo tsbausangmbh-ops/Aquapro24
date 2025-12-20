@@ -137,7 +137,7 @@ export default function WaermepumpePage() {
                   Wärmepumpe München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Wärmepumpe vom Partnernetzwerk
+                  Wärmepumpe München – bis 70% Förderung
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 

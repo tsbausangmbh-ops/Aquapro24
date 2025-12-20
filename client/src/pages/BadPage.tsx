@@ -135,7 +135,7 @@ export default function BadPage() {
                   Badsanierung München
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Badsanierung vom Partnernetzwerk
+                  Badsanierung München – Komplettumbau in 2-4 Wochen
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
