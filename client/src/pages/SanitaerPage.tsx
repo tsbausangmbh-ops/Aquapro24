@@ -335,14 +335,14 @@ export default function SanitaerPage() {
                 ausschließlich hochwertige Markenprodukte von Herstellern wie Grohe, Hansgrohe, Geberit und Villeroy & Boch. 
                 Das bedeutet für Sie: langlebige Qualität, die jahrzehntelang funktioniert.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Was uns von anderen Sanitärbetrieben unterscheidet</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Sanitärbetrieb München: Was uns unterscheidet</h3>
               <p>
                 Bei uns bekommen Sie keine bösen Überraschungen. Bevor wir mit der Arbeit beginnen, analysieren wir das Problem 
                 gründlich und nennen Ihnen einen verbindlichen Festpreis. Dieser Preis gilt - auch wenn die Arbeit länger dauert 
                 als geplant. Zusätzlich achten wir penibel auf Sauberkeit: Wir legen Schutzfolien aus, tragen Überschuhe und 
                 hinterlassen Ihre Wohnung so sauber, wie wir sie vorgefunden haben.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Unser Leistungsspektrum im Bereich Sanitär</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Sanitär Leistungen München: Unser Angebot</h3>
               <p>
                 Wir decken das gesamte Spektrum der Sanitärtechnik ab: Von der Installation neuer Wasserleitungen über die 
                 Montage von Sanitärobjekten wie WCs, Waschbecken, Duschen und Badewannen bis hin zur professionellen 
@@ -354,7 +354,7 @@ export default function SanitaerPage() {
                 wir ab 60 Minuten bei Ihnen in München und stoppen den Schaden, bevor er größer wird. Unsere 
                 Notdienst-Pauschale ist transparent und fair - ohne versteckte Kosten.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Unsere Garantie für Sie</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Sanitär München: Unsere Garantie für Sie</h3>
               <p>
                 Auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Sollte in dieser Zeit etwas mit unserer Arbeit 
                 nicht stimmen, kommen wir kostenlos zurück und beheben das Problem. Denn wir stehen zu unserer Arbeit - 

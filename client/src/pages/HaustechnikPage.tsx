@@ -316,25 +316,25 @@ export default function HaustechnikPage() {
                 Terminabstimmung zwischen verschiedenen Gewerken, keine Schuldzuweisungen wenn etwas nicht passt, keine 
                 doppelten Anfahrten. Das spart Zeit, Nerven und häufig auch Geld.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Wasserinstallation nach neuesten Standards</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Wasserinstallation München: Neueste Standards</h3>
               <p>
                 Sauberes Trinkwasser und zuverlässige Abwasserentsorgung sind die Grundlage jedes Haushalts. Wir planen und 
                 installieren Wasserleitungen nach den neuesten hygienischen Standards, vom Hausanschluss bis zur letzten 
                 Armatur. Auch Regenwassernutzung und Zirkulationssysteme für Warmwasser gehören zu unserem Leistungsspektrum.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Gasinstallation mit Sicherheit</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Gasinstallateur München: Sicherheit zuerst</h3>
               <p>
                 Gasinstallationen erfordern höchste Sorgfalt und Fachkenntnis. Unsere zertifizierten Gasinstallateure planen 
                 und realisieren Gasleitungen, installieren Gasgeräte und führen die vorgeschriebenen Sicherheitsprüfungen durch. 
                 Ihre Sicherheit steht bei uns an erster Stelle.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Kontrollierte Wohnraumlüftung</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Lüftungsanlage München: Kontrollierte Wohnraumlüftung</h3>
               <p>
                 Eine kontrollierte Wohnraumlüftung (KWL) sorgt für frische Luft bei geschlossenen Fenstern - ideal für 
                 Allergiker und lärmbelastete Standorte. Die integrierte Wärmerückgewinnung nutzt die Wärme der Abluft und 
                 spart so Heizkosten. Pollenfilter halten Allergene draußen.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Smart Home Integration</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Smart Home München: Intelligente Haussteuerung</h3>
               <p>
                 Steuern Sie Heizung, Lüftung und Warmwasser intelligent per App - von überall. Unsere Smart-Home-Lösungen 
                 passen sich Ihrem Alltag an und sparen automatisch Energie. Ob Einzelgeräte oder komplette Vernetzung: 

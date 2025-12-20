@@ -332,14 +332,14 @@ export default function ArmaturenPage() {
                 Geberit, Villeroy & Boch, Dornbracht und viele mehr. Wir wissen, worauf es bei der Montage 
                 ankommt - von den richtigen Dichtungen bis zur korrekten Befestigung.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Reparatur oder Austausch?</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Wasserhahn reparieren München: Reparatur oder Austausch?</h3>
               <p>
                 Nicht jeder tropfende Wasserhahn muss sofort ersetzt werden. Oft reicht der Austausch einer 
                 Kartusche oder Dichtung aus. Wir prüfen vor Ort, was sinnvoll ist, und beraten Sie ehrlich. 
                 Sollte eine Reparatur nicht mehr wirtschaftlich sein, helfen wir Ihnen bei der Auswahl einer 
                 passenden neuen Armatur.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Ihr Einbau-Service</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Armatur einbauen München: Ihr Einbau-Service</h3>
               <p>
                 Sie haben bereits eine neue Armatur gekauft? Kein Problem! Wir bauen auch von Ihnen 
                 mitgebrachte Armaturen fachgerecht ein. Achten Sie beim Kauf auf Qualitätsprodukte und die 

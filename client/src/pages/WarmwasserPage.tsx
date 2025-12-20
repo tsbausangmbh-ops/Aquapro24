@@ -332,14 +332,14 @@ export default function WarmwasserPage() {
                 und viele mehr. Egal ob Ihr Durchlauferhitzer nicht mehr richtig heizt, Ihr Boiler merkwürdige 
                 Geräusche macht oder Sie ein komplett neues Gerät brauchen - wir helfen.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Durchlauferhitzer vs. Warmwasserspeicher</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Boiler oder Durchlauferhitzer München: Was ist besser?</h3>
               <p>
                 Welches System das richtige für Sie ist, hängt von Ihrem Verbrauchsverhalten ab. Durchlauferhitzer 
                 erwärmen das Wasser nur bei Bedarf und sind sehr platzsparend. Warmwasserspeicher (Boiler) 
                 halten eine große Menge heißes Wasser bereit und eignen sich besonders für Haushalte mit 
                 hohem Verbrauch. Wir beraten Sie gerne individuell.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Regelmäßige Wartung spart Geld</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Durchlauferhitzer Wartung München: Kosten sparen</h3>
               <p>
                 Kalk und Ablagerungen reduzieren die Effizienz Ihres Warmwasserbereiters erheblich. Eine 
                 jährliche Wartung inklusive Entkalkung sorgt dafür, dass Ihr Gerät effizient arbeitet und 

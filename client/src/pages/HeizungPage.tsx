@@ -295,19 +295,19 @@ export default function HeizungPage() {
                 Regel innerhalb von 45-60 Minuten bei Ihnen - auch nachts, am Wochenende und an Feiertagen. Denn wir wissen: 
                 Ohne Heizung wird es schnell ungemütlich und im schlimmsten Fall können Wasserleitungen einfrieren.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Alle Heizungsmarken - ein Ansprechpartner</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Heizungsmonteur München: Alle Marken, ein Ansprechpartner</h3>
               <p>
                 Egal ob Viessmann, Vaillant, Buderus, Wolf, Junkers oder andere Hersteller - wir kennen alle Systeme und haben 
                 die häufigsten Ersatzteile direkt dabei. Das bedeutet für Sie: schnelle Reparatur, oft noch am selben Tag, 
                 ohne lange Wartezeiten auf Ersatzteile.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Regelmäßige Wartung spart Geld</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Heizungswartung München: Kosten sparen</h3>
               <p>
                 Eine jährliche Heizungswartung kostet zwischen 150-200€ - und spart Ihnen langfristig ein Vielfaches. Denn 
                 eine gut gewartete Heizung verbraucht bis zu 15% weniger Energie, läuft zuverlässiger und hält länger. 
                 Unsere Wartungsverträge beinhalten bevorzugte Termine bei Notfällen und vergünstigte Reparaturen.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Heizungsmodernisierung mit Förderung</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Heizung tauschen München: Förderung bis 40%</h3>
               <p>
                 Ist Ihre Heizung älter als 15-20 Jahre? Dann lohnt sich oft ein Austausch gegen ein modernes, effizientes 
                 System. Wir beraten Sie neutral zu allen Optionen - Gasbrennwert, Wärmepumpe, Pellets oder Hybrid - und 

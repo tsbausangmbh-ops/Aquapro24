@@ -288,7 +288,7 @@ export default function BadPage() {
                 wie Sie es sich vorgestellt haben. Dafür sorgen wir mit einem durchdachten Ablaufplan und der Koordination aller 
                 Gewerke aus einer Hand.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Der Ablauf Ihrer Badsanierung</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Badsanierung München: So läuft es ab</h3>
               <p>
                 Alles beginnt mit einer kostenlosen Beratung vor Ort. Wir nehmen Maß, besprechen Ihre Wünsche und zeigen Ihnen 
                 Möglichkeiten auf, die Sie vielleicht noch gar nicht kannten. Anschließend erstellen wir eine 3D-Visualisierung 
@@ -299,13 +299,13 @@ export default function BadPage() {
                 Nach Freigabe des Entwurfs erstellen wir ein verbindliches Festpreisangebot. Dieser Preis gilt - ohne versteckte 
                 Kosten, ohne Nachforderungen. Erst wenn Sie vollständig überzeugt sind, beginnen wir mit der Umsetzung.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Warum eine professionelle Badsanierung sich lohnt</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Bad renovieren München: Warum es sich lohnt</h3>
               <p>
                 Ein modernes Bad steigert nicht nur Ihre Lebensqualität, sondern auch den Wert Ihrer Immobilie um durchschnittlich 
                 5-10%. Besonders barrierefreie Bäder sind zukunftssicher und werden mit KfW-Förderungen unterstützt. Wir beraten 
                 Sie gerne zu allen Fördermöglichkeiten.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Alles aus einer Hand</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Badumbau München: Alles aus einer Hand</h3>
               <p>
                 Bei uns müssen Sie nicht fünf verschiedene Handwerker koordinieren. Wir übernehmen alles: Demontage, Rohinstallation, 
                 Elektrik, Fliesen, Sanitärmontage und Malerarbeiten. Ein Ansprechpartner, ein Termin, ein Festpreis. Das spart Ihnen 
