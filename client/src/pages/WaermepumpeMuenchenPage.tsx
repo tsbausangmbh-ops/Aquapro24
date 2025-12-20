@@ -7,6 +7,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/stock_images/heat_pump_installati_53374252.jpg";
 import { 
   Leaf, 
   Phone, 
