@@ -8,6 +8,7 @@ import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
+import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -216,6 +217,8 @@ export default function SanitaerPage() {
         </section>
 
         <TrustBar />
+
+        <EmergencyProcess serviceType="sanitaer" />
 
         <NLPSection
           problemTitle="Kennen Sie diese Probleme?"
