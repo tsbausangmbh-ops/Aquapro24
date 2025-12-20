@@ -7,7 +7,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/professional_plumber_39413514.jpg";
 import { 
   Droplets, 
   Phone, 
@@ -104,28 +103,23 @@ export default function SanitaerMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-12 lg:py-20 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroImage})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-secondary/10 via-background to-accent/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge variant="secondary" className="mb-4">
                 <Droplets className="w-3 h-3 mr-1" />
                 Sanitär München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Sanitär München – Installation, Reparatur & schnelle Hilfe
               </h1>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-lg text-muted-foreground mb-4">
                 AquaPro24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 
                 Installation bis zur schnellen Reparatur. Ob undichte Armatur, defektes Eckventil, 
                 WC-Spülung, Wasseranschluss für Küche oder die komplette Erneuerung von Leitungen: 
                 Wir kümmern uns strukturiert, transparent und mit einem klaren Ablauf.
               </p>
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-lg text-muted-foreground mb-6">
                 Damit wir Ihnen schnell helfen können, senden Sie uns bitte kurz Adresse, Problem, 
                 Fotos und – wenn möglich – den Zeitraum, in dem wir Zugang haben. So erhalten Sie 
                 zügig eine konkrete Rückmeldung mit Terminoptionen.
@@ -137,7 +131,7 @@ export default function SanitaerMuenchenPage() {
                     0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
+                <Button size="lg" variant="outline" asChild>
                   <Link href="/kontakt" data-testid="link-kontakt-sanitaer">
                     <Mail className="w-4 h-4 mr-2" />
                     Anfrage senden

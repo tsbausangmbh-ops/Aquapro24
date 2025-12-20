@@ -7,7 +7,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/heating_technician_r_d9832fb9.jpg";
 import { 
   Flame, 
   Phone, 
@@ -104,29 +103,24 @@ export default function HeizungMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-12 lg:py-20 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroImage})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-red-500/10 via-background to-orange-500/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-red-600 text-white">
                 <Flame className="w-3 h-3 mr-1" />
                 Heizung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Heizung München – Reparatur, Modernisierung & effiziente Systeme
               </h1>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-lg text-muted-foreground mb-4">
                 Wenn die Heizung streikt oder modernisiert werden soll, zählt vor allem eins: eine Lösung, 
                 die planbar ist und dauerhaft funktioniert. AquaPro24 unterstützt Sie in München bei 
                 Heizungsreparaturen, Austausch, Optimierung und Modernisierung. Von der ersten Einschätzung 
                 bis zur Umsetzung arbeiten wir mit einem klaren Vorgehen – damit Sie wissen, was passiert, 
                 wann es passiert und warum.
               </p>
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-lg text-muted-foreground mb-6">
                 Senden Sie uns Ihre Anfrage idealerweise mit Fotos vom Gerät/Typenschild und einer kurzen 
                 Beschreibung (Fehlercode, Geräusche, Ausfallzeiten). So sparen wir Zeit und können Ihnen 
                 schneller einen passenden Termin nennen.
@@ -138,7 +132,7 @@ export default function HeizungMuenchenPage() {
                     0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
+                <Button size="lg" variant="outline" asChild>
                   <Link href="/kontakt" data-testid="link-kontakt-heizung">
                     <Mail className="w-4 h-4 mr-2" />
                     Anfrage senden

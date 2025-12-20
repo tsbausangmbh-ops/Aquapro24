@@ -7,7 +7,6 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/modern_luxury_bathro_fe230232.jpg";
 import { 
   Droplets, 
   Phone, 
