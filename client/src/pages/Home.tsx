@@ -39,6 +39,20 @@ export default function Home() {
             reviewCount: 2847
           }
         }}
+        faqSchema={[
+          {
+            question: "Wie schnell sind Sie in München vor Ort?",
+            answer: "Nach Eingang Ihrer Anfrage per E-Mail oder Formular melden wir uns zeitnah mit einer realistischen Einschätzung zur Verfügbarkeit und dem nächsten möglichen Termin in München und Umgebung."
+          },
+          {
+            question: "Arbeiten Sie mit Festpreis?",
+            answer: "Für viele Standard-Leistungen bieten wir klare Preisrahmen. Bei komplexeren Fällen erhalten Sie vorab eine transparente Einschätzung nach Sichtung Ihrer Angaben und Fotos."
+          },
+          {
+            question: "Welche Leistungen deckt AquaPro24 ab?",
+            answer: "Sanitär, Heizung, Badsanierung, Modernisierung (z. B. Wärmepumpe/Fußbodenheizung), Reparaturen sowie Koordination geprüfter Fachbetriebe in München."
+          }
+        ]}
       />
       <Header />
       <main id="main-content">

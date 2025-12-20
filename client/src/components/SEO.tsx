@@ -23,6 +23,11 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface AggregateRatingSchema {
   ratingValue: number;
   reviewCount: number;
@@ -51,6 +56,7 @@ interface SEOProps {
     reviews?: ReviewSchema[];
     aggregateRating?: AggregateRatingSchema;
   };
+  faqSchema?: FAQItem[];
 }
 
 const LOCAL_BUSINESS_SCHEMA = {
@@ -298,7 +304,8 @@ export default function SEO({
   structuredData,
   breadcrumbs,
   aiSummary,
-  serviceSchema
+  serviceSchema,
+  faqSchema
 }: SEOProps) {
   useEffect(() => {
     document.title = title;
@@ -480,6 +487,26 @@ export default function SEO({
       document.head.appendChild(breadcrumbScript);
     }
 
+    if (faqSchema && faqSchema.length > 0) {
+      const faqPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://aquapro24.de/#faq",
+        "mainEntity": faqSchema.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
+      };
+      const faqScript = document.createElement("script");
+      faqScript.type = "application/ld+json";
+      faqScript.textContent = JSON.stringify(faqPageSchema);
+      document.head.appendChild(faqScript);
+    }
+
     if (structuredData) {
       const customScript = document.createElement("script");
       customScript.type = "application/ld+json";
@@ -491,7 +518,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema]);
+  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema, faqSchema]);
 
   return null;
 }
