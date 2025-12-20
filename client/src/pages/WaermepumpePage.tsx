@@ -133,82 +133,43 @@ export default function WaermepumpePage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-12 lg:pt-8 pb-4 bg-gradient-to-br from-orange-500/10 to-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div className="space-y-6">
-                <Badge className="gap-1 bg-orange-500 text-white">
-                  <Leaf className="w-3 h-3" />
-                  Wärmepumpe München
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  Wärmepumpe München – bis 70% Förderung
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
-                  klimaneutral und sparen Sie dabei bis zu 50% Ihrer Heizkosten.
-                </p>
-                <p className="text-muted-foreground">
-                  Jetzt ist der beste Zeitpunkt: Bis zu 70% staatliche Förderung, fachgerechte 
-                  Installation durch unser Partnernetzwerk und ein verbindlicher Festpreis ohne 
-                  Überraschungen. Wir kümmern uns um alles - von der Beratung bis zur Förderantragstellung.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Kostenlose Beratung
-                    </a>
-                  </Button>
-                  <ServiceBooking 
-                    serviceType="waermepumpe" 
-                    buttonText="24h Buchungstermin"
-                    buttonSize="lg"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  {["Bis 70% Förderung", "Festpreis", "Zertifiziert"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle2 className="w-4 h-4 text-accent" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative space-y-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={heatPumpImage1} 
-                    alt="Wärmepumpe Installation" 
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-secondary text-secondary-foreground shadow-lg">
-                      <Zap className="w-3 h-3 mr-1" />
-                      Energiewende
-                    </Badge>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-2xl p-6 text-white">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                      <FileText className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-lg font-bold">BAFA & KfW Förderanträge inklusive!</h3>
-                  </div>
-                  <p className="text-white/90 text-sm mb-4">
-                    Wir stellen alle Förderanträge für Sie – BAFA, KfW und weitere Programme. Inklusive kompletter Dokumentation.
-                  </p>
-                  <ul className="space-y-2">
-                    {["Bis 70% Zuschuss sichern", "Komplette Antragstellung", "Gesamte Dokumentation", "Alle Formulare inklusive"].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heatPumpImage1})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
+              <Badge className="gap-1 bg-orange-500 text-white mb-4">
+                <Leaf className="w-3 h-3" />
+                Wärmepumpe München
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+                Wärmepumpe München – bis 70% Förderung
+              </h1>
+              <p className="text-lg text-white/90 mb-4">
+                <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
+                klimaneutral und sparen Sie dabei bis zu 50% Ihrer Heizkosten.
+              </p>
+              <p className="text-lg text-white/80 mb-6">
+                Jetzt ist der beste Zeitpunkt: Bis zu 70% staatliche Förderung, fachgerechte 
+                Installation durch unser Partnernetzwerk und ein verbindlicher Festpreis ohne 
+                Überraschungen.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Kostenlose Beratung
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
+                  <Link href="/termin">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Termin buchen
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>

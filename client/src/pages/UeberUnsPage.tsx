@@ -236,56 +236,44 @@ export default function UeberUnsPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section - H1 optimiert für SEO */}
-        <section className="relative pt-8 pb-4 lg:pt-10 lg:pb-6">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div className="space-y-6">
-                <Badge variant="secondary" className="gap-2">
-                  <BadgeCheck className="w-4 h-4" />
-                  Geprüfte Fachbetriebe München
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                  AquaPro24 München:<br />
-                  <span className="text-primary">Wir lösen Ihre Probleme</span>
-                </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
-                  das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
-                  Rechnung höher ausfiel als besprochen.
-                </p>
-                <p className="text-muted-foreground">
-                  Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
-                  <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen. Ob Rohrbruch in Schwabing, 
-                  Heizungsausfall in Bogenhausen oder Badsanierung in Sendling - wir sind für Sie da.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-2">
-                  <Button size="lg" asChild>
-                    <a href="tel:+4915212274043" data-testid="button-call-about">
-                      <Phone className="w-5 h-5 mr-2" />
-                      0152 12274043
-                    </a>
-                  </Button>
-                  <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>
-                    <Link href="/termin">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24h Terminbuchung
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={teamImage} 
-                    alt="AquaPro24 Team - Geprüfte Sanitär- und Heizungsfachleute München" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg hidden lg:block">
-                  <div className="text-3xl font-bold">2.800+</div>
-                  <div className="text-sm opacity-90">Zufriedene Kunden</div>
-                </div>
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${teamImage})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl">
+              <Badge variant="secondary" className="gap-2 mb-4">
+                <BadgeCheck className="w-4 h-4" />
+                Geprüfte Fachbetriebe München
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+                AquaPro24 München:<br />
+                <span className="text-primary">Wir lösen Ihre Probleme</span>
+              </h1>
+              <p className="text-lg text-white/90 leading-relaxed mb-4">
+                <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
+                das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
+                Rechnung höher ausfiel als besprochen.
+              </p>
+              <p className="text-lg text-white/80 mb-6">
+                Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
+                <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href="tel:+4915212274043" data-testid="button-call-about">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 12274043
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
+                  <Link href="/termin">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    24h Terminbuchung
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
