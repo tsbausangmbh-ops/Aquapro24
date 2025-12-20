@@ -1,0 +1,156 @@
+SEO-TEST (Google klassisch)
+✅ Positiv
+
+Domain thematisch klar (Sanierung Haus/Wohnung)
+
+Grundsätzlich indexierbar
+
+Relevantes Suchthema mit hoher Nachfrage
+
+❌ Kritische SEO-Mängel
+
+Meta-Titel & Descriptions nicht konsequent optimiert
+
+Keine klare Keyword-Trennung pro Seite
+
+Keyword-Kannibalisierung (Haus / Wohnung / Komplettsanierung vermischt)
+
+Zu wenig Texttiefe (teilweise < 900 Wörter)
+
+H1/H2/H3-Struktur nicht sauber
+
+Interne Verlinkung schwach
+
+🔧 SEO-Pflichtmaßnahmen
+
+1 Seite = 1 Hauptkeyword
+
+Texte auf 1.200–1.800 Wörter
+
+Klare Struktur:
+
+H1: Hauptkeyword
+
+H2: Ablauf, Kosten, Vorteile, Regionen
+
+H3: Objekttypen
+
+Jede Seite intern verlinken (Ablauf · Kosten · Kontakt)
+
+SEO-Status: ❌ nicht wettbewerbsfähig
+
+2️⃣ GEO-TEST (lokale Sichtbarkeit München)
+❌ Aktueller GEO-Status
+
+München zu schwach integriert
+
+Stadtteile kaum oder gar nicht vorhanden
+
+Kein Local / Geo-Schema
+
+Keine klare areaServed-Definition
+
+🔧 GEO-Pflichtmaßnahmen
+
+„München“ 6–10× pro Seite
+
+Stadtteile organisch im Text:
+
+Schwabing
+
+Bogenhausen
+
+Neuhausen
+
+Sendling
+
+Grünwald
+
+LocalBusiness / GeneralContractor Schema
+
+areaServed: München + 25 km
+
+GEO-Status: ❌ nicht lokal dominant
+
+3️⃣ KI-TEST (ChatGPT · Gemini · Perplexity)
+❌ KI-Erkennbarkeit
+
+Keine FAQ-Blöcke
+
+Keine klaren Antwort-Formate
+
+Keine Experten-Signale
+
+Texte nicht problem-/lösungsorientiert
+
+Keine zitierfähigen Aussagen
+
+➡️ KI kann die Seite nicht als Quelle verwenden
+
+🔧 KI-Pflichtmaßnahmen
+
+6–8 FAQs pro Hauptseite
+
+Klare Antworten auf:
+
+Was kostet eine Komplettsanierung?
+
+Wie läuft sie ab?
+
+Wie lange dauert sie?
+
+Festpreis oder Risiko?
+
+Abschnitt „Warum wir?“:
+
+Erfahrung
+
+Komplettleistung
+
+Planung + Ausführung
+
+Sicherheit
+
+KI-Status: ❌ praktisch unsichtbar
+
+4️⃣ CONVERSION-TEST
+❌ Schwächen
+
+Kein klarer Sanierungs-Ablauf
+
+Festpreis nicht stark genug erklärt
+
+CTA nicht führend
+
+Zu wenig Vertrauensanker
+
+🔧 Pflicht
+
+Ablauf in 5–7 Schritten
+
+Sicherheit & Planbarkeit betonen
+
+Klare Handlungsaufforderung
+
+5️⃣ GESAMTBEWERTUNG
+Bereich	Bewertung
+SEO	❌ schlecht
+GEO	❌ sehr schwach
+KI	❌ nicht nutzbar
+Conversion	⚠️ mittel
+
+➡️ Hohes Marktpotenzial – technisch & inhaltlich nicht ausgeschöpft
+
+6️⃣ EMPFOHLENE NÄCHSTE SCHRITTE (ohne Diskussion)
+
+Seitenstruktur neu aufsetzen
+
+Keyword-Trennung Haus / Wohnung / Kernsanierung
+
+Local- & Geo-Schema einbauen
+
+KI-optimierte FAQ-Blöcke
+
+Inhalte massiv vertiefen
+
+Interne Verlinkung + CTA
