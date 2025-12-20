@@ -111,23 +111,27 @@ export default function KontaktPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto">
-              <Badge variant="secondary" className="mb-4">
-                <Phone className="w-3 h-3 mr-1" />
+            <div className="max-w-3xl">
+              <Badge variant="secondary" className="mb-4 gap-1">
+                <Phone className="w-3 h-3" />
                 Kontakt
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
                 So erreichen Sie uns
               </h1>
-              <p className="text-lg text-white/80">
-                Wir sind für Sie da - telefonisch, per E-Mail oder persönlich vor Ort.
+              <p className="text-lg text-white/90 mb-4">
+                <strong>Fragen zu Ihrem Projekt?</strong> Wir sind für Sie da - telefonisch, 
+                per E-Mail oder persönlich vor Ort.
+              </p>
+              <p className="text-white/80">
+                Kostenlose Erstberatung, ehrliche Einschätzung. Wir helfen gerne.
               </p>
             </div>
           </div>
