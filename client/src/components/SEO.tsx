@@ -48,13 +48,18 @@ interface SEOProps {
 
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
-  "@id": "https://aquapro24.de/#organization",
-  "name": "AquaPro24 - Sanitär & Heizung München",
-  "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München"],
-  "legalName": "KSHW München - Mustafa Sakar",
-  "description": "AquaPro24 - Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen, Notdienst und Haustechnik. 2.847+ zufriedene Kunden, 4.9/5 Sterne Bewertung.",
+  "@type": ["HomeAndConstructionBusiness", "Plumber", "HVACBusiness", "LocalBusiness"],
+  "@id": "https://aquapro24.de/#localbusiness",
+  "name": "AquaPro24",
+  "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
+  "legalName": "AquaPro24 - Mustafa Sakar",
+  "description": "Sanitär, Heizung, Badsanierung und Modernisierung in München. 24/7 Notdienst, Festpreis-Optionen und Koordination geprüfter Fachbetriebe. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
+  "knowsAbout": [
+    "Sanitärinstallation", "Heizungsmodernisierung", "Badsanierung",
+    "Wärmepumpe", "Fußbodenheizung", "Rohrbruch", "Wasserschaden", "Notdienst",
+    "Rohrreinigung", "Armaturen", "Warmwasser", "Gasheizung", "Haustechnik"
+  ],
   "url": "https://aquapro24.de",
   "logo": {
     "@type": "ImageObject",
@@ -244,9 +249,10 @@ const LOCAL_BUSINESS_SCHEMA = {
     {
       "@type": "ContactPoint",
       "telephone": "+49-152-12274043",
-      "contactType": "customer service",
-      "availableLanguage": ["German", "English"],
-      "areaServed": "DE-BY",
+      "contactType": "Kundenservice",
+      "email": "info@aquapro24.de",
+      "availableLanguage": ["de", "en", "tr", "hr", "pl", "ru", "uk"],
+      "areaServed": "DE",
       "hoursAvailable": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -258,7 +264,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "ContactPoint",
       "telephone": "+49-152-12274043",
       "contactType": "emergency",
-      "availableLanguage": "German",
+      "availableLanguage": ["de", "en", "tr"],
       "areaServed": "DE-BY"
     }
   ],

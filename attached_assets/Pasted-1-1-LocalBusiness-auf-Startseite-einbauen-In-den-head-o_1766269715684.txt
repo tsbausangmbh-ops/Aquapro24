@@ -1,0 +1,71 @@
+1.1 LocalBusiness (auf Startseite einbauen)
+
+➡️ In den <head> oder via SEO-Plugin (AIOSEO/RankMath) als „Custom Schema“.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["HomeAndConstructionBusiness","Plumber","HVACBusiness"],
+  "@id": "https://aquapro24.de/#localbusiness",
+  "name": "AquaPro24",
+  "url": "https://aquapro24.de/",
+  "description": "Sanitär, Heizung, Badsanierung und Modernisierung in München. 24/7 Notdienst, Festpreis-Optionen und Koordination geprüfter Fachbetriebe.",
+  "areaServed": [
+    { "@type": "City", "name": "München" },
+    { "@type": "AdministrativeArea", "name": "Landkreis München" }
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.5820 },
+    "geoRadius": 25000
+  },
+  "knowsAbout": [
+    "Sanitärinstallation","Heizungsmodernisierung","Badsanierung",
+    "Wärmepumpe","Fußbodenheizung","Rohrbruch","Wasserschaden","Notdienst"
+  ],
+  "telephone": "+49 89 444438877",
+  "email": "info@aquapro24.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hardenbergstr. 4",
+    "postalCode": "80992",
+    "addressLocality": "München",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59",
+      "description": "Notdienst (24/7) – je nach Verfügbarkeit"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "Kundenservice",
+      "telephone": "+49 89 444438877",
+      "email": "info@aquapro24.de",
+      "availableLanguage": ["de","en","tr","hr","pl","ru","uk"],
+      "areaServed": "DE"
+    }
+  ],
+  "sameAs": [
+    "https://www.google.com/search?q=AquaPro24+M%C3%BCnchen"
+  ]
+}
+</script>
+
+
+Wichtig:
+
+Wenn du ein Google Business Profile hast: sameAs ergänzen (Maps-Link + ggf. Social).
+
+Wenn Notdienst wirklich 24/7 garantiert ist → Öffnungszeiten/Description anpassen.
