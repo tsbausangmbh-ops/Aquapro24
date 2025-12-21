@@ -36,31 +36,31 @@ export default function Hero() {
             Klempner München – Sanitär & Heizung Notdienst 24/7
           </h1>
           <div className="sr-only">
-            <span>Sanitär Notdienst München</span><span>·</span>
-            <span>Klempner Festpreis</span><span>·</span>
-            <span>Heizung reparieren</span><span>·</span>
-            <span>Rohrbruch beheben</span><span>·</span>
-            <span>Abfluss verstopft</span><span>·</span>
-            <span>Badsanierung komplett</span><span>·</span>
-            <span>Wärmepumpe Förderung</span><span>·</span>
-            <span>Wasserinstallation</span><span>·</span>
-            <span>24h Notdienst</span><span>·</span>
-            <span>Geprüfte Fachbetriebe</span><span>·</span>
-            <span>Alle Münchner Stadtteile</span><span>·</span>
-            <span>Viessmann Vaillant Grohe</span><span>·</span>
-            <span>Festpreisgarantie</span><span>·</span>
-            <span>2.500+ Kunden</span><span>·</span>
+            <span>Klempner München Notdienst 24h</span><span>·</span>
+            <span>Sanitär Notdienst ab 92€</span><span>·</span>
+            <span>Rohrreinigung München ab 81€</span><span>·</span>
+            <span>WC verstopft Soforthilfe</span><span>·</span>
+            <span>Rohrbruch reparieren München</span><span>·</span>
+            <span>Heizung reparieren ab 154€</span><span>·</span>
+            <span>Wasserhahn wechseln ab 80€</span><span>·</span>
+            <span>Durchlauferhitzer einbauen ab 600€</span><span>·</span>
+            <span>Badsanierung München ab 16.000€</span><span>·</span>
+            <span>Wärmepumpe 70% BAFA-Förderung</span><span>·</span>
+            <span>Grohe Hansgrohe Geberit Montage</span><span>·</span>
+            <span>Viessmann Vaillant Buderus Wolf</span><span>·</span>
+            <span>Installateur Schwabing Bogenhausen</span><span>·</span>
+            <span>2.800+ zufriedene Kunden</span><span>·</span>
             <span>Seit 2005 in München</span>
           </div>
           
           <p className="text-lg text-white/90 mb-4">
-            <strong>Stellen Sie sich vor:</strong> Ihr neues Bad ist fertig, 
-            die Rohre sind dicht, alles funktioniert einwandfrei.
+            <strong>Rohrbruch, WC verstopft, Heizung ausgefallen?</strong> Wir sind in 
+            45-60 Minuten bei Ihnen in München. Festpreis vor Arbeitsbeginn.
           </p>
           
           <p className="text-white/80 mb-6">
-            <strong>Über 2.500 Münchner Familien</strong> vertrauen bereits unserem Partnernetzwerk – 
-            mit Festpreis-Garantie, ohne versteckte Kosten. Wenn Sie uns anrufen, kümmern wir uns sofort um Ihr Anliegen.
+            <strong>Über 2.800 Münchner Familien</strong> vertrauen unserem Partnernetzwerk. 
+            Sanitär ab 92€, Rohrreinigung ab 81€, Heizungsreparatur ab 154€. Alle Marken: Grohe, Viessmann, Vaillant.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -95,7 +95,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2 text-white/80">
               <CheckCircle2 className="w-4 h-4 text-accent" />
-              <span data-testid="text-customers-count">2.500+ zufriedene Kunden</span>
+              <span data-testid="text-customers-count">2.800+ zufriedene Kunden</span>
             </div>
           </div>
         </div>
