@@ -180,11 +180,10 @@ export default function WaermepumpePage() {
                 Installation durch unser Partnernetzwerk und ein verbindlicher Festpreis.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Kostenlose Beratung
-                  </a>
+                <Button size="lg" className="bg-green-600/90 border-green-700/50 hover:bg-green-600" asChild>
+                  <Link href="/foerderung" data-testid="button-foerderung-waermepumpe">
+                    Förderung Info
+                  </Link>
                 </Button>
                 <ServiceBooking 
                   serviceType="waermepumpe"
