@@ -4,7 +4,6 @@ import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import ColorfulFAQ from "@/components/ColorfulFAQ";
-import BackButton from "@/components/BackButton";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { heizungStories } from "@/components/CustomerStories";
@@ -132,7 +131,6 @@ export default function HeizungPage() {
         }}
       />
       <Header />
-      <BackButton />
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 

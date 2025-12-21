@@ -34,7 +34,6 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
-import BackButton from "@/components/BackButton";
 
 export default function FoerderrechnerPage() {
   const [selectedMassnahmen, setSelectedMassnahmen] = useState<string[]>(["waermepumpe"]);
@@ -240,7 +239,6 @@ export default function FoerderrechnerPage() {
         ]}
       />
       <Header />
-      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">

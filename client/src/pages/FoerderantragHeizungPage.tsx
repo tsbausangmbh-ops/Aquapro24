@@ -24,7 +24,6 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
-import BackButton from "@/components/BackButton";
 
 export default function FoerderantragHeizungPage() {
   const heizungsarten = [
@@ -144,7 +143,6 @@ export default function FoerderantragHeizungPage() {
         ]}
       />
       <Header />
-      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">

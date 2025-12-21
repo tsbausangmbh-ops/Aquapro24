@@ -24,7 +24,6 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
-import BackButton from "@/components/BackButton";
 
 export default function FoerderungPage() {
   const foerderungen = [
@@ -171,7 +170,6 @@ export default function FoerderungPage() {
         ]}
       />
       <Header />
-      <BackButton />
       
       <main id="main-content" className="flex-1">
         {/* Hero Section */}

@@ -23,7 +23,6 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
-import BackButton from "@/components/BackButton";
 
 export default function FussbodenheizungMuenchenPage() {
   const vorteile = [
@@ -102,7 +101,6 @@ export default function FussbodenheizungMuenchenPage() {
         ]}
       />
       <Header />
-      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">

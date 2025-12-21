@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
-import BackButton from "@/components/BackButton";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -112,7 +111,6 @@ export default function HeizungNotdienst24Page() {
         ]}
       />
       <Header />
-      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
