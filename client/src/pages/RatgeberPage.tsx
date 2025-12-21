@@ -267,7 +267,7 @@ export default function RatgeberPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 Ratgeber München – Expertentipps Sanitär & Heizung
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Wasserschaden was tun</span><span>·</span>
                 <span>Rohrbruch Erste Hilfe</span><span>·</span>
                 <span>Heizung entlüften</span><span>·</span>

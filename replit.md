@@ -69,7 +69,7 @@ All pages now feature:
 ### Total SEO Coverage
 - 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
 - 500+ longtail keywords across all pages (H1s, keyword batches)
-- Keyword display: white text 70% opacity, separated by dots (·)
+- Keyword display: Unsichtbar für Besucher (sr-only), sichtbar für Suchmaschinen
 - Complete Schema.org LocalBusiness markup with 25 Munich districts
 
 ## System Architecture

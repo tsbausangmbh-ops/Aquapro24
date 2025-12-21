@@ -163,7 +163,7 @@ export default function RohrreinigungPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Rohrreinigung München – Abfluss verstopft Notdienst 24/7
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Abfluss verstopft beseitigen</span><span>·</span>
                 <span>Rohr verstopft frei machen</span><span>·</span>
                 <span>WC verstopft entstopfen</span><span>·</span>

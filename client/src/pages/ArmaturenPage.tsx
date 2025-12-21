@@ -154,7 +154,7 @@ export default function ArmaturenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Wasserhahn wechseln München – Armaturen Montage & Reparatur
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Wasserhahn austauschen</span><span>·</span>
                 <span>Mischbatterie wechseln</span><span>·</span>
                 <span>Armatur montieren</span><span>·</span>

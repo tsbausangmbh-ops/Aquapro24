@@ -121,7 +121,7 @@ export default function BadsanierungMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Badsanierung München – Komplettumbau stressfrei & modern
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Bad komplett sanieren</span><span>·</span>
                 <span>Badezimmer renovieren</span><span>·</span>
                 <span>Bad modernisieren</span><span>·</span>

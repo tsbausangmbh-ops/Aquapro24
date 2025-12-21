@@ -154,7 +154,7 @@ export default function WarmwasserPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Durchlauferhitzer München – Boiler Reparatur & Installation
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Durchlauferhitzer installieren</span><span>·</span>
                 <span>Durchlauferhitzer austauschen</span><span>·</span>
                 <span>Durchlauferhitzer reparieren</span><span>·</span>

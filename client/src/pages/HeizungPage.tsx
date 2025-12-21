@@ -149,7 +149,7 @@ export default function HeizungPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Heizung München – Notdienst & Wartung 24/7
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Heizung reparieren</span><span>·</span>
                 <span>Heizung warten</span><span>·</span>
                 <span>Heizung austauschen</span><span>·</span>

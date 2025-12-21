@@ -35,7 +35,7 @@ export default function Hero() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight text-white mb-4">
             Klempner München – Sanitär & Heizung Notdienst 24/7
           </h1>
-          <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+          <div className="sr-only">
             <span>Sanitär Notdienst München</span><span>·</span>
             <span>Klempner Festpreis</span><span>·</span>
             <span>Heizung reparieren</span><span>·</span>

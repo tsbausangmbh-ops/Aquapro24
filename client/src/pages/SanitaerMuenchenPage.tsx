@@ -121,7 +121,7 @@ export default function SanitaerMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Sanitär München – Klempner Installation & Reparatur Festpreis
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Sanitärinstallateur München</span><span>·</span>
                 <span>Klempner Festpreis</span><span>·</span>
                 <span>Wasserleitung verlegen</span><span>·</span>

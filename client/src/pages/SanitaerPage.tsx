@@ -162,7 +162,7 @@ export default function SanitaerPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Klempner München – Sanitär Notdienst 24/7
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Rohrbruch reparieren</span><span>·</span>
                 <span>Wasserleitung verlegen</span><span>·</span>
                 <span>Abfluss verstopft beseitigen</span><span>·</span>

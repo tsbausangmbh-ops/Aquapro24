@@ -150,7 +150,7 @@ export default function WaermepumpePage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Wärmepumpe München – bis 70% BAFA Förderung 2025
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Wärmepumpe installieren</span><span>·</span>
                 <span>Wärmepumpe einbauen</span><span>·</span>
                 <span>Wärmepumpe nachrüsten</span><span>·</span>

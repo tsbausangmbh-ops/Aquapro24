@@ -387,7 +387,7 @@ export default function TerminPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 Termin online buchen München – Handwerker Wunschtermin
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Online Terminbuchung</span><span>·</span>
                 <span>Klempner Termin buchen</span><span>·</span>
                 <span>Heizung Termin online</span><span>·</span>

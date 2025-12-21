@@ -148,7 +148,7 @@ export default function HaustechnikPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Haustechnik München – Gas, Wasser, Lüftung komplett
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Gasleitung verlegen</span><span>·</span>
                 <span>Gasanschluss installieren</span><span>·</span>
                 <span>Gasherd anschließen</span><span>·</span>

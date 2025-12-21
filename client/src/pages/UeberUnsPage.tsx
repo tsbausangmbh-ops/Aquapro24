@@ -251,7 +251,7 @@ export default function UeberUnsPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 AquaPro24 München – Ihr Partnernetzwerk seit 2005
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+              <div className="sr-only">
                 <span>Partnernetzwerk Sanitär</span><span>·</span>
                 <span>geprüfte Fachbetriebe</span><span>·</span>
                 <span>Festpreisgarantie</span><span>·</span>
