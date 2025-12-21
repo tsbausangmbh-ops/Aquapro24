@@ -4,6 +4,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { HelpCircle, Phone, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export interface FAQItem {
   question: string;
@@ -31,32 +35,66 @@ export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQP
   };
 
   return (
-    <section className="py-6 bg-muted/30" data-testid="section-faq">
+    <section className="py-8 lg:py-12" data-testid="section-faq">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-5">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">{title}</h2>
+        <div className="text-center mb-8">
+          <Badge variant="outline" className="mb-4 gap-1">
+            <HelpCircle className="w-3 h-3" />
+            FAQ
+          </Badge>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">{title}</h2>
           {subtitle && (
-            <p className="text-muted-foreground">{subtitle}</p>
+            <p className="text-muted-foreground text-lg">{subtitle}</p>
           )}
         </div>
         
-        <Accordion type="single" collapsible className="space-y-3">
-          {items.map((item, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="bg-background rounded-lg border px-4"
-              data-testid={`faq-item-${index}`}
-            >
-              <AccordionTrigger className="text-left font-medium py-4">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm">
+          <Accordion type="single" collapsible className="divide-y divide-border">
+            {items.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="border-0"
+                data-testid={`faq-item-${index}`}
+              >
+                <AccordionTrigger className="text-left font-semibold py-5 px-6 hover:bg-muted/50 transition-colors [&[data-state=open]]:bg-muted/30">
+                  <div className="flex items-center gap-3">
+                    <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-bold shrink-0">
+                      {index + 1}
+                    </span>
+                    <span className="text-base">{item.question}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-5 pt-0">
+                  <div className="pl-10 text-muted-foreground leading-relaxed">
+                    {item.answer}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        <div className="mt-8 bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10 rounded-xl p-6 text-center">
+          <p className="font-semibold text-lg mb-2">Ihre Frage nicht dabei?</p>
+          <p className="text-muted-foreground mb-4">
+            Rufen Sie uns an oder schreiben Sie uns – wir beraten Sie kostenlos.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild>
+              <a href="tel:+4915212274043" data-testid="button-faq-call">
+                <Phone className="w-4 h-4 mr-2" />
+                0152 12274043
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/kontakt" data-testid="button-faq-contact">
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Nachricht senden
+              </Link>
+            </Button>
+          </div>
+        </div>
       </div>
       
       <script
