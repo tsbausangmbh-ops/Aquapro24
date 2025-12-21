@@ -4,6 +4,7 @@ import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import ColorfulFAQ from "@/components/ColorfulFAQ";
+import BackButton from "@/components/BackButton";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { heizungStories } from "@/components/CustomerStories";
@@ -328,6 +329,7 @@ export default function HeizungPage() {
           </div>
         </section>
 
+        <BackButton />
         <RelatedServices currentService="heizung" />
       </main>
       <Footer />

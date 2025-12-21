@@ -4,6 +4,7 @@ import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import ColorfulFAQ from "@/components/ColorfulFAQ";
+import BackButton from "@/components/BackButton";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
@@ -383,6 +384,7 @@ export default function SanitaerPage() {
           </div>
         </section>
 
+        <BackButton />
         <RelatedServices currentService="sanitaer" />
       </main>
 

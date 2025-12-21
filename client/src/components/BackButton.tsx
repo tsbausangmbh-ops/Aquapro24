@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function BackButton() {
+export default function BackButton() {
   const handleBack = () => {
     if (window.history.length > 1) {
       window.history.back();
