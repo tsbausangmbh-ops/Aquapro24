@@ -13,39 +13,39 @@ import {
 const problems = [
   {
     icon: Droplets,
-    title: "Veraltetes Bad ohne Komfort",
-    description: "Alte Fliesen, undichte Armaturen, kein Stauraum – Ihr Bad ist in die Jahre gekommen.",
-    emotion: "Wir planen mit Ihnen Ihr Traumbad und setzen es termingerecht um.",
+    title: "Rohrbruch München – Wasser läuft!",
+    description: "Wasserrohr geplatzt, Keller überflutet, Wasserschaden droht. Sie brauchen sofort Hilfe.",
+    emotion: "Wir sind in 45-60 Min. bei Ihnen. Leck abdichten ab 92€, Rohrbruch reparieren ab 154€.",
   },
   {
     icon: Snowflake,
-    title: "Tropfende Wasserhähne & Lecks",
-    description: "Ständiges Tropfen, hohe Wasserrechnung, Feuchtigkeit an den Wänden.",
-    emotion: "Wir finden das Problem und lösen es dauerhaft – mit Garantie.",
+    title: "Heizung ausgefallen – kein Warmwasser",
+    description: "Heizkörper kalt, Therme macht Geräusche, kein warmes Wasser. Im Winter ein Notfall.",
+    emotion: "Viessmann, Vaillant, Buderus, Wolf – alle Marken. Heizungsreparatur ab 154€/Std.",
   },
   {
     icon: AlertTriangle,
-    title: "Angst vor Chaos bei der Sanierung",
-    description: "Wochenlange Baustelle, Dreck überall, unzuverlässige Handwerker.",
-    emotion: "Bei uns gibt es einen festen Zeitplan, saubere Arbeit und klare Kommunikation.",
+    title: "WC verstopft – Abfluss läuft nicht ab",
+    description: "Toilette verstopft, Waschbecken steht, Dusche läuft nicht ab. Unangenehm und dringend.",
+    emotion: "Rohrreinigung München ab 81€. Spirale, Hochdruckspülung, Kamerainspektion.",
   },
 ];
 
 const solutions = [
   {
     icon: Droplets,
-    title: "Modernes Bad nach Ihren Wünschen",
-    description: "Komplette Planung und Umsetzung – barrierefrei, modern oder luxuriös.",
+    title: "Badsanierung München ab 16.000€",
+    description: "Komplettumbau in 2-4 Wochen. Villeroy & Boch, Duravit, Grohe. 3D-Planung gratis, 5 Jahre Garantie.",
   },
   {
     icon: Wrench,
-    title: "Professionelle Wasserinstallation",
-    description: "Fachgerechte Arbeit mit hochwertigen Materialien und langer Garantie.",
+    title: "Wärmepumpe bis 70% BAFA-Förderung",
+    description: "Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm. Wir beantragen die Förderung für Sie.",
   },
   {
     icon: Shield,
-    title: "Festpreis vor Arbeitsbeginn",
-    description: "Sie wissen genau, was es kostet – ohne versteckte Zusatzkosten.",
+    title: "Festpreis München – keine Überraschungen",
+    description: "Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. Preis vor Arbeitsbeginn, 2 Jahre Garantie.",
   },
 ];
 
@@ -55,15 +55,14 @@ export default function ProblemSolution() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Sanitär & Bad – professionell und zuverlässig
+            Klempner München: Notdienst Sanitär & Heizung 24/7
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">
-            Von der Planung bis zur Fertigstellung – alles aus einer Hand
+            Rohrbruch, WC verstopft, Heizung defekt? 45-60 Minuten vor Ort.
           </h3>
           <p className="text-lg text-muted-foreground">
-            Eine Badsanierung oder Wasserinstallation ist eine große Entscheidung. 
-            <span className="text-foreground font-medium"> Mit uns wird es einfach</span> – 
-            professionelle Beratung, saubere Arbeit, termingerechte Fertigstellung.
+            <span className="text-foreground font-medium">2.800+ Münchner Kunden</span> vertrauen AquaPro24. 
+            Festpreis vor Arbeitsbeginn, alle Marken: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus.
           </p>
         </div>
         

@@ -10,17 +10,17 @@ export default function CTABanner() {
       
       <div className="relative max-w-4xl mx-auto px-4 lg:px-8 text-center text-secondary-foreground">
         <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-4">
-          Bereit für Ihr neues Bad? Lassen Sie uns starten!
+          Klempner München: Jetzt Festpreis-Angebot sichern!
         </h2>
         <h3 className="text-xl lg:text-2xl text-white/90 mb-2">
-          Kostenlose Beratung und unverbindliches Angebot
+          Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
         </h3>
         <p className="text-lg text-white/70 mb-4">
-          <span className="text-white font-medium">Stellen Sie sich vor:</span> In wenigen Wochen genießen Sie Ihr neues Traumbad – 
-          modern, funktional und genau nach Ihren Wünschen gestaltet.
+          <span className="text-white font-medium">Rohrbruch, WC verstopft, Heizung defekt?</span> 24/7 Notdienst München – 
+          45-60 Minuten vor Ort. Festpreis vor Arbeitsbeginn, 2 Jahre Garantie.
         </p>
         <p className="text-base text-white/60 mb-4">
-          Sanitär & Wasserinstallation für München, Sendling, Schwabing, Bogenhausen, Pasing & Umland.
+          Grohe, Hansgrohe, Viessmann, Vaillant, Buderus – alle Marken. Schwabing, Bogenhausen, Sendling, Pasing & Umland.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-5">

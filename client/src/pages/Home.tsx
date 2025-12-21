@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär Notdienst München | Klempner Festpreis | Heizung Reparatur"
-        description="Rohrbruch, verstopfter Abfluss oder Heizungsausfall? Sanitär Notdienst München mit Klempner Festpreis - Heizung Reparatur durch geprüfte Fachbetriebe. 24/7 erreichbar."
+        title="Klempner München Notdienst 24/7 | Sanitär ab 92€ | Heizung ab 154€"
+        description="Rohrbruch, WC verstopft, Heizung ausgefallen? Klempner München 45-60 Min. vor Ort. Festpreis: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. 2.800+ Kunden seit 2005."
         canonical="https://aquapro24.de"
-        keywords="Sanitär München, Klempner München Notdienst, Heizung reparieren München, Installateur München, Wasserinstallation Schwabing, Rohrreinigung Bogenhausen, Badsanierung Sendling, Wärmepumpe München Förderung, Sanitär Pasing, Klempner Maxvorstadt, Heizungswartung Haidhausen, Sanitärnotdienst Neuhausen, Installateur Trudering, Klempner Laim, Heizung Giesing, Sanitär Moosach, Installateur Milbertshofen"
-        aiSummary="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen. Seit 2005 in München, 2.847+ zufriedene Kunden, 4.9/5 Sterne. 24/7 Notdienst, Festpreisgarantie, alle 25 Münchner Stadtteile. Sanitär ab 92€, Badsanierung ab 9.200€, Wärmepumpe mit bis 70% Förderung. Kontakt: 0152 12274043, info@aquapro24.de"
+        keywords="Klempner München Notdienst, Sanitär ab 92€, Rohrreinigung ab 81€, Heizung reparieren ab 154€, Rohrbruch München, WC verstopft Soforthilfe, Wasserhahn wechseln ab 80€, Durchlauferhitzer ab 600€, Badsanierung München ab 16.000€, Wärmepumpe 70% BAFA, Grohe Hansgrohe Montage, Viessmann Vaillant Buderus Wolf, Installateur Schwabing Bogenhausen, 24/7 Notdienst 365 Tage"
+        aiSummary="AquaPro24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€, Wasserhahn ab 80€, Durchlauferhitzer ab 600€, Badsanierung ab 16.000€. Marken: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus. 2.800+ Kunden seit 2005, 4.9/5 Sterne, 2-5 Jahre Garantie. Alle Stadtteile: Schwabing, Bogenhausen, Sendling, Pasing. Tel: 0152 12274043"
         serviceSchema={{
           name: "Sanitär & Heizung München - AquaPro24",
           description: "Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen in München seit 2005. Über 2.847 zufriedene Kunden, Festpreisgarantie, 24/7 Notdienst.",
@@ -66,28 +66,28 @@ export default function Home() {
         <Pricing />
         <Testimonials />
         <FAQ 
-          title="Häufige Fragen zu AquaPro24 München"
-          subtitle="Alles Wichtige auf einen Blick"
+          title="Klempner München: Häufige Fragen zu Preisen & Leistungen"
+          subtitle="Festpreise, Notdienst, Garantie – alles Wichtige auf einen Blick"
           items={[
             {
-              question: "Was genau macht AquaPro24 in München?",
-              answer: "AquaPro24 koordiniert Sanitär-, Heizungs- und Modernisierungsarbeiten in München – von Reparaturen bis zur Komplettsanierung – mit geprüften Fachbetrieben und klaren Abläufen."
+              question: "Was kostet ein Klempner in München?",
+              answer: "Klempner München Festpreise: Sanitär ab 92€/Std., Rohrreinigung ab 81€, Heizungsreparatur ab 154€/Std., Wasserhahn wechseln ab 80€, Durchlauferhitzer einbauen ab 600€. Preis vor Arbeitsbeginn, keine versteckten Kosten."
             },
             {
-              question: "Arbeiten Sie direkt oder mit Partnerbetrieben?",
-              answer: "Je nach Projekt arbeiten wir mit einem festen Netzwerk geprüfter Meisterbetriebe. So stellen wir Qualität, Verfügbarkeit und saubere Umsetzung sicher."
+              question: "Wie schnell ist der Notdienst in München vor Ort?",
+              answer: "24/7 Notdienst München: 45-60 Minuten vor Ort bei Rohrbruch, WC verstopft, Heizung ausgefallen. Einsatzgebiet: Schwabing, Bogenhausen, Sendling, Pasing, alle Stadtteile. Tel: 0152 12274043."
             },
             {
-              question: "Wie läuft eine Anfrage ab?",
-              answer: "Sie senden uns Ihre Anfrage per E-Mail oder Formular, idealerweise mit Fotos und Eckdaten. Wir melden uns zeitnah mit einer Einschätzung und dem nächsten Schritt."
+              question: "Welche Marken montieren Sie?",
+              answer: "Wir arbeiten mit allen Marken: Grohe, Hansgrohe, Geberit, Blanco (Armaturen), Viessmann, Vaillant, Buderus, Wolf (Heizung), Villeroy & Boch, Duravit (Sanitärkeramik), Stiebel Eltron, AEG (Durchlauferhitzer)."
             },
             {
-              question: "Sind auch kurzfristige Termine möglich?",
-              answer: "Ja, je nach Auslastung und Art der Arbeit sind kurzfristige Termine – insbesondere bei Reparaturen oder Notfällen – möglich."
+              question: "Gibt es Garantie auf die Arbeiten?",
+              answer: "Ja, 2-5 Jahre Garantie auf alle Arbeiten. Nur Markenersatzteile, fachgerechte Installation nach DIN-Normen. Bei Problemen kommen wir kostenlos zurück."
             },
             {
-              question: "In welchen Stadtteilen von München sind Sie tätig?",
-              answer: "Wir arbeiten im gesamten Stadtgebiet München sowie im Umkreis (z. B. Schwabing, Bogenhausen, Giesing, Sendling, Pasing, Laim, Moosach)."
+              question: "Bieten Sie BAFA-Förderung für Wärmepumpen?",
+              answer: "Ja, bis 70% BAFA-Förderung für Wärmepumpen 2025. Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm. Wir übernehmen den kompletten Förderantrag für Sie."
             }
           ]}
         />

@@ -7,27 +7,27 @@ const journeySteps = [
   {
     step: 1,
     icon: Phone,
-    title: "Kontakt aufnehmen",
-    subtitle: "Kostenlos & unverbindlich",
-    description: "Rufen Sie an oder schreiben Sie uns. Wir hören zu, verstehen Ihr Problem und vereinbaren einen Termin - oft noch am selben Tag.",
+    title: "Anrufen: 0152 12274043",
+    subtitle: "24/7 erreichbar",
+    description: "Rohrbruch, WC verstopft, Heizung aus? Rufen Sie an – wir sind in 45-60 Minuten bei Ihnen in München. Notdienst 365 Tage.",
     time: "5 Minuten",
     color: "bg-secondary"
   },
   {
     step: 2,
     icon: FileText,
-    title: "Diagnose & Festpreis",
-    subtitle: "Transparent & fair",
-    description: "Unser Techniker prüft vor Ort, erklärt das Problem verständlich und nennt Ihnen den verbindlichen Festpreis - ohne versteckte Kosten.",
+    title: "Festpreis vor Ort",
+    subtitle: "Keine Überraschungen",
+    description: "Klempner prüft das Problem, erklärt die Lösung und nennt den Festpreis. Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€.",
     time: "30 Minuten",
     color: "bg-primary"
   },
   {
     step: 3,
     icon: Wrench,
-    title: "Lösung & Garantie",
-    subtitle: "Schnell & zuverlässig",
-    description: "Nach Ihrer Freigabe lösen wir das Problem fachgerecht. Sie erhalten Rechnung und Garantie - fertig. So einfach kann es sein.",
+    title: "Reparatur & Garantie",
+    subtitle: "2-5 Jahre Garantie",
+    description: "Nach Ihrer Freigabe: Fachgerechte Reparatur mit Markenteilen (Grohe, Viessmann). Rechnung, Garantieschein – fertig.",
     time: "Je nach Auftrag",
     color: "bg-accent"
   }
@@ -43,11 +43,11 @@ export default function FunnelJourney() {
             Ihr Weg zur Lösung
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            In 3 Schritten zum gelösten Problem
+            Klempner München: So läuft Ihr Auftrag ab
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Kein Stress, keine Überraschungen. Wir führen Sie transparent durch jeden Schritt - 
-            von Ihrem ersten Anruf bis zur fertigen Lösung.
+            Festpreis vor Arbeitsbeginn, keine versteckten Kosten. Von Ihrem Anruf bis zur fertigen Reparatur – 
+            transparent und zuverlässig seit 2005.
           </p>
         </div>
 

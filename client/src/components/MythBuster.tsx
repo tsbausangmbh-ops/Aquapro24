@@ -3,18 +3,18 @@ import { Badge } from "@/components/ui/badge";
 
 const myths = [
   {
-    myth: "Handwerker sind teuer und intransparent",
-    truth: "Wir nennen Ihnen VORHER den Festpreis - ohne Wenn und Aber. Keine versteckten Kosten, keine Nachforderungen.",
+    myth: "Klempner in München sind teuer",
+    truth: "Festpreis vor Arbeitsbeginn: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. Keine versteckten Kosten, keine Nachforderungen.",
     icon: BadgeEuro
   },
   {
-    myth: "Termine dauern ewig und werden nicht eingehalten",
-    truth: "Bei uns bekommen Sie oft noch am selben Tag einen Termin. Und wir rufen an, wenn wir uns verspäten.",
+    myth: "Im Notfall dauert es ewig bis jemand kommt",
+    truth: "24/7 Notdienst München: 45-60 Minuten vor Ort. Rohrbruch, WC verstopft, Heizung ausgefallen – wir kommen sofort.",
     icon: Clock
   },
   {
-    myth: "Man weiß nie, ob die Arbeit gut gemacht wurde",
-    truth: "Wir erklären Ihnen genau, was wir tun. Dazu 2 Jahre Garantie auf alle Arbeiten - bei Problemen kommen wir zurück.",
+    myth: "Billige Ersatzteile ohne Garantie",
+    truth: "Nur Markenqualität: Grohe, Hansgrohe, Viessmann, Vaillant. 2-5 Jahre Garantie auf alle Arbeiten. Bei Problemen kommen wir zurück.",
     icon: Shield
   }
 ];
@@ -71,10 +71,10 @@ export default function MythBuster() {
 
         <div className="mt-10 text-center">
           <p className="text-lg font-medium mb-2">
-            Über 2.847 Kunden in München vertrauen uns bereits
+            Über 2.800 Kunden in München vertrauen AquaPro24 seit 2005
           </p>
           <p className="text-muted-foreground">
-            Lesen Sie echte Bewertungen oder rufen Sie uns einfach an - wir überzeugen Sie gerne persönlich.
+            Schwabing, Bogenhausen, Sendling, Pasing, Maxvorstadt, Haidhausen – wir arbeiten in allen Münchner Stadtteilen.
           </p>
         </div>
       </div>
