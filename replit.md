@@ -45,6 +45,9 @@ All pages now feature:
 4. Fußbodenheizung: "Fußbodenheizung München – Installation & Reparatur Profi"
 5. Wärmepumpe München: "Wärmepumpe München – bis 70% Förderung sichern"
 6. Badsanierung: "Badsanierung München – Komplettumbau aus einer Hand"
+7. Förderung: "Förderung Heizung München: BAFA, KfW & Steuerbonus 2025"
+8. Sanitär Notdienst 24h: "Sanitär Notdienst 24h München: Klempner Soforthilfe rund um die Uhr"
+9. Heizung Notdienst 24h: "Heizung Notdienst 24h München: Heizungsreparatur Soforthilfe rund um die Uhr"
 
 #### Utility Pages (20 Keywords each):
 1. Über uns: "AquaPro24 München – Ihr Partnernetzwerk seit 2005"

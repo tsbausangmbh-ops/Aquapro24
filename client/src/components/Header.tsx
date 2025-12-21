@@ -9,6 +9,7 @@ import logoImage from "@assets/Logo_Transparent_1765467177950.png";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [notdienstOpen, setNotdienstOpen] = useState(false);
   const [location] = useLocation();
 
   const servicePages = [
@@ -123,6 +124,43 @@ export default function Header() {
                   </div>
                 )}
               </div>
+              <div className="relative">
+                <button
+                  onClick={() => setNotdienstOpen(!notdienstOpen)}
+                  aria-expanded={notdienstOpen}
+                  aria-haspopup="true"
+                  className="flex items-center gap-1 text-sm font-medium text-red-600 hover:text-red-700 transition-colors"
+                  data-testid="nav-notdienst-24"
+                >
+                  Notdienst 24
+                  <ChevronDown className={`w-4 h-4 transition-transform ${notdienstOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                </button>
+                {notdienstOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                    role="menu"
+                    aria-label="Notdienst 24 Untermenü"
+                    onMouseLeave={() => setNotdienstOpen(false)}
+                  >
+                    <Link
+                      href="/sanitaer-notdienst-24"
+                      onClick={() => setNotdienstOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      data-testid="nav-sanitaer-notdienst-24"
+                    >
+                      Sanitär Notdienst 24h
+                    </Link>
+                    <Link
+                      href="/heizung-notdienst-24"
+                      onClick={() => setNotdienstOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      data-testid="nav-heizung-notdienst-24"
+                    >
+                      Heizung Notdienst 24h
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link 
                 href="/faq"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -162,13 +200,12 @@ export default function Header() {
               </Button>
               <Button 
                 asChild 
-                className="bg-red-600 text-white border-red-700"
-                data-testid="button-call-header"
+                className="bg-green-600/80 text-white border-green-700/50 hover:bg-green-600"
+                data-testid="button-foerderung-header"
               >
-                <a href="tel:+4915212274043">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Anrufen
-                </a>
+                <Link href="/foerderung">
+                  Förderung
+                </Link>
               </Button>
             </div>
 
@@ -213,6 +250,26 @@ export default function Header() {
                 </Link>
               ))}
               <hr className="my-2 border-border" />
+              <div className="px-4 py-2 text-xs font-semibold text-red-600 uppercase tracking-wider">
+                Notdienst 24
+              </div>
+              <Link
+                href="/sanitaer-notdienst-24"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-6 py-2 text-sm font-medium text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-950/20 rounded-md transition-colors"
+                data-testid="nav-mobile-sanitaer-notdienst-24"
+              >
+                Sanitär Notdienst 24h
+              </Link>
+              <Link
+                href="/heizung-notdienst-24"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-6 py-2 text-sm font-medium text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-950/20 rounded-md transition-colors"
+                data-testid="nav-mobile-heizung-notdienst-24"
+              >
+                Heizung Notdienst 24h
+              </Link>
+              <hr className="my-2 border-border" />
               <Link
                 href="/faq"
                 onClick={() => setMobileMenuOpen(false)}
@@ -252,11 +309,10 @@ export default function Header() {
                   24h Terminbuchung
                 </Link>
               </Button>
-              <Button className="mt-2 bg-red-600 text-white border-red-700" asChild data-testid="button-call-mobile">
-                <a href="tel:+4915212274043">
-                  <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
-                </a>
+              <Button className="mt-2 bg-green-600/80 text-white border-green-700/50" asChild data-testid="button-foerderung-mobile">
+                <Link href="/foerderung" onClick={() => setMobileMenuOpen(false)}>
+                  Förderung
+                </Link>
               </Button>
             </nav>
           </div>
