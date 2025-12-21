@@ -35,6 +35,8 @@ const FussbodenheizungMuenchenPage = lazy(() => import("@/pages/Fussbodenheizung
 const NotdienstMuenchenPage = lazy(() => import("@/pages/NotdienstMuenchenPage"));
 const StadtteilPage = lazy(() => import("@/pages/StadtteilPage"));
 const FoerderungPage = lazy(() => import("@/pages/FoerderungPage"));
+const FoerderantragPage = lazy(() => import("@/pages/FoerderantragPage"));
+const FoerderrechnerPage = lazy(() => import("@/pages/FoerderrechnerPage"));
 const SanitaerNotdienst24Page = lazy(() => import("@/pages/SanitaerNotdienst24Page"));
 const HeizungNotdienst24Page = lazy(() => import("@/pages/HeizungNotdienst24Page"));
 
@@ -79,6 +81,8 @@ function Router() {
         <Route path="/fussbodenheizung-muenchen" component={FussbodenheizungMuenchenPage} />
         <Route path="/notdienst-muenchen" component={NotdienstMuenchenPage} />
         <Route path="/foerderung" component={FoerderungPage} />
+        <Route path="/foerderantrag" component={FoerderantragPage} />
+        <Route path="/foerderrechner" component={FoerderrechnerPage} />
         <Route path="/sanitaer-notdienst-24" component={SanitaerNotdienst24Page} />
         <Route path="/heizung-notdienst-24" component={HeizungNotdienst24Page} />
         <Route path="/schwabing">{() => <StadtteilPage stadtteil="schwabing" />}</Route>

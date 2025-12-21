@@ -10,6 +10,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [notdienstOpen, setNotdienstOpen] = useState(false);
+  const [foerderungOpen, setFoerderungOpen] = useState(false);
   const [location] = useLocation();
 
   const servicePages = [
@@ -198,15 +199,51 @@ export default function Header() {
                   24h Terminbuchung
                 </Link>
               </Button>
-              <Button 
-                asChild 
-                className="bg-green-600/80 text-white border-green-700/50 hover:bg-green-600"
-                data-testid="button-foerderung-header"
-              >
-                <Link href="/foerderung">
+              <div className="relative">
+                <button
+                  onClick={() => setFoerderungOpen(!foerderungOpen)}
+                  aria-expanded={foerderungOpen}
+                  aria-haspopup="true"
+                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium bg-green-600/80 text-white border border-green-700/50 rounded-md hover:bg-green-600 transition-colors"
+                  data-testid="nav-foerderung-dropdown"
+                >
                   Förderung
-                </Link>
-              </Button>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${foerderungOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                </button>
+                {foerderungOpen && (
+                  <div 
+                    className="absolute top-full right-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50"
+                    role="menu"
+                    aria-label="Förderung Untermenü"
+                    onMouseLeave={() => setFoerderungOpen(false)}
+                  >
+                    <Link
+                      href="/foerderung"
+                      onClick={() => setFoerderungOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      data-testid="nav-foerderung-info"
+                    >
+                      Förderung Info
+                    </Link>
+                    <Link
+                      href="/foerderantrag"
+                      onClick={() => setFoerderungOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      data-testid="nav-foerderantrag"
+                    >
+                      Förderantrag
+                    </Link>
+                    <Link
+                      href="/foerderrechner"
+                      onClick={() => setFoerderungOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      data-testid="nav-foerderrechner"
+                    >
+                      Förderrechner
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
 
             <Button
@@ -309,11 +346,33 @@ export default function Header() {
                   24h Terminbuchung
                 </Link>
               </Button>
-              <Button className="mt-2 bg-green-600/80 text-white border-green-700/50" asChild data-testid="button-foerderung-mobile">
-                <Link href="/foerderung" onClick={() => setMobileMenuOpen(false)}>
-                  Förderung
-                </Link>
-              </Button>
+              <div className="px-4 py-2 text-xs font-semibold text-green-600 uppercase tracking-wider">
+                Förderung
+              </div>
+              <Link
+                href="/foerderung"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-6 py-2 text-sm font-medium text-green-600 hover:text-green-700 hover:bg-green-50 dark:hover:bg-green-950/20 rounded-md transition-colors"
+                data-testid="nav-mobile-foerderung-info"
+              >
+                Förderung Info
+              </Link>
+              <Link
+                href="/foerderantrag"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-6 py-2 text-sm font-medium text-green-600 hover:text-green-700 hover:bg-green-50 dark:hover:bg-green-950/20 rounded-md transition-colors"
+                data-testid="nav-mobile-foerderantrag"
+              >
+                Förderantrag
+              </Link>
+              <Link
+                href="/foerderrechner"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-6 py-2 text-sm font-medium text-green-600 hover:text-green-700 hover:bg-green-50 dark:hover:bg-green-950/20 rounded-md transition-colors"
+                data-testid="nav-mobile-foerderrechner"
+              >
+                Förderrechner
+              </Link>
             </nav>
           </div>
         )}
