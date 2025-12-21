@@ -169,7 +169,7 @@ export default function FussbodenheizungMuenchenPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Vorteile der Fußbodenheizung
+              Fußbodenheizung nachrüsten München: Vorteile & Energieeffizienz
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {vorteile.map((item, index) => (
@@ -191,7 +191,7 @@ export default function FussbodenheizungMuenchenPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                Für Ihre Anfrage
+                Fußbodenheizung verlegen München: Anfrage & Beratungstermin
               </h2>
               <p className="text-center text-muted-foreground mb-8">
                 Teilen Sie uns kurz mit:

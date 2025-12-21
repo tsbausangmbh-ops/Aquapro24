@@ -175,7 +175,7 @@ export default function BadsanierungMuenchenPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Unser Ablauf für Ihre Badsanierung
+              Badumbau München: Ablauf von Planung bis Fertigstellung
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {schritte.map((item, index) => (
@@ -200,7 +200,7 @@ export default function BadsanierungMuenchenPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                Für ein schnelles Angebot
+                Badsanierung Kosten München: Angebot mit Festpreis anfordern
               </h2>
               <p className="text-center text-muted-foreground mb-8">
                 Senden Sie uns bitte:

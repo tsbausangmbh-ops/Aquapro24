@@ -175,7 +175,7 @@ export default function SanitaerMuenchenPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Typische Sanitär-Leistungen in München
+              Installateur München: Reparatur, Montage & Neuinstallation
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {leistungen.map((item, index) => (
@@ -197,7 +197,7 @@ export default function SanitaerMuenchenPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                So geht es am schnellsten
+                Sanitär Termin München: Schnelle Anfrage & Terminbestätigung
               </h2>
               <p className="text-center text-muted-foreground mb-8">
                 Für eine schnelle Bearbeitung senden Sie uns bitte:

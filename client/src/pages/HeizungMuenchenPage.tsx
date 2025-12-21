@@ -176,7 +176,7 @@ export default function HeizungMuenchenPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Unsere Heizungs-Leistungen in München
+              Heizungsinstallateur München: Reparatur, Wartung & Austausch
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {leistungen.map((item, index) => (
@@ -198,7 +198,7 @@ export default function HeizungMuenchenPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                Für eine schnelle Einschätzung
+                Heizungsmonteur München: Anfrage mit Foto für schnelle Einschätzung
               </h2>
               <p className="text-center text-muted-foreground mb-8">
                 Senden Sie uns idealerweise:

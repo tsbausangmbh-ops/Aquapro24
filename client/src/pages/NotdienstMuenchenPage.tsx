@@ -174,7 +174,7 @@ export default function NotdienstMuenchenPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Typische Notfälle
+              Sanitär Notdienst München: Rohrbruch, Wasserschaden & Heizungsausfall
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {notfaelle.map((item, index) => (
@@ -196,7 +196,7 @@ export default function NotdienstMuenchenPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                Für schnelle Priorisierung
+                Klempner Notruf München: So erreichen Sie uns schnell
               </h2>
               <p className="text-center text-muted-foreground mb-8">
                 Senden Sie uns bitte:
