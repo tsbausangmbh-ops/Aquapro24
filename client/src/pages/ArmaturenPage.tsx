@@ -168,7 +168,7 @@ export default function ArmaturenPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="sanitaer" 
+                  serviceType="sanitaer"
                   buttonText="Termin buchen"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -208,7 +208,7 @@ export default function ArmaturenPage() {
           ]}
         />
 
-        <ServiceAdvisor serviceType="armaturen" />
+        <ServiceAdvisor serviceType="sanitaer" />
 
         <CustomerStories 
           stories={sanitaerStories}
@@ -324,7 +324,7 @@ export default function ArmaturenPage() {
 
         <ServiceAreas 
           serviceName="Armaturen-Service" 
-          serviceType="sanitaer"
+          
           highlightAreas={["Maxvorstadt", "Haidhausen", "Pasing"]}
         />
 

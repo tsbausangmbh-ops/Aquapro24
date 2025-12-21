@@ -5,36 +5,24 @@ import { Link } from "wouter";
 interface ServiceAreasProps {
   serviceName: string;
   highlightAreas?: string[];
-  serviceType?: "sanitaer" | "heizung" | "bad" | "waermepumpe" | "notdienst" | "haustechnik";
 }
 
 const MUNICH_AREAS = [
-  { name: "Schwabing", time: "15 Min" },
-  { name: "Bogenhausen", time: "20 Min" },
-  { name: "Sendling", time: "18 Min" },
-  { name: "Pasing", time: "25 Min" },
-  { name: "Maxvorstadt", time: "12 Min" },
-  { name: "Haidhausen", time: "15 Min" },
-  { name: "Neuhausen", time: "20 Min" },
-  { name: "Laim", time: "22 Min" },
-  { name: "Giesing", time: "18 Min" },
-  { name: "Trudering", time: "25 Min" },
-  { name: "Milbertshofen", time: "20 Min" },
-  { name: "Moosach", time: "22 Min" },
+  { name: "Schwabing", time: "15 Min", slug: "schwabing" },
+  { name: "Bogenhausen", time: "20 Min", slug: "bogenhausen" },
+  { name: "Sendling", time: "18 Min", slug: "sendling" },
+  { name: "Pasing", time: "25 Min", slug: "pasing" },
+  { name: "Maxvorstadt", time: "12 Min", slug: "maxvorstadt" },
+  { name: "Haidhausen", time: "15 Min", slug: "haidhausen" },
+  { name: "Neuhausen", time: "20 Min", slug: "neuhausen" },
+  { name: "Laim", time: "22 Min", slug: "laim" },
+  { name: "Giesing", time: "18 Min", slug: "giesing" },
+  { name: "Trudering", time: "25 Min", slug: "trudering" },
+  { name: "Milbertshofen", time: "20 Min", slug: "milbertshofen" },
+  { name: "Moosach", time: "22 Min", slug: "moosach" },
 ];
 
-const SERVICE_LINKS = {
-  sanitaer: { path: "/sanitaer-muenchen", label: "Sanitär München" },
-  heizung: { path: "/heizung-muenchen", label: "Heizung München" },
-  bad: { path: "/badsanierung-muenchen", label: "Badsanierung München" },
-  waermepumpe: { path: "/waermepumpe-muenchen", label: "Wärmepumpe München" },
-  notdienst: { path: "/notdienst-muenchen", label: "Notdienst München" },
-  haustechnik: { path: "/haustechnik", label: "Haustechnik München" },
-};
-
-export default function ServiceAreas({ serviceName, highlightAreas = [], serviceType }: ServiceAreasProps) {
-  const serviceLink = serviceType ? SERVICE_LINKS[serviceType] : null;
-  
+export default function ServiceAreas({ serviceName, highlightAreas = [] }: ServiceAreasProps) {
   return (
     <section className="py-6 bg-secondary/5" data-testid="section-service-areas">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -58,7 +46,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [], service
               {MUNICH_AREAS.map((area) => (
                 <Link 
                   key={area.name}
-                  href={serviceLink?.path || "/kontakt"}
+                  href={`/${area.slug}`}
                   className={`p-3 rounded-lg border hover-elevate cursor-pointer block ${
                     highlightAreas.includes(area.name) 
                       ? "bg-primary/10 border-primary/30" 

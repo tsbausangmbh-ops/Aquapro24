@@ -161,7 +161,7 @@ export default function BadPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="bad" 
+                  serviceType="bad"
                   buttonText="24h Buchungstermin"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -294,7 +294,7 @@ export default function BadPage() {
 
         <ServiceAreas 
           serviceName="Badsanierung" 
-          serviceType="bad"
+          
           highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
         />
 

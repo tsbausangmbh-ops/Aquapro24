@@ -168,7 +168,7 @@ export default function WarmwasserPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="heizung" 
+                  serviceType="sanitaer"
                   buttonText="Termin buchen"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -208,7 +208,7 @@ export default function WarmwasserPage() {
           ]}
         />
 
-        <ServiceAdvisor serviceType="warmwasser" />
+        <ServiceAdvisor serviceType="sanitaer" />
 
         <CustomerStories 
           stories={heizungStories}
@@ -324,7 +324,7 @@ export default function WarmwasserPage() {
 
         <ServiceAreas 
           serviceName="Warmwasser-Service" 
-          serviceType="sanitaer"
+          
           highlightAreas={["Trudering", "Laim", "Giesing"]}
         />
 

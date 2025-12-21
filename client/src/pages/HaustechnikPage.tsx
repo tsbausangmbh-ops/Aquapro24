@@ -162,7 +162,7 @@ export default function HaustechnikPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="haustechnik" 
+                  serviceType="haustechnik"
                   buttonText="24h Buchungstermin"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -321,7 +321,7 @@ export default function HaustechnikPage() {
 
         <ServiceAreas 
           serviceName="Haustechnik-Service" 
-          serviceType="haustechnik"
+          
           highlightAreas={["Maxvorstadt", "Schwabing", "Neuhausen"]}
         />
 

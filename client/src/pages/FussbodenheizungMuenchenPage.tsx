@@ -188,7 +188,7 @@ export default function FussbodenheizungMuenchenPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <ServiceBooking 
-                        serviceType="heizung" 
+                        serviceType="heizung"
                         buttonText="Termin anfragen"
                         buttonSize="lg"
                       />
@@ -232,7 +232,7 @@ export default function FussbodenheizungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Fußbodenheizung" serviceType="heizung" />
+        <ServiceAreas serviceName="Fußbodenheizung"  />
         <RelatedServices currentService="heizung" />
       </main>
       

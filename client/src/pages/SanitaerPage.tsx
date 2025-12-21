@@ -176,7 +176,7 @@ export default function SanitaerPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="sanitaer" 
+                  serviceType="sanitaer"
                   buttonText="24h Buchungstermin"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -348,7 +348,7 @@ export default function SanitaerPage() {
 
         <ServiceAreas 
           serviceName="Sanitärinstallation" 
-          serviceType="sanitaer"
+          
           highlightAreas={["Schwabing", "Maxvorstadt", "Haidhausen"]}
         />
 

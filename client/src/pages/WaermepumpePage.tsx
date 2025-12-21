@@ -164,7 +164,7 @@ export default function WaermepumpePage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="waermepumpe" 
+                  serviceType="waermepumpe"
                   buttonText="24h Buchungstermin"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -325,7 +325,7 @@ export default function WaermepumpePage() {
 
         <ServiceAreas 
           serviceName="Wärmepumpen-Installation" 
-          serviceType="waermepumpe"
+          
           highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
         />
 

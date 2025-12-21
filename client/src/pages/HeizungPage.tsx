@@ -163,7 +163,7 @@ export default function HeizungPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="heizung" 
+                  serviceType="heizung"
                   buttonText="24h Buchungstermin"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -294,7 +294,7 @@ export default function HeizungPage() {
 
         <ServiceAreas 
           serviceName="Heizungsservice" 
-          serviceType="heizung"
+          
           highlightAreas={["Pasing", "Laim", "Neuhausen"]}
         />
 

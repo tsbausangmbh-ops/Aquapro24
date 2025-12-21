@@ -197,7 +197,7 @@ export default function BadsanierungMuenchenPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <ServiceBooking 
-                        serviceType="bad" 
+                        serviceType="bad"
                         buttonText="Termin anfragen"
                         buttonSize="lg"
                       />
@@ -241,7 +241,7 @@ export default function BadsanierungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Badsanierung" serviceType="bad" />
+        <ServiceAreas serviceName="Badsanierung"  />
         <RelatedServices currentService="bad" />
       </main>
       

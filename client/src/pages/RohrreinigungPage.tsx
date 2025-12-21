@@ -177,7 +177,7 @@ export default function RohrreinigungPage() {
                   </a>
                 </Button>
                 <ServiceBooking 
-                  serviceType="sanitaer" 
+                  serviceType="sanitaer"
                   buttonText="24h Buchungstermin"
                   buttonSize="lg"
                   buttonVariant="outline"
@@ -190,7 +190,7 @@ export default function RohrreinigungPage() {
 
         <TrustBar />
 
-        <EmergencyProcess serviceType="rohrreinigung" />
+        <EmergencyProcess serviceType="sanitaer" />
 
         <NLPSection
           problemTitle="Kennen Sie diese Probleme?"
@@ -219,7 +219,7 @@ export default function RohrreinigungPage() {
           ]}
         />
 
-        <ServiceAdvisor serviceType="rohrreinigung" />
+        <ServiceAdvisor serviceType="sanitaer" />
 
         <CustomerStories 
           stories={sanitaerStories}
@@ -334,7 +334,7 @@ export default function RohrreinigungPage() {
 
         <ServiceAreas 
           serviceName="Rohrreinigung" 
-          serviceType="sanitaer"
+          
           highlightAreas={["Schwabing", "Sendling", "Bogenhausen"]}
         />
 

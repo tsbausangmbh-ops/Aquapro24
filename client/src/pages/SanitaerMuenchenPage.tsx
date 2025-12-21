@@ -194,7 +194,7 @@ export default function SanitaerMuenchenPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <ServiceBooking 
-                        serviceType="sanitaer" 
+                        serviceType="sanitaer"
                         buttonText="Termin anfragen"
                         buttonSize="lg"
                       />
@@ -238,7 +238,7 @@ export default function SanitaerMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Sanitär" serviceType="sanitaer" />
+        <ServiceAreas serviceName="Sanitär"  />
         <RelatedServices currentService="sanitaer" />
       </main>
       

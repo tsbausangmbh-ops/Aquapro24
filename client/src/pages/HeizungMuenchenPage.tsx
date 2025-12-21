@@ -195,7 +195,7 @@ export default function HeizungMuenchenPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <ServiceBooking 
-                        serviceType="heizung" 
+                        serviceType="heizung"
                         buttonText="Termin anfragen"
                         buttonSize="lg"
                       />
@@ -239,7 +239,7 @@ export default function HeizungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Heizung" serviceType="heizung" />
+        <ServiceAreas serviceName="Heizung"  />
         <RelatedServices currentService="heizung" />
       </main>
       

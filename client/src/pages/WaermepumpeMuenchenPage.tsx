@@ -198,7 +198,7 @@ export default function WaermepumpeMuenchenPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <ServiceBooking 
-                        serviceType="waermepumpe" 
+                        serviceType="waermepumpe"
                         buttonText="Termin anfragen"
                         buttonSize="lg"
                       />
@@ -242,7 +242,7 @@ export default function WaermepumpeMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Wärmepumpe" serviceType="waermepumpe" />
+        <ServiceAreas serviceName="Wärmepumpe"  />
         <RelatedServices currentService="waermepumpe" />
       </main>
       
