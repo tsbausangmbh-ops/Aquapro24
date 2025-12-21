@@ -324,6 +324,7 @@ export default function WarmwasserPage() {
 
         <ServiceAreas 
           serviceName="Warmwasser-Service" 
+          serviceType="sanitaer"
           highlightAreas={["Trudering", "Laim", "Giesing"]}
         />
 

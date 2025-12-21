@@ -325,6 +325,7 @@ export default function WaermepumpePage() {
 
         <ServiceAreas 
           serviceName="Wärmepumpen-Installation" 
+          serviceType="waermepumpe"
           highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
         />
 

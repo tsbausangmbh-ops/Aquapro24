@@ -242,7 +242,7 @@ export default function WaermepumpeMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Wärmepumpe" />
+        <ServiceAreas serviceName="Wärmepumpe" serviceType="waermepumpe" />
         <RelatedServices currentService="waermepumpe" />
       </main>
       

@@ -334,6 +334,7 @@ export default function RohrreinigungPage() {
 
         <ServiceAreas 
           serviceName="Rohrreinigung" 
+          serviceType="sanitaer"
           highlightAreas={["Schwabing", "Sendling", "Bogenhausen"]}
         />
 

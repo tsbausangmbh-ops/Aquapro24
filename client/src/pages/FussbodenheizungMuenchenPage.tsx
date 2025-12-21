@@ -232,7 +232,7 @@ export default function FussbodenheizungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Fußbodenheizung" />
+        <ServiceAreas serviceName="Fußbodenheizung" serviceType="heizung" />
         <RelatedServices currentService="heizung" />
       </main>
       

@@ -348,6 +348,7 @@ export default function SanitaerPage() {
 
         <ServiceAreas 
           serviceName="Sanitärinstallation" 
+          serviceType="sanitaer"
           highlightAreas={["Schwabing", "Maxvorstadt", "Haidhausen"]}
         />
 

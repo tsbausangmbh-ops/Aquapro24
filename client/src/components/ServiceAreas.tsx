@@ -1,9 +1,11 @@
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 interface ServiceAreasProps {
   serviceName: string;
   highlightAreas?: string[];
+  serviceType?: "sanitaer" | "heizung" | "bad" | "waermepumpe" | "notdienst" | "haustechnik";
 }
 
 const MUNICH_AREAS = [
@@ -21,7 +23,18 @@ const MUNICH_AREAS = [
   { name: "Moosach", time: "22 Min" },
 ];
 
-export default function ServiceAreas({ serviceName, highlightAreas = [] }: ServiceAreasProps) {
+const SERVICE_LINKS = {
+  sanitaer: { path: "/sanitaer-muenchen", label: "Sanitär München" },
+  heizung: { path: "/heizung-muenchen", label: "Heizung München" },
+  bad: { path: "/badsanierung-muenchen", label: "Badsanierung München" },
+  waermepumpe: { path: "/waermepumpe-muenchen", label: "Wärmepumpe München" },
+  notdienst: { path: "/notdienst-muenchen", label: "Notdienst München" },
+  haustechnik: { path: "/haustechnik", label: "Haustechnik München" },
+};
+
+export default function ServiceAreas({ serviceName, highlightAreas = [], serviceType }: ServiceAreasProps) {
+  const serviceLink = serviceType ? SERVICE_LINKS[serviceType] : null;
+  
   return (
     <section className="py-6 bg-secondary/5" data-testid="section-service-areas">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -43,21 +56,25 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {MUNICH_AREAS.map((area) => (
-                <div 
+                <Link 
                   key={area.name}
-                  className={`p-3 rounded-lg border ${
+                  href={serviceLink?.path || "/kontakt"}
+                  className={`p-3 rounded-lg border hover-elevate cursor-pointer block ${
                     highlightAreas.includes(area.name) 
                       ? "bg-primary/10 border-primary/30" 
                       : "bg-background"
                   }`}
                   data-testid={`area-${area.name.toLowerCase()}`}
                 >
-                  <span className="font-medium text-sm">{area.name}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-sm">{area.name}</span>
+                    <ArrowRight className="w-3 h-3 text-muted-foreground" />
+                  </div>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
                     <Clock className="w-3 h-3" />
                     <span>ca. {area.time}</span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

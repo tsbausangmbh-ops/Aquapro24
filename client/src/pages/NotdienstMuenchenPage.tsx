@@ -239,7 +239,7 @@ export default function NotdienstMuenchenPage() {
         />
         <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
-        <ServiceAreas serviceName="Notdienst" />
+        <ServiceAreas serviceName="Notdienst" serviceType="notdienst" />
         <RelatedServices currentService="sanitaer" />
       </main>
       

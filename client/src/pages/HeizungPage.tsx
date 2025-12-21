@@ -294,6 +294,7 @@ export default function HeizungPage() {
 
         <ServiceAreas 
           serviceName="Heizungsservice" 
+          serviceType="heizung"
           highlightAreas={["Pasing", "Laim", "Neuhausen"]}
         />
 

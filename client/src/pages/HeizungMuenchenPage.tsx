@@ -239,7 +239,7 @@ export default function HeizungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Heizung" />
+        <ServiceAreas serviceName="Heizung" serviceType="heizung" />
         <RelatedServices currentService="heizung" />
       </main>
       

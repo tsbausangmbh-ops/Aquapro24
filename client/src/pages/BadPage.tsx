@@ -294,6 +294,7 @@ export default function BadPage() {
 
         <ServiceAreas 
           serviceName="Badsanierung" 
+          serviceType="bad"
           highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
         />
 

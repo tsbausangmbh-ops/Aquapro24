@@ -238,7 +238,7 @@ export default function SanitaerMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Sanitär" />
+        <ServiceAreas serviceName="Sanitär" serviceType="sanitaer" />
         <RelatedServices currentService="sanitaer" />
       </main>
       

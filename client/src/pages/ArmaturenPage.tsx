@@ -324,6 +324,7 @@ export default function ArmaturenPage() {
 
         <ServiceAreas 
           serviceName="Armaturen-Service" 
+          serviceType="sanitaer"
           highlightAreas={["Maxvorstadt", "Haidhausen", "Pasing"]}
         />
 

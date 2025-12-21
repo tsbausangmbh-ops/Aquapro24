@@ -241,7 +241,7 @@ export default function BadsanierungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Badsanierung" />
+        <ServiceAreas serviceName="Badsanierung" serviceType="bad" />
         <RelatedServices currentService="bad" />
       </main>
       

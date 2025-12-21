@@ -321,6 +321,7 @@ export default function HaustechnikPage() {
 
         <ServiceAreas 
           serviceName="Haustechnik-Service" 
+          serviceType="haustechnik"
           highlightAreas={["Maxvorstadt", "Schwabing", "Neuhausen"]}
         />
 
