@@ -18,7 +18,7 @@ export function BackButton() {
             onClick={handleBack}
             variant="outline"
             size="lg"
-            className="gap-2"
+            className="gap-2 w-full sm:w-auto max-w-xs sm:max-w-none"
             data-testid="button-back"
           >
             <ArrowLeft className="h-5 w-5" />
