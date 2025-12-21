@@ -32,11 +32,26 @@ export default function Hero() {
             </Badge>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight text-white mb-6">
-            Klempner & Sanitär München:{" "}
-            <span className="text-secondary">24/7 Notdienst</span>{" "}
-            <span className="block mt-1">für Bad, Heizung & Wasserinstallation</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight text-white mb-4">
+            Klempner München – Sanitär & Heizung Notdienst 24/7
           </h1>
+          <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+            <span>Sanitär Notdienst München</span><span>·</span>
+            <span>Klempner Festpreis</span><span>·</span>
+            <span>Heizung reparieren</span><span>·</span>
+            <span>Rohrbruch beheben</span><span>·</span>
+            <span>Abfluss verstopft</span><span>·</span>
+            <span>Badsanierung komplett</span><span>·</span>
+            <span>Wärmepumpe Förderung</span><span>·</span>
+            <span>Wasserinstallation</span><span>·</span>
+            <span>24h Notdienst</span><span>·</span>
+            <span>Geprüfte Fachbetriebe</span><span>·</span>
+            <span>Alle Münchner Stadtteile</span><span>·</span>
+            <span>Viessmann Vaillant Grohe</span><span>·</span>
+            <span>Festpreisgarantie</span><span>·</span>
+            <span>2.500+ Kunden</span><span>·</span>
+            <span>Seit 2005 in München</span>
+          </div>
           
           <p className="text-lg text-white/90 mb-4">
             <strong>Stellen Sie sich vor:</strong> Ihr neues Bad ist fertig, 

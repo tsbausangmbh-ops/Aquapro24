@@ -23,10 +23,11 @@ Preferred communication style: Simple, everyday language.
 ### H1 Optimization & Keyword Batches
 All 8 main service pages now feature:
 - **Action-oriented H1 headings** following pattern: "Main Keyword München – Benefit/Action"
-- **30 longtail keywords per page** displayed as keyword batch in Hero section (240+ total new longtails)
+- **15-30 longtail keywords per page** displayed as keyword batch in Hero section (255+ total new longtails)
 - Keywords include: action verbs, service types, Munich districts, brand names
 
 **Updated H1s:**
+0. Startseite: "Klempner München – Sanitär & Heizung Notdienst 24/7" (15 Keywords)
 1. Sanitär: "Klempner München – Sanitär Notdienst 24/7"
 2. Armaturen: "Wasserhahn wechseln München – Armaturen Montage & Reparatur"
 3. Rohrreinigung: "Rohrreinigung München – Abfluss verstopft Notdienst 24/7"
