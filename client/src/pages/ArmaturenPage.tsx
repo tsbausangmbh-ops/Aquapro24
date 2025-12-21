@@ -107,8 +107,8 @@ export default function ArmaturenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Wasserhahn tropft? Armaturen Service München ab 80€"
-        description="Tropfender Wasserhahn nervt und kostet Wasser? Wir reparieren oder tauschen Ihre Armatur. Festpreis ab 80€. Schnell und sauber."
+        title="Wasserhahn tropft München | Mischbatterie tauschen | Armatur reparieren"
+        description="Wasserhahn tropft? Mischbatterie tauschen oder Armatur reparieren in München. Festpreis ab 80€, schneller Service, saubere Arbeit."
         canonical="https://aquapro24.de/armaturen"
         keywords="Armaturen München, Wasserhahn einbauen München, Armatur montieren München, Wasserhahn tropft München, Grohe Montage München, Hansgrohe Installation München, Küchenarmatur München, Badarmatur München, Wasserhahn reparieren München, Armaturentausch München, Thermostatarmatur München, Duscharmatur München"
         aiSummary="AquaPro24 Armaturen-Service München: Montage und Reparatur aller Marken (Grohe, Hansgrohe, Geberit). Wasserhahn tropft? Neue Armatur? Festpreis ab 80€. Kontakt: 0152 12274043"

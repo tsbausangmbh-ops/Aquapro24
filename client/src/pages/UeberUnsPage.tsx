@@ -227,8 +227,8 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Über uns | Sanitär München seit 2005 | AquaPro24"
-        description="Seit 2005 lösen wir Sanitär-Probleme in München. Geprüfte Fachbetriebe, Festpreise, 2.800+ zufriedene Kunden. Das ist unser Versprechen an Sie."
+        title="Partnernetzwerk Sanitär München | Fachbetriebe geprüft | seit 2005"
+        description="Partnernetzwerk Sanitär München seit 2005: Fachbetriebe geprüft, Festpreise garantiert. 2.800+ zufriedene Kunden vertrauen uns."
         canonical="https://aquapro24.de/ueber-uns"
         keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
         structuredData={aboutPageSchema}

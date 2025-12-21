@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Rohrbruch? Abfluss verstopft? AquaPro24 löst es"
-        description="Wasserschaden oder verstopfter Abfluss? Keine Panik. Unsere Sanitär-Experten beheben Ihr Problem zuverlässig. Festpreis ohne Überraschungen. Jetzt anrufen."
+        title="Sanitär Notdienst München | Klempner Festpreis | Heizung Reparatur"
+        description="Rohrbruch, verstopfter Abfluss oder Heizungsausfall? Sanitär Notdienst München mit Klempner Festpreis - Heizung Reparatur durch geprüfte Fachbetriebe. 24/7 erreichbar."
         canonical="https://aquapro24.de"
         keywords="Sanitär München, Klempner München Notdienst, Heizung reparieren München, Installateur München, Wasserinstallation Schwabing, Rohrreinigung Bogenhausen, Badsanierung Sendling, Wärmepumpe München Förderung, Sanitär Pasing, Klempner Maxvorstadt, Heizungswartung Haidhausen, Sanitärnotdienst Neuhausen, Installateur Trudering, Klempner Laim, Heizung Giesing, Sanitär Moosach, Installateur Milbertshofen"
         aiSummary="AquaPro24 München: Ihr Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen. Seit 2005 in München, 2.847+ zufriedene Kunden, 4.9/5 Sterne. 24/7 Notdienst, Festpreisgarantie, alle 25 Münchner Stadtteile. Sanitär ab 92€, Badsanierung ab 9.200€, Wärmepumpe mit bis 70% Förderung. Kontakt: 0152 12274043, info@aquapro24.de"

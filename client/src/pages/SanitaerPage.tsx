@@ -115,8 +115,8 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Abfluss verstopft? Rohr undicht? Sanitär München hilft"
-        description="Wasser läuft nicht ab oder tropft ständig? Wir beheben Ihr Sanitär-Problem noch heute. Festpreis ab 92€, transparent und fair. Jetzt Termin sichern."
+        title="Abfluss verstopft München | Rohr undicht | Leckage beheben"
+        description="Abfluss verstopft oder Rohr undicht in München? Leckage beheben durch Profis mit Festpreis ab 92€. Schnelle Termine, faire Abrechnung."
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Klempner München, Klempner Notdienst München, Rohrbruch München, Sanitär Notdienst, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, Installateur München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Sanitär Solln, Klempner Hadern, Sanitär Allach, Klempner Aubing, Sanitär Feldmoching, Klempner Isarvorstadt, Sanitär Lehel, Klempner Westpark, Wasserhahn tropft München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Sanitär Notdienst Schwabing, Klempner Notdienst Bogenhausen"
         aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 92€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"

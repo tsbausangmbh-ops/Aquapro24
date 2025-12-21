@@ -102,8 +102,8 @@ export default function HaustechnikPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Haustechnik München: Wasser, Gas, Lüftung komplett"
-        description="Mehrere Handwerker koordinieren ist stressig? Bei uns bekommen Sie alles aus einer Hand: Wasser, Gas, Lüftung, Smart Home. Ein Ansprechpartner."
+        title="Wasserinstallation München | Gasanschluss | Lüftungsanlage"
+        description="Wasserinstallation, Gasanschluss und Lüftungsanlage München: Haustechnik komplett aus einer Hand. Ein Ansprechpartner für alle Gewerke."
         canonical="https://aquapro24.de/haustechnik"
         keywords="Haustechnik München, Gasinstallation München, Lüftungstechnik München, Smart Home München, Gebäudetechnik München, Wasserinstallation München, Haustechnik Schwabing, Haustechnik Bogenhausen, Haustechnik Sendling, Haustechnik Pasing, Haustechnik Maxvorstadt, Haustechnik Haidhausen, Haustechnik Neuhausen, Haustechnik Trudering, Haustechnik Laim, Haustechnik Giesing, Haustechnik Moosach, Haustechnik Milbertshofen, Haustechnik Nymphenburg, Haustechnik Perlach, Haustechnik Solln, Haustechnik Hadern, Haustechnik Allach, Haustechnik Aubing, Haustechnik Feldmoching, Haustechnik Isarvorstadt, Haustechnik Lehel, Gasinstallateur München, KWL München, kontrollierte Wohnraumlüftung München, Smart Home Heizung München, Lüftungsanlage München"
         aiSummary="AquaPro24 Haustechnik München: Wasserinstallation, Gasanlagen, Lüftung, Smart Home - alles aus einer Hand. 500+ Projekte, zertifizierte Fachbetriebe. Alle Münchner Stadtteile. Kostenlose Beratung: 0152 12274043"

@@ -198,8 +198,8 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="FAQ Sanitär München | Preise, Kosten & Tipps"
-        description="Was kostet ein Klempner wirklich? Lohnt sich eine Wärmepumpe? Ehrliche Antworten auf häufige Fragen unserer Kunden. Transparent erklärt."
+        title="Sanitär Fragen München | Preise Klempner | Tipps Hausbesitzer"
+        description="Sanitär Fragen beantwortet: Preise Klempner transparent erklärt. Tipps für Hausbesitzer zu Wärmepumpe, Heizung und Sanitärkosten."
         canonical="https://kshw-muenchen.de/faq"
         keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />

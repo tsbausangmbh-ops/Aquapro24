@@ -245,8 +245,8 @@ export default function RatgeberPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Ratgeber Sanitär München | Tipps vom Experten"
-        description="Erste Hilfe bei Rohrbruch? Wann lohnt sich eine Wärmepumpe? Expertenwissen verständlich erklärt. Gratis Tipps für Hausbesitzer."
+        title="Sanitär Ratgeber München | Expertentipps | Haushaltstipps"
+        description="Sanitär Ratgeber mit Expertentipps: Haushaltstipps zu Rohrbruch, Wärmepumpe, Heizung. Verständlich erklärt für Hausbesitzer."
         canonical="https://kshw-muenchen.de/ratgeber"
         keywords="Wasserschaden was tun München, Ratgeber Badsanierung Schwabing, Tipps Heizungswartung Bogenhausen, Wärmepumpe Förderung Bayern 2024, Sanitär Tipps Sendling, Ratgeber Pasing, Tipps Maxvorstadt, Guides Haidhausen, Ratgeber Neuhausen"
       />

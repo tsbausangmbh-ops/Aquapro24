@@ -10,8 +10,8 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AGB | AquaPro24 Sanitär München"
-        description="Allgemeine Geschäftsbedingungen: Festpreise, 2 Jahre Garantie, transparente Regeln. Faire Bedingungen für unsere Kunden in München."
+        title="AGB Sanitär München | Festpreis Garantie | Geschäftsbedingungen"
+        description="AGB Sanitär München: Festpreis Garantie und transparente Geschäftsbedingungen. 2 Jahre Garantie, faire Regeln für alle Kunden."
         canonical="https://aquapro24.de/agb"
       />
       <Header />

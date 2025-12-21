@@ -59,8 +59,8 @@ export default function HeizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Heizung München - Reparatur, Modernisierung & effiziente Systeme | AquaPro24"
-        description="Heizung München: Professionelle Reparatur und Modernisierung aller Heizungssysteme. Klares Vorgehen, planbare Lösungen. Jetzt Anfrage senden."
+        title="Heizungsservice München | Modernisierung Heizung | Effizienz steigern"
+        description="Heizungsservice München: Modernisierung Heizung und Effizienz steigern. Reparatur aller Systeme mit klarem Vorgehen und planbaren Lösungen."
         canonical="https://aquapro24.de/heizung-muenchen"
         keywords="Heizung München, Heizungsreparatur München, Heizungsmodernisierung München, Heizungstausch München, Gasheizung München, Heizung Wartung München, Heizungsinstallateur München"
         aiSummary="AquaPro24 Heizung München: Reparatur, Modernisierung, Austausch aller Heizungssysteme. Planbare Lösungen, transparentes Vorgehen. Kontakt: 0152 12274043"
