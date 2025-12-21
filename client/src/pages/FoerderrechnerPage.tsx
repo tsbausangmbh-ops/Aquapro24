@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/stock_images/heat_pump_installati_53374252.jpg";
@@ -36,7 +37,7 @@ import FAQ from "@/components/FAQ";
 import BackButton from "@/components/BackButton";
 
 export default function FoerderrechnerPage() {
-  const [heizungstyp, setHeizungstyp] = useState("waermepumpe");
+  const [selectedMassnahmen, setSelectedMassnahmen] = useState<string[]>(["waermepumpe"]);
   const [gebaeudeAlter, setGebaeudeAlter] = useState("vor2024");
   const [einkommen, setEinkommen] = useState("ueber40000");
   const [investition, setInvestition] = useState([25000]);
@@ -49,57 +50,87 @@ export default function FoerderrechnerPage() {
   const [wohnflaeche, setWohnflaeche] = useState([150]);
   const [gebaeudeTyp, setGebaeudeTyp] = useState("einfamilienhaus");
 
+  const toggleMassnahme = (massnahme: string) => {
+    setSelectedMassnahmen(prev => 
+      prev.includes(massnahme) 
+        ? prev.filter(m => m !== massnahme)
+        : [...prev, massnahme]
+    );
+  };
+
   const berechneBAFA = () => {
-    let grundfoerderung = 0;
+    let hauptfoerderung = 0;
     let klimabonus = 0;
     let einkommensbonus = 0;
     let effizienzbonus = 0;
+    let optimierungFoerderung = 0;
+    
+    const hauptwaermeerzeuger = ["waermepumpe", "pellet", "brennstoffzelle", "fernwaerme", "solarthermie"];
+    const optimierungen = ["fussbodenheizung", "lueftung"];
+    
+    const hatHauptwaermeerzeuger = selectedMassnahmen.some(m => hauptwaermeerzeuger.includes(m));
+    const selectedOptimierungen = selectedMassnahmen.filter(m => optimierungen.includes(m));
 
-    if (heizungstyp === "waermepumpe") {
-      grundfoerderung = 30;
+    if (selectedMassnahmen.includes("waermepumpe")) {
+      hauptfoerderung = 30;
       effizienzbonus = 5;
       if (gebaeudeAlter === "vor2024") {
         klimabonus = 20;
       }
-    } else if (heizungstyp === "pellet") {
-      grundfoerderung = 30;
+    } else if (selectedMassnahmen.includes("pellet")) {
+      hauptfoerderung = 30;
       if (gebaeudeAlter === "vor2024") {
         klimabonus = 20;
       }
-    } else if (heizungstyp === "solarthermie") {
-      grundfoerderung = 25;
-    } else if (heizungstyp === "brennstoffzelle") {
-      grundfoerderung = 30;
+    } else if (selectedMassnahmen.includes("brennstoffzelle")) {
+      hauptfoerderung = 30;
       if (gebaeudeAlter === "vor2024") {
         klimabonus = 20;
       }
-    } else if (heizungstyp === "fernwaerme") {
-      grundfoerderung = 30;
+    } else if (selectedMassnahmen.includes("fernwaerme")) {
+      hauptfoerderung = 30;
       if (gebaeudeAlter === "vor2024") {
         klimabonus = 20;
       }
-    } else if (heizungstyp === "fussbodenheizung") {
-      grundfoerderung = 20;
-    } else if (heizungstyp === "lueftung") {
-      grundfoerderung = 20;
+    } else if (selectedMassnahmen.includes("solarthermie")) {
+      hauptfoerderung = 25;
+    }
+
+    if (hatHauptwaermeerzeuger && selectedOptimierungen.length > 0) {
+      optimierungFoerderung = selectedOptimierungen.length * 20;
+    } else if (!hatHauptwaermeerzeuger) {
+      if (selectedMassnahmen.includes("fussbodenheizung")) {
+        hauptfoerderung = 20;
+      }
+      if (selectedMassnahmen.includes("lueftung")) {
+        hauptfoerderung = Math.max(hauptfoerderung, 20);
+      }
     }
 
     if (einkommen === "unter40000") {
       einkommensbonus = 30;
     }
 
-    const gesamtProzent = Math.min(grundfoerderung + klimabonus + einkommensbonus + effizienzbonus, 70);
+    const hauptProzent = Math.min(hauptfoerderung + klimabonus + einkommensbonus + effizienzbonus, 70);
     const maxFoerderbar = Math.min(investition[0], 30000);
-    const foerderBetrag = Math.round(maxFoerderbar * (gesamtProzent / 100));
+    const hauptBetrag = Math.round(maxFoerderbar * (hauptProzent / 100));
+    
+    const optimierungBetrag = hatHauptwaermeerzeuger 
+      ? Math.round(Math.min(investition[0] * 0.3, 10000) * (optimierungFoerderung / 100))
+      : 0;
+    
+    const gesamtBetrag = hauptBetrag + optimierungBetrag;
 
     return {
-      grundfoerderung,
+      grundfoerderung: hauptfoerderung,
       klimabonus,
       einkommensbonus,
       effizienzbonus,
-      gesamtProzent,
-      foerderBetrag,
-      eigenanteil: investition[0] - foerderBetrag
+      optimierungFoerderung,
+      gesamtProzent: hauptProzent,
+      foerderBetrag: gesamtBetrag,
+      eigenanteil: investition[0] - gesamtBetrag,
+      hatOptimierungen: hatHauptwaermeerzeuger && selectedOptimierungen.length > 0
     };
   };
 
@@ -280,59 +311,128 @@ export default function FoerderrechnerPage() {
                     <CardContent className="space-y-6">
                       <div>
                         <Label className="text-base font-semibold mb-3 block">
-                          Welche Heizung planen Sie?
+                          Welche Maßnahmen planen Sie? (Mehrfachauswahl möglich)
                         </Label>
-                        <RadioGroup value={heizungstyp} onValueChange={setHeizungstyp} className="space-y-2">
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="waermepumpe" id="waermepumpe" data-testid="radio-waermepumpe" />
+                        <p className="text-xs text-muted-foreground mb-3">
+                          Wählen Sie einen Hauptwärmeerzeuger und optional Optimierungsmaßnahmen
+                        </p>
+                        <div className="space-y-2">
+                          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider pt-2">Hauptwärmeerzeuger</p>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("waermepumpe") ? "bg-green-500/10 border-green-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("waermepumpe")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("waermepumpe")} 
+                              id="waermepumpe" 
+                              data-testid="checkbox-waermepumpe"
+                              onCheckedChange={() => toggleMassnahme("waermepumpe")}
+                            />
                             <Label htmlFor="waermepumpe" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Leaf className="w-4 h-4 text-green-500" />
                               Wärmepumpe (Luft, Erde, Wasser)
                             </Label>
+                            <Badge variant="secondary" className="text-xs">bis 70%</Badge>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="pellet" id="pellet" data-testid="radio-pellet" />
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("pellet") ? "bg-orange-500/10 border-orange-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("pellet")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("pellet")} 
+                              id="pellet" 
+                              data-testid="checkbox-pellet"
+                              onCheckedChange={() => toggleMassnahme("pellet")}
+                            />
                             <Label htmlFor="pellet" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Flame className="w-4 h-4 text-orange-500" />
                               Pelletheizung / Biomasse
                             </Label>
+                            <Badge variant="secondary" className="text-xs">bis 70%</Badge>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="solarthermie" id="solarthermie" data-testid="radio-solarthermie" />
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("solarthermie") ? "bg-yellow-500/10 border-yellow-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("solarthermie")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("solarthermie")} 
+                              id="solarthermie" 
+                              data-testid="checkbox-solarthermie"
+                              onCheckedChange={() => toggleMassnahme("solarthermie")}
+                            />
                             <Label htmlFor="solarthermie" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Leaf className="w-4 h-4 text-yellow-500" />
                               Solarthermie
                             </Label>
+                            <Badge variant="secondary" className="text-xs">bis 25%</Badge>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="brennstoffzelle" id="brennstoffzelle" data-testid="radio-brennstoffzelle" />
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("brennstoffzelle") ? "bg-purple-500/10 border-purple-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("brennstoffzelle")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("brennstoffzelle")} 
+                              id="brennstoffzelle" 
+                              data-testid="checkbox-brennstoffzelle"
+                              onCheckedChange={() => toggleMassnahme("brennstoffzelle")}
+                            />
                             <Label htmlFor="brennstoffzelle" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Flame className="w-4 h-4 text-purple-500" />
                               Brennstoffzelle
                             </Label>
+                            <Badge variant="secondary" className="text-xs">bis 70%</Badge>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="fernwaerme" id="fernwaerme" data-testid="radio-fernwaerme" />
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("fernwaerme") ? "bg-blue-500/10 border-blue-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("fernwaerme")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("fernwaerme")} 
+                              id="fernwaerme" 
+                              data-testid="checkbox-fernwaerme"
+                              onCheckedChange={() => toggleMassnahme("fernwaerme")}
+                            />
                             <Label htmlFor="fernwaerme" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Home className="w-4 h-4 text-blue-500" />
                               Fernwärme-Anschluss
                             </Label>
+                            <Badge variant="secondary" className="text-xs">bis 70%</Badge>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="fussbodenheizung" id="fussbodenheizung" data-testid="radio-fussbodenheizung" />
+                          
+                          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider pt-4">Optimierungsmaßnahmen</p>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("fussbodenheizung") ? "bg-red-500/10 border-red-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("fussbodenheizung")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("fussbodenheizung")} 
+                              id="fussbodenheizung" 
+                              data-testid="checkbox-fussbodenheizung"
+                              onCheckedChange={() => toggleMassnahme("fussbodenheizung")}
+                            />
                             <Label htmlFor="fussbodenheizung" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Thermometer className="w-4 h-4 text-red-500" />
-                              Fußbodenheizung (Optimierung)
+                              Fußbodenheizung
                             </Label>
+                            <Badge variant="secondary" className="text-xs">20%</Badge>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
-                            <RadioGroupItem value="lueftung" id="lueftung" data-testid="radio-lueftung" />
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${selectedMassnahmen.includes("lueftung") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleMassnahme("lueftung")}
+                          >
+                            <Checkbox 
+                              checked={selectedMassnahmen.includes("lueftung")} 
+                              id="lueftung" 
+                              data-testid="checkbox-lueftung"
+                              onCheckedChange={() => toggleMassnahme("lueftung")}
+                            />
                             <Label htmlFor="lueftung" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Wind className="w-4 h-4 text-cyan-500" />
-                              Lüftungsanlage mit Wärmerückgewinnung
+                              Lüftungsanlage mit WRG
                             </Label>
+                            <Badge variant="secondary" className="text-xs">20%</Badge>
                           </div>
-                        </RadioGroup>
+                        </div>
                       </div>
 
                       <div>
@@ -447,6 +547,15 @@ export default function FoerderrechnerPage() {
                               Einkommensbonus
                             </span>
                             <Badge variant="secondary">+{bafaErgebnis.einkommensbonus}%</Badge>
+                          </div>
+                        )}
+                        {bafaErgebnis.hatOptimierungen && bafaErgebnis.optimierungFoerderung > 0 && (
+                          <div className="flex justify-between items-center pt-2 border-t">
+                            <span className="flex items-center gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+                              Optimierungsmaßnahmen
+                            </span>
+                            <Badge variant="secondary" className="bg-cyan-500/20">+{bafaErgebnis.optimierungFoerderung}%</Badge>
                           </div>
                         )}
                       </div>
