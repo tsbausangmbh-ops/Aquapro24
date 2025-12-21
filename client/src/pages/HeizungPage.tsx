@@ -34,34 +34,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Heizung installieren München",
-    description: "Gasheizung, Wärmepumpe, Pelletheizung einbauen. Von der Planung über Förderantrag bis Inbetriebnahme. Marken: Viessmann, Vaillant, Buderus, Wolf.",
-    features: ["Gasheizung", "Wärmepumpe", "Pelletheizung", "Hybridheizung"]
+    title: "Heizung reparieren München ab 154€",
+    description: "Heizung ausgefallen, Therme defekt, Brenner kaputt? 24h Notdienst, 45-60 Min. vor Ort. Viessmann, Vaillant, Buderus, Wolf, Junkers – alle Marken.",
+    features: ["24/7 Notdienst", "Alle Hersteller", "45-60 Min.", "Festpreis"]
   },
   {
-    title: "Heizung warten München",
-    description: "Jahreswartung ab 154€: Brenner reinigen, Filter tauschen, Abgasmessung, Sicherheitscheck. Spart bis 15% Heizkosten.",
-    features: ["Jahreswartung", "Brennereinstellung", "Abgasmessung", "Kesselreinigung"]
+    title: "Heizungswartung München ab 154€",
+    description: "Jahreswartung komplett: Brenner reinigen, Filter wechseln, Abgasmessung, Druck prüfen, Sicherheitscheck. Spart bis 15% Heizkosten.",
+    features: ["Brennereinstellung", "Abgasmessung", "Kesselreinigung", "Protokoll"]
   },
   {
-    title: "Heizung reparieren München",
-    description: "Heizung ausgefallen? 24h Notdienst bei Heizungsausfall. Therme defekt, Brenner kaputt, Pumpe defekt. Alle Marken vor Ort repariert.",
-    features: ["24/7 Notdienst", "Alle Hersteller", "Ersatzteilservice", "Schnelle Hilfe"]
+    title: "Wärmepumpe München bis 70% Förderung",
+    description: "Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm, Wolf CHA. BAFA-Antrag komplett übernommen. Ab 18.000€ nach Förderung.",
+    features: ["Bis 70% BAFA", "Förderantrag", "Energieberatung", "5 Jahre Garantie"]
   },
   {
-    title: "Heizung modernisieren München",
-    description: "Alte Heizung austauschen mit bis zu 70% BAFA-Förderung. Energieberatung, Förderantrag, Installation aus einer Hand.",
-    features: ["Bis 70% Förderung", "Energieberatung", "CO2-Einsparung", "Kostensenkung"]
+    title: "Gasheizung erneuern ab 8.500€",
+    description: "Alte Gasheizung tauschen: Viessmann Vitodens, Vaillant ecoTEC, Buderus Logamax, Wolf CGB-2. Inkl. Demontage, Anschluss, Inbetriebnahme.",
+    features: ["Viessmann", "Vaillant", "Buderus", "Förderprüfung"]
   }
 ];
 
 const benefits = [
-  "24/7 Heizung Notdienst München verfügbar",
-  "Alle Marken: Viessmann, Vaillant, Buderus, Wolf",
-  "Festpreis vor Arbeitsbeginn garantiert",
-  "BAFA-Förderberatung bis 70% kostenlos",
-  "Energieeffizienz-Check vor Heizungstausch",
-  "Wartungsverträge mit Notfall-Priorität"
+  "Heizungsreparatur München ab 154€/Std. – Festpreis garantiert",
+  "24/7 Notdienst: 45-60 Minuten vor Ort bei Heizungsausfall",
+  "Alle Marken: Viessmann, Vaillant, Buderus, Wolf, Junkers",
+  "Wärmepumpe mit bis zu 70% BAFA-Förderung 2025",
+  "Wartung ab 154€ spart bis 15% Heizkosten jährlich",
+  "2.800+ zufriedene Kunden seit 2005 in München"
 ];
 
 const faqItems = [

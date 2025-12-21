@@ -32,34 +32,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Badsanierung komplett München",
-    description: "Komplettumbau in 2-4 Wochen: Abriss, Trockenbau, Fliesen, Sanitär, Elektrik. Alle Gewerke aus einer Hand koordiniert.",
-    features: ["Ab 16.000€", "2-4 Wochen", "Festpreis", "5 Jahre Garantie"]
+    title: "Badsanierung komplett ab 16.000€",
+    description: "Komplettumbau 6-8m² in 2-3 Wochen: Abriss, Trockenbau, Fliesen, Sanitär, Elektrik. Villeroy & Boch, Duravit, Grohe. 3D-Planung gratis.",
+    features: ["2-3 Wochen", "Festpreis", "Alle Gewerke", "5 Jahre Garantie"]
   },
   {
-    title: "Bad teilsanieren München",
-    description: "Dusche erneuern, WC austauschen, neue Armaturen montieren. Schnelle Modernisierung ohne Komplettsanierung.",
-    features: ["Ab 4.500€", "1-5 Tage", "Minimal-Umbau", "Sofort nutzbar"]
+    title: "Bad teilsanieren ab 4.500€",
+    description: "Dusche erneuern, WC austauschen, neue Armaturen montieren, Fliesen partiell erneuern. Schnelle Modernisierung in 3-5 Tagen.",
+    features: ["3-5 Tage", "Minimal-Umbau", "Sofort nutzbar", "Festpreis"]
   },
   {
-    title: "Barrierefreies Bad München",
-    description: "Bodengleiche Dusche einbauen, Haltegriffe montieren, rutschfeste Fliesen verlegen. KfW-Förderung bis 6.250€ möglich.",
-    features: ["Ab 20.000€", "KfW-Förderung", "Zukunftssicher", "Stolperfrei"]
+    title: "Barrierefreies Bad ab 20.000€",
+    description: "Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen, erhöhtes WC. KfW-Förderung bis 6.250€. Zukunftssicher für alle Altersgruppen.",
+    features: ["KfW-Förderung", "Stolperfrei", "Unterfahrbar", "Zukunftssicher"]
   },
   {
-    title: "Luxusbad München Premium",
-    description: "Freistehende Badewanne, XXL-Regendusche, Fußbodenheizung, LED-Beleuchtung. Marken: Villeroy & Boch, Duravit, Keuco.",
-    features: ["Ab 28.000€", "Designermarken", "Freistehende Wanne", "Regendusche XXL"]
+    title: "Luxusbad Premium ab 28.000€",
+    description: "Freistehende Badewanne (Kaldewei, Bette), XXL-Regendusche (Hansgrohe Raindance), Fußbodenheizung, LED-Spiegelschrank.",
+    features: ["Villeroy & Boch", "Duravit", "Hansgrohe", "Freistehende Wanne"]
   }
 ];
 
 const benefits = [
-  "Kostenlose Beratung vor Ort in München",
-  "3D-Badplanung mit Visualisierung inklusive",
-  "Festpreis vor Sanierungsbeginn garantiert",
-  "Alle Gewerke aus einer Hand koordiniert",
-  "5 Jahre Gewährleistung auf alle Arbeiten",
-  "Termintreue mit schriftlicher Zusage"
+  "Badsanierung München ab 16.000€ – Festpreis garantiert",
+  "3D-Badplanung mit Visualisierung kostenlos inklusive",
+  "Alle Gewerke (Sanitär, Fliesen, Elektrik) aus einer Hand",
+  "Villeroy & Boch, Duravit, Grohe, Hansgrohe, Geberit",
+  "Barrierefreies Bad ab 20.000€ mit KfW-Förderung",
+  "847+ Bäder saniert seit 2005, 5 Jahre Garantie"
 ];
 
 const faqItems = [

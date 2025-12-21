@@ -38,43 +38,43 @@ export default function SanitaerPage() {
   const services = [
     {
       icon: Droplets,
-      title: "Wasserinstallation München",
-      description: "Trinkwasserleitungen verlegen, Wasseranschlüsse erneuern, Absperrhähne einbauen. Kupfer, Edelstahl oder Kunststoff nach DIN-Norm."
+      title: "Wasserinstallation München ab 92€",
+      description: "Trinkwasserleitungen verlegen (Kupfer, Edelstahl, PE-X), Wasseranschlüsse erneuern, Absperrhähne einbauen, Zirkulationspumpe installieren. DIN 1988 konform."
     },
     {
       icon: ShowerHead,
-      title: "Sanitärobjekte montieren",
-      description: "WC austauschen, Waschbecken montieren, Dusche einbauen, Badewanne anschließen. Alle Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch."
+      title: "WC austauschen München ab 280€",
+      description: "Toilette montieren, Waschbecken einbauen, Dusche anschließen, Badewanne installieren. Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit."
     },
     {
       icon: PipetteIcon,
-      title: "Abfluss & Rohrreinigung",
-      description: "Verstopfung lösen, Abflussrohr reinigen, Kanalreinigung mit Spirale oder Hochdruck. Schnelle Hilfe bei WC verstopft oder Dusche läuft nicht ab."
+      title: "Rohrreinigung München ab 81€",
+      description: "WC verstopft, Dusche läuft nicht ab, Küchenabfluss blockiert? Spirale, Hochdruckspülung, Kamerainspektion. Notdienst 24/7 verfügbar."
     },
     {
       icon: Wrench,
-      title: "Reparatur & Notdienst",
-      description: "Rohrbruch reparieren, undichtes Rohr abdichten, Wasserschaden beheben. 24h Notdienst bei Wasseraustritt und Leckagen in München."
+      title: "Rohrbruch reparieren ab 154€",
+      description: "Wasserrohr geplatzt, Leitung undicht, Wasserschaden? 24h Notdienst München, 45-60 Min. vor Ort. Leck abdichten, Rohr erneuern."
     },
     {
       icon: Gauge,
-      title: "Leckortung & Prüfung",
-      description: "Wasserverlust orten, Druckprüfung durchführen, undichte Stellen finden. Moderne Technik ohne unnötige Aufbrucharbeiten."
+      title: "Leckortung München ab 178€",
+      description: "Wasserverlust orten ohne Aufbruch. Thermografie, Akustik, Druckprüfung. Undichte Stellen finden, Wasserschaden vermeiden."
     },
     {
       icon: Shield,
-      title: "Wartung & Inspektion",
-      description: "Siphon reinigen, Armaturen entkalken, Dichtungen tauschen. Regelmäßige Wartung verhindert teure Reparaturen."
+      title: "Wasserhahn wechseln ab 80€",
+      description: "Armatur austauschen, Mischbatterie montieren, tropfenden Wasserhahn reparieren. Grohe, Hansgrohe, Blanco. Schnelle Termine."
     }
   ];
 
   const benefits = [
-    "Klempner München mit 20+ Jahren Erfahrung im Partnernetzwerk",
-    "Festpreis vor Arbeitsbeginn ohne versteckte Kosten",
-    "Schnelle Termine oft am selben Tag verfügbar",
-    "Markenprodukte von Grohe, Hansgrohe, Geberit verbaut",
-    "Saubere Arbeit mit Bodenschutz und Abdeckfolie",
-    "2 Jahre Gewährleistung auf Sanitärarbeiten"
+    "Sanitär München ab 92€/Std. – Festpreis vor Arbeitsbeginn",
+    "24/7 Notdienst: 45-60 Minuten vor Ort bei Rohrbruch",
+    "Alle Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch",
+    "Rohrreinigung ab 81€, WC austauschen ab 280€",
+    "2.800+ zufriedene Kunden seit 2005 in München",
+    "2-5 Jahre Gewährleistung auf alle Sanitärarbeiten"
   ];
 
   const faqItems = [

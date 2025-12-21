@@ -35,34 +35,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Luft-Wasser-Wärmepumpe München",
-    description: "Wärmepumpe installieren in 2-3 Tagen. Nutzt Außenluft zum Heizen. Marken: Vaillant aroTHERM, Viessmann Vitocal, Bosch Compress, Wolf CHA.",
-    features: ["Ab 12.000€", "2-3 Tage Montage", "Bis 70% Förderung", "Ideal für Altbau"]
+    title: "Luft-Wasser-Wärmepumpe ab 12.000€",
+    description: "Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm, Wolf CHA. Installation in 2-3 Tagen, bis 70% BAFA-Förderung. Ideal für Münchner Altbauten.",
+    features: ["2-3 Tage Montage", "Bis 70% Förderung", "COP bis 4.5", "Förderantrag gratis"]
   },
   {
-    title: "Erdwärmepumpe München",
-    description: "Sole-Wasser-Wärmepumpe mit Erdsonde oder Flächenkollektor. COP bis 5.0 für maximale Effizienz. Auch zum Kühlen im Sommer geeignet.",
-    features: ["COP bis 5.0", "Extrem leise", "30+ Jahre Lebensdauer", "Passive Kühlung"]
+    title: "Erdwärmepumpe München ab 18.000€",
+    description: "Sole-Wasser mit Tiefenbohrung oder Flächenkollektor. COP bis 5.0, passive Kühlung im Sommer. Viessmann Vitocal 300-G, Vaillant geoTHERM.",
+    features: ["COP bis 5.0", "30+ Jahre", "Passive Kühlung", "Wartungsarm"]
   },
   {
-    title: "Wärmepumpe warten München",
-    description: "Jahreswartung ab 249€: Kältemittelkreis prüfen, Filter reinigen, Verdampfer kontrollieren. Erhält Herstellergarantie und spart Stromkosten.",
-    features: ["Ab 249€/Jahr", "Inkl. Kältemittel", "Störungsfreier Betrieb", "Garantieerhalt"]
+    title: "Wärmepumpe Wartung ab 249€",
+    description: "Jahreswartung komplett: Kältemittel prüfen, Filter reinigen, Verdampfer kontrollieren, Protokoll. Erhält 5 Jahre Herstellergarantie.",
+    features: ["Inkl. Protokoll", "Garantieerhalt", "15% Effizienz", "Störungsfrei"]
   },
   {
-    title: "BAFA Förderantrag München",
-    description: "Bis 70% Wärmepumpen-Förderung sichern: 30% Basis + 30% Einkommensbonus + 20% Geschwindigkeitsbonus. Antragstellung komplett übernommen.",
-    features: ["Kostenlos", "Bis 70% Zuschuss", "BAFA + KfW", "Schnelle Bearbeitung"]
+    title: "BAFA/KfW Förderung bis 70%",
+    description: "30% Grundförderung + 30% Einkommensbonus + 20% Geschwindigkeitsbonus + 5% Effizienzbonus. Komplette Antragstellung übernommen.",
+    features: ["Kostenlos", "Bis 70% Zuschuss", "BAFA + KfW", "4-6 Wochen Bearbeitung"]
   }
 ];
 
 const benefits = [
-  "Bis 70% BAFA-Förderung für Wärmepumpe 2025",
-  "Bis 50% Heizkosten sparen gegenüber Gas",
-  "CO2-neutral heizen ohne fossile Brennstoffe",
-  "Unabhängig von Gas- und Ölpreisen",
-  "Wertsteigerung Ihrer Immobilie in München",
-  "Zertifizierter Wärmepumpen-Fachbetrieb"
+  "Wärmepumpe München ab 12.000€ – bis 70% BAFA-Förderung 2025",
+  "Viessmann, Vaillant, Buderus, Wolf – alle Marken installiert",
+  "Bis 50% Heizkosten sparen gegenüber Gas/Öl dauerhaft",
+  "CO2-neutral heizen, keine CO2-Steuer, unabhängig von Gaspreisen",
+  "320+ Wärmepumpen in München installiert seit 2005",
+  "5 Jahre Garantie, kompletter Förderantrag kostenlos"
 ];
 
 const faqItems = [
