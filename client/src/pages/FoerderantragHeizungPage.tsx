@@ -160,7 +160,7 @@ export default function FoerderantragHeizungPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Förderantrag Heizung München: Wärmepumpe, Fußbodenheizung & Lüftung
               </h1>
-              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+              <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Förderung</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Förderung</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Lüftungsanlage Förderung</span>

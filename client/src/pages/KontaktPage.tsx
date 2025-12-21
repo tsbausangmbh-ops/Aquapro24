@@ -126,7 +126,7 @@ export default function KontaktPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 Kontakt AquaPro24 München – Kostenlose Beratung
               </h1>
-              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+              <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Kontakt</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Anfrage</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kostenvoranschlag anfordern</span>

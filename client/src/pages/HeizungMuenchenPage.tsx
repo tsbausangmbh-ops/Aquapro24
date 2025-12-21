@@ -119,7 +119,7 @@ export default function HeizungMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Heizung München – Reparatur, Wartung & Modernisierung Profi
               </h1>
-              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+              <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsreparatur München</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Wartung</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsmodernisierung</span>

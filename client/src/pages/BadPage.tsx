@@ -145,7 +145,7 @@ export default function BadPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Badsanierung München – Komplettumbau vom Profi
               </h1>
-              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+              <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad sanieren komplett</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badezimmer renovieren</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad modernisieren</span>
