@@ -34,6 +34,7 @@ const BadsanierungMuenchenPage = lazy(() => import("@/pages/BadsanierungMuenchen
 const WaermepumpeMuenchenPage = lazy(() => import("@/pages/WaermepumpeMuenchenPage"));
 const FussbodenheizungMuenchenPage = lazy(() => import("@/pages/FussbodenheizungMuenchenPage"));
 const NotdienstMuenchenPage = lazy(() => import("@/pages/NotdienstMuenchenPage"));
+const StadtteilPage = lazy(() => import("@/pages/StadtteilPage"));
 
 function PageLoader() {
   return (
@@ -75,6 +76,18 @@ function Router() {
         <Route path="/waermepumpe-muenchen" component={WaermepumpeMuenchenPage} />
         <Route path="/fussbodenheizung-muenchen" component={FussbodenheizungMuenchenPage} />
         <Route path="/notdienst-muenchen" component={NotdienstMuenchenPage} />
+        <Route path="/schwabing">{() => <StadtteilPage stadtteil="schwabing" />}</Route>
+        <Route path="/bogenhausen">{() => <StadtteilPage stadtteil="bogenhausen" />}</Route>
+        <Route path="/sendling">{() => <StadtteilPage stadtteil="sendling" />}</Route>
+        <Route path="/pasing">{() => <StadtteilPage stadtteil="pasing" />}</Route>
+        <Route path="/maxvorstadt">{() => <StadtteilPage stadtteil="maxvorstadt" />}</Route>
+        <Route path="/haidhausen">{() => <StadtteilPage stadtteil="haidhausen" />}</Route>
+        <Route path="/neuhausen">{() => <StadtteilPage stadtteil="neuhausen" />}</Route>
+        <Route path="/laim">{() => <StadtteilPage stadtteil="laim" />}</Route>
+        <Route path="/giesing">{() => <StadtteilPage stadtteil="giesing" />}</Route>
+        <Route path="/trudering">{() => <StadtteilPage stadtteil="trudering" />}</Route>
+        <Route path="/milbertshofen">{() => <StadtteilPage stadtteil="milbertshofen" />}</Route>
+        <Route path="/moosach">{() => <StadtteilPage stadtteil="moosach" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </Suspense>
