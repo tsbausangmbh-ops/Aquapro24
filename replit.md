@@ -18,6 +18,29 @@ A professional German-language website for KSHW München (Inhaber: Mustafa Sakar
 
 Preferred communication style: Simple, everyday language.
 
+## Recent SEO Updates (December 2025)
+
+### H1 Optimization & Keyword Batches
+All 8 main service pages now feature:
+- **Action-oriented H1 headings** following pattern: "Main Keyword München – Benefit/Action"
+- **30 longtail keywords per page** displayed as keyword batch in Hero section (240+ total new longtails)
+- Keywords include: action verbs, service types, Munich districts, brand names
+
+**Updated H1s:**
+1. Sanitär: "Klempner München – Sanitär Notdienst 24/7"
+2. Armaturen: "Wasserhahn wechseln München – Armaturen Montage & Reparatur"
+3. Rohrreinigung: "Rohrreinigung München – Abfluss verstopft Notdienst 24/7"
+4. Warmwasser: "Durchlauferhitzer München – Boiler Reparatur & Installation"
+5. Bad: "Badsanierung München – Komplettumbau vom Profi"
+6. Heizung: "Heizung München – Notdienst & Wartung 24/7"
+7. Wärmepumpe: "Wärmepumpe München – bis 70% BAFA Förderung 2025"
+8. Haustechnik: "Haustechnik München – Gas, Wasser, Lüftung komplett"
+
+### Total SEO Coverage
+- 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
+- 500+ keywords across all pages (H1s, H2s, H3s, keyword batches)
+- Complete Schema.org LocalBusiness markup with 25 Munich districts
+
 ## System Architecture
 
 ### Frontend Architecture
