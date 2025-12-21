@@ -21,13 +21,13 @@ export function BackButton() {
   return (
     <Button
       onClick={handleBack}
-      variant="outline"
-      size="icon"
-      className="fixed bottom-6 left-6 z-50 rounded-full shadow-lg bg-background/95 backdrop-blur-sm border-border"
+      variant="default"
+      className="fixed bottom-6 left-6 z-50 rounded-full shadow-xl h-12 px-4 gap-2"
       data-testid="button-back"
       aria-label="Zurück"
     >
       <ArrowLeft className="h-5 w-5" />
+      <span className="font-medium">Zurück</span>
     </Button>
   );
 }
