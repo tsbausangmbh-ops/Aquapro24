@@ -131,6 +131,7 @@ export default function HaustechnikPage() {
         }}
       />
       <Header />
+      <BackButton />
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
@@ -357,7 +358,6 @@ export default function HaustechnikPage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="haustechnik" />
       </main>
       <Footer />

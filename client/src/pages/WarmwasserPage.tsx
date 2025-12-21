@@ -136,6 +136,7 @@ export default function WarmwasserPage() {
         }}
       />
       <Header />
+      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
@@ -359,7 +360,6 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="warmwasser" />
       </main>
 

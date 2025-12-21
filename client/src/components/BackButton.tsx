@@ -16,9 +16,9 @@ export default function BackButton() {
         <div className="flex justify-center">
           <Button
             onClick={handleBack}
-            variant="outline"
+            variant="secondary"
             size="lg"
-            className="gap-2 w-full sm:w-auto max-w-xs sm:max-w-none"
+            className="gap-2 w-full sm:w-auto max-w-xs sm:max-w-none bg-slate-700 text-white hover:bg-slate-800 dark:bg-slate-600 dark:hover:bg-slate-700"
             data-testid="button-back"
           >
             <ArrowLeft className="h-5 w-5" />

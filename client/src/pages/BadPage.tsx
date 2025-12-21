@@ -130,6 +130,7 @@ export default function BadPage() {
         }}
       />
       <Header />
+      <BackButton />
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
@@ -330,7 +331,6 @@ export default function BadPage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="bad" />
       </main>
       <Footer />

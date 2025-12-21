@@ -132,6 +132,7 @@ export default function HeizungPage() {
         }}
       />
       <Header />
+      <BackButton />
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
@@ -329,7 +330,6 @@ export default function HeizungPage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="heizung" />
       </main>
       <Footer />

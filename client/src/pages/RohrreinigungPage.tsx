@@ -145,6 +145,7 @@ export default function RohrreinigungPage() {
         }}
       />
       <Header />
+      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
@@ -369,7 +370,6 @@ export default function RohrreinigungPage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="rohrreinigung" />
       </main>
 

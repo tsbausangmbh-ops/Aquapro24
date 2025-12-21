@@ -24,7 +24,7 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
-import { BackButton } from "@/components/BackButton";
+import BackButton from "@/components/BackButton";
 
 export default function BadsanierungMuenchenPage() {
   const schritte = [
@@ -103,6 +103,7 @@ export default function BadsanierungMuenchenPage() {
         ]}
       />
       <Header />
+      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
@@ -241,7 +242,6 @@ export default function BadsanierungMuenchenPage() {
             }
           ]}
         />
-        <BackButton />
         <TrustBar />
         <ServiceAreas serviceName="Badsanierung"  />
         <RelatedServices currentService="bad" />

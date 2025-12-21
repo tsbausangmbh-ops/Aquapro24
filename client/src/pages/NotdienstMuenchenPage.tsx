@@ -25,7 +25,7 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
-import { BackButton } from "@/components/BackButton";
+import BackButton from "@/components/BackButton";
 
 export default function NotdienstMuenchenPage() {
   const notfaelle = [
@@ -103,6 +103,7 @@ export default function NotdienstMuenchenPage() {
         ]}
       />
       <Header />
+      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
@@ -238,7 +239,6 @@ export default function NotdienstMuenchenPage() {
             }
           ]}
         />
-        <BackButton />
         <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
         <ServiceAreas serviceName="Notdienst"  />

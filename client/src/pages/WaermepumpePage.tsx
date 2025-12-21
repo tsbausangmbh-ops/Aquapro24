@@ -133,6 +133,7 @@ export default function WaermepumpePage() {
         }}
       />
       <Header />
+      <BackButton />
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
@@ -361,7 +362,6 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="waermepumpe" />
       </main>
       <Footer />

@@ -144,6 +144,7 @@ export default function SanitaerPage() {
         }}
       />
       <Header />
+      <BackButton />
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
@@ -384,7 +385,6 @@ export default function SanitaerPage() {
           </div>
         </section>
 
-        <BackButton />
         <RelatedServices currentService="sanitaer" />
       </main>
 
