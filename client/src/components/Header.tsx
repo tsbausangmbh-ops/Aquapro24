@@ -234,6 +234,14 @@ export default function Header() {
                       Förderantrag
                     </Link>
                     <Link
+                      href="/foerderantrag-heizung"
+                      onClick={() => setFoerderungOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      data-testid="nav-foerderantrag-heizung"
+                    >
+                      Förderantrag Heizung
+                    </Link>
+                    <Link
                       href="/foerderrechner"
                       onClick={() => setFoerderungOpen(false)}
                       className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
@@ -364,6 +372,14 @@ export default function Header() {
                 data-testid="nav-mobile-foerderantrag"
               >
                 Förderantrag
+              </Link>
+              <Link
+                href="/foerderantrag-heizung"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-6 py-2 text-sm font-medium text-green-600 hover:text-green-700 hover:bg-green-50 dark:hover:bg-green-950/20 rounded-md transition-colors"
+                data-testid="nav-mobile-foerderantrag-heizung"
+              >
+                Förderantrag Heizung
               </Link>
               <Link
                 href="/foerderrechner"
