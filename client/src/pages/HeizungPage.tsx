@@ -146,9 +146,41 @@ export default function HeizungPage() {
                 <Flame className="w-3 h-3" />
                 Heizung München
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                Heizung München – 24/7 Notdienst & Wartung
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+                Heizung München – Notdienst & Wartung 24/7
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Heizung reparieren</span><span>·</span>
+                <span>Heizung warten</span><span>·</span>
+                <span>Heizung austauschen</span><span>·</span>
+                <span>Heizungsanlage modernisieren</span><span>·</span>
+                <span>Gasheizung installieren</span><span>·</span>
+                <span>Heizkessel tauschen</span><span>·</span>
+                <span>Brenner wechseln</span><span>·</span>
+                <span>Heizung entlüften</span><span>·</span>
+                <span>Thermostat austauschen</span><span>·</span>
+                <span>Heizkörper montieren</span><span>·</span>
+                <span>Fußbodenheizung verlegen</span><span>·</span>
+                <span>Heizungspumpe wechseln</span><span>·</span>
+                <span>Ausdehnungsgefäß tauschen</span><span>·</span>
+                <span>Heizung macht Geräusche</span><span>·</span>
+                <span>Heizung wird nicht warm</span><span>·</span>
+                <span>Heizungsausfall Notdienst</span><span>·</span>
+                <span>Viessmann München</span><span>·</span>
+                <span>Vaillant München</span><span>·</span>
+                <span>Buderus München</span><span>·</span>
+                <span>Wolf Heizung</span><span>·</span>
+                <span>Heizung Schwabing</span><span>·</span>
+                <span>Heizung Bogenhausen</span><span>·</span>
+                <span>Heizung Sendling</span><span>·</span>
+                <span>Heizung Pasing</span><span>·</span>
+                <span>Heizung Maxvorstadt</span><span>·</span>
+                <span>Heizung Haidhausen</span><span>·</span>
+                <span>Heizung Neuhausen</span><span>·</span>
+                <span>Heizung Trudering</span><span>·</span>
+                <span>Heizungswartung ab 154€</span><span>·</span>
+                <span>Festpreis Heizung München</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
                 unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.

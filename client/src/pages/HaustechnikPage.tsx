@@ -145,9 +145,41 @@ export default function HaustechnikPage() {
                 <Settings className="w-3 h-3" />
                 Haustechnik München
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                Haustechnik München – Komplettservice aus einer Hand
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+                Haustechnik München – Gas, Wasser, Lüftung komplett
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Gasleitung verlegen</span><span>·</span>
+                <span>Gasanschluss installieren</span><span>·</span>
+                <span>Gasherd anschließen</span><span>·</span>
+                <span>Gasgerät montieren</span><span>·</span>
+                <span>Gasinstallation prüfen</span><span>·</span>
+                <span>Lüftungsanlage einbauen</span><span>·</span>
+                <span>KWL installieren</span><span>·</span>
+                <span>Wohnraumlüftung montieren</span><span>·</span>
+                <span>Abluftanlage installieren</span><span>·</span>
+                <span>Dunstabzug anschließen</span><span>·</span>
+                <span>Smart Home Heizung</span><span>·</span>
+                <span>Thermostat programmieren</span><span>·</span>
+                <span>Wasserleitung verlegen</span><span>·</span>
+                <span>Wasserzähler einbauen</span><span>·</span>
+                <span>Druckminderer installieren</span><span>·</span>
+                <span>Enthärtungsanlage einbauen</span><span>·</span>
+                <span>Haustechnik Schwabing</span><span>·</span>
+                <span>Haustechnik Bogenhausen</span><span>·</span>
+                <span>Haustechnik Sendling</span><span>·</span>
+                <span>Haustechnik Pasing</span><span>·</span>
+                <span>Haustechnik Maxvorstadt</span><span>·</span>
+                <span>Haustechnik Haidhausen</span><span>·</span>
+                <span>Haustechnik Neuhausen</span><span>·</span>
+                <span>Haustechnik Trudering</span><span>·</span>
+                <span>Gebäudetechnik München</span><span>·</span>
+                <span>TGA Planung</span><span>·</span>
+                <span>Haustechnik Neubau</span><span>·</span>
+                <span>Haustechnik Sanierung</span><span>·</span>
+                <span>zertifizierter Gasinstallateur</span><span>·</span>
+                <span>Festpreis Haustechnik</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Mehrere Handwerker koordinieren? Unterschiedliche Ansprechpartner?</strong> Das 
                 kostet Zeit, Nerven und oft auch mehr Geld als nötig.

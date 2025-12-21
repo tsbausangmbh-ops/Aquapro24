@@ -151,9 +151,41 @@ export default function ArmaturenPage() {
                 <Droplets className="w-3 h-3" />
                 Armaturen-Service München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Armaturen & Wasserhahn austauschen München – Montage & Reparatur
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Wasserhahn wechseln München – Armaturen Montage & Reparatur
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Wasserhahn austauschen</span><span>·</span>
+                <span>Mischbatterie wechseln</span><span>·</span>
+                <span>Armatur montieren</span><span>·</span>
+                <span>Wasserhahn tropft reparieren</span><span>·</span>
+                <span>Küchenarmatur einbauen</span><span>·</span>
+                <span>Badarmatur installieren</span><span>·</span>
+                <span>Thermostatarmatur montieren</span><span>·</span>
+                <span>Duscharmatur wechseln</span><span>·</span>
+                <span>Waschtischarmatur austauschen</span><span>·</span>
+                <span>Einhebelmischer reparieren</span><span>·</span>
+                <span>Kartusche tauschen</span><span>·</span>
+                <span>Perlator wechseln</span><span>·</span>
+                <span>Dichtung erneuern</span><span>·</span>
+                <span>Unterputzarmatur einbauen</span><span>·</span>
+                <span>Regendusche installieren</span><span>·</span>
+                <span>Grohe Armatur München</span><span>·</span>
+                <span>Hansgrohe Montage</span><span>·</span>
+                <span>Blanco Küchenarmatur</span><span>·</span>
+                <span>Hansa Armatur Service</span><span>·</span>
+                <span>Armatur Schwabing</span><span>·</span>
+                <span>Wasserhahn Bogenhausen</span><span>·</span>
+                <span>Armatur Sendling</span><span>·</span>
+                <span>Wasserhahn Pasing</span><span>·</span>
+                <span>Armatur Maxvorstadt</span><span>·</span>
+                <span>Wasserhahn Haidhausen</span><span>·</span>
+                <span>Armatur Neuhausen</span><span>·</span>
+                <span>Smart Armatur berührungslos</span><span>·</span>
+                <span>Wasserspararmatur</span><span>·</span>
+                <span>Niederdruck Armatur</span><span>·</span>
+                <span>Festpreis Armaturenmontage</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Wasserhahn tropft? Neue Armatur gekauft und brauchen Hilfe beim Einbau?</strong> 
                 Wir sind Ihre Spezialisten für alle Armaturenarbeiten in München.

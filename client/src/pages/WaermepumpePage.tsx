@@ -147,9 +147,41 @@ export default function WaermepumpePage() {
                 <Leaf className="w-3 h-3" />
                 Wärmepumpe München
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                Wärmepumpe München – bis 70% Förderung
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+                Wärmepumpe München – bis 70% BAFA Förderung 2025
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Wärmepumpe installieren</span><span>·</span>
+                <span>Wärmepumpe einbauen</span><span>·</span>
+                <span>Wärmepumpe nachrüsten</span><span>·</span>
+                <span>Luft-Wasser-Wärmepumpe</span><span>·</span>
+                <span>Erdwärmepumpe installieren</span><span>·</span>
+                <span>Sole-Wasser-Wärmepumpe</span><span>·</span>
+                <span>Wärmepumpe Altbau</span><span>·</span>
+                <span>Gasheizung auf Wärmepumpe umstellen</span><span>·</span>
+                <span>Heizung modernisieren</span><span>·</span>
+                <span>BAFA Förderung beantragen</span><span>·</span>
+                <span>KfW Förderung Heizung</span><span>·</span>
+                <span>Hybrid-Wärmepumpe</span><span>·</span>
+                <span>Wärmepumpe mit Photovoltaik</span><span>·</span>
+                <span>klimaneutral heizen</span><span>·</span>
+                <span>Heizkosten sparen</span><span>·</span>
+                <span>CO2-neutral heizen</span><span>·</span>
+                <span>Vaillant Wärmepumpe</span><span>·</span>
+                <span>Viessmann Wärmepumpe</span><span>·</span>
+                <span>Bosch Wärmepumpe</span><span>·</span>
+                <span>Wärmepumpe Schwabing</span><span>·</span>
+                <span>Wärmepumpe Bogenhausen</span><span>·</span>
+                <span>Wärmepumpe Sendling</span><span>·</span>
+                <span>Wärmepumpe Pasing</span><span>·</span>
+                <span>Wärmepumpe Maxvorstadt</span><span>·</span>
+                <span>Wärmepumpe Haidhausen</span><span>·</span>
+                <span>Wärmepumpe Neuhausen</span><span>·</span>
+                <span>Wärmepumpe Trudering</span><span>·</span>
+                <span>Wärmepumpe Kosten</span><span>·</span>
+                <span>Wärmepumpe Beratung</span><span>·</span>
+                <span>Festpreis Wärmepumpe</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 
                 klimaneutral und sparen Sie dabei bis zu 50% Ihrer Heizkosten.

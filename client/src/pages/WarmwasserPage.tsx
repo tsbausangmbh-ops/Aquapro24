@@ -151,9 +151,41 @@ export default function WarmwasserPage() {
                 <Flame className="w-3 h-3" />
                 Warmwasser-Service München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Durchlauferhitzer & Boiler München – Installation & Reparatur
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Durchlauferhitzer München – Boiler Reparatur & Installation
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Durchlauferhitzer installieren</span><span>·</span>
+                <span>Durchlauferhitzer austauschen</span><span>·</span>
+                <span>Durchlauferhitzer reparieren</span><span>·</span>
+                <span>Boiler einbauen</span><span>·</span>
+                <span>Boiler wechseln</span><span>·</span>
+                <span>Boiler defekt reparieren</span><span>·</span>
+                <span>Warmwasserspeicher montieren</span><span>·</span>
+                <span>Warmwasserspeicher austauschen</span><span>·</span>
+                <span>kein warmes Wasser</span><span>·</span>
+                <span>Warmwasser Notdienst</span><span>·</span>
+                <span>Elektroboiler installieren</span><span>·</span>
+                <span>Gas-Durchlauferhitzer</span><span>·</span>
+                <span>Untertischspeicher einbauen</span><span>·</span>
+                <span>Kleinspeicher montieren</span><span>·</span>
+                <span>Zirkulationspumpe einbauen</span><span>·</span>
+                <span>Warmwasser-Zirkulation</span><span>·</span>
+                <span>Entkalkung Durchlauferhitzer</span><span>·</span>
+                <span>Wartung Warmwasserspeicher</span><span>·</span>
+                <span>Stiebel Eltron München</span><span>·</span>
+                <span>Vaillant Durchlauferhitzer</span><span>·</span>
+                <span>Junkers Boiler</span><span>·</span>
+                <span>AEG Warmwasser</span><span>·</span>
+                <span>Warmwasser Schwabing</span><span>·</span>
+                <span>Boiler Bogenhausen</span><span>·</span>
+                <span>Durchlauferhitzer Sendling</span><span>·</span>
+                <span>Warmwasser Pasing</span><span>·</span>
+                <span>Boiler Maxvorstadt</span><span>·</span>
+                <span>Durchlauferhitzer Haidhausen</span><span>·</span>
+                <span>Warmwasser Neuhausen</span><span>·</span>
+                <span>Festpreis Warmwasser München</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Kein warmes Wasser? Durchlauferhitzer defekt?</strong> Wir wissen, wie unangenehm 
                 das ist - besonders im Winter. Kaltes Duschen macht keinen Spaß.
