@@ -15,7 +15,7 @@ export default function BackButton() {
       onClick={handleBack}
       variant="secondary"
       size="icon"
-      className="fixed left-4 top-20 z-40 rounded-full shadow-lg bg-white dark:bg-slate-800 border border-border hover:bg-muted"
+      className="fixed left-4 top-24 z-[60] rounded-full shadow-xl bg-white dark:bg-slate-800 border-2 border-primary/30 hover:bg-muted hover:border-primary/50"
       data-testid="button-back"
       aria-label="Zurück"
     >
