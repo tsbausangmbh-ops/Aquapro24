@@ -104,18 +104,18 @@ export default function FoerderantragHeizungPage() {
   const kombinationen = [
     {
       titel: "Wärmepumpe + Fußbodenheizung",
-      beschreibung: "Die ideale Kombination für maximale Effizienz und Komfort",
-      foerderung: "Bis 70% auf Wärmepumpe, Fußbodenheizung als Optimierungsmaßnahme"
+      beschreibung: "Die ideale Kombination für maximale Effizienz und Komfort. Fußbodenheizung als Optimierungsmaßnahme förderfähig.",
+      foerderung: "Bis 70%"
     },
     {
       titel: "Wärmepumpe + Lüftung mit WRG",
-      beschreibung: "Kontrollierte Lüftung senkt den Heizbedarf zusätzlich",
-      foerderung: "Kombinierte Förderung für Gesamtsystem möglich"
+      beschreibung: "Kontrollierte Lüftung senkt den Heizbedarf zusätzlich. Kombinierte Förderung möglich.",
+      foerderung: "Bis 70%"
     },
     {
       titel: "Pelletheizung + Solarthermie",
-      beschreibung: "Erneuerbare Energien optimal kombiniert",
-      foerderung: "Separate Förderung für beide Systeme"
+      beschreibung: "Erneuerbare Energien optimal kombiniert. Separate Förderung für beide Systeme.",
+      foerderung: "Bis 70%"
     }
   ];
 
