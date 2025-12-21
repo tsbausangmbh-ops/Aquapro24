@@ -27,7 +27,9 @@ import {
   Users,
   FileText,
   Percent,
-  CreditCard
+  CreditCard,
+  Wind,
+  Thermometer
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
@@ -76,6 +78,10 @@ export default function FoerderrechnerPage() {
       if (gebaeudeAlter === "vor2024") {
         klimabonus = 20;
       }
+    } else if (heizungstyp === "fussbodenheizung") {
+      grundfoerderung = 20;
+    } else if (heizungstyp === "lueftung") {
+      grundfoerderung = 20;
     }
 
     if (einkommen === "unter40000") {
@@ -310,6 +316,20 @@ export default function FoerderrechnerPage() {
                             <Label htmlFor="fernwaerme" className="flex items-center gap-2 cursor-pointer flex-1">
                               <Home className="w-4 h-4 text-blue-500" />
                               Fernwärme-Anschluss
+                            </Label>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
+                            <RadioGroupItem value="fussbodenheizung" id="fussbodenheizung" data-testid="radio-fussbodenheizung" />
+                            <Label htmlFor="fussbodenheizung" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <Thermometer className="w-4 h-4 text-red-500" />
+                              Fußbodenheizung (Optimierung)
+                            </Label>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors">
+                            <RadioGroupItem value="lueftung" id="lueftung" data-testid="radio-lueftung" />
+                            <Label htmlFor="lueftung" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <Wind className="w-4 h-4 text-cyan-500" />
+                              Lüftungsanlage mit Wärmerückgewinnung
                             </Label>
                           </div>
                         </RadioGroup>
