@@ -152,7 +152,7 @@ export default function ArmaturenPage() {
                 Armaturen-Service München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Armaturen Montage & Reparatur München
+                Armaturen & Wasserhahn austauschen München – Montage & Reparatur
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Wasserhahn tropft? Neue Armatur gekauft und brauchen Hilfe beim Einbau?</strong> 

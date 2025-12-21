@@ -119,7 +119,7 @@ export default function SanitaerMuenchenPage() {
                 Sanitär München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Sanitär München – Installation, Reparatur & schnelle Hilfe
+                Sanitärinstallateur München – Klempner für Installation & Reparatur
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 AquaPro24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 

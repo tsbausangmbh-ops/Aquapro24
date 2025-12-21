@@ -119,7 +119,7 @@ export default function NotdienstMuenchenPage() {
                 Notdienst München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Sanitär & Heizung Notdienst München – schnelle Hilfe bei Rohrbruch & Ausfall
+                Klempner Notdienst München 24h – Rohrbruch & Heizungsausfall
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 Bei Rohrbruch, Wasseraustritt oder Heizungsausfall zählt Tempo – aber auch eine saubere 

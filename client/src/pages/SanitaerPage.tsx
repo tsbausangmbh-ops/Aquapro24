@@ -160,7 +160,7 @@ export default function SanitaerPage() {
                 Sanitär-Fachbetrieb München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Sanitärinstallation & Wasserinstallation München
+                Sanitär & Klempner München – Wasserinstallation & Notdienst
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 

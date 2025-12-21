@@ -312,7 +312,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 München {data.name}
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Ihr Installateur in {data.name} - Sanitär, Heizung & Bad
+                Klempner & Installateur {data.name} – Sanitär, Heizung & Bad
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 {data.beschreibung}

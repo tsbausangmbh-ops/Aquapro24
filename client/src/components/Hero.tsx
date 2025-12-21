@@ -33,9 +33,9 @@ export default function Hero() {
           </div>
           
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight text-white mb-6">
-            Sanitär & Wasserinstallation München:{" "}
-            <span className="text-secondary">Ihr Partnernetzwerk</span>{" "}
-            <span className="block mt-1">für Bad, Rohre & Wassertechnik.</span>
+            Klempner & Sanitär München:{" "}
+            <span className="text-secondary">24/7 Notdienst</span>{" "}
+            <span className="block mt-1">für Bad, Heizung & Wasserinstallation</span>
           </h1>
           
           <p className="text-lg text-white/90 mb-4">

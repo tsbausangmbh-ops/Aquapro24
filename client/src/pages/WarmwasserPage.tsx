@@ -152,7 +152,7 @@ export default function WarmwasserPage() {
                 Warmwasser-Service München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Warmwasser, Durchlauferhitzer & Boiler München
+                Durchlauferhitzer & Boiler München – Installation & Reparatur
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Kein warmes Wasser? Durchlauferhitzer defekt?</strong> Wir wissen, wie unangenehm 

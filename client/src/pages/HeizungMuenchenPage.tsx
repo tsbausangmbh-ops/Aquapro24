@@ -119,7 +119,7 @@ export default function HeizungMuenchenPage() {
                 Heizung München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Heizung München – Reparatur, Modernisierung & effiziente Systeme
+                Heizungsinstallateur München – Reparatur, Wartung & Modernisierung
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 Wenn die Heizung streikt oder modernisiert werden soll, zählt vor allem eins: eine Lösung, 

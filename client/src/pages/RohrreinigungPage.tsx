@@ -161,7 +161,7 @@ export default function RohrreinigungPage() {
                 Rohrreinigung München
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Rohrreinigung & Abflussreinigung München
+                Abfluss verstopft München – Rohrreinigung & Kanalreinigung 24h
               </h1>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Abfluss verstopft? Wasser steht in der Dusche oder Spüle?</strong> Das ist nicht nur 
