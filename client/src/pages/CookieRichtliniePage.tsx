@@ -33,7 +33,19 @@ export default function CookieRichtliniePage() {
                 </Badge>
                 <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold text-white">Cookie-Richtlinie</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold text-white">Cookie Richtlinie DSGVO – transparent & sicher</h1>
+              <div className="flex flex-wrap gap-2 mt-4 text-xs text-white/70">
+                <span>Cookie Richtlinie</span><span>·</span>
+                <span>DSGVO konform</span><span>·</span>
+                <span>technische Cookies</span><span>·</span>
+                <span>Session Cookies</span><span>·</span>
+                <span>kein Tracking</span><span>·</span>
+                <span>keine Werbung</span><span>·</span>
+                <span>Einwilligung</span><span>·</span>
+                <span>Speicherdauer</span><span>·</span>
+                <span>Cookie-Einstellungen</span><span>·</span>
+                <span>Datenschutz</span>
+              </div>
             </div>
           </div>
         </section>

@@ -28,7 +28,19 @@ export default function AGBPage() {
                 <FileText className="w-3 h-3" />
                 Rechtliches
               </Badge>
-              <h1 className="text-3xl lg:text-4xl font-bold text-white">Allgemeine Geschäftsbedingungen (AGB)</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold text-white">AGB Sanitär München – Festpreis & Garantie</h1>
+              <div className="flex flex-wrap gap-2 mt-4 text-xs text-white/70">
+                <span>AGB Sanitär</span><span>·</span>
+                <span>Festpreisgarantie</span><span>·</span>
+                <span>2 Jahre Gewährleistung</span><span>·</span>
+                <span>transparente Preise</span><span>·</span>
+                <span>faire Bedingungen</span><span>·</span>
+                <span>Zahlungsmodalitäten</span><span>·</span>
+                <span>Vertragsschluss</span><span>·</span>
+                <span>Haftung</span><span>·</span>
+                <span>Widerrufsrecht</span><span>·</span>
+                <span>Rechtsgrundlage</span>
+              </div>
             </div>
           </div>
         </section>

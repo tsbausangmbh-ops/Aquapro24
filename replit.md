@@ -21,13 +21,14 @@ Preferred communication style: Simple, everyday language.
 ## Recent SEO Updates (December 2025)
 
 ### H1 Optimization & Keyword Batches
-All 8 main service pages now feature:
+All pages now feature:
 - **Action-oriented H1 headings** following pattern: "Main Keyword München – Benefit/Action"
-- **15-30 longtail keywords per page** displayed as keyword batch in Hero section (255+ total new longtails)
-- Keywords include: action verbs, service types, Munich districts, brand names
+- **10-30 longtail keywords per page** displayed as keyword batch in Hero section (500+ total longtails)
+- Keywords include: action verbs, service types, Munich districts, brand names, pricing terms
 
-**Updated H1s:**
-0. Startseite: "Klempner München – Sanitär & Heizung Notdienst 24/7" (15 Keywords)
+**Updated H1s by Category:**
+
+#### Main Service Pages (30 Keywords each):
 1. Sanitär: "Klempner München – Sanitär Notdienst 24/7"
 2. Armaturen: "Wasserhahn wechseln München – Armaturen Montage & Reparatur"
 3. Rohrreinigung: "Rohrreinigung München – Abfluss verstopft Notdienst 24/7"
@@ -37,9 +38,38 @@ All 8 main service pages now feature:
 7. Wärmepumpe: "Wärmepumpe München – bis 70% BAFA Förderung 2025"
 8. Haustechnik: "Haustechnik München – Gas, Wasser, Lüftung komplett"
 
+#### Landing Pages (20 Keywords each):
+1. Notdienst: "Notdienst Sanitär & Heizung München – 24h Soforthilfe"
+2. Sanitär München: "Sanitär München – Klempner & Installateur Notdienst"
+3. Heizung München: "Heizung München – Reparatur, Wartung & Modernisierung Profi"
+4. Fußbodenheizung: "Fußbodenheizung München – Installation & Reparatur Profi"
+5. Wärmepumpe München: "Wärmepumpe München – bis 70% Förderung sichern"
+6. Badsanierung: "Badsanierung München – Komplettumbau aus einer Hand"
+
+#### Utility Pages (20 Keywords each):
+1. Über uns: "AquaPro24 München – Ihr Partnernetzwerk seit 2005"
+2. Termin: "Termin online buchen München – Handwerker Wunschtermin"
+3. Ratgeber: "Ratgeber München – Expertentipps Sanitär & Heizung"
+4. Kontakt: "Kontakt AquaPro24 München – Kostenlose Beratung"
+5. FAQ: "FAQ Sanitär & Heizung München – Preise & Tipps"
+
+#### District Pages (20 Keywords each, dynamic template):
+- Template: "Klempner {Stadtteil} München – Sanitär, Heizung & Notdienst"
+- Applied to: Schwabing, Bogenhausen, Sendling, Pasing, Maxvorstadt, Haidhausen, Neuhausen, Trudering, Laim, Giesing, Moosach, Milbertshofen
+
+#### Legal Pages (10 Keywords each):
+1. Impressum: "Impressum AquaPro24 München – Mustafa Sakar"
+2. AGB: "AGB Sanitär München – Festpreis & Garantie"
+3. Datenschutz: "Datenschutz DSGVO München – Ihre Rechte"
+4. Cookie: "Cookie Richtlinie DSGVO – transparent & sicher"
+
+#### Homepage (15 Keywords):
+- "Klempner München – Sanitär & Heizung Notdienst 24/7"
+
 ### Total SEO Coverage
 - 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
-- 500+ keywords across all pages (H1s, H2s, H3s, keyword batches)
+- 500+ longtail keywords across all pages (H1s, keyword batches)
+- Keyword display: white text 70% opacity, separated by dots (·)
 - Complete Schema.org LocalBusiness markup with 25 Munich districts
 
 ## System Architecture

@@ -32,8 +32,20 @@ export default function Impressum() {
                 Rechtliches
               </Badge>
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
-                Impressum
+                Impressum AquaPro24 München – Mustafa Sakar
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Impressum AquaPro24</span><span>·</span>
+                <span>Inhaber Mustafa Sakar</span><span>·</span>
+                <span>Hardenbergstr. 4</span><span>·</span>
+                <span>80992 München</span><span>·</span>
+                <span>Partnernetzwerk Sanitär</span><span>·</span>
+                <span>Heizung München</span><span>·</span>
+                <span>Kontaktdaten</span><span>·</span>
+                <span>Ansprechpartner</span><span>·</span>
+                <span>Einzelunternehmer</span><span>·</span>
+                <span>Rechtliches</span>
+              </div>
               <p className="text-lg text-white/80">
                 Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
               </p>
