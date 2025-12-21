@@ -118,9 +118,31 @@ export default function SanitaerMuenchenPage() {
                 <Droplets className="w-3 h-3 mr-1" />
                 Sanitär München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Sanitärinstallateur München – Klempner für Installation & Reparatur
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Sanitär München – Klempner Installation & Reparatur Festpreis
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Sanitärinstallateur München</span><span>·</span>
+                <span>Klempner Festpreis</span><span>·</span>
+                <span>Wasserleitung verlegen</span><span>·</span>
+                <span>Armatur montieren</span><span>·</span>
+                <span>WC austauschen</span><span>·</span>
+                <span>Waschtisch einbauen</span><span>·</span>
+                <span>Spülkasten reparieren</span><span>·</span>
+                <span>Leckage beheben</span><span>·</span>
+                <span>Rohrbruch reparieren</span><span>·</span>
+                <span>Abfluss reinigen</span><span>·</span>
+                <span>Sanitär Schwabing</span><span>·</span>
+                <span>Sanitär Bogenhausen</span><span>·</span>
+                <span>Sanitär Sendling</span><span>·</span>
+                <span>Grohe Montage</span><span>·</span>
+                <span>Hansgrohe Installation</span><span>·</span>
+                <span>Geberit Einbau</span><span>·</span>
+                <span>Sanitär Notdienst</span><span>·</span>
+                <span>schnelle Termine</span><span>·</span>
+                <span>transparente Preise</span><span>·</span>
+                <span>geprüfte Fachbetriebe</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 AquaPro24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 
                 Installation bis zur schnellen Reparatur. Ob undichte Armatur, defektes Eckventil, 

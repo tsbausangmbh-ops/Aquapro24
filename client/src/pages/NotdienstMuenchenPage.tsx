@@ -118,9 +118,31 @@ export default function NotdienstMuenchenPage() {
                 <AlertTriangle className="w-3 h-3 mr-1" />
                 Notdienst München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Klempner Notdienst München 24h – Rohrbruch & Heizungsausfall
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Notdienst München 24h – Rohrbruch & Heizungsausfall Soforthilfe
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Rohrbruch Notdienst</span><span>·</span>
+                <span>Wasserrohrbruch beheben</span><span>·</span>
+                <span>Heizungsausfall Soforthilfe</span><span>·</span>
+                <span>Wasserschaden Notfall</span><span>·</span>
+                <span>Leckage orten</span><span>·</span>
+                <span>Abfluss verstopft Notdienst</span><span>·</span>
+                <span>WC verstopft Notfall</span><span>·</span>
+                <span>Heizung ausgefallen</span><span>·</span>
+                <span>Gasgeruch Notfall</span><span>·</span>
+                <span>24 Stunden Klempner</span><span>·</span>
+                <span>Notdienst Schwabing</span><span>·</span>
+                <span>Notdienst Bogenhausen</span><span>·</span>
+                <span>Notdienst Sendling</span><span>·</span>
+                <span>Notdienst Pasing</span><span>·</span>
+                <span>Wochenende Notdienst</span><span>·</span>
+                <span>Feiertag Notdienst</span><span>·</span>
+                <span>Hauptwasserhahn zudrehen</span><span>·</span>
+                <span>Wasserstopp Notfall</span><span>·</span>
+                <span>Sofort Klempner München</span><span>·</span>
+                <span>Festpreis Notdienst</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 Bei Rohrbruch, Wasseraustritt oder Heizungsausfall zählt Tempo – aber auch eine saubere 
                 Einschätzung. AquaPro24 bietet Notdienst-Optionen in München und Umgebung. Damit wir 

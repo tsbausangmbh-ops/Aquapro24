@@ -118,9 +118,31 @@ export default function BadsanierungMuenchenPage() {
                 <Droplets className="w-3 h-3 mr-1" />
                 Badsanierung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Badsanierung München – modern, sauber geplant, stressfrei umgesetzt
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Badsanierung München – Komplettumbau stressfrei & modern
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Bad komplett sanieren</span><span>·</span>
+                <span>Badezimmer renovieren</span><span>·</span>
+                <span>Bad modernisieren</span><span>·</span>
+                <span>Badumbau München</span><span>·</span>
+                <span>barrierefreies Bad</span><span>·</span>
+                <span>bodengleiche Dusche</span><span>·</span>
+                <span>Badewanne zu Dusche</span><span>·</span>
+                <span>Fliesen verlegen</span><span>·</span>
+                <span>WC austauschen</span><span>·</span>
+                <span>Waschtisch montieren</span><span>·</span>
+                <span>Badsanierung Schwabing</span><span>·</span>
+                <span>Badsanierung Bogenhausen</span><span>·</span>
+                <span>Badsanierung Sendling</span><span>·</span>
+                <span>Badsanierung Pasing</span><span>·</span>
+                <span>3D Badplanung</span><span>·</span>
+                <span>Badsanierung Kosten</span><span>·</span>
+                <span>Bad in 2 Wochen</span><span>·</span>
+                <span>alles aus einer Hand</span><span>·</span>
+                <span>KfW Förderung Bad</span><span>·</span>
+                <span>Festpreis Badsanierung</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 Eine Badsanierung ist mehr als neue Fliesen – sie ist Koordination, Timing und saubere 
                 Ausführung. AquaPro24 begleitet Ihre Badsanierung in München von der Planung bis zur 

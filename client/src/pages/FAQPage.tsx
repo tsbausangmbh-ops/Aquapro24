@@ -217,9 +217,31 @@ export default function FAQPage() {
                 <HelpCircle className="w-3 h-3" />
                 20 Häufige Fragen
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
-                Ihre Fragen - Unsere Antworten
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+                FAQ Sanitär & Heizung München – Preise & Tipps
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Klempner Preise München</span><span>·</span>
+                <span>Sanitär Kosten</span><span>·</span>
+                <span>Heizung Reparatur Kosten</span><span>·</span>
+                <span>Notdienst Kosten</span><span>·</span>
+                <span>Festpreisgarantie</span><span>·</span>
+                <span>Badsanierung Preise</span><span>·</span>
+                <span>Wärmepumpe Förderung</span><span>·</span>
+                <span>BAFA Förderung 2025</span><span>·</span>
+                <span>Wasserhahn austauschen Kosten</span><span>·</span>
+                <span>WC Austausch Preis</span><span>·</span>
+                <span>Rohrreinigung Kosten</span><span>·</span>
+                <span>Heizung entlüften Kosten</span><span>·</span>
+                <span>Garantie Handwerker</span><span>·</span>
+                <span>Gewährleistung Sanitär</span><span>·</span>
+                <span>Anfahrt kostenlos</span><span>·</span>
+                <span>Zahlungsarten</span><span>·</span>
+                <span>Ratenzahlung möglich</span><span>·</span>
+                <span>Kostenvoranschlag</span><span>·</span>
+                <span>Terminverfügbarkeit</span><span>·</span>
+                <span>Wochenende Einsatz</span>
+              </div>
               <p className="text-lg text-white/90 mb-6">
                 Hier finden Sie Antworten auf die häufigsten Fragen - mit echten Beispielen 
                 von Kunden, denen wir geholfen haben.

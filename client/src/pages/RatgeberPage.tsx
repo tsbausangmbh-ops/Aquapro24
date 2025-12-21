@@ -264,9 +264,31 @@ export default function RatgeberPage() {
                 <BookOpen className="w-3 h-3" />
                 Ratgeber & Tipps
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
-                Ratgeber - Expertenwissen für Ihr Zuhause
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+                Ratgeber München – Expertentipps Sanitär & Heizung
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Wasserschaden was tun</span><span>·</span>
+                <span>Rohrbruch Erste Hilfe</span><span>·</span>
+                <span>Heizung entlüften</span><span>·</span>
+                <span>Badsanierung planen</span><span>·</span>
+                <span>Wärmepumpe Förderung</span><span>·</span>
+                <span>BAFA Antrag stellen</span><span>·</span>
+                <span>Heizkosten sparen</span><span>·</span>
+                <span>Energieausweis lesen</span><span>·</span>
+                <span>Wartung Heizung</span><span>·</span>
+                <span>Fußbodenheizung Tipps</span><span>·</span>
+                <span>Altbau Sanierung</span><span>·</span>
+                <span>Trinkwasser Hygiene</span><span>·</span>
+                <span>Abfluss reinigen</span><span>·</span>
+                <span>Armatur pflegen</span><span>·</span>
+                <span>Bad modernisieren</span><span>·</span>
+                <span>barrierefreies Bad</span><span>·</span>
+                <span>Kalkflecken entfernen</span><span>·</span>
+                <span>Heizung einstellen</span><span>·</span>
+                <span>Energieberater München</span><span>·</span>
+                <span>Expertentipps Haustechnik</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 
                 Wissen aus über 35 Jahren Erfahrung in München.

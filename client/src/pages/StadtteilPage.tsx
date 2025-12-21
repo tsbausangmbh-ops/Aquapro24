@@ -311,9 +311,31 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <MapPin className="w-3 h-3 mr-1" />
                 München {data.name}
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Klempner & Installateur {data.name} – Sanitär, Heizung & Bad
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Klempner {data.name} München – Sanitär, Heizung & Notdienst
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Installateur {data.name}</span><span>·</span>
+                <span>Klempner vor Ort</span><span>·</span>
+                <span>Sanitär Notdienst</span><span>·</span>
+                <span>Heizung Reparatur</span><span>·</span>
+                <span>Rohrbruch beheben</span><span>·</span>
+                <span>Abfluss verstopft</span><span>·</span>
+                <span>WC austauschen</span><span>·</span>
+                <span>Armatur montieren</span><span>·</span>
+                <span>Badsanierung</span><span>·</span>
+                <span>Wärmepumpe Installation</span><span>·</span>
+                <span>24h Notdienst</span><span>·</span>
+                <span>Festpreis Garantie</span><span>·</span>
+                <span>schnelle Anfahrt</span><span>·</span>
+                <span>geprüfte Fachbetriebe</span><span>·</span>
+                <span>Meisterbetrieb</span><span>·</span>
+                <span>Altbau Experten</span><span>·</span>
+                <span>Neubau Service</span><span>·</span>
+                <span>faire Preise</span><span>·</span>
+                <span>lokaler Service</span><span>·</span>
+                <span>München Süd</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 {data.beschreibung}
               </p>

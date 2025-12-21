@@ -248,10 +248,31 @@ export default function UeberUnsPage() {
                 <BadgeCheck className="w-4 h-4" />
                 Geprüfte Fachbetriebe München
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                AquaPro24 München:<br />
-                <span className="text-primary">Wir lösen Ihre Probleme</span>
+              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+                AquaPro24 München – Ihr Partnernetzwerk seit 2005
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Partnernetzwerk Sanitär</span><span>·</span>
+                <span>geprüfte Fachbetriebe</span><span>·</span>
+                <span>Festpreisgarantie</span><span>·</span>
+                <span>24/7 Notdienst</span><span>·</span>
+                <span>seit 2005 München</span><span>·</span>
+                <span>2.800+ Kunden</span><span>·</span>
+                <span>Schwabing Experten</span><span>·</span>
+                <span>Bogenhausen Service</span><span>·</span>
+                <span>Sendling Klempner</span><span>·</span>
+                <span>Pasing Heizung</span><span>·</span>
+                <span>Maxvorstadt Sanitär</span><span>·</span>
+                <span>Haidhausen Installateur</span><span>·</span>
+                <span>Neuhausen Handwerker</span><span>·</span>
+                <span>Trudering Fachbetrieb</span><span>·</span>
+                <span>Meisterbetrieb</span><span>·</span>
+                <span>Qualitätsversprechen</span><span>·</span>
+                <span>faire Preise</span><span>·</span>
+                <span>schnelle Termine</span><span>·</span>
+                <span>transparente Abrechnung</span><span>·</span>
+                <span>5 Jahre Gewährleistung</span>
+              </div>
               <p className="text-lg text-white/90 leading-relaxed mb-4">
                 <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
                 das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 

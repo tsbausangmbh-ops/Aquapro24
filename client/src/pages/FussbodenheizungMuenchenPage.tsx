@@ -117,9 +117,31 @@ export default function FussbodenheizungMuenchenPage() {
                 <Thermometer className="w-3 h-3 mr-1" />
                 Fußbodenheizung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Fußbodenheizung München – Nachrüstung & Modernisierung
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Fußbodenheizung München – nachrüsten & verlegen vom Profi
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Fußbodenheizung nachrüsten</span><span>·</span>
+                <span>Fußbodenheizung verlegen</span><span>·</span>
+                <span>Fußbodenheizung Altbau</span><span>·</span>
+                <span>Flächenheizung installieren</span><span>·</span>
+                <span>Dünnschichtsystem einbauen</span><span>·</span>
+                <span>Fußbodenheizung Kosten</span><span>·</span>
+                <span>Fußbodenheizung reparieren</span><span>·</span>
+                <span>Heizkreisverteiler montieren</span><span>·</span>
+                <span>Thermostat einstellen</span><span>·</span>
+                <span>Wärmepumpe kompatibel</span><span>·</span>
+                <span>Fußbodenheizung Schwabing</span><span>·</span>
+                <span>Fußbodenheizung Bogenhausen</span><span>·</span>
+                <span>Fußbodenheizung Sendling</span><span>·</span>
+                <span>Fußbodenheizung Pasing</span><span>·</span>
+                <span>Warmwasser Fußbodenheizung</span><span>·</span>
+                <span>Elektro Fußbodenheizung</span><span>·</span>
+                <span>Regelung Fußbodenheizung</span><span>·</span>
+                <span>Aufbauhöhe prüfen</span><span>·</span>
+                <span>Energieeffizienz steigern</span><span>·</span>
+                <span>Festpreis Fußbodenheizung</span>
+              </div>
               <p className="text-lg text-white/90 mb-6">
                 Fußbodenheizung bedeutet Komfort – aber nur, wenn Aufbauhöhe, Regelung und Untergrund 
                 richtig geplant sind. AquaPro24 hilft in München bei Nachrüstung, Umbau und Integration 

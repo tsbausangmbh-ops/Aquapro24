@@ -385,8 +385,30 @@ export default function TerminPage() {
                 Online Terminbuchung
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
-                Termin online buchen
+                Termin online buchen München – Handwerker Wunschtermin
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Online Terminbuchung</span><span>·</span>
+                <span>Klempner Termin buchen</span><span>·</span>
+                <span>Heizung Termin online</span><span>·</span>
+                <span>Sanitär Wunschtermin</span><span>·</span>
+                <span>Badsanierung Beratung</span><span>·</span>
+                <span>Wärmepumpe Termin</span><span>·</span>
+                <span>Notdienst sofort</span><span>·</span>
+                <span>freie Termine Echtzeit</span><span>·</span>
+                <span>Terminbestätigung sofort</span><span>·</span>
+                <span>Rückruf anfordern</span><span>·</span>
+                <span>Termin Schwabing</span><span>·</span>
+                <span>Termin Bogenhausen</span><span>·</span>
+                <span>Termin Sendling</span><span>·</span>
+                <span>Termin Pasing</span><span>·</span>
+                <span>Vor-Ort-Beratung</span><span>·</span>
+                <span>Kostenvoranschlag Termin</span><span>·</span>
+                <span>Wochenende Termin</span><span>·</span>
+                <span>flexible Terminwahl</span><span>·</span>
+                <span>schnelle Rückmeldung</span><span>·</span>
+                <span>keine Warteschleife</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 Buchen Sie online Ihren Wunschtermin. Wir prüfen die Verfügbarkeit in Echtzeit und melden uns bei Ihnen.
               </p>

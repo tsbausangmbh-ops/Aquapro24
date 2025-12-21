@@ -118,9 +118,31 @@ export default function HeizungMuenchenPage() {
                 <Flame className="w-3 h-3 mr-1" />
                 Heizung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Heizungsinstallateur München – Reparatur, Wartung & Modernisierung
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Heizung München – Reparatur, Wartung & Modernisierung Profi
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4 text-xs text-white/70">
+                <span>Heizungsreparatur München</span><span>·</span>
+                <span>Heizung Wartung</span><span>·</span>
+                <span>Heizungsmodernisierung</span><span>·</span>
+                <span>Heizungstausch</span><span>·</span>
+                <span>Gasheizung reparieren</span><span>·</span>
+                <span>Ölheizung warten</span><span>·</span>
+                <span>Brenner einstellen</span><span>·</span>
+                <span>hydraulischer Abgleich</span><span>·</span>
+                <span>Heizkörper entlüften</span><span>·</span>
+                <span>Heizung Notdienst</span><span>·</span>
+                <span>Heizung Schwabing</span><span>·</span>
+                <span>Heizung Bogenhausen</span><span>·</span>
+                <span>Heizung Sendling</span><span>·</span>
+                <span>Viessmann München</span><span>·</span>
+                <span>Vaillant München</span><span>·</span>
+                <span>Buderus München</span><span>·</span>
+                <span>Heizung entkalken</span><span>·</span>
+                <span>Thermostat tauschen</span><span>·</span>
+                <span>Heizkosten senken</span><span>·</span>
+                <span>Festpreis Heizung</span>
+              </div>
               <p className="text-lg text-white/90 mb-4">
                 Wenn die Heizung streikt oder modernisiert werden soll, zählt vor allem eins: eine Lösung, 
                 die planbar ist und dauerhaft funktioniert. AquaPro24 unterstützt Sie in München bei 
