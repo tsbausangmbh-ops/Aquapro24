@@ -75,6 +75,13 @@ All H2 headings now follow strict SEO pattern:
   - "Klempner München {data.name}: Warum Kunden uns empfehlen"
   - "Installateur München nahe {data.name}: Nachbarstadtteile im Einsatzgebiet"
 
+### H3 SEO Optimization (December 2025)
+Static H3 headings optimized with longtail keywords following pattern "Keyword München: Benefit/Action":
+- **Service Pages (8)**: 10+ H3s optimized (e.g., "Geprüfte Klempner München: Zertifizierte Fachbetriebe")
+- **Landing Pages (6)**: 24 H3s optimized (e.g., "Rohrbruch München: Sofort-Reparatur")
+- **Utility Pages (4)**: Guarantee/review H3s updated (e.g., "Sanitär Garantie München: 2 Jahre auf alle Arbeiten")
+- **StadtteilPage**: Dynamic {data.name} included (e.g., "Handwerker Garantie {data.name} München: Ihr Sicherheitsversprechen")
+
 ### Total SEO Coverage
 - 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
 - 500+ longtail keywords across all pages (H1s, H2s, keyword batches)
