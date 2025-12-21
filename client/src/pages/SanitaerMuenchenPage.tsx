@@ -24,6 +24,7 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
+import { BackButton } from "@/components/BackButton";
 
 export default function SanitaerMuenchenPage() {
   const leistungen = [
@@ -237,6 +238,7 @@ export default function SanitaerMuenchenPage() {
             }
           ]}
         />
+        <BackButton />
         <TrustBar />
         <ServiceAreas serviceName="Sanitär"  />
         <RelatedServices currentService="sanitaer" />

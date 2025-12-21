@@ -24,6 +24,7 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
+import { BackButton } from "@/components/BackButton";
 
 export default function HeizungMuenchenPage() {
   const leistungen = [
@@ -238,6 +239,7 @@ export default function HeizungMuenchenPage() {
             }
           ]}
         />
+        <BackButton />
         <TrustBar />
         <ServiceAreas serviceName="Heizung"  />
         <RelatedServices currentService="heizung" />

@@ -21,6 +21,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "wouter";
+import { BackButton } from "@/components/BackButton";
 
 interface StadtteilData {
   name: string;
@@ -460,6 +461,8 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             </div>
           </div>
         </section>
+
+        <BackButton />
 
         <section className="py-6 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">

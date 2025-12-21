@@ -25,6 +25,7 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
+import { BackButton } from "@/components/BackButton";
 
 export default function NotdienstMuenchenPage() {
   const notfaelle = [
@@ -237,6 +238,7 @@ export default function NotdienstMuenchenPage() {
             }
           ]}
         />
+        <BackButton />
         <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
         <ServiceAreas serviceName="Notdienst"  />

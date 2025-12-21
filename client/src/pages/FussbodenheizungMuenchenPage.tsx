@@ -23,6 +23,7 @@ import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import FAQ from "@/components/FAQ";
+import { BackButton } from "@/components/BackButton";
 
 export default function FussbodenheizungMuenchenPage() {
   const vorteile = [
@@ -231,6 +232,7 @@ export default function FussbodenheizungMuenchenPage() {
             }
           ]}
         />
+        <BackButton />
         <TrustBar />
         <ServiceAreas serviceName="Fußbodenheizung"  />
         <RelatedServices currentService="heizung" />
