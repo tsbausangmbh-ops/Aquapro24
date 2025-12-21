@@ -294,13 +294,13 @@ export default function WaermepumpePage() {
                 und wandelt sie in Heizwärme um. Mit einer Kilowattstunde Strom erzeugen moderne Wärmepumpen bis zu fünf 
                 Kilowattstunden Wärme. Das ist nicht nur gut für die Umwelt, sondern auch für Ihren Geldbeutel.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Wärmepumpe Förderung München: Bis zu 70% vom Staat</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Wärmepumpe Förderung beantragen München: Bis zu 70% vom Staat</h3>
               <p>
                 Die Bundesregierung fördert den Umstieg auf klimafreundliche Heizsysteme großzügig. Die Grundförderung beträgt 
                 30%, dazu kommen Boni für bestimmte Einkommensgruppen (bis 30%), ein Geschwindigkeitsbonus (20%) und ein 
                 Effizienzbonus (5%). Wir übernehmen die komplette Antragstellung bei BAFA und KfW für Sie - kostenlos.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Wärmepumpe München: Luft-Wasser oder Erdwärme?</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Luft-Wasser-Wärmepumpe einbauen München: Oder doch Erdwärme?</h3>
               <p>
                 Die Luft-Wasser-Wärmepumpe ist der Klassiker für Bestandsgebäude: schnell installiert (2-3 Tage), keine 
                 aufwändigen Erdarbeiten, günstigere Anschaffungskosten. Sie arbeitet effizient bis etwa -20°C - für Münchner 
@@ -311,7 +311,7 @@ export default function WaermepumpePage() {
                 Sie benötigt Erdkollektoren oder Tiefenbohrungen, ist aber dafür extrem leise und besonders effizient. Ideal 
                 für Neubauten oder größere Grundstücke.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Wärmepumpe Altbau München: Ist mein Haus geeignet?</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Wärmepumpe nachrüsten Altbau München: Ist mein Haus geeignet?</h3>
               <p>
                 Die meisten Gebäude sind für Wärmepumpen geeignet - auch Altbauten. Ideal sind gut gedämmte Häuser mit 
                 Fußbodenheizung, aber auch mit Heizkörpern funktioniert es oft gut. Wir prüfen Ihr Gebäude kostenlos und 

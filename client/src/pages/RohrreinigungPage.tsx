@@ -318,13 +318,13 @@ export default function RohrreinigungPage() {
                 Hochdruckspülgeräte für hartnäckige Ablagerungen und Kameras zur genauen Lokalisierung des Problems. 
                 So finden wir immer die richtige Lösung - ohne unnötige Kosten.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Abfluss verstopft München: Typische Ursachen</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Abfluss frei machen München: Typische Ursachen für Verstopfung</h3>
               <p>
                 In der Küche sind es meist Fettrückstände und Essensreste, die sich im Rohr ablagern. In Bad und 
                 Dusche sammeln sich Haare, Seifenreste und Kalk. Im WC führen oft falsch entsorgte Hygieneartikel 
                 zu Verstopfungen. Wir kennen alle diese Probleme und lösen sie schnell und sauber.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Kanalreinigung München: Umweltfreundlich & gründlich</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-8">Rohr reinigen lassen München: Umweltfreundlich & gründlich</h3>
               <p>
                 Anders als chemische Rohrreiniger, die oft nur oberflächlich wirken und Ihre Rohre angreifen können, 
                 arbeiten wir mechanisch. Das ist gründlicher, schonender und umweltfreundlicher. Bei wiederkehrenden 
