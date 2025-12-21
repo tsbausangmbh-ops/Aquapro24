@@ -267,27 +267,27 @@ export default function RatgeberPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 Ratgeber München – Expertentipps Sanitär & Heizung
               </h1>
-              <div className="sr-only">
-                <span>Wasserschaden was tun</span><span>·</span>
-                <span>Rohrbruch Erste Hilfe</span><span>·</span>
-                <span>Heizung entlüften</span><span>·</span>
-                <span>Badsanierung planen</span><span>·</span>
-                <span>Wärmepumpe Förderung</span><span>·</span>
-                <span>BAFA Antrag stellen</span><span>·</span>
-                <span>Heizkosten sparen</span><span>·</span>
-                <span>Energieausweis lesen</span><span>·</span>
-                <span>Wartung Heizung</span><span>·</span>
-                <span>Fußbodenheizung Tipps</span><span>·</span>
-                <span>Altbau Sanierung</span><span>·</span>
-                <span>Trinkwasser Hygiene</span><span>·</span>
-                <span>Abfluss reinigen</span><span>·</span>
-                <span>Armatur pflegen</span><span>·</span>
-                <span>Bad modernisieren</span><span>·</span>
-                <span>barrierefreies Bad</span><span>·</span>
-                <span>Kalkflecken entfernen</span><span>·</span>
-                <span>Heizung einstellen</span><span>·</span>
-                <span>Energieberater München</span><span>·</span>
-                <span>Expertentipps Haustechnik</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserschaden was tun</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch Erste Hilfe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung entlüften</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung planen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Förderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Antrag stellen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkosten sparen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieausweis lesen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wartung Heizung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Tipps</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Altbau Sanierung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Trinkwasser Hygiene</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss reinigen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Armatur pflegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad modernisieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">barrierefreies Bad</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kalkflecken entfernen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung einstellen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieberater München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Expertentipps Haustechnik</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 

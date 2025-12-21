@@ -121,27 +121,27 @@ export default function NotdienstMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Notdienst München 24h – Rohrbruch & Heizungsausfall Soforthilfe
               </h1>
-              <div className="sr-only">
-                <span>Rohrbruch Notdienst</span><span>·</span>
-                <span>Wasserrohrbruch beheben</span><span>·</span>
-                <span>Heizungsausfall Soforthilfe</span><span>·</span>
-                <span>Wasserschaden Notfall</span><span>·</span>
-                <span>Leckage orten</span><span>·</span>
-                <span>Abfluss verstopft Notdienst</span><span>·</span>
-                <span>WC verstopft Notfall</span><span>·</span>
-                <span>Heizung ausgefallen</span><span>·</span>
-                <span>Gasgeruch Notfall</span><span>·</span>
-                <span>24 Stunden Klempner</span><span>·</span>
-                <span>Notdienst Schwabing</span><span>·</span>
-                <span>Notdienst Bogenhausen</span><span>·</span>
-                <span>Notdienst Sendling</span><span>·</span>
-                <span>Notdienst Pasing</span><span>·</span>
-                <span>Wochenende Notdienst</span><span>·</span>
-                <span>Feiertag Notdienst</span><span>·</span>
-                <span>Hauptwasserhahn zudrehen</span><span>·</span>
-                <span>Wasserstopp Notfall</span><span>·</span>
-                <span>Sofort Klempner München</span><span>·</span>
-                <span>Festpreis Notdienst</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserrohrbruch beheben</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsausfall Soforthilfe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserschaden Notfall</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Leckage orten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss verstopft Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC verstopft Notfall</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung ausgefallen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasgeruch Notfall</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">24 Stunden Klempner</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wochenende Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Feiertag Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Hauptwasserhahn zudrehen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserstopp Notfall</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sofort Klempner München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Notdienst</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Bei Rohrbruch, Wasseraustritt oder Heizungsausfall zählt Tempo – aber auch eine saubere 

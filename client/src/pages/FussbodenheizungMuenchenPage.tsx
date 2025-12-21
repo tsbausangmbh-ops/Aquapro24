@@ -120,27 +120,27 @@ export default function FussbodenheizungMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Fußbodenheizung München – nachrüsten & verlegen vom Profi
               </h1>
-              <div className="sr-only">
-                <span>Fußbodenheizung nachrüsten</span><span>·</span>
-                <span>Fußbodenheizung verlegen</span><span>·</span>
-                <span>Fußbodenheizung Altbau</span><span>·</span>
-                <span>Flächenheizung installieren</span><span>·</span>
-                <span>Dünnschichtsystem einbauen</span><span>·</span>
-                <span>Fußbodenheizung Kosten</span><span>·</span>
-                <span>Fußbodenheizung reparieren</span><span>·</span>
-                <span>Heizkreisverteiler montieren</span><span>·</span>
-                <span>Thermostat einstellen</span><span>·</span>
-                <span>Wärmepumpe kompatibel</span><span>·</span>
-                <span>Fußbodenheizung Schwabing</span><span>·</span>
-                <span>Fußbodenheizung Bogenhausen</span><span>·</span>
-                <span>Fußbodenheizung Sendling</span><span>·</span>
-                <span>Fußbodenheizung Pasing</span><span>·</span>
-                <span>Warmwasser Fußbodenheizung</span><span>·</span>
-                <span>Elektro Fußbodenheizung</span><span>·</span>
-                <span>Regelung Fußbodenheizung</span><span>·</span>
-                <span>Aufbauhöhe prüfen</span><span>·</span>
-                <span>Energieeffizienz steigern</span><span>·</span>
-                <span>Festpreis Fußbodenheizung</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung nachrüsten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Altbau</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Flächenheizung installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Dünnschichtsystem einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkreisverteiler montieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Thermostat einstellen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe kompatibel</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Warmwasser Fußbodenheizung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Elektro Fußbodenheizung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Regelung Fußbodenheizung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Aufbauhöhe prüfen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieeffizienz steigern</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Fußbodenheizung</span>
               </div>
               <p className="text-lg text-white/90 mb-6">
                 Fußbodenheizung bedeutet Komfort – aber nur, wenn Aufbauhöhe, Regelung und Untergrund 

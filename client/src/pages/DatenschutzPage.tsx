@@ -32,17 +32,17 @@ export default function DatenschutzPage() {
                 <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
               </div>
               <h1 className="text-3xl lg:text-4xl font-bold text-white">Datenschutz DSGVO München – Ihre Rechte</h1>
-              <div className="sr-only">
-                <span>Datenschutz DSGVO</span><span>·</span>
-                <span>Ihre Rechte</span><span>·</span>
-                <span>Datenverarbeitung</span><span>·</span>
-                <span>Cookies Erklärung</span><span>·</span>
-                <span>Auskunftsrecht</span><span>·</span>
-                <span>Löschung Daten</span><span>·</span>
-                <span>Widerspruchsrecht</span><span>·</span>
-                <span>OpenAI KI</span><span>·</span>
-                <span>EU AI Act</span><span>·</span>
-                <span>Google Calendar</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Datenschutz DSGVO</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Ihre Rechte</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Datenverarbeitung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Cookies Erklärung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Auskunftsrecht</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Löschung Daten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Widerspruchsrecht</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">OpenAI KI</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">EU AI Act</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Google Calendar</span>
               </div>
             </div>
           </div>

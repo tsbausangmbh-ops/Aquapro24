@@ -220,27 +220,27 @@ export default function FAQPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 FAQ Sanitär & Heizung München – Preise & Tipps
               </h1>
-              <div className="sr-only">
-                <span>Klempner Preise München</span><span>·</span>
-                <span>Sanitär Kosten</span><span>·</span>
-                <span>Heizung Reparatur Kosten</span><span>·</span>
-                <span>Notdienst Kosten</span><span>·</span>
-                <span>Festpreisgarantie</span><span>·</span>
-                <span>Badsanierung Preise</span><span>·</span>
-                <span>Wärmepumpe Förderung</span><span>·</span>
-                <span>BAFA Förderung 2025</span><span>·</span>
-                <span>Wasserhahn austauschen Kosten</span><span>·</span>
-                <span>WC Austausch Preis</span><span>·</span>
-                <span>Rohrreinigung Kosten</span><span>·</span>
-                <span>Heizung entlüften Kosten</span><span>·</span>
-                <span>Garantie Handwerker</span><span>·</span>
-                <span>Gewährleistung Sanitär</span><span>·</span>
-                <span>Anfahrt kostenlos</span><span>·</span>
-                <span>Zahlungsarten</span><span>·</span>
-                <span>Ratenzahlung möglich</span><span>·</span>
-                <span>Kostenvoranschlag</span><span>·</span>
-                <span>Terminverfügbarkeit</span><span>·</span>
-                <span>Wochenende Einsatz</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Preise München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Reparatur Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreisgarantie</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Preise</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Förderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Förderung 2025</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserhahn austauschen Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC Austausch Preis</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrreinigung Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung entlüften Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Garantie Handwerker</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gewährleistung Sanitär</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Anfahrt kostenlos</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Zahlungsarten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Ratenzahlung möglich</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kostenvoranschlag</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Terminverfügbarkeit</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wochenende Einsatz</span>
               </div>
               <p className="text-lg text-white/90 mb-6">
                 Hier finden Sie Antworten auf die häufigsten Fragen - mit echten Beispielen 

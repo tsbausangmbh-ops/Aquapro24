@@ -147,37 +147,26 @@ export default function BadPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Badsanierung München – Komplettumbau vom Profi
               </h1>
-              <div className="sr-only">
-                <span>Bad sanieren komplett</span><span>·</span>
-                <span>Badezimmer renovieren</span><span>·</span>
-                <span>Bad modernisieren</span><span>·</span>
-                <span>Badumbau durchführen</span><span>·</span>
-                <span>Badrenovierung beauftragen</span><span>·</span>
-                <span>barrierefreies Bad einbauen</span><span>·</span>
-                <span>seniorengerechtes Bad</span><span>·</span>
-                <span>bodengleiche Dusche installieren</span><span>·</span>
-                <span>Badewanne zu Dusche umbauen</span><span>·</span>
-                <span>Fliesen verlegen Bad</span><span>·</span>
-                <span>WC austauschen</span><span>·</span>
-                <span>Waschtisch montieren</span><span>·</span>
-                <span>Duschkabine einbauen</span><span>·</span>
-                <span>Handtuchheizkörper installieren</span><span>·</span>
-                <span>Spiegelschrank montieren</span><span>·</span>
-                <span>Badbeleuchtung installieren</span><span>·</span>
-                <span>Badsanierung Schwabing</span><span>·</span>
-                <span>Bad Bogenhausen</span><span>·</span>
-                <span>Badsanierung Sendling</span><span>·</span>
-                <span>Bad Pasing</span><span>·</span>
-                <span>Badsanierung Maxvorstadt</span><span>·</span>
-                <span>Bad Haidhausen</span><span>·</span>
-                <span>Badsanierung Neuhausen</span><span>·</span>
-                <span>Bad Trudering</span><span>·</span>
-                <span>Badsanierung Laim</span><span>·</span>
-                <span>Bad Giesing</span><span>·</span>
-                <span>Traumbad gestalten</span><span>·</span>
-                <span>3D Badplanung</span><span>·</span>
-                <span>KfW Förderung Bad</span><span>·</span>
-                <span>Festpreis Badsanierung</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad sanieren komplett</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badezimmer renovieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad modernisieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">barrierefreies Bad einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">seniorengerechtes Bad</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">bodengleiche Dusche</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badewanne zu Dusche</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fliesen verlegen Bad</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Waschtisch montieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Duschkabine einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Traumbad gestalten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">3D Badplanung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung Bad</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Badsanierung</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 

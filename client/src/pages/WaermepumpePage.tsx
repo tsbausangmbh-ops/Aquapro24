@@ -150,37 +150,26 @@ export default function WaermepumpePage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Wärmepumpe München – bis 70% BAFA Förderung 2025
               </h1>
-              <div className="sr-only">
-                <span>Wärmepumpe installieren</span><span>·</span>
-                <span>Wärmepumpe einbauen</span><span>·</span>
-                <span>Wärmepumpe nachrüsten</span><span>·</span>
-                <span>Luft-Wasser-Wärmepumpe</span><span>·</span>
-                <span>Erdwärmepumpe installieren</span><span>·</span>
-                <span>Sole-Wasser-Wärmepumpe</span><span>·</span>
-                <span>Wärmepumpe Altbau</span><span>·</span>
-                <span>Gasheizung auf Wärmepumpe umstellen</span><span>·</span>
-                <span>Heizung modernisieren</span><span>·</span>
-                <span>BAFA Förderung beantragen</span><span>·</span>
-                <span>KfW Förderung Heizung</span><span>·</span>
-                <span>Hybrid-Wärmepumpe</span><span>·</span>
-                <span>Wärmepumpe mit Photovoltaik</span><span>·</span>
-                <span>klimaneutral heizen</span><span>·</span>
-                <span>Heizkosten sparen</span><span>·</span>
-                <span>CO2-neutral heizen</span><span>·</span>
-                <span>Vaillant Wärmepumpe</span><span>·</span>
-                <span>Viessmann Wärmepumpe</span><span>·</span>
-                <span>Bosch Wärmepumpe</span><span>·</span>
-                <span>Wärmepumpe Schwabing</span><span>·</span>
-                <span>Wärmepumpe Bogenhausen</span><span>·</span>
-                <span>Wärmepumpe Sendling</span><span>·</span>
-                <span>Wärmepumpe Pasing</span><span>·</span>
-                <span>Wärmepumpe Maxvorstadt</span><span>·</span>
-                <span>Wärmepumpe Haidhausen</span><span>·</span>
-                <span>Wärmepumpe Neuhausen</span><span>·</span>
-                <span>Wärmepumpe Trudering</span><span>·</span>
-                <span>Wärmepumpe Kosten</span><span>·</span>
-                <span>Wärmepumpe Beratung</span><span>·</span>
-                <span>Festpreis Wärmepumpe</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe nachrüsten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Luft-Wasser-Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Erdwärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Altbau</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Förderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">klimaneutral heizen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkosten sparen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vaillant Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Viessmann Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bosch Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Beratung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Wärmepumpe</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Schluss mit steigenden Gaspreisen.</strong> Heizen Sie unabhängig, 

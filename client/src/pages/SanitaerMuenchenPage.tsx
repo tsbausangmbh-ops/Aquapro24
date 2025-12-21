@@ -121,27 +121,27 @@ export default function SanitaerMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Sanitär München – Klempner Installation & Reparatur Festpreis
               </h1>
-              <div className="sr-only">
-                <span>Sanitärinstallateur München</span><span>·</span>
-                <span>Klempner Festpreis</span><span>·</span>
-                <span>Wasserleitung verlegen</span><span>·</span>
-                <span>Armatur montieren</span><span>·</span>
-                <span>WC austauschen</span><span>·</span>
-                <span>Waschtisch einbauen</span><span>·</span>
-                <span>Spülkasten reparieren</span><span>·</span>
-                <span>Leckage beheben</span><span>·</span>
-                <span>Rohrbruch reparieren</span><span>·</span>
-                <span>Abfluss reinigen</span><span>·</span>
-                <span>Sanitär Schwabing</span><span>·</span>
-                <span>Sanitär Bogenhausen</span><span>·</span>
-                <span>Sanitär Sendling</span><span>·</span>
-                <span>Grohe Montage</span><span>·</span>
-                <span>Hansgrohe Installation</span><span>·</span>
-                <span>Geberit Einbau</span><span>·</span>
-                <span>Sanitär Notdienst</span><span>·</span>
-                <span>schnelle Termine</span><span>·</span>
-                <span>transparente Preise</span><span>·</span>
-                <span>geprüfte Fachbetriebe</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitärinstallateur München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Festpreis</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserleitung verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Armatur montieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Waschtisch einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Spülkasten reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Leckage beheben</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss reinigen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Grohe Montage</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Hansgrohe Installation</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Geberit Einbau</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Termine</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">transparente Preise</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">geprüfte Fachbetriebe</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 AquaPro24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 

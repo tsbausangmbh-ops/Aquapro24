@@ -121,27 +121,27 @@ export default function BadsanierungMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Badsanierung München – Komplettumbau stressfrei & modern
               </h1>
-              <div className="sr-only">
-                <span>Bad komplett sanieren</span><span>·</span>
-                <span>Badezimmer renovieren</span><span>·</span>
-                <span>Bad modernisieren</span><span>·</span>
-                <span>Badumbau München</span><span>·</span>
-                <span>barrierefreies Bad</span><span>·</span>
-                <span>bodengleiche Dusche</span><span>·</span>
-                <span>Badewanne zu Dusche</span><span>·</span>
-                <span>Fliesen verlegen</span><span>·</span>
-                <span>WC austauschen</span><span>·</span>
-                <span>Waschtisch montieren</span><span>·</span>
-                <span>Badsanierung Schwabing</span><span>·</span>
-                <span>Badsanierung Bogenhausen</span><span>·</span>
-                <span>Badsanierung Sendling</span><span>·</span>
-                <span>Badsanierung Pasing</span><span>·</span>
-                <span>3D Badplanung</span><span>·</span>
-                <span>Badsanierung Kosten</span><span>·</span>
-                <span>Bad in 2 Wochen</span><span>·</span>
-                <span>alles aus einer Hand</span><span>·</span>
-                <span>KfW Förderung Bad</span><span>·</span>
-                <span>Festpreis Badsanierung</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad komplett sanieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badezimmer renovieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad modernisieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badumbau München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">barrierefreies Bad</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">bodengleiche Dusche</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badewanne zu Dusche</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fliesen verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Waschtisch montieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">3D Badplanung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad in 2 Wochen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">alles aus einer Hand</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung Bad</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Badsanierung</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Eine Badsanierung ist mehr als neue Fliesen – sie ist Koordination, Timing und saubere 

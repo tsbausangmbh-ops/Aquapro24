@@ -387,27 +387,27 @@ export default function TerminPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 Termin online buchen München – Handwerker Wunschtermin
               </h1>
-              <div className="sr-only">
-                <span>Online Terminbuchung</span><span>·</span>
-                <span>Klempner Termin buchen</span><span>·</span>
-                <span>Heizung Termin online</span><span>·</span>
-                <span>Sanitär Wunschtermin</span><span>·</span>
-                <span>Badsanierung Beratung</span><span>·</span>
-                <span>Wärmepumpe Termin</span><span>·</span>
-                <span>Notdienst sofort</span><span>·</span>
-                <span>freie Termine Echtzeit</span><span>·</span>
-                <span>Terminbestätigung sofort</span><span>·</span>
-                <span>Rückruf anfordern</span><span>·</span>
-                <span>Termin Schwabing</span><span>·</span>
-                <span>Termin Bogenhausen</span><span>·</span>
-                <span>Termin Sendling</span><span>·</span>
-                <span>Termin Pasing</span><span>·</span>
-                <span>Vor-Ort-Beratung</span><span>·</span>
-                <span>Kostenvoranschlag Termin</span><span>·</span>
-                <span>Wochenende Termin</span><span>·</span>
-                <span>flexible Terminwahl</span><span>·</span>
-                <span>schnelle Rückmeldung</span><span>·</span>
-                <span>keine Warteschleife</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Online Terminbuchung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Termin buchen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Termin online</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Wunschtermin</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Beratung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Termin</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst sofort</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">freie Termine Echtzeit</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Terminbestätigung sofort</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rückruf anfordern</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Termin Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Termin Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Termin Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Termin Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vor-Ort-Beratung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kostenvoranschlag Termin</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wochenende Termin</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">flexible Terminwahl</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Rückmeldung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">keine Warteschleife</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Buchen Sie online Ihren Wunschtermin. Wir prüfen die Verfügbarkeit in Echtzeit und melden uns bei Ihnen.

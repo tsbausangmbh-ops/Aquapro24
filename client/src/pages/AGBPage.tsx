@@ -29,17 +29,17 @@ export default function AGBPage() {
                 Rechtliches
               </Badge>
               <h1 className="text-3xl lg:text-4xl font-bold text-white">AGB Sanitär München – Festpreis & Garantie</h1>
-              <div className="sr-only">
-                <span>AGB Sanitär</span><span>·</span>
-                <span>Festpreisgarantie</span><span>·</span>
-                <span>2 Jahre Gewährleistung</span><span>·</span>
-                <span>transparente Preise</span><span>·</span>
-                <span>faire Bedingungen</span><span>·</span>
-                <span>Zahlungsmodalitäten</span><span>·</span>
-                <span>Vertragsschluss</span><span>·</span>
-                <span>Haftung</span><span>·</span>
-                <span>Widerrufsrecht</span><span>·</span>
-                <span>Rechtsgrundlage</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">AGB Sanitär</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreisgarantie</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">2 Jahre Gewährleistung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">transparente Preise</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Bedingungen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Zahlungsmodalitäten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vertragsschluss</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haftung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Widerrufsrecht</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rechtsgrundlage</span>
               </div>
             </div>
           </div>

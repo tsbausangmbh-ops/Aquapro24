@@ -148,37 +148,25 @@ export default function HaustechnikPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Haustechnik München – Gas, Wasser, Lüftung komplett
               </h1>
-              <div className="sr-only">
-                <span>Gasleitung verlegen</span><span>·</span>
-                <span>Gasanschluss installieren</span><span>·</span>
-                <span>Gasherd anschließen</span><span>·</span>
-                <span>Gasgerät montieren</span><span>·</span>
-                <span>Gasinstallation prüfen</span><span>·</span>
-                <span>Lüftungsanlage einbauen</span><span>·</span>
-                <span>KWL installieren</span><span>·</span>
-                <span>Wohnraumlüftung montieren</span><span>·</span>
-                <span>Abluftanlage installieren</span><span>·</span>
-                <span>Dunstabzug anschließen</span><span>·</span>
-                <span>Smart Home Heizung</span><span>·</span>
-                <span>Thermostat programmieren</span><span>·</span>
-                <span>Wasserleitung verlegen</span><span>·</span>
-                <span>Wasserzähler einbauen</span><span>·</span>
-                <span>Druckminderer installieren</span><span>·</span>
-                <span>Enthärtungsanlage einbauen</span><span>·</span>
-                <span>Haustechnik Schwabing</span><span>·</span>
-                <span>Haustechnik Bogenhausen</span><span>·</span>
-                <span>Haustechnik Sendling</span><span>·</span>
-                <span>Haustechnik Pasing</span><span>·</span>
-                <span>Haustechnik Maxvorstadt</span><span>·</span>
-                <span>Haustechnik Haidhausen</span><span>·</span>
-                <span>Haustechnik Neuhausen</span><span>·</span>
-                <span>Haustechnik Trudering</span><span>·</span>
-                <span>Gebäudetechnik München</span><span>·</span>
-                <span>TGA Planung</span><span>·</span>
-                <span>Haustechnik Neubau</span><span>·</span>
-                <span>Haustechnik Sanierung</span><span>·</span>
-                <span>zertifizierter Gasinstallateur</span><span>·</span>
-                <span>Festpreis Haustechnik</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasleitung verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasanschluss installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasherd anschließen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Lüftungsanlage einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KWL installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Smart Home Heizung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserleitung verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserzähler einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Druckminderer installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Enthärtungsanlage</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haustechnik Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haustechnik Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haustechnik Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haustechnik Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gebäudetechnik München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haustechnik Neubau</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">zertifizierter Gasinstallateur</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Haustechnik</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Mehrere Handwerker koordinieren? Unterschiedliche Ansprechpartner?</strong> Das 

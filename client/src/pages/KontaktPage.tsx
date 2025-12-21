@@ -126,27 +126,27 @@ export default function KontaktPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
                 Kontakt AquaPro24 München – Kostenlose Beratung
               </h1>
-              <div className="sr-only">
-                <span>Sanitär Kontakt</span><span>·</span>
-                <span>Heizung Anfrage</span><span>·</span>
-                <span>Kostenvoranschlag anfordern</span><span>·</span>
-                <span>Notdienst Telefon</span><span>·</span>
-                <span>24/7 erreichbar</span><span>·</span>
-                <span>Beratungstermin buchen</span><span>·</span>
-                <span>Angebot einholen</span><span>·</span>
-                <span>Terminanfrage stellen</span><span>·</span>
-                <span>schnelle Rückmeldung</span><span>·</span>
-                <span>Hardenbergstr. 4</span><span>·</span>
-                <span>80992 München</span><span>·</span>
-                <span>Klempner rufen</span><span>·</span>
-                <span>Heizungsmonteur kontaktieren</span><span>·</span>
-                <span>Badsanierung anfragen</span><span>·</span>
-                <span>Wärmepumpe Beratung</span><span>·</span>
-                <span>Vor-Ort-Termin</span><span>·</span>
-                <span>Erstberatung kostenlos</span><span>·</span>
-                <span>ehrliche Einschätzung</span><span>·</span>
-                <span>faire Festpreise</span><span>·</span>
-                <span>info@aquapro24.de</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Kontakt</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Anfrage</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kostenvoranschlag anfordern</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Telefon</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">24/7 erreichbar</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Beratungstermin buchen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Angebot einholen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Terminanfrage stellen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Rückmeldung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Hardenbergstr. 4</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">80992 München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner rufen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsmonteur kontaktieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung anfragen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Beratung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vor-Ort-Termin</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Erstberatung kostenlos</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">ehrliche Einschätzung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Festpreise</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">info@aquapro24.de</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Fragen zu Ihrem Projekt?</strong> Wir sind für Sie da - telefonisch, 

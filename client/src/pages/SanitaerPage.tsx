@@ -162,37 +162,27 @@ export default function SanitaerPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Klempner München – Sanitär Notdienst 24/7
               </h1>
-              <div className="sr-only">
-                <span>Rohrbruch reparieren</span><span>·</span>
-                <span>Wasserleitung verlegen</span><span>·</span>
-                <span>Abfluss verstopft beseitigen</span><span>·</span>
-                <span>WC austauschen</span><span>·</span>
-                <span>Waschbecken montieren</span><span>·</span>
-                <span>Siphon wechseln</span><span>·</span>
-                <span>Spülkasten reparieren</span><span>·</span>
-                <span>Dusche einbauen</span><span>·</span>
-                <span>Badewanne installieren</span><span>·</span>
-                <span>Wasserhahn tropft</span><span>·</span>
-                <span>Rohr undicht</span><span>·</span>
-                <span>Leckage orten</span><span>·</span>
-                <span>Wasserschaden beheben</span><span>·</span>
-                <span>Sanitärinstallation komplett</span><span>·</span>
-                <span>Klempner Schwabing</span><span>·</span>
-                <span>Sanitär Bogenhausen</span><span>·</span>
-                <span>Installateur Sendling</span><span>·</span>
-                <span>Notdienst Pasing</span><span>·</span>
-                <span>Klempner Maxvorstadt</span><span>·</span>
-                <span>Sanitär Haidhausen</span><span>·</span>
-                <span>Klempner Neuhausen</span><span>·</span>
-                <span>Sanitär Trudering</span><span>·</span>
-                <span>Klempner Laim</span><span>·</span>
-                <span>Sanitär Giesing</span><span>·</span>
-                <span>Klempner Moosach</span><span>·</span>
-                <span>Sanitär Nymphenburg</span><span>·</span>
-                <span>Grohe Montage</span><span>·</span>
-                <span>Geberit Installation</span><span>·</span>
-                <span>Hansgrohe Service</span><span>·</span>
-                <span>Festpreis Sanitär München</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserleitung verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss verstopft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Waschbecken montieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Siphon wechseln</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Spülkasten reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Dusche einbauen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badewanne installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserhahn tropft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohr undicht</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Leckage orten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Installateur Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Maxvorstadt</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Grohe Montage</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Geberit Installation</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Sanitär</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 

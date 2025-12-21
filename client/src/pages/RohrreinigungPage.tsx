@@ -163,37 +163,25 @@ export default function RohrreinigungPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Rohrreinigung München – Abfluss verstopft Notdienst 24/7
               </h1>
-              <div className="sr-only">
-                <span>Abfluss verstopft beseitigen</span><span>·</span>
-                <span>Rohr verstopft frei machen</span><span>·</span>
-                <span>WC verstopft entstopfen</span><span>·</span>
-                <span>Toilette verstopft beheben</span><span>·</span>
-                <span>Dusche verstopft reinigen</span><span>·</span>
-                <span>Waschbecken verstopft</span><span>·</span>
-                <span>Küchenabfluss reinigen</span><span>·</span>
-                <span>Spüle verstopft</span><span>·</span>
-                <span>Badewanne verstopft</span><span>·</span>
-                <span>Siphon reinigen</span><span>·</span>
-                <span>Kanalreinigung Profi</span><span>·</span>
-                <span>Hochdruckspülung Rohr</span><span>·</span>
-                <span>Kamerainspektion Kanal</span><span>·</span>
-                <span>Spirale Rohrreinigung</span><span>·</span>
-                <span>Fettablagerung entfernen</span><span>·</span>
-                <span>Haarverstopfung lösen</span><span>·</span>
-                <span>Fallrohr reinigen</span><span>·</span>
-                <span>Hauptkanal entstopfen</span><span>·</span>
-                <span>Rohrreinigung Schwabing</span><span>·</span>
-                <span>Abfluss Bogenhausen</span><span>·</span>
-                <span>Verstopfung Sendling</span><span>·</span>
-                <span>Rohrreinigung Pasing</span><span>·</span>
-                <span>Abfluss Maxvorstadt</span><span>·</span>
-                <span>Verstopfung Haidhausen</span><span>·</span>
-                <span>Rohrreinigung Neuhausen</span><span>·</span>
-                <span>Abfluss Trudering</span><span>·</span>
-                <span>Rohrreinigung Notdienst</span><span>·</span>
-                <span>Abfluss Soforthilfe</span><span>·</span>
-                <span>24h Rohrreinigung</span><span>·</span>
-                <span>Festpreis Rohrreinigung</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss verstopft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC verstopft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Toilette entstopfen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Dusche verstopft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Küchenabfluss reinigen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Spüle verstopft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kanalreinigung Profi</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Hochdruckspülung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kamerainspektion</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Spirale Rohrreinigung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrreinigung Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Verstopfung Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrreinigung Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrreinigung Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss Soforthilfe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">24h Rohrreinigung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Rohrreinigung</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Abfluss verstopft? Wasser steht in der Dusche oder Spüle?</strong> Das ist nicht nur 

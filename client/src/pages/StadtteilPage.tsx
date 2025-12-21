@@ -314,27 +314,22 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Klempner {data.name} München – Sanitär, Heizung & Notdienst
               </h1>
-              <div className="sr-only">
-                <span>Installateur {data.name}</span><span>·</span>
-                <span>Klempner vor Ort</span><span>·</span>
-                <span>Sanitär Notdienst</span><span>·</span>
-                <span>Heizung Reparatur</span><span>·</span>
-                <span>Rohrbruch beheben</span><span>·</span>
-                <span>Abfluss verstopft</span><span>·</span>
-                <span>WC austauschen</span><span>·</span>
-                <span>Armatur montieren</span><span>·</span>
-                <span>Badsanierung</span><span>·</span>
-                <span>Wärmepumpe Installation</span><span>·</span>
-                <span>24h Notdienst</span><span>·</span>
-                <span>Festpreis Garantie</span><span>·</span>
-                <span>schnelle Anfahrt</span><span>·</span>
-                <span>geprüfte Fachbetriebe</span><span>·</span>
-                <span>Meisterbetrieb</span><span>·</span>
-                <span>Altbau Experten</span><span>·</span>
-                <span>Neubau Service</span><span>·</span>
-                <span>faire Preise</span><span>·</span>
-                <span>lokaler Service</span><span>·</span>
-                <span>München Süd</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Installateur {data.name}</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner vor Ort</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Reparatur</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch beheben</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss verstopft</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">24h Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Garantie</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Anfahrt</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Meisterbetrieb</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Preise</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">lokaler Service</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 {data.beschreibung}

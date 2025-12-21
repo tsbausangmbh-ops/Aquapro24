@@ -149,37 +149,26 @@ export default function HeizungPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 Heizung München – Notdienst & Wartung 24/7
               </h1>
-              <div className="sr-only">
-                <span>Heizung reparieren</span><span>·</span>
-                <span>Heizung warten</span><span>·</span>
-                <span>Heizung austauschen</span><span>·</span>
-                <span>Heizungsanlage modernisieren</span><span>·</span>
-                <span>Gasheizung installieren</span><span>·</span>
-                <span>Heizkessel tauschen</span><span>·</span>
-                <span>Brenner wechseln</span><span>·</span>
-                <span>Heizung entlüften</span><span>·</span>
-                <span>Thermostat austauschen</span><span>·</span>
-                <span>Heizkörper montieren</span><span>·</span>
-                <span>Fußbodenheizung verlegen</span><span>·</span>
-                <span>Heizungspumpe wechseln</span><span>·</span>
-                <span>Ausdehnungsgefäß tauschen</span><span>·</span>
-                <span>Heizung macht Geräusche</span><span>·</span>
-                <span>Heizung wird nicht warm</span><span>·</span>
-                <span>Heizungsausfall Notdienst</span><span>·</span>
-                <span>Viessmann München</span><span>·</span>
-                <span>Vaillant München</span><span>·</span>
-                <span>Buderus München</span><span>·</span>
-                <span>Wolf Heizung</span><span>·</span>
-                <span>Heizung Schwabing</span><span>·</span>
-                <span>Heizung Bogenhausen</span><span>·</span>
-                <span>Heizung Sendling</span><span>·</span>
-                <span>Heizung Pasing</span><span>·</span>
-                <span>Heizung Maxvorstadt</span><span>·</span>
-                <span>Heizung Haidhausen</span><span>·</span>
-                <span>Heizung Neuhausen</span><span>·</span>
-                <span>Heizung Trudering</span><span>·</span>
-                <span>Heizungswartung ab 154€</span><span>·</span>
-                <span>Festpreis Heizung München</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung warten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasheizung installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkessel tauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Brenner wechseln</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung entlüften</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Thermostat austauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung verlegen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsausfall Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Viessmann München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vaillant München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Buderus München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungswartung ab 154€</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Heizung München</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 

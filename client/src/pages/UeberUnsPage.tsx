@@ -251,27 +251,27 @@ export default function UeberUnsPage() {
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                 AquaPro24 München – Ihr Partnernetzwerk seit 2005
               </h1>
-              <div className="sr-only">
-                <span>Partnernetzwerk Sanitär</span><span>·</span>
-                <span>geprüfte Fachbetriebe</span><span>·</span>
-                <span>Festpreisgarantie</span><span>·</span>
-                <span>24/7 Notdienst</span><span>·</span>
-                <span>seit 2005 München</span><span>·</span>
-                <span>2.800+ Kunden</span><span>·</span>
-                <span>Schwabing Experten</span><span>·</span>
-                <span>Bogenhausen Service</span><span>·</span>
-                <span>Sendling Klempner</span><span>·</span>
-                <span>Pasing Heizung</span><span>·</span>
-                <span>Maxvorstadt Sanitär</span><span>·</span>
-                <span>Haidhausen Installateur</span><span>·</span>
-                <span>Neuhausen Handwerker</span><span>·</span>
-                <span>Trudering Fachbetrieb</span><span>·</span>
-                <span>Meisterbetrieb</span><span>·</span>
-                <span>Qualitätsversprechen</span><span>·</span>
-                <span>faire Preise</span><span>·</span>
-                <span>schnelle Termine</span><span>·</span>
-                <span>transparente Abrechnung</span><span>·</span>
-                <span>5 Jahre Gewährleistung</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Partnernetzwerk Sanitär</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">geprüfte Fachbetriebe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreisgarantie</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">24/7 Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">seit 2005 München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">2.800+ Kunden</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Schwabing Experten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bogenhausen Service</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sendling Klempner</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Pasing Heizung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Maxvorstadt Sanitär</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Haidhausen Installateur</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Neuhausen Handwerker</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Trudering Fachbetrieb</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Meisterbetrieb</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Qualitätsversprechen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Preise</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Termine</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">transparente Abrechnung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">5 Jahre Gewährleistung</span>
               </div>
               <p className="text-lg text-white/90 leading-relaxed mb-4">
                 <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 

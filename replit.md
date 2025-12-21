@@ -78,7 +78,10 @@ All H2 headings now follow strict SEO pattern:
 ### Total SEO Coverage
 - 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
 - 500+ longtail keywords across all pages (H1s, H2s, keyword batches)
-- Keyword display: Unsichtbar für Besucher (sr-only), sichtbar für Suchmaschinen
+- **Keyword display: Sichtbar als stilisierte Tags** im Hero-Bereich jeder Seite
+  - Max. 20 Keywords pro Seite für Lesbarkeit
+  - Styling: halbtransparente weiße Pills auf dunklem Hero-Hintergrund
+  - Ansprechendes Design mit abgerundeten Ecken und dezenten Rahmen
 - Complete Schema.org LocalBusiness markup with 25 Munich districts
 
 ## System Architecture

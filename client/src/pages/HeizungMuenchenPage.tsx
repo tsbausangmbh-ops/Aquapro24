@@ -121,27 +121,27 @@ export default function HeizungMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Heizung München – Reparatur, Wartung & Modernisierung Profi
               </h1>
-              <div className="sr-only">
-                <span>Heizungsreparatur München</span><span>·</span>
-                <span>Heizung Wartung</span><span>·</span>
-                <span>Heizungsmodernisierung</span><span>·</span>
-                <span>Heizungstausch</span><span>·</span>
-                <span>Gasheizung reparieren</span><span>·</span>
-                <span>Ölheizung warten</span><span>·</span>
-                <span>Brenner einstellen</span><span>·</span>
-                <span>hydraulischer Abgleich</span><span>·</span>
-                <span>Heizkörper entlüften</span><span>·</span>
-                <span>Heizung Notdienst</span><span>·</span>
-                <span>Heizung Schwabing</span><span>·</span>
-                <span>Heizung Bogenhausen</span><span>·</span>
-                <span>Heizung Sendling</span><span>·</span>
-                <span>Viessmann München</span><span>·</span>
-                <span>Vaillant München</span><span>·</span>
-                <span>Buderus München</span><span>·</span>
-                <span>Heizung entkalken</span><span>·</span>
-                <span>Thermostat tauschen</span><span>·</span>
-                <span>Heizkosten senken</span><span>·</span>
-                <span>Festpreis Heizung</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsreparatur München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Wartung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsmodernisierung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungstausch</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasheizung reparieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Ölheizung warten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Brenner einstellen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">hydraulischer Abgleich</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkörper entlüften</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Notdienst</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Viessmann München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vaillant München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Buderus München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung entkalken</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Thermostat tauschen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkosten senken</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Heizung</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Wenn die Heizung streikt oder modernisiert werden soll, zählt vor allem eins: eine Lösung, 

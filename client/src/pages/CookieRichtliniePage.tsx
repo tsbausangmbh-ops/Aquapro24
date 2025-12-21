@@ -34,17 +34,17 @@ export default function CookieRichtliniePage() {
                 <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
               </div>
               <h1 className="text-3xl lg:text-4xl font-bold text-white">Cookie Richtlinie DSGVO – transparent & sicher</h1>
-              <div className="sr-only">
-                <span>Cookie Richtlinie</span><span>·</span>
-                <span>DSGVO konform</span><span>·</span>
-                <span>technische Cookies</span><span>·</span>
-                <span>Session Cookies</span><span>·</span>
-                <span>kein Tracking</span><span>·</span>
-                <span>keine Werbung</span><span>·</span>
-                <span>Einwilligung</span><span>·</span>
-                <span>Speicherdauer</span><span>·</span>
-                <span>Cookie-Einstellungen</span><span>·</span>
-                <span>Datenschutz</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Cookie Richtlinie</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">DSGVO konform</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">technische Cookies</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Session Cookies</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">kein Tracking</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">keine Werbung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Einwilligung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Speicherdauer</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Cookie-Einstellungen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Datenschutz</span>
               </div>
             </div>
           </div>

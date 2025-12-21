@@ -34,17 +34,16 @@ export default function Impressum() {
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                 Impressum AquaPro24 München – Mustafa Sakar
               </h1>
-              <div className="sr-only">
-                <span>Impressum AquaPro24</span><span>·</span>
-                <span>Inhaber Mustafa Sakar</span><span>·</span>
-                <span>Hardenbergstr. 4</span><span>·</span>
-                <span>80992 München</span><span>·</span>
-                <span>Partnernetzwerk Sanitär</span><span>·</span>
-                <span>Heizung München</span><span>·</span>
-                <span>Kontaktdaten</span><span>·</span>
-                <span>Ansprechpartner</span><span>·</span>
-                <span>Einzelunternehmer</span><span>·</span>
-                <span>Rechtliches</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Impressum AquaPro24</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Inhaber Mustafa Sakar</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">80992 München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Partnernetzwerk Sanitär</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung München</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Kontaktdaten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Ansprechpartner</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Einzelunternehmer</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rechtliches</span>
               </div>
               <p className="text-lg text-white/80">
                 Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)

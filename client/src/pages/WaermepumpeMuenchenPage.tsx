@@ -122,27 +122,27 @@ export default function WaermepumpeMuenchenPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Wärmepumpe München – Beratung & Installation mit Förderung
               </h1>
-              <div className="sr-only">
-                <span>Wärmepumpe installieren</span><span>·</span>
-                <span>Wärmepumpe Beratung</span><span>·</span>
-                <span>Luft-Wasser-Wärmepumpe</span><span>·</span>
-                <span>Erdwärmepumpe</span><span>·</span>
-                <span>BAFA Förderung 2025</span><span>·</span>
-                <span>KfW Förderung beantragen</span><span>·</span>
-                <span>Wärmepumpe Altbau</span><span>·</span>
-                <span>Heizungstausch Wärmepumpe</span><span>·</span>
-                <span>Heizlastberechnung</span><span>·</span>
-                <span>Wärmepumpe Kosten</span><span>·</span>
-                <span>Wärmepumpe Schwabing</span><span>·</span>
-                <span>Wärmepumpe Bogenhausen</span><span>·</span>
-                <span>Wärmepumpe Sendling</span><span>·</span>
-                <span>Wärmepumpe Pasing</span><span>·</span>
-                <span>Vaillant Wärmepumpe</span><span>·</span>
-                <span>Viessmann Wärmepumpe</span><span>·</span>
-                <span>klimaneutral heizen</span><span>·</span>
-                <span>Heizkosten senken</span><span>·</span>
-                <span>Energieausweis prüfen</span><span>·</span>
-                <span>Festpreis Wärmepumpe</span>
+              <div className="flex flex-wrap gap-1.5 mt-3" data-testid="keyword-cloud">
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe installieren</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Beratung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Luft-Wasser-Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Erdwärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Förderung 2025</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung beantragen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Altbau</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungstausch Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizlastberechnung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Kosten</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Schwabing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Bogenhausen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Sendling</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wärmepumpe Pasing</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vaillant Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Viessmann Wärmepumpe</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">klimaneutral heizen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkosten senken</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieausweis prüfen</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Wärmepumpe</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Sie möchten in München auf Wärmepumpe umstellen? Entscheidend sind Gebäudedaten, 
