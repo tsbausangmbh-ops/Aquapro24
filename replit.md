@@ -66,9 +66,18 @@ All pages now feature:
 #### Homepage (15 Keywords):
 - "Klempner München – Sanitär & Heizung Notdienst 24/7"
 
+### H2 SEO Optimization (December 2025)
+All H2 headings now follow strict SEO pattern:
+- **Pattern**: "Main Keyword München: Benefit/Action" (with colon separator)
+- **Updated Pages**: Landing (6), Utility (5), StadtteilPage template, UeberUnsPage
+- **Examples**:
+  - "Sanitär Notdienst München: Wann ist ein echter Notfall?"
+  - "Klempner München {data.name}: Warum Kunden uns empfehlen"
+  - "Installateur München nahe {data.name}: Nachbarstadtteile im Einsatzgebiet"
+
 ### Total SEO Coverage
 - 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
-- 500+ longtail keywords across all pages (H1s, keyword batches)
+- 500+ longtail keywords across all pages (H1s, H2s, keyword batches)
 - Keyword display: Unsichtbar für Besucher (sr-only), sichtbar für Suchmaschinen
 - Complete Schema.org LocalBusiness markup with 25 Munich districts
 
