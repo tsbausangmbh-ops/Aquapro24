@@ -29,23 +29,23 @@ export default function SanitaerMuenchenPage() {
   const leistungen = [
     {
       icon: Wrench,
-      title: "Armaturen München: Montage & Reparatur",
-      description: "Installation und Reparatur von Armaturen in Küche und Bad - alle Marken."
+      title: "Wasserhahn wechseln München ab 80€",
+      description: "Armatur austauschen, Mischbatterie montieren. Grohe, Hansgrohe, Geberit, Blanco. Festpreis inkl. Anfahrt."
     },
     {
       icon: Droplets,
-      title: "Leckage München: Ortung & Behebung",
-      description: "Schnelle Ortung und Behebung von Wasserschäden und undichten Stellen."
+      title: "Rohr undicht München: Leckortung",
+      description: "Wasserfleck an Wand oder Decke? Leckage orten, undichtes Rohr finden und reparieren. Moderne Technik."
     },
     {
       icon: ShowerHead,
-      title: "WC Austausch München: Schneller Service",
-      description: "Austausch und Neuinstallation von Sanitärobjekten."
+      title: "WC austauschen München ab 180€",
+      description: "Toilette erneuern, Spülkasten tauschen, Waschbecken montieren. Geberit, Villeroy & Boch, Duravit."
     },
     {
       icon: PipetteIcon,
-      title: "Badsanierung München: Profi-Vorbereitung",
-      description: "Professionelle Vorarbeiten für Ihre Badmodernisierung."
+      title: "Abfluss verstopft München ab 81€",
+      description: "WC verstopft, Dusche läuft nicht ab? Rohrreinigung mit Spirale oder Hochdruck. Notdienst 24h."
     }
   ];
 

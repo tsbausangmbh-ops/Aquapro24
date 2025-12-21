@@ -34,34 +34,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Heizungsinstallation",
-    description: "Fachgerechte Installation moderner Heizsysteme - von der Planung bis zur Inbetriebnahme.",
-    features: ["Gasheizung", "Ölheizung", "Pelletheizung", "Hybridheizung"]
+    title: "Heizung installieren München",
+    description: "Gasheizung, Wärmepumpe, Pelletheizung einbauen. Von der Planung über Förderantrag bis Inbetriebnahme. Marken: Viessmann, Vaillant, Buderus, Wolf.",
+    features: ["Gasheizung", "Wärmepumpe", "Pelletheizung", "Hybridheizung"]
   },
   {
-    title: "Heizungswartung",
-    description: "Regelmäßige Wartung für optimale Effizienz und lange Lebensdauer Ihrer Heizanlage.",
+    title: "Heizung warten München",
+    description: "Jahreswartung ab 154€: Brenner reinigen, Filter tauschen, Abgasmessung, Sicherheitscheck. Spart bis 15% Heizkosten.",
     features: ["Jahreswartung", "Brennereinstellung", "Abgasmessung", "Kesselreinigung"]
   },
   {
-    title: "Heizungsreparatur",
-    description: "Schnelle und zuverlässige Reparatur bei Heizungsausfall - auch im Notdienst.",
+    title: "Heizung reparieren München",
+    description: "Heizung ausgefallen? 24h Notdienst bei Heizungsausfall. Therme defekt, Brenner kaputt, Pumpe defekt. Alle Marken vor Ort repariert.",
     features: ["24/7 Notdienst", "Alle Hersteller", "Ersatzteilservice", "Schnelle Hilfe"]
   },
   {
-    title: "Heizungsmodernisierung",
-    description: "Austausch alter Heizungen gegen effiziente, moderne Systeme mit Förderberatung.",
-    features: ["Förderberatung", "Energieberatung", "CO2-Einsparung", "Kostensenkung"]
+    title: "Heizung modernisieren München",
+    description: "Alte Heizung austauschen mit bis zu 70% BAFA-Förderung. Energieberatung, Förderantrag, Installation aus einer Hand.",
+    features: ["Bis 70% Förderung", "Energieberatung", "CO2-Einsparung", "Kostensenkung"]
   }
 ];
 
 const benefits = [
-  "24/7 Notdienst verfügbar",
-  "Alle Hersteller & Marken",
-  "Festpreisgarantie",
-  "Förderberatung inklusive",
-  "Energieeffizienz-Check",
-  "Wartungsverträge"
+  "24/7 Heizung Notdienst München verfügbar",
+  "Alle Marken: Viessmann, Vaillant, Buderus, Wolf",
+  "Festpreis vor Arbeitsbeginn garantiert",
+  "BAFA-Förderberatung bis 70% kostenlos",
+  "Energieeffizienz-Check vor Heizungstausch",
+  "Wartungsverträge mit Notfall-Priorität"
 ];
 
 const faqItems = [

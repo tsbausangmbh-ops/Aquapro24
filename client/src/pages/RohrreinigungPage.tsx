@@ -39,43 +39,43 @@ export default function RohrreinigungPage() {
   const services = [
     {
       icon: PipetteIcon,
-      title: "Abflussreinigung",
-      description: "Professionelle Reinigung verstopfter Abflüsse in Küche, Bad und WC mit Spezialgeräten."
+      title: "Abfluss verstopft München",
+      description: "Verstopfung lösen in Küche, Bad, WC. Mechanische Entstopfung mit Spirale ab 81€. Sofortige Hilfe bei Wasserrückstau."
     },
     {
       icon: ShowerHead,
-      title: "Duschabfluss",
-      description: "Beseitigung von Haaren, Seifenresten und Kalkablagerungen in Duschabflüssen."
+      title: "Dusche verstopft München",
+      description: "Duschabfluss reinigen: Haare, Seifenreste, Kalk entfernen. Ablaufgarnitur säubern, Siphon durchspülen. Ab 97€."
     },
     {
       icon: Droplets,
-      title: "Küchenabfluss",
-      description: "Entfernung von Fettrückständen und Essensresten aus Küchenabflüssen."
+      title: "Küchenabfluss verstopft",
+      description: "Fett und Essensreste im Abfluss? Spülbecken läuft nicht ab? Professionelle Küchenabfluss-Reinigung ab 97€."
     },
     {
       icon: Camera,
-      title: "Kamerainspektion",
-      description: "Moderne Kamerafahrt zur Lokalisierung von Verstopfungen und Rohrschäden."
+      title: "Kamerainspektion Rohr München",
+      description: "TV-Rohrinspektion zur Schadensortung. Verstopfung lokalisieren, Rohrbruch finden, Zustand dokumentieren. Ab 178€."
     },
     {
       icon: Zap,
-      title: "Hochdruckspülung",
-      description: "Intensive Rohrreinigung mit Hochdruckspülgerät für hartnäckige Verstopfungen."
+      title: "Hochdruckspülung München",
+      description: "Hartnäckige Verstopfung im Fallrohr? Hochdruckspülung mit bis 200 bar löst Ablagerungen, Wurzeln, Kalk. Ab 178€."
     },
     {
       icon: Wrench,
-      title: "Kanalreinigung",
-      description: "Professionelle Reinigung von Hauptkanälen und Fallrohren im Gebäude."
+      title: "Kanalreinigung München",
+      description: "Hauptkanal verstopft, Fallrohr blockiert? Kanalreinigung für Wohnhaus und Gewerbe. Notdienst 24/7 verfügbar."
     }
   ];
 
   const benefits = [
-    "Schnelle Hilfe - oft innerhalb 60 Minuten vor Ort",
-    "Festpreisgarantie ohne versteckte Kosten",
-    "Modernste Technik: Kameras und Hochdruckspülung",
-    "24/7 Notdienst auch an Wochenenden",
-    "Saubere Arbeit ohne Schmutz in Ihrer Wohnung",
-    "Garantie auf dauerhafte Beseitigung"
+    "Schnelle Rohrreinigung München: 60 Minuten vor Ort",
+    "Festpreis ab 81€ ohne versteckte Kosten",
+    "Modernste Technik: Kamerainspektion, Hochdruckspülung",
+    "24/7 Notdienst auch Wochenende und Feiertag",
+    "Saubere Arbeit mit Bodenschutz, kein Schmutz",
+    "Garantie auf dauerhafte Verstopfungsbeseitigung"
   ];
 
   const faqItems = [

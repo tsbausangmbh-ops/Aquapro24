@@ -27,23 +27,23 @@ export default function HeizungNotdienst24Page() {
   const notfallLeistungen = [
     {
       icon: Flame,
-      title: "Heizungsausfall München: Sofort-Reparatur 24h",
-      description: "Schnelle Diagnose und Reparatur bei komplettem Heizungsausfall - Tag und Nacht verfügbar."
+      title: "Heizungsausfall München 24h Notdienst",
+      description: "Heizung komplett ausgefallen? Viessmann, Vaillant, Buderus, Wolf, Junkers vor Ort repariert."
     },
     {
       icon: ThermometerSnowflake,
-      title: "Heizung kalt München: Notfall-Hilfe",
-      description: "Keine Wärme trotz laufender Heizung? Wir finden und beheben die Ursache sofort."
+      title: "Heizung kalt München: Keine Wärme?",
+      description: "Heizkörper bleiben kalt? Pumpe defekt, Thermostat kaputt, Luft im System? 24h Soforthilfe."
     },
     {
       icon: Droplets,
-      title: "Heizung verliert Wasser: 24h Soforthilfe",
-      description: "Wasserverlust an der Heizung? Schnelle Leckortung und Reparatur - auch nachts."
+      title: "Heizung verliert Wasser München 24h",
+      description: "Druck fällt ständig? Leck im Heizsystem orten, Ausdehnungsgefäß prüfen, Rohr abdichten."
     },
     {
       icon: Settings,
-      title: "Therme/Brenner Störung: Schnelle Reparatur",
-      description: "Brennerstörung oder Thermenausfall? Wir helfen sofort - 24 Stunden am Tag."
+      title: "Therme defekt München: Brenner-Störung",
+      description: "Gastherme zeigt Fehler? Brenner zündet nicht? Alle Marken: Vaillant, Viessmann, Junkers, Wolf."
     }
   ];
 

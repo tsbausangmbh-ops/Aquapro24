@@ -29,23 +29,23 @@ export default function HeizungMuenchenPage() {
   const leistungen = [
     {
       icon: Wrench,
-      title: "Heizungsreparatur München: Schnelle Hilfe",
-      description: "Schnelle Störungsbehebung bei allen Heizungsmarken und -typen."
+      title: "Heizung reparieren München ab 154€",
+      description: "Viessmann, Vaillant, Buderus, Wolf, Junkers vor Ort repariert. Brenner, Pumpe, Steuerung. Festpreis."
     },
     {
       icon: Settings,
-      title: "Heizungsmodernisierung München: Effizient",
-      description: "Effiziente Heizungsmodernisierung mit aktueller Technik."
+      title: "Heizung modernisieren München: 70% Förderung",
+      description: "Alte Gasheizung gegen Wärmepumpe tauschen. BAFA-Förderantrag inklusive, Energieberatung gratis."
     },
     {
       icon: Thermometer,
-      title: "Heizungsoptimierung München: Kosten senken",
-      description: "Hydraulischer Abgleich und Effizienzsteigerung."
+      title: "Heizung optimieren München: 15% sparen",
+      description: "Hydraulischer Abgleich, Pumpentausch, Thermostat-Upgrade. Weniger Verbrauch, mehr Komfort."
     },
     {
       icon: Flame,
-      title: "Heizungstausch München: Komplett-Service",
-      description: "Kompletter Heizungstausch mit Entsorgung der Altanlage."
+      title: "Heizung tauschen München komplett",
+      description: "Alte Heizung raus, neue Heizung rein. Gasheizung, Wärmepumpe, Pellet. Entsorgung Altanlage inklusive."
     }
   ];
 

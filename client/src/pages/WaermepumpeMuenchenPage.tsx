@@ -29,23 +29,23 @@ export default function WaermepumpeMuenchenPage() {
   const schritte = [
     {
       icon: FileText,
-      title: "Wärmepumpe München: Kostenlose Erstprüfung",
-      description: "Prüfung Ihrer Gebäudedaten und Voraussetzungen."
+      title: "Wärmepumpe Eignungscheck München gratis",
+      description: "Gebäudeprüfung: Dämmung, Heizlast, Heizkörper. Altbau oder Neubau geeignet? Kostenlose Ersteinschätzung."
     },
     {
       icon: Settings,
-      title: "Heizlastberechnung München: Profi-Planung",
-      description: "Detaillierte Planung inkl. Heizlast und Hydraulik."
+      title: "BAFA Förderantrag bis 70% übernommen",
+      description: "Förderberechnung: Basis 30% + Einkommensbonus 30% + Geschwindigkeit 20%. Antragstellung komplett inklusive."
     },
     {
       icon: Calendar,
-      title: "Wärmepumpe Altbau München: Vorbereitung",
-      description: "Anpassungen an Verteilung und Regelung."
+      title: "Wärmepumpe München: Installation 2-3 Tage",
+      description: "Vaillant aroTHERM, Viessmann Vitocal, Bosch Compress, Wolf CHA. Fachgerechte Montage mit Garantie."
     },
     {
       icon: CheckCircle2,
-      title: "Wärmepumpe Installation München: Fachgerecht",
-      description: "Fachgerechte Installation und Inbetriebnahme."
+      title: "Wärmepumpe München: 5 Jahre Garantie",
+      description: "Inbetriebnahme, Einweisung, Wartungsvertrag optional. 5 Jahre Gewährleistung auf Installation."
     }
   ];
 

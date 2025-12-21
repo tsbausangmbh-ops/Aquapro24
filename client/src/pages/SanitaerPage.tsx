@@ -38,43 +38,43 @@ export default function SanitaerPage() {
   const services = [
     {
       icon: Droplets,
-      title: "Wasserinstallation",
-      description: "Professionelle Installation von Wasserleitungen, Anschlüssen und Armaturen nach aktuellen Standards."
+      title: "Wasserinstallation München",
+      description: "Trinkwasserleitungen verlegen, Wasseranschlüsse erneuern, Absperrhähne einbauen. Kupfer, Edelstahl oder Kunststoff nach DIN-Norm."
     },
     {
       icon: ShowerHead,
-      title: "Sanitäranlagen",
-      description: "Montage und Anschluss von WCs, Waschbecken, Duschen, Badewannen und Bidets."
+      title: "Sanitärobjekte montieren",
+      description: "WC austauschen, Waschbecken montieren, Dusche einbauen, Badewanne anschließen. Alle Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch."
     },
     {
       icon: PipetteIcon,
-      title: "Abwassertechnik",
-      description: "Verlegung und Reparatur von Abwasserleitungen, Rohrreinigung und Kanalarbeiten."
+      title: "Abfluss & Rohrreinigung",
+      description: "Verstopfung lösen, Abflussrohr reinigen, Kanalreinigung mit Spirale oder Hochdruck. Schnelle Hilfe bei WC verstopft oder Dusche läuft nicht ab."
     },
     {
       icon: Wrench,
-      title: "Reparaturservice",
-      description: "Schnelle Reparatur von tropfenden Wasserhähnen, undichten Rohren und defekten Armaturen."
+      title: "Reparatur & Notdienst",
+      description: "Rohrbruch reparieren, undichtes Rohr abdichten, Wasserschaden beheben. 24h Notdienst bei Wasseraustritt und Leckagen in München."
     },
     {
       icon: Gauge,
-      title: "Druckprüfung",
-      description: "Professionelle Dichtheitsprüfung und Drucktests für Wasserleitungen."
+      title: "Leckortung & Prüfung",
+      description: "Wasserverlust orten, Druckprüfung durchführen, undichte Stellen finden. Moderne Technik ohne unnötige Aufbrucharbeiten."
     },
     {
       icon: Shield,
-      title: "Wartung",
-      description: "Regelmäßige Wartung Ihrer Sanitäranlagen für langfristige Funktionssicherheit."
+      title: "Wartung & Inspektion",
+      description: "Siphon reinigen, Armaturen entkalken, Dichtungen tauschen. Regelmäßige Wartung verhindert teure Reparaturen."
     }
   ];
 
   const benefits = [
-    "Partnernetzwerk mit über 20 Jahren Erfahrung",
-    "Festpreisgarantie ohne versteckte Kosten",
-    "Schnelle Terminvergabe - oft am selben Tag",
-    "Nur hochwertige Markenprodukte",
-    "Saubere Arbeit mit Schutzmaterialien",
-    "2 Jahre Gewährleistung auf alle Arbeiten"
+    "Klempner München mit 20+ Jahren Erfahrung im Partnernetzwerk",
+    "Festpreis vor Arbeitsbeginn ohne versteckte Kosten",
+    "Schnelle Termine oft am selben Tag verfügbar",
+    "Markenprodukte von Grohe, Hansgrohe, Geberit verbaut",
+    "Saubere Arbeit mit Bodenschutz und Abdeckfolie",
+    "2 Jahre Gewährleistung auf Sanitärarbeiten"
   ];
 
   const faqItems = [

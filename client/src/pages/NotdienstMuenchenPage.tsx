@@ -30,23 +30,23 @@ export default function NotdienstMuenchenPage() {
   const notfaelle = [
     {
       icon: Droplets,
-      title: "Rohrbruch München: Sofort-Reparatur",
-      description: "Sofortige Absperrung und Reparatur bei Wasseraustritt."
+      title: "Rohrbruch München: Soforthilfe 45 Min",
+      description: "Wasserrohrbruch absperren, Leck lokalisieren, Rohr reparieren. 24h Notdienst bei Wasserschaden."
     },
     {
       icon: Droplets,
-      title: "Wasseraustritt München: Leckortung & Hilfe",
-      description: "Schnelle Lokalisierung und Behebung der Leckage."
+      title: "Wasseraustritt München: Leckortung",
+      description: "Wasser tropft durch Decke? Leckage orten mit Wärmebild, undichte Stelle finden und abdichten."
     },
     {
       icon: Flame,
-      title: "Heizungsausfall München: Notfall-Reparatur",
-      description: "Notfall-Reparatur bei Heizungsdefekt."
+      title: "Heizungsausfall München: Notfall 24h",
+      description: "Heizung ausgefallen im Winter? Kessel defekt, Brenner kaputt? Notfall-Reparatur aller Marken."
     },
     {
       icon: AlertTriangle,
-      title: "Verstopfung München: Soforthilfe 24h",
-      description: "Sofortige Beseitigung schwerer Verstopfungen."
+      title: "WC verstopft München: Soforthilfe",
+      description: "Toilette verstopft, Abfluss läuft über? Entstopfung mit Spirale oder Hochdruck, sofortige Hilfe."
     }
   ];
 

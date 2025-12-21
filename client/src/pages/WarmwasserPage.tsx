@@ -38,43 +38,43 @@ export default function WarmwasserPage() {
   const services = [
     {
       icon: Flame,
-      title: "Durchlauferhitzer",
-      description: "Installation, Wartung und Reparatur von elektrischen und Gas-Durchlauferhitzern aller Marken."
+      title: "Durchlauferhitzer München",
+      description: "Durchlauferhitzer installieren, austauschen, reparieren. Vaillant, Stiebel Eltron, AEG, Junkers. Elektronisch ab 21 kW."
     },
     {
       icon: ThermometerSun,
-      title: "Warmwasserspeicher",
-      description: "Einbau und Wartung von Warmwasserboilern von 5 bis 300 Liter Fassungsvermögen."
+      title: "Warmwasserspeicher München",
+      description: "Boiler einbauen: 80-300 Liter, stehend oder wandhängend. Viessmann Vitocell, Vaillant uniSTOR, Buderus Logalux."
     },
     {
       icon: Droplets,
-      title: "Warmwasser-Zirkulation",
-      description: "Installation von Zirkulationspumpen für sofort verfügbares Warmwasser an jeder Zapfstelle."
+      title: "Zirkulationspumpe München",
+      description: "Warmwasser-Zirkulation installieren: Sofort heißes Wasser an jeder Zapfstelle. Grundfos, Wilo, Vortex. Ab 380€."
     },
     {
       icon: Zap,
-      title: "Elektro-Boiler",
-      description: "Montage von Klein- und Untertischspeichern für Küche, Bad und Gäste-WC."
+      title: "Untertischspeicher München",
+      description: "Kleinspeicher 5-15 Liter für Küche und Gäste-WC. Stiebel Eltron SNU, Vaillant VEN, AEG Huz. Schnelle Montage."
     },
     {
       icon: Wrench,
-      title: "Reparatur & Wartung",
-      description: "Entstörung, Entkalkung und Wartung Ihrer Warmwasseranlage für optimale Lebensdauer."
+      title: "Boiler reparieren München",
+      description: "Durchlauferhitzer macht kein Warmwasser? Boiler defekt? Entkalkung, Heizstab-Tausch, Thermostat-Reparatur. Notdienst."
     },
     {
       icon: Settings,
-      title: "Energieberatung",
-      description: "Beratung zu energieeffizienten Warmwasserlösungen und möglichen Fördermitteln."
+      title: "Warmwasser-Beratung",
+      description: "Durchlauferhitzer vs. Speicher? Energieeffizienz-Check, Verbrauchsberechnung, Fördermöglichkeiten prüfen. Kostenlos."
     }
   ];
 
   const benefits = [
-    "Schnelle Hilfe bei Ausfall - auch am Wochenende",
-    "Alle Marken: Vaillant, Stiebel Eltron, Junkers & mehr",
-    "Festpreisgarantie ohne versteckte Kosten",
-    "Energieeffiziente Lösungen für niedrige Betriebskosten",
-    "Fachgerechte Installation nach Vorschriften",
-    "2 Jahre Gewährleistung auf unsere Arbeit"
+    "Schnelle Hilfe bei Warmwasser-Ausfall München",
+    "Alle Marken: Vaillant, Stiebel Eltron, Junkers, AEG",
+    "Festpreis ab 600€ inkl. Durchlauferhitzer-Montage",
+    "Energieeffiziente Geräte für niedrige Stromkosten",
+    "Fachgerechte Installation nach VDE-Vorschriften",
+    "2 Jahre Gewährleistung auf Warmwasser-Arbeiten"
   ];
 
   const faqItems = [

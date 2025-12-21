@@ -35,34 +35,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Luft-Wasser-Wärmepumpe",
-    description: "Ihr Einstieg in klimaneutrales Heizen. Nutzt kostenlose Umgebungsluft und ist in nur 2-3 Tagen installiert.",
-    features: ["Ab 12.000€", "2-3 Tage Montage", "Bis 70% Förderung", "Ideal für Bestand"]
+    title: "Luft-Wasser-Wärmepumpe München",
+    description: "Wärmepumpe installieren in 2-3 Tagen. Nutzt Außenluft zum Heizen. Marken: Vaillant aroTHERM, Viessmann Vitocal, Bosch Compress, Wolf CHA.",
+    features: ["Ab 12.000€", "2-3 Tage Montage", "Bis 70% Förderung", "Ideal für Altbau"]
   },
   {
-    title: "Erdwärmepumpe",
-    description: "Maximum an Effizienz. Konstante Erdtemperatur garantiert höchste Leistung - auch bei -20°C außen.",
-    features: ["COP bis 5.0", "Extrem leise", "30+ Jahre Lebensdauer", "Auch zum Kühlen"]
+    title: "Erdwärmepumpe München",
+    description: "Sole-Wasser-Wärmepumpe mit Erdsonde oder Flächenkollektor. COP bis 5.0 für maximale Effizienz. Auch zum Kühlen im Sommer geeignet.",
+    features: ["COP bis 5.0", "Extrem leise", "30+ Jahre Lebensdauer", "Passive Kühlung"]
   },
   {
-    title: "Wärmepumpen-Wartung",
-    description: "Volle Leistung, minimaler Verbrauch. Jährliche Wartung sichert Effizienz und Herstellergarantie.",
+    title: "Wärmepumpe warten München",
+    description: "Jahreswartung ab 249€: Kältemittelkreis prüfen, Filter reinigen, Verdampfer kontrollieren. Erhält Herstellergarantie und spart Stromkosten.",
     features: ["Ab 249€/Jahr", "Inkl. Kältemittel", "Störungsfreier Betrieb", "Garantieerhalt"]
   },
   {
-    title: "Förderberatung & Antrag",
-    description: "Wir holen das Maximum für Sie raus. Komplette Antragstellung bei BAFA und KfW inklusive.",
-    features: ["Kostenlos", "Bis 70% Zuschuss", "Alle Formulare", "Schnelle Bearbeitung"]
+    title: "BAFA Förderantrag München",
+    description: "Bis 70% Wärmepumpen-Förderung sichern: 30% Basis + 30% Einkommensbonus + 20% Geschwindigkeitsbonus. Antragstellung komplett übernommen.",
+    features: ["Kostenlos", "Bis 70% Zuschuss", "BAFA + KfW", "Schnelle Bearbeitung"]
   }
 ];
 
 const benefits = [
-  "Bis zu 70% Förderung möglich",
-  "Bis zu 50% Heizkosten sparen",
-  "CO2-neutral heizen",
-  "Unabhängig von Gas & Öl",
-  "Wertsteigerung Immobilie",
-  "Zertifizierter Fachbetrieb"
+  "Bis 70% BAFA-Förderung für Wärmepumpe 2025",
+  "Bis 50% Heizkosten sparen gegenüber Gas",
+  "CO2-neutral heizen ohne fossile Brennstoffe",
+  "Unabhängig von Gas- und Ölpreisen",
+  "Wertsteigerung Ihrer Immobilie in München",
+  "Zertifizierter Wärmepumpen-Fachbetrieb"
 ];
 
 const faqItems = [

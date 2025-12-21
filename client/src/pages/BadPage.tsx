@@ -32,34 +32,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Komplettsanierung",
-    description: "Alles aus einer Hand: Abriss, Rohre, Fliesen, Sanitär, Elektrik - in nur 2-4 Wochen zum Traumbad.",
+    title: "Badsanierung komplett München",
+    description: "Komplettumbau in 2-4 Wochen: Abriss, Trockenbau, Fliesen, Sanitär, Elektrik. Alle Gewerke aus einer Hand koordiniert.",
     features: ["Ab 16.000€", "2-4 Wochen", "Festpreis", "5 Jahre Garantie"]
   },
   {
-    title: "Teilsanierung",
-    description: "Gezielt modernisieren: Dusche erneuern, WC tauschen oder neue Armaturen - schnell und sauber.",
+    title: "Bad teilsanieren München",
+    description: "Dusche erneuern, WC austauschen, neue Armaturen montieren. Schnelle Modernisierung ohne Komplettsanierung.",
     features: ["Ab 4.500€", "1-5 Tage", "Minimal-Umbau", "Sofort nutzbar"]
   },
   {
-    title: "Barrierefreies Bad",
-    description: "Sicher und komfortabel: Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen - für alle Generationen.",
+    title: "Barrierefreies Bad München",
+    description: "Bodengleiche Dusche einbauen, Haltegriffe montieren, rutschfeste Fliesen verlegen. KfW-Förderung bis 6.250€ möglich.",
     features: ["Ab 20.000€", "KfW-Förderung", "Zukunftssicher", "Stolperfrei"]
   },
   {
-    title: "Luxusbad Premium",
-    description: "Exklusive Materialien, Markenarmaturen und smarte Technik für höchste Ansprüche.",
+    title: "Luxusbad München Premium",
+    description: "Freistehende Badewanne, XXL-Regendusche, Fußbodenheizung, LED-Beleuchtung. Marken: Villeroy & Boch, Duravit, Keuco.",
     features: ["Ab 28.000€", "Designermarken", "Freistehende Wanne", "Regendusche XXL"]
   }
 ];
 
 const benefits = [
-  "Kostenlose Beratung vor Ort",
-  "3D-Badplanung inklusive",
-  "Festpreisgarantie",
-  "Alles aus einer Hand",
-  "5 Jahre Gewährleistung",
-  "Termintreue garantiert"
+  "Kostenlose Beratung vor Ort in München",
+  "3D-Badplanung mit Visualisierung inklusive",
+  "Festpreis vor Sanierungsbeginn garantiert",
+  "Alle Gewerke aus einer Hand koordiniert",
+  "5 Jahre Gewährleistung auf alle Arbeiten",
+  "Termintreue mit schriftlicher Zusage"
 ];
 
 const faqItems = [

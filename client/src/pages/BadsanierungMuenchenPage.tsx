@@ -29,23 +29,23 @@ export default function BadsanierungMuenchenPage() {
   const schritte = [
     {
       icon: FileText,
-      title: "Bad renovieren München: Analyse vor Ort",
-      description: "Analyse Ihres aktuellen Badezimmers und Ihrer Wünsche."
+      title: "3D-Badplanung München kostenlos",
+      description: "Bestandsaufnahme vor Ort, Vermessung, 3D-Visualisierung Ihres neuen Traumbads. Unverbindlich."
     },
     {
       icon: Palette,
-      title: "Badezimmer modernisieren München: Beratung",
-      description: "Individuelle Vorschläge zur Ausstattung und Gestaltung."
+      title: "Badgestaltung München: modern oder klassisch",
+      description: "Fliesen, Armaturen, Sanitärobjekte auswählen. Villeroy & Boch, Duravit, Grohe, Hansgrohe."
     },
     {
       icon: Calendar,
-      title: "Badumbau München: Klarer Zeitplan",
-      description: "Klarer Zeitplan für alle Arbeitsschritte."
+      title: "Badsanierung München: 2-4 Wochen",
+      description: "Festpreis-Angebot, fester Terminplan. Abriss, Sanitär, Fliesen, Elektrik aus einer Hand koordiniert."
     },
     {
       icon: CheckCircle2,
-      title: "Komplettsanierung München: Profi-Umsetzung",
-      description: "Koordinierte Ausführung mit geprüften Gewerken."
+      title: "Badsanierung München: 5 Jahre Garantie",
+      description: "Abnahme mit Übergabeprotokoll. 5 Jahre Gewährleistung auf alle Arbeiten. Nachbesserung gratis."
     }
   ];
 

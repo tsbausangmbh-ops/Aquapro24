@@ -33,34 +33,34 @@ import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Wasserinstallation",
-    description: "Professionelle Installation von Wasserleitungen, Anschlüssen und Verteilersystemen.",
+    title: "Wasserinstallation München",
+    description: "Trinkwasserleitungen verlegen, Abwasserrohre installieren, Zirkulationspumpe einbauen. Kupfer, Edelstahl, PE-X nach DIN 1988.",
     features: ["Trinkwasser", "Abwasser", "Regenwasser", "Zirkulation"]
   },
   {
-    title: "Gasinstallation",
-    description: "Sichere Gasinstallationen und Gasleitungen durch zertifizierte Fachkräfte.",
-    features: ["Gasleitungen", "Gasgeräte", "Sicherheitsprüfung", "Zertifiziert"]
+    title: "Gasinstallation München",
+    description: "Gasleitungen verlegen, Gasherd anschließen, Gasheizung installieren. Zertifiziert nach DVGW, alle Sicherheitsprüfungen inklusive.",
+    features: ["Gasleitungen", "Gasgeräte", "Sicherheitsprüfung", "DVGW-zertifiziert"]
   },
   {
-    title: "Lüftungstechnik",
-    description: "Kontrollierte Wohnraumlüftung für gesundes Raumklima und Energieeffizienz.",
-    features: ["Wärmerückgewinnung", "Pollenfilter", "Feuchteregulierung", "Energiesparen"]
+    title: "Lüftungsanlage München",
+    description: "Kontrollierte Wohnraumlüftung (KWL) mit Wärmerückgewinnung. Spart bis 30% Heizkosten, Pollenfilter für Allergiker. Ab 4.500€.",
+    features: ["Wärmerückgewinnung", "Pollenfilter", "Feuchteregulierung", "20% BAFA-Förderung"]
   },
   {
-    title: "Smart Home",
-    description: "Intelligente Steuerung Ihrer Haustechnik - Heizung, Lüftung und mehr per App.",
+    title: "Smart Home München",
+    description: "Intelligente Heizungssteuerung, Fernzugriff per App, Energiemonitoring. Kompatibel mit Viessmann ViCare, Vaillant vSMART, tado.",
     features: ["Heizungssteuerung", "Fernzugriff", "Energiemonitoring", "Automation"]
   }
 ];
 
 const benefits = [
-  "Komplettservice Haustechnik",
-  "Geprüfte Partnerbetriebe",
-  "Modernste Technik",
-  "Energieberatung inklusive",
-  "Smart Home Integration",
-  "Wartungsverträge"
+  "Komplettservice Gas, Wasser, Lüftung München",
+  "Geprüfte DVGW-zertifizierte Partnerbetriebe",
+  "Modernste Technik nach aktuellen Normen",
+  "Energieberatung mit Fördercheck inklusive",
+  "Smart Home Integration für alle Systeme",
+  "Wartungsverträge mit Notfall-Priorität"
 ];
 
 const faqItems = [

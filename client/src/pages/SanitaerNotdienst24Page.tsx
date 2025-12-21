@@ -26,23 +26,23 @@ export default function SanitaerNotdienst24Page() {
   const notfallLeistungen = [
     {
       icon: Droplets,
-      title: "Rohrbruch München: Sofort-Reparatur 24h",
-      description: "Schnelle Absperrung und Reparatur bei Wasserrohrbruch - Tag und Nacht verfügbar."
+      title: "Rohrbruch München 24h Notdienst",
+      description: "Wasserrohrbruch sofort reparieren. Haupthahn absperren, Leck orten, Rohr flicken. Tag und Nacht."
     },
     {
       icon: CircleAlert,
-      title: "Wasserschaden München: Notfall-Hilfe",
-      description: "Sofortige Leckortung und Schadensbegrenzung bei Wasseraustritt."
+      title: "Wasserschaden München Soforthilfe",
+      description: "Wasser tropft durch Decke? Leckortung mit Wärmebild, Trocknung, Versicherungsnachweis."
     },
     {
       icon: Wrench,
-      title: "Verstopfung München: 24h Soforthilfe",
-      description: "Professionelle Rohrreinigung bei hartnäckigen Verstopfungen - auch nachts."
+      title: "Verstopfung München 24h entstopfen",
+      description: "WC verstopft, Abfluss läuft über? Spirale, Hochdruckspülung. Ab 81€ Festpreis, auch nachts."
     },
     {
       icon: ShowerHead,
-      title: "WC-Notfall München: Schnelle Reparatur",
-      description: "Toilette verstopft oder defekt? Wir helfen sofort - 24 Stunden am Tag."
+      title: "WC-Notfall München: Toilette defekt",
+      description: "Spülkasten läuft, WC verstopft, Toilette undicht? 24h Soforthilfe, alle Marken repariert."
     }
   ];
 

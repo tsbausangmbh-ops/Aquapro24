@@ -28,23 +28,23 @@ export default function FussbodenheizungMuenchenPage() {
   const vorteile = [
     {
       icon: Thermometer,
-      title: "Fußbodenheizung München: Gleichmäßige Wärme",
-      description: "Behagliche Strahlungswärme im ganzen Raum."
+      title: "Fußbodenheizung nachrüsten München",
+      description: "Gleichmäßige Strahlungswärme im ganzen Raum. Keine Heizkörper, mehr Platz, besseres Raumklima."
     },
     {
       icon: Layers,
-      title: "Dünnschichtsystem München: Flexible Höhe",
-      description: "Moderne Systeme auch bei geringer Aufbauhöhe."
+      title: "Dünnschicht-Fußbodenheizung München",
+      description: "Nur 20mm Aufbauhöhe! Ideal für Altbau-Nachrüstung. Trockensystem ohne Estrich. 20% BAFA-Förderung."
     },
     {
       icon: Settings,
-      title: "Flächenheizung München: Smarte Regelung",
-      description: "Raumweise Temperatursteuerung möglich."
+      title: "Fußbodenheizung Regelung einzelraumweise",
+      description: "Smarte Thermostate, Einzelraumregelung per App. Kompatibel mit tado, Homematic, Viessmann ViCare."
     },
     {
       icon: CheckCircle2,
-      title: "Wärmepumpe München: Ideal kombinierbar",
-      description: "Ideal für effiziente Niedertemperatur-Systeme."
+      title: "Fußbodenheizung + Wärmepumpe ideal",
+      description: "Niedertemperatur-System perfekt für Wärmepumpe. COP bis 5.0, bis 50% weniger Heizkosten."
     }
   ];
 

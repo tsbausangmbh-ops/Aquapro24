@@ -38,43 +38,43 @@ export default function ArmaturenPage() {
   const services = [
     {
       icon: Droplets,
-      title: "Wasserhahn-Montage",
-      description: "Fachgerechte Installation von Waschtisch-, Küchen- und Badewannenarmaturen aller Marken."
+      title: "Wasserhahn wechseln München",
+      description: "Waschtischarmatur, Küchenarmatur, Badarmatur montieren. Grohe, Hansgrohe, Geberit, Blanco. Ab 80€ Montagekosten."
     },
     {
       icon: ShowerHead,
-      title: "Duscharmaturen",
-      description: "Einbau von Duschsystemen, Regenduschen und Handbrausen - auch Unterputzmontage."
+      title: "Duscharmatur einbauen München",
+      description: "Regendusche montieren, Duschsystem installieren, Unterputzarmatur einbauen. Hansgrohe Raindance, Grohe Euphoria."
     },
     {
       icon: ThermometerSun,
-      title: "Thermostatarmaturen",
-      description: "Installation von Thermostatmischern für konstante Wassertemperatur und Verbrühschutz."
+      title: "Thermostat einbauen München",
+      description: "Thermostatmischer für Dusche und Wanne. Verbrühschutz, konstante Wassertemperatur. Grohe Grohtherm, Hansgrohe Ecostat."
     },
     {
       icon: Wrench,
-      title: "Armaturen-Reparatur",
-      description: "Reparatur tropfender Wasserhähne, Austausch von Kartuschen und Dichtungen."
+      title: "Wasserhahn reparieren München",
+      description: "Wasserhahn tropft? Kartusche wechseln, Dichtung austauschen, Perlator reinigen. Schnelle Reparatur ab 60€."
     },
     {
       icon: Sparkles,
-      title: "Markenarmaturen",
-      description: "Beratung und Installation von Grohe, Hansgrohe, Geberit, Villeroy & Boch und mehr."
+      title: "Grohe Hansgrohe Montage",
+      description: "Autorisierte Montage von Markenarmaturen: Grohe, Hansgrohe, Geberit, Blanco, Villeroy & Boch, Ideal Standard."
     },
     {
       icon: Settings,
-      title: "Smart-Armaturen",
-      description: "Installation moderner berührungsloser und wassereffizienter Armaturen."
+      title: "Sensor-Armatur einbauen",
+      description: "Berührungslose Armaturen für Hygiene und Wassersparen. Ideal für Küche, Bad, Gäste-WC. Grohe Eurosmart, Hansgrohe Metris."
     }
   ];
 
   const benefits = [
-    "Beratung zu allen Marken und Preisklassen",
-    "Fachgerechte Montage durch erfahrene Installateure",
-    "Festpreisgarantie ohne versteckte Kosten",
-    "Schnelle Terminvergabe - oft am selben Tag",
-    "2 Jahre Gewährleistung auf unsere Arbeit",
-    "Saubere Arbeit mit Schutz Ihrer Oberflächen"
+    "Beratung zu Grohe, Hansgrohe, Geberit, Blanco",
+    "Fachgerechte Armaturen-Montage durch Installateure",
+    "Festpreis ab 80€ ohne versteckte Kosten",
+    "Schnelle Termine für Armaturenwechsel München",
+    "2 Jahre Gewährleistung auf Armaturen-Montage",
+    "Saubere Arbeit mit Oberflächenschutz"
   ];
 
   const faqItems = [
