@@ -300,7 +300,7 @@ export default function SanitaerPage() {
                     <Award className="w-8 h-8 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Geprüfte Partner</h3>
+                    <h3 className="font-bold text-lg">Geprüfte Klempner München: Zertifizierte Fachbetriebe</h3>
                     <p className="text-muted-foreground text-sm">Qualität vom Fachbetrieb</p>
                   </div>
                 </div>

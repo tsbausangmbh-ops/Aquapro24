@@ -400,7 +400,7 @@ export default function RatgeberPage() {
                       <Wrench className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Brauchen Sie Hilfe?</h3>
+                      <h3 className="font-semibold">Sanitär Beratung München: Wir helfen Ihnen</h3>
                       <p className="text-sm text-muted-foreground">Wir beraten Sie kostenlos und unverbindlich</p>
                     </div>
                   </div>

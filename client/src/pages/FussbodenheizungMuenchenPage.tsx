@@ -29,22 +29,22 @@ export default function FussbodenheizungMuenchenPage() {
   const vorteile = [
     {
       icon: Thermometer,
-      title: "Gleichmäßige Wärme",
+      title: "Fußbodenheizung München: Gleichmäßige Wärme",
       description: "Behagliche Strahlungswärme im ganzen Raum."
     },
     {
       icon: Layers,
-      title: "Flexible Aufbauhöhe",
+      title: "Dünnschichtsystem München: Flexible Höhe",
       description: "Moderne Systeme auch bei geringer Aufbauhöhe."
     },
     {
       icon: Settings,
-      title: "Moderne Regelung",
+      title: "Flächenheizung München: Smarte Regelung",
       description: "Raumweise Temperatursteuerung möglich."
     },
     {
       icon: CheckCircle2,
-      title: "Wärmepumpen-kompatibel",
+      title: "Wärmepumpe München: Ideal kombinierbar",
       description: "Ideal für effiziente Niedertemperatur-Systeme."
     }
   ];

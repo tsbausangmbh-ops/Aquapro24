@@ -31,22 +31,22 @@ export default function NotdienstMuenchenPage() {
   const notfaelle = [
     {
       icon: Droplets,
-      title: "Rohrbruch",
+      title: "Rohrbruch München: Sofort-Reparatur",
       description: "Sofortige Absperrung und Reparatur bei Wasseraustritt."
     },
     {
       icon: Droplets,
-      title: "Wasseraustritt",
+      title: "Wasseraustritt München: Leckortung & Hilfe",
       description: "Schnelle Lokalisierung und Behebung der Leckage."
     },
     {
       icon: Flame,
-      title: "Heizungsausfall",
+      title: "Heizungsausfall München: Notfall-Reparatur",
       description: "Notfall-Reparatur bei Heizungsdefekt."
     },
     {
       icon: AlertTriangle,
-      title: "Verstopfung",
+      title: "Verstopfung München: Soforthilfe 24h",
       description: "Sofortige Beseitigung schwerer Verstopfungen."
     }
   ];

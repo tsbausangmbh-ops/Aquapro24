@@ -30,22 +30,22 @@ export default function HeizungMuenchenPage() {
   const leistungen = [
     {
       icon: Wrench,
-      title: "Heizungsreparatur",
+      title: "Heizungsreparatur München: Schnelle Hilfe",
       description: "Schnelle Störungsbehebung bei allen Heizungsmarken und -typen."
     },
     {
       icon: Settings,
-      title: "Modernisierung",
+      title: "Heizungsmodernisierung München: Effizient",
       description: "Effiziente Heizungsmodernisierung mit aktueller Technik."
     },
     {
       icon: Thermometer,
-      title: "Optimierung",
+      title: "Heizungsoptimierung München: Kosten senken",
       description: "Hydraulischer Abgleich und Effizienzsteigerung."
     },
     {
       icon: Flame,
-      title: "Austausch",
+      title: "Heizungstausch München: Komplett-Service",
       description: "Kompletter Heizungstausch mit Entsorgung der Altanlage."
     }
   ];

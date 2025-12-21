@@ -422,7 +422,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                       <Shield className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Unsere Garantie</h3>
+                      <h3 className="font-semibold">Handwerker Garantie {data.name} München: Ihr Sicherheitsversprechen</h3>
                       <p className="text-sm text-muted-foreground">Für alle Arbeiten in {data.name}</p>
                     </div>
                   </div>

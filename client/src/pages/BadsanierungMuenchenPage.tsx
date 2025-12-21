@@ -30,22 +30,22 @@ export default function BadsanierungMuenchenPage() {
   const schritte = [
     {
       icon: FileText,
-      title: "Bestandsaufnahme",
+      title: "Bad renovieren München: Analyse vor Ort",
       description: "Analyse Ihres aktuellen Badezimmers und Ihrer Wünsche."
     },
     {
       icon: Palette,
-      title: "Empfehlungen",
+      title: "Badezimmer modernisieren München: Beratung",
       description: "Individuelle Vorschläge zur Ausstattung und Gestaltung."
     },
     {
       icon: Calendar,
-      title: "Ablaufplan",
+      title: "Badumbau München: Klarer Zeitplan",
       description: "Klarer Zeitplan für alle Arbeitsschritte."
     },
     {
       icon: CheckCircle2,
-      title: "Umsetzung",
+      title: "Komplettsanierung München: Profi-Umsetzung",
       description: "Koordinierte Ausführung mit geprüften Gewerken."
     }
   ];

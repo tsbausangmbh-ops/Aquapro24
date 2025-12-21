@@ -289,7 +289,7 @@ export default function ArmaturenPage() {
                     <Award className="w-8 h-8 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Markenqualität</h3>
+                    <h3 className="font-bold text-lg">Armaturen Marken München: Grohe, Hansgrohe & Geberit</h3>
                     <p className="text-muted-foreground text-sm">Wir verbauen nur hochwertige Produkte</p>
                   </div>
                 </div>

@@ -30,22 +30,22 @@ export default function WaermepumpeMuenchenPage() {
   const schritte = [
     {
       icon: FileText,
-      title: "Ersteinschätzung",
+      title: "Wärmepumpe München: Kostenlose Erstprüfung",
       description: "Prüfung Ihrer Gebäudedaten und Voraussetzungen."
     },
     {
       icon: Settings,
-      title: "Planung",
+      title: "Heizlastberechnung München: Profi-Planung",
       description: "Detaillierte Planung inkl. Heizlast und Hydraulik."
     },
     {
       icon: Calendar,
-      title: "Vorbereitung",
+      title: "Wärmepumpe Altbau München: Vorbereitung",
       description: "Anpassungen an Verteilung und Regelung."
     },
     {
       icon: CheckCircle2,
-      title: "Umsetzung",
+      title: "Wärmepumpe Installation München: Fachgerecht",
       description: "Fachgerechte Installation und Inbetriebnahme."
     }
   ];

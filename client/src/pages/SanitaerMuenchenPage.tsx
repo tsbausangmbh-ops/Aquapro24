@@ -30,22 +30,22 @@ export default function SanitaerMuenchenPage() {
   const leistungen = [
     {
       icon: Wrench,
-      title: "Armaturen & Anschlüsse",
+      title: "Armaturen München: Montage & Reparatur",
       description: "Installation und Reparatur von Armaturen in Küche und Bad - alle Marken."
     },
     {
       icon: Droplets,
-      title: "Leckage-Check & Reparaturen",
+      title: "Leckage München: Ortung & Behebung",
       description: "Schnelle Ortung und Behebung von Wasserschäden und undichten Stellen."
     },
     {
       icon: ShowerHead,
-      title: "WC/Waschtisch/Spülkasten",
+      title: "WC Austausch München: Schneller Service",
       description: "Austausch und Neuinstallation von Sanitärobjekten."
     },
     {
       icon: PipetteIcon,
-      title: "Vorbereitung Badsanierung",
+      title: "Badsanierung München: Profi-Vorbereitung",
       description: "Professionelle Vorarbeiten für Ihre Badmodernisierung."
     }
   ];

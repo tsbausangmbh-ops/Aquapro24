@@ -290,8 +290,8 @@ export default function WarmwasserPage() {
                     <Award className="w-8 h-8 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Marken-Experten</h3>
-                    <p className="text-muted-foreground text-sm">Vaillant, Stiebel Eltron, Junkers & mehr</p>
+                    <h3 className="font-bold text-lg">Durchlauferhitzer Marken München: Stiebel Eltron, Vaillant & mehr</h3>
+                    <p className="text-muted-foreground text-sm">Zertifizierter Service für alle Hersteller</p>
                   </div>
                 </div>
                 <div className="space-y-4 text-sm">

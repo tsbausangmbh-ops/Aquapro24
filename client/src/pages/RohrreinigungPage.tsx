@@ -299,7 +299,7 @@ export default function RohrreinigungPage() {
                     <Award className="w-8 h-8 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Professionelle Ausrüstung</h3>
+                    <h3 className="font-bold text-lg">Rohrreinigung Technik München: Kamera & Hochdruck</h3>
                     <p className="text-muted-foreground text-sm">Modernste Technik für beste Ergebnisse</p>
                   </div>
                 </div>

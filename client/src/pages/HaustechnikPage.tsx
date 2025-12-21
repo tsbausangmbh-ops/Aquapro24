@@ -274,22 +274,22 @@ export default function HaustechnikPage() {
                 <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
                   <Home className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold">1.500+</h3>
-                <p className="text-muted-foreground">Projekte realisiert</p>
+                <h3 className="text-2xl font-bold">1.500+ Projekte München: Erfolgreich realisiert</h3>
+                <p className="text-muted-foreground">Haustechnik komplett</p>
               </div>
               <div className="space-y-2">
                 <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
                   <Star className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold">4.9/5</h3>
-                <p className="text-muted-foreground">Kundenbewertung</p>
+                <h3 className="text-2xl font-bold">4.9/5 Sterne München: Top-Bewertungen</h3>
+                <p className="text-muted-foreground">Verifizierte Kundenstimmen</p>
               </div>
               <div className="space-y-2">
                 <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
                   <Clock className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold">25+</h3>
-                <p className="text-muted-foreground">Jahre Erfahrung</p>
+                <h3 className="text-2xl font-bold">25+ Jahre München: Ihr Haustechnik-Partner</h3>
+                <p className="text-muted-foreground">Erfahrung zählt</p>
               </div>
             </div>
           </div>

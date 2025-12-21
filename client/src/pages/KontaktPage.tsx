@@ -340,7 +340,7 @@ export default function KontaktPage() {
                     <Shield className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">2 Jahre Garantie</h3>
+                    <h3 className="font-bold text-lg">Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
                     <p className="text-sm text-muted-foreground">Auf alle unsere Arbeiten gewähren wir eine zweijährige Garantie.</p>
                   </div>
                 </CardContent>
@@ -353,7 +353,7 @@ export default function KontaktPage() {
                     <Star className="w-7 h-7 fill-yellow-400 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">4.9/5 Sterne Bewertung</h3>
+                    <h3 className="font-bold text-lg">Klempner Bewertungen München: 4.9/5 Sterne</h3>
                     <p className="text-sm text-muted-foreground">Über 2.847 zufriedene Kunden in München vertrauen uns.</p>
                   </div>
                 </CardContent>
