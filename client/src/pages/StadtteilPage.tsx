@@ -372,7 +372,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-              Unsere Leistungen in {data.name}
+              Sanitär & Heizung München {data.name}: Alle Leistungen im Überblick
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((service) => (
@@ -397,7 +397,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Warum AquaPro24 in {data.name}?
+                  Klempner München {data.name}: Warum Kunden uns empfehlen
                 </h2>
                 <ul className="space-y-3">
                   {data.besonderheiten.map((item, index) => (
@@ -462,7 +462,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
-              Auch in der Nähe von {data.name}
+              Installateur München nahe {data.name}: Nachbarstadtteile im Einsatzgebiet
             </h2>
             <p className="text-muted-foreground text-center mb-6">
               Wir sind auch in den Nachbarstadtteilen für Sie da
@@ -488,7 +488,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         <section className="py-6 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Installateur {data.name} - Jetzt Termin vereinbaren
+              Klempner München {data.name}: Notdienst & Termin online buchen
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Schnelle Hilfe für Sanitär, Heizung und Bad in München {data.name}. 

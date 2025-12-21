@@ -323,7 +323,7 @@ export default function UeberUnsPage() {
             <div className="text-center mb-8">
               <Badge variant="outline" className="mb-4">Wir verstehen Ihre Frustration</Badge>
               <h2 className="text-3xl font-bold mb-4">
-                Diese Probleme kennen Sie sicher
+                Handwerker München Erfahrungen: Diese Probleme kennen Sie sicher
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Schlechte Erfahrungen mit Handwerkern? Sie sind nicht allein. Deshalb haben wir 
@@ -371,7 +371,7 @@ export default function UeberUnsPage() {
               <div className="order-1 lg:order-2 space-y-6">
                 <Badge variant="outline">Unsere Geschichte</Badge>
                 <h2 className="text-3xl font-bold">
-                  Warum wir AquaPro24 gegründet haben
+                  Klempner Partnernetzwerk München: Warum wir AquaPro24 gegründet haben
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
@@ -399,7 +399,7 @@ export default function UeberUnsPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Unsere Werte</Badge>
-              <h2 className="text-3xl font-bold mb-4">Wofür AquaPro24 München steht</h2>
+              <h2 className="text-3xl font-bold mb-4">Sanitär Fachbetrieb München: Unsere Werte & Qualitätsstandards</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Diese Prinzipien sind keine Marketing-Phrasen - sie bestimmen jede Entscheidung 
                 und jeden Handgriff unserer Partnerbetriebe.
@@ -428,7 +428,7 @@ export default function UeberUnsPage() {
               <div className="space-y-6">
                 <Badge variant="outline">Warum AquaPro24?</Badge>
                 <h2 className="text-3xl font-bold">
-                  Das unterscheidet uns von anderen Handwerkern
+                  Installateur München Qualität: Das unterscheidet uns von anderen
                 </h2>
                 <p className="text-muted-foreground">
                   Sie haben schlechte Erfahrungen gemacht? Wir verstehen das. Deshalb haben wir 
@@ -464,7 +464,7 @@ export default function UeberUnsPage() {
                 Einsatzgebiet
               </Badge>
               <h2 className="text-3xl font-bold mb-4">
-                AquaPro24 in ganz München für Sie da
+                Klempner Einsatzgebiet München: Alle Stadtteile & Umgebung
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Egal in welchem Stadtteil Sie wohnen - unsere Partnerbetriebe sind ab 60 Minuten vor Ort.
@@ -489,7 +489,7 @@ export default function UeberUnsPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Echte Kundenstimmen</Badge>
-              <h2 className="text-3xl font-bold mb-4">Was Münchner über uns sagen</h2>
+              <h2 className="text-3xl font-bold mb-4">Sanitär Bewertungen München: Echte Kundenstimmen</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Echte Bewertungen von echten Kunden aus München - ungefiltert und authentisch
               </p>
@@ -527,7 +527,7 @@ export default function UeberUnsPage() {
         <section className="py-6 lg:pt-8 pb-4 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Bereit für einen Handwerker, dem Sie vertrauen können?
+              Klempner beauftragen München: Kostenlose Beratung anfordern
             </h2>
             <p className="text-primary-foreground/80 mb-4 max-w-2xl mx-auto text-lg">
               Vereinbaren Sie jetzt einen Beratungstermin oder kontaktieren Sie uns direkt. 

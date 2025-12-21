@@ -193,7 +193,7 @@ export default function KontaktPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-3xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3">Schreiben Sie uns</h2>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">Sanitär Anfrage München: Schreiben Sie uns</h2>
               <p className="text-muted-foreground">
                 Haben Sie eine Frage oder möchten Sie ein Angebot? Wir antworten innerhalb von 24 Stunden.
               </p>
@@ -296,7 +296,7 @@ export default function KontaktPage() {
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <CalendarIcon className="w-12 h-12 mx-auto mb-4 opacity-90" />
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-              Termin online buchen
+              Handwerker Termin München: Online Wunschtermin buchen
             </h2>
             <p className="text-lg mb-6 opacity-90">
               Buchen Sie bequem online Ihren Wunschtermin mit Echtzeit-Verfügbarkeit.
@@ -312,7 +312,7 @@ export default function KontaktPage() {
         {/* Benefits Section */}
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold text-center mb-8">Das erwartet Sie</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">Klempner Service München: Das erwartet Sie bei AquaPro24</h2>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
               {[

@@ -419,7 +419,7 @@ export default function RatgeberPage() {
         <section className="py-6 lg:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Noch Fragen? Wir helfen gerne!
+              Sanitär Beratung München: Kostenlose Expertenberatung anfordern
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
               Unser Team steht Ihnen für alle Fragen rund um Sanitär, Heizung und Haustechnik 
