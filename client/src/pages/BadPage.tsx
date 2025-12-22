@@ -352,10 +352,16 @@ export default function BadPage() {
               ))}
             </div>
             
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 space-y-3">
               <p className="text-sm text-muted-foreground">
                 Barrierefreies Bad ab 20.000€ | KfW-Förderung bis 6.250€ möglich
               </p>
+              <Button variant="outline" asChild>
+                <a href="#foerderrechner" data-testid="button-foerderrechner">
+                  <Calculator className="w-4 h-4 mr-2" />
+                  Zum KfW-Förderrechner
+                </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -410,7 +416,7 @@ export default function BadPage() {
         </section>
 
         {/* KfW-Förderung Section */}
-        <section className="py-12 lg:py-16 bg-primary/5">
+        <section id="foerderrechner" className="py-12 lg:py-16 bg-primary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <Badge className="mb-4">
