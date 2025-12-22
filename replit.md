@@ -118,6 +118,21 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 - Complete Schema.org LocalBusiness markup with 25 Munich districts
 - Mobile-optimierte sitemap.xml mit `mobile:mobile` Tags für Notdienst/Booking-Seiten
 
+### Advanced Schema.org Markup (December 2025)
+- **HowTo Schema**: Step-by-step guides for emergency procedures (Rohrbruch Soforthilfe)
+  - 5-step emergency guide on Notdienst page
+  - Supports totalTime, estimatedCost, supply, and tool properties
+- **Organization Schema**: Company information with sameAs links
+  - Links to Facebook, Instagram, LinkedIn, WhatsApp, Google Maps, Yelp, Gelbe Seiten, 11880
+  - Founder details, contact points, knowsAbout topics
+- **Geo-Targeting**: Extended service area
+  - 40km radius from Munich center (48.1351, 11.5820)
+  - 18+ surrounding cities: Dachau, Freising, Erding, Starnberg, Garching, Unterschleißheim, Fürstenfeldbruck, Germering, Unterhaching, Ottobrunn, Taufkirchen, Haar, Neubiberg, Grünwald, Pullach, Eching, Ismaning, Kirchheim
+- **AI Transparency Meta Tags**: EU AI Act compliance
+  - ai-act:transparency, ai-act:risk-level, ai-act:human-oversight
+  - ai-act:ai-model (OpenAI GPT-4o-mini), ai-provider, ai-purpose
+  - ai-decision-making, ai-contact-human, ai-copyright, ai-data-usage
+
 ### Performance Optimizations (December 2025)
 - **Font Loading**: Reduziert von 25+ auf 2 Schriftarten (Inter, Plus Jakarta Sans)
 - **Async Font Loading**: Fonts via `preload` + `onload` für nicht-blockierendes Laden
