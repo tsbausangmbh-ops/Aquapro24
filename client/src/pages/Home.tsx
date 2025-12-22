@@ -58,7 +58,7 @@ function ServiceSelection() {
       <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
         <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Ihr kostenloses Angebot in 10 Schritten
+          Klempner Angebot München: Kostenlos in 10 Schritten
         </h2>
         <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
           Wählen Sie Ihr Gewerk – wir stellen Ihnen die passenden Fragen für ein maßgeschneidertes Angebot.
@@ -471,7 +471,7 @@ export default function Home() {
         <section className="py-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-4">
-              <h2 className="text-xl font-bold mb-2">Markenqualität für Ihr Zuhause</h2>
+              <h2 className="text-xl font-bold mb-2">Sanitär Marken München: Qualität für Ihr Zuhause</h2>
             </div>
             
             <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">

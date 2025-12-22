@@ -291,7 +291,7 @@ export default function FoerderantragPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                BAFA Antrag München: So läuft der Prozess ab
+                KfW/BAFA Antrag München: So läuft der Prozess ab
               </h2>
               <p className="text-muted-foreground">
                 Von der Beratung bis zur Förderauszahlung – transparent und einfach
@@ -330,7 +330,7 @@ export default function FoerderantragPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                BAFA Unterlagen München: Was Sie benötigen
+                Förderantrag Unterlagen München: Was Sie benötigen
               </h2>
               <p className="text-muted-foreground">
                 Wir helfen Ihnen bei der Zusammenstellung aller Dokumente
