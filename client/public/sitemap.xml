@@ -3,8 +3,11 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
   <!-- ================================================ -->
   <!-- HOMEPAGE - Primary Landing Page -->
@@ -14,10 +17,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/hero-sanitaer-heizung-muenchen.jpg</image:loc>
-      <image:title>Klempner München - Sanitär und Heizung Notdienst 24/7</image:title>
-      <image:caption>AquaPro24 Partnernetzwerk für Sanitär, Heizung und Badsanierung in München seit 2005</image:caption>
+      <image:title>Klempner München Sanitär Heizung Notdienst 24/7 - AquaPro24 Partnernetzwerk</image:title>
+      <image:caption>AquaPro24 München Sanitärinstallateur Heizungsinstallateur seit 2005 - Grohe Viessmann Vaillant Partner - 2800 Kunden 4.9 Sterne</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -30,10 +34,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/sanitaer-klempner-muenchen.jpg</image:loc>
-      <image:title>Sanitär und Sanitärinstallateur München - Klempner Notdienst 24/7</image:title>
-      <image:caption>Professionelle Sanitärinstallation und Reparatur in München - ab 81 Euro</image:caption>
+      <image:title>Sanitärinstallateur München Klempner Notdienst 24/7 - Wasserinstallation Rohrbruch ab 92 Euro</image:title>
+      <image:caption>Sanitär München Rohrbruch Reparatur Leckortung Wasserinstallation - Grohe Hansgrohe Geberit Partner Festpreis</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -43,10 +48,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/heizung-wartung-muenchen.jpg</image:loc>
-      <image:title>Heizung und Heizungsinstallateur München - Notdienst 24/7</image:title>
-      <image:caption>Heizungsinstallation Viessmann, Vaillant, Buderus in München - ab 154 Euro</image:caption>
+      <image:title>Heizungsinstallateur München Heizung Reparatur Wartung Notdienst 24/7 - ab 154 Euro</image:title>
+      <image:caption>Heizung München Viessmann Vaillant Buderus Wolf Installation Wartung Austausch - BAFA Förderung 70%</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -56,10 +62,25 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
-      <image:title>Badsanierung München - Komplettumbau vom Profi</image:title>
-      <image:caption>Badsanierung in 2-4 Wochen mit Grohe und Hansgrohe Armaturen</image:caption>
+      <image:title>Badsanierung München Komplettumbau Profi - Villeroy Boch Duravit Grohe ab 16000 Euro</image:title>
+      <image:caption>Badsanierung München in 2-4 Wochen mit Villeroy Boch, Duravit, Grohe und Hansgrohe - 5 Jahre Garantie Festpreis</image:caption>
+      <image:geo_location>München, Bayern, Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/badsanierung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <mobile:mobile/>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
+      <image:title>Badsanierung München Badumbau Renovierung - Walk-in Dusche bodengleich barrierefrei</image:title>
+      <image:caption>Komplette Badsanierung München mit barrierefreier Walk-in Dusche und Luxus-Armaturen</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -69,10 +90,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/waermepumpe-installation-muenchen.jpg</image:loc>
-      <image:title>Wärmepumpe München - bis 70% BAFA Förderung 2025</image:title>
-      <image:caption>Wärmepumpen von Viessmann, Vaillant, Wolf mit staatlicher Förderung</image:caption>
+      <image:title>Wärmepumpe München Installation BAFA Förderung 70% 2025 - Viessmann Vaillant Wolf</image:title>
+      <image:caption>Wärmepumpe München Luft-Wasser Erdwärme Installation - Viessmann Vitocal Vaillant aroTHERM Wolf - bis 23100 Euro Förderung</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -82,10 +104,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/rohrreinigung-abfluss-muenchen.jpg</image:loc>
-      <image:title>Rohrreinigung München - Abfluss verstopft Notdienst 24/7</image:title>
-      <image:caption>Professionelle Rohrreinigung und Kanalreinigung in München - ab 81 Euro</image:caption>
+      <image:title>Rohrreinigung München Abfluss verstopft Notdienst 24/7 - Kanalreinigung ab 81 Euro</image:title>
+      <image:caption>Rohrreinigung München Abfluss WC verstopft Spirale Hochdruckspülung Kamerainspektion - 60 Min Anfahrt Festpreis</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -137,10 +160,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/sanitaer-notdienst-24h-muenchen.jpg</image:loc>
-      <image:title>Sanitär Notdienst 24h München - Klempner Soforthilfe rund um die Uhr</image:title>
-      <image:caption>24 Stunden Sanitär Notdienst bei Rohrbruch und Wasserschaden in München</image:caption>
+      <image:title>Sanitär Notdienst 24h München Klempner Soforthilfe - Rohrbruch Wasserschaden jetzt</image:title>
+      <image:caption>24 Stunden Sanitär Notdienst München Rohrbruch Wasserschaden WC verstopft - 60 Min vor Ort Festpreis</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -150,10 +174,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/heizung-notdienst-24h-muenchen.jpg</image:loc>
-      <image:title>Heizung Notdienst 24h München - Heizungsreparatur Soforthilfe</image:title>
-      <image:caption>24 Stunden Heizung Notdienst bei Heizungsausfall in München</image:caption>
+      <image:title>Heizung Notdienst 24h München Heizungsreparatur Soforthilfe - kein Warmwasser</image:title>
+      <image:caption>24 Stunden Heizung Notdienst München Heizungsausfall Therme defekt - Viessmann Vaillant Buderus Reparatur</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -163,10 +188,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/notdienst-sanitaer-heizung-muenchen.jpg</image:loc>
-      <image:title>Notdienst Sanitär und Heizung München - 24h Soforthilfe</image:title>
-      <image:caption>Schnelle Hilfe bei Rohrbruch, Wasserschaden und Heizungsausfall</image:caption>
+      <image:title>Notdienst Sanitär Heizung München 24h Soforthilfe - Klempner Heizungsinstallateur</image:title>
+      <image:caption>Notdienst München Rohrbruch Wasserschaden Heizungsausfall - 0152 12274043 jetzt anrufen</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -302,10 +328,11 @@
     <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/termin-buchen-muenchen.jpg</image:loc>
-      <image:title>Termin online buchen München - Handwerker Wunschtermin</image:title>
-      <image:caption>Buchen Sie jetzt Ihren Wunschtermin für Sanitär und Heizung in München</image:caption>
+      <image:title>Termin online buchen München Handwerker Wunschtermin - Klempner Heizung schnell</image:title>
+      <image:caption>Termin buchen München Sanitär Heizung Badsanierung Wärmepumpe - Google Calendar Bestätigung sofort</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -705,6 +732,45 @@
       <image:title>Klempner Freimann München - Sanitär, Heizung und Notdienst</image:title>
       <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Freimann</image:caption>
       <image:geo_location>Freimann, München, Bayern, Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/perlach</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/klempner-perlach-muenchen.jpg</image:loc>
+      <image:title>Klempner Perlach München - Sanitär, Heizung und Notdienst 24/7</image:title>
+      <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Perlach - 60 Min Anfahrt</image:caption>
+      <image:geo_location>Perlach, München, Bayern, Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/hadern</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/klempner-hadern-muenchen.jpg</image:loc>
+      <image:title>Klempner Hadern München - Sanitär, Heizung und Notdienst 24/7</image:title>
+      <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Hadern - Festpreis Garantie</image:caption>
+      <image:geo_location>Hadern, München, Bayern, Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/allach</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/klempner-allach-muenchen.jpg</image:loc>
+      <image:title>Klempner Allach München - Sanitär, Heizung und Notdienst 24/7</image:title>
+      <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Allach - Wärmepumpe BAFA</image:caption>
+      <image:geo_location>Allach, München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
