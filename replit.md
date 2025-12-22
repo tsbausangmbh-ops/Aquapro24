@@ -124,9 +124,11 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 - **DNS Prefetch**: Vorverbindung zu fonts.googleapis.com/gstatic.com
 - **Hero Image Preload**: `fetchpriority="high"` für LCP-kritisches Bild
 - **Critical CSS Inline**: Inline-Styles für schnelleren First Paint
-- **Code Splitting**: React.lazy() für alle 40+ Seitenkomponenten
+- **Code Splitting**: React.lazy() für alle 40+ Seitenkomponenten + Popups
 - **Image Lazy Loading**: `loading="lazy"` + `decoding="async"` für alle Bilder außer Header-Logo
-- **Popup Lazy Loading**: Weihnachts-/Neujahrs-Popup Bilder verzögert geladen
+- **Popup Lazy Loading**: Weihnachts-/Neujahrs-Popup Komponenten + Bilder verzögert geladen
+- **Module Preload**: `modulepreload` für main.tsx Entry Point
+- **Route Prefetch**: Beliebte Seiten (termin, notdienst) via `prefetch` vorgeladen
 
 ## System Architecture
 

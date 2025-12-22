@@ -1,12 +1,37 @@
 import { Switch, Route } from "wouter";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useEffect, startTransition } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Loader2 } from "lucide-react";
-import ChristmasPopup from "@/components/ChristmasPopup";
-import NewYearPopup from "@/components/NewYearPopup";
+
+// Lazy load popups - nicht kritisch für First Paint
+const ChristmasPopup = lazy(() => import("@/components/ChristmasPopup"));
+const NewYearPopup = lazy(() => import("@/components/NewYearPopup"));
+
+// Delayed popup loader für bessere Performance
+function DelayedPopups() {
+  const [showPopups, setShowPopups] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      startTransition(() => {
+        setShowPopups(true);
+      });
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  if (!showPopups) return null;
+  
+  return (
+    <Suspense fallback={null}>
+      <ChristmasPopup />
+      <NewYearPopup />
+    </Suspense>
+  );
+}
 
 const Home = lazy(() => import("@/pages/Home"));
 const Impressum = lazy(() => import("@/pages/Impressum"));
@@ -129,8 +154,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <ChristmasPopup />
-        <NewYearPopup />
+        <DelayedPopups />
         <Toaster />
         <Router />
       </TooltipProvider>
