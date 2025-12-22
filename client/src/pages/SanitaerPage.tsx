@@ -230,7 +230,7 @@ export default function SanitaerPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
+              <h2 className="text-3xl font-bold mb-3">Klempner Leistungen München: Preise & Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Vom tropfenden Wasserhahn bis zum Rohrbruch-Notfall – wir helfen schnell und zuverlässig.
               </p>
@@ -268,7 +268,7 @@ export default function SanitaerPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">So einfach geht's</h2>
+              <h2 className="text-3xl font-bold mb-3">Sanitär Ablauf München: So einfach geht's</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von Ihrem Anruf bis zur fertigen Reparatur – transparent und stressfrei.
               </p>
@@ -293,7 +293,7 @@ export default function SanitaerPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <h2 className="text-3xl font-bold mb-3">Sanitär Garantie München: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>
@@ -317,7 +317,7 @@ export default function SanitaerPage() {
         <section className="py-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-2">Markenqualität</h2>
+              <h2 className="text-2xl font-bold mb-2">Sanitär Markenqualität München: Grohe & Hansgrohe</h2>
               <p className="text-muted-foreground text-sm">
                 Wir verbauen nur Produkte von führenden Herstellern.
               </p>
@@ -356,7 +356,7 @@ export default function SanitaerPage() {
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6">
-              Ihr Klempner in München
+              Klempner München: Ihr zuverlässiger Partner
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>

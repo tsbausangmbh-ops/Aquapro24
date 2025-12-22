@@ -241,7 +241,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Von der Vision zum Traumbad</h2>
+              <h2 className="text-3xl font-bold mb-3">Badsanierung München: Von der Vision zum Traumbad</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Moderne Bäder, professionelle Umsetzung, barrierefreie Lösungen – alles aus einer Hand.
               </p>
@@ -300,7 +300,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Pakete & Preise</h2>
+              <h2 className="text-3xl font-bold mb-3">Bad Preise München: Transparente Pakete</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Transparente Preise, klare Leistungen. Wählen Sie das Paket, das zu Ihnen passt.
               </p>
@@ -370,7 +370,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">So läuft Ihre Badsanierung ab</h2>
+              <h2 className="text-3xl font-bold mb-3">Badsanierung Ablauf München: So läuft Ihr Projekt</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der ersten Beratung bis zur Schlüsselübergabe – transparent und stressfrei.
               </p>
@@ -395,7 +395,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <h2 className="text-3xl font-bold mb-3">Bad Garantie München: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>
@@ -423,7 +423,7 @@ export default function BadPage() {
                 <Euro className="w-3 h-3 mr-1" />
                 Staatliche Förderung
               </Badge>
-              <h2 className="text-3xl font-bold mb-3">KfW-Förderung für barrierefreie Bäder</h2>
+              <h2 className="text-3xl font-bold mb-3">Bad Förderung München: KfW-Zuschuss bis 6.250€</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Bis zu 6.250€ Zuschuss vom Staat für Ihren barrierefreien Badumbau. Wir beraten Sie und helfen beim Antrag.
               </p>

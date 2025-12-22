@@ -228,7 +228,7 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
+              <h2 className="text-3xl font-bold mb-3">Rohrreinigung Leistungen München: Preise & Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Egal ob Küche, Bad oder Keller – wir lösen jede Verstopfung.
               </p>
@@ -265,7 +265,7 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">So einfach geht's</h2>
+              <h2 className="text-3xl font-bold mb-3">Abfluss Ablauf München: So einfach geht's</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von Ihrem Anruf bis zum freien Abfluss.
               </p>
@@ -289,7 +289,7 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <h2 className="text-3xl font-bold mb-3">Rohrreinigung Garantie München: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>
@@ -312,7 +312,7 @@ export default function RohrreinigungPage() {
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6">
-              Ihr Rohrreinigung-Spezialist in München
+              Rohrreinigung München: Ihr Spezialist vor Ort
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>

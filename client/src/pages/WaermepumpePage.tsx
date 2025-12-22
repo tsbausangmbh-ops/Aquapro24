@@ -227,7 +227,7 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
+              <h2 className="text-3xl font-bold mb-3">Wärmepumpe Leistungen München: Preise & Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung über die Förderung bis zur Installation – alles aus einer Hand.
               </p>
@@ -264,7 +264,7 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">So läuft Ihr Wärmepumpen-Projekt</h2>
+              <h2 className="text-3xl font-bold mb-3">Wärmepumpe Ablauf München: So läuft Ihr Projekt</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der ersten Beratung bis zur laufenden Wärmepumpe – wir begleiten Sie.
               </p>
@@ -288,7 +288,7 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Ihre Vorteile</h2>
+              <h2 className="text-3xl font-bold mb-3">Wärmepumpe Vorteile München: Förderung & Ersparnis</h2>
               <p className="text-muted-foreground">
                 Warum sich der Umstieg auf eine Wärmepumpe jetzt lohnt.
               </p>
@@ -311,7 +311,7 @@ export default function WaermepumpePage() {
         <section className="py-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-2">Markenqualität</h2>
+              <h2 className="text-2xl font-bold mb-2">Wärmepumpe Marken München: Viessmann & Vaillant</h2>
               <p className="text-muted-foreground text-sm">
                 Wir installieren Wärmepumpen führender Hersteller.
               </p>
@@ -345,7 +345,7 @@ export default function WaermepumpePage() {
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6">
-              Ihr Wärmepumpen-Spezialist in München
+              Wärmepumpe München: Ihr Spezialist vor Ort
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
