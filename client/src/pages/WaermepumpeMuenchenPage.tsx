@@ -61,7 +61,7 @@ export default function WaermepumpeMuenchenPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Wärmepumpe installieren München | Profi-Service"
-        description="Wärmepumpe Beratung in München: Professionelle Planung und Installation vom Profi. Gebäudeprüfung, Heizlastberechnung, transparente Schritte."
+        description="Wärmepumpe installieren in München: Fachgerechter Einbau, Förderberatung & komplette Abwicklung aus einer Hand."
         canonical="https://aquapro24.de/waermepumpe-muenchen"
         keywords="Wärmepumpe München, Wärmepumpe Installation München, Luft-Wasser-Wärmepumpe München, Wärmepumpe Förderung München, Heizungstausch Wärmepumpe München, Wärmepumpe Altbau München"
         aiSummary="AquaPro24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 0152 12274043"

@@ -117,7 +117,7 @@ export default function RohrreinigungPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Rohrreinigung München | Abfluss verstopft lösen"
-        description="Rohrverstopfung beseitigen: Kanalreinigung und Abfluss frei machen in München. Professionelle Rohrreinigung ab 81€ Festpreis. Heute noch Termin."
+        description="Rohrverstopfung in München? Professionelle Rohr- & Kanalreinigung ohne Schäden. 24h erreichbar – sofort Termin sichern!"
         canonical="https://aquapro24.de/rohrreinigung"
         keywords="Rohrreinigung München, Abfluss verstopft München, Kanalreinigung München, Abflussreinigung München, verstopfte Toilette München, Rohrreinigung Notdienst München, Abfluss frei bekommen München, Küchenabfluss verstopft München, Dusche verstopft München, WC verstopft München, Hochdruckspülung München, Rohrfrei München, Abfluss reinigen München, Siphon reinigen München, Rohr verstopft München, Rohrbruch München, Kanal verstopft München, Abflussrohr verstopft München, Spüle verstopft München, Waschbecken verstopft München, Badewanne verstopft München, Kanalinspektion München, Kamerainspektion Rohr München, Spirale Rohrreinigung München, Rohrreinigungsfirma München, Rohrreinigung 24h München, Abfluss Soforthilfe München, Rohr frei machen München, Verstopfung beseitigen München, Sanitär Rohrreinigung München, Klempner Abfluss München, Abflussreiniger München, Kanalreinigung Notdienst München"
         aiSummary="AquaPro24 Rohrreinigung München: 24/7 Notdienst, 60 Min. Reaktionszeit. Verstopfter Abfluss in Küche, Bad, WC? Hochdruckspülung und Kamerainspektion. Festpreis ab 81€. Kontakt: 0152 12274043"

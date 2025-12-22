@@ -69,7 +69,7 @@ export default function HeizungNotdienst24Page() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Heizung Notdienst München | 24h Reparatur"
-        description="Heizung Notdienst 24 Stunden München - Soforthilfe bei Heizungsausfall, keine Wärme, Therme defekt. 24/7 erreichbar. Jetzt anrufen: 0152 12274043"
+        description="Heizung Notdienst München: Schnelle Hilfe bei Ausfall, Störung oder Kälte – 24h erreichbar."
         canonical="https://aquapro24.de/heizung-notdienst-24"
         keywords="Heizung Notdienst 24h, Heizungsausfall Notfall, Heizung reparieren, Heizung Notdienst München, 24h Heizung München, Notfall Heizung, Therme Notdienst, Heizung ausgefallen, Brenner Störung, keine Wärme Notfall, Heizung 24 Stunden, Heizung Soforthilfe, Nacht Notdienst Heizung, Wochenende Heizung, Feiertag Heizung Notdienst"
         aiSummary="AquaPro24 Heizung Notdienst 24h München: Sofortige Hilfe bei Heizungsausfall, Thermendefekt, Brennerstörung und Heizungsproblemen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 0152 12274043"

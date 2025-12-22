@@ -365,7 +365,7 @@ export default function TerminPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Handwerker Termin München | Online buchen"
-        description="Online Terminbuchung München: Handwerker buchen ohne Warteschleife. Wunschtermin wählen, freie Zeiten in Echtzeit, sofortige Bestätigung."
+        description="Online Termin buchen in München: Sanitär & Heizung einfach online anfragen – Wunschzeit auswählen & bestätigen."
         canonical="https://aquapro24.de/termin"
         keywords="Termin buchen München, Sanitär Termin, Heizung Termin, Klempner München online buchen"
       />

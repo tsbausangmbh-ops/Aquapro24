@@ -104,7 +104,7 @@ export default function KontaktPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Sanitär Kontakt München | Angebot anfordern"
-        description="Fragen zu Ihrem Sanitär-Problem? Rufen Sie uns an oder schreiben Sie. Kostenlose Erstberatung, ehrliche Einschätzung. Wir helfen gerne."
+        description="Kontakt AquaPro24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich."
         canonical="https://aquapro24.de/kontakt"
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst"
       />

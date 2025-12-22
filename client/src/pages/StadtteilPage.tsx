@@ -268,7 +268,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title={`Sanitär Installateur ${data.name} München | 24h Notdienst`}
-        description={`Ihr Installateur in München ${data.name}: Sanitär, Heizung, Badsanierung. Anfahrt in ${data.anfahrt}. 24/7 Notdienst. Faire Festpreise. Jetzt anrufen!`}
+        description={`Sanitär & Heizung in ${data.name} München: 24h Notdienst, schnelle Hilfe & feste Preise vom Fachbetrieb.`}
         canonical={`https://aquapro24.de/${data.slug}`}
         keywords={`Installateur ${data.name}, Sanitär ${data.name}, Heizung ${data.name}, Klempner ${data.name}, Notdienst ${data.name}, ${data.name} München`}
         breadcrumbs={[

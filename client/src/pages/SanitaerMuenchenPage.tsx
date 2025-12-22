@@ -60,7 +60,7 @@ export default function SanitaerMuenchenPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Sanitär Installateur München | Schnell & zuverlässig"
-        description="Klempner München: Sanitär Installation und schnelle Hilfe bei Reparaturen. WC, Waschtisch, Armaturen - transparente Preise, schnelle Termine."
+        description="Ihr Sanitär Installateur in München: Schnelle Hilfe bei Reparaturen, Notfällen & Installationen. Jetzt Termin sichern!"
         canonical="https://aquapro24.de/sanitaer-muenchen"
         keywords="Sanitär München, Sanitärinstallateur München, Sanitärinstallation München, Klempner München, Installateur München, Sanitärtechniker München, Sanitärfirma München, Armaturen austauschen München, Armaturen montieren München, Wasserhahn wechseln München, Wasserhahn austauschen München, Armatur reparieren München, WC Austausch München, WC montieren München, Toilette einbauen München, Waschtisch München, Waschtisch montieren München, Waschbecken einbauen München, Spülkasten reparieren München, Spülkasten austauschen München, Sanitär Notdienst München, Klempner Notdienst München, Rohrbruch München, Rohrreinigung München, Abfluss verstopft München, Wasserleitung München, Wasseranschluss München, Grohe München, Hansgrohe München, Geberit München, Sanitär Festpreis München, Sanitär günstig München"
         aiSummary="AquaPro24 Sanitär München: Professionelle Sanitärarbeiten - Armaturen, Leckagen, WC-Austausch, Badsanierung-Vorbereitung. Transparenter Ablauf, schnelle Rückmeldung. Kontakt: 0152 12274043"

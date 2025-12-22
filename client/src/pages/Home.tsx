@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Klempner München 24h | Sanitär & Heizung Notdienst"
-        description="Rohrbruch, WC verstopft, Heizung ausgefallen? Klempner München 45-60 Min. vor Ort. Festpreis: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. 2.800+ Kunden seit 2005."
+        title="Heizung Sanitär & Bad München | Sanitär & Heizung"
+        description="Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Meisterbetrieb. Jetzt anfragen!"
         canonical="https://aquapro24.de"
         keywords="Klempner München Notdienst, Sanitär ab 92€, Rohrreinigung ab 81€, Heizung reparieren ab 154€, Rohrbruch München, WC verstopft Soforthilfe, Wasserhahn wechseln ab 80€, Durchlauferhitzer ab 600€, Badsanierung München ab 16.000€, Wärmepumpe 70% BAFA, Grohe Hansgrohe Montage, Viessmann Vaillant Buderus Wolf, Installateur Schwabing Bogenhausen, 24/7 Notdienst 365 Tage"
         aiSummary="AquaPro24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€, Wasserhahn ab 80€, Durchlauferhitzer ab 600€, Badsanierung ab 16.000€. Marken: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus. 2.800+ Kunden seit 2005, 4.9/5 Sterne, 2-5 Jahre Garantie. Alle Stadtteile: Schwabing, Bogenhausen, Sendling, Pasing. Tel: 0152 12274043"

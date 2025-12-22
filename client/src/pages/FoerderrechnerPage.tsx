@@ -218,7 +218,7 @@ export default function FoerderrechnerPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Förderrechner München | Heizung Förderung berechnen"
-        description="Förderrechner München: BAFA bis 70%, KfW Kredit bis 150.000 EUR, Energieberater 80% gefördert. Alle Förderprogramme berechnen. Tel: 0152 12274043"
+        description="Förderrechner München: BAFA & KfW Förderung für Heizung & Sanierung einfach berechnen – kostenlos & unverbindlich."
         canonical="https://aquapro24.de/foerderrechner"
         keywords="Förderrechner München, BAFA Förderung berechnen, KfW Förderrechner, Energieberater Förderung, Heizungsförderung Rechner, Wärmepumpe Förderung, iSFP Förderung, Tilgungszuschuss berechnen, BEG Förderung Rechner, Sanierungsförderung München"
         aiSummary="AquaPro24 Förderrechner München: BAFA Heizungsförderung bis 70%, KfW Kredit mit Tilgungszuschuss, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 0152 12274043"

@@ -88,7 +88,7 @@ export default function FoerderantragPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="BAFA & KfW Antrag München | Förderung sichern"
-        description="Förderantrag für Heizung München: Wir übernehmen die komplette BAFA & KfW Antragstellung. Bis 70% Förderung sichern. Kostenlose Beratung: 0152 12274043"
+        description="BAFA & KfW Antrag in München: Wir unterstützen Sie bei Förderanträgen für Heizung & Sanierung – sicher & korrekt."
         canonical="https://aquapro24.de/foerderantrag"
         keywords="Förderantrag München, BAFA Antrag Hilfe, KfW Antrag stellen, Förderantrag Heizung, BAFA Förderung beantragen, Heizungsförderung Antrag, Förderantrag Wärmepumpe, Antragstellung Förderung, BAFA Vollmacht, Förderung beantragen München"
         aiSummary="AquaPro24 Förderantrag Service München: Komplette BAFA & KfW Antragstellung für Heizungsförderung. Bis 70% Förderung, alle Unterlagen, Fristenüberwachung. Kontakt: 0152 12274043"

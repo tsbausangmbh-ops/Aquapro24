@@ -196,7 +196,7 @@ export default function FAQPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Klempner FAQ München | Preise & Antworten"
-        description="Sanitär Fragen beantwortet: Preise Klempner transparent erklärt. Tipps für Hausbesitzer zu Wärmepumpe, Heizung und Sanitärkosten."
+        description="Sanitär FAQ München: Antworten zu Preisen, Notdienst & Reparaturen – verständlich erklärt vom Fachbetrieb."
         canonical="https://kshw-muenchen.de/faq"
         keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
       />
