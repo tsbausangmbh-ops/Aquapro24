@@ -370,6 +370,49 @@
     <priority>0.85</priority>
   </url>
   
+  <url>
+    <loc>https://aquapro24.de/sanitaer-notdienst-24</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://aquapro24.de/heizung-notdienst-24</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Förderung Pages -->
+  <url>
+    <loc>https://aquapro24.de/foerderung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <url>
+    <loc>https://aquapro24.de/foerderantrag</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://aquapro24.de/foerderantrag-heizung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://aquapro24.de/foerderrechner</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
   <!-- Informational Pages -->
   <url>
     <loc>https://aquapro24.de/kontakt</loc>
