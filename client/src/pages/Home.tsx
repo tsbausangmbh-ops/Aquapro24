@@ -31,6 +31,7 @@ import {
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jpg";
+import rohrreinigungImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.jpg";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import heizungImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import waermepumpeImage from "@assets/stock_images/heat_pump_installati_53374252.jpg";
@@ -118,7 +119,7 @@ const services = [
     description: "Abfluss verstopft, WC blockiert. Spirale, Hochdruck.",
     features: ["24/7 Notdienst", "Kamera", "Festpreis"],
     link: "/rohrreinigung",
-    image: sanitaerImage
+    image: rohrreinigungImage
   },
   {
     icon: ShowerHead,
