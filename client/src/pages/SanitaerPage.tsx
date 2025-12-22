@@ -1,205 +1,220 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
-import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
-import NLPSection from "@/components/NLPSection";
-import CustomerStories, { sanitaerStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
-import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Droplets, 
   Phone, 
   CheckCircle2, 
-  Wrench,
-  ShowerHead,
-  PipetteIcon,
-  Gauge,
   Clock,
   Shield,
-  Award,
-  Star,
-  MessageCircle,
+  Wrench,
+  Droplets,
+  ShowerHead,
+  Gauge,
   Calendar,
-  MessageSquare
+  Users,
+  Hammer,
+  AlertTriangle
 } from "lucide-react";
 import { Link } from "wouter";
-import plumberImage1 from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
-import plumberImage2 from "@assets/stock_images/professional_plumber_59cd80be.jpg";
+import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
+const services = [
+  {
+    icon: Droplets,
+    title: "Wasserinstallation",
+    price: "ab 92€",
+    description: "Trinkwasserleitungen verlegen, Wasseranschlüsse erneuern, Absperrhähne einbauen.",
+    features: ["Kupfer & PE-X", "DIN 1988", "Festpreis"]
+  },
+  {
+    icon: ShowerHead,
+    title: "WC & Waschbecken",
+    price: "ab 280€",
+    description: "Toilette montieren, Waschbecken einbauen, Dusche anschließen.",
+    features: ["Geberit", "Villeroy & Boch", "Duravit"]
+  },
+  {
+    icon: Wrench,
+    title: "Rohrreinigung",
+    price: "ab 81€",
+    description: "Abfluss verstopft? Spirale, Hochdruckspülung, Kamerainspektion.",
+    features: ["24/7 Notdienst", "Sofort-Hilfe", "Festpreis"]
+  },
+  {
+    icon: AlertTriangle,
+    title: "Rohrbruch",
+    price: "ab 154€",
+    description: "Wasserrohr geplatzt, Leitung undicht? 45-60 Min. vor Ort.",
+    features: ["24h Notdienst", "Leck abdichten", "Rohr erneuern"]
+  },
+  {
+    icon: Gauge,
+    title: "Leckortung",
+    price: "ab 178€",
+    description: "Wasserverlust orten ohne Aufbruch. Thermografie, Akustik.",
+    features: ["Zerstörungsfrei", "Präzise Ortung", "Dokumentation"]
+  },
+  {
+    icon: Droplets,
+    title: "Wasserhahn wechseln",
+    price: "ab 80€",
+    description: "Armatur austauschen, tropfenden Wasserhahn reparieren.",
+    features: ["Grohe", "Hansgrohe", "Blanco"]
+  }
+];
+
+const processSteps = [
+  {
+    step: 1,
+    title: "Anruf",
+    description: "Sie schildern Ihr Problem. Bei Notfällen sofortige Hilfe.",
+    icon: Phone
+  },
+  {
+    step: 2,
+    title: "Termin",
+    description: "Wir kommen pünktlich – oft noch am selben Tag.",
+    icon: Calendar
+  },
+  {
+    step: 3,
+    title: "Festpreis",
+    description: "Analyse vor Ort, transparenter Preis vor Arbeitsbeginn.",
+    icon: Users
+  },
+  {
+    step: 4,
+    title: "Erledigt",
+    description: "Saubere Arbeit, Sie zahlen nur den vereinbarten Preis.",
+    icon: Hammer
+  }
+];
+
+const guarantees = [
+  { title: "Festpreisgarantie", description: "Preis gilt – ohne Nachforderungen" },
+  { title: "2 Jahre Garantie", description: "Auf alle Arbeiten und Materialien" },
+  { title: "60 Min. Notdienst", description: "Schnelle Hilfe bei Rohrbruch" },
+  { title: "Saubere Arbeit", description: "Schutzmaterialien, besenrein" }
+];
+
+const faqItems = [
+  {
+    question: "Was kostet ein Sanitär-Notdienst in München?",
+    answer: "Anfahrtspauschale 49€, Reparaturen ab 92€. Sie erhalten vor Arbeitsbeginn einen verbindlichen Festpreis ohne versteckte Kosten."
+  },
+  {
+    question: "Wie schnell sind Sie bei einem Notfall vor Ort?",
+    answer: "Bei Rohrbruch oder Wasseraustritt in der Regel innerhalb von 60 Minuten. Wir sind 24/7 erreichbar, auch nachts und am Wochenende."
+  },
+  {
+    question: "Arbeiten Sie auch am Wochenende?",
+    answer: "Ja, unser Notdienst ist rund um die Uhr erreichbar – 365 Tage im Jahr, auch an Feiertagen."
+  },
+  {
+    question: "Welche Marken verbauen Sie?",
+    answer: "Wir arbeiten mit Premium-Herstellern: Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit, Blanco."
+  },
+  {
+    question: "Gibt es Garantie auf die Arbeit?",
+    answer: "Ja, 2 Jahre Gewährleistung auf alle Arbeiten. Zusätzlich gelten die Herstellergarantien auf eingebaute Materialien."
+  },
+  {
+    question: "In welchen Stadtteilen sind Sie tätig?",
+    answer: "In ganz München und Umgebung: Schwabing, Bogenhausen, Sendling, Neuhausen, Pasing, Haidhausen und alle weiteren Stadtteile."
+  }
+];
+
 export default function SanitaerPage() {
-  const services = [
-    {
-      icon: Droplets,
-      title: "Wasserinstallation München ab 92€",
-      description: "Trinkwasserleitungen verlegen (Kupfer, Edelstahl, PE-X), Wasseranschlüsse erneuern, Absperrhähne einbauen, Zirkulationspumpe installieren. DIN 1988 konform."
-    },
-    {
-      icon: ShowerHead,
-      title: "WC austauschen München ab 280€",
-      description: "Toilette montieren, Waschbecken einbauen, Dusche anschließen, Badewanne installieren. Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit."
-    },
-    {
-      icon: PipetteIcon,
-      title: "Rohrreinigung München ab 81€",
-      description: "WC verstopft, Dusche läuft nicht ab, Küchenabfluss blockiert? Spirale, Hochdruckspülung, Kamerainspektion. Notdienst 24/7 verfügbar."
-    },
-    {
-      icon: Wrench,
-      title: "Rohrbruch reparieren ab 154€",
-      description: "Wasserrohr geplatzt, Leitung undicht, Wasserschaden? 24h Notdienst München, 45-60 Min. vor Ort. Leck abdichten, Rohr erneuern."
-    },
-    {
-      icon: Gauge,
-      title: "Leckortung München ab 178€",
-      description: "Wasserverlust orten ohne Aufbruch. Thermografie, Akustik, Druckprüfung. Undichte Stellen finden, Wasserschaden vermeiden."
-    },
-    {
-      icon: Shield,
-      title: "Wasserhahn wechseln ab 80€",
-      description: "Armatur austauschen, Mischbatterie montieren, tropfenden Wasserhahn reparieren. Grohe, Hansgrohe, Blanco. Schnelle Termine."
-    }
-  ];
-
-  const benefits = [
-    "Sanitär München ab 92€/Std. – Festpreis vor Arbeitsbeginn",
-    "24/7 Notdienst: 45-60 Minuten vor Ort bei Rohrbruch",
-    "Alle Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch",
-    "Rohrreinigung ab 81€, WC austauschen ab 280€",
-    "2.800+ zufriedene Kunden seit 2005 in München",
-    "2-5 Jahre Gewährleistung auf alle Sanitärarbeiten"
-  ];
-
-  const faqItems = [
-    {
-      question: "Was kostet ein Sanitär-Notdienst in München?",
-      answer: "Unser Sanitär-Notdienst in München arbeitet mit transparenten Festpreisen. Die Anfahrtspauschale beträgt 49€, einfache Reparaturen starten ab 92€. Vor Arbeitsbeginn nennen wir Ihnen den verbindlichen Gesamtpreis - ohne versteckte Kosten oder Nachforderungen. Bei AquaPro24 zahlen Sie nur, was vorher vereinbart wurde."
-    },
-    {
-      question: "Wie schnell ist der Sanitär-Notdienst in München vor Ort?",
-      answer: "Bei Notfällen wie Rohrbruch oder Wasseraustritt sind wir in der Regel innerhalb von 60 Minuten bei Ihnen in München. Unser Einsatzgebiet umfasst alle Münchner Stadtteile: Schwabing, Bogenhausen, Sendling, Neuhausen, Giesing, Pasing, Laim, Trudering und weitere. Auch nachts und am Wochenende erreichbar unter 0152 12274043."
-    },
-    {
-      question: "Gibt es einen Festpreis für Sanitärarbeiten?",
-      answer: "Ja, bei AquaPro24 erhalten Sie immer einen verbindlichen Festpreis vor Arbeitsbeginn. Unser Techniker analysiert das Problem vor Ort und nennt Ihnen den Gesamtpreis. Dieser Preis gilt - auch wenn die Arbeit länger dauert als geplant. Keine Überraschungen, keine versteckten Kosten."
-    },
-    {
-      question: "Arbeitet der Sanitär-Notdienst auch nachts und am Wochenende?",
-      answer: "Ja, unser 24/7 Sanitär-Notdienst ist rund um die Uhr erreichbar - 365 Tage im Jahr. Auch an Feiertagen, Samstagen und Sonntagen sowie nachts zwischen 22 und 6 Uhr sind wir für Sie da. Rufen Sie uns an: 0152 12274043. Für Notfälle wie Rohrbruch, Wasseraustritt oder schwere Verstopfungen."
-    },
-    {
-      question: "Welche Sanitär-Leistungen bieten Sie in München an?",
-      answer: "Wir bieten das komplette Sanitär-Spektrum: Rohrbruch-Reparatur, Abfluss-Entstopfung, WC-Installation, Waschbecken-Montage, Armaturenaustausch, Wasserleitung verlegen, Warmwasser-Reparatur und Badsanierung. Unsere Installateure arbeiten mit allen Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch."
-    },
-    {
-      question: "Wie läuft ein Sanitär-Einsatz bei AquaPro24 ab?",
-      answer: "1. Sie rufen an (0152 12274043) und schildern das Problem. 2. Wir vereinbaren einen Termin - bei Notfällen sofort. 3. Unser Techniker kommt pünktlich und analysiert die Situation. 4. Sie erhalten einen Festpreis vor Arbeitsbeginn. 5. Die Arbeit wird sauber erledigt, Sie zahlen nur den vereinbarten Preis."
-    },
-    {
-      question: "Warum sollte ich AquaPro24 für Sanitärarbeiten wählen?",
-      answer: "AquaPro24 bietet: Festpreisgarantie ohne Nachforderungen, 60-Minuten-Reaktionszeit bei Notfällen, 2 Jahre Gewährleistung auf alle Arbeiten, geprüfte Fachhandwerker aus München, saubere Arbeit mit Oberflächenschutz, und über 2.800 zufriedene Kunden in München. Wir sind Ihr lokaler Partner seit 2005."
-    },
-    {
-      question: "Geben Sie Garantie auf Sanitärarbeiten in München?",
-      answer: "Ja, auf alle unsere Sanitärarbeiten geben wir 2 Jahre Gewährleistung. Sollte innerhalb dieser Zeit etwas mit unserer Arbeit nicht stimmen, kommen wir kostenlos zurück und beheben das Problem. Zusätzlich gelten die Herstellergarantien auf eingebaute Materialien und Armaturen."
-    }
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär München | Abfluss verstopft & Rohr undicht"
-        description="Sanitär München: Abfluss verstopft, Rohr undicht oder Leckage? Schnelle Reparatur, transparente Preise & kurzfristige Termine."
+        title="Sanitär München | Klempner Notdienst 24/7"
+        description="Sanitär München: Rohrbruch, Abfluss verstopft, Wasserhahn tropft? Schnelle Hilfe, Festpreis ab 92€. Jetzt anrufen!"
         canonical="https://aquapro24.de/sanitaer"
-        keywords="Sanitär München, Sanitärinstallateur München, Klempner München, Installateur München, Sanitärtechniker München, Sanitärfirma München, Sanitär Notdienst München, Klempner Notdienst München, Armaturen austauschen München, Armaturen montieren München, Wasserhahn wechseln München, Wasserhahn austauschen München, Wasserhahn reparieren München, Wasserhahn tropft München, Mischbatterie austauschen München, Küchenarmatur montieren München, Badarmatur einbauen München, Rohrbruch München, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Wasseranschluss München, Wasserinstallation München, Spülkasten reparieren München, WC austauschen München, Toilette montieren München, Waschbecken montieren München, Waschtisch einbauen München, Siphon austauschen München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Grohe Montage München, Hansgrohe Installation München, Geberit München, Sanitärinstallation München, Sanitär Festpreis München"
-        aiSummary="AquaPro24 Sanitär-Notdienst München: 24/7 erreichbar, 45 Min. Reaktionszeit. Rohrbruch, verstopfter Abfluss, Wasserinstallation. Festpreise ab 92€, alle Münchner Stadtteile. 2.847+ zufriedene Kunden. Kontakt: 0152 12274043"
+        keywords="Sanitär München, Klempner München, Installateur München, Sanitär Notdienst München, Rohrbruch München, Abfluss verstopft München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }
         ]}
         serviceSchema={{
-          name: "Sanitär-Notdienst & Installation München",
-          description: "Sanitär-Notdienst München: Rohrbruch, Verstopfung, Wasserschaden. 45 Min. Reaktionszeit, Festpreis, 24/7 erreichbar.",
+          name: "Sanitär München",
+          description: "Sanitär-Notdienst München: Rohrbruch, Verstopfung, Wasserinstallation. 60 Min. Reaktionszeit, Festpreis ab 92€.",
           serviceType: "Sanitär/Installation",
           urlSlug: "sanitaer",
           catalogName: "Sanitär-Leistungen",
           serviceOffers: [
-            { name: "Rohrbruch / Leckage Soforthilfe" },
-            { name: "Verstopfung / Ablaufproblem" },
-            { name: "Wasserinstallation komplett" },
-            { name: "Armaturen-Reparatur & Austausch" }
+            { name: "Rohrbruch Soforthilfe" },
+            { name: "Abfluss entstopfen" },
+            { name: "Wasserinstallation" },
+            { name: "Armaturen austauschen" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
-            reviewCount: 127
+            reviewCount: 156
           }
         }}
       />
       <Header />
       
-      <main id="main-content" className="flex-1">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+      <main id="main-content">
+        {/* Hero Section */}
+        <section className="relative py-12 lg:py-16 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${plumberImage1})` }}
+            style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4 gap-1">
-                <Droplets className="w-3 h-3" />
-                Sanitär-Fachbetrieb München
+            <div className="max-w-2xl">
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                <Wrench className="w-3 h-3 mr-1" />
+                24/7 Notdienst
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-                Klempner München – Sanitär Notdienst 24/7
+              
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+                Sanitär München – Klempner Notdienst 24/7
               </h1>
-              <div className="sr-only" data-testid="keyword-cloud">
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch reparieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserleitung verlegen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Abfluss verstopft</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Waschbecken montieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Siphon wechseln</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Spülkasten reparieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Dusche einbauen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badewanne installieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserhahn tropft</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohr undicht</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Leckage orten</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Schwabing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Bogenhausen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Installateur Sendling</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Notdienst Pasing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Maxvorstadt</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Grohe Montage</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Geberit Installation</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Sanitär</span>
+              
+              <p className="text-xl text-white/90 mb-6">
+                Rohrbruch, Abfluss verstopft, Wasserhahn tropft? Wir helfen schnell 
+                und zum Festpreis. 60 Minuten Reaktionszeit bei Notfällen.
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>Festpreis ab 92€</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>60 Min. vor Ort</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>2 Jahre Garantie</span>
+                </div>
               </div>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Tropft der Wasserhahn? Verstopfter Abfluss? Rohrbruch?</strong> Wir kennen diese 
-                Situationen und wissen, wie stressig sie sein können.
-              </p>
-              <p className="text-white/80 mb-6">
-                Als Münchner Partnernetzwerk mit über 20 Jahren Erfahrung lösen wir Ihre Sanitärprobleme 
-                schnell, sauber und zum Festpreis.
-              </p>
+              
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-sanitaer">
-                    <Phone className="w-4 h-4 mr-2" />
+                <Button size="lg" asChild data-testid="button-call-hero">
+                  <a href="tel:+4915212274043">
+                    <Phone className="w-5 h-5 mr-2" />
                     Jetzt anrufen
                   </a>
                 </Button>
                 <ServiceBooking 
                   serviceType="sanitaer"
-                  buttonText="24h Buchungstermin"
+                  buttonText="Termin buchen"
                   buttonSize="lg"
                   buttonVariant="outline"
                   buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
@@ -211,64 +226,33 @@ export default function SanitaerPage() {
 
         <TrustBar />
 
-        <EmergencyProcess serviceType="sanitaer" />
-
-        <NLPSection
-          problemTitle="Kennen Sie diese Probleme?"
-          problems={[
-            "Der Wasserhahn tropft seit Wochen und die Wasserrechnung steigt",
-            "Der Abfluss ist verstopft und nichts hilft mehr",
-            "Sie warten ewig auf Handwerkertermine",
-            "Unklare Preise und böse Überraschungen auf der Rechnung",
-            "Handwerker, die keine Rücksicht auf Ihre Wohnung nehmen"
-          ]}
-          solutionTitle="So lösen wir das für Sie"
-          solutions={[
-            "Schnelle Terminvergabe - oft noch am selben Tag",
-            "Transparente Festpreise vor Arbeitsbeginn",
-            "Saubere Arbeit mit Schutzmaterialien für Ihre Böden",
-            "Meisterqualität mit 2 Jahren Gewährleistung",
-            "Pünktlichkeit und Zuverlässigkeit garantiert"
-          ]}
-          futureState="...Ihr Sanitärproblem ist gelöst, die Arbeit wurde sauber und professionell erledigt, und Sie haben einen fairen Preis bezahlt. So arbeiten wir - Tag für Tag für unsere Münchner Kunden."
-          authorityText="Partnernetzwerk mit über 2.800 zufriedenen Kunden in München"
-          urgencyText="Noch 3 Beratungstermine diese Woche frei"
-          transformationSteps={[
-            "Sie rufen an oder schreiben uns - wir sind sofort für Sie da und hören Ihnen zu.",
-            "Wir kommen zum vereinbarten Termin, analysieren das Problem und nennen Ihnen den Festpreis.",
-            "Die Arbeit wird sauber erledigt, Sie zahlen nur den vereinbarten Preis und sind zufrieden."
-          ]}
-        />
-
-        <ServiceAdvisor serviceType="sanitaer" />
-
-        <CustomerStories 
-          stories={sanitaerStories}
-          title="Echte Geschichten von Münchner Kunden"
-          subtitle="Diese Situationen kennen viele - lesen Sie, wie wir helfen konnten"
-        />
-
-        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+        {/* Leistungen Section */}
+        <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Sanitärinstallateur München: Leistungen & Festpreise
-              </h2>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Vom kleinen Reparaturauftrag bis zur kompletten Neuinstallation - 
-                wir sind Ihr zuverlässiger Partner für alle Sanitärarbeiten in München.
+                Vom tropfenden Wasserhahn bis zum Rohrbruch-Notfall – wir helfen schnell und zuverlässig.
               </p>
             </div>
-
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <Card key={index} className="hover-elevate">
+                <Card key={index}>
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4">
-                      <service.icon className="w-6 h-6 text-muted-foreground" />
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <Badge variant="secondary">{service.price}</Badge>
                     </div>
                     <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                    <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {service.features.map((feature, i) => (
+                        <Badge key={i} variant="outline" className="text-xs">{feature}</Badge>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -276,129 +260,146 @@ export default function SanitaerPage() {
           </div>
         </section>
 
-        <section className="py-6 md:pt-8 pb-4 bg-muted/30">
+        {/* Ablauf Section */}
+        <section className="py-12 lg:py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Installateur München: Warum uns über 2.800 Kunden vertrauen
-                </h2>
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </div>
-                  ))}
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">So einfach geht's</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Von Ihrem Anruf bis zur fertigen Reparatur – transparent und stressfrei.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              {processSteps.map((step) => (
+                <div key={step.step} className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
+                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Garantien Section */}
+        <section className="py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <p className="text-muted-foreground">
+                Sicherheit und Qualität – darauf können Sie sich verlassen.
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {guarantees.map((item, index) => (
+                <Card key={index}>
+                  <CardContent className="p-5 text-center">
+                    <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Marken Section */}
+        <section className="py-10 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Markenqualität</h2>
+              <p className="text-muted-foreground text-sm">
+                Wir verbauen nur Produkte von führenden Herstellern.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Grohe</div>
+                <div className="text-xs">Armaturen</div>
               </div>
-              <div className="bg-card rounded-lg p-8 border">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
-                    <Award className="w-8 h-8 text-muted-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Geprüfte Klempner München: Zertifizierte Fachbetriebe</h3>
-                    <p className="text-muted-foreground text-sm">Qualität vom Fachbetrieb</p>
-                  </div>
-                </div>
-                <div className="space-y-4 text-sm">
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-4 h-4 text-muted-foreground" />
-                    <span>Schnelle Terminvergabe</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Shield className="w-4 h-4 text-muted-foreground" />
-                    <span>2 Jahre Gewährleistung</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Droplets className="w-4 h-4 text-muted-foreground" />
-                    <span>Markenprodukte</span>
-                  </div>
-                </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Hansgrohe</div>
+                <div className="text-xs">Brausen</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Geberit</div>
+                <div className="text-xs">Installation</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Villeroy & Boch</div>
+                <div className="text-xs">Keramik</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Duravit</div>
+                <div className="text-xs">Sanitär</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Blanco</div>
+                <div className="text-xs">Küche</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+        {/* SEO Text Section */}
+        <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Wasserinstallation München: Kosten, Ablauf & Garantie
+            <h2 className="text-2xl font-bold mb-6">
+              Ihr Klempner in München
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Als Münchner Partnernetzwerk für Sanitärinstallation sind wir seit über 20 Jahren Ihr zuverlässiger Partner 
-                für alle Arbeiten rund um Wasser, Abwasser und Sanitäranlagen. Ob Sie einen tropfenden Wasserhahn reparieren 
-                lassen möchten, eine komplett neue Wasserinstallation benötigen oder mitten in der Nacht einen Rohrbruch haben - 
-                wir sind für Sie da.
+                Als Münchner Sanitär-Fachbetrieb sind wir seit über 20 Jahren Ihr zuverlässiger Partner 
+                für alle Arbeiten rund um Wasser und Abwasser. Ob tropfender Wasserhahn, verstopfter 
+                Abfluss oder Rohrbruch-Notfall – wir helfen schnell, sauber und zum Festpreis.
               </p>
               <p>
-                Unsere ausgebildeten Sanitärfachkräfte arbeiten nach den höchsten handwerklichen Standards und verwenden 
-                ausschließlich hochwertige Markenprodukte von Herstellern wie Grohe, Hansgrohe, Geberit und Villeroy & Boch. 
-                Das bedeutet für Sie: langlebige Qualität, die jahrzehntelang funktioniert.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Sanitär reparieren München: Was uns unterscheidet</h3>
-              <p>
-                Bei uns bekommen Sie keine bösen Überraschungen. Bevor wir mit der Arbeit beginnen, analysieren wir das Problem 
-                gründlich und nennen Ihnen einen verbindlichen Festpreis. Dieser Preis gilt - auch wenn die Arbeit länger dauert 
-                als geplant. Zusätzlich achten wir penibel auf Sauberkeit: Wir legen Schutzfolien aus, tragen Überschuhe und 
-                hinterlassen Ihre Wohnung so sauber, wie wir sie vorgefunden haben.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Sanitärinstallation beauftragen München: Unser Angebot</h3>
-              <p>
-                Wir decken das gesamte Spektrum der Sanitärtechnik ab: Von der Installation neuer Wasserleitungen über die 
-                Montage von Sanitärobjekten wie WCs, Waschbecken, Duschen und Badewannen bis hin zur professionellen 
-                Rohrreinigung und Abflussentstopfung. Auch die regelmäßige Wartung Ihrer Sanitäranlagen gehört zu unserem 
-                Service - denn Vorsorge ist günstiger als Reparatur.
-              </p>
-              <p>
-                Für Notfälle wie Rohrbrüche oder schwere Wasserschäden bieten wir einen 24/7-Notdienst an. In der Regel sind 
-                wir ab 60 Minuten bei Ihnen in München und stoppen den Schaden, bevor er größer wird. Unsere 
-                Notdienst-Pauschale ist transparent und fair - ohne versteckte Kosten.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Klempner beauftragen München: Unsere Garantie für Sie</h3>
-              <p>
-                Auf alle unsere Arbeiten geben wir 2 Jahre Gewährleistung. Sollte in dieser Zeit etwas mit unserer Arbeit 
-                nicht stimmen, kommen wir kostenlos zurück und beheben das Problem. Denn wir stehen zu unserer Arbeit - 
-                mit unserem guten Namen und mit unserer Garantie.
+                Unsere Sanitärfachkräfte arbeiten nach höchsten Standards und verwenden ausschließlich 
+                Markenprodukte von Grohe, Hansgrohe, Geberit und Villeroy & Boch. Das bedeutet für Sie: 
+                langlebige Qualität mit 2 Jahren Garantie.
               </p>
             </div>
           </div>
         </section>
 
         <ServiceAreas 
-          serviceName="Sanitärinstallation" 
-          
+          serviceName="Sanitär" 
           highlightAreas={["Schwabing", "Maxvorstadt", "Haidhausen"]}
         />
 
         <SimpleFAQ 
           items={faqItems}
-          title="Häufige Fragen zur Sanitärinstallation"
+          title="Häufige Fragen"
         />
 
-        <section className="py-6 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+        {/* CTA Section */}
+        <section className="py-12 bg-primary text-primary-foreground">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Klempner Notdienst München – Jetzt Termin vereinbaren
+              Sanitär-Problem? Wir helfen sofort!
             </h2>
-            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
-              Ob tropfender Wasserhahn, verstopfter Abfluss oder neue Sanitärinstallation - 
-              wir kümmern uns darum. Über 847 zufriedene Kunden in München.
+            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+              Rufen Sie uns an oder buchen Sie direkt einen Termin. 
+              Festpreis, schnelle Hilfe, 2 Jahre Garantie.
             </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-sanitaer-cta">
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" variant="secondary" asChild data-testid="button-call-cta">
+                <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-white text-secondary border-white" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white" asChild>
                 <Link href="/termin">
-                  <Clock className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Termin buchen
                 </Link>
               </Button>
             </div>
@@ -407,7 +408,7 @@ export default function SanitaerPage() {
 
         <RelatedServices currentService="sanitaer" />
       </main>
-
+      
       <Footer />
       <AIChatWidget serviceCategory="sanitaer" />
     </div>
