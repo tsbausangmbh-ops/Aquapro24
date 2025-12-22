@@ -57,11 +57,14 @@ export default function Header() {
             </div>
             <a 
               href="tel:+4915212274043" 
-              className="flex items-center gap-2 font-bold text-base md:text-lg hover:underline"
+              className="flex flex-col items-center text-center hover:underline"
               data-testid="link-emergency-phone"
             >
-              <Phone className="w-5 h-5" />
-              <span>0152 12274043</span>
+              <span className="text-xs text-primary-foreground/80">Anrufen:</span>
+              <span className="font-bold text-base md:text-lg flex items-center gap-1">
+                <Phone className="w-4 h-4" />
+                0152 12274043
+              </span>
             </a>
           </div>
         </div>
