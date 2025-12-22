@@ -10,7 +10,7 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutz DSGVO München | Ihre Rechte | Datenverarbeitung"
+        title="Datenschutz DSGVO München – Ihre Rechte"
         description="Datenschutz DSGVO konform: Ihre Rechte und unsere Datenverarbeitung transparent erklärt. So schützen wir Ihre persönlichen Daten."
         canonical="https://aquapro24.de/datenschutz"
       />
