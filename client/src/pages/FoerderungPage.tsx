@@ -32,47 +32,84 @@ import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
 
 export default function FoerderungPage() {
+  const currentYear = new Date().getFullYear();
+  const standDatum = `${new Date().getMonth() + 1}/${currentYear}`;
+
   const foerderProgramme = [
     {
-      icon: Leaf,
-      title: "BAFA Heizungsförderung",
-      subtitle: "Bundesförderung für effiziente Gebäude (BEG)",
+      icon: Flame,
+      title: "KfW 458 Heizungsförderung",
+      subtitle: `Bundesförderung für effiziente Gebäude (Stand ${standDatum})`,
       maxFoerderung: "70%",
-      beschreibung: "Die höchste Förderung für den Umstieg auf erneuerbare Energien.",
+      beschreibung: "Die höchste Förderung für den Umstieg auf erneuerbare Energien. Seit 2024 über KfW (nicht mehr BAFA).",
       boni: [
-        { name: "Grundförderung", prozent: "30%", info: "Für alle Wärmepumpen" },
-        { name: "Klimageschwindigkeitsbonus", prozent: "+20%", info: "Bei Austausch alter Heizung (>20 Jahre)" },
-        { name: "Einkommensbonus", prozent: "+30%", info: "Haushaltseinkommen < 40.000€/Jahr" },
-        { name: "Effizienzbonus", prozent: "+5%", info: "Für natürliche Kältemittel" }
+        { name: "Basisförderung", prozent: "30%", info: "Für alle klimafreundlichen Heizungen" },
+        { name: "Klimageschwindigkeitsbonus", prozent: "+20%", info: "Austausch Öl/Gas/Kohle/Nachtspeicher" },
+        { name: "Einkommensbonus", prozent: "+30%", info: "Haushaltseinkommen ≤ 40.000€/Jahr" },
+        { name: "Effizienzbonus", prozent: "+5%", info: "Natürliche Kältemittel (Wärmepumpe)" }
       ],
-      geeignetFuer: ["Wärmepumpe", "Solarthermie", "Pelletheizung", "Brennstoffzelle"],
-      vorteile: ["Direkter Zuschuss", "Keine Rückzahlung", "Mit Kredit kombinierbar"],
+      geeignetFuer: ["Wärmepumpe", "Solarthermie", "Pelletheizung", "Brennstoffzelle", "Fernwärme"],
+      vorteile: ["Direkter Zuschuss", "Keine Rückzahlung", "Max. 30.000€ pro Wohneinheit"],
       color: "bg-green-500",
       link: "/foerderantrag-heizung"
     },
     {
+      icon: Leaf,
+      title: "BAFA Dämmung & Optimierung",
+      subtitle: `Einzelmaßnahmen Gebäudehülle (Stand ${standDatum})`,
+      maxFoerderung: "20%",
+      beschreibung: "BAFA fördert Dämmung, Fenster, Lüftung und Heizungsoptimierung – NICHT Heizungstausch.",
+      boni: [
+        { name: "Basisförderung", prozent: "15%", info: "Für alle Einzelmaßnahmen" },
+        { name: "iSFP-Bonus", prozent: "+5%", info: "Mit Sanierungsfahrplan" },
+        { name: "Max. förderfähig", prozent: "30.000€", info: "Pro Wohneinheit" },
+        { name: "Emissionsminderung", prozent: "50%", info: "Für Biomasse-Filter" }
+      ],
+      geeignetFuer: ["Fassadendämmung", "Dachdämmung", "Fenster", "Lüftung", "Hydraul. Abgleich"],
+      vorteile: ["Direkter Zuschuss", "Kombinierbar mit KfW 458", "Auch für Bestandsheizung"],
+      color: "bg-orange-500",
+      link: "/foerderrechner"
+    },
+    {
+      icon: Home,
+      title: "KfW 455-B Barrierefreies Bad",
+      subtitle: `Altersgerecht Umbauen (Stand ${standDatum})`,
+      maxFoerderung: "12,5%",
+      beschreibung: "Zuschuss für barrierefreie Badezimmer: Bodengleiche Dusche, Haltegriffe, breitere Türen.",
+      boni: [
+        { name: "Fördersatz", prozent: "12,5%", info: "Der förderfähigen Kosten" },
+        { name: "Max. Zuschuss", prozent: "6.250€", info: "Pro Wohneinheit" },
+        { name: "Max. Investition", prozent: "50.000€", info: "Förderfähige Kosten" },
+        { name: "Altersunabhängig", prozent: "100%", info: "Keine Altersbeschränkung" }
+      ],
+      geeignetFuer: ["Bodengleiche Dusche", "Haltegriffe", "Türverbreiterung", "Unterfahrbarer Waschtisch"],
+      vorteile: ["Ohne Altersgrenze", "Direkter Zuschuss", "Auch Pflegegrad-Antrag parallel"],
+      color: "bg-cyan-500",
+      link: "/foerderrechner"
+    },
+    {
       icon: Building2,
-      title: "KfW Heizungskredit",
-      subtitle: "Ergänzungskredit zur BAFA-Förderung",
+      title: "KfW 358/359 Ergänzungskredit",
+      subtitle: `Zinsgünstige Finanzierung (Stand ${standDatum})`,
       maxFoerderung: "120.000€",
-      beschreibung: "Zinsgünstiger Kredit für den nach Förderung verbleibenden Eigenanteil.",
+      beschreibung: "Zinsgünstiger Kredit für den nach Förderung verbleibenden Eigenanteil. Nur nach KfW 458/459 Zusage.",
       boni: [
         { name: "Maximaler Kredit", prozent: "120.000€", info: "Pro Wohneinheit" },
         { name: "Zinssatz", prozent: "ab 0,01%", info: "Effektiver Jahreszins" },
         { name: "Laufzeit", prozent: "4-35 Jahre", info: "Flexible Tilgung" },
-        { name: "Tilgungsfreie Jahre", prozent: "1-5 Jahre", info: "Auf Wunsch" }
+        { name: "Einkommensbonus", prozent: "extra günstig", info: "Bei ≤ 90.000€ Einkommen" }
       ],
       geeignetFuer: ["Heizungstausch", "Wärmepumpe", "Pellet", "Solarthermie"],
-      vorteile: ["Zusätzlich zu BAFA", "Schnelle Bewilligung", "Einkommensabhängig vergünstigt"],
+      vorteile: ["Zusätzlich zu KfW 458", "Schnelle Bewilligung", "Einkommensabhängig vergünstigt"],
       color: "bg-blue-500",
       link: "/foerderantrag"
     },
     {
       icon: Calculator,
-      title: "Steuerbonus §35c",
-      subtitle: "Alternative zur BAFA/KfW-Förderung",
+      title: "Steuerbonus §35c EStG",
+      subtitle: "Alternative zur KfW/BAFA-Förderung",
       maxFoerderung: "40.000€",
-      beschreibung: "20% der Sanierungskosten über 3 Jahre von der Steuer absetzen.",
+      beschreibung: "20% der Sanierungskosten über 3 Jahre von der Steuer absetzen. Nicht kombinierbar mit KfW/BAFA.",
       boni: [
         { name: "Jahr 1", prozent: "7%", info: "Maximal 14.000€" },
         { name: "Jahr 2", prozent: "7%", info: "Maximal 14.000€" },
@@ -81,7 +118,7 @@ export default function FoerderungPage() {
       ],
       geeignetFuer: ["Selbstnutzer", "Altbau >10 Jahre", "Alle energetischen Maßnahmen"],
       vorteile: ["Kein Antrag nötig", "Nachträglich möglich", "Einfache Abwicklung"],
-      color: "bg-orange-500",
+      color: "bg-purple-500",
       link: "/foerderrechner"
     }
   ];
@@ -136,7 +173,7 @@ export default function FoerderungPage() {
       step: 3,
       icon: FileText,
       title: "Antragstellung",
-      beschreibung: "Wir stellen den BAFA-Antrag kostenlos für Sie (mit Vollmacht)."
+      beschreibung: "Wir stellen den KfW/BAFA-Antrag kostenlos für Sie (mit Vollmacht)."
     },
     {
       step: 4,
@@ -162,7 +199,7 @@ export default function FoerderungPage() {
     {
       icon: AlertTriangle,
       title: "Antrag VOR Beauftragung",
-      text: "Der BAFA-Antrag muss zwingend VOR Vertragsabschluss gestellt werden. Rückwirkende Förderung ist nicht möglich."
+      text: "Der KfW/BAFA-Antrag muss zwingend VOR Vertragsabschluss gestellt werden. Rückwirkende Förderung ist nicht möglich."
     },
     {
       icon: Clock,
@@ -177,38 +214,38 @@ export default function FoerderungPage() {
   ];
 
   const keywords = [
-    "Förderung Heizung München", "BAFA Wärmepumpe 2025", "KfW Heizungskredit",
+    "Förderung Heizung München", "KfW 458 Wärmepumpe", "KfW 358 Heizungskredit",
     "70% Förderung Heizungstausch", "Klimageschwindigkeitsbonus", "Einkommensbonus Heizung",
-    "Steuerbonus Heizung §35c", "Förderantrag Wärmepumpe", "BAFA Antrag München",
-    "Heizungsförderung beantragen", "Wärmepumpe Zuschuss", "BEG Förderung 2025",
-    "Pelletheizung Förderung", "Solarthermie Zuschuss", "Heizungstausch gefördert",
-    "Förderberatung München", "BAFA Vollmacht", "KfW 458 Kredit",
+    "Steuerbonus Heizung §35c", "Förderantrag Wärmepumpe", "KfW Antrag München",
+    "Heizungsförderung beantragen", "Wärmepumpe Zuschuss", `BEG Förderung ${currentYear}`,
+    "Pelletheizung Förderung", "BAFA Dämmung", "KfW 455-B Bad",
+    "Förderberatung München", "Barrierefreies Bad Förderung", "KfW 458 Zuschuss",
     "Energetische Sanierung Förderung", "Fördermittel Heizung München"
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderung Heizung München: BAFA, KfW & Steuerbonus 2025 | AquaPro24"
-        description="Bis zu 70% Förderung für Ihre neue Heizung in München. BAFA Wärmepumpe, KfW Kredit, Steuerbonus. Kostenlose Beratung & Antragstellung. Tel: 0152 12274043"
+        title={`Förderung Heizung München: KfW 458, BAFA & Steuerbonus ${currentYear} | AquaPro24`}
+        description={`Bis zu 70% Förderung für Ihre neue Heizung in München (Stand ${standDatum}). KfW 458 Wärmepumpe, BAFA Dämmung, KfW 455-B Bad. Kostenlose Beratung. Tel: 0152 12274043`}
         canonical="https://aquapro24.de/foerderung"
         keywords={keywords.join(", ")}
-        aiSummary="AquaPro24 München: Förderberatung Heizung. BAFA bis 70% für Wärmepumpe (30% Grund + 20% Klimabonus + 30% Einkommensbonus). KfW Kredit bis 120.000€. Steuerbonus 20%. Kostenloser Antragsservice. Kontakt: 0152 12274043"
+        aiSummary={`AquaPro24 München: Förderberatung Heizung & Wasser Stand ${standDatum}. KfW 458 bis 70% für Wärmepumpe, BAFA 15-20% Dämmung, KfW 455-B 12,5% Bad, KfW 358 Kredit bis 120.000€. Kostenloser Antragsservice. Kontakt: 0152 12274043`}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" }
         ]}
         serviceSchema={{
-          name: "Förderberatung Heizung München",
-          description: "BAFA, KfW und Steuerbonus Beratung für Heizungstausch in München. Bis zu 70% staatliche Förderung für Wärmepumpen.",
+          name: "Förderberatung Heizung & Wasser München",
+          description: `KfW 458, BAFA und Steuerbonus Beratung für Heizungstausch und Badumbau in München. Bis zu 70% staatliche Förderung (Stand ${standDatum}).`,
           serviceType: "Förderberatung",
           urlSlug: "foerderung",
-          catalogName: "Heizungsförderung München 2025",
+          catalogName: `Heizungsförderung München ${currentYear}`,
           serviceOffers: [
-            { name: "BAFA Förderberatung Wärmepumpe", price: "Kostenlos" },
-            { name: "KfW Kreditberatung", price: "Kostenlos" },
-            { name: "Förderantrag Service", price: "Inklusive" },
-            { name: "Steuerbonus Beratung", price: "Kostenlos" }
+            { name: "KfW 458 Förderberatung Heizung", price: "Kostenlos" },
+            { name: "BAFA Dämmung Beratung", price: "Kostenlos" },
+            { name: "KfW 455-B Barrierefreies Bad", price: "Kostenlos" },
+            { name: "Förderantrag Service", price: "Inklusive" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
@@ -217,24 +254,24 @@ export default function FoerderungPage() {
         }}
         faqSchema={[
           {
-            question: "Wie hoch ist die BAFA Förderung für Wärmepumpen 2025?",
-            answer: "Die BAFA Förderung für Wärmepumpen kann bis zu 70% betragen: 30% Grundförderung + 20% Klimageschwindigkeitsbonus (bei Austausch alter Heizung >20 Jahre) + 30% Einkommensbonus (bei Haushaltseinkommen unter 40.000€/Jahr) + 5% Effizienzbonus (natürliche Kältemittel)."
+            question: `Wie hoch ist die KfW 458 Förderung für Wärmepumpen ${currentYear}?`,
+            answer: "Die KfW 458 Förderung (seit 2024 bei KfW, nicht mehr BAFA) kann bis zu 70% betragen: 30% Basisförderung + 20% Klimageschwindigkeitsbonus (Austausch Öl/Gas/Kohle) + 30% Einkommensbonus (≤40.000€/Jahr) + 5% Effizienzbonus. Max. 30.000€ pro Wohneinheit."
           },
           {
-            question: "Muss der Förderantrag vor der Beauftragung gestellt werden?",
-            answer: "Ja! Der BAFA-Antrag muss zwingend VOR Abschluss eines Liefer- oder Leistungsvertrags gestellt werden. Erst nach Erhalt der Förderzusage dürfen die Arbeiten beginnen. Wir übernehmen die Antragstellung kostenlos für Sie."
+            question: "Was fördert das BAFA aktuell?",
+            answer: "Das BAFA fördert seit 2024 NICHT mehr Heizungen, sondern nur: Dämmung, Fenster, Lüftung und Heizungsoptimierung mit 15-20% (Basis 15% + 5% iSFP-Bonus). Heizungsförderung läuft über die KfW."
           },
           {
-            question: "Kann ich BAFA und KfW kombinieren?",
-            answer: "Ja! Seit 2024 können Sie den BAFA-Zuschuss mit dem KfW-Ergänzungskredit kombinieren. Die BAFA übernimmt bis zu 70% als Zuschuss, für den Rest können Sie einen zinsgünstigen KfW-Kredit aufnehmen."
+            question: "Was ist die KfW 455-B Förderung für barrierefreie Bäder?",
+            answer: "Die KfW 455-B fördert barrierefreie Badezimmer mit 12,5% der Kosten (max. 6.250€). Gefördert werden: bodengleiche Dusche, Haltegriffe, Türverbreiterung, unterfahrbarer Waschtisch. Keine Altersbeschränkung!"
           },
           {
             question: "Was ist der Klimageschwindigkeitsbonus?",
-            answer: "Der Klimageschwindigkeitsbonus von 20% wird gewährt, wenn Sie eine funktionstüchtige Öl-, Kohle- oder Gasheizung (älter als 20 Jahre) durch eine Wärmepumpe ersetzen. Dieser Bonus gilt noch bis 2028 und wird dann schrittweise reduziert."
+            answer: "Der Klimageschwindigkeitsbonus von 20% wird gewährt, wenn Sie eine funktionstüchtige Öl-, Kohle-, Gas- oder Nachtspeicherheizung durch eine klimafreundliche Heizung ersetzen. Gilt noch bis 2028."
           },
           {
-            question: "Wer erhält den Einkommensbonus?",
-            answer: "Den Einkommensbonus von 30% erhalten Haushalte mit einem zu versteuernden Jahreseinkommen unter 40.000€. Als Nachweis dient der Einkommensteuerbescheid des Vorjahres."
+            question: "Kann ich KfW 458 und KfW 358 kombinieren?",
+            answer: "Ja! Nach Erhalt der KfW 458 Zuschuss-Zusage können Sie den KfW 358/359 Ergänzungskredit beantragen: bis 120.000€ zu günstigen Zinsen für den verbleibenden Eigenanteil."
           }
         ]}
       />
@@ -251,11 +288,11 @@ export default function FoerderungPage() {
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
                 <Gift className="w-3 h-3 mr-1" />
-                Bis zu 70% staatliche Förderung 2025
+                Bis zu 70% staatliche Förderung {currentYear}
               </Badge>
               
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Förderung Heizung München – BAFA, KfW & Steuerbonus 2025
+                Förderung Heizung München – KfW 458, BAFA & Steuerbonus {currentYear}
               </h1>
               
               <p className="text-lg text-white/90 mb-4 max-w-2xl">
@@ -485,18 +522,18 @@ export default function FoerderungPage() {
         <section className="py-8">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              BAFA Förderung Wärmepumpe München: Alle Details 2025
+              KfW 458 Förderung Wärmepumpe München: Alle Details {currentYear}
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
                 Die Bundesförderung für effiziente Gebäude (BEG) macht den Umstieg auf erneuerbare 
-                Energien so attraktiv wie nie. Besonders für Wärmepumpen können Sie bis zu 70% der 
-                förderfähigen Kosten als Zuschuss erhalten. Das bedeutet: Von einer 30.000 EUR 
-                Investition zahlen Sie im besten Fall nur 9.000 EUR selbst.
+                Energien so attraktiv wie nie. Seit 2024 läuft die Heizungsförderung über die KfW 
+                (Programm 458/459), nicht mehr über das BAFA. Für Wärmepumpen können Sie bis zu 70% 
+                der förderfähigen Kosten als Zuschuss erhalten (max. 30.000€ pro Wohneinheit).
               </p>
               <h3 className="text-xl font-semibold text-foreground mt-6">Klimageschwindigkeitsbonus Heizung München: 20% Extra-Förderung</h3>
               <p>
-                Wer seine alte Öl-, Kohle- oder Gasheizung (älter als 20 Jahre) durch eine Wärmepumpe 
+                Wer seine alte Öl-, Kohle-, Gas- oder Nachtspeicherheizung durch eine Wärmepumpe 
                 ersetzt, erhält zusätzlich 20% Klimageschwindigkeitsbonus. Dieser Bonus gilt 
                 noch bis 2028 und wird dann schrittweise reduziert. Schnell handeln lohnt sich!
               </p>
@@ -506,39 +543,39 @@ export default function FoerderungPage() {
                 zusätzlich 30% Einkommensbonus. Als Nachweis dient der Einkommensteuerbescheid. 
                 So wird die neue Heizung auch für kleinere Einkommen erschwinglich.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">KfW Heizungskredit München: Zinsgünstig finanzieren</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-6">KfW 358/359 Ergänzungskredit München: Zinsgünstig finanzieren</h3>
               <p>
-                Neu seit 2024: Der KfW-Ergänzungskredit kann zusätzlich zur BAFA-Förderung 
+                Der KfW 358/359 Ergänzungskredit kann zusätzlich zum KfW 458 Zuschuss 
                 beantragt werden. Für den nach Förderung verbleibenden Eigenanteil erhalten Sie 
-                einen zinsgünstigen Kredit mit besonders attraktiven Konditionen für Haushalte 
-                mit einem Einkommen unter 90.000 EUR.
+                einen zinsgünstigen Kredit (bis 120.000€) mit besonders attraktiven Konditionen 
+                für Haushalte mit einem Einkommen unter 90.000 EUR.
               </p>
             </div>
           </div>
         </section>
 
         <FAQ 
-          title="Häufige Fragen zur Heizungsförderung München"
+          title={`Häufige Fragen zur Heizungsförderung München ${currentYear}`}
           items={[
             {
-              question: "Wie hoch ist die maximale BAFA Förderung 2025?",
-              answer: "Die maximale BAFA Förderung beträgt 70% der förderfähigen Kosten, gedeckelt auf 30.000 EUR pro Wohneinheit. Bei einer Investition von 35.000 EUR erhalten Sie maximal 21.000 EUR Zuschuss."
+              question: `Wie hoch ist die maximale KfW 458 Förderung ${currentYear}?`,
+              answer: "Die maximale KfW 458 Förderung beträgt 70% der förderfähigen Kosten, gedeckelt auf 30.000 EUR pro Wohneinheit. Bei einer Investition von 35.000 EUR erhalten Sie maximal 21.000 EUR Zuschuss."
             },
             {
-              question: "Kann ich den KfW Kredit mit der BAFA Förderung kombinieren?",
-              answer: "Ja! Seit 2024 können Sie den BAFA-Zuschuss mit dem KfW-Ergänzungskredit (Programm 358/359) kombinieren. Die BAFA zahlt den Zuschuss, für den Rest können Sie einen zinsgünstigen KfW-Kredit aufnehmen."
+              question: "Kann ich den KfW 358 Kredit mit dem KfW 458 Zuschuss kombinieren?",
+              answer: "Ja! Nach Erhalt der KfW 458 Zuschuss-Zusage können Sie den KfW 358/359 Ergänzungskredit beantragen. Bis zu 120.000€ zu günstigen Zinsen für den verbleibenden Eigenanteil."
             },
             {
-              question: "Wer stellt den BAFA Antrag?",
-              answer: "Wir übernehmen die komplette Antragstellung bei BAFA kostenlos für Sie. Mit einer Vollmacht reichen wir alle Unterlagen ein und überwachen den Prozess bis zur Bewilligung."
+              question: "Wer stellt den KfW/BAFA Antrag?",
+              answer: "Wir übernehmen die komplette Antragstellung bei KfW (Heizung) und BAFA (Dämmung) kostenlos für Sie. Mit einer Vollmacht reichen wir alle Unterlagen ein und überwachen den Prozess."
             },
             {
-              question: "Wie lange dauert die BAFA Bewilligung?",
-              answer: "Die BAFA Bewilligung dauert aktuell 4-8 Wochen. Nach Erhalt der Förderzusage haben Sie 36 Monate Zeit, die Maßnahme umzusetzen. Wir planen die Termine entsprechend."
+              question: "Wie lange dauert die KfW Bewilligung?",
+              answer: "Die KfW Bewilligung für Heizungsförderung dauert aktuell 4-8 Wochen. Nach Erhalt der Förderzusage haben Sie 36 Monate Zeit, die Maßnahme umzusetzen."
             },
             {
-              question: "Was ist besser: BAFA Zuschuss oder Steuerbonus?",
-              answer: "In den meisten Fällen ist der BAFA-Zuschuss günstiger, da er direkt ausgezahlt wird. Der Steuerbonus (§35c) lohnt sich vor allem, wenn Sie die Förderung vergessen haben oder keinen Antrag stellen möchten."
+              question: "Was ist besser: KfW 458 Zuschuss oder Steuerbonus?",
+              answer: "In den meisten Fällen ist der KfW 458 Zuschuss günstiger (bis 70%), da er direkt ausgezahlt wird. Der Steuerbonus §35c (20% über 3 Jahre) lohnt sich, wenn Sie keinen Antrag stellen möchten."
             }
           ]}
         />
