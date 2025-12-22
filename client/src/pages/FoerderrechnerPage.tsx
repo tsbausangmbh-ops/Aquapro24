@@ -30,7 +30,10 @@ import {
   Percent,
   CreditCard,
   Wind,
-  Thermometer
+  Thermometer,
+  Bath,
+  Accessibility,
+  ShowerHead
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
@@ -48,6 +51,18 @@ export default function FoerderrechnerPage() {
   const [energieberaterTyp, setEnergieberaterTyp] = useState("isfp");
   const [wohnflaeche, setWohnflaeche] = useState([150]);
   const [gebaeudeTyp, setGebaeudeTyp] = useState("einfamilienhaus");
+  
+  const [badMassnahmen, setBadMassnahmen] = useState<string[]>(["bodengleich"]);
+  const [badInvestition, setBadInvestition] = useState([15000]);
+  const [altersgerecht, setAltersgerecht] = useState("ja");
+
+  const toggleBadMassnahme = (massnahme: string) => {
+    setBadMassnahmen(prev => 
+      prev.includes(massnahme) 
+        ? prev.filter(m => m !== massnahme)
+        : [...prev, massnahme]
+    );
+  };
 
   const toggleMassnahme = (massnahme: string) => {
     setSelectedMassnahmen(prev => 
@@ -210,9 +225,50 @@ export default function FoerderrechnerPage() {
     };
   };
 
+  const berechneBarrierefreiesBad = () => {
+    const maxFoerderung = 6250;
+    const foerderProzent = 12.5;
+    
+    let massnahmenDetails: { name: string; kosten: number }[] = [];
+    
+    if (badMassnahmen.includes("bodengleich")) {
+      massnahmenDetails.push({ name: "Bodengleiche Dusche", kosten: 4500 });
+    }
+    if (badMassnahmen.includes("haltegriffe")) {
+      massnahmenDetails.push({ name: "Haltegriffe & Stützklappgriffe", kosten: 800 });
+    }
+    if (badMassnahmen.includes("wc")) {
+      massnahmenDetails.push({ name: "Höhenverstellbares WC", kosten: 1500 });
+    }
+    if (badMassnahmen.includes("waschtisch")) {
+      massnahmenDetails.push({ name: "Unterfahrbarer Waschtisch", kosten: 1200 });
+    }
+    if (badMassnahmen.includes("tuerverbreiterung")) {
+      massnahmenDetails.push({ name: "Türverbreiterung", kosten: 1800 });
+    }
+    if (badMassnahmen.includes("rutschfest")) {
+      massnahmenDetails.push({ name: "Rutschfeste Fliesen", kosten: 2000 });
+    }
+
+    const investitionswert = badInvestition[0];
+    const foerderBetrag = Math.min(Math.round(investitionswert * (foerderProzent / 100)), maxFoerderung);
+    const eigenanteil = investitionswert - foerderBetrag;
+
+    return {
+      massnahmenDetails,
+      investition: investitionswert,
+      foerderProzent,
+      maxFoerderung,
+      foerderBetrag,
+      eigenanteil,
+      anzahlMassnahmen: badMassnahmen.length
+    };
+  };
+
   const bafaErgebnis = berechneBAFA();
   const kfwErgebnis = berechneKfW();
   const energieberaterErgebnis = berechneEnergieberater();
+  const badErgebnis = berechneBarrierefreiesBad();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -279,7 +335,7 @@ export default function FoerderrechnerPage() {
         <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <Tabs defaultValue="bafa" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
                 <TabsTrigger value="bafa" className="flex items-center gap-2" data-testid="tab-bafa">
                   <Leaf className="w-4 h-4" />
                   <span className="hidden sm:inline">BAFA Förderung</span>
@@ -289,6 +345,11 @@ export default function FoerderrechnerPage() {
                   <Building2 className="w-4 h-4" />
                   <span className="hidden sm:inline">KfW Kredit</span>
                   <span className="sm:hidden">KfW</span>
+                </TabsTrigger>
+                <TabsTrigger value="barrierefrei" className="flex items-center gap-2" data-testid="tab-barrierefrei">
+                  <Accessibility className="w-4 h-4" />
+                  <span className="hidden sm:inline">Barrierefreies Bad</span>
+                  <span className="sm:hidden">Bad</span>
                 </TabsTrigger>
                 <TabsTrigger value="energieberater" className="flex items-center gap-2" data-testid="tab-energieberater">
                   <Users className="w-4 h-4" />
@@ -724,6 +785,220 @@ export default function FoerderrechnerPage() {
                         <a href="tel:+4915212274043" data-testid="button-call-kfw">
                           <Phone className="w-4 h-4 mr-2" />
                           KfW-Beratung anfordern
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="barrierefrei">
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Accessibility className="w-5 h-5 text-cyan-600" />
+                        Barrierefreies Bad München: KfW 455-B Rechner
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div>
+                        <Label className="text-base font-semibold mb-3 block">
+                          Welche Maßnahmen planen Sie? (Mehrfachauswahl)
+                        </Label>
+                        <p className="text-xs text-muted-foreground mb-3">
+                          KfW fördert barrierefreie Umbaumaßnahmen mit 12,5% Zuschuss (max. 6.250 EUR)
+                        </p>
+                        <div className="space-y-2">
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${badMassnahmen.includes("bodengleich") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleBadMassnahme("bodengleich")}
+                          >
+                            <Checkbox 
+                              checked={badMassnahmen.includes("bodengleich")} 
+                              id="bodengleich" 
+                              data-testid="checkbox-bodengleich"
+                              onCheckedChange={() => toggleBadMassnahme("bodengleich")}
+                            />
+                            <Label htmlFor="bodengleich" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <ShowerHead className="w-4 h-4 text-cyan-500" />
+                              Bodengleiche Dusche
+                            </Label>
+                            <Badge variant="secondary" className="text-xs">ca. 4.500€</Badge>
+                          </div>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${badMassnahmen.includes("haltegriffe") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleBadMassnahme("haltegriffe")}
+                          >
+                            <Checkbox 
+                              checked={badMassnahmen.includes("haltegriffe")} 
+                              id="haltegriffe" 
+                              data-testid="checkbox-haltegriffe"
+                              onCheckedChange={() => toggleBadMassnahme("haltegriffe")}
+                            />
+                            <Label htmlFor="haltegriffe" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <Accessibility className="w-4 h-4 text-cyan-500" />
+                              Haltegriffe & Stützklappgriffe
+                            </Label>
+                            <Badge variant="secondary" className="text-xs">ca. 800€</Badge>
+                          </div>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${badMassnahmen.includes("wc") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleBadMassnahme("wc")}
+                          >
+                            <Checkbox 
+                              checked={badMassnahmen.includes("wc")} 
+                              id="wc" 
+                              data-testid="checkbox-wc"
+                              onCheckedChange={() => toggleBadMassnahme("wc")}
+                            />
+                            <Label htmlFor="wc" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <Bath className="w-4 h-4 text-cyan-500" />
+                              Höhenverstellbares WC
+                            </Label>
+                            <Badge variant="secondary" className="text-xs">ca. 1.500€</Badge>
+                          </div>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${badMassnahmen.includes("waschtisch") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleBadMassnahme("waschtisch")}
+                          >
+                            <Checkbox 
+                              checked={badMassnahmen.includes("waschtisch")} 
+                              id="waschtisch" 
+                              data-testid="checkbox-waschtisch"
+                              onCheckedChange={() => toggleBadMassnahme("waschtisch")}
+                            />
+                            <Label htmlFor="waschtisch" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <Home className="w-4 h-4 text-cyan-500" />
+                              Unterfahrbarer Waschtisch
+                            </Label>
+                            <Badge variant="secondary" className="text-xs">ca. 1.200€</Badge>
+                          </div>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${badMassnahmen.includes("tuerverbreiterung") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleBadMassnahme("tuerverbreiterung")}
+                          >
+                            <Checkbox 
+                              checked={badMassnahmen.includes("tuerverbreiterung")} 
+                              id="tuerverbreiterung" 
+                              data-testid="checkbox-tuerverbreiterung"
+                              onCheckedChange={() => toggleBadMassnahme("tuerverbreiterung")}
+                            />
+                            <Label htmlFor="tuerverbreiterung" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <ArrowRight className="w-4 h-4 text-cyan-500" />
+                              Türverbreiterung (min. 80cm)
+                            </Label>
+                            <Badge variant="secondary" className="text-xs">ca. 1.800€</Badge>
+                          </div>
+                          <div 
+                            className={`flex items-center space-x-3 p-3 border rounded-md hover:bg-muted/50 transition-colors cursor-pointer ${badMassnahmen.includes("rutschfest") ? "bg-cyan-500/10 border-cyan-500/50" : ""}`}
+                            onClick={() => toggleBadMassnahme("rutschfest")}
+                          >
+                            <Checkbox 
+                              checked={badMassnahmen.includes("rutschfest")} 
+                              id="rutschfest" 
+                              data-testid="checkbox-rutschfest"
+                              onCheckedChange={() => toggleBadMassnahme("rutschfest")}
+                            />
+                            <Label htmlFor="rutschfest" className="flex items-center gap-2 cursor-pointer flex-1">
+                              <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+                              Rutschfeste Fliesen
+                            </Label>
+                            <Badge variant="secondary" className="text-xs">ca. 2.000€</Badge>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <Label className="text-base font-semibold mb-3 block">
+                          Geplante Investition: {badInvestition[0].toLocaleString('de-DE')} EUR
+                        </Label>
+                        <Slider
+                          value={badInvestition}
+                          onValueChange={setBadInvestition}
+                          min={5000}
+                          max={50000}
+                          step={1000}
+                          className="mt-2"
+                          data-testid="slider-bad-investition"
+                        />
+                        <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                          <span>5.000 EUR</span>
+                          <span>50.000 EUR</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-cyan-500/5 border-cyan-500/20">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Euro className="w-5 h-5 text-cyan-600" />
+                        KfW 455-B Ergebnis: Ihr Zuschuss
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="text-center py-6 border-b">
+                        <p className="text-sm text-muted-foreground mb-2">Ihr KfW-Zuschuss</p>
+                        <p className="text-5xl font-bold text-cyan-600" data-testid="text-bad-betrag">
+                          {badErgebnis.foerderBetrag.toLocaleString('de-DE')} EUR
+                        </p>
+                        <p className="text-lg text-muted-foreground mt-2">
+                          = {badErgebnis.foerderProzent}% der Investitionskosten
+                        </p>
+                      </div>
+
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+                            Förderquote KfW 455-B
+                          </span>
+                          <Badge variant="secondary">{badErgebnis.foerderProzent}%</Badge>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+                            Max. Zuschuss
+                          </span>
+                          <Badge variant="secondary">{badErgebnis.maxFoerderung.toLocaleString('de-DE')} EUR</Badge>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+                            Ausgewählte Maßnahmen
+                          </span>
+                          <Badge variant="secondary">{badErgebnis.anzahlMassnahmen}</Badge>
+                        </div>
+                      </div>
+
+                      <div className="bg-background rounded-lg p-4 space-y-2">
+                        <div className="flex justify-between">
+                          <span>Investitionskosten:</span>
+                          <span className="font-medium">{badErgebnis.investition.toLocaleString('de-DE')} EUR</span>
+                        </div>
+                        <div className="flex justify-between text-cyan-600">
+                          <span>KfW-Zuschuss:</span>
+                          <span className="font-medium">- {badErgebnis.foerderBetrag.toLocaleString('de-DE')} EUR</span>
+                        </div>
+                        <div className="flex justify-between font-bold text-lg pt-2 border-t">
+                          <span>Ihr Eigenanteil:</span>
+                          <span data-testid="text-bad-eigenanteil">{badErgebnis.eigenanteil.toLocaleString('de-DE')} EUR</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2 text-sm text-muted-foreground bg-muted/50 p-3 rounded-md">
+                        <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <p>
+                          Der KfW-Zuschuss für barrierefreies Wohnen muss VOR Beginn 
+                          der Maßnahmen beantragt werden. Wir helfen Ihnen beim Antrag!
+                        </p>
+                      </div>
+
+                      <Button size="lg" className="w-full bg-cyan-600 hover:bg-cyan-700" asChild>
+                        <a href="tel:+4915212274043" data-testid="button-call-bad">
+                          <Phone className="w-4 h-4 mr-2" />
+                          Bad-Beratung anfordern
                         </a>
                       </Button>
                     </CardContent>
