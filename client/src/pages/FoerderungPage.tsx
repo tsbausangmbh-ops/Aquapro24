@@ -278,7 +278,7 @@ export default function FoerderungPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-8 lg:py-12 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -331,7 +331,7 @@ export default function FoerderungPage() {
 
         <TrustBar />
 
-        <section className="py-8 md:py-10">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -400,7 +400,7 @@ export default function FoerderungPage() {
           </div>
         </section>
 
-        <section className="py-8 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -465,7 +465,7 @@ export default function FoerderungPage() {
           </div>
         </section>
 
-        <section className="py-8">
+        <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -494,7 +494,7 @@ export default function FoerderungPage() {
           </div>
         </section>
 
-        <section className="py-8 bg-destructive/5 border-y border-destructive/20">
+        <section className="py-6 bg-destructive/5 border-y border-destructive/20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6 text-center">
               Wichtige Hinweise München: Das müssen Sie wissen
@@ -519,7 +519,7 @@ export default function FoerderungPage() {
           </div>
         </section>
 
-        <section className="py-8">
+        <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               KfW 458 Förderung Wärmepumpe München: Alle Details {currentYear}
@@ -580,7 +580,7 @@ export default function FoerderungPage() {
           ]}
         />
 
-        <section className="py-8 bg-primary text-primary-foreground">
+        <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Förderberatung München: Kostenlos und unverbindlich
