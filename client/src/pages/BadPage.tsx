@@ -471,18 +471,7 @@ export default function BadPage() {
                       </div>
                     </div>
                     
-                    <div className="rounded-lg overflow-hidden">
-                      <img 
-                        src={galleryImage3} 
-                        alt="Barrierefreies Bad Beispiel" 
-                        className="w-full h-32 object-cover"
-                      />
-                    </div>
-                    
-                    <p className="text-xs text-muted-foreground">
-                      * Beispielrechnung für barrierefreies Bad. Förderung vor Baubeginn beantragen.
-                    </p>
-                  </div>
+                                      </div>
                 </CardContent>
               </Card>
               
