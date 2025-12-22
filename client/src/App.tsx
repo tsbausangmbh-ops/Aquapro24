@@ -99,6 +99,10 @@ function Router() {
         <Route path="/trudering">{() => <StadtteilPage stadtteil="trudering" />}</Route>
         <Route path="/milbertshofen">{() => <StadtteilPage stadtteil="milbertshofen" />}</Route>
         <Route path="/moosach">{() => <StadtteilPage stadtteil="moosach" />}</Route>
+        <Route path="/muenchen-nord">{() => <StadtteilPage stadtteil="nord" />}</Route>
+        <Route path="/muenchen-sued">{() => <StadtteilPage stadtteil="sued" />}</Route>
+        <Route path="/muenchen-west">{() => <StadtteilPage stadtteil="west" />}</Route>
+        <Route path="/muenchen-ost">{() => <StadtteilPage stadtteil="ost" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </Suspense>

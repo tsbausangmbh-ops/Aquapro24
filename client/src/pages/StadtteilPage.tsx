@@ -223,6 +223,70 @@ const STADTTEILE: Record<string, StadtteilData> = {
       { name: "Neuhausen", slug: "neuhausen" },
       { name: "Pasing", slug: "pasing" }
     ]
+  },
+  nord: {
+    name: "Nord",
+    slug: "muenchen-nord",
+    anfahrt: "20 Minuten",
+    beschreibung: "München Nord umfasst die Stadtteile Milbertshofen, Am Hart, Freimann und Schwabing-Nord. Wir sind Ihr zuverlässiger Partner für Sanitär und Heizung im gesamten Münchner Norden.",
+    besonderheiten: [
+      "BMW-Werksumfeld betreut",
+      "Olympiapark-Nähe",
+      "Schnelle Anfahrt Nordseite"
+    ],
+    nachbarStadtteile: [
+      { name: "Schwabing", slug: "schwabing" },
+      { name: "Milbertshofen", slug: "milbertshofen" },
+      { name: "Moosach", slug: "moosach" }
+    ]
+  },
+  sued: {
+    name: "Süd",
+    slug: "muenchen-sued",
+    anfahrt: "18 Minuten",
+    beschreibung: "München Süd mit Sendling, Giesing und Thalkirchen bietet eine Mischung aus Altbau und modernen Wohnanlagen. Wir kennen die Besonderheiten dieser traditionellen Münchner Viertel.",
+    besonderheiten: [
+      "Isar-Nähe",
+      "Altbau-Spezialist",
+      "Tierpark-Umfeld betreut"
+    ],
+    nachbarStadtteile: [
+      { name: "Sendling", slug: "sendling" },
+      { name: "Giesing", slug: "giesing" },
+      { name: "Haidhausen", slug: "haidhausen" }
+    ]
+  },
+  west: {
+    name: "West",
+    slug: "muenchen-west",
+    anfahrt: "22 Minuten",
+    beschreibung: "München West mit Pasing, Laim und Aubing ist geprägt von Einfamilienhäusern und grünen Wohnlagen. Hier realisieren wir viele Heizungsmodernisierungen und Badsanierungen.",
+    besonderheiten: [
+      "Einfamilienhaus-Experten",
+      "Große Gärten & Villen",
+      "Fördermittelberatung"
+    ],
+    nachbarStadtteile: [
+      { name: "Pasing", slug: "pasing" },
+      { name: "Laim", slug: "laim" },
+      { name: "Neuhausen", slug: "neuhausen" }
+    ]
+  },
+  ost: {
+    name: "Ost",
+    slug: "muenchen-ost",
+    anfahrt: "20 Minuten",
+    beschreibung: "München Ost umfasst Bogenhausen, Trudering-Riem und Berg am Laim. Von der Messestadt bis zu den noblen Villenvierteln - wir bieten passgenaue Lösungen für jede Anforderung.",
+    besonderheiten: [
+      "Messestadt betreut",
+      "Villen Bogenhausen",
+      "Wärmepumpen-Spezialist"
+    ],
+    nachbarStadtteile: [
+      { name: "Bogenhausen", slug: "bogenhausen" },
+      { name: "Trudering", slug: "trudering" },
+      { name: "Haidhausen", slug: "haidhausen" }
+    ]
   }
 };
 
