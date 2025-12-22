@@ -31,7 +31,7 @@ import {
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jpg";
-import rohrreinigungImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.jpg";
+import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.png";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import heizungImage from "@assets/stock_images/white_radiator_heate_2e8a306c.jpg";
 import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_boiler.png";
