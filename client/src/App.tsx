@@ -40,6 +40,7 @@ const FoerderantragHeizungPage = lazy(() => import("@/pages/FoerderantragHeizung
 const FoerderrechnerPage = lazy(() => import("@/pages/FoerderrechnerPage"));
 const SanitaerNotdienst24Page = lazy(() => import("@/pages/SanitaerNotdienst24Page"));
 const HeizungNotdienst24Page = lazy(() => import("@/pages/HeizungNotdienst24Page"));
+const BarrierefreiheitPage = lazy(() => import("@/pages/BarrierefreiheitPage"));
 
 function PageLoader() {
   return (
@@ -87,6 +88,7 @@ function Router() {
         <Route path="/foerderrechner" component={FoerderrechnerPage} />
         <Route path="/sanitaer-notdienst-24" component={SanitaerNotdienst24Page} />
         <Route path="/heizung-notdienst-24" component={HeizungNotdienst24Page} />
+        <Route path="/barrierefreiheit" component={BarrierefreiheitPage} />
         <Route path="/schwabing">{() => <StadtteilPage stadtteil="schwabing" />}</Route>
         <Route path="/bogenhausen">{() => <StadtteilPage stadtteil="bogenhausen" />}</Route>
         <Route path="/sendling">{() => <StadtteilPage stadtteil="sendling" />}</Route>

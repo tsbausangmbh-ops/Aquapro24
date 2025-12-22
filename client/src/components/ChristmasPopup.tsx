@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { X } from "lucide-react";
 import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.png";
 
@@ -32,9 +32,17 @@ function hasMarketingConsent(): boolean {
 export default function ChristmasPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const currentYear = getCurrentYear();
   const nextYear = getNextYear();
+
+  const handleClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 300);
+  }, []);
 
   useEffect(() => {
     const checkAndShow = () => {
@@ -59,12 +67,29 @@ export default function ChristmasPopup() {
     };
   }, []);
 
-  const handleClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 300);
-  };
+  useEffect(() => {
+    if (isVisible && closeButtonRef.current) {
+      closeButtonRef.current.focus();
+    }
+  }, [isVisible]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isVisible) {
+        handleClose();
+      }
+    };
+
+    if (isVisible) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isVisible, handleClose]);
 
   if (!isVisible) return null;
 
@@ -74,6 +99,9 @@ export default function ChristmasPopup() {
         isClosing ? "opacity-0" : "opacity-100"
       }`}
       onClick={handleClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="christmas-popup-title"
       data-testid="christmas-popup-overlay"
     >
       <div 
@@ -84,19 +112,19 @@ export default function ChristmasPopup() {
       >
         <img 
           src={christmasBackground} 
-          alt="Weihnachtsgrüße" 
+          alt="Festliche Weihnachtsbeleuchtung" 
           className="w-full h-auto"
         />
         
-        {/* Festliches Rot-Gradient für Weihnachten */}
         <div 
           className="absolute inset-0"
           style={{ 
             background: "linear-gradient(to top, rgba(139, 30, 30, 0.95), rgba(165, 42, 42, 0.6), transparent)" 
           }}
+          aria-hidden="true"
         />
         
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden" aria-hidden="true">
           <p 
             className="text-7xl md:text-[10rem] font-bold text-white/15 whitespace-nowrap select-none"
             style={{ transform: "rotate(-15deg)" }}
@@ -106,18 +134,20 @@ export default function ChristmasPopup() {
         </div>
         
         <button
+          ref={closeButtonRef}
           type="button"
           className="absolute z-50 text-white bg-black/30 rounded-full p-2"
           style={{ top: "12px", right: "12px", left: "auto" }}
           onClick={handleClose}
+          aria-label="Popup schließen"
           data-testid="button-close-christmas"
         >
-          <X className="w-8 h-8" />
+          <X className="w-8 h-8" aria-hidden="true" />
         </button>
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
-          {/* Rot für Überschrift */}
           <h3 
+            id="christmas-popup-title"
             className="text-xl md:text-3xl font-bold mb-4"
             style={{ color: "#DC2626" }}
           >

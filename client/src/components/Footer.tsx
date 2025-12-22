@@ -40,6 +40,7 @@ const footerLinks = {
       { label: "Datenschutz", href: "/datenschutz" },
       { label: "Cookie-Richtlinie", href: "/cookie-richtlinie" },
       { label: "AGB", href: "/agb" },
+      { label: "Barrierefreiheit", href: "/barrierefreiheit" },
     ],
   },
 };
