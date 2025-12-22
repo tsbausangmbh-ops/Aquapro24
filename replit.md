@@ -80,10 +80,33 @@ All H2 headings now follow strict SEO pattern:
 
 ### H3 SEO Optimization (December 2025)
 Static H3 headings optimized with longtail keywords following pattern "Keyword München: Benefit/Action":
-- **Service Pages (8)**: 10+ H3s optimized (e.g., "Geprüfte Klempner München: Zertifizierte Fachbetriebe")
-- **Landing Pages (6)**: 24 H3s optimized (e.g., "Rohrbruch München: Sofort-Reparatur")
-- **Utility Pages (4)**: Guarantee/review H3s updated (e.g., "Sanitär Garantie München: 2 Jahre auf alle Arbeiten")
-- **StadtteilPage**: Dynamic {data.name} included (e.g., "Handwerker Garantie {data.name} München: Ihr Sicherheitsversprechen")
+
+**BadPage - 5 static H3s optimized:**
+- "Walk-in Dusche München: Bodengleich & rahmenlos"
+- "Luxusbad München: Freistehende Wannen & Design"
+- "Barrierefreies Bad München: KfW-gefördert"
+- "Bad Förderrechner München: Zuschuss berechnen"
+- "Barrierefreies Bad München: Mit staatlicher Förderung"
+
+**FoerderungPage - 3 H3s optimized:**
+- "Klimageschwindigkeitsbonus Heizung München: 20% Extra-Förderung"
+- "Einkommensbonus Heizung München: 30% für Haushalte"
+- "KfW Heizungskredit München: Zinsgünstig finanzieren"
+
+**FoerderantragHeizungPage:**
+- "Förderantrag Service München: Komplett kostenlos"
+
+**Utility Pages (Kontakt, Termin):**
+- "Sanitär Garantie München: 2 Jahre auf alle Arbeiten"
+- "Klempner Bewertungen München: 4.9/5 Sterne"
+
+**RatgeberPage:**
+- "Sanitär Beratung München: Wir helfen Ihnen"
+
+**StadtteilPage (dynamic):**
+- "Handwerker Garantie {data.name} München: Ihr Sicherheitsversprechen"
+
+**Note:** Dynamic H3s from arrays (service cards, process steps, guarantees) remain unchanged as they are generated from data structures.
 
 ### Total SEO Coverage
 - 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)

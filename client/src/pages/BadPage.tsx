@@ -256,7 +256,7 @@ export default function BadPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">Walk-in Duschen</h3>
+                  <h3 className="text-lg font-semibold text-white mb-1">Walk-in Dusche München: Bodengleich & rahmenlos</h3>
                   <p className="text-white/80 text-sm">
                     Bodengleich, rahmenlos, großzügig – modernes Duschvergnügen
                   </p>
@@ -271,7 +271,7 @@ export default function BadPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">Luxusbäder</h3>
+                  <h3 className="text-lg font-semibold text-white mb-1">Luxusbad München: Freistehende Wannen & Design</h3>
                   <p className="text-white/80 text-sm">
                     Freistehende Wannen, edle Materialien, exklusives Design
                   </p>
@@ -286,7 +286,7 @@ export default function BadPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">Barrierefreie Bäder</h3>
+                  <h3 className="text-lg font-semibold text-white mb-1">Barrierefreies Bad München: KfW-gefördert</h3>
                   <p className="text-white/80 text-sm">
                     Komfortabel, sicher, zukunftssicher – mit KfW-Förderung
                   </p>
@@ -436,7 +436,7 @@ export default function BadPage() {
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                       <Calculator className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold">Förderrechner</h3>
+                    <h3 className="text-xl font-bold">Bad Förderrechner München: Zuschuss berechnen</h3>
                   </div>
                   
                   <div className="space-y-4">
@@ -590,7 +590,7 @@ export default function BadPage() {
                 keine Abstimmungsprobleme. Wir koordinieren Sanitär, Fliesen, Elektrik und Malerarbeiten – 
                 Sie haben nur einen Ansprechpartner.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Barrierefreies Bad mit Förderung</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-6">Barrierefreies Bad München: Mit staatlicher Förderung</h3>
               <p>
                 Barrierefreie Bäder sind nicht nur für Senioren sinnvoll. Bodengleiche Duschen, breite 
                 Türen und rutschfeste Böden bieten Komfort für alle Generationen. Mit der KfW-Förderung 
