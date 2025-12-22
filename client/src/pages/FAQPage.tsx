@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
-import ColorfulFAQ from "@/components/ColorfulFAQ";
+import SimpleFAQ from "@/components/SimpleFAQ";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
@@ -255,11 +255,10 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <ColorfulFAQ 
+        <SimpleFAQ 
           items={faqs} 
           title="Ihre Fragen – unsere Antworten"
           subtitle="Echte Beispiele von Kunden, denen wir geholfen haben"
-          columns={4}
         />
 
         <section className="py-6 lg:py-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">

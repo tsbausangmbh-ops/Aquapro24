@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
-import ColorfulFAQ from "@/components/ColorfulFAQ";
+import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { haustechnikStories } from "@/components/CustomerStories";
@@ -243,8 +243,8 @@ export default function HaustechnikPage() {
                 <Card key={service.title} className="hover-elevate">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                        <Gauge className="w-6 h-6 text-secondary" />
+                      <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                        <Gauge className="w-6 h-6 text-muted-foreground" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
@@ -269,22 +269,22 @@ export default function HaustechnikPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="space-y-2">
-                <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
-                  <Home className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto">
+                  <Home className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold">1.500+ Projekte München: Erfolgreich realisiert</h3>
                 <p className="text-muted-foreground">Haustechnik komplett</p>
               </div>
               <div className="space-y-2">
-                <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
-                  <Star className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto">
+                  <Star className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold">4.9/5 Sterne München: Top-Bewertungen</h3>
                 <p className="text-muted-foreground">Verifizierte Kundenstimmen</p>
               </div>
               <div className="space-y-2">
-                <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
-                  <Clock className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto">
+                  <Clock className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold">25+ Jahre München: Ihr Haustechnik-Partner</h3>
                 <p className="text-muted-foreground">Erfahrung zählt</p>
@@ -345,7 +345,7 @@ export default function HaustechnikPage() {
           highlightAreas={["Maxvorstadt", "Schwabing", "Neuhausen"]}
         />
 
-        <ColorfulFAQ 
+        <SimpleFAQ 
           items={faqItems}
           title="Häufige Fragen zur Haustechnik"
         />

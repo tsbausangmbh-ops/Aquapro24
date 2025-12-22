@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
-import ColorfulFAQ from "@/components/ColorfulFAQ";
+import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { heizungStories } from "@/components/CustomerStories";
@@ -254,8 +254,8 @@ export default function WarmwasserPage() {
               {services.map((service, index) => (
                 <Card key={index} className="hover-elevate">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                      <service.icon className="w-6 h-6 text-secondary" />
+                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4">
+                      <service.icon className="w-6 h-6 text-muted-foreground" />
                     </div>
                     <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
                     <p className="text-muted-foreground text-sm">{service.description}</p>
@@ -284,8 +284,8 @@ export default function WarmwasserPage() {
               </div>
               <div className="bg-card rounded-lg p-8 border">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center">
-                    <Award className="w-8 h-8 text-secondary" />
+                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
+                    <Award className="w-8 h-8 text-muted-foreground" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Durchlauferhitzer Marken München: Stiebel Eltron, Vaillant & mehr</h3>
@@ -350,7 +350,7 @@ export default function WarmwasserPage() {
           highlightAreas={["Trudering", "Laim", "Giesing"]}
         />
 
-        <ColorfulFAQ 
+        <SimpleFAQ 
           items={faqItems}
           title="Häufige Fragen zum Warmwasser-Service"
         />

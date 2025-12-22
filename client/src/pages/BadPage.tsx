@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
-import ColorfulFAQ from "@/components/ColorfulFAQ";
+import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { badStories } from "@/components/CustomerStories";
@@ -243,8 +243,8 @@ export default function BadPage() {
                 <Card key={service.title} className="hover-elevate">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                        <Wrench className="w-6 h-6 text-secondary" />
+                      <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                        <Wrench className="w-6 h-6 text-muted-foreground" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
@@ -319,7 +319,7 @@ export default function BadPage() {
           highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
         />
 
-        <ColorfulFAQ 
+        <SimpleFAQ 
           items={faqItems}
           title="Häufige Fragen zur Badsanierung"
         />

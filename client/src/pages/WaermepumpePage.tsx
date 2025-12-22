@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
-import ColorfulFAQ from "@/components/ColorfulFAQ";
+import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import NLPSection from "@/components/NLPSection";
 import CustomerStories, { waermepumpeStories } from "@/components/CustomerStories";
@@ -245,8 +245,8 @@ export default function WaermepumpePage() {
                 <Card key={service.title} className="hover-elevate">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Leaf className="w-6 h-6 text-accent" />
+                      <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                        <Leaf className="w-6 h-6 text-muted-foreground" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
@@ -271,22 +271,22 @@ export default function WaermepumpePage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="space-y-2">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
-                  <TrendingDown className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto">
+                  <TrendingDown className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold">-50%</h3>
                 <p className="text-muted-foreground">Heizkosten sparen</p>
               </div>
               <div className="space-y-2">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
-                  <Leaf className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto">
+                  <Leaf className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold">0 kg</h3>
                 <p className="text-muted-foreground">CO2-Emissionen</p>
               </div>
               <div className="space-y-2">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
-                  <Zap className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto">
+                  <Zap className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold">70%</h3>
                 <p className="text-muted-foreground">Förderung möglich</p>
@@ -349,7 +349,7 @@ export default function WaermepumpePage() {
           highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
         />
 
-        <ColorfulFAQ 
+        <SimpleFAQ 
           items={faqItems}
           title="Häufige Fragen zu Wärmepumpen"
         />
