@@ -30,6 +30,15 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
+import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jpg";
+import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
+import heizungImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
+import waermepumpeImage from "@assets/stock_images/heat_pump_installati_53374252.jpg";
+import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
+import galleryImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
+import galleryImage2 from "@assets/stock_images/luxury_grey_bathroom_90641334.jpg";
+import galleryImage3 from "@assets/stock_images/vaillant_arotherm_he_82dc39c0.jpg";
+import galleryImage4 from "@assets/stock_images/happy_homeowner_fami_71ca925e.jpg";
 
 const serviceOptions: { type: ServiceType; name: string; icon: typeof Droplets; description: string }[] = [
   { type: "sanitaer", name: "Sanitär", icon: Droplets, description: "Rohre, Armaturen, Leckage" },
@@ -99,7 +108,8 @@ const services = [
     price: "ab 92€",
     description: "Wasserinstallation, Rohrbruch, Leckortung. 24h Notdienst.",
     features: ["Rohrbruch", "Leckortung", "Installation"],
-    link: "/sanitaer"
+    link: "/sanitaer",
+    image: sanitaerImage
   },
   {
     icon: Wrench,
@@ -107,7 +117,8 @@ const services = [
     price: "ab 81€",
     description: "Abfluss verstopft, WC blockiert. Spirale, Hochdruck.",
     features: ["24/7 Notdienst", "Kamera", "Festpreis"],
-    link: "/rohrreinigung"
+    link: "/rohrreinigung",
+    image: sanitaerImage
   },
   {
     icon: ShowerHead,
@@ -115,7 +126,8 @@ const services = [
     price: "ab 16.000€",
     description: "Komplett-Umbau in 2-4 Wochen. Villeroy & Boch, Duravit.",
     features: ["3D-Planung", "5 Jahre Garantie", "Festpreis"],
-    link: "/bad"
+    link: "/bad",
+    image: badImage
   },
   {
     icon: Thermometer,
@@ -123,7 +135,8 @@ const services = [
     price: "ab 600€",
     description: "Durchlauferhitzer, Boiler. Vaillant, Stiebel Eltron.",
     features: ["Montage", "Wartung", "Austausch"],
-    link: "/warmwasser"
+    link: "/warmwasser",
+    image: heizungImage
   },
   {
     icon: Flame,
@@ -131,7 +144,8 @@ const services = [
     price: "ab 154€",
     description: "Reparatur, Wartung, Austausch. Viessmann, Vaillant, Buderus.",
     features: ["24h Notdienst", "Wartung", "70% BAFA"],
-    link: "/heizung"
+    link: "/heizung",
+    image: heizungImage
   },
   {
     icon: Flame,
@@ -139,8 +153,16 @@ const services = [
     price: "bis 70% Förderung",
     description: "Luft-Wasser, Erdwärme. BAFA-Antrag inklusive.",
     features: ["Beratung", "Installation", "Förderung"],
-    link: "/waermepumpe"
+    link: "/waermepumpe",
+    image: waermepumpeImage
   }
+];
+
+const galleryItems = [
+  { image: galleryImage1, title: "Badsanierung Sendling", category: "Bad" },
+  { image: galleryImage2, title: "Luxusbad Bogenhausen", category: "Bad" },
+  { image: galleryImage3, title: "Wärmepumpe Pasing", category: "Heizung" },
+  { image: galleryImage4, title: "Zufriedene Kunden", category: "Referenz" }
 ];
 
 const processSteps = [
@@ -319,19 +341,25 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {services.map((service, index) => (
                 <Link key={index} href={service.link}>
-                  <Card className="h-full hover-elevate cursor-pointer group">
+                  <Card className="h-full hover-elevate cursor-pointer group overflow-hidden">
+                    <div className="relative h-32 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs">
+                        {service.price}
+                      </Badge>
+                    </div>
                     <CardContent className="p-4">
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <service.icon className="w-5 h-5 text-primary" />
-                        </div>
-                        <Badge variant="secondary" className="text-xs">
-                          {service.price}
-                        </Badge>
+                      <div className="flex items-center gap-2 mb-2">
+                        <service.icon className="w-4 h-4 text-primary" />
+                        <h3 className="font-semibold text-lg" data-testid={`text-service-title-${index}`}>
+                          {service.title}
+                        </h3>
                       </div>
-                      <h3 className="font-semibold text-lg mb-2" data-testid={`text-service-title-${index}`}>
-                        {service.title}
-                      </h3>
                       <p className="text-muted-foreground text-sm mb-3">
                         {service.description}
                       </p>
@@ -406,7 +434,39 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-4 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                Projekte München: Referenzen unserer Arbeit
+              </h2>
+              <p className="text-muted-foreground">
+                Badsanierung, Wärmepumpe, Heizung – echte Projekte aus München.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              {galleryItems.map((item, index) => (
+                <div key={index} className="relative group overflow-hidden rounded-lg">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-40 lg:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <Badge variant="secondary" className="text-xs mb-1">
+                      {item.category}
+                    </Badge>
+                    <p className="text-white text-sm font-medium">{item.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-4">
               <h2 className="text-xl font-bold mb-2">Markenqualität für Ihr Zuhause</h2>
