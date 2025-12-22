@@ -89,7 +89,7 @@ export default function Footer() {
             <div className="mb-4">
               <img 
                 src={footerLogo} 
-                alt="AquaPro 24 München Logo" 
+                alt="AquaPro24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
                 className="h-12 object-contain"
                 data-testid="img-footer-logo"
               />

@@ -76,7 +76,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2">
               <img 
                 src={logoImage} 
-                alt="Münchner Sanitär Logo" 
+                alt="Klempner München - AquaPro24 Sanitär und Heizung Notdienst 24/7" 
                 className="w-10 h-10 object-contain"
                 loading="eager"
                 decoding="async"
