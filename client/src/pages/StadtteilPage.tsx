@@ -613,7 +613,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">24h Notdienst</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Garantie</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Anfahrt</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Meisterbetrieb</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Partnernetzwerk</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Preise</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">lokaler Service</span>
               </div>
@@ -723,7 +723,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-green-500" />
-                      <span>Meisterbetrieb mit qualifizierten Fachkräften</span>
+                      <span>Partnernetzwerk mit qualifizierten Fachkräften</span>
                     </li>
                   </ul>
                   <div className="mt-4 pt-4 border-t">

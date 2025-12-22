@@ -581,7 +581,7 @@ export default function BadPage() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Eine Badsanierung ist eine Investition in Ihre Lebensqualität. Als Münchner Meisterbetrieb 
+                Eine Badsanierung ist eine Investition in Ihre Lebensqualität. Als Münchner Partnernetzwerk 
                 haben wir hunderte Bäder erfolgreich saniert – von der kompakten Stadtwohnung bis zur 
                 großzügigen Villa. Unser Versprechen: Festpreis, Termingarantie, 5 Jahre Gewährleistung.
               </p>

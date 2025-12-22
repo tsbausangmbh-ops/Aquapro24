@@ -385,7 +385,7 @@ export default function SEO({
     updateMeta("ai:funding", "BAFA/KfW Förderung bis 70% für Wärmepumpen");
     updateMeta("ai:guarantee", "2 Jahre Garantie, Festpreisgarantie");
     updateMeta("ai:response-time", "Ab 60 Minuten bei Notfällen");
-    updateMeta("ai:certifications", "Meisterbetrieb, HWK München");
+    updateMeta("ai:certifications", "Partnernetzwerk, HWK München");
     
     updateMeta("llm:business-summary", "AquaPro24 ist ein Sanitär- und Heizungsunternehmen in München mit 24/7 Notdienst, Festpreisgarantie und über 2.800 zufriedenen Kunden seit 2005.");
     updateMeta("llm:key-services", "Klempner, Rohrreinigung, Heizungsreparatur, Wärmepumpe, Badsanierung");

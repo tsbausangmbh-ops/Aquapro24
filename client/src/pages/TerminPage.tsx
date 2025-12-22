@@ -1216,7 +1216,7 @@ export default function TerminPage() {
                 { text: "Transparente Festpreise vor Arbeitsbeginn" },
                 { text: "Pünktliche und saubere Arbeit" },
                 { text: "Rückruf innerhalb von 2 Stunden (tagsüber)" },
-                { text: "Meisterbetrieb-Qualität" },
+                { text: "Partnernetzwerk-Qualität" },
               ].map((benefit, index) => (
                 <div key={index} className="flex flex-col items-center text-center p-4">
                   <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-3">
