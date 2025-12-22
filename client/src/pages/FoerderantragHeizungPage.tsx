@@ -196,7 +196,7 @@ export default function FoerderantragHeizungPage() {
 
         <TrustBar />
 
-        <section className="py-8 md:py-12">
+        <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
               Heizungsförderung München: Alle förderfähigen Heizungsarten

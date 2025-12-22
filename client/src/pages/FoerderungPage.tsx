@@ -231,7 +231,7 @@ export default function FoerderungPage() {
         <TrustBar />
 
         {/* Förderungen Übersicht */}
-        <section className="py-8 md:py-12">
+        <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
               Förderung Heizungstausch München: Ihre Möglichkeiten 2025
@@ -285,7 +285,7 @@ export default function FoerderungPage() {
         </section>
 
         {/* Ablauf */}
-        <section className="py-8 md:py-12 bg-muted/30">
+        <section className="py-8 md:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
               Förderung beantragen München: So funktioniert es
@@ -324,7 +324,7 @@ export default function FoerderungPage() {
         </section>
 
         {/* Rechenbeispiele */}
-        <section className="py-8 md:py-12">
+        <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
               Förderbeispiele München: Was Sie sparen können
@@ -370,7 +370,7 @@ export default function FoerderungPage() {
         </section>
 
         {/* SEO Text */}
-        <section className="py-8 md:py-12 bg-muted/30">
+        <section className="py-8 md:py-6 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               BAFA Förderung Wärmepumpe München: Alle Details 2025
@@ -406,7 +406,7 @@ export default function FoerderungPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-8 md:py-12">
+        <section className="py-4 md:py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Förderberatung München: Kostenlos und unverbindlich

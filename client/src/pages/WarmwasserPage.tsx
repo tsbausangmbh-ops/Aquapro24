@@ -167,7 +167,7 @@ export default function WarmwasserPage() {
       <Header />
       
       <main id="main-content">
-        <section className="relative py-12 lg:py-16 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -226,7 +226,7 @@ export default function WarmwasserPage() {
 
         <TrustBar />
 
-        <section className="py-12 lg:py-16">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
@@ -263,7 +263,7 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <section className="py-12 lg:py-16 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold mb-3">So einfach geht's</h2>
@@ -287,7 +287,7 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <section className="py-12 lg:py-16">
+        <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
@@ -310,7 +310,7 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <section className="py-10 bg-muted/30">
+        <section className="py-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl font-bold mb-2">Markenqualität</h2>
@@ -344,7 +344,7 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <section className="py-12">
+        <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6">
               Ihr Warmwasser-Spezialist in München
@@ -374,7 +374,7 @@ export default function WarmwasserPage() {
         />
 
         {/* Partnernetzwerk Angebot */}
-        <section className="py-12 lg:py-16 bg-muted/50">
+        <section className="py-6 lg:py-8 bg-muted/50">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -391,7 +391,7 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-primary text-primary-foreground">
+        <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Kein Warmwasser? Wir helfen sofort!

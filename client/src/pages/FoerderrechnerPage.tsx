@@ -276,7 +276,7 @@ export default function FoerderrechnerPage() {
 
         <TrustBar />
 
-        <section className="py-8 md:py-12">
+        <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <Tabs defaultValue="bafa" className="w-full">
               <TabsList className="grid w-full grid-cols-3 mb-8">
