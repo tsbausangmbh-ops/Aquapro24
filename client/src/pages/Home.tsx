@@ -33,7 +33,7 @@ import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jpg";
 import rohrreinigungImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.jpg";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import heizungImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
+import heizungImage from "@assets/stock_images/white_radiator_heate_2e8a306c.jpg";
 import warmwasserImage from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
 import waermepumpeImage from "@assets/stock_images/white_air_source_hea_49cf19f8.jpg";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
