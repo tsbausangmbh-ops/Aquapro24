@@ -26,6 +26,9 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
+import galleryImage1 from "@assets/stock_images/modern_luxury_bathro_690308f0.jpg";
+import galleryImage2 from "@assets/stock_images/bathroom_renovation__48f0a68c.jpg";
+import galleryImage3 from "@assets/stock_images/accessible_barrier-f_dbf136be.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
@@ -229,6 +232,65 @@ export default function BadPage() {
         </section>
 
         <TrustBar />
+
+        {/* Bildergalerie Section */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Von der Vision zum Traumbad</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Moderne Bäder, professionelle Umsetzung, barrierefreie Lösungen – alles aus einer Hand.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="group relative overflow-hidden rounded-lg">
+                <img 
+                  src={galleryImage1} 
+                  alt="Modernes Luxusbad mit bodengleicher Dusche" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg font-semibold text-white mb-1">Moderne Luxusbäder</h3>
+                  <p className="text-white/80 text-sm">
+                    Hochwertige Materialien, zeitloses Design, bodengleiche Duschen
+                  </p>
+                </div>
+              </div>
+              
+              <div className="group relative overflow-hidden rounded-lg">
+                <img 
+                  src={galleryImage2} 
+                  alt="Professionelle Badsanierung durch Fachhandwerker" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg font-semibold text-white mb-1">Professionelle Umsetzung</h3>
+                  <p className="text-white/80 text-sm">
+                    Erfahrene Handwerker, präzise Arbeit, termingerechte Fertigstellung
+                  </p>
+                </div>
+              </div>
+              
+              <div className="group relative overflow-hidden rounded-lg">
+                <img 
+                  src={galleryImage3} 
+                  alt="Barrierefreies Bad für Senioren" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg font-semibold text-white mb-1">Barrierefreie Bäder</h3>
+                  <p className="text-white/80 text-sm">
+                    Komfortabel, sicher, zukunftssicher – mit KfW-Förderung
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Pakete Section */}
         <section className="py-12 lg:py-16">
