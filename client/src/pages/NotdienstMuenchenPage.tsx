@@ -100,6 +100,33 @@ export default function NotdienstMuenchenPage() {
             answer: "Bei Rohrbruch: Hauptwasserhahn zudrehen. Bei Heizungsausfall: Sicherungen prüfen. Dann Fotos machen und uns kontaktieren."
           }
         ]}
+        howToSchema={{
+          name: "Rohrbruch Soforthilfe München - Erste Schritte",
+          description: "So reagieren Sie richtig bei einem Rohrbruch oder Wasserschaden in München, bevor der Notdienst eintrifft.",
+          totalTime: "PT10M",
+          steps: [
+            {
+              name: "Hauptwasserhahn zudrehen",
+              text: "Drehen Sie sofort den Hauptwasserhahn zu. Dieser befindet sich meist im Keller, neben dem Wasserzähler oder unter der Küchenspüle. Drehen Sie im Uhrzeigersinn bis zum Anschlag."
+            },
+            {
+              name: "Strom im betroffenen Bereich ausschalten",
+              text: "Schalten Sie die Sicherungen für den betroffenen Bereich aus, wenn Wasser in die Nähe von Steckdosen oder elektrischen Geräten gelangt ist. Sicherheit geht vor!"
+            },
+            {
+              name: "Schaden dokumentieren",
+              text: "Machen Sie Fotos und Videos vom Wasserschaden, dem Leck und der Umgebung. Diese Dokumentation hilft uns bei der schnellen Einschätzung und ist wichtig für die Versicherung."
+            },
+            {
+              name: "Wasser aufwischen und auffangen",
+              text: "Stellen Sie Eimer unter tropfende Stellen und wischen Sie stehendes Wasser auf. Dies verhindert weitere Schäden an Möbeln und Fußböden."
+            },
+            {
+              name: "Notdienst kontaktieren",
+              text: "Rufen Sie AquaPro 24 unter 0152 12274043 an oder senden Sie Fotos per WhatsApp. Beschreiben Sie kurz: Was ist passiert? Seit wann? Wie stark?"
+            }
+          ]
+        }}
       />
       <Header />
       

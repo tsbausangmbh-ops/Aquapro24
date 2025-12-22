@@ -28,6 +28,22 @@ interface FAQItem {
   answer: string;
 }
 
+interface HowToStep {
+  name: string;
+  text: string;
+  image?: string;
+}
+
+interface HowToSchema {
+  name: string;
+  description: string;
+  totalTime?: string;
+  estimatedCost?: { currency: string; value: string };
+  supply?: string[];
+  tool?: string[];
+  steps: HowToStep[];
+}
+
 interface AggregateRatingSchema {
   ratingValue: number;
   reviewCount: number;
@@ -64,6 +80,7 @@ interface SEOProps {
     aggregateRating?: AggregateRatingSchema;
   };
   faqSchema?: FAQItem[];
+  howToSchema?: HowToSchema;
 }
 
 const LOCAL_BUSINESS_SCHEMA = {
@@ -138,12 +155,31 @@ const LOCAL_BUSINESS_SCHEMA = {
     { "@type": "AdministrativeArea", "name": "Ludwigsvorstadt-Isarvorstadt", "containedInPlace": { "@type": "City", "name": "München" } },
     { "@type": "AdministrativeArea", "name": "Allach-Untermenzing", "containedInPlace": { "@type": "City", "name": "München" } },
     { "@type": "AdministrativeArea", "name": "Aubing-Lochhausen-Langwied", "containedInPlace": { "@type": "City", "name": "München" } },
-    { "@type": "AdministrativeArea", "name": "Feldmoching-Hasenbergl", "containedInPlace": { "@type": "City", "name": "München" } }
+    { "@type": "AdministrativeArea", "name": "Feldmoching-Hasenbergl", "containedInPlace": { "@type": "City", "name": "München" } },
+    { "@type": "AdministrativeArea", "name": "Landkreis München", "sameAs": "https://de.wikipedia.org/wiki/Landkreis_M%C3%BCnchen" },
+    { "@type": "City", "name": "Dachau", "sameAs": "https://de.wikipedia.org/wiki/Dachau" },
+    { "@type": "City", "name": "Freising", "sameAs": "https://de.wikipedia.org/wiki/Freising" },
+    { "@type": "City", "name": "Erding", "sameAs": "https://de.wikipedia.org/wiki/Erding" },
+    { "@type": "City", "name": "Starnberg", "sameAs": "https://de.wikipedia.org/wiki/Starnberg" },
+    { "@type": "City", "name": "Fürstenfeldbruck", "sameAs": "https://de.wikipedia.org/wiki/F%C3%BCrstenfeldbruck" },
+    { "@type": "City", "name": "Garching", "sameAs": "https://de.wikipedia.org/wiki/Garching_bei_M%C3%BCnchen" },
+    { "@type": "City", "name": "Unterschleißheim", "sameAs": "https://de.wikipedia.org/wiki/Unterschlei%C3%9Fheim" },
+    { "@type": "City", "name": "Unterhaching", "sameAs": "https://de.wikipedia.org/wiki/Unterhaching" },
+    { "@type": "City", "name": "Ottobrunn", "sameAs": "https://de.wikipedia.org/wiki/Ottobrunn" },
+    { "@type": "City", "name": "Germering", "sameAs": "https://de.wikipedia.org/wiki/Germering" },
+    { "@type": "City", "name": "Haar", "sameAs": "https://de.wikipedia.org/wiki/Haar_(bei_M%C3%BCnchen)" },
+    { "@type": "City", "name": "Gräfelfing", "sameAs": "https://de.wikipedia.org/wiki/Gr%C3%A4felfing" },
+    { "@type": "City", "name": "Planegg", "sameAs": "https://de.wikipedia.org/wiki/Planegg" },
+    { "@type": "City", "name": "Pullach", "sameAs": "https://de.wikipedia.org/wiki/Pullach_im_Isartal" },
+    { "@type": "City", "name": "Grünwald", "sameAs": "https://de.wikipedia.org/wiki/Gr%C3%BCnwald" },
+    { "@type": "City", "name": "Ismaning", "sameAs": "https://de.wikipedia.org/wiki/Ismaning" },
+    { "@type": "City", "name": "Taufkirchen", "sameAs": "https://de.wikipedia.org/wiki/Taufkirchen_(bei_M%C3%BCnchen)" },
+    { "@type": "City", "name": "Neubiberg", "sameAs": "https://de.wikipedia.org/wiki/Neubiberg" }
   ],
   "serviceArea": {
     "@type": "GeoCircle",
     "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.5820 },
-    "geoRadius": "30000"
+    "geoRadius": "40000"
   },
   "openingHoursSpecification": [
     {
@@ -314,7 +350,8 @@ export default function SEO({
   speakable,
   stadttteil,
   serviceSchema,
-  faqSchema
+  faqSchema,
+  howToSchema
 }: SEOProps) {
   useEffect(() => {
     document.title = title;
@@ -406,6 +443,18 @@ export default function SEO({
     updateMeta("gpt:location", "München, Bayern");
     updateMeta("gpt:category", "Home Services, Plumbing, HVAC");
     
+    updateMeta("ai-act:transparency", "true");
+    updateMeta("ai-act:risk-level", "limited-risk");
+    updateMeta("ai-act:human-oversight", "available");
+    updateMeta("ai-act:provider", "AquaPro 24 - Mustafa Sakar");
+    updateMeta("ai-act:contact", "info@aquapro24.de");
+    updateMeta("ai-act:ai-system-name", "AquaPro24 KI-Berater");
+    updateMeta("ai-act:ai-system-purpose", "Kundenberatung für Sanitär- und Heizungsdienstleistungen");
+    updateMeta("ai-act:ai-model", "OpenAI GPT-4o-mini");
+    updateMeta("ai-act:last-updated", "2025-12-22");
+    updateMeta("ai-act:compliance-date", "2025-02-02");
+    updateMeta("ai-act:regulation", "Verordnung (EU) 2024/1689");
+    
     if (aiSummary) {
       updateMeta("ai-summary", aiSummary);
       updateMeta("abstract", aiSummary);
@@ -446,6 +495,61 @@ export default function SEO({
     localBusinessScript.type = "application/ld+json";
     localBusinessScript.textContent = JSON.stringify(LOCAL_BUSINESS_SCHEMA);
     document.head.appendChild(localBusinessScript);
+
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://aquapro24.de/#organization",
+      "name": "AquaPro 24",
+      "alternateName": ["AquaPro24", "KSHW München", "Sanitär München Partnernetzwerk"],
+      "url": "https://aquapro24.de",
+      "logo": "https://aquapro24.de/logo.png",
+      "foundingDate": "2005",
+      "founder": {
+        "@type": "Person",
+        "name": "Mustafa Sakar",
+        "jobTitle": "Inhaber"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hardenbergstr. 4",
+        "addressLocality": "München",
+        "addressRegion": "Bayern",
+        "postalCode": "80992",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49-152-12274043",
+        "contactType": "Kundenservice",
+        "email": "info@aquapro24.de",
+        "availableLanguage": ["de", "en", "tr"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/aquapro24",
+        "https://www.instagram.com/aquapro24_muenchen",
+        "https://www.linkedin.com/company/aquapro24",
+        "https://wa.me/4915212274043",
+        "https://www.google.com/maps/place/Hardenbergstr.+4,+80992+München",
+        "https://www.yelp.de/biz/aquapro-24-münchen",
+        "https://www.gelbeseiten.de/gsbiz/aquapro24",
+        "https://www.11880.com/aquapro24-muenchen"
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.5820 },
+        "geoRadius": "40000"
+      },
+      "knowsAbout": [
+        "Sanitärinstallation", "Heizungsmodernisierung", "Badsanierung",
+        "Wärmepumpe", "Fußbodenheizung", "Rohrbruch", "Wasserschaden", "Notdienst",
+        "Rohrreinigung", "Armaturen", "BAFA Förderung", "KfW Förderung"
+      ]
+    };
+    const orgScript = document.createElement("script");
+    orgScript.type = "application/ld+json";
+    orgScript.textContent = JSON.stringify(organizationSchema);
+    document.head.appendChild(orgScript);
 
     if (serviceSchema) {
       const serviceSchemaData: Record<string, unknown> = {
@@ -545,6 +649,43 @@ export default function SEO({
       document.head.appendChild(faqScript);
     }
 
+    if (howToSchema) {
+      const howToSchemaData: Record<string, unknown> = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": howToSchema.name,
+        "description": howToSchema.description,
+        "inLanguage": "de-DE",
+        "step": howToSchema.steps.map((step, index) => ({
+          "@type": "HowToStep",
+          "position": index + 1,
+          "name": step.name,
+          "text": step.text,
+          ...(step.image && { "image": step.image })
+        }))
+      };
+      if (howToSchema.totalTime) {
+        howToSchemaData["totalTime"] = howToSchema.totalTime;
+      }
+      if (howToSchema.estimatedCost) {
+        howToSchemaData["estimatedCost"] = {
+          "@type": "MonetaryAmount",
+          "currency": howToSchema.estimatedCost.currency,
+          "value": howToSchema.estimatedCost.value
+        };
+      }
+      if (howToSchema.supply && howToSchema.supply.length > 0) {
+        howToSchemaData["supply"] = howToSchema.supply.map(s => ({ "@type": "HowToSupply", "name": s }));
+      }
+      if (howToSchema.tool && howToSchema.tool.length > 0) {
+        howToSchemaData["tool"] = howToSchema.tool.map(t => ({ "@type": "HowToTool", "name": t }));
+      }
+      const howToScript = document.createElement("script");
+      howToScript.type = "application/ld+json";
+      howToScript.textContent = JSON.stringify(howToSchemaData);
+      document.head.appendChild(howToScript);
+    }
+
     if (speakable) {
       const speakableSchema = {
         "@context": "https://schema.org",
@@ -602,7 +743,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, speakable, stadttteil, serviceSchema, faqSchema]);
+  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, speakable, stadttteil, serviceSchema, faqSchema, howToSchema]);
 
   return null;
 }
