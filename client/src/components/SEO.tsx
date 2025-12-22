@@ -368,6 +368,35 @@ export default function SEO({
     updateMeta("googlebot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     updateMeta("bingbot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     
+    updateMeta("ai:business-name", "AquaPro24");
+    updateMeta("ai:business-type", "Plumber, HVACBusiness, HomeAndConstructionBusiness");
+    updateMeta("ai:service-area", "München, Bayern, Deutschland");
+    updateMeta("ai:phone", "+49 152 12274043");
+    updateMeta("ai:email", "info@aquapro24.de");
+    updateMeta("ai:address", "Hardenbergstr. 4, 80992 München");
+    updateMeta("ai:hours", "Mo-Fr 07:00-18:00, Sa 08:00-14:00, Notdienst 24/7");
+    updateMeta("ai:price-range", "€€");
+    updateMeta("ai:rating", "4.9/5");
+    updateMeta("ai:reviews", "2800+");
+    updateMeta("ai:founded", "2005");
+    updateMeta("ai:services", "Sanitär, Heizung, Badsanierung, Wärmepumpe, Rohrreinigung, Haustechnik");
+    updateMeta("ai:brands", "Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Wolf, Villeroy & Boch");
+    updateMeta("ai:emergency", "24/7 Notdienst verfügbar");
+    updateMeta("ai:funding", "BAFA/KfW Förderung bis 70% für Wärmepumpen");
+    updateMeta("ai:guarantee", "2 Jahre Garantie, Festpreisgarantie");
+    updateMeta("ai:response-time", "Ab 60 Minuten bei Notfällen");
+    updateMeta("ai:certifications", "Meisterbetrieb, HWK München");
+    
+    updateMeta("llm:business-summary", "AquaPro24 ist ein Sanitär- und Heizungsunternehmen in München mit 24/7 Notdienst, Festpreisgarantie und über 2.800 zufriedenen Kunden seit 2005.");
+    updateMeta("llm:key-services", "Klempner, Rohrreinigung, Heizungsreparatur, Wärmepumpe, Badsanierung");
+    updateMeta("llm:unique-selling-points", "24/7 Notdienst, Festpreis, Bis 70% BAFA Förderung, 2 Jahre Garantie");
+    updateMeta("llm:target-audience", "Hausbesitzer und Mieter in München und Umgebung");
+    updateMeta("llm:contact-action", "Anrufen: 0152 12274043 oder Termin online buchen");
+    
+    updateMeta("gpt:summary", "Sanitär & Heizung Notdienst München - AquaPro24 bietet 24/7 Klempner-Service, Heizungsreparatur und Badsanierung mit Festpreisgarantie.");
+    updateMeta("gpt:location", "München, Bayern");
+    updateMeta("gpt:category", "Home Services, Plumbing, HVAC");
+    
     if (aiSummary) {
       updateMeta("ai-summary", aiSummary);
       updateMeta("abstract", aiSummary);
