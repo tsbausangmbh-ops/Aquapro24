@@ -182,7 +182,7 @@ export default function BadPage() {
             <div className="max-w-2xl">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Sparkles className="w-3 h-3 mr-1" />
-                Badsanierung München
+                Traumbad vom Profi
               </Badge>
               
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -234,7 +234,7 @@ export default function BadPage() {
         <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Badsanierung München: Unsere Pakete</h2>
+              <h2 className="text-3xl font-bold mb-3">Unsere Pakete & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Transparente Preise, klare Leistungen. Wählen Sie das Paket, das zu Ihnen passt.
               </p>
@@ -386,7 +386,7 @@ export default function BadPage() {
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl font-bold mb-6">
-              Badsanierung München: Ihr Traumbad in besten Händen
+              Ihr Traumbad in besten Händen
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
