@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
@@ -6,7 +7,7 @@ import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
-import ServiceBooking from "@/components/ServiceBooking";
+import ServiceBooking, { type ServiceType } from "@/components/ServiceBooking";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +30,67 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
+
+const serviceOptions: { type: ServiceType; name: string; icon: typeof Droplets; description: string }[] = [
+  { type: "sanitaer", name: "Sanitär", icon: Droplets, description: "Rohre, Armaturen, Leckage" },
+  { type: "bad", name: "Badsanierung", icon: ShowerHead, description: "Komplettumbau & Renovierung" },
+  { type: "heizung", name: "Heizung", icon: Flame, description: "Reparatur, Wartung & Austausch" },
+  { type: "waermepumpe", name: "Wärmepumpe", icon: Thermometer, description: "Bis 70% BAFA-Förderung" },
+  { type: "haustechnik", name: "Haustechnik", icon: Wrench, description: "Gas, Wasser, Lüftung" }
+];
+
+function ServiceSelection() {
+  const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
+  
+  return (
+    <section className="py-6 lg:py-8 bg-muted/50">
+      <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+        <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          Ihr kostenloses Angebot in 10 Schritten
+        </h2>
+        <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+          Wählen Sie Ihr Gewerk – wir stellen Ihnen die passenden Fragen für ein maßgeschneidertes Angebot.
+        </p>
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
+          {serviceOptions.map((service) => (
+            <Card 
+              key={service.type}
+              className={`cursor-pointer transition-all hover-elevate ${
+                selectedService === service.type 
+                  ? "ring-2 ring-primary bg-primary/5" 
+                  : ""
+              }`}
+              onClick={() => setSelectedService(service.type)}
+              data-testid={`card-service-${service.type}`}
+            >
+              <CardContent className="p-3 text-center">
+                <service.icon className={`w-6 h-6 mx-auto mb-2 ${
+                  selectedService === service.type ? "text-primary" : "text-muted-foreground"
+                }`} />
+                <h3 className="font-semibold text-sm mb-1">{service.name}</h3>
+                <p className="text-xs text-muted-foreground">{service.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        
+        {selectedService ? (
+          <ServiceBooking 
+            serviceType={selectedService}
+            buttonText={`${serviceOptions.find(s => s.type === selectedService)?.name}-Angebot anfordern`}
+            buttonSize="lg"
+          />
+        ) : (
+          <p className="text-sm text-muted-foreground">
+            Bitte wählen Sie oben Ihr Gewerk aus, um fortzufahren.
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
 
 const services = [
   {
@@ -389,22 +451,7 @@ export default function Home() {
           title="Häufige Fragen"
         />
 
-        <section className="py-6 lg:py-8 bg-muted/50">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Ihr kostenloses Angebot in 10 Schritten
-            </h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
-            </p>
-            <ServiceBooking 
-              serviceType="sanitaer"
-              buttonText="Jetzt Angebot anfordern"
-              buttonSize="lg"
-            />
-          </div>
-        </section>
+        <ServiceSelection />
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
