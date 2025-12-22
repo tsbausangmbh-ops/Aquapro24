@@ -1,11 +1,10 @@
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route } from "wouter";
 import { lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Loader2, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 import ChristmasPopup from "@/components/ChristmasPopup";
 import NewYearPopup from "@/components/NewYearPopup";
 
@@ -106,38 +105,6 @@ function Router() {
   );
 }
 
-function FloatingBackButton() {
-  const [location] = useLocation();
-  
-  if (location === "/") return null;
-  
-  const handleBack = () => {
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      window.location.href = "/";
-    }
-  };
-  
-  return (
-    <div 
-      className="fixed left-4 z-[60]"
-      style={{ top: '50vh', transform: 'translateY(-50%)' }}
-    >
-      <Button
-        onClick={handleBack}
-        variant="secondary"
-        size="icon"
-        className="rounded-full shadow-xl bg-white dark:bg-slate-800 border-2 border-primary/30"
-        data-testid="button-back"
-        aria-label="Zurück"
-      >
-        <ArrowLeft className="h-5 w-5" />
-      </Button>
-    </div>
-  );
-}
-
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -145,7 +112,6 @@ function App() {
         <ChristmasPopup />
         <NewYearPopup />
         <Toaster />
-        <FloatingBackButton />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>
