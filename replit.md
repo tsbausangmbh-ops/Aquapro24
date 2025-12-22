@@ -109,13 +109,24 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 **Note:** Dynamic H3s from arrays (service cards, process steps, guarantees) remain unchanged as they are generated from data structures.
 
 ### Total SEO Coverage
-- 47 URLs in sitemap.xml (service pages, Munich districts, landing pages)
+- 65 URLs in sitemap.xml (service pages, Munich districts, landing pages)
 - 500+ longtail keywords across all pages (H1s, H2s, keyword batches)
 - **Keyword display: Sichtbar als stilisierte Tags** im Hero-Bereich jeder Seite
   - Max. 20 Keywords pro Seite für Lesbarkeit
   - Styling: halbtransparente weiße Pills auf dunklem Hero-Hintergrund
   - Ansprechendes Design mit abgerundeten Ecken und dezenten Rahmen
 - Complete Schema.org LocalBusiness markup with 25 Munich districts
+- Mobile-optimierte sitemap.xml mit `mobile:mobile` Tags für Notdienst/Booking-Seiten
+
+### Performance Optimizations (December 2025)
+- **Font Loading**: Reduziert von 25+ auf 2 Schriftarten (Inter, Plus Jakarta Sans)
+- **Async Font Loading**: Fonts via `preload` + `onload` für nicht-blockierendes Laden
+- **DNS Prefetch**: Vorverbindung zu fonts.googleapis.com/gstatic.com
+- **Hero Image Preload**: `fetchpriority="high"` für LCP-kritisches Bild
+- **Critical CSS Inline**: Inline-Styles für schnelleren First Paint
+- **Code Splitting**: React.lazy() für alle 40+ Seitenkomponenten
+- **Image Lazy Loading**: `loading="lazy"` + `decoding="async"` für alle Bilder außer Header-Logo
+- **Popup Lazy Loading**: Weihnachts-/Neujahrs-Popup Bilder verzögert geladen
 
 ## System Architecture
 

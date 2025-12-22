@@ -91,6 +91,8 @@ export default function Footer() {
                 src={footerLogo} 
                 alt="AquaPro24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
                 className="h-12 object-contain"
+                loading="lazy"
+                decoding="async"
                 data-testid="img-footer-logo"
               />
             </div>

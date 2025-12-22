@@ -123,6 +123,8 @@ export default function NewYearPopup() {
           src={fireworksBackground} 
           alt="Festliches Feuerwerk zur Neujahrsfeier" 
           className="w-full h-auto"
+          loading="lazy"
+          decoding="async"
         />
         
         <div 

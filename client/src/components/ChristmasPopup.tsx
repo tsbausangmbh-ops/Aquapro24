@@ -114,6 +114,8 @@ export default function ChristmasPopup() {
           src={christmasBackground} 
           alt="Festliche Weihnachtsbeleuchtung" 
           className="w-full h-auto"
+          loading="lazy"
+          decoding="async"
         />
         
         <div 
