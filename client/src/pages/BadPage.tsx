@@ -26,9 +26,9 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import galleryImage1 from "@assets/stock_images/modern_luxury_bathro_690308f0.jpg";
-import galleryImage2 from "@assets/stock_images/bathroom_renovation__48f0a68c.jpg";
-import galleryImage3 from "@assets/stock_images/accessible_barrier-f_dbf136be.jpg";
+import galleryImage1 from "@assets/stock_images/walk_in_shower_glass_fffa4418.jpg";
+import galleryImage2 from "@assets/stock_images/luxury_bathroom_free_36f8138d.jpg";
+import galleryImage3 from "@assets/stock_images/barrier_free_accessi_3ba82b02.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
@@ -247,14 +247,14 @@ export default function BadPage() {
               <div className="group relative overflow-hidden rounded-lg">
                 <img 
                   src={galleryImage1} 
-                  alt="Modernes Luxusbad mit bodengleicher Dusche" 
+                  alt="Walk-in Dusche mit Glaswand" 
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">Moderne Luxusbäder</h3>
+                  <h3 className="text-lg font-semibold text-white mb-1">Walk-in Duschen</h3>
                   <p className="text-white/80 text-sm">
-                    Hochwertige Materialien, zeitloses Design, bodengleiche Duschen
+                    Bodengleich, rahmenlos, großzügig – modernes Duschvergnügen
                   </p>
                 </div>
               </div>
@@ -262,14 +262,14 @@ export default function BadPage() {
               <div className="group relative overflow-hidden rounded-lg">
                 <img 
                   src={galleryImage2} 
-                  alt="Professionelle Badsanierung durch Fachhandwerker" 
+                  alt="Luxusbad mit freistehender Badewanne" 
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">Professionelle Umsetzung</h3>
+                  <h3 className="text-lg font-semibold text-white mb-1">Luxusbäder</h3>
                   <p className="text-white/80 text-sm">
-                    Erfahrene Handwerker, präzise Arbeit, termingerechte Fertigstellung
+                    Freistehende Wannen, edle Materialien, exklusives Design
                   </p>
                 </div>
               </div>
@@ -277,7 +277,7 @@ export default function BadPage() {
               <div className="group relative overflow-hidden rounded-lg">
                 <img 
                   src={galleryImage3} 
-                  alt="Barrierefreies Bad für Senioren" 
+                  alt="Barrierefreies Bad mit Haltegriffen" 
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
