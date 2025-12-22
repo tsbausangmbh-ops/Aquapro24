@@ -215,7 +215,7 @@ export default function FAQPage() {
                 20 Häufige Fragen
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
-                FAQ Sanitär & Heizung München – Preise & Tipps
+                FAQ - Sanitär & Heizung München
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Preise München</span>
