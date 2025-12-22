@@ -30,9 +30,9 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import galleryImage1 from "@assets/stock_images/walk-in_shower_frame_cbc18dc5.jpg";
-import galleryImage2 from "@assets/stock_images/elegant_bathroom_bat_6c196a81.jpg";
-import galleryImage3 from "@assets/stock_images/accessible_bathroom__53db66a8.jpg";
+import galleryImage1 from "@assets/stock_images/minimalist_white_bat_63ea775a.jpg";
+import galleryImage2 from "@assets/stock_images/minimalist_luxury_ba_d497e62b.jpg";
+import galleryImage3 from "@assets/stock_images/modern_accessible_ba_f2b18796.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
