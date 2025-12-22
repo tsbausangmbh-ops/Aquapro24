@@ -4,471 +4,555 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Homepage - Primary Landing -->
+
+  <!-- ================================================ -->
+  <!-- HOMEPAGE - Primary Landing Page -->
+  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://aquapro24.de/og-image.jpg</image:loc>
-      <image:title>AquaPro24 - Sanitär und Heizung München</image:title>
-      <image:caption>Ihr Partnernetzwerk für Sanitär, Heizung und Badsanierung in München seit 2005</image:caption>
+      <image:loc>https://aquapro24.de/images/hero-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner München - Sanitär und Heizung Notdienst 24/7</image:title>
+      <image:caption>AquaPro24 Partnernetzwerk für Sanitär, Heizung und Badsanierung in München seit 2005</image:caption>
     </image:image>
   </url>
-  
-  <!-- Core Service Pages -->
+
+  <!-- ================================================ -->
+  <!-- CORE SERVICE PAGES - Hauptdienstleistungen -->
+  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/sanitaer</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://aquapro24.de/sanitaer-muenchen.jpg</image:loc>
-      <image:title>Sanitär München - Klempner Notdienst 24/7</image:title>
+      <image:loc>https://aquapro24.de/images/sanitaer-klempner-muenchen.jpg</image:loc>
+      <image:title>Klempner München - Sanitär Notdienst 24/7</image:title>
+      <image:caption>Professionelle Sanitärinstallation und Reparatur in München - ab 81 Euro</image:caption>
     </image:image>
   </url>
-  
-  <url>
-    <loc>https://aquapro24.de/armaturen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/armaturen-muenchen.jpg</image:loc>
-      <image:title>Armaturen München - Wasserhahn wechseln und montieren</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/rohrreinigung</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/rohrreinigung-muenchen.jpg</image:loc>
-      <image:title>Rohrreinigung München - Abfluss verstopft Notdienst</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/warmwasser</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/warmwasser-muenchen.jpg</image:loc>
-      <image:title>Durchlauferhitzer und Boiler München</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/bad</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/badsanierung-muenchen.jpg</image:loc>
-      <image:title>Badsanierung München - Komplettumbau in 2-4 Wochen</image:title>
-    </image:image>
-  </url>
-  
+
   <url>
     <loc>https://aquapro24.de/heizung</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://aquapro24.de/heizung-muenchen.jpg</image:loc>
-      <image:title>Heizung München - 24/7 Notdienst und Wartung</image:title>
+      <image:loc>https://aquapro24.de/images/heizung-wartung-muenchen.jpg</image:loc>
+      <image:title>Heizung München - Notdienst, Wartung und Reparatur 24/7</image:title>
+      <image:caption>Heizungsinstallation Viessmann, Vaillant, Buderus in München - ab 92 Euro</image:caption>
     </image:image>
   </url>
-  
+
+  <url>
+    <loc>https://aquapro24.de/bad</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
+      <image:title>Badsanierung München - Komplettumbau vom Profi</image:title>
+      <image:caption>Badsanierung in 2-4 Wochen mit Grohe und Hansgrohe Armaturen</image:caption>
+    </image:image>
+  </url>
+
   <url>
     <loc>https://aquapro24.de/waermepumpe</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
-      <image:loc>https://aquapro24.de/waermepumpe-muenchen.jpg</image:loc>
-      <image:title>Wärmepumpe München - bis 70% BAFA Förderung</image:title>
+      <image:loc>https://aquapro24.de/images/waermepumpe-installation-muenchen.jpg</image:loc>
+      <image:title>Wärmepumpe München - bis 70% BAFA Förderung 2025</image:title>
+      <image:caption>Wärmepumpen von Viessmann, Vaillant, Wolf mit staatlicher Förderung</image:caption>
     </image:image>
   </url>
-  
+
+  <url>
+    <loc>https://aquapro24.de/rohrreinigung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/rohrreinigung-abfluss-muenchen.jpg</image:loc>
+      <image:title>Rohrreinigung München - Abfluss verstopft Notdienst 24/7</image:title>
+      <image:caption>Professionelle Rohrreinigung und Kanalreinigung in München - ab 81 Euro</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/armaturen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/armaturen-wasserhahn-muenchen.jpg</image:loc>
+      <image:title>Wasserhahn wechseln München - Armaturen Montage und Reparatur</image:title>
+      <image:caption>Grohe und Hansgrohe Armaturen Montage in München - ab 81 Euro</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/warmwasser</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/durchlauferhitzer-boiler-muenchen.jpg</image:loc>
+      <image:title>Durchlauferhitzer München - Boiler Reparatur und Installation</image:title>
+      <image:caption>Warmwasser-Systeme von Vaillant und Stiebel Eltron in München</image:caption>
+    </image:image>
+  </url>
+
   <url>
     <loc>https://aquapro24.de/haustechnik</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://aquapro24.de/haustechnik-muenchen.jpg</image:loc>
-      <image:title>Haustechnik München - Gasinstallation und Smart Home</image:title>
+      <image:loc>https://aquapro24.de/images/haustechnik-gas-wasser-muenchen.jpg</image:loc>
+      <image:title>Haustechnik München - Gas, Wasser, Lüftung komplett</image:title>
+      <image:caption>Komplette Haustechnik-Lösungen für München und Umgebung</image:caption>
     </image:image>
   </url>
-  
-  <!-- Booking Page -->
-  <url>
-    <loc>https://aquapro24.de/termin</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  
-  <!-- Munich District Pages - Geo-Targeted SEO -->
-  <url>
-    <loc>https://aquapro24.de/schwabing</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/bogenhausen</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/sendling</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/pasing</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/maxvorstadt</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/haidhausen</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/neuhausen</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/trudering</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/laim</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/giesing</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/moosach</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/milbertshofen</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <!-- Munich Region Pages -->
-  <url>
-    <loc>https://aquapro24.de/muenchen-nord</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen-sued</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen-west</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen-ost</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/nymphenburg</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/perlach</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/solln</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/hadern</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/allach</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/aubing</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/feldmoching</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/thalkirchen</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/ramersdorf</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/berg-am-laim</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/schwanthalerhoehe</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/au</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/lehel</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/freimann</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <!-- Service + Location Landing Pages -->
-  <url>
-    <loc>https://aquapro24.de/sanitaer-muenchen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/heizung-muenchen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/badsanierung-muenchen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/waermepumpe-muenchen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/fussbodenheizung-muenchen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/notdienst-muenchen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
+
+  <!-- ================================================ -->
+  <!-- 24H NOTDIENST PAGES - Höchste Priorität -->
+  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/sanitaer-notdienst-24</loc>
     <lastmod>2025-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/sanitaer-notdienst-24h-muenchen.jpg</image:loc>
+      <image:title>Sanitär Notdienst 24h München - Klempner Soforthilfe rund um die Uhr</image:title>
+      <image:caption>24 Stunden Sanitär Notdienst bei Rohrbruch und Wasserschaden in München</image:caption>
+    </image:image>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/heizung-notdienst-24</loc>
     <lastmod>2025-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/heizung-notdienst-24h-muenchen.jpg</image:loc>
+      <image:title>Heizung Notdienst 24h München - Heizungsreparatur Soforthilfe</image:title>
+      <image:caption>24 Stunden Heizung Notdienst bei Heizungsausfall in München</image:caption>
+    </image:image>
   </url>
-  
-  <!-- Förderung Pages -->
+
+  <url>
+    <loc>https://aquapro24.de/notdienst-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/notdienst-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Notdienst Sanitär und Heizung München - 24h Soforthilfe</image:title>
+      <image:caption>Schnelle Hilfe bei Rohrbruch, Wasserschaden und Heizungsausfall</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ================================================ -->
+  <!-- LANDING PAGES - Service + Location -->
+  <!-- ================================================ -->
+  <url>
+    <loc>https://aquapro24.de/sanitaer-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/klempner-installateur-muenchen.jpg</image:loc>
+      <image:title>Sanitär München - Klempner und Installateur Notdienst</image:title>
+      <image:caption>Ihr Sanitär-Partner in München für Reparatur und Neuinstallation</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/heizung-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/heizungsinstallateur-muenchen.jpg</image:loc>
+      <image:title>Heizung München - Reparatur, Wartung und Modernisierung</image:title>
+      <image:caption>Heizungsfachbetrieb in München für alle Heizungsarbeiten</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/badsanierung-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
+      <image:title>Badsanierung München - Komplettumbau aus einer Hand</image:title>
+      <image:caption>Professionelle Badsanierung in München - alles aus einer Hand</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/waermepumpe-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/waermepumpe-foerderung-muenchen.jpg</image:loc>
+      <image:title>Wärmepumpe München - bis 70% Förderung sichern</image:title>
+      <image:caption>Wärmepumpen-Installation mit BAFA Förderung in München</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/fussbodenheizung-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/fussbodenheizung-installation-muenchen.jpg</image:loc>
+      <image:title>Fußbodenheizung München - Installation und Reparatur Profi</image:title>
+      <image:caption>Fußbodenheizung nachrüsten und reparieren in München</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ================================================ -->
+  <!-- FÖRDERUNG PAGES - Staatliche Zuschüsse -->
+  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/foerderung</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/bafa-kfw-foerderung-heizung.jpg</image:loc>
+      <image:title>Förderung Heizung München - BAFA, KfW und Steuerbonus 2025</image:title>
+      <image:caption>Bis zu 70% staatliche Förderung für Wärmepumpen und Heizungstausch</image:caption>
+    </image:image>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/foerderantrag</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/foerderantrag-heizung</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/foerderantrag-heizung-service.jpg</image:loc>
+      <image:title>Förderantrag Heizung München - Kostenloser Antragsservice</image:title>
+      <image:caption>Wir übernehmen Ihren BAFA Förderantrag komplett kostenlos</image:caption>
+    </image:image>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/foerderrechner</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-  
-  <!-- Informational Pages -->
+
+  <!-- ================================================ -->
+  <!-- BOOKING AND CONTACT PAGES -->
+  <!-- ================================================ -->
+  <url>
+    <loc>https://aquapro24.de/termin</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
   <url>
     <loc>https://aquapro24.de/kontakt</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-  
+
+  <!-- ================================================ -->
+  <!-- INFORMATIONAL PAGES -->
+  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/ueber-uns</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/faq</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/ratgeber</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://aquapro24.de/images/ratgeber-sanitaer-heizung.jpg</image:loc>
+      <image:title>Ratgeber München - Expertentipps Sanitär und Heizung</image:title>
+      <image:caption>Praktische Tipps zu Wasserschaden, Heizungswartung und Badsanierung</image:caption>
+    </image:image>
   </url>
-  
-  <!-- Legal Pages -->
+
+  <!-- ================================================ -->
+  <!-- MUNICH DISTRICT PAGES - Geo-Targeted SEO -->
+  <!-- Premium Districts (höhere Kaufkraft) -->
+  <!-- ================================================ -->
+  <url>
+    <loc>https://aquapro24.de/schwabing</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/bogenhausen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/maxvorstadt</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/haidhausen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/nymphenburg</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/lehel</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/solln</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Standard Districts -->
+  <url>
+    <loc>https://aquapro24.de/sendling</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/pasing</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/neuhausen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/trudering</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/laim</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/giesing</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/moosach</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/milbertshofen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/perlach</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/hadern</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/allach</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/aubing</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/feldmoching</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/thalkirchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/ramersdorf</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/berg-am-laim</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/schwanthalerhoehe</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/au</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/freimann</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Munich Region Pages -->
+  <url>
+    <loc>https://aquapro24.de/muenchen-nord</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/muenchen-sued</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/muenchen-west</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/muenchen-ost</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!-- LEGAL PAGES - Niedrige Priorität -->
+  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/impressum</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/datenschutz</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/agb</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
-  
+
   <url>
     <loc>https://aquapro24.de/cookie-richtlinie</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>
-  
+
 </urlset>
