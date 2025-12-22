@@ -38,7 +38,7 @@ import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_
 import waermepumpeImage from "@assets/generated_images/vaillant_heat_pump_outdoor_unit.png";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import galleryImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
-import galleryImage2 from "@assets/stock_images/luxury_grey_bathroom_90641334.jpg";
+import galleryImage2 from "@assets/generated_images/luxury_neutral_modern_bathroom.png";
 import galleryImage3 from "@assets/stock_images/vaillant_arotherm_he_82dc39c0.jpg";
 import galleryImage4 from "@assets/stock_images/happy_homeowner_fami_71ca925e.jpg";
 
