@@ -35,7 +35,7 @@ import rohrreinigungImage from "@assets/stock_images/emergency_plumber_fi_2fcdef
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import heizungImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import warmwasserImage from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
-import waermepumpeImage from "@assets/stock_images/heat_pump_installati_53374252.jpg";
+import waermepumpeImage from "@assets/stock_images/vaillant_arotherm_he_56fe6f6f.jpg";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import galleryImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
 import galleryImage2 from "@assets/stock_images/luxury_grey_bathroom_90641334.jpg";
