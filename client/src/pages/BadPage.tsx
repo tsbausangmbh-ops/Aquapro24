@@ -540,13 +540,7 @@ export default function BadPage() {
                   </CardContent>
                 </Card>
                 
-                <Button className="w-full" size="lg" asChild>
-                  <a href="tel:+4915212274043">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Förderberatung anfordern
-                  </a>
-                </Button>
-              </div>
+                              </div>
             </div>
           </div>
         </section>
