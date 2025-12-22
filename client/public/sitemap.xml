@@ -555,4 +555,11 @@
     <priority>0.20</priority>
   </url>
 
+  <url>
+    <loc>https://aquapro24.de/barrierefreiheit</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
 </urlset>
