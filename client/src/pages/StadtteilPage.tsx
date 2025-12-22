@@ -559,6 +559,9 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         description={`Sanitär & Heizung in ${data.name} München: 24h Notdienst, schnelle Hilfe & feste Preise vom Fachbetrieb.`}
         canonical={`https://aquapro24.de/${data.slug}`}
         keywords={`Installateur ${data.name}, Sanitär ${data.name}, Heizung ${data.name}, Klempner ${data.name}, Notdienst ${data.name}, ${data.name} München`}
+        stadttteil={data.name}
+        speakable={{ cssSelector: ["h1", ".text-white\\/90", "[data-testid='button-call-stadtteil-hero']"] }}
+        aiSummary={`AquaPro 24 bietet Sanitär- und Heizungsservice in München ${data.name}. 24/7 Notdienst, schnelle Anfahrt in ${data.anfahrt}, Festpreisgarantie.`}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Einsatzgebiete", url: "https://aquapro24.de/einsatzgebiete" },

@@ -35,6 +35,11 @@ interface AggregateRatingSchema {
   worstRating?: number;
 }
 
+interface SpeakableContent {
+  cssSelector?: string[];
+  xpath?: string[];
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -44,6 +49,8 @@ interface SEOProps {
   structuredData?: object;
   breadcrumbs?: BreadcrumbItem[];
   aiSummary?: string;
+  speakable?: SpeakableContent;
+  stadttteil?: string;
   serviceSchema?: {
     name: string;
     description: string;
@@ -304,6 +311,8 @@ export default function SEO({
   structuredData,
   breadcrumbs,
   aiSummary,
+  speakable,
+  stadttteil,
   serviceSchema,
   faqSchema
 }: SEOProps) {
@@ -536,6 +545,52 @@ export default function SEO({
       document.head.appendChild(faqScript);
     }
 
+    if (speakable) {
+      const speakableSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": canonical || "https://aquapro24.de",
+        "name": title,
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          ...(speakable.cssSelector && { "cssSelector": speakable.cssSelector }),
+          ...(speakable.xpath && { "xpath": speakable.xpath })
+        },
+        "inLanguage": "de-DE",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "AquaPro 24 München",
+          "url": "https://aquapro24.de"
+        }
+      };
+      const speakableScript = document.createElement("script");
+      speakableScript.type = "application/ld+json";
+      speakableScript.textContent = JSON.stringify(speakableSchema);
+      document.head.appendChild(speakableScript);
+    }
+
+    if (stadttteil) {
+      const stadtteilSchema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": `https://aquapro24.de/${stadttteil.toLowerCase()}/#localbusiness`,
+        "name": `AquaPro 24 ${stadttteil}`,
+        "description": `Sanitär, Heizung und Notdienst in München ${stadttteil}. 24/7 erreichbar, schnelle Anfahrt.`,
+        "parentOrganization": { "@id": "https://aquapro24.de/#localbusiness" },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": stadttteil,
+          "containedInPlace": { "@type": "City", "name": "München" }
+        },
+        "telephone": "+49-152-12274043",
+        "url": `https://aquapro24.de/${stadttteil.toLowerCase()}`
+      };
+      const stadtteilScript = document.createElement("script");
+      stadtteilScript.type = "application/ld+json";
+      stadtteilScript.textContent = JSON.stringify(stadtteilSchema);
+      document.head.appendChild(stadtteilScript);
+    }
+
     if (structuredData) {
       const customScript = document.createElement("script");
       customScript.type = "application/ld+json";
@@ -547,7 +602,7 @@ export default function SEO({
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => script.remove());
     };
-  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, serviceSchema, faqSchema]);
+  }, [title, description, canonical, keywords, ogImage, structuredData, breadcrumbs, aiSummary, speakable, stadttteil, serviceSchema, faqSchema]);
 
   return null;
 }
