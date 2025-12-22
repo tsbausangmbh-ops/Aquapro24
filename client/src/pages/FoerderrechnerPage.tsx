@@ -273,11 +273,11 @@ export default function FoerderrechnerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderrechner München | Heizung Förderung berechnen"
-        description="Förderrechner München: BAFA & KfW Förderung für Heizung & Sanierung einfach berechnen – kostenlos & unverbindlich."
+        title="Förderrechner München | KfW 458, BAFA & Energieberater 2025"
+        description="Förderrechner München Stand 12/2025: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen."
         canonical="https://aquapro24.de/foerderrechner"
-        keywords="Förderrechner München, BAFA Förderung berechnen, KfW Förderrechner, Energieberater Förderung, Heizungsförderung Rechner, Wärmepumpe Förderung, iSFP Förderung, Tilgungszuschuss berechnen, BEG Förderung Rechner, Sanierungsförderung München"
-        aiSummary="AquaPro 24 Förderrechner München: BAFA Heizungsförderung bis 70%, KfW Kredit mit Tilgungszuschuss, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 0152 12274043"
+        keywords="Förderrechner München, KfW 458 Heizungsförderung, BAFA Dämmung, KfW 358 Kredit, KfW 455-B Barrierefreies Bad, Energieberater Förderung, Wärmepumpe 70% Förderung, iSFP Sanierungsfahrplan, BEG Förderung 2025"
+        aiSummary="AquaPro 24 Förderrechner München Stand 12/2025: KfW 458 Heizungsförderung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, KfW 358/359 Ergänzungskredit, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
@@ -285,8 +285,8 @@ export default function FoerderrechnerPage() {
         ]}
         faqSchema={[
           {
-            question: "Was ist der Unterschied zwischen BAFA und KfW?",
-            answer: "BAFA bietet direkte Zuschüsse für Heizungstausch (bis 70%). KfW bietet zinsgünstige Kredite mit Tilgungszuschuss für umfassende Sanierungen."
+            question: "Was ist der Unterschied zwischen BAFA und KfW bei der Heizungsförderung 2025?",
+            answer: "Seit 2024 ist die KfW (Programm 458/459) für Heizungsförderung zuständig – bis 70% Zuschuss. BAFA fördert nur noch Dämmung, Fenster und Heizungsoptimierung mit 15-20%."
           },
           {
             question: "Wird der Energieberater gefördert?",
@@ -310,21 +310,21 @@ export default function FoerderrechnerPage() {
                 Förderrechner 2025
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-                Förderrechner München: BAFA, KfW & Energieberater berechnen
+                Förderrechner München – KfW 458, BAFA & Energieberater 2025
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Förderung berechnen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Kredit Rechner</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW 458 Heizungsförderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW 358 Kredit Rechner</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Dämmung Förderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW 455-B Barrierefreies Bad</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieberater Kosten</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">iSFP Förderung</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Tilgungszuschuss</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsförderung 70%</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BEG Förderung</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanierungsförderung</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsförderung bis 70%</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">iSFP Sanierungsfahrplan</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BEG Förderung 2025</span>
               </div>
               <p className="text-lg text-white/90 mb-4 mt-4">
-                Alle Förderprogramme im Überblick: BAFA-Zuschuss, KfW-Kredit und Energieberater. 
-                Berechnen Sie Ihre individuelle Förderung für jedes Programm.
+                Stand Dezember 2025: KfW 458 für Heizung (bis 70%), BAFA für Dämmung (15-20%), KfW 455-B für barrierefreies Bad (12,5%). 
+                Berechnen Sie Ihre individuelle Förderung.
               </p>
             </div>
           </div>
@@ -334,22 +334,27 @@ export default function FoerderrechnerPage() {
 
         <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <Tabs defaultValue="bafa" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+            <Tabs defaultValue="kfw458" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 md:grid-cols-5 mb-8">
+                <TabsTrigger value="kfw458" className="flex items-center gap-2" data-testid="tab-kfw458">
+                  <Flame className="w-4 h-4" />
+                  <span className="hidden sm:inline">KfW 458 Heizung</span>
+                  <span className="sm:hidden">Heizung</span>
+                </TabsTrigger>
                 <TabsTrigger value="bafa" className="flex items-center gap-2" data-testid="tab-bafa">
                   <Leaf className="w-4 h-4" />
-                  <span className="hidden sm:inline">BAFA Förderung</span>
+                  <span className="hidden sm:inline">BAFA Dämmung</span>
                   <span className="sm:hidden">BAFA</span>
-                </TabsTrigger>
-                <TabsTrigger value="kfw" className="flex items-center gap-2" data-testid="tab-kfw">
-                  <Building2 className="w-4 h-4" />
-                  <span className="hidden sm:inline">KfW Kredit</span>
-                  <span className="sm:hidden">KfW</span>
                 </TabsTrigger>
                 <TabsTrigger value="barrierefrei" className="flex items-center gap-2" data-testid="tab-barrierefrei">
                   <Accessibility className="w-4 h-4" />
-                  <span className="hidden sm:inline">Barrierefreies Bad</span>
+                  <span className="hidden sm:inline">KfW 455-B Bad</span>
                   <span className="sm:hidden">Bad</span>
+                </TabsTrigger>
+                <TabsTrigger value="kfw" className="flex items-center gap-2" data-testid="tab-kfw">
+                  <Building2 className="w-4 h-4" />
+                  <span className="hidden sm:inline">KfW 358 Kredit</span>
+                  <span className="sm:hidden">Kredit</span>
                 </TabsTrigger>
                 <TabsTrigger value="energieberater" className="flex items-center gap-2" data-testid="tab-energieberater">
                   <Users className="w-4 h-4" />
@@ -358,22 +363,25 @@ export default function FoerderrechnerPage() {
                 </TabsTrigger>
               </TabsList>
 
-              <TabsContent value="bafa">
+              <TabsContent value="kfw458">
                 <div className="grid lg:grid-cols-2 gap-8">
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <Leaf className="w-5 h-5 text-green-600" />
-                        BAFA Rechner München: Heizungsförderung berechnen
+                        <Flame className="w-5 h-5 text-green-600" />
+                        KfW 458 Heizungsförderung München (Stand 12/2025)
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
+                      <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-md text-sm">
+                        <strong>Hinweis:</strong> Seit 2024 ist die KfW (nicht mehr BAFA) für Heizungsförderung zuständig.
+                      </div>
                       <div>
                         <Label className="text-base font-semibold mb-3 block">
-                          Welche Maßnahmen planen Sie? (Mehrfachauswahl möglich)
+                          Welche Heizung planen Sie? (Mehrfachauswahl möglich)
                         </Label>
                         <p className="text-xs text-muted-foreground mb-3">
-                          Wählen Sie einen Hauptwärmeerzeuger und optional Optimierungsmaßnahmen
+                          Wählen Sie Wärmeerzeuger und optional Optimierungsmaßnahmen
                         </p>
                         <div className="space-y-2">
                           <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider pt-2">Hauptwärmeerzeuger</p>
@@ -559,17 +567,17 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Euro className="w-5 h-5 text-green-600" />
-                        BAFA Ergebnis München: Ihr Zuschuss
+                        KfW 458 Ergebnis: Ihr Heizungs-Zuschuss
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
                       <div className="text-center py-6 border-b">
-                        <p className="text-sm text-muted-foreground mb-2">Ihr BAFA-Zuschuss</p>
-                        <p className="text-5xl font-bold text-green-600" data-testid="text-bafa-betrag">
+                        <p className="text-sm text-muted-foreground mb-2">Ihr KfW-Zuschuss</p>
+                        <p className="text-5xl font-bold text-green-600" data-testid="text-kfw458-betrag">
                           {bafaErgebnis.foerderBetrag.toLocaleString('de-DE')} EUR
                         </p>
                         <p className="text-lg text-muted-foreground mt-2">
-                          = {bafaErgebnis.gesamtProzent}% der förderfähigen Kosten
+                          = {bafaErgebnis.gesamtProzent}% der förderfähigen Kosten (max. 30.000€)
                         </p>
                       </div>
 
@@ -577,7 +585,7 @@ export default function FoerderrechnerPage() {
                         <div className="flex justify-between items-center">
                           <span className="flex items-center gap-2">
                             <CheckCircle2 className="w-4 h-4 text-green-500" />
-                            Grundförderung
+                            Basisförderung
                           </span>
                           <Badge variant="secondary">{bafaErgebnis.grundfoerderung}%</Badge>
                         </div>
@@ -625,19 +633,134 @@ export default function FoerderrechnerPage() {
                           <span className="font-medium">{investition[0].toLocaleString('de-DE')} EUR</span>
                         </div>
                         <div className="flex justify-between text-green-600">
-                          <span>BAFA-Zuschuss:</span>
+                          <span>KfW 458 Zuschuss:</span>
                           <span className="font-medium">- {bafaErgebnis.foerderBetrag.toLocaleString('de-DE')} EUR</span>
                         </div>
                         <div className="flex justify-between font-bold text-lg pt-2 border-t">
                           <span>Ihr Eigenanteil:</span>
-                          <span data-testid="text-bafa-eigenanteil">{bafaErgebnis.eigenanteil.toLocaleString('de-DE')} EUR</span>
+                          <span data-testid="text-kfw458-eigenanteil">{bafaErgebnis.eigenanteil.toLocaleString('de-DE')} EUR</span>
                         </div>
                       </div>
 
+                      <div className="flex items-start gap-2 text-sm text-muted-foreground bg-muted/50 p-3 rounded-md">
+                        <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                        <p>
+                          Antrag VOR Baubeginn bei der KfW stellen. Zusätzlich KfW 358/359 Kredit möglich.
+                        </p>
+                      </div>
+
                       <Button size="lg" className="w-full" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-bafa">
+                        <a href="tel:+4915212274043" data-testid="button-call-kfw458">
                           <Phone className="w-4 h-4 mr-2" />
-                          Jetzt BAFA-Antrag stellen
+                          KfW 458 Beratung anfordern
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="bafa">
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Leaf className="w-5 h-5 text-orange-600" />
+                        BAFA Einzelmaßnahmen München (Stand 12/2025)
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-md text-sm">
+                        <strong>Hinweis:</strong> BAFA fördert Dämmung, Fenster, Lüftung und Heizungsoptimierung – NICHT Heizungstausch (→ KfW 458).
+                      </div>
+                      <div>
+                        <Label className="text-base font-semibold mb-3 block">
+                          Welche Maßnahmen planen Sie?
+                        </Label>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-3 p-3 border rounded-md bg-orange-500/10 border-orange-500/50">
+                            <CheckCircle2 className="w-4 h-4 text-orange-500" />
+                            <span className="flex-1">Fassadendämmung / Dachdämmung</span>
+                            <Badge variant="secondary" className="text-xs">15-20%</Badge>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-md bg-orange-500/10 border-orange-500/50">
+                            <CheckCircle2 className="w-4 h-4 text-orange-500" />
+                            <span className="flex-1">Fenster & Außentüren</span>
+                            <Badge variant="secondary" className="text-xs">15-20%</Badge>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-md bg-orange-500/10 border-orange-500/50">
+                            <CheckCircle2 className="w-4 h-4 text-orange-500" />
+                            <span className="flex-1">Lüftungsanlage mit WRG</span>
+                            <Badge variant="secondary" className="text-xs">15-20%</Badge>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-md bg-orange-500/10 border-orange-500/50">
+                            <CheckCircle2 className="w-4 h-4 text-orange-500" />
+                            <span className="flex-1">Heizungsoptimierung (hydr. Abgleich)</span>
+                            <Badge variant="secondary" className="text-xs">15-20%</Badge>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-md bg-purple-500/10 border-purple-500/50">
+                            <CheckCircle2 className="w-4 h-4 text-purple-500" />
+                            <span className="flex-1">Emissionsminderung Biomasse</span>
+                            <Badge variant="secondary" className="text-xs">50%</Badge>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-md">
+                        <p className="text-sm font-medium text-green-700 dark:text-green-300">
+                          +5% Bonus mit iSFP (Sanierungsfahrplan)
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-orange-500/5 border-orange-500/20">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Euro className="w-5 h-5 text-orange-600" />
+                        BAFA Fördersätze 2025
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="space-y-4">
+                        <div className="p-4 bg-background rounded-lg">
+                          <h4 className="font-semibold mb-2">Gebäudehülle (Dämmung, Fenster)</h4>
+                          <div className="flex justify-between items-center">
+                            <span>Basisförderung</span>
+                            <Badge className="bg-orange-500">15%</Badge>
+                          </div>
+                          <div className="flex justify-between items-center mt-2">
+                            <span>Mit iSFP-Bonus</span>
+                            <Badge className="bg-green-500">20%</Badge>
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-2">Max. 30.000€ pro Wohneinheit</p>
+                        </div>
+                        
+                        <div className="p-4 bg-background rounded-lg">
+                          <h4 className="font-semibold mb-2">Anlagentechnik (Lüftung)</h4>
+                          <div className="flex justify-between items-center">
+                            <span>Basisförderung</span>
+                            <Badge className="bg-orange-500">15%</Badge>
+                          </div>
+                          <div className="flex justify-between items-center mt-2">
+                            <span>Mit iSFP-Bonus</span>
+                            <Badge className="bg-green-500">20%</Badge>
+                          </div>
+                        </div>
+
+                        <div className="p-4 bg-background rounded-lg">
+                          <h4 className="font-semibold mb-2">Heizungsoptimierung</h4>
+                          <div className="flex justify-between items-center">
+                            <span>Hydraulischer Abgleich</span>
+                            <Badge className="bg-orange-500">15%</Badge>
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-2">Pumpentausch, Thermostatventile</p>
+                        </div>
+                      </div>
+
+                      <Button size="lg" className="w-full bg-orange-600 hover:bg-orange-700" asChild>
+                        <a href="tel:+4915212274043" data-testid="button-call-bafa-daemmung">
+                          <Phone className="w-4 h-4 mr-2" />
+                          BAFA Beratung anfordern
                         </a>
                       </Button>
                     </CardContent>
@@ -651,10 +774,13 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Building2 className="w-5 h-5 text-blue-600" />
-                        KfW Rechner München: Kredit & Tilgungszuschuss
+                        KfW 358/359 Ergänzungskredit München (Stand 12/2025)
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-md text-sm">
+                        <strong>Hinweis:</strong> Der Ergänzungskredit ist nur möglich nach KfW 458/459 Zuschuss-Zusage.
+                      </div>
                       <div>
                         <Label className="text-base font-semibold mb-3 block">
                           Welche Maßnahme planen Sie?
@@ -729,7 +855,7 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <CreditCard className="w-5 h-5 text-blue-600" />
-                        KfW Ergebnis München: Ihre Konditionen
+                        KfW 358/359 Ergebnis: Ihr Ergänzungskredit
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
