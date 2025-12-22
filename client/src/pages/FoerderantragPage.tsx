@@ -17,8 +17,16 @@ import {
   Upload,
   ClipboardCheck,
   Mail,
-  AlertCircle,
-  Euro
+  AlertTriangle,
+  Euro,
+  Shield,
+  Users,
+  Building2,
+  Home,
+  Leaf,
+  Download,
+  Eye,
+  Zap
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
@@ -27,71 +35,155 @@ export default function FoerderantragPage() {
   const antragSchritte = [
     {
       nummer: 1,
-      title: "Beratung & Planung",
-      description: "Wir prüfen Ihre Förderfähigkeit und erstellen ein maßgeschneidertes Konzept.",
-      icon: ClipboardCheck,
-      dauer: "1-2 Tage"
+      title: "Kostenlose Erstberatung",
+      description: "Wir analysieren Ihr Gebäude und prüfen, welche Förderung für Sie optimal ist.",
+      icon: Phone,
+      dauer: "30 Min",
+      details: ["Gebäudeanalyse", "Förderoption prüfen", "Kosteneinschätzung"]
     },
     {
       nummer: 2,
-      title: "Unterlagen sammeln",
-      description: "Wir helfen Ihnen bei der Zusammenstellung aller benötigten Dokumente.",
+      title: "Angebot & Unterlagen",
+      description: "Sie erhalten ein Festpreisangebot. Wir sammeln alle benötigten Dokumente.",
       icon: FileText,
-      dauer: "2-3 Tage"
+      dauer: "2-3 Tage",
+      details: ["Festpreisangebot", "Unterlagenliste", "Vollmacht unterschreiben"]
     },
     {
       nummer: 3,
-      title: "Antrag einreichen",
-      description: "Wir übernehmen die komplette Antragstellung bei BAFA oder KfW.",
+      title: "Antrag bei BAFA/KfW",
+      description: "Wir reichen den vollständigen Antrag bei BAFA oder KfW ein.",
       icon: Upload,
-      dauer: "1 Tag"
+      dauer: "1 Tag",
+      details: ["Online-Antrag", "Alle Dokumente hochladen", "Bestätigung erhalten"]
     },
     {
       nummer: 4,
       title: "Bewilligung abwarten",
-      description: "Nach Bewilligung können die Arbeiten beginnen.",
+      description: "Nach Eingang prüft die BAFA Ihren Antrag. Wir informieren Sie über den Status.",
       icon: Clock,
-      dauer: "4-8 Wochen"
+      dauer: "4-8 Wochen",
+      details: ["Statusüberwachung", "Rückfragen klären", "Förderzusage erhalten"]
+    },
+    {
+      nummer: 5,
+      title: "Installation",
+      description: "Nach Bewilligung beginnen wir mit der fachgerechten Installation.",
+      icon: Home,
+      dauer: "1-3 Tage",
+      details: ["Terminabsprache", "Fachgerechte Montage", "Einweisung"]
+    },
+    {
+      nummer: 6,
+      title: "Verwendungsnachweis",
+      description: "Wir reichen den Verwendungsnachweis ein. Die Förderung wird ausgezahlt.",
+      icon: Euro,
+      dauer: "2-4 Wochen",
+      details: ["Nachweis einreichen", "Auszahlung erhalten", "Projekt abgeschlossen"]
     }
   ];
 
   const benoetigteUnterlagen = [
-    "Personalausweis oder Reisepass",
-    "Grundbuchauszug (nicht älter als 3 Monate)",
-    "Einkommensteuerbescheid (für Einkommensbonus)",
-    "Fotos der alten Heizungsanlage",
-    "Energieausweis des Gebäudes (falls vorhanden)",
-    "Angebot des Fachbetriebs (von uns)",
-    "Vollmacht für Antragstellung (Muster von uns)"
+    {
+      kategorie: "Persönliche Dokumente",
+      icon: Users,
+      dokumente: [
+        { name: "Personalausweis/Reisepass", info: "Kopie von Vorder- und Rückseite" },
+        { name: "Grundbuchauszug", info: "Nicht älter als 3 Monate" },
+        { name: "Einkommensteuerbescheid", info: "Für Einkommensbonus erforderlich" }
+      ]
+    },
+    {
+      kategorie: "Gebäudedokumente",
+      icon: Building2,
+      dokumente: [
+        { name: "Energieausweis", info: "Falls vorhanden (nicht zwingend)" },
+        { name: "Fotos alte Heizung", info: "Typenschild und Gesamtansicht" },
+        { name: "Gebäudegrundriss", info: "Zur Dimensionierung der Anlage" }
+      ]
+    },
+    {
+      kategorie: "Von uns erhalten Sie",
+      icon: FileText,
+      dokumente: [
+        { name: "Festpreisangebot", info: "Mit allen förderfähigen Kosten" },
+        { name: "Technische Projektbeschreibung", info: "Für den BAFA-Antrag" },
+        { name: "Vollmacht zur Antragstellung", info: "Unterschrift erforderlich" }
+      ]
+    }
   ];
 
   const haeufigeFehler = [
     {
-      fehler: "Antrag nach Auftragserteilung",
-      loesung: "BAFA-Antrag muss VOR Vertragsabschluss gestellt werden"
+      fehler: "Antrag nach Vertragsabschluss",
+      problem: "Die Förderung wird abgelehnt, wenn der Auftrag vor Antragstellung erteilt wurde.",
+      loesung: "Wir stellen den Antrag immer vor Vertragsabschluss für Sie.",
+      icon: AlertTriangle,
+      schweregrad: "kritisch"
     },
     {
-      fehler: "Fehlende Dokumente",
-      loesung: "Wir erstellen eine vollständige Checkliste für Sie"
+      fehler: "Unvollständige Unterlagen",
+      problem: "Fehlende Dokumente verzögern die Bearbeitung um mehrere Wochen.",
+      loesung: "Wir erstellen eine Checkliste und prüfen alles vor Einreichung.",
+      icon: FileText,
+      schweregrad: "mittel"
     },
     {
-      fehler: "Falsche Förderung gewählt",
-      loesung: "Wir beraten, ob BAFA, KfW oder Steuerbonus optimal ist"
+      fehler: "Falsche Förderoption gewählt",
+      problem: "BAFA, KfW oder Steuerbonus – nicht jede Option ist optimal.",
+      loesung: "Wir berechnen, welche Förderung für Sie am meisten bringt.",
+      icon: Euro,
+      schweregrad: "mittel"
     },
     {
-      fehler: "Fristen verpasst",
-      loesung: "Wir überwachen alle Fristen für Sie"
+      fehler: "Fristen versäumt",
+      problem: "Nach Bewilligung haben Sie 36 Monate Zeit zur Umsetzung.",
+      loesung: "Wir überwachen alle Fristen und erinnern Sie rechtzeitig.",
+      icon: Clock,
+      schweregrad: "mittel"
     }
+  ];
+
+  const serviceVorteile = [
+    {
+      icon: Euro,
+      title: "Komplett kostenlos",
+      description: "Unser Förderantrags-Service ist bei Beauftragung inklusive."
+    },
+    {
+      icon: Shield,
+      title: "100% Erfolgsquote",
+      description: "Bisher wurde jeder unserer Förderanträge bewilligt."
+    },
+    {
+      icon: Clock,
+      title: "Zeitersparnis",
+      description: "Sie sparen sich den kompletten Papierkram und Behördenkontakt."
+    },
+    {
+      icon: Eye,
+      title: "Statusüberwachung",
+      description: "Wir informieren Sie über den aktuellen Bearbeitungsstand."
+    }
+  ];
+
+  const keywords = [
+    "Förderantrag München", "BAFA Antrag stellen", "KfW Antrag Heizung",
+    "Förderantrag Wärmepumpe", "BAFA Vollmacht", "Förderung beantragen",
+    "Heizungsförderung Antrag", "BAFA Online Antrag", "KfW 458 beantragen",
+    "Förderantrag Service", "BAFA Unterlagen", "Förderantrag Hilfe",
+    "Antragstellung Heizung", "BAFA Formulare", "Förderantrag kostenlos",
+    "BEG Antrag München", "Heizungstausch Antrag", "BAFA Beratung München"
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="BAFA & KfW Antrag München | Förderung sichern"
-        description="BAFA & KfW Antrag in München: Wir unterstützen Sie bei Förderanträgen für Heizung & Sanierung – sicher & korrekt."
+        title="Förderantrag München: BAFA & KfW Antrag kostenlos | AquaPro24"
+        description="BAFA & KfW Förderantrag kostenlos für Sie. Wir übernehmen die komplette Antragstellung für Ihre Heizungsförderung in München. 100% Erfolgsquote. Tel: 0152 12274043"
         canonical="https://aquapro24.de/foerderantrag"
-        keywords="Förderantrag München, BAFA Antrag Hilfe, KfW Antrag stellen, Förderantrag Heizung, BAFA Förderung beantragen, Heizungsförderung Antrag, Förderantrag Wärmepumpe, Antragstellung Förderung, BAFA Vollmacht, Förderung beantragen München"
-        aiSummary="AquaPro 24 Förderantrag Service München: Komplette BAFA & KfW Antragstellung für Heizungsförderung. Bis 70% Förderung, alle Unterlagen, Fristenüberwachung. Kontakt: 0152 12274043"
+        keywords={keywords.join(", ")}
+        aiSummary="AquaPro24 München: Kostenloser Förderantrag Service für BAFA & KfW. 100% Erfolgsquote. Wir stellen den Antrag für Heizungsförderung komplett für Sie. Alle Unterlagen, Vollmacht, Statusüberwachung. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
@@ -100,63 +192,65 @@ export default function FoerderantragPage() {
         faqSchema={[
           {
             question: "Wer stellt den BAFA-Antrag?",
-            answer: "Wir übernehmen die komplette Antragstellung für Sie. Mit einer Vollmacht reichen wir alle Unterlagen bei BAFA oder KfW ein."
+            answer: "Wir übernehmen die komplette Antragstellung kostenlos für Sie. Mit einer Vollmacht reichen wir alle Unterlagen bei BAFA oder KfW ein und überwachen den Prozess bis zur Bewilligung."
           },
           {
-            question: "Wie lange dauert die Bewilligung?",
-            answer: "BAFA-Anträge werden in der Regel innerhalb von 4-8 Wochen bewilligt. KfW-Kredite können schneller genehmigt werden."
+            question: "Was kostet der Förderantrags-Service?",
+            answer: "Unser Förderantrags-Service ist bei Beauftragung der Heizungsinstallation komplett kostenlos. Sie sparen sich den Papierkram und wir garantieren die korrekte Antragstellung."
           },
           {
-            question: "Was kostet der Antragsservice?",
-            answer: "Unser Förderantrags-Service ist bei Beauftragung der Heizungsinstallation kostenlos inklusive."
+            question: "Wie lange dauert die BAFA Bewilligung?",
+            answer: "Die BAFA prüft Anträge aktuell in 4-8 Wochen. Nach Bewilligung haben Sie 36 Monate Zeit zur Umsetzung. Wir informieren Sie, sobald die Zusage da ist."
           }
         ]}
       />
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-8 lg:py-12 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
-                <FileText className="w-3 h-3 mr-1" />
-                Antragsservice
+                <Shield className="w-3 h-3 mr-1" />
+                Kostenloser Antragsservice inklusive
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-                Förderantrag München: BAFA & KfW Antrag komplett übernommen
+              
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Förderantrag München – BAFA & KfW Antrag kostenlos
               </h1>
-              <div className="sr-only" data-testid="keyword-cloud">
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Antrag Hilfe</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Antrag stellen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Förderantrag Heizung</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Förderung beantragen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Vollmacht</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Antragstellung Service</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Förderantrag Wärmepumpe</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsförderung Antrag</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BAFA Beratung München</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Förderantrag kostenlos</span>
-              </div>
-              <p className="text-lg text-white/90 mb-4 mt-4">
-                Keine Lust auf Papierkram? Wir übernehmen die komplette Antragstellung bei BAFA und KfW. 
-                Sie müssen nur unterschreiben - wir kümmern uns um den Rest.
+              
+              <p className="text-lg text-white/90 mb-4 max-w-2xl">
+                Wir übernehmen die <strong>komplette Antragstellung</strong> für Ihre 
+                Heizungsförderung – kostenlos und mit 100% Erfolgsquote.
               </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {keywords.slice(0, 10).map((keyword, index) => (
+                  <span 
+                    key={index}
+                    className="px-2 py-1 text-xs bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+              
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-foerderantrag">
+                  <a href="tel:+4915212274043" data-testid="button-call-antrag">
                     <Phone className="w-4 h-4 mr-2" />
-                    Kostenlose Beratung
+                    0152 12274043
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                  <Link href="/termin" data-testid="link-termin-foerderantrag">
+                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white" asChild>
+                  <Link href="/termin" data-testid="link-termin-antrag">
                     <Calendar className="w-4 h-4 mr-2" />
-                    Beratungstermin
+                    Beratungstermin buchen
                   </Link>
                 </Button>
               </div>
@@ -166,33 +260,26 @@ export default function FoerderantragPage() {
 
         <TrustBar />
 
-        <section className="py-4 md:py-6">
+        <section className="py-8 md:py-10">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
-              Förderantrag Ablauf München: So funktioniert unser Service
-            </h2>
-            <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-              Von der Beratung bis zur Bewilligung - wir begleiten Sie durch den gesamten Prozess
-            </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {antragSchritte.map((schritt) => (
-                <Card key={schritt.nummer} className="relative overflow-visible">
-                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
-                    {schritt.nummer}
-                  </div>
-                  <CardHeader className="pb-2 pt-6">
-                    <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-3">
-                      <schritt.icon className="w-6 h-6 text-green-600" />
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                Förderantrag Service München: Ihre Vorteile
+              </h2>
+              <p className="text-muted-foreground">
+                Warum Sie den Förderantrag uns überlassen sollten
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {serviceVorteile.map((vorteil, index) => (
+                <Card key={index} className="text-center">
+                  <CardContent className="pt-6">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <vorteil.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <CardTitle className="text-lg">{schritt.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground mb-3">{schritt.description}</p>
-                    <Badge variant="secondary" className="text-xs">
-                      <Clock className="w-3 h-3 mr-1" />
-                      {schritt.dauer}
-                    </Badge>
+                    <h3 className="font-bold mb-2">{vorteil.title}</h3>
+                    <p className="text-sm text-muted-foreground">{vorteil.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -202,113 +289,207 @@ export default function FoerderantragPage() {
 
         <section className="py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-primary" />
-                    Benötigte Unterlagen München: Diese Dokumente brauchen wir
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {benoetigteUnterlagen.map((unterlag, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span>{unterlag}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Keine Sorge - wir helfen Ihnen bei der Beschaffung aller Dokumente!
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                BAFA Antrag München: So läuft der Prozess ab
+              </h2>
+              <p className="text-muted-foreground">
+                Von der Beratung bis zur Förderauszahlung – transparent und einfach
+              </p>
+            </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <AlertCircle className="w-5 h-5 text-orange-500" />
-                    Häufige Fehler München: Das vermeiden wir für Sie
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {haeufigeFehler.map((item, idx) => (
-                      <div key={idx} className="border-l-2 border-orange-500 pl-4">
-                        <p className="font-medium text-orange-600 dark:text-orange-400">{item.fehler}</p>
-                        <p className="text-sm text-muted-foreground">{item.loesung}</p>
-                      </div>
-                    ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {antragSchritte.map((schritt) => (
+                <Card key={schritt.nummer} className="relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold rounded-br-lg">
+                    {schritt.nummer}
                   </div>
-                </CardContent>
-              </Card>
+                  <CardContent className="pt-14 pb-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <schritt.icon className="w-5 h-5 text-primary" />
+                      <h3 className="font-bold">{schritt.title}</h3>
+                    </div>
+                    <Badge variant="secondary" className="mb-3">{schritt.dauer}</Badge>
+                    <p className="text-sm text-muted-foreground mb-3">{schritt.description}</p>
+                    <ul className="space-y-1">
+                      {schritt.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <CheckCircle2 className="w-3 h-3 text-green-500" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <Card className="bg-green-500/5 border-green-500/20">
-              <CardContent className="pt-6">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-                      <Euro className="w-8 h-8 text-white" />
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                BAFA Unterlagen München: Was Sie benötigen
+              </h2>
+              <p className="text-muted-foreground">
+                Wir helfen Ihnen bei der Zusammenstellung aller Dokumente
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-6">
+              {benoetigteUnterlagen.map((kategorie, index) => (
+                <Card key={index}>
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <kategorie.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg">{kategorie.kategorie}</CardTitle>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold">Förderantrag Service München: Kostenlos bei Beauftragung</h3>
-                      <p className="text-muted-foreground">
-                        Unser kompletter Antragsservice ist bei Beauftragung der Heizungsinstallation inklusive.
-                      </p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {kategorie.dokumente.map((dok, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <span className="font-medium text-sm">{dok.name}</span>
+                            <p className="text-xs text-muted-foreground">{dok.info}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 bg-destructive/5 border-y border-destructive/20">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                Förderantrag Fehler München: Das vermeiden wir für Sie
+              </h2>
+              <p className="text-muted-foreground">
+                Diese häufigen Fehler führen zur Ablehnung – wir passen auf
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {haeufigeFehler.map((fehler, index) => (
+                <Card key={index} className={`${fehler.schweregrad === 'kritisch' ? 'border-destructive/50' : ''}`}>
+                  <CardContent className="pt-4">
+                    <div className="flex items-start gap-4">
+                      <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${
+                        fehler.schweregrad === 'kritisch' ? 'bg-destructive/10' : 'bg-orange-100 dark:bg-orange-900/20'
+                      }`}>
+                        <fehler.icon className={`w-5 h-5 ${
+                          fehler.schweregrad === 'kritisch' ? 'text-destructive' : 'text-orange-600'
+                        }`} />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <h3 className="font-bold">{fehler.fehler}</h3>
+                          {fehler.schweregrad === 'kritisch' && (
+                            <Badge variant="destructive" className="text-xs">Kritisch</Badge>
+                          )}
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-2">{fehler.problem}</p>
+                        <div className="flex items-start gap-2 text-sm text-green-600 bg-green-50 dark:bg-green-900/20 p-2 rounded">
+                          <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <span>{fehler.loesung}</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-3">
-                    <Button size="lg" asChild>
-                      <a href="tel:+4915212274043" data-testid="button-call-foerderantrag-2">
-                        <Phone className="w-4 h-4 mr-2" />
-                        Jetzt anrufen
-                      </a>
-                    </Button>
-                    <Button size="lg" variant="outline" asChild>
-                      <Link href="/foerderrechner" data-testid="link-foerderrechner">
-                        <ArrowRight className="w-4 h-4 mr-2" />
-                        Förderung berechnen
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              BAFA Online Antrag München: So funktioniert es
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Der BAFA-Antrag wird seit 2024 ausschließlich online über das BAFA-Portal gestellt. 
+                Mit unserer Vollmacht übernehmen wir den gesamten Prozess für Sie – von der 
+                Registrierung bis zur Einreichung aller Unterlagen.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-6">Förderantrag Service München: Komplett kostenlos</h3>
+              <p>
+                Bei Beauftragung einer Heizungsinstallation ist unser Förderantrag-Service 
+                komplett kostenlos. Sie unterschreiben nur eine Vollmacht und wir kümmern uns 
+                um den Rest. Wir haben bisher 100% aller Förderanträge erfolgreich bewilligt bekommen.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-6">KfW 458 Kredit München: Ergänzungskredit beantragen</h3>
+              <p>
+                Zusätzlich zum BAFA-Zuschuss können Sie den KfW-Ergänzungskredit beantragen. 
+                Dieser zinsgünstige Kredit finanziert den nach Förderung verbleibenden Eigenanteil. 
+                Haushalte mit einem Einkommen unter 90.000 EUR erhalten besonders günstige Konditionen.
+              </p>
+            </div>
           </div>
         </section>
 
         <FAQ 
+          title="Häufige Fragen zum Förderantrag München"
           items={[
             {
-              question: "Wer stellt den BAFA-Antrag für mich?",
-              answer: "Wir übernehmen die komplette Antragstellung für Sie. Mit einer Vollmacht reichen wir alle Unterlagen bei BAFA oder KfW ein und überwachen den Bearbeitungsstand."
+              question: "Muss ich selbst zur BAFA gehen?",
+              answer: "Nein. Der BAFA-Antrag wird komplett online gestellt. Mit unserer Vollmacht übernehmen wir den gesamten Prozess für Sie – Sie müssen nirgendwo hingehen."
             },
             {
-              question: "Wie lange dauert die Bewilligung des Förderantrags?",
-              answer: "BAFA-Anträge werden in der Regel innerhalb von 4-8 Wochen bewilligt. KfW-Kredite können schneller genehmigt werden, oft schon nach 2-3 Wochen."
+              question: "Was passiert, wenn Unterlagen fehlen?",
+              answer: "Wir prüfen alle Unterlagen vor der Einreichung. Falls etwas fehlt, kontaktieren wir Sie rechtzeitig. So vermeiden wir Verzögerungen bei der Bearbeitung."
             },
             {
-              question: "Was kostet der Förderantrags-Service?",
-              answer: "Unser kompletter Antragsservice ist bei Beauftragung der Heizungsinstallation kostenlos inklusive. Sie zahlen nur die vereinbarten Installationskosten."
+              question: "Kann der Antrag abgelehnt werden?",
+              answer: "Bei korrekter Antragstellung ist eine Ablehnung sehr selten. Der häufigste Ablehnungsgrund ist ein vorzeitiger Vertragsabschluss – das vermeiden wir durch unseren Service."
             },
             {
-              question: "Was passiert, wenn der Antrag abgelehnt wird?",
-              answer: "Ablehnungen sind bei korrekter Antragstellung selten. Sollte es dennoch passieren, prüfen wir die Gründe und stellen ggf. einen neuen Antrag oder empfehlen Alternativen."
+              question: "Wie erfahre ich vom Ergebnis?",
+              answer: "Wir überwachen den Status Ihres Antrags und informieren Sie sofort, wenn die Förderzusage eintrifft. In der Regel dauert dies 4-8 Wochen."
             },
             {
-              question: "Kann ich auch ohne Förderantrag beauftragen?",
-              answer: "Ja, aber wir empfehlen dringend, die Förderung zu nutzen. Bei bis zu 70% Zuschuss lohnt sich die kurze Wartezeit auf die Bewilligung fast immer."
+              question: "Was kostet der Antragsservice?",
+              answer: "Bei Beauftragung der Heizungsinstallation ist unser Förderantrags-Service komplett kostenlos. Sie sparen sich Zeit und Nerven – wir garantieren die korrekte Abwicklung."
             }
           ]}
         />
+
+        <section className="py-8 bg-primary text-primary-foreground">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Förderantrag starten München: Jetzt beraten lassen
+            </h2>
+            <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
+              Lassen Sie sich kostenlos beraten, welche Förderung für Ihr Projekt optimal ist. 
+              Wir übernehmen die komplette Antragstellung für Sie.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" variant="secondary" asChild>
+                <a href="tel:+4915212274043" data-testid="button-call-antrag-cta">
+                  <Phone className="w-4 h-4 mr-2" />
+                  0152 12274043
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white" asChild>
+                <Link href="/foerderung" data-testid="link-foerderung-antrag">
+                  <ArrowRight className="w-4 h-4 mr-2" />
+                  Alle Förderungen ansehen
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
-      
       <Footer />
       <AIChatWidget />
     </div>
