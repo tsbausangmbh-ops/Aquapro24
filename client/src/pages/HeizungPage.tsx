@@ -136,10 +136,10 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung München | Notdienst & Wartung 24/7"
-        description="Heizung München: Heizung ausgefallen, Therme defekt? Schnelle Reparatur, Wartung & Notdienst. Festpreis ab 154€."
+        title="Heizung und Heizungsinstallateur München – Notdienst & Wartung 24/7"
+        description="Heizung & Heizungsinstallateur München: Heizung ausgefallen, Therme defekt? Schnelle Reparatur, Wartung & Notdienst. Festpreis ab 154€."
         canonical="https://aquapro24.de/heizung"
-        keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München"
+        keywords="Heizung München, Heizungsinstallateur München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }
