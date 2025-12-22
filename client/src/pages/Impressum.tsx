@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Mail, Phone, MapPin, FileText } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
+import heroImage from "@assets/generated_images/business_owner_professional_portrait.png";
 
 export default function Impressum() {
   return (
