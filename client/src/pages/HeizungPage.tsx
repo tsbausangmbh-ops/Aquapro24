@@ -371,6 +371,24 @@ export default function HeizungPage() {
           title="Häufige Fragen"
         />
 
+        {/* Partnernetzwerk Angebot */}
+        <section className="py-12 lg:py-16 bg-muted/50">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+            <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Ihr kostenloses Angebot in 10 Schritten
+            </h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
+            </p>
+            <ServiceBooking 
+              serviceType="heizung"
+              buttonText="Jetzt Angebot anfordern"
+              buttonSize="lg"
+            />
+          </div>
+        </section>
+
         <section className="py-12 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
