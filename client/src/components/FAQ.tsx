@@ -5,9 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { HelpCircle, Phone, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { HelpCircle } from "lucide-react";
 
 export interface FAQItem {
   question: string;
@@ -73,27 +71,6 @@ export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQP
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-
-        <div className="mt-8 bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10 rounded-xl p-6 text-center">
-          <p className="font-semibold text-lg mb-2">Ihre Frage nicht dabei?</p>
-          <p className="text-muted-foreground mb-4">
-            Rufen Sie uns an oder schreiben Sie uns – wir beraten Sie kostenlos.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Button asChild>
-              <a href="tel:+4915212274043" data-testid="button-faq-call">
-                <Phone className="w-4 h-4 mr-2" />
-                0152 12274043
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/kontakt" data-testid="button-faq-contact">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Nachricht senden
-              </Link>
-            </Button>
-          </div>
         </div>
       </div>
       
