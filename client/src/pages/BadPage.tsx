@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import galleryImage1 from "@assets/stock_images/simple_modern_walk_i_3c6447de.jpg";
+import galleryImage1 from "@assets/stock_images/walk-in_shower_frame_cbc18dc5.jpg";
 import galleryImage2 from "@assets/stock_images/elegant_bathroom_bat_6c196a81.jpg";
 import galleryImage3 from "@assets/stock_images/accessible_bathroom__53db66a8.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
