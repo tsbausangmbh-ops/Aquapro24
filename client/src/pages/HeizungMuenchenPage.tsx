@@ -63,7 +63,7 @@ export default function HeizungMuenchenPage() {
         description="Heizungsservice München: Reparatur, Modernisierung & Effizienzsteigerung. Kompetente Beratung vom Partnernetzwerk."
         canonical="https://aquapro24.de/heizung-muenchen"
         keywords="Heizung München, Heizungsreparatur München, Heizungsmodernisierung München, Heizungstausch München, Gasheizung München, Heizung Wartung München, Heizungsinstallateur München"
-        aiSummary="AquaPro24 Heizung München: Reparatur, Modernisierung, Austausch aller Heizungssysteme. Planbare Lösungen, transparentes Vorgehen. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Heizung München: Reparatur, Modernisierung, Austausch aller Heizungssysteme. Planbare Lösungen, transparentes Vorgehen. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" },
@@ -143,7 +143,7 @@ export default function HeizungMuenchenPage() {
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Wenn die Heizung streikt oder modernisiert werden soll, zählt vor allem eins: eine Lösung, 
-                die planbar ist und dauerhaft funktioniert. AquaPro24 unterstützt Sie in München bei 
+                die planbar ist und dauerhaft funktioniert. AquaPro 24 unterstützt Sie in München bei 
                 Heizungsreparaturen, Austausch, Optimierung und Modernisierung. Von der ersten Einschätzung 
                 bis zur Umsetzung arbeiten wir mit einem klaren Vorgehen – damit Sie wissen, was passiert, 
                 wann es passiert und warum.

@@ -62,7 +62,7 @@ export default function FussbodenheizungMuenchenPage() {
         description="Fußbodenheizung in München: Nachrüsten oder Neubau – effiziente Wärme & hoher Komfort. Jetzt Angebot anfordern!"
         canonical="https://aquapro24.de/fussbodenheizung-muenchen"
         keywords="Fußbodenheizung München, Fußbodenheizung nachrüsten München, Fußbodenheizung verlegen München, Fußbodenheizung Altbau München, Fußbodenheizung Kosten München, Flächenheizung München"
-        aiSummary="AquaPro24 Fußbodenheizung München: Nachrüstung, Umbau, Integration in moderne Systeme. Prüfung Aufbauhöhe, Regelung, Untergrund. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Fußbodenheizung München: Nachrüstung, Umbau, Integration in moderne Systeme. Prüfung Aufbauhöhe, Regelung, Untergrund. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" },
@@ -142,7 +142,7 @@ export default function FussbodenheizungMuenchenPage() {
               </div>
               <p className="text-lg text-white/90 mb-6">
                 Fußbodenheizung bedeutet Komfort – aber nur, wenn Aufbauhöhe, Regelung und Untergrund 
-                richtig geplant sind. AquaPro24 hilft in München bei Nachrüstung, Umbau und Integration 
+                richtig geplant sind. AquaPro 24 hilft in München bei Nachrüstung, Umbau und Integration 
                 in moderne Heizsysteme. Wir prüfen gemeinsam, was technisch sinnvoll ist und wie sich 
                 die Arbeiten sauber in Ihren Renovierungsplan einfügen.
               </p>

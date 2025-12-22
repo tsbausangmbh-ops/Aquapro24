@@ -134,13 +134,13 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   "@id": "https://aquapro24.de/ueber-uns#webpage",
   "url": "https://aquapro24.de/ueber-uns",
-  "name": "Über AquaPro24 München - Ihr Partnernetzwerk für Sanitär & Heizung seit 2005",
-  "description": "Erfahren Sie mehr über AquaPro24 München: Partnernetzwerk für Sanitär, Heizung und Badsanierung. 2.800+ zufriedene Kunden, 24/7 Notdienst in München.",
+  "name": "Über AquaPro 24 München - Ihr Partnernetzwerk für Sanitär & Heizung seit 2005",
+  "description": "Erfahren Sie mehr über AquaPro 24 München: Partnernetzwerk für Sanitär, Heizung und Badsanierung. 2.800+ zufriedene Kunden, 24/7 Notdienst in München.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://aquapro24.de/#website",
     "url": "https://aquapro24.de",
-    "name": "AquaPro24 München",
+    "name": "AquaPro 24 München",
     "publisher": {
       "@type": "Organization",
       "@id": "https://aquapro24.de/#organization"
@@ -150,7 +150,7 @@ const aboutPageSchema = {
     "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
     "@id": "https://aquapro24.de/#organization",
     "name": "KSHW München - Sanitär & Heizung",
-    "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München"],
+    "alternateName": ["AquaPro 24", "KSHW München", "Sanitär München", "Heizung München"],
     "legalName": "KSHW München - Mustafa Sakar",
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
@@ -230,7 +230,7 @@ export default function UeberUnsPage() {
         title="Sanitär & Heizung München | Partnernetzwerk seit 2005"
         description="Sanitär & Heizung München: Geprüftes Partnernetzwerk, Erfahrung seit 2005 & zuverlässige Fachbetriebe."
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns AquaPro24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
+        keywords="Über uns AquaPro 24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
         structuredData={aboutPageSchema}
       />
       <Header />
@@ -249,7 +249,7 @@ export default function UeberUnsPage() {
                 Geprüfte Fachbetriebe München
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
-                AquaPro24 München – Ihr Partnernetzwerk seit 2005
+                AquaPro 24 München – Ihr Partnernetzwerk seit 2005
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Partnernetzwerk Sanitär</span>
@@ -327,7 +327,7 @@ export default function UeberUnsPage() {
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Schlechte Erfahrungen mit Handwerkern? Sie sind nicht allein. Deshalb haben wir 
-                AquaPro24 gegründet - um diese Probleme ein für alle Mal zu lösen.
+                AquaPro 24 gegründet - um diese Probleme ein für alle Mal zu lösen.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -371,7 +371,7 @@ export default function UeberUnsPage() {
               <div className="order-1 lg:order-2 space-y-6">
                 <Badge variant="outline">Unsere Geschichte</Badge>
                 <h2 className="text-3xl font-bold">
-                  Klempner Partnernetzwerk München: Warum wir AquaPro24 gegründet haben
+                  Klempner Partnernetzwerk München: Warum wir AquaPro 24 gegründet haben
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
@@ -426,7 +426,7 @@ export default function UeberUnsPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
-                <Badge variant="outline">Warum AquaPro24?</Badge>
+                <Badge variant="outline">Warum AquaPro 24?</Badge>
                 <h2 className="text-3xl font-bold">
                   Installateur München Qualität: Das unterscheidet uns von anderen
                 </h2>

@@ -63,7 +63,7 @@ export default function SanitaerMuenchenPage() {
         description="Ihr Sanitär Installateur in München: Schnelle Hilfe bei Reparaturen, Notfällen & Installationen. Jetzt Termin sichern!"
         canonical="https://aquapro24.de/sanitaer-muenchen"
         keywords="Sanitär München, Sanitärinstallateur München, Sanitärinstallation München, Klempner München, Installateur München, Sanitärtechniker München, Sanitärfirma München, Armaturen austauschen München, Armaturen montieren München, Wasserhahn wechseln München, Wasserhahn austauschen München, Armatur reparieren München, WC Austausch München, WC montieren München, Toilette einbauen München, Waschtisch München, Waschtisch montieren München, Waschbecken einbauen München, Spülkasten reparieren München, Spülkasten austauschen München, Sanitär Notdienst München, Klempner Notdienst München, Rohrbruch München, Rohrreinigung München, Abfluss verstopft München, Wasserleitung München, Wasseranschluss München, Grohe München, Hansgrohe München, Geberit München, Sanitär Festpreis München, Sanitär günstig München"
-        aiSummary="AquaPro24 Sanitär München: Professionelle Sanitärarbeiten - Armaturen, Leckagen, WC-Austausch, Badsanierung-Vorbereitung. Transparenter Ablauf, schnelle Rückmeldung. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Sanitär München: Professionelle Sanitärarbeiten - Armaturen, Leckagen, WC-Austausch, Badsanierung-Vorbereitung. Transparenter Ablauf, schnelle Rückmeldung. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" },
@@ -88,7 +88,7 @@ export default function SanitaerMuenchenPage() {
         }}
         faqSchema={[
           {
-            question: "Welche Sanitär-Leistungen bietet AquaPro24 in München?",
+            question: "Welche Sanitär-Leistungen bietet AquaPro 24 in München?",
             answer: "Wir bieten Installation und Reparatur von Armaturen, Leckage-Checks, Austausch von WC/Waschtisch/Spülkasten sowie Vorbereitungen für Badsanierungen in allen Münchner Stadtteilen."
           },
           {
@@ -142,7 +142,7 @@ export default function SanitaerMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">geprüfte Fachbetriebe</span>
               </div>
               <p className="text-lg text-white/90 mb-4">
-                AquaPro24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 
+                AquaPro 24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 
                 Installation bis zur schnellen Reparatur. Ob undichte Armatur, defektes Eckventil, 
                 WC-Spülung, Wasseranschluss für Küche oder die komplette Erneuerung von Leitungen: 
                 Wir kümmern uns strukturiert, transparent und mit einem klaren Ablauf.

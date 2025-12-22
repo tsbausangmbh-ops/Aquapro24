@@ -22,13 +22,13 @@ export default function Home() {
         description="Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!"
         canonical="https://aquapro24.de"
         keywords="Klempner München Notdienst, Sanitär ab 92€, Rohrreinigung ab 81€, Heizung reparieren ab 154€, Rohrbruch München, WC verstopft Soforthilfe, Wasserhahn wechseln ab 80€, Durchlauferhitzer ab 600€, Badsanierung München ab 16.000€, Wärmepumpe 70% BAFA, Grohe Hansgrohe Montage, Viessmann Vaillant Buderus Wolf, Installateur Schwabing Bogenhausen, 24/7 Notdienst 365 Tage"
-        aiSummary="AquaPro24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€, Wasserhahn ab 80€, Durchlauferhitzer ab 600€, Badsanierung ab 16.000€. Marken: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus. 2.800+ Kunden seit 2005, 4.9/5 Sterne, 2-5 Jahre Garantie. Alle Stadtteile: Schwabing, Bogenhausen, Sendling, Pasing. Tel: 0152 12274043"
+        aiSummary="AquaPro 24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€, Wasserhahn ab 80€, Durchlauferhitzer ab 600€, Badsanierung ab 16.000€. Marken: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus. 2.800+ Kunden seit 2005, 4.9/5 Sterne, 2-5 Jahre Garantie. Alle Stadtteile: Schwabing, Bogenhausen, Sendling, Pasing. Tel: 0152 12274043"
         serviceSchema={{
-          name: "Sanitär & Heizung München - AquaPro24",
+          name: "Sanitär & Heizung München - AquaPro 24",
           description: "Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen in München seit 2005. Über 2.847 zufriedene Kunden, Festpreisgarantie, 24/7 Notdienst.",
           serviceType: "Sanitär/Heizung/Haustechnik",
           urlSlug: "",
-          catalogName: "AquaPro24 Leistungen München",
+          catalogName: "AquaPro 24 Leistungen München",
           serviceOffers: [
             { name: "Sanitär-Notdienst 24/7" },
             { name: "Heizungsreparatur & Wartung" },
@@ -50,7 +50,7 @@ export default function Home() {
             answer: "Für viele Standard-Leistungen bieten wir klare Preisrahmen. Bei komplexeren Fällen erhalten Sie vorab eine transparente Einschätzung nach Sichtung Ihrer Angaben und Fotos."
           },
           {
-            question: "Welche Leistungen deckt AquaPro24 ab?",
+            question: "Welche Leistungen deckt AquaPro 24 ab?",
             answer: "Sanitär, Heizung, Badsanierung, Modernisierung (z. B. Wärmepumpe/Fußbodenheizung), Reparaturen sowie Koordination geprüfter Fachbetriebe in München."
           }
         ]}

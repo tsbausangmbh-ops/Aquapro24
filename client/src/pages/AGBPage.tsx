@@ -52,7 +52,7 @@ export default function AGBPage() {
               <h2 className="text-xl font-semibold mb-4">§ 1 Geltungsbereich</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
-                AquaPro24, Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München 
+                AquaPro 24, Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München 
                 (nachfolgend "Auftragnehmer") und dem Kunden (nachfolgend "Auftraggeber") über 
                 Sanitär-, Heizungs- und Installationsarbeiten sowie damit verbundene Dienstleistungen. 
                 Diese AGB gelten sowohl für Privatkunden (Verbraucher) als auch für Geschäftskunden (B2B).

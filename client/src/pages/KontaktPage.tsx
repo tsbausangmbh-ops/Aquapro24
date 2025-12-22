@@ -104,7 +104,7 @@ export default function KontaktPage() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Sanitär Kontakt München | Angebot anfordern"
-        description="Kontakt AquaPro24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich."
+        description="Kontakt AquaPro 24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich."
         canonical="https://aquapro24.de/kontakt"
         keywords="Kontakt Sanitär München, Heizung München Telefon, Klempner München Notdienst"
       />
@@ -124,7 +124,7 @@ export default function KontaktPage() {
                 Kontakt
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
-                Kontakt AquaPro24 München – Kostenlose Beratung
+                Kontakt AquaPro 24 München – Kostenlose Beratung
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Kontakt</span>
@@ -312,7 +312,7 @@ export default function KontaktPage() {
         {/* Benefits Section */}
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold text-center mb-8">Klempner Service München: Das erwartet Sie bei AquaPro24</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">Klempner Service München: Das erwartet Sie bei AquaPro 24</h2>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
               {[
@@ -372,7 +372,7 @@ export default function KontaktPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="AquaPro24 Standort in München"
+            title="AquaPro 24 Standort in München"
             data-testid="map-embed"
           />
         </section>

@@ -63,9 +63,9 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": ["HomeAndConstructionBusiness", "Plumber", "HVACBusiness", "LocalBusiness"],
   "@id": "https://aquapro24.de/#localbusiness",
-  "name": "AquaPro24",
-  "alternateName": ["AquaPro24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
-  "legalName": "AquaPro24 - Mustafa Sakar",
+  "name": "AquaPro 24",
+  "alternateName": ["AquaPro 24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
+  "legalName": "AquaPro 24 - Mustafa Sakar",
   "description": "Sanitär, Heizung, Badsanierung und Modernisierung in München. 24/7 Notdienst, Festpreis-Optionen und Koordination geprüfter Fachbetriebe. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
   "knowsAbout": [
@@ -328,7 +328,7 @@ export default function SEO({
     updateMeta("og:description", description, true);
     updateMeta("og:type", "website", true);
     updateMeta("og:locale", "de_DE", true);
-    updateMeta("og:site_name", "AquaPro24 München", true);
+    updateMeta("og:site_name", "AquaPro 24 München", true);
     if (ogImage) updateMeta("og:image", ogImage, true);
     if (canonical) updateMeta("og:url", canonical, true);
     
@@ -368,7 +368,7 @@ export default function SEO({
     updateMeta("googlebot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     updateMeta("bingbot", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     
-    updateMeta("ai:business-name", "AquaPro24");
+    updateMeta("ai:business-name", "AquaPro 24");
     updateMeta("ai:business-type", "Plumber, HVACBusiness, HomeAndConstructionBusiness");
     updateMeta("ai:service-area", "München, Bayern, Deutschland");
     updateMeta("ai:phone", "+49 152 12274043");
@@ -387,13 +387,13 @@ export default function SEO({
     updateMeta("ai:response-time", "Ab 60 Minuten bei Notfällen");
     updateMeta("ai:certifications", "Partnernetzwerk, HWK München");
     
-    updateMeta("llm:business-summary", "AquaPro24 ist ein Sanitär- und Heizungsunternehmen in München mit 24/7 Notdienst, Festpreisgarantie und über 2.800 zufriedenen Kunden seit 2005.");
+    updateMeta("llm:business-summary", "AquaPro 24 ist ein Sanitär- und Heizungsunternehmen in München mit 24/7 Notdienst, Festpreisgarantie und über 2.800 zufriedenen Kunden seit 2005.");
     updateMeta("llm:key-services", "Klempner, Rohrreinigung, Heizungsreparatur, Wärmepumpe, Badsanierung");
     updateMeta("llm:unique-selling-points", "24/7 Notdienst, Festpreis, Bis 70% BAFA Förderung, 2 Jahre Garantie");
     updateMeta("llm:target-audience", "Hausbesitzer und Mieter in München und Umgebung");
     updateMeta("llm:contact-action", "Anrufen: 0152 12274043 oder Termin online buchen");
     
-    updateMeta("gpt:summary", "Sanitär & Heizung Notdienst München - AquaPro24 bietet 24/7 Klempner-Service, Heizungsreparatur und Badsanierung mit Festpreisgarantie.");
+    updateMeta("gpt:summary", "Sanitär & Heizung Notdienst München - AquaPro 24 bietet 24/7 Klempner-Service, Heizungsreparatur und Badsanierung mit Festpreisgarantie.");
     updateMeta("gpt:location", "München, Bayern");
     updateMeta("gpt:category", "Home Services, Plumbing, HVAC");
     
@@ -407,7 +407,7 @@ export default function SEO({
       updateMeta("ai:location", "München, Bayern, Deutschland");
     }
     
-    updateMeta("author", "AquaPro24 - KSHW München");
+    updateMeta("author", "AquaPro 24 - KSHW München");
     updateMeta("publisher", "KSHW München - Mustafa Sakar");
     updateMeta("copyright", "2025 AquaPro24.de");
     updateMeta("language", "de");

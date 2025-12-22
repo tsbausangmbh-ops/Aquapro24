@@ -61,7 +61,7 @@ export default function ProblemSolution() {
             Rohrbruch, WC verstopft, Heizung defekt? 45-60 Minuten vor Ort.
           </h3>
           <p className="text-lg text-muted-foreground">
-            <span className="text-foreground font-medium">2.800+ Münchner Kunden</span> vertrauen AquaPro24. 
+            <span className="text-foreground font-medium">2.800+ Münchner Kunden</span> vertrauen AquaPro 24. 
             Festpreis vor Arbeitsbeginn, alle Marken: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus.
           </p>
         </div>

@@ -64,7 +64,7 @@ export default function WaermepumpeMuenchenPage() {
         description="Wärmepumpe installieren in München: Fachgerechter Einbau, Förderberatung & komplette Abwicklung aus einer Hand."
         canonical="https://aquapro24.de/waermepumpe-muenchen"
         keywords="Wärmepumpe München, Wärmepumpe Installation München, Luft-Wasser-Wärmepumpe München, Wärmepumpe Förderung München, Heizungstausch Wärmepumpe München, Wärmepumpe Altbau München"
-        aiSummary="AquaPro24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" },
@@ -144,7 +144,7 @@ export default function WaermepumpeMuenchenPage() {
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Sie möchten in München auf Wärmepumpe umstellen? Entscheidend sind Gebäudedaten, 
-                Heizlast, Hydraulik und die richtige Einbindung ins System. AquaPro24 unterstützt 
+                Heizlast, Hydraulik und die richtige Einbindung ins System. AquaPro 24 unterstützt 
                 Sie bei der Planung und Umsetzung – inklusive sinnvoller Vorbereitung (z. B. 
                 Anpassungen an Verteilung/Regelung) und transparenter Schritte.
               </p>

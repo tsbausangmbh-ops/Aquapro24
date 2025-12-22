@@ -100,7 +100,7 @@ export default function DatenschutzPage() {
               <h2 className="text-xl font-semibold mb-4">Verantwortlicher</h2>
               <div className="bg-muted/30 rounded-lg p-6">
                 <p className="text-muted-foreground mb-2">
-                  <strong>AquaPro24</strong><br />
+                  <strong>AquaPro 24</strong><br />
                   Inhaber: Mustafa Sakar<br />
                   Hardenbergstr. 4<br />
                   80992 München<br />

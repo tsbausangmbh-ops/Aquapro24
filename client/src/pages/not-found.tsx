@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Seite nicht gefunden | 404 | AquaPro24 München"
+        title="Seite nicht gefunden | 404 | AquaPro 24 München"
         description="Diese Seite existiert leider nicht. Besuchen Sie unsere Startseite für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst: 0152 12274043"
         canonical="https://aquapro24.de/404"
       />

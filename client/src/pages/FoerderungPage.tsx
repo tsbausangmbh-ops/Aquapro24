@@ -132,7 +132,7 @@ export default function FoerderungPage() {
         description="Heizungs- & Sanitärförderung in München: BAFA & KfW 2025. Wir zeigen Ihnen, wie Sie Zuschüsse sichern."
         canonical="https://aquapro24.de/foerderung"
         keywords="Förderung Heizung München, BAFA Förderung Wärmepumpe, KfW Heizung, Heizungsförderung 2025, Wärmepumpe Zuschuss München, BEG Förderung, Klimabonus Heizung"
-        aiSummary="AquaPro24 München: Förderberatung für Heizung & Sanitär. BAFA bis 70%, KfW Kredite, Steuerbonus. Wärmepumpe, Heizungstausch. Tel: 0152 12274043"
+        aiSummary="AquaPro 24 München: Förderberatung für Heizung & Sanitär. BAFA bis 70%, KfW Kredite, Steuerbonus. Wärmepumpe, Heizungstausch. Tel: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" }
@@ -208,7 +208,7 @@ export default function FoerderungPage() {
               <p className="text-lg text-white/90 mb-4 mt-4">
                 Der Staat fördert den Umstieg auf klimafreundliche Heizungen mit attraktiven Zuschüssen. 
                 Bis zu 70% Förderung für Wärmepumpen, zinsgünstige KfW-Kredite und steuerliche Vorteile 
-                machen die Investition erschwinglich. AquaPro24 unterstützt Sie bei der Antragstellung.
+                machen die Investition erschwinglich. AquaPro 24 unterstützt Sie bei der Antragstellung.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>

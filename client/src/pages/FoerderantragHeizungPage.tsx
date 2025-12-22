@@ -125,7 +125,7 @@ export default function FoerderantragHeizungPage() {
         description="Förderantrag Heizung München: Wärmepumpe, Fußbodenheizung & Lüftung – wir kümmern uns um die Förderung."
         canonical="https://aquapro24.de/foerderantrag-heizung"
         keywords="Förderantrag Heizung München, Wärmepumpe Förderung Antrag, Fußbodenheizung Förderung, Lüftungsanlage Förderung, Pelletheizung Förderantrag, BAFA Heizung beantragen, Heizungsförderung München, Förderantrag Wärmepumpe, KfW Heizung Antrag, Brennstoffzelle Förderung"
-        aiSummary="AquaPro24 Förderantrag Service München für alle Heizungsarten: Wärmepumpe bis 70%, Fußbodenheizung, Lüftung mit Wärmerückgewinnung, Pelletheizung, Solarthermie. Komplette BAFA/KfW Antragstellung. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Förderantrag Service München für alle Heizungsarten: Wärmepumpe bis 70%, Fußbodenheizung, Lüftung mit Wärmerückgewinnung, Pelletheizung, Solarthermie. Komplette BAFA/KfW Antragstellung. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },

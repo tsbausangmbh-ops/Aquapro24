@@ -64,7 +64,7 @@ export default function NotdienstMuenchenPage() {
         description="Notdienst München 24h: Rohrbruch, Wasserschaden oder Heizungsausfall? Soforthilfe vom Sanitär- & Heizungsprofi."
         canonical="https://aquapro24.de/notdienst-muenchen"
         keywords="Notdienst München, Sanitär Notdienst München, Heizung Notdienst München, Rohrbruch Notdienst München, Klempner Notdienst München, 24h Notdienst München, Wasserschaden Notdienst München"
-        aiSummary="AquaPro24 Notdienst München: Schnelle Hilfe bei Rohrbruch, Wasseraustritt, Heizungsausfall. Fotos senden für schnelle Priorisierung. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Notdienst München: Schnelle Hilfe bei Rohrbruch, Wasseraustritt, Heizungsausfall. Fotos senden für schnelle Priorisierung. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Notdienst München", url: "https://aquapro24.de/notdienst-muenchen" }
@@ -143,7 +143,7 @@ export default function NotdienstMuenchenPage() {
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Bei Rohrbruch, Wasseraustritt oder Heizungsausfall zählt Tempo – aber auch eine saubere 
-                Einschätzung. AquaPro24 bietet Notdienst-Optionen in München und Umgebung. Damit wir 
+                Einschätzung. AquaPro 24 bietet Notdienst-Optionen in München und Umgebung. Damit wir 
                 schnell priorisieren können, senden Sie uns bitte Fotos/Videos, Adresse, Erreichbarkeit 
                 vor Ort und eine Kurzbeschreibung (Was ist passiert? Seit wann? Wie stark?).
               </p>

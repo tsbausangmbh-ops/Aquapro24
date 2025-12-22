@@ -71,7 +71,7 @@ export default function MythBuster() {
 
         <div className="mt-10 text-center">
           <p className="text-lg font-medium mb-2">
-            Über 2.800 Kunden in München vertrauen AquaPro24 seit 2005
+            Über 2.800 Kunden in München vertrauen AquaPro 24 seit 2005
           </p>
           <p className="text-muted-foreground">
             Schwabing, Bogenhausen, Sendling, Pasing, Maxvorstadt, Haidhausen – wir arbeiten in allen Münchner Stadtteilen.

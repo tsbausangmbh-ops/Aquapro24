@@ -101,7 +101,7 @@ export default function ChristmasPopup() {
             className="text-7xl md:text-[10rem] font-bold text-white/15 whitespace-nowrap select-none"
             style={{ transform: "rotate(-15deg)" }}
           >
-            AquaPro24
+            AquaPro 24
           </p>
         </div>
         

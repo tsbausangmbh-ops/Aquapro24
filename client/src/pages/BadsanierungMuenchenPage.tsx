@@ -63,7 +63,7 @@ export default function BadsanierungMuenchenPage() {
         description="Badumbau in München ohne Stress: Modernes Design, feste Abläufe & klare Kosten. Jetzt kostenlos beraten lassen!"
         canonical="https://aquapro24.de/badsanierung-muenchen"
         keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, Bad modernisieren München, Badumbau München, Badsanierung Kosten München"
-        aiSummary="AquaPro24 Badsanierung München: Komplette Begleitung von Planung bis Übergabe. Bestandsaufnahme, Ablaufplan, Umsetzung mit geprüften Gewerken. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Badsanierung München: Komplette Begleitung von Planung bis Übergabe. Bestandsaufnahme, Ablaufplan, Umsetzung mit geprüften Gewerken. Kontakt: 0152 12274043"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Badsanierung", url: "https://aquapro24.de/bad" },
@@ -143,7 +143,7 @@ export default function BadsanierungMuenchenPage() {
               </div>
               <p className="text-lg text-white/90 mb-4">
                 Eine Badsanierung ist mehr als neue Fliesen – sie ist Koordination, Timing und saubere 
-                Ausführung. AquaPro24 begleitet Ihre Badsanierung in München von der Planung bis zur 
+                Ausführung. AquaPro 24 begleitet Ihre Badsanierung in München von der Planung bis zur 
                 Übergabe: Bestandsaufnahme, Empfehlungen zur Ausstattung, Ablaufplan und Umsetzung 
                 mit geprüften Gewerken.
               </p>
@@ -246,7 +246,7 @@ export default function BadsanierungMuenchenPage() {
             },
             {
               question: "Übernehmen Sie die komplette Koordination?",
-              answer: "Ja. Planung, Ablauf, Gewerke-Koordination und Umsetzung laufen zentral über AquaPro24."
+              answer: "Ja. Planung, Ablauf, Gewerke-Koordination und Umsetzung laufen zentral über AquaPro 24."
             },
             {
               question: "Wie lange dauert eine Badsanierung?",

@@ -77,7 +77,7 @@ export default function CookieRichtliniePage() {
                 Verantwortlich für die Verwendung von Cookies auf dieser Website ist:
               </p>
               <p className="text-muted-foreground mb-4">
-                AquaPro24<br />
+                AquaPro 24<br />
                 Inhaber: Mustafa Sakar<br />
                 Hardenbergstr. 4<br />
                 80992 München<br />
