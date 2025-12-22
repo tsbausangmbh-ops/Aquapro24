@@ -56,6 +56,10 @@ export default function FoerderrechnerPage() {
   const [badInvestition, setBadInvestition] = useState([15000]);
   const [altersgerecht, setAltersgerecht] = useState("ja");
 
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().getMonth() + 1;
+  const standDatum = `${currentMonth}/${currentYear}`;
+
   const toggleBadMassnahme = (massnahme: string) => {
     setBadMassnahmen(prev => 
       prev.includes(massnahme) 
@@ -273,11 +277,11 @@ export default function FoerderrechnerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderrechner München | KfW 458, BAFA & Energieberater 2025"
-        description="Förderrechner München Stand 12/2025: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen."
+        title={`Förderrechner München | KfW 458, BAFA & Energieberater ${currentYear}`}
+        description={`Förderrechner München Stand ${standDatum}: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen.`}
         canonical="https://aquapro24.de/foerderrechner"
-        keywords="Förderrechner München, KfW 458 Heizungsförderung, BAFA Dämmung, KfW 358 Kredit, KfW 455-B Barrierefreies Bad, Energieberater Förderung, Wärmepumpe 70% Förderung, iSFP Sanierungsfahrplan, BEG Förderung 2025"
-        aiSummary="AquaPro 24 Förderrechner München Stand 12/2025: KfW 458 Heizungsförderung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, KfW 358/359 Ergänzungskredit, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 0152 12274043"
+        keywords={`Förderrechner München, KfW 458 Heizungsförderung, BAFA Dämmung, KfW 358 Kredit, KfW 455-B Barrierefreies Bad, Energieberater Förderung, Wärmepumpe 70% Förderung, iSFP Sanierungsfahrplan, BEG Förderung ${currentYear}`}
+        aiSummary={`AquaPro 24 Förderrechner München Stand ${standDatum}: KfW 458 Heizungsförderung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, KfW 358/359 Ergänzungskredit, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 0152 12274043`}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
@@ -285,7 +289,7 @@ export default function FoerderrechnerPage() {
         ]}
         faqSchema={[
           {
-            question: "Was ist der Unterschied zwischen BAFA und KfW bei der Heizungsförderung 2025?",
+            question: `Was ist der Unterschied zwischen BAFA und KfW bei der Heizungsförderung ${currentYear}?`,
             answer: "Seit 2024 ist die KfW (Programm 458/459) für Heizungsförderung zuständig – bis 70% Zuschuss. BAFA fördert nur noch Dämmung, Fenster und Heizungsoptimierung mit 15-20%."
           },
           {
@@ -307,10 +311,10 @@ export default function FoerderrechnerPage() {
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
                 <Calculator className="w-3 h-3 mr-1" />
-                Förderrechner 2025
+                Förderrechner {currentYear}
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-                Förderrechner München – KfW 458, BAFA & Energieberater 2025
+                Förderrechner München – KfW 458, BAFA & Energieberater {currentYear}
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW 458 Heizungsförderung</span>
@@ -320,10 +324,10 @@ export default function FoerderrechnerPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieberater Kosten</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsförderung bis 70%</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">iSFP Sanierungsfahrplan</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BEG Förderung 2025</span>
+                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BEG Förderung {currentYear}</span>
               </div>
               <p className="text-lg text-white/90 mb-4 mt-4">
-                Stand Dezember 2025: KfW 458 für Heizung (bis 70%), BAFA für Dämmung (15-20%), KfW 455-B für barrierefreies Bad (12,5%). 
+                Stand {standDatum}: KfW 458 für Heizung (bis 70%), BAFA für Dämmung (15-20%), KfW 455-B für barrierefreies Bad (12,5%). 
                 Berechnen Sie Ihre individuelle Förderung.
               </p>
             </div>
@@ -369,7 +373,7 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Flame className="w-5 h-5 text-green-600" />
-                        KfW 458 Heizungsförderung München (Stand 12/2025)
+                        KfW 458 Heizungsförderung München (Stand {standDatum})
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
@@ -666,7 +670,7 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Leaf className="w-5 h-5 text-orange-600" />
-                        BAFA Einzelmaßnahmen München (Stand 12/2025)
+                        BAFA Einzelmaßnahmen München (Stand {standDatum})
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
@@ -717,7 +721,7 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Euro className="w-5 h-5 text-orange-600" />
-                        BAFA Fördersätze 2025
+                        BAFA Fördersätze {currentYear}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
@@ -774,7 +778,7 @@ export default function FoerderrechnerPage() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Building2 className="w-5 h-5 text-blue-600" />
-                        KfW 358/359 Ergänzungskredit München (Stand 12/2025)
+                        KfW 358/359 Ergänzungskredit München (Stand {standDatum})
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
