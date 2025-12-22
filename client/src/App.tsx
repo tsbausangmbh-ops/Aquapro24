@@ -120,17 +120,21 @@ function FloatingBackButton() {
   };
   
   return (
-    <Button
-      onClick={handleBack}
-      variant="secondary"
-      size="icon"
-      className="fixed left-4 z-[60] rounded-full shadow-xl bg-white dark:bg-slate-800 border-2 border-primary/30"
-      style={{ top: '50%', transform: 'translateY(-50%)' }}
-      data-testid="button-back"
-      aria-label="Zurück"
+    <div 
+      className="fixed left-4 z-[60]"
+      style={{ top: '50vh', transform: 'translateY(-50%)' }}
     >
-      <ArrowLeft className="h-5 w-5" />
-    </Button>
+      <Button
+        onClick={handleBack}
+        variant="secondary"
+        size="icon"
+        className="rounded-full shadow-xl bg-white dark:bg-slate-800 border-2 border-primary/30"
+        data-testid="button-back"
+        aria-label="Zurück"
+      >
+        <ArrowLeft className="h-5 w-5" />
+      </Button>
+    </div>
   );
 }
 
