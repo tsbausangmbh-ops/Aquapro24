@@ -354,7 +354,7 @@ export default function BadPage() {
             
             <div className="text-center mt-8 space-y-3">
               <p className="text-sm text-muted-foreground">
-                Barrierefreies Bad ab 20.000€ | KfW-Förderung bis 6.250€ möglich
+                Barrierefreies Bad ab 20.000€ | KfW-Förderung bis 6.250€ möglich | Alle Preise inkl. 19% MwSt.
               </p>
               <Button variant="outline" asChild>
                 <a href="#foerderrechner" data-testid="button-foerderrechner">

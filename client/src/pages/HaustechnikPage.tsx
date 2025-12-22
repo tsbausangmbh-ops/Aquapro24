@@ -256,6 +256,10 @@ export default function HaustechnikPage() {
                 </Card>
               ))}
             </div>
+            
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              Alle Preise inkl. 19% MwSt.
+            </p>
           </div>
         </section>
 
