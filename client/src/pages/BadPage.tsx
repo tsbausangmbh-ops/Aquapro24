@@ -435,8 +435,11 @@ export default function BadPage() {
                   
                   <div className="space-y-4">
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <div className="text-sm text-muted-foreground mb-1">Investitionskosten</div>
+                      <div className="text-sm text-muted-foreground mb-1">Beispiel: Barrierefreies Bad</div>
                       <div className="text-2xl font-bold">20.000€</div>
+                      <div className="text-xs text-muted-foreground mt-1">
+                        Bodengleiche Dusche, Haltegriffe, erhöhtes WC, rutschfester Boden
+                      </div>
                     </div>
                     
                     <div className="flex items-center justify-between py-2 border-b">
@@ -449,13 +452,29 @@ export default function BadPage() {
                       <span className="font-medium">10% (max. 6.250€)</span>
                     </div>
                     
+                    <div className="flex items-center justify-between py-2 border-b">
+                      <span className="text-sm">Ihre Investition</span>
+                      <span className="font-medium">20.000€</span>
+                    </div>
+                    
                     <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                      <div className="text-sm text-muted-foreground mb-1">Ihr möglicher Zuschuss</div>
-                      <div className="text-3xl font-bold text-green-600">bis 2.000€</div>
+                      <div className="text-sm text-muted-foreground mb-1">Ihr KfW-Zuschuss</div>
+                      <div className="text-3xl font-bold text-green-600">2.000€</div>
+                      <div className="text-sm text-muted-foreground mt-1">
+                        Sie zahlen nur: <span className="font-semibold text-foreground">18.000€</span>
+                      </div>
+                    </div>
+                    
+                    <div className="rounded-lg overflow-hidden">
+                      <img 
+                        src={galleryImage3} 
+                        alt="Barrierefreies Bad Beispiel" 
+                        className="w-full h-32 object-cover"
+                      />
                     </div>
                     
                     <p className="text-xs text-muted-foreground">
-                      * Beispielrechnung. Der tatsächliche Förderbetrag hängt von Ihrem Projekt ab.
+                      * Beispielrechnung für barrierefreies Bad. Förderung vor Baubeginn beantragen.
                     </p>
                   </div>
                 </CardContent>
