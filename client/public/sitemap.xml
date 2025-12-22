@@ -117,160 +117,116 @@
   
   <!-- Munich District Pages - Geo-Targeted SEO -->
   <url>
-    <loc>https://aquapro24.de/muenchen/schwabing</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/schwabing</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/bogenhausen</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/bogenhausen</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/sendling</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/sendling</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/pasing</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/pasing</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/maxvorstadt</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/maxvorstadt</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/haidhausen</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/haidhausen</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/neuhausen</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/neuhausen</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/trudering</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/trudering</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/laim</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/laim</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/giesing</loc>
-    <lastmod>2025-12-21</lastmod>
+    <loc>https://aquapro24.de/giesing</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://aquapro24.de/muenchen/moosach</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://aquapro24.de/moosach</loc>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.80</priority>
   </url>
+  
+  <url>
+    <loc>https://aquapro24.de/milbertshofen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Munich Region Pages -->
   <url>
     <loc>https://aquapro24.de/muenchen-nord</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
+  
   <url>
     <loc>https://aquapro24.de/muenchen-sued</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
+  
   <url>
     <loc>https://aquapro24.de/muenchen-west</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
+  
   <url>
     <loc>https://aquapro24.de/muenchen-ost</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/milbertshofen</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/nymphenburg</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/perlach</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/solln</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/hadern</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/allach</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/aubing</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://aquapro24.de/muenchen/feldmoching</loc>
-    <lastmod>2025-12-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.85</priority>
   </url>
   
   <!-- Service + Location Landing Pages -->
