@@ -1,12 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
-import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
-import NLPSection from "@/components/NLPSection";
-import CustomerStories, { badStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,86 +11,130 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Phone, 
   CheckCircle2, 
-  Droplets, 
-  Wrench, 
   Clock,
-  ShieldCheck,
+  Shield,
   Star,
   ArrowRight,
-  MessageCircle,
   Calendar,
-  MessageSquare
+  Sparkles,
+  Ruler,
+  Palette,
+  Users,
+  Award,
+  Home,
+  Hammer
 } from "lucide-react";
 import { Link } from "wouter";
-import bathroomImage1 from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import bathroomImage2 from "@assets/stock_images/modern_bathroom_reno_dcd4c0c4.jpg";
+import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
-const services = [
+const packages = [
   {
-    title: "Badsanierung komplett ab 16.000€",
-    description: "Komplettumbau 6-8m² in 2-3 Wochen: Abriss, Trockenbau, Fliesen, Sanitär, Elektrik. Villeroy & Boch, Duravit, Grohe. 3D-Planung gratis.",
-    features: ["2-3 Wochen", "Festpreis", "Alle Gewerke", "5 Jahre Garantie"]
+    name: "Standard",
+    price: "ab 16.000€",
+    size: "6-8 m²",
+    duration: "2-3 Wochen",
+    features: [
+      "Kompletter Abriss & Entsorgung",
+      "Neue Wasser- & Abwasserleitungen",
+      "Qualitätsfliesen verlegt",
+      "WC, Waschtisch & Dusche",
+      "Markenarmaturen (Grohe)",
+      "5 Jahre Garantie"
+    ],
+    popular: false
   },
   {
-    title: "Bad teilsanieren ab 4.500€",
-    description: "Dusche erneuern, WC austauschen, neue Armaturen montieren, Fliesen partiell erneuern. Schnelle Modernisierung in 3-5 Tagen.",
-    features: ["3-5 Tage", "Minimal-Umbau", "Sofort nutzbar", "Festpreis"]
+    name: "Komfort",
+    price: "ab 22.000€",
+    size: "6-8 m²",
+    duration: "2-3 Wochen",
+    features: [
+      "Alles aus Standard, plus:",
+      "Bodengleiche Dusche (XXL)",
+      "Villeroy & Boch Keramik",
+      "Hansgrohe Regendusche",
+      "LED-Spiegelschrank",
+      "Handtuchheizkörper"
+    ],
+    popular: true
   },
   {
-    title: "Barrierefreies Bad ab 20.000€",
-    description: "Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen, erhöhtes WC. KfW-Förderung bis 6.250€. Zukunftssicher für alle Altersgruppen.",
-    features: ["KfW-Förderung", "Stolperfrei", "Unterfahrbar", "Zukunftssicher"]
-  },
-  {
-    title: "Luxusbad Premium ab 28.000€",
-    description: "Freistehende Badewanne (Kaldewei, Bette), XXL-Regendusche (Hansgrohe Raindance), Fußbodenheizung, LED-Spiegelschrank.",
-    features: ["Villeroy & Boch", "Duravit", "Hansgrohe", "Freistehende Wanne"]
+    name: "Premium",
+    price: "ab 28.000€",
+    size: "8-12 m²",
+    duration: "3-4 Wochen",
+    features: [
+      "Alles aus Komfort, plus:",
+      "Freistehende Badewanne",
+      "Fußbodenheizung",
+      "Duravit & Kaldewei",
+      "Smartes Lichtsystem",
+      "Naturstein-Optionen"
+    ],
+    popular: false
   }
 ];
 
-const benefits = [
-  "Badsanierung München ab 16.000€ – Festpreis garantiert",
-  "3D-Badplanung mit Visualisierung kostenlos inklusive",
-  "Alle Gewerke (Sanitär, Fliesen, Elektrik) aus einer Hand",
-  "Villeroy & Boch, Duravit, Grohe, Hansgrohe, Geberit",
-  "Barrierefreies Bad ab 20.000€ mit KfW-Förderung",
-  "847+ Bäder saniert seit 2005, 5 Jahre Garantie"
+const processSteps = [
+  {
+    step: 1,
+    title: "Kostenlose Beratung",
+    description: "Wir kommen zu Ihnen, nehmen Maß und besprechen Ihre Wünsche. Unverbindlich und kostenlos.",
+    icon: Users
+  },
+  {
+    step: 2,
+    title: "3D-Planung",
+    description: "Sie sehen Ihr neues Bad vorab am Bildschirm. Änderungen jederzeit möglich.",
+    icon: Palette
+  },
+  {
+    step: 3,
+    title: "Festpreisangebot",
+    description: "Transparenter Preis ohne versteckte Kosten. Gilt verbindlich bis zur Fertigstellung.",
+    icon: Ruler
+  },
+  {
+    step: 4,
+    title: "Umsetzung",
+    description: "In 2-4 Wochen ist Ihr Traumbad fertig. Alle Gewerke aus einer Hand.",
+    icon: Hammer
+  }
+];
+
+const guarantees = [
+  { title: "Festpreisgarantie", description: "Der Preis gilt – ohne Nachforderungen" },
+  { title: "5 Jahre Garantie", description: "Auf alle Arbeiten und Materialien" },
+  { title: "Termingarantie", description: "Fertigstellung im vereinbarten Zeitraum" },
+  { title: "Sauberkeitsgarantie", description: "Wir hinterlassen Ihr Zuhause besenrein" }
 ];
 
 const faqItems = [
   {
     question: "Was kostet eine Badsanierung in München?",
-    answer: "Badsanierung München Kosten: Standard-Bad (6-8m²) ab 16.000€, Komfort-Bad ab 22.000€, Luxus-Bad ab 28.000€. Barrierefreie Bäder ab 20.000€ mit möglicher KfW-Förderung. Bei AquaPro24 erhalten Sie einen verbindlichen Festpreis nach kostenloser Vor-Ort-Beratung - ohne versteckte Kosten."
+    answer: "Eine Komplettsanierung eines 6-8 m² Bades beginnt bei 16.000€. Komfort-Bäder mit Markenausstattung kosten ab 22.000€, Premium-Bäder mit Extras ab 28.000€. Barrierefreie Umbauten ab 20.000€ sind oft KfW-förderfähig. Sie erhalten von uns immer einen verbindlichen Festpreis."
   },
   {
-    question: "Wie lange dauert eine Badsanierung in München?",
-    answer: "Eine komplette Badsanierung dauert bei uns 2-3 Wochen. Wir erstellen vorab einen detaillierten Zeitplan und halten uns daran. Bei größeren Projekten (z.B. Wellness-Bad) kann es 4 Wochen dauern. Während der Sanierung richten wir ein Provisorium ein, sodass Sie in Ihrer Wohnung bleiben können."
+    question: "Wie lange dauert eine Badsanierung?",
+    answer: "Eine Standard-Sanierung dauert 2-3 Wochen, größere Projekte 3-4 Wochen. Wir erstellen einen detaillierten Zeitplan und halten uns daran. Während der Arbeiten richten wir bei Bedarf ein Behelfsbad ein."
   },
   {
-    question: "Gibt es einen Festpreis für die Badsanierung?",
-    answer: "Ja, bei AquaPro24 erhalten Sie immer einen verbindlichen Festpreis vor Arbeitsbeginn. Nach der kostenlosen 3D-Planung wissen Sie exakt, was Ihr neues Bad kostet. Keine Nachforderungen, keine Überraschungen - der Preis gilt, auch wenn wir länger brauchen."
+    question: "Bieten Sie barrierefreie Badsanierung an?",
+    answer: "Ja, wir sind spezialisiert auf barrierefreie Bäder: bodengleiche Duschen, Haltegriffe, rutschfeste Böden, erhöhte WCs. KfW-Förderung bis 6.250€ möglich. Wir beraten Sie zu allen Fördermöglichkeiten."
   },
   {
-    question: "Bieten Sie barrierefreie Badsanierung in München an?",
-    answer: "Ja, wir sind spezialisiert auf barrierefreie und seniorengerechte Bäder in München. Leistungen: bodengleiche Duschen, rutschfeste Fliesen, Haltegriffe, erhöhte WCs, unterfahrbare Waschtische. Fördermöglichkeiten: KfW-Zuschüsse bis 6.250€. Wir unterstützen Sie bei der Antragstellung."
+    question: "Welche Garantie erhalte ich?",
+    answer: "5 Jahre Gewährleistung auf alle Arbeiten. Zusätzlich gelten die Herstellergarantien (z.B. 25 Jahre auf Villeroy & Boch Keramik). Bei Problemen sind wir schnell zur Stelle."
   },
   {
-    question: "Wie läuft eine Badsanierung bei AquaPro24 ab?",
-    answer: "1. Kostenlose Beratung vor Ort in München. 2. 3D-Visualisierung Ihres neuen Bades. 3. Verbindliches Festpreisangebot. 4. Koordination aller Gewerke aus einer Hand. 5. Termingerechte Fertigstellung in 2-3 Wochen. 6. Übergabe mit 5 Jahren Garantie."
+    question: "Muss ich während der Sanierung ausziehen?",
+    answer: "Nein, in den meisten Fällen nicht. Wir richten ein Provisorium ein und arbeiten so, dass Sie Ihr Zuhause weiter nutzen können. Staub und Lärm werden auf ein Minimum reduziert."
   },
   {
-    question: "Warum sollte ich AquaPro24 für die Badsanierung wählen?",
-    answer: "AquaPro24 bietet: Alles aus einer Hand (kein Handwerker-Stress), 3D-Planung inklusive, Festpreisgarantie, 847+ sanierte Bäder in München, 5 Jahre Gewährleistung, termingerechte Fertigstellung. Wir koordinieren Sanitär, Fliesen, Elektrik und Maler - Sie haben nur einen Ansprechpartner."
-  },
-  {
-    question: "Welche Garantie gibt es auf die Badsanierung?",
-    answer: "Wir geben 5 Jahre Gewährleistung auf alle Badsanierungsarbeiten. Sollte innerhalb dieser Zeit etwas nicht stimmen, kommen wir kostenlos und beheben das Problem. Zusätzlich gelten die Herstellergarantien auf Armaturen, Sanitärobjekte und Fliesen."
-  },
-  {
-    question: "In welchen Münchner Stadtteilen bieten Sie Badsanierung an?",
-    answer: "Wir sanieren Bäder in ganz München: Schwabing, Bogenhausen, Sendling, Neuhausen, Giesing, Pasing, Laim, Trudering, Maxvorstadt, Haidhausen, Moosach, Milbertshofen, Nymphenburg und alle weiteren Stadtteile. Kostenlose Beratung: 0152 12274043."
+    question: "Welche Marken verbauen Sie?",
+    answer: "Wir arbeiten mit Premium-Herstellern: Villeroy & Boch, Duravit, Geberit für Keramik. Grohe, Hansgrohe für Armaturen. Kaldewei, Bette für Wannen. Alle Produkte sind qualitätsgeprüft und langlebig."
   }
 ];
 
@@ -104,86 +145,80 @@ export default function BadPage() {
         title="Badsanierung München | Komplett & hochwertig"
         description="Badsanierung in München: Komplett, modern & stressfrei. Planung, Ausführung & Koordination aus einer Hand. Jetzt beraten lassen!"
         canonical="https://aquapro24.de/bad"
-        keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, barrierefreies Bad München, Bad Schwabing, Badsanierung Bogenhausen, Bad Sendling, Badsanierung Pasing, Bad Maxvorstadt, Badsanierung Haidhausen, Bad Neuhausen, Badsanierung Trudering, Bad Laim, Badsanierung Giesing, Bad Moosach, Badsanierung Milbertshofen, Bad Nymphenburg, Badsanierung Perlach, Bad Solln, Badsanierung Hadern, Bad Allach, Badsanierung Aubing, Bad Feldmoching, Bad Isarvorstadt, Bad Lehel, Badumbau München, seniorengerechtes Bad München, Traumbad München, altersgerechtes Bad München, Badmodernisierung München, Bad erneuern München"
-        aiSummary="AquaPro24 Badsanierung München: Komplettumbau in 2-3 Wochen, Festpreis ab 16.000€. Barrierefreie Bäder ab 20.000€ mit KfW-Förderung, Luxusbad ab 28.000€. 847+ Traumbäder realisiert, 5 Jahre Garantie. Kontakt: 0152 12274043"
+        keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren, Komplettbad München, barrierefreies Bad München, Badumbau München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Badsanierung", url: "https://aquapro24.de/bad" }
         ]}
         serviceSchema={{
           name: "Badsanierung München",
-          description: "Badsanierung München: Komplettumbau in 2-3 Wochen, 3D-Planung inklusive, barrierefreie Bäder mit KfW-Förderung. 847+ Traumbäder seit 2005.",
+          description: "Badsanierung München: Komplettumbau in 2-4 Wochen, 3D-Planung inklusive, Festpreis ab 16.000€. 5 Jahre Garantie.",
           serviceType: "Badsanierung",
           urlSlug: "bad",
           catalogName: "Badsanierung-Leistungen",
           serviceOffers: [
             { name: "Komplettsanierung in 2-4 Wochen" },
-            { name: "Teilsanierung & Modernisierung" },
             { name: "Barrierefreies Bad mit KfW-Förderung" },
             { name: "3D-Planung & Visualisierung" }
           ],
           aggregateRating: {
-            ratingValue: 4.8,
-            reviewCount: 89
+            ratingValue: 4.9,
+            reviewCount: 127
           }
         }}
       />
       <Header />
+      
       <main id="main-content">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+        {/* Hero Section */}
+        <section className="relative py-12 lg:py-16 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${bathroomImage1})` }}
+            style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge className="gap-1 bg-cyan-600 text-white mb-4">
-                <Droplets className="w-3 h-3" />
+            <div className="max-w-2xl">
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                <Sparkles className="w-3 h-3 mr-1" />
                 Badsanierung München
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+              
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 Badsanierung München – Komplettumbau vom Profi
               </h1>
-              <div className="sr-only" data-testid="keyword-cloud">
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad sanieren komplett</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badezimmer renovieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad modernisieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">barrierefreies Bad einbauen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">seniorengerechtes Bad</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">bodengleiche Dusche</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badewanne zu Dusche</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fliesen verlegen Bad</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">WC austauschen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Waschtisch montieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Duschkabine einbauen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Badsanierung Schwabing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad Bogenhausen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad Sendling</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Bad Pasing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Traumbad gestalten</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">3D Badplanung</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung Bad</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Badsanierung</span>
+              
+              <p className="text-xl text-white/90 mb-6">
+                Ihr neues Traumbad in 2-4 Wochen. Festpreis ab 16.000€, 
+                5 Jahre Garantie, alle Gewerke aus einer Hand.
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>Festpreisgarantie</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>3D-Planung gratis</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>5 Jahre Garantie</span>
+                </div>
               </div>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Ihr neues Bad in nur 2-4 Wochen.</strong> Komplettumbau zum Festpreis - 
-                ohne versteckte Kosten, ohne böse Überraschungen.
-              </p>
-              <p className="text-white/80 mb-6">
-                Von der ersten Beratung bis zur finalen Abnahme: Wir übernehmen alles aus einer Hand. 
-                Fliesen, Sanitär, Elektrik, Beleuchtung - koordiniert von unserem Partnernetzwerk.
-              </p>
+              
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-bad">
+                <Button size="lg" asChild data-testid="button-call-hero">
+                  <a href="tel:+4915212274043">
                     <Phone className="w-5 h-5 mr-2" />
                     Jetzt beraten lassen
                   </a>
                 </Button>
                 <ServiceBooking 
                   serviceType="bad"
-                  buttonText="24h Buchungstermin"
+                  buttonText="Termin buchen"
                   buttonSize="lg"
                   buttonVariant="outline"
                   buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
@@ -195,69 +230,112 @@ export default function BadPage() {
 
         <TrustBar />
 
-        <NLPSection
-          problemTitle="Diese Probleme kennen viele Münchner"
-          problems={[
-            "Das alte Bad ist in die Jahre gekommen und wirkt trist",
-            "Zu wenig Platz und unpraktische Aufteilung",
-            "Schimmel in Ecken und Fugen trotz regelmäßiger Reinigung",
-            "Hohe Heizkosten durch schlechte Dämmung",
-            "Einstieg in die Badewanne wird beschwerlich"
-          ]}
-          solutionTitle="Ihre Vorteile mit KSHW München"
-          solutions={[
-            "Komplette Badsanierung aus einer Hand - keine 5 verschiedenen Handwerker",
-            "Kostenlose 3D-Visualisierung Ihres neuen Bades",
-            "Festpreisgarantie ohne Nachforderungen",
-            "Modernste Materialien für jahrelange Freude",
-            "Barrierefreie Lösungen für alle Generationen"
-          ]}
-          futureState="...Sie betreten jeden Morgen Ihr neues Traumbad. Alles ist genau so, wie Sie es sich vorgestellt haben - modern, funktional und einladend. Ihre Investition zahlt sich jeden Tag aus und steigert gleichzeitig den Wert Ihrer Immobilie."
-          authorityText="Über 500 Badsanierungen in München erfolgreich abgeschlossen"
-          urgencyText="Noch 3 Beratungstermine diese Woche frei"
-          transformationSteps={[
-            "Kostenlose Beratung vor Ort: Wir besprechen Ihre Wünsche und zeigen Möglichkeiten.",
-            "3D-Visualisierung: Sie sehen Ihr neues Bad vorab am Bildschirm - so treffen Sie die richtige Entscheidung.",
-            "Termingerechte Umsetzung: In 2-3 Wochen ist Ihr Traumbad fertig - wir räumen auf und Sie genießen."
-          ]}
-        />
-
-        <ServiceAdvisor serviceType="bad" />
-
-        <CustomerStories 
-          stories={badStories}
-          title="Badsanierung in München: Echte Erfolgsgeschichten"
-          subtitle="So haben wir anderen Münchnern zu ihrem Traumbad verholfen"
-        />
-
-        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
+        {/* Pakete Section */}
+        <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Badsanierung München: Unsere Leistungen & Preise</h2>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Badsanierung München: Unsere Pakete</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Kompetente Beratung, professionelle Ausführung und erstklassiger Service - alles aus einer Hand.
+                Transparente Preise, klare Leistungen. Wählen Sie das Paket, das zu Ihnen passt.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {services.map((service) => (
-                <Card key={service.title} className="hover-elevate">
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {packages.map((pkg) => (
+                <Card 
+                  key={pkg.name} 
+                  className={`relative ${pkg.popular ? 'border-primary shadow-lg' : ''}`}
+                >
+                  {pkg.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <Badge className="bg-primary text-primary-foreground">
+                        <Star className="w-3 h-3 mr-1" />
+                        Beliebt
+                      </Badge>
+                    </div>
+                  )}
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                        <Wrench className="w-6 h-6 text-muted-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-3">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.features.map((feature) => (
-                            <Badge key={feature} variant="outline" className="text-xs">
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
+                    <div className="text-center mb-6">
+                      <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
+                      <div className="text-3xl font-bold text-primary mb-1">{pkg.price}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {pkg.size} | {pkg.duration}
                       </div>
                     </div>
+                    
+                    <ul className="space-y-3 mb-6">
+                      {pkg.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      className="w-full" 
+                      variant={pkg.popular ? "default" : "outline"}
+                      asChild
+                    >
+                      <a href="tel:+4915212274043">
+                        Angebot anfordern
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-sm text-muted-foreground">
+                Barrierefreies Bad ab 20.000€ | KfW-Förderung bis 6.250€ möglich
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Ablauf Section */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">So läuft Ihre Badsanierung ab</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Von der ersten Beratung bis zur Schlüsselübergabe – transparent und stressfrei.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              {processSteps.map((step) => (
+                <div key={step.step} className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
+                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Garantien Section */}
+        <section className="py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <p className="text-muted-foreground">
+                Sicherheit und Qualität – darauf können Sie sich verlassen.
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {guarantees.map((item, index) => (
+                <Card key={index}>
+                  <CardContent className="p-5 text-center">
+                    <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -265,49 +343,67 @@ export default function BadPage() {
           </div>
         </section>
 
-        {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+        {/* Marken Section */}
+        <section className="py-10 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Markenqualität für Ihr Bad</h2>
+              <p className="text-muted-foreground text-sm">
+                Wir verbauen nur Produkte von führenden Herstellern.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Villeroy & Boch</div>
+                <div className="text-xs">Keramik</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Duravit</div>
+                <div className="text-xs">Sanitär</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Grohe</div>
+                <div className="text-xs">Armaturen</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Hansgrohe</div>
+                <div className="text-xs">Duschen</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Geberit</div>
+                <div className="text-xs">Installation</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Kaldewei</div>
+                <div className="text-xs">Wannen</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Text Section */}
+        <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Kosten Badsanierung München: Was kostet ein neues Bad?
+            <h2 className="text-2xl font-bold mb-6">
+              Badsanierung München: Ihr Traumbad in besten Händen
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Eine Badsanierung ist mehr als nur eine Renovierung - es ist die Verwandlung eines der wichtigsten Räume in Ihrem 
-                Zuhause. Als Münchner Partnernetzwerk haben wir bereits über 500 Bäder komplett saniert und wissen genau, worauf 
-                es ankommt: präzise Planung, hochwertige Materialien und handwerkliche Perfektion.
+                Eine Badsanierung ist eine Investition in Ihre Lebensqualität. Als Münchner Meisterbetrieb 
+                haben wir hunderte Bäder erfolgreich saniert – von der kompakten Stadtwohnung bis zur 
+                großzügigen Villa. Unser Versprechen: Festpreis, Termingarantie, 5 Jahre Gewährleistung.
               </p>
               <p>
-                Unser Versprechen an Sie: Ihr neues Bad wird in 2-4 Wochen fertig sein - termingerecht, im Budget und genau so, 
-                wie Sie es sich vorgestellt haben. Dafür sorgen wir mit einem durchdachten Ablaufplan und der Koordination aller 
-                Gewerke aus einer Hand.
+                Bei uns erhalten Sie alles aus einer Hand. Kein Jonglieren mit verschiedenen Handwerkern, 
+                keine Abstimmungsprobleme. Wir koordinieren Sanitär, Fliesen, Elektrik und Malerarbeiten – 
+                Sie haben nur einen Ansprechpartner.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Bad sanieren lassen München: So läuft es ab</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-6">Barrierefreies Bad mit Förderung</h3>
               <p>
-                Alles beginnt mit einer kostenlosen Beratung vor Ort. Wir nehmen Maß, besprechen Ihre Wünsche und zeigen Ihnen 
-                Möglichkeiten auf, die Sie vielleicht noch gar nicht kannten. Anschließend erstellen wir eine 3D-Visualisierung 
-                Ihres neuen Bades - so können Sie vorab sehen, wie alles aussehen wird, und eventuelle Änderungen direkt am 
-                Bildschirm vornehmen.
-              </p>
-              <p>
-                Nach Freigabe des Entwurfs erstellen wir ein verbindliches Festpreisangebot. Dieser Preis gilt - ohne versteckte 
-                Kosten, ohne Nachforderungen. Erst wenn Sie vollständig überzeugt sind, beginnen wir mit der Umsetzung.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Badezimmer renovieren lassen München: Warum es sich lohnt</h3>
-              <p>
-                Ein modernes Bad steigert nicht nur Ihre Lebensqualität, sondern auch den Wert Ihrer Immobilie um durchschnittlich 
-                5-10%. Besonders barrierefreie Bäder sind zukunftssicher und werden mit KfW-Förderungen unterstützt. Wir beraten 
-                Sie gerne zu allen Fördermöglichkeiten.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Bad komplett umbauen München: Alles aus einer Hand</h3>
-              <p>
-                Bei uns müssen Sie nicht fünf verschiedene Handwerker koordinieren. Wir übernehmen alles: Demontage, Rohinstallation, 
-                Elektrik, Fliesen, Sanitärmontage und Malerarbeiten. Ein Ansprechpartner, ein Termin, ein Festpreis. Das spart Ihnen 
-                Zeit, Nerven und häufig auch Geld.
-              </p>
-              <p>
-                Auf alle unsere Arbeiten geben wir 5 Jahre Gewährleistung - damit Sie lange Freude an Ihrem neuen Bad haben. Und 
-                sollte doch einmal etwas sein: Wir sind schnell zur Stelle und beheben das Problem.
+                Barrierefreie Bäder sind nicht nur für Senioren sinnvoll. Bodengleiche Duschen, breite 
+                Türen und rutschfeste Böden bieten Komfort für alle Generationen. Mit der KfW-Förderung 
+                erhalten Sie bis zu 6.250€ Zuschuss. Wir beraten Sie gerne zu den Möglichkeiten.
               </p>
             </div>
           </div>
@@ -315,7 +411,6 @@ export default function BadPage() {
 
         <ServiceAreas 
           serviceName="Badsanierung" 
-          
           highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
         />
 
@@ -324,26 +419,27 @@ export default function BadPage() {
           title="Häufige Fragen zur Badsanierung"
         />
 
-        <section className="py-6 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+        {/* CTA Section */}
+        <section className="py-12 bg-primary text-primary-foreground">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Badsanierung München anfragen – Kostenlose Beratung
+              Bereit für Ihr neues Traumbad?
             </h2>
-            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
-              Lassen Sie sich unverbindlich beraten. Wir kommen zu Ihnen und erstellen ein 
-              individuelles Angebot - kostenlos und ohne Verpflichtung.
+            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+              Kostenlose Beratung, unverbindliches Angebot, 3D-Visualisierung inklusive. 
+              Rufen Sie uns an oder buchen Sie direkt einen Termin.
             </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-bad-cta">
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" variant="secondary" asChild data-testid="button-call-cta">
+                <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-white text-secondary border-white" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white" asChild>
                 <Link href="/termin">
-                  <Clock className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Termin buchen
                 </Link>
               </Button>
             </div>
@@ -352,6 +448,7 @@ export default function BadPage() {
 
         <RelatedServices currentService="bad" />
       </main>
+      
       <Footer />
       <AIChatWidget serviceCategory="bad" />
     </div>
