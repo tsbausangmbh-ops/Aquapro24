@@ -144,6 +144,13 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 - **Semantische HTML-Struktur**: Header, Main, Footer mit korrekten Landmarks
 - **Barrierefreiheitserklärung**: Dedizierte Seite unter /barrierefreiheit
 
+### Pre-Rendering für SEO (December 2025)
+- **react-snap**: Statische HTML-Generierung beim Build für besseres Crawling
+- **Hydration Support**: main.tsx nutzt hydrateRoot() für pre-gerenderte Seiten
+- **Alle 65+ Seiten**: Homepage, Services, Stadtteile, Landing Pages werden pre-gerendert
+- **Crawler-Optimierung**: Google, Bing, und KI-Assistenten erhalten vollständiges HTML
+- **Build-Zeit Integration**: Pre-Rendering läuft automatisch nach dem Vite-Build
+
 ### Performance Optimizations (December 2025)
 - **Font Loading**: Reduziert von 25+ auf 2 Schriftarten (Inter, Plus Jakarta Sans)
 - **Async Font Loading**: Fonts via `preload` + `onload` für nicht-blockierendes Laden
