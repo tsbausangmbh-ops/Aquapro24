@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
+import ColorfulFAQ from "@/components/ColorfulFAQ";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
@@ -14,18 +15,14 @@ import {
   Leaf,
   Shield,
   CreditCard,
-  AlertTriangle,
   CheckCircle2,
   MapPin,
   FileText,
   Droplets,
   ThermometerSun,
-  Home,
-  Users,
   Sparkles,
   Calendar,
   Hammer,
-  MessageCircle,
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
@@ -258,27 +255,12 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {faqs.map((faq, index) => (
-                <div 
-                  key={index} 
-                  className={`${faq.lightBg} ${faq.borderColor} border rounded-lg p-5 transition-all duration-200`}
-                  data-testid={`faq-card-${index}`}
-                >
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className={`${faq.color} w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <faq.icon className="w-4 h-4 text-white" />
-                    </div>
-                    <h3 className="font-semibold text-base leading-tight">{faq.question}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ColorfulFAQ 
+          items={faqs} 
+          title="Ihre Fragen – unsere Antworten"
+          subtitle="Echte Beispiele von Kunden, denen wir geholfen haben"
+          columns={4}
+        />
 
         <section className="py-6 lg:py-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
