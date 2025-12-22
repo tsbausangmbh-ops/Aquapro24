@@ -22,7 +22,11 @@ import {
   Users,
   Award,
   Home,
-  Hammer
+  Hammer,
+  Calculator,
+  Euro,
+  FileText,
+  HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
@@ -401,6 +405,123 @@ export default function BadPage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* KfW-Förderung Section */}
+        <section className="py-12 lg:py-16 bg-primary/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <Badge className="mb-4">
+                <Euro className="w-3 h-3 mr-1" />
+                Staatliche Förderung
+              </Badge>
+              <h2 className="text-3xl font-bold mb-3">KfW-Förderung für barrierefreie Bäder</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Bis zu 6.250€ Zuschuss vom Staat für Ihren barrierefreien Badumbau. Wir beraten Sie und helfen beim Antrag.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-8">
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Calculator className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Förderrechner</h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <div className="text-sm text-muted-foreground mb-1">Investitionskosten</div>
+                      <div className="text-2xl font-bold">20.000€</div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between py-2 border-b">
+                      <span className="text-sm">KfW-Programm 455-B</span>
+                      <span className="font-medium">Barrierereduzierung</span>
+                    </div>
+                    
+                    <div className="flex items-center justify-between py-2 border-b">
+                      <span className="text-sm">Fördersatz</span>
+                      <span className="font-medium">10% (max. 6.250€)</span>
+                    </div>
+                    
+                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                      <div className="text-sm text-muted-foreground mb-1">Ihr möglicher Zuschuss</div>
+                      <div className="text-3xl font-bold text-green-600">bis 2.000€</div>
+                    </div>
+                    
+                    <p className="text-xs text-muted-foreground">
+                      * Beispielrechnung. Der tatsächliche Förderbetrag hängt von Ihrem Projekt ab.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <FileText className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Kostenlose Förderberatung</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Wir prüfen Ihre Förderfähigkeit und helfen beim Antrag. Beratung vor Ort inklusive.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card>
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Förderfähige Maßnahmen</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>Bodengleiche Dusche einbauen</li>
+                          <li>Haltegriffe & Stützklappgriffe</li>
+                          <li>Rutschfeste Bodenbeläge</li>
+                          <li>Erhöhtes WC / Dusch-WC</li>
+                          <li>Unterfahrbarer Waschtisch</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card>
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <HelpCircle className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Wer wird gefördert?</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Eigentümer, Mieter (mit Zustimmung), Wohnungseigentümergemeinschaften. 
+                          Keine Altersgrenze, kein Pflegegrad erforderlich.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Button className="w-full" size="lg" asChild>
+                  <a href="tel:+4915212274043">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Förderberatung anfordern
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
