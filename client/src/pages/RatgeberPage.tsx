@@ -29,7 +29,7 @@ import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.jp
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.jpg";
 import plumberImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
-import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
+import heroImage from "@assets/generated_images/expert_reading_technical_guide.png";
 
 const guides = [
   {
