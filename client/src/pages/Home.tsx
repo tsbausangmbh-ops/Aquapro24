@@ -34,7 +34,7 @@ import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jp
 import rohrreinigungImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.jpg";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
 import heizungImage from "@assets/stock_images/white_radiator_heate_2e8a306c.jpg";
-import warmwasserImage from "@assets/stock_images/small_white_low_pres_706ec0e6.jpg";
+import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_boiler.png";
 import waermepumpeImage from "@assets/generated_images/vaillant_heat_pump_outdoor_unit.png";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
 import galleryImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.jpg";
