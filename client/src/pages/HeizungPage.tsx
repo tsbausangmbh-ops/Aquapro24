@@ -1,101 +1,134 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
-import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
-import NLPSection from "@/components/NLPSection";
-import CustomerStories, { heizungStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
-import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Phone, 
   CheckCircle2, 
-  Flame, 
   Clock,
-  ShieldCheck,
-  Star,
-  ArrowRight,
+  Shield,
+  Flame,
   Thermometer,
-  FileText,
-  MessageCircle,
+  Wrench,
   Calendar,
-  MessageSquare
+  Users,
+  Hammer,
+  Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import heatingImage1 from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
-import heatingImage2 from "@assets/stock_images/heating_system_boile_d08e816e.jpg";
+import heroImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
 const services = [
   {
-    title: "Heizung reparieren München ab 154€",
-    description: "Heizung ausgefallen, Therme defekt, Brenner kaputt? 24h Notdienst, 45-60 Min. vor Ort. Viessmann, Vaillant, Buderus, Wolf, Junkers – alle Marken.",
-    features: ["24/7 Notdienst", "Alle Hersteller", "45-60 Min.", "Festpreis"]
+    icon: Wrench,
+    title: "Heizung reparieren",
+    price: "ab 154€",
+    description: "Heizung ausgefallen, Therme defekt? 24h Notdienst, 45-60 Min. vor Ort.",
+    features: ["24/7 Notdienst", "Alle Marken", "Festpreis"]
   },
   {
-    title: "Heizungswartung München ab 154€",
-    description: "Jahreswartung komplett: Brenner reinigen, Filter wechseln, Abgasmessung, Druck prüfen, Sicherheitscheck. Spart bis 15% Heizkosten.",
-    features: ["Brennereinstellung", "Abgasmessung", "Kesselreinigung", "Protokoll"]
+    icon: Settings,
+    title: "Heizungswartung",
+    price: "ab 154€",
+    description: "Jahreswartung: Brenner reinigen, Abgasmessung, Druck prüfen.",
+    features: ["15% sparen", "Protokoll", "Garantieerhalt"]
   },
   {
-    title: "Wärmepumpe München bis 70% Förderung",
-    description: "Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm, Wolf CHA. BAFA-Antrag komplett übernommen. Ab 18.000€ nach Förderung.",
-    features: ["Bis 70% BAFA", "Förderantrag", "Energieberatung", "5 Jahre Garantie"]
+    icon: Flame,
+    title: "Gasheizung erneuern",
+    price: "ab 8.500€",
+    description: "Alte Heizung tauschen: Viessmann, Vaillant, Buderus, Wolf.",
+    features: ["Demontage inkl.", "Förderprüfung", "5 Jahre Garantie"]
   },
   {
-    title: "Gasheizung erneuern ab 8.500€",
-    description: "Alte Gasheizung tauschen: Viessmann Vitodens, Vaillant ecoTEC, Buderus Logamax, Wolf CGB-2. Inkl. Demontage, Anschluss, Inbetriebnahme.",
-    features: ["Viessmann", "Vaillant", "Buderus", "Förderprüfung"]
+    icon: Thermometer,
+    title: "Fußbodenheizung",
+    price: "ab 45€/m²",
+    description: "Fußbodenheizung verlegen, nachrüsten oder reparieren.",
+    features: ["Trocken-/Nasssystem", "Steuerung", "Energieeffizient"]
+  },
+  {
+    icon: Settings,
+    title: "Thermostat wechseln",
+    price: "ab 89€",
+    description: "Heizungsthermostat austauschen, Smart-Thermostat installieren.",
+    features: ["Tado", "Netatmo", "Heizkosten sparen"]
+  },
+  {
+    icon: Wrench,
+    title: "Heizkörper austauschen",
+    price: "ab 280€",
+    description: "Heizkörper montieren, entlüften, Ventil wechseln.",
+    features: ["Alle Typen", "Demontage inkl.", "Festpreis"]
   }
 ];
 
-const benefits = [
-  "Heizungsreparatur München ab 154€/Std. – Festpreis garantiert",
-  "24/7 Notdienst: 45-60 Minuten vor Ort bei Heizungsausfall",
-  "Alle Marken: Viessmann, Vaillant, Buderus, Wolf, Junkers",
-  "Wärmepumpe mit bis zu 70% BAFA-Förderung 2025",
-  "Wartung ab 154€ spart bis 15% Heizkosten jährlich",
-  "2.800+ zufriedene Kunden seit 2005 in München"
+const processSteps = [
+  {
+    step: 1,
+    title: "Anruf",
+    description: "Schildern Sie Ihr Problem. Bei Notfällen sofortige Hilfe.",
+    icon: Phone
+  },
+  {
+    step: 2,
+    title: "Termin",
+    description: "Wir kommen pünktlich – bei Notfällen in 45-60 Min.",
+    icon: Calendar
+  },
+  {
+    step: 3,
+    title: "Festpreis",
+    description: "Analyse vor Ort, transparenter Preis vor Arbeitsbeginn.",
+    icon: Users
+  },
+  {
+    step: 4,
+    title: "Erledigt",
+    description: "Ihre Heizung läuft wieder – garantiert.",
+    icon: Hammer
+  }
+];
+
+const guarantees = [
+  { title: "Festpreisgarantie", description: "Preis gilt – ohne Nachforderungen" },
+  { title: "2 Jahre Garantie", description: "Auf alle Arbeiten und Materialien" },
+  { title: "45-60 Min. Notdienst", description: "Schnelle Hilfe bei Heizungsausfall" },
+  { title: "Alle Marken", description: "Viessmann, Vaillant, Buderus, Wolf" }
 ];
 
 const faqItems = [
   {
     question: "Was kostet ein Heizungs-Notdienst in München?",
-    answer: "Heizungs-Notdienst München Kosten: Anfahrt 49€, Diagnose ab 89€, Reparaturen ab 154€. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Festpreis. Keine versteckten Kosten, keine Nachforderungen. Der Preis gilt auch nachts und am Wochenende."
+    answer: "Anfahrt 49€, Reparaturen ab 154€. Sie erhalten vor Arbeitsbeginn einen verbindlichen Festpreis. Keine versteckten Kosten."
   },
   {
-    question: "Wie schnell ist der Heizungs-Notdienst in München vor Ort?",
-    answer: "Bei Heizungsausfall sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen in München. Unser 24/7 Notdienst ist rund um die Uhr erreichbar - auch nachts, an Wochenenden und Feiertagen. Einsatzgebiet: alle Münchner Stadtteile inkl. Schwabing, Bogenhausen, Sendling, Pasing."
+    question: "Wie schnell sind Sie bei einem Heizungsausfall vor Ort?",
+    answer: "Bei Notfällen in der Regel innerhalb von 45-60 Minuten. Wir sind 24/7 erreichbar, auch nachts und am Wochenende."
   },
   {
-    question: "Arbeitet der Heizungs-Notdienst auch nachts und am Wochenende?",
-    answer: "Ja, unser 24/7 Heizungs-Notdienst ist 365 Tage im Jahr erreichbar. Auch Heiligabend, Silvester und nachts zwischen 22 und 6 Uhr. Ein Heizungsausfall im Winter ist ein Notfall - wir lassen Sie nicht im Kalten sitzen. Telefon: 0152 12274043."
+    question: "Welche Heizungsmarken reparieren Sie?",
+    answer: "Alle Marken: Viessmann, Vaillant, Buderus, Wolf, Junkers/Bosch, Brötje, Weishaupt."
   },
   {
-    question: "Welche Heizungsmarken reparieren Sie in München?",
-    answer: "Wir reparieren alle Heizungsmarken: Viessmann, Vaillant, Buderus, Wolf, Junkers/Bosch, Brötje, Weishaupt, Kermi, und viele weitere. Unsere Techniker führen die häufigsten Ersatzteile direkt mit - für schnelle Reparatur noch am selben Tag."
+    question: "Was kostet eine Heizungswartung?",
+    answer: "Heizungswartung ab 154€ inkl. Anfahrt. Spart bis 15% Heizkosten und beugt teuren Reparaturen vor."
   },
   {
-    question: "Was kostet eine Heizungswartung in München?",
-    answer: "Heizungswartung München ab 154€ inkl. Anfahrt. Leistungen: Brenner reinigen, Filter tauschen, Druck prüfen, Sicherheitscheck, Protokoll. Eine jährliche Wartung spart bis 15% Heizkosten und beugt teuren Reparaturen vor. Wartungsverträge mit Notfall-Priorität verfügbar."
+    question: "Gibt es Förderung für eine neue Heizung?",
+    answer: "Ja, bis zu 40% staatliche Förderung (BAFA/KfW). Wir beraten Sie kostenlos zu Ihren Möglichkeiten."
   },
   {
-    question: "Wie läuft ein Heizungs-Einsatz bei AquaPro24 ab?",
-    answer: "1. Anruf unter 0152 12274043 - wir sind 24/7 erreichbar. 2. Terminvereinbarung - bei Notfällen sofort. 3. Techniker kommt pünktlich und analysiert das Problem. 4. Festpreis vor Arbeitsbeginn. 5. Reparatur direkt vor Ort. 6. Sie haben wieder Wärme - garantiert."
-  },
-  {
-    question: "Warum sollte ich AquaPro24 für Heizungsarbeiten wählen?",
-    answer: "AquaPro24 bietet: 24/7 Notdienst, 45-60 Min. Reaktionszeit, Festpreisgarantie, alle Heizungsmarken, 2 Jahre Gewährleistung, geprüfte Fachhandwerker. Über 1.200 Heizungsanlagen in München installiert und repariert. Ihr lokaler Partner seit 2005."
-  },
-  {
-    question: "Gibt es Förderung für eine neue Heizung in München?",
-    answer: "Ja, für den Heizungstausch gibt es bis zu 40% staatliche Förderung (BAFA/KfW). Gasheizung: geringe Förderung, Wärmepumpe: bis 70% Förderung möglich. Wir beraten neutral zu allen Optionen und unterstützen bei der Antragstellung - kostenlos."
+    question: "Geben Sie Garantie auf Heizungsarbeiten?",
+    answer: "Ja, 2 Jahre Gewährleistung auf alle Arbeiten. Bei Neuanlagen bis 5 Jahre Herstellergarantie."
   }
 ];
 
@@ -103,89 +136,83 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung reparieren München | Wartung & Notdienst"
-        description="Heizung defekt oder wartungsbedürftig? Heizungsservice München inkl. Reparatur, Wartung & schneller Hilfe vom Fachbetrieb."
+        title="Heizung München | Notdienst & Wartung 24/7"
+        description="Heizung München: Heizung ausgefallen, Therme defekt? Schnelle Reparatur, Wartung & Notdienst. Festpreis ab 154€."
         canonical="https://aquapro24.de/heizung"
-        keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München, Gasheizung München, Heizung Schwabing, Heizung Bogenhausen, Heizung Sendling, Heizung Pasing, Heizung Maxvorstadt, Heizung Haidhausen, Heizung Neuhausen, Heizung Trudering, Heizung Laim, Heizung Giesing, Heizung Moosach, Heizung Milbertshofen, Heizung Nymphenburg, Heizung Perlach, Heizung Solln, Heizung Hadern, Heizung Allach, Heizung Aubing, Heizung Feldmoching, Heizung Isarvorstadt, Heizung Lehel, Heizungsmonteur München, Heizungsinstallation München, Fußbodenheizung München, Heizung defekt München, Heizung reparieren München, Viessmann München, Vaillant München, Buderus München, Heizung Notdienst Schwabing, Heizungsreparatur Bogenhausen"
-        aiSummary="AquaPro24 Heizung München: 24/7 Notdienst bei Heizungsausfall, Wartung ab 154€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus. 1.200+ Anlagen installiert. Alle Münchner Stadtteile. Kontakt: 0152 12274043"
+        keywords="Heizung München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }
         ]}
         serviceSchema={{
-          name: "Heizung Notdienst & Wartung München",
-          description: "Heizungsnotdienst München: 24/7 Reparatur, Wartung ab 154€, Neuinstallation mit bis 70% Förderung. Alle Marken: Viessmann, Vaillant, Buderus, Wolf.",
+          name: "Heizung München",
+          description: "Heizungs-Notdienst München: 24/7 Reparatur, Wartung ab 154€. Alle Marken: Viessmann, Vaillant, Buderus.",
           serviceType: "Heizung/HVAC",
           urlSlug: "heizung",
           catalogName: "Heizungs-Leistungen",
           serviceOffers: [
-            { name: "Heizungsstörung / Ausfall Notdienst" },
-            { name: "Heizungswartung & Inspektion" },
-            { name: "Heizungsreparatur alle Marken" },
-            { name: "Heizungsmodernisierung mit Förderung" }
+            { name: "Heizungs-Notdienst" },
+            { name: "Heizungswartung" },
+            { name: "Heizungsreparatur" },
+            { name: "Heizungsmodernisierung" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
-            reviewCount: 156
+            reviewCount: 178
           }
         }}
       />
       <Header />
+      
       <main id="main-content">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-12 lg:py-16 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heatingImage1})` }}
+            style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge className="gap-1 bg-red-600 text-white mb-4">
-                <Flame className="w-3 h-3" />
-                Heizung München
+            <div className="max-w-2xl">
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                <Flame className="w-3 h-3 mr-1" />
+                24/7 Notdienst
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+              
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 Heizung München – Notdienst & Wartung 24/7
               </h1>
-              <div className="sr-only" data-testid="keyword-cloud">
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung reparieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung warten</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung austauschen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gasheizung installieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkessel tauschen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Brenner wechseln</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung entlüften</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Thermostat austauschen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Fußbodenheizung verlegen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungsausfall Notdienst</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Viessmann München</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vaillant München</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Buderus München</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Schwabing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Bogenhausen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Sendling</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizung Pasing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizungswartung ab 154€</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Heizung München</span>
+              
+              <p className="text-xl text-white/90 mb-6">
+                Heizung ausgefallen? Wir helfen schnell und zum Festpreis. 
+                45-60 Minuten Reaktionszeit bei Notfällen.
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>Festpreis ab 154€</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>45-60 Min. vor Ort</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>Alle Marken</span>
+                </div>
               </div>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Heizung ausgefallen? Keine Wärme im Winter?</strong> Das ist mehr als nur 
-                unangenehm - das ist ein echtes Problem, das schnell gelöst werden muss.
-              </p>
-              <p className="text-white/80 mb-6">
-                Installation, Wartung und Reparatur aller Heizungssysteme. Wir sorgen für wohlige 
-                Wärme in Ihrem Zuhause - zuverlässig, effizient und mit 24/7 Notdienst.
-              </p>
+              
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-heizung">
+                <Button size="lg" asChild data-testid="button-call-hero">
+                  <a href="tel:+4915212274043">
                     <Phone className="w-5 h-5 mr-2" />
                     Jetzt anrufen
                   </a>
                 </Button>
                 <ServiceBooking 
                   serviceType="heizung"
-                  buttonText="24h Buchungstermin"
+                  buttonText="Termin buchen"
                   buttonSize="lg"
                   buttonVariant="outline"
                   buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
@@ -197,70 +224,31 @@ export default function HeizungPage() {
 
         <TrustBar />
 
-        <EmergencyProcess serviceType="heizung" />
-
-        <NLPSection
-          problemTitle="Diese Sorgen kennen wir"
-          problems={[
-            "Die Heizung macht komische Geräusche und wird nicht mehr richtig warm",
-            "Die Energiekosten steigen jedes Jahr weiter an",
-            "Die alte Heizung könnte jeden Moment ausfallen",
-            "Niemand erklärt verständlich, was repariert werden muss",
-            "Angst vor hohen Reparaturkosten ohne Vorwarnung"
-          ]}
-          solutionTitle="So helfen wir Ihnen"
-          solutions={[
-            "24/7 Notdienst - auch nachts und am Wochenende erreichbar",
-            "Ehrliche Diagnose und transparente Preise vor Arbeitsbeginn",
-            "Alle Heizungsmarken - Viessmann, Vaillant, Buderus, Wolf und mehr",
-            "Förderberatung für bis zu 40% Zuschuss bei Heizungstausch",
-            "Wartungsverträge für sorgenfreie Heizperioden"
-          ]}
-          futureState="...Ihre Heizung läuft zuverlässig, Ihre Energiekosten sind gesunken und Sie haben einen vertrauenswürdigen Partner, der sich um alles kümmert. Bei uns ist das kein Wunschtraum - das ist Standard."
-          authorityText="24/7 Notdienst - Schnelle Hilfe bei Heizungsausfall"
-          urgencyText="Noch 3 Beratungstermine diese Woche frei"
-          transformationSteps={[
-            "Anruf oder Chat: Schildern Sie kurz das Problem - wir sind rund um die Uhr erreichbar.",
-            "Schnelle Diagnose: Unser Techniker kommt, prüft die Heizung und nennt Ihnen den Festpreis.",
-            "Sofortige Lösung: Die Reparatur erfolgt direkt - Sie haben wieder Wärme und Sicherheit."
-          ]}
-        />
-
-        <ServiceAdvisor serviceType="heizung" />
-
-        <CustomerStories 
-          stories={heizungStories}
-          title="Heizungsnotfälle gelöst: Echte Kundengeschichten"
-          subtitle="So haben wir anderen Münchnern in der Kälte geholfen"
-        />
-
-        <section className="pt-8 pb-4 lg:pt-10 lg:pb-6">
+        <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-4">Heizung München: Leistungen, Kosten & Notdienst</h2>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Von der Neuinstallation bis zur Reparatur - wir sind Ihr zuverlässiger Partner für alle Heizungsfragen.
+                Von der Reparatur bis zur Neuinstallation – wir sind Ihr Heizungs-Partner in München.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {services.map((service) => (
-                <Card key={service.title} className="hover-elevate">
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <Card key={index}>
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                        <Thermometer className="w-6 h-6 text-muted-foreground" />
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-primary" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-3">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.features.map((feature) => (
-                            <Badge key={feature} variant="outline" className="text-xs">
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
+                      <Badge variant="secondary">{service.price}</Badge>
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {service.features.map((feature, i) => (
+                        <Badge key={i} variant="outline" className="text-xs">{feature}</Badge>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
@@ -269,45 +257,101 @@ export default function HeizungPage() {
           </div>
         </section>
 
-        {/* Ausführlicher Text-Bereich für SEO */}
-        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">So einfach geht's</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Von Ihrem Anruf bis zur warmen Heizung – transparent und schnell.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              {processSteps.map((step) => (
+                <div key={step.step} className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
+                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <p className="text-muted-foreground">
+                Sicherheit und Qualität – darauf können Sie sich verlassen.
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {guarantees.map((item, index) => (
+                <Card key={index}>
+                  <CardContent className="p-5 text-center">
+                    <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Markenqualität</h2>
+              <p className="text-muted-foreground text-sm">
+                Wir reparieren und installieren alle führenden Heizungsmarken.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Viessmann</div>
+                <div className="text-xs">Vitocal, Vitodens</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Vaillant</div>
+                <div className="text-xs">ecoTEC, aroTHERM</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Buderus</div>
+                <div className="text-xs">Logamax, Logatherm</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Wolf</div>
+                <div className="text-xs">CGB-2, CHA</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Junkers</div>
+                <div className="text-xs">Bosch</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Heizungsreparatur München: Kosten, Ablauf & Wartung
+            <h2 className="text-2xl font-bold mb-6">
+              Ihr Heizungsfachbetrieb in München
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Eine funktionierende Heizung ist in den kalten Münchner Wintern unverzichtbar. Als Partnernetzwerk mit über 
-                20 Jahren Erfahrung sind wir Ihr verlässlicher Partner für alle Heizungsfragen - von der Wartung über die 
-                Reparatur bis zur kompletten Neuinstallation.
+                Als Münchner Heizungsfachbetrieb sind wir seit über 20 Jahren Ihr zuverlässiger Partner 
+                für alle Heizungsarbeiten. Ob Wartung, Reparatur oder Neuinstallation – wir helfen 
+                schnell, kompetent und zum Festpreis.
               </p>
               <p>
-                Unser 24/7-Notdienst steht Ihnen rund um die Uhr zur Verfügung. Bei einem Heizungsausfall sind wir in der 
-                Regel innerhalb von 45-60 Minuten bei Ihnen - auch nachts, am Wochenende und an Feiertagen. Denn wir wissen: 
-                Ohne Heizung wird es schnell ungemütlich und im schlimmsten Fall können Wasserleitungen einfrieren.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Heizung reparieren lassen München: Alle Marken, ein Ansprechpartner</h3>
-              <p>
-                Egal ob Viessmann, Vaillant, Buderus, Wolf, Junkers oder andere Hersteller - wir kennen alle Systeme und haben 
-                die häufigsten Ersatzteile direkt dabei. Das bedeutet für Sie: schnelle Reparatur, oft noch am selben Tag, 
-                ohne lange Wartezeiten auf Ersatzteile.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Heizung warten lassen München: Kosten sparen</h3>
-              <p>
-                Eine jährliche Heizungswartung kostet zwischen 150-200€ - und spart Ihnen langfristig ein Vielfaches. Denn 
-                eine gut gewartete Heizung verbraucht bis zu 15% weniger Energie, läuft zuverlässiger und hält länger. 
-                Unsere Wartungsverträge beinhalten bevorzugte Termine bei Notfällen und vergünstigte Reparaturen.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Alte Heizung austauschen München: Förderung bis 40%</h3>
-              <p>
-                Ist Ihre Heizung älter als 15-20 Jahre? Dann lohnt sich oft ein Austausch gegen ein modernes, effizientes 
-                System. Wir beraten Sie neutral zu allen Optionen - Gasbrennwert, Wärmepumpe, Pellets oder Hybrid - und 
-                helfen bei der Beantragung von Fördergeldern. Bis zu 40% der Investitionskosten können durch staatliche 
-                Förderung gedeckt werden.
-              </p>
-              <p>
-                Kontaktieren Sie uns für eine kostenlose Erstberatung. Wir prüfen Ihre aktuelle Situation, zeigen Einsparpotenziale 
-                auf und erstellen ein unverbindliches Angebot - transparent, fair und ohne versteckte Kosten.
+                Unser 24/7-Notdienst steht Ihnen rund um die Uhr zur Verfügung. Bei Heizungsausfall 
+                sind wir in 45-60 Minuten bei Ihnen – auch nachts, am Wochenende und an Feiertagen.
               </p>
             </div>
           </div>
@@ -315,34 +359,34 @@ export default function HeizungPage() {
 
         <ServiceAreas 
           serviceName="Heizungsservice" 
-          
           highlightAreas={["Pasing", "Laim", "Neuhausen"]}
         />
 
         <SimpleFAQ 
           items={faqItems}
-          title="Häufige Fragen zum Heizungsservice"
+          title="Häufige Fragen"
         />
 
-        <section className="py-6 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+        <section className="py-12 bg-primary text-primary-foreground">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Heizung Notdienst München – 24/7 erreichbar
+              Heizung defekt? Wir helfen sofort!
             </h2>
-            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
-              Unser 24/7 Notdienst ist für Sie da. In München und Umgebung meist innerhalb einer Stunde vor Ort.
+            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+              Rufen Sie uns an oder buchen Sie direkt einen Termin. 
+              Festpreis, schnelle Hilfe, 2 Jahre Garantie.
             </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" variant="secondary" asChild data-testid="button-call-cta">
+                <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-white text-secondary border-white" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white" asChild>
                 <Link href="/termin">
-                  <Clock className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Termin buchen
                 </Link>
               </Button>
             </div>
@@ -351,6 +395,7 @@ export default function HeizungPage() {
 
         <RelatedServices currentService="heizung" />
       </main>
+      
       <Footer />
       <AIChatWidget serviceCategory="heizung" />
     </div>

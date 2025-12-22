@@ -1,191 +1,214 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
-import ServiceAdvisor from "@/components/ServiceAdvisor";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
-import NLPSection from "@/components/NLPSection";
-import CustomerStories, { heizungStories } from "@/components/CustomerStories";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Flame, 
   Phone, 
   CheckCircle2, 
-  Wrench,
-  ThermometerSun,
-  Zap,
   Clock,
   Shield,
-  Award,
-  Star,
-  MessageCircle,
-  Droplets,
-  Settings,
+  Flame,
+  Wrench,
   Calendar,
-  MessageSquare
+  Users,
+  Hammer,
+  Zap,
+  ThermometerSun,
+  Droplets,
+  Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import waterHeaterImage1 from "@assets/generated_images/tankless_water_heater.png";
-import waterHeaterImage2 from "@assets/generated_images/water_boiler_installation.png";
+import heroImage from "@assets/generated_images/tankless_water_heater.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
+const services = [
+  {
+    icon: Flame,
+    title: "Durchlauferhitzer",
+    price: "ab 600€",
+    description: "Installation, Austausch, Reparatur. Vaillant, Stiebel Eltron, AEG.",
+    features: ["21-27 kW", "Elektronisch", "Festpreis"]
+  },
+  {
+    icon: ThermometerSun,
+    title: "Warmwasserspeicher",
+    price: "ab 800€",
+    description: "Boiler einbauen: 80-300 Liter. Viessmann, Vaillant, Buderus.",
+    features: ["Stehend", "Wandhängend", "Alle Größen"]
+  },
+  {
+    icon: Zap,
+    title: "Untertischspeicher",
+    price: "ab 280€",
+    description: "Kleinspeicher 5-15 Liter für Küche und Gäste-WC.",
+    features: ["Kompakt", "Schnelle Montage", "Wassersparen"]
+  },
+  {
+    icon: Droplets,
+    title: "Zirkulationspumpe",
+    price: "ab 380€",
+    description: "Sofort heißes Wasser an jeder Zapfstelle. Grundfos, Wilo.",
+    features: ["Sofort warm", "Energieeffizient", "Komfort"]
+  },
+  {
+    icon: Wrench,
+    title: "Boiler reparieren",
+    price: "ab 120€",
+    description: "Kein Warmwasser? Entkalkung, Heizstab, Thermostat.",
+    features: ["Diagnose", "Alle Marken", "Notdienst"]
+  },
+  {
+    icon: Settings,
+    title: "Wartung",
+    price: "ab 89€",
+    description: "Jährliche Wartung: Entkalkung, Anodenkontrolle, Effizienzcheck.",
+    features: ["Lebensdauer", "Effizienz", "Protokoll"]
+  }
+];
+
+const processSteps = [
+  {
+    step: 1,
+    title: "Anruf",
+    description: "Schildern Sie Ihr Problem – wir helfen schnell.",
+    icon: Phone
+  },
+  {
+    step: 2,
+    title: "Termin",
+    description: "Bei Ausfall oft am selben Tag.",
+    icon: Calendar
+  },
+  {
+    step: 3,
+    title: "Festpreis",
+    description: "Analyse vor Ort, transparenter Preis.",
+    icon: Users
+  },
+  {
+    step: 4,
+    title: "Warmwasser!",
+    description: "Ihr Gerät funktioniert wieder.",
+    icon: Hammer
+  }
+];
+
+const guarantees = [
+  { title: "Festpreisgarantie", description: "Preis gilt – ohne Nachforderungen" },
+  { title: "2 Jahre Garantie", description: "Auf alle Arbeiten" },
+  { title: "Schnelle Hilfe", description: "Oft am selben Tag" },
+  { title: "Alle Marken", description: "Vaillant, Stiebel Eltron, AEG" }
+];
+
+const faqItems = [
+  {
+    question: "Kein warmes Wasser - wie schnell können Sie helfen?",
+    answer: "Bei Warmwasserausfall sind wir in der Regel innerhalb von 2-4 Stunden bei Ihnen. Auch am Wochenende."
+  },
+  {
+    question: "Was kostet ein neuer Durchlauferhitzer?",
+    answer: "Durchlauferhitzer mit Installation ab ca. 600€. Festpreis vor Arbeitsbeginn."
+  },
+  {
+    question: "Durchlauferhitzer oder Speicher - was ist besser?",
+    answer: "Durchlauferhitzer: platzsparend, Wasser nur bei Bedarf. Speicher: sofort große Mengen heißes Wasser."
+  },
+  {
+    question: "Durchlauferhitzer macht nur lauwarmes Wasser?",
+    answer: "Oft Verkalkung oder defektes Heizelement. Häufig mit Wartung oder kleiner Reparatur behebbar."
+  },
+  {
+    question: "Wie oft sollte ich meinen Boiler warten lassen?",
+    answer: "Jährliche Wartung inkl. Entkalkung empfohlen. Verlängert Lebensdauer, spart Energie."
+  },
+  {
+    question: "Gibt es Förderungen für neue Warmwasserbereiter?",
+    answer: "Für bestimmte energieeffiziente Lösungen ja. Wir beraten Sie zu aktuellen Programmen."
+  }
+];
+
 export default function WarmwasserPage() {
-  const services = [
-    {
-      icon: Flame,
-      title: "Durchlauferhitzer München",
-      description: "Durchlauferhitzer installieren, austauschen, reparieren. Vaillant, Stiebel Eltron, AEG, Junkers. Elektronisch ab 21 kW."
-    },
-    {
-      icon: ThermometerSun,
-      title: "Warmwasserspeicher München",
-      description: "Boiler einbauen: 80-300 Liter, stehend oder wandhängend. Viessmann Vitocell, Vaillant uniSTOR, Buderus Logalux."
-    },
-    {
-      icon: Droplets,
-      title: "Zirkulationspumpe München",
-      description: "Warmwasser-Zirkulation installieren: Sofort heißes Wasser an jeder Zapfstelle. Grundfos, Wilo, Vortex. Ab 380€."
-    },
-    {
-      icon: Zap,
-      title: "Untertischspeicher München",
-      description: "Kleinspeicher 5-15 Liter für Küche und Gäste-WC. Stiebel Eltron SNU, Vaillant VEN, AEG Huz. Schnelle Montage."
-    },
-    {
-      icon: Wrench,
-      title: "Boiler reparieren München",
-      description: "Durchlauferhitzer macht kein Warmwasser? Boiler defekt? Entkalkung, Heizstab-Tausch, Thermostat-Reparatur. Notdienst."
-    },
-    {
-      icon: Settings,
-      title: "Warmwasser-Beratung",
-      description: "Durchlauferhitzer vs. Speicher? Energieeffizienz-Check, Verbrauchsberechnung, Fördermöglichkeiten prüfen. Kostenlos."
-    }
-  ];
-
-  const benefits = [
-    "Schnelle Hilfe bei Warmwasser-Ausfall München",
-    "Alle Marken: Vaillant, Stiebel Eltron, Junkers, AEG",
-    "Festpreis ab 600€ inkl. Durchlauferhitzer-Montage",
-    "Energieeffiziente Geräte für niedrige Stromkosten",
-    "Fachgerechte Installation nach VDE-Vorschriften",
-    "2 Jahre Gewährleistung auf Warmwasser-Arbeiten"
-  ];
-
-  const faqItems = [
-    {
-      question: "Kein warmes Wasser mehr - wie schnell können Sie helfen?",
-      answer: "Bei Warmwasserausfall sind wir in der Regel innerhalb von 2-4 Stunden bei Ihnen in München. Am Wochenende und an Feiertagen ist unser Notdienst ebenfalls erreichbar."
-    },
-    {
-      question: "Was kostet ein neuer Durchlauferhitzer inklusive Einbau?",
-      answer: "Ein hochwertiger Durchlauferhitzer mit Installation kostet je nach Leistung ab ca. 600€. Wir erstellen Ihnen gerne ein individuelles Angebot mit Festpreis."
-    },
-    {
-      question: "Durchlauferhitzer oder Warmwasserspeicher - was ist besser?",
-      answer: "Das hängt von Ihrem Verbrauch ab. Durchlauferhitzer erwärmen Wasser nur bei Bedarf und sind platzsparend. Speicher bieten sofort heißes Wasser in großer Menge. Wir beraten Sie individuell."
-    },
-    {
-      question: "Mein Durchlauferhitzer macht nur noch lauwarmes Wasser - was tun?",
-      answer: "Das kann an Verkalkung, einem defekten Heizelement oder falscher Einstellung liegen. Oft lässt sich das Problem mit einer Wartung oder kleinen Reparatur beheben. Rufen Sie uns an!"
-    },
-    {
-      question: "Wie oft sollte ich meinen Warmwasserspeicher warten lassen?",
-      answer: "Wir empfehlen eine jährliche Wartung inklusive Entkalkung und Anodenkontrolle. Das verlängert die Lebensdauer erheblich und spart Energiekosten."
-    },
-    {
-      question: "Gibt es Förderungen für neue Warmwasserbereiter?",
-      answer: "Für bestimmte energieeffiziente Warmwasserlösungen, besonders in Verbindung mit erneuerbaren Energien, gibt es Fördermöglichkeiten. Wir beraten Sie gerne zu den aktuellen Programmen."
-    }
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background">
       <SEO 
-        title="Warmwasser Reparatur München | Boiler & Durchlauferhitzer"
-        description="Kein Warmwasser? Wir reparieren Boiler & Durchlauferhitzer in München schnell und zuverlässig – auch im Notdienst."
+        title="Durchlauferhitzer München | Boiler Reparatur & Installation"
+        description="Durchlauferhitzer München: Kein Warmwasser? Boiler defekt? Schnelle Reparatur & Installation. Festpreis ab 120€."
         canonical="https://aquapro24.de/warmwasser"
-        keywords="Warmwasser München, Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Durchlauferhitzer reparieren München, Boiler installieren München, kein warmes Wasser München, Warmwasser Notdienst München, Stiebel Eltron München, Vaillant München, Junkers München, Warmwasserbereiter München"
-        aiSummary="AquaPro24 Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher - Reparatur und Installation. Alle Marken, schnelle Hilfe bei Ausfall. Kontakt: 0152 12274043"
+        keywords="Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Warmwasser Reparatur München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }
         ]}
         serviceSchema={{
-          name: "Warmwasser & Durchlauferhitzer München",
-          description: "Warmwasser-Service: Durchlauferhitzer, Boiler und Warmwasserspeicher - Installation, Reparatur und Wartung in München.",
+          name: "Warmwasser München",
+          description: "Warmwasser-Service: Durchlauferhitzer, Boiler, Warmwasserspeicher. Installation und Reparatur.",
           serviceType: "Warmwasser/Heizung",
           urlSlug: "warmwasser",
           catalogName: "Warmwasser-Leistungen",
           serviceOffers: [
-            { name: "Durchlauferhitzer Installation & Reparatur" },
-            { name: "Boiler / Warmwasserspeicher Service" },
-            { name: "Warmwasser-Wartung & Entkalkung" },
-            { name: "Warmwasserausfall Notdienst" }
+            { name: "Durchlauferhitzer Installation" },
+            { name: "Boiler Reparatur" },
+            { name: "Warmwasserspeicher" },
+            { name: "Wartung" }
           ],
           aggregateRating: {
             ratingValue: 4.9,
-            reviewCount: 72
+            reviewCount: 86
           }
         }}
       />
       <Header />
       
-      <main id="main-content" className="flex-1">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+      <main id="main-content">
+        <section className="relative py-12 lg:py-16 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${waterHeaterImage1})` }}
+            style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4 gap-1">
-                <Flame className="w-3 h-3" />
-                Warmwasser-Service München
+            <div className="max-w-2xl">
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                <Flame className="w-3 h-3 mr-1" />
+                Warmwasser-Service
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 Durchlauferhitzer München – Boiler Reparatur & Installation
               </h1>
-              <div className="sr-only" data-testid="keyword-cloud">
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Durchlauferhitzer installieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Durchlauferhitzer reparieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Boiler einbauen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Boiler defekt reparieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Warmwasserspeicher montieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">kein warmes Wasser</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Warmwasser Notdienst</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Elektroboiler installieren</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Gas-Durchlauferhitzer</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Zirkulationspumpe einbauen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Entkalkung Durchlauferhitzer</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wartung Warmwasserspeicher</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Stiebel Eltron München</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Vaillant Durchlauferhitzer</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Junkers Boiler</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Warmwasser Schwabing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Boiler Bogenhausen</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Durchlauferhitzer Sendling</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Warmwasser Pasing</span>
-                <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Warmwasser München</span>
+              
+              <p className="text-xl text-white/90 mb-6">
+                Kein warmes Wasser? Durchlauferhitzer defekt? Wir reparieren und 
+                installieren alle Marken – schnell und zum Festpreis.
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>Festpreis ab 120€</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>Alle Marken</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>2 Jahre Garantie</span>
+                </div>
               </div>
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Kein warmes Wasser? Durchlauferhitzer defekt?</strong> Wir wissen, wie unangenehm 
-                das ist - besonders im Winter. Kaltes Duschen macht keinen Spaß.
-              </p>
-              <p className="text-white/80 mb-6">
-                Als Ihr Warmwasser-Spezialist in München reparieren und installieren wir Durchlauferhitzer, 
-                Boiler und Warmwasserspeicher aller Marken - schnell und zuverlässig.
-              </p>
+              
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-warmwasser">
-                    <Phone className="w-4 h-4 mr-2" />
+                <Button size="lg" asChild data-testid="button-call-hero">
+                  <a href="tel:+4915212274043">
+                    <Phone className="w-5 h-5 mr-2" />
                     Jetzt anrufen
                   </a>
                 </Button>
@@ -203,62 +226,32 @@ export default function WarmwasserPage() {
 
         <TrustBar />
 
-        <NLPSection
-          problemTitle="Kennen Sie diese Probleme?"
-          problems={[
-            "Kein warmes Wasser mehr - mitten im Winter",
-            "Der Durchlauferhitzer macht nur noch lauwarmes Wasser",
-            "Der Boiler macht komische Geräusche",
-            "Das Wasser wird nicht richtig heiß oder braucht ewig",
-            "Die Stromrechnung ist zu hoch wegen des alten Geräts"
-          ]}
-          solutionTitle="So lösen wir das für Sie"
-          solutions={[
-            "Schnelle Hilfe bei Ausfall - oft am selben Tag",
-            "Fachgerechte Reparatur oder Austausch defekter Geräte",
-            "Beratung zu energieeffizienten Neugeräten",
-            "Regelmäßige Wartung für lange Lebensdauer",
-            "Transparente Festpreise ohne Überraschungen"
-          ]}
-          futureState="...Sie haben wieder zuverlässig warmes Wasser, Ihr Gerät arbeitet effizient und Sie sparen Energiekosten. So soll es sein."
-          authorityText="Über 500 Warmwasseranlagen installiert und repariert in München"
-          urgencyText="Noch 3 Beratungstermine diese Woche frei"
-          transformationSteps={[
-            "Sie rufen an und schildern das Problem - wir kommen schnellstmöglich.",
-            "Wir analysieren die Ursache und nennen Ihnen einen Festpreis für die Reparatur oder den Austausch.",
-            "Ihr Warmwasser funktioniert wieder zuverlässig - garantiert."
-          ]}
-        />
-
-        <ServiceAdvisor serviceType="sanitaer" />
-
-        <CustomerStories 
-          stories={heizungStories}
-          title="Echte Geschichten von Münchner Kunden"
-          subtitle="Von der Notfall-Reparatur bis zur Neuinstallation"
-        />
-
-        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+        <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Durchlauferhitzer installieren München: Leistungen & Festpreise
-              </h2>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Leistungen & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Vom kleinen Untertischboiler bis zum großen Warmwasserspeicher - 
-                wir sind Ihr Partner für alle Warmwasserlösungen.
+                Vom kleinen Untertischboiler bis zum großen Warmwasserspeicher.
               </p>
             </div>
-
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <Card key={index} className="hover-elevate">
+                <Card key={index}>
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4">
-                      <service.icon className="w-6 h-6 text-muted-foreground" />
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <Badge variant="secondary">{service.price}</Badge>
                     </div>
                     <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                    <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {service.features.map((feature, i) => (
+                        <Badge key={i} variant="outline" className="text-xs">{feature}</Badge>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -266,79 +259,101 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
-        <section className="py-6 md:pt-8 pb-4 bg-muted/30">
+        <section className="py-12 lg:py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Boiler austauschen München: Unsere Vorteile
-                </h2>
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </div>
-                  ))}
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">So einfach geht's</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Von Ihrem Anruf bis zum heißen Wasser.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              {processSteps.map((step) => (
+                <div key={step.step} className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
+                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Unsere Garantien</h2>
+              <p className="text-muted-foreground">
+                Sicherheit und Qualität – darauf können Sie sich verlassen.
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {guarantees.map((item, index) => (
+                <Card key={index}>
+                  <CardContent className="p-5 text-center">
+                    <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Markenqualität</h2>
+              <p className="text-muted-foreground text-sm">
+                Wir installieren und reparieren alle führenden Marken.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Vaillant</div>
+                <div className="text-xs">electronicVED</div>
               </div>
-              <div className="bg-card rounded-lg p-8 border">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
-                    <Award className="w-8 h-8 text-muted-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Durchlauferhitzer Marken München: Stiebel Eltron, Vaillant & mehr</h3>
-                    <p className="text-muted-foreground text-sm">Zertifizierter Service für alle Hersteller</p>
-                  </div>
-                </div>
-                <div className="space-y-4 text-sm">
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-4 h-4 text-muted-foreground" />
-                    <span>Schnelle Hilfe bei Ausfall</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Shield className="w-4 h-4 text-muted-foreground" />
-                    <span>2 Jahre Gewährleistung</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Zap className="w-4 h-4 text-muted-foreground" />
-                    <span>Energieeffiziente Lösungen</span>
-                  </div>
-                </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Stiebel Eltron</div>
+                <div className="text-xs">DHE, SNU</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">AEG</div>
+                <div className="text-xs">DDLE, Huz</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Clage</div>
+                <div className="text-xs">DSX, MCX</div>
+              </div>
+              <div className="text-center">
+                <div className="font-bold text-lg text-foreground">Viessmann</div>
+                <div className="text-xs">Vitocell</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="pt-8 pb-4 md:pt-8 md:pb-4">
+        <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Durchlauferhitzer reparieren München: Kosten, Wartung & Austausch
+            <h2 className="text-2xl font-bold mb-6">
+              Ihr Warmwasser-Spezialist in München
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Warmes Wasser ist ein Grundbedürfnis - und wenn es plötzlich fehlt, muss schnell Hilfe her. 
-                Als Ihr Warmwasser-Spezialist in München sind wir für Sie da: bei Ausfällen, für Wartungen 
-                oder wenn Sie ein neues Gerät brauchen.
+                Warmes Wasser ist ein Grundbedürfnis – und wenn es plötzlich fehlt, muss schnell 
+                Hilfe her. Als Ihr Warmwasser-Spezialist in München sind wir für Sie da: bei 
+                Ausfällen, für Wartungen oder wenn Sie ein neues Gerät brauchen.
               </p>
               <p>
-                Wir arbeiten mit allen gängigen Marken: Vaillant, Stiebel Eltron, Junkers/Bosch, AEG, Clage 
-                und viele mehr. Egal ob Ihr Durchlauferhitzer nicht mehr richtig heizt, Ihr Boiler merkwürdige 
-                Geräusche macht oder Sie ein komplett neues Gerät brauchen - wir helfen.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Boiler anschließen oder Durchlauferhitzer installieren München: Was ist besser?</h3>
-              <p>
-                Welches System das richtige für Sie ist, hängt von Ihrem Verbrauchsverhalten ab. Durchlauferhitzer 
-                erwärmen das Wasser nur bei Bedarf und sind sehr platzsparend. Warmwasserspeicher (Boiler) 
-                halten eine große Menge heißes Wasser bereit und eignen sich besonders für Haushalte mit 
-                hohem Verbrauch. Wir beraten Sie gerne individuell.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mt-8">Durchlauferhitzer warten lassen München: Kosten sparen</h3>
-              <p>
-                Kalk und Ablagerungen reduzieren die Effizienz Ihres Warmwasserbereiters erheblich. Eine 
-                jährliche Wartung inklusive Entkalkung sorgt dafür, dass Ihr Gerät effizient arbeitet und 
-                länger hält. Das spart Stromkosten und verhindert teure Reparaturen.
+                Wir arbeiten mit allen gängigen Marken: Vaillant, Stiebel Eltron, Junkers/Bosch, 
+                AEG, Clage und viele mehr.
               </p>
             </div>
           </div>
@@ -346,34 +361,33 @@ export default function WarmwasserPage() {
 
         <ServiceAreas 
           serviceName="Warmwasser-Service" 
-          
           highlightAreas={["Trudering", "Laim", "Giesing"]}
         />
 
         <SimpleFAQ 
           items={faqItems}
-          title="Häufige Fragen zum Warmwasser-Service"
+          title="Häufige Fragen"
         />
 
-        <section className="py-6 md:pt-8 pb-4 bg-secondary text-secondary-foreground">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+        <section className="py-12 bg-primary text-primary-foreground">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Boiler reparieren München – Notdienst für Warmwasser
+              Kein Warmwasser? Wir helfen sofort!
             </h2>
-            <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">
-              Durchlauferhitzer defekt, Boiler macht Probleme? Wir bringen Ihr Warmwasser wieder zum Laufen.
+            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+              Durchlauferhitzer defekt, Boiler macht Probleme? Wir bringen Ihr Warmwasser zurück.
             </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-warmwasser-cta">
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" variant="secondary" asChild data-testid="button-call-cta">
+                <a href="tel:+4915212274043">
                   <Phone className="w-4 h-4 mr-2" />
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" className="bg-white text-secondary border-white" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white" asChild>
                 <Link href="/termin">
-                  <Clock className="w-4 h-4 mr-2" />
-                  24h Terminbuchung
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Termin buchen
                 </Link>
               </Button>
             </div>
@@ -382,7 +396,7 @@ export default function WarmwasserPage() {
 
         <RelatedServices currentService="warmwasser" />
       </main>
-
+      
       <Footer />
       <AIChatWidget serviceCategory="heizung" />
     </div>
