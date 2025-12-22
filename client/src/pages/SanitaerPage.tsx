@@ -137,10 +137,10 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär München | Klempner Notdienst 24/7"
-        description="Sanitär München: Rohrbruch, Abfluss verstopft, Wasserhahn tropft? Schnelle Hilfe, Festpreis ab 92€. Jetzt anrufen!"
+        title="Sanitär und Sanitärinstallateur München – Klempner Notdienst 24/7"
+        description="Sanitär & Sanitärinstallateur München: Rohrbruch, Abfluss verstopft, Wasserhahn tropft? Schnelle Hilfe, Festpreis ab 92€. Jetzt anrufen!"
         canonical="https://aquapro24.de/sanitaer"
-        keywords="Sanitär München, Klempner München, Installateur München, Sanitär Notdienst München, Rohrbruch München, Abfluss verstopft München"
+        keywords="Sanitär München, Sanitärinstallateur München, Klempner München, Installateur München, Sanitär Notdienst München, Rohrbruch München, Abfluss verstopft München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }
