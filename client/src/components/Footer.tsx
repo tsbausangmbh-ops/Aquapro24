@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import { ArrowUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import footerLogo from "@assets/Logo_1765472336857.png";
 
 const footerLinks = {
@@ -77,48 +74,15 @@ const stadtteile = [
   { label: "Freimann", href: "/freimann" },
 ];
 
-function BackToTopButton() {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 500);
-    };
-    
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-  
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  
-  if (!isVisible) return null;
-  
-  return (
-    <Button
-      onClick={scrollToTop}
-      size="icon"
-      variant="secondary"
-      className="fixed bottom-20 right-4 z-40 shadow-lg"
-      aria-label="Zurück nach oben scrollen"
-      data-testid="button-back-to-top"
-    >
-      <ArrowUp className="w-5 h-5" aria-hidden="true" />
-    </Button>
-  );
-}
-
 export default function Footer() {
   return (
     <>
-      <BackToTopButton />
       <div className="bg-muted/50 py-3 border-t">
         <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto px-4">
           Wir arbeiten mit einem Netzwerk an geprüften Fachbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
         </p>
       </div>
-      <footer className="bg-foreground text-background" role="contentinfo" aria-label="Seitenfuß mit Kontakt und Navigation">
+      <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-6">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
@@ -138,9 +102,9 @@ export default function Footer() {
           </div>
           
           {Object.entries(footerLinks).map(([key, section]) => (
-            <nav key={key} aria-label={`${section.title} Navigation`}>
-              <h4 className="font-semibold mb-4" id={`footer-nav-${key}`}>{section.title}</h4>
-              <ul className="space-y-2" aria-labelledby={`footer-nav-${key}`}>
+            <div key={key}>
+              <h4 className="font-semibold mb-4">{section.title}</h4>
+              <ul className="space-y-2">
                 {section.links.map((link, index) => (
                   <li key={index}>
                     <a 
@@ -153,26 +117,25 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </nav>
+            </div>
           ))}
         </div>
         
-        <nav className="border-t border-background/10 mt-4 pt-4" aria-label="Münchner Stadtteile Navigation">
-          <h4 className="font-semibold mb-3 text-sm" id="stadtteile-nav">Alle Stadtteile in München</h4>
-          <ul className="flex flex-wrap gap-x-3 gap-y-1" aria-labelledby="stadtteile-nav">
+        <div className="border-t border-background/10 mt-4 pt-4">
+          <h4 className="font-semibold mb-3 text-sm">Alle Stadtteile in München</h4>
+          <div className="flex flex-wrap gap-x-3 gap-y-1">
             {stadtteile.map((stadtteil, index) => (
-              <li key={index}>
-                <a 
-                  href={stadtteil.href}
-                  className="text-xs text-background/60 hover:text-primary transition-colors"
-                  data-testid={`link-footer-stadtteil-${index}`}
-                >
-                  {stadtteil.label}
-                </a>
-              </li>
+              <a 
+                key={index}
+                href={stadtteil.href}
+                className="text-xs text-background/60 hover:text-primary transition-colors"
+                data-testid={`link-footer-stadtteil-${index}`}
+              >
+                {stadtteil.label}
+              </a>
             ))}
-          </ul>
-        </nav>
+          </div>
+        </div>
         
         <div className="border-t border-background/10 mt-4 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">

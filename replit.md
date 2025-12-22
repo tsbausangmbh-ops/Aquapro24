@@ -130,20 +130,6 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 - **Module Preload**: `modulepreload` für main.tsx Entry Point
 - **Route Prefetch**: Beliebte Seiten (termin, notdienst) via `prefetch` vorgeladen
 
-### Barrierefreiheit (WCAG 2.1 AA / BITV 2.0) (December 2025)
-- **Skip-Links**: "Zum Hauptinhalt springen" für Tastaturnutzer
-- **ARIA-Labels**: Alle interaktiven Elemente mit beschreibenden Labels
-- **Focus-visible Stile**: 3px Ring mit offset für bessere Sichtbarkeit
-- **prefers-reduced-motion**: Animationen werden bei Systemeinstellung deaktiviert
-- **prefers-contrast: high**: Erhöhte Kontraste bei Systemeinstellung
-- **Semantisches HTML**: role="contentinfo", role="dialog", aria-labelledby
-- **Focus Trap**: Fokus bleibt in Dialogen (Chat-Widget, Popups)
-- **Screenreader-Support**: aria-live="polite" für dynamische Inhalte
-- **Alt-Texte**: Beschreibende Texte für alle Bilder
-- **Zurück-nach-oben Button**: Barrierefreier Button mit aria-label
-- **Footer Navigation**: Semantische nav-Elemente mit aria-label
-- **Barrierefreiheitserklärung**: Dedizierte Seite unter /barrierefreiheit
-
 ## System Architecture
 
 ### Frontend Architecture
