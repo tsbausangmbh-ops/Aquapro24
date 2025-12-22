@@ -45,12 +45,12 @@ export default function Header() {
       >
         Zum Hauptinhalt springen
       </a>
-      <div className="bg-primary text-primary-foreground py-2">
+      <div className="bg-primary text-primary-foreground py-2" aria-label="Kontaktinformationen">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-2 md:gap-4 text-sm">
             <div className="flex items-center gap-4 flex-wrap justify-center">
               <div className="hidden sm:flex items-center gap-1.5">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4" aria-hidden="true" />
                 <span>München & Umgebung</span>
               </div>
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
@@ -59,10 +59,11 @@ export default function Header() {
               href="tel:+4915212274043" 
               className="flex flex-col items-center text-center hover:underline"
               data-testid="link-emergency-phone"
+              aria-label="Jetzt anrufen: 0152 12274043"
             >
-              <span className="text-xs text-primary-foreground/80">Anrufen:</span>
+              <span className="text-xs text-primary-foreground/80" aria-hidden="true">Anrufen:</span>
               <span className="font-bold text-base md:text-lg flex items-center gap-1">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 0152 12274043
               </span>
             </a>
@@ -73,11 +74,13 @@ export default function Header() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between gap-4 h-16">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2" aria-label="AquaPro24 - Zur Startseite">
               <img 
                 src={logoImage} 
                 alt="Klempner München - AquaPro24 Sanitär und Heizung Notdienst 24/7" 
                 className="w-10 h-10 object-contain"
+                width="40"
+                height="40"
                 loading="eager"
                 decoding="async"
                 data-testid="img-header-logo"
@@ -197,8 +200,8 @@ export default function Header() {
 
             <div className="hidden md:flex items-center gap-3">
               <Button variant="outline" asChild data-testid="nav-termin">
-                <Link href="/termin">
-                  <CalendarIcon className="w-4 h-4 mr-2" />
+                <Link href="/termin" aria-label="24 Stunden Terminbuchung">
+                  <CalendarIcon className="w-4 h-4 mr-2" aria-hidden="true" />
                   24h Terminbuchung
                 </Link>
               </Button>

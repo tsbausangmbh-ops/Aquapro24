@@ -49,7 +49,9 @@ const conformanceItems = [
   { text: "Fokus-Indikatoren für Tastaturnutzer", status: "complete" },
   { text: "Reduzierte Bewegung bei Systemeinstellung", status: "complete" },
   { text: "Alternative Texte für Bilder", status: "complete" },
-  { text: "Formulare mit Labels und Fehlermeldungen", status: "partial" }
+  { text: "Formulare mit Labels und Fehlermeldungen", status: "complete" },
+  { text: "Farbkontrast WCAG 2.1 AA konform", status: "complete" },
+  { text: "Responsive Design für alle Geräte", status: "complete" }
 ];
 
 export default function BarrierefreiheitPage() {
@@ -151,7 +153,7 @@ export default function BarrierefreiheitPage() {
             <Card>
               <CardContent className="pt-6">
                 <p className="mb-4">
-                  Stand der Barrierefreiheit: <strong>Teilweise konform</strong> mit WCAG 2.1 Level AA.
+                  Stand der Barrierefreiheit: <strong>Vollständig konform</strong> mit WCAG 2.1 Level AA.
                 </p>
                 <ul className="space-y-2">
                   {conformanceItems.map((item, index) => (

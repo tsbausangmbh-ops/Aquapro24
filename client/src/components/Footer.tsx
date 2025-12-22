@@ -82,7 +82,7 @@ export default function Footer() {
           Wir arbeiten mit einem Netzwerk an geprüften Fachbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
         </p>
       </div>
-      <footer className="bg-foreground text-background">
+      <footer className="bg-foreground text-background" role="contentinfo" aria-label="Fußbereich">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-6">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
@@ -91,6 +91,8 @@ export default function Footer() {
                 src={footerLogo} 
                 alt="AquaPro24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
                 className="h-12 object-contain"
+                width="120"
+                height="48"
                 loading="lazy"
                 decoding="async"
                 data-testid="img-footer-logo"
@@ -102,9 +104,9 @@ export default function Footer() {
           </div>
           
           {Object.entries(footerLinks).map(([key, section]) => (
-            <div key={key}>
+            <nav key={key} aria-label={section.title}>
               <h4 className="font-semibold mb-4">{section.title}</h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2" role="list">
                 {section.links.map((link, index) => (
                   <li key={index}>
                     <a 
@@ -117,7 +119,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
         </div>
         

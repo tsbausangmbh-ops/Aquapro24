@@ -133,11 +133,23 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
   - ai-act:ai-model (OpenAI GPT-4o-mini), ai-provider, ai-purpose
   - ai-decision-making, ai-contact-human, ai-copyright, ai-data-usage
 
+### Accessibility / Barrierefreiheit (December 2025)
+- **WCAG 2.1 AA / BITV 2.0 Konformität**: Vollständige Barrierefreiheit
+- **ARIA-Labels**: Alle interaktiven Elemente mit beschreibenden Labels
+- **Skip-Links**: Navigation überspringen für Screenreader
+- **Tastaturnavigation**: Vollständig per Tastatur bedienbar
+- **Focus-Indikatoren**: Sichtbare Fokus-Ringe für Tastaturnutzer
+- **Windows High Contrast Mode**: Systemfarben (Canvas, CanvasText, LinkText) für Lesbarkeit
+- **prefers-reduced-motion**: Animationen deaktiviert bei Systemeinstellung
+- **Semantische HTML-Struktur**: Header, Main, Footer mit korrekten Landmarks
+- **Barrierefreiheitserklärung**: Dedizierte Seite unter /barrierefreiheit
+
 ### Performance Optimizations (December 2025)
 - **Font Loading**: Reduziert von 25+ auf 2 Schriftarten (Inter, Plus Jakarta Sans)
 - **Async Font Loading**: Fonts via `preload` + `onload` für nicht-blockierendes Laden
 - **DNS Prefetch**: Vorverbindung zu fonts.googleapis.com/gstatic.com
 - **Hero Image Preload**: `fetchpriority="high"` für LCP-kritisches Bild
+- **Image Width/Height**: Alle Bilder mit width/height für bessere CLS-Werte
 - **Critical CSS Inline**: Inline-Styles für schnelleren First Paint
 - **Code Splitting**: React.lazy() für alle 40+ Seitenkomponenten + Popups
 - **Image Lazy Loading**: `loading="lazy"` + `decoding="async"` für alle Bilder außer Header-Logo

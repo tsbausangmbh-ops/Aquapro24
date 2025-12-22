@@ -471,3 +471,42 @@ textarea:focus-visible {
     --card-border: 210 40% 70%;
   }
 }
+
+/* Windows High Contrast Mode (forced-colors) */
+@media (forced-colors: active) {
+  *:focus-visible {
+    outline: 3px solid CanvasText !important;
+    outline-offset: 2px;
+  }
+  
+  /* Ensure links and buttons remain system-colored for accessibility */
+  a, button, [role="button"] {
+    color: LinkText;
+    background: Canvas;
+    border-color: CanvasText;
+  }
+  
+  a:hover, button:hover, [role="button"]:hover {
+    color: LinkText;
+  }
+}
+
+/* Visible focus for better accessibility */
+.focus-visible-ring:focus-visible {
+  outline: 3px solid hsl(var(--ring));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--background));
+}
+
+/* Screen reader only utility (enhanced) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
