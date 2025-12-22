@@ -228,7 +228,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Klempner München – Sanitär & Heizung Notdienst 24/7"
+        title="Münchner Sanitär und Heizung – Klempner Notdienst 24/7"
         description="Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!"
         canonical="https://aquapro24.de"
         keywords="Klempner München Notdienst, Sanitär ab 92€, Rohrreinigung ab 81€, Heizung reparieren ab 154€, Rohrbruch München, WC verstopft Soforthilfe, Wasserhahn wechseln ab 80€, Durchlauferhitzer ab 600€, Badsanierung München ab 16.000€, Wärmepumpe 70% BAFA, Grohe Hansgrohe Montage, Viessmann Vaillant Buderus Wolf"
@@ -275,7 +275,7 @@ export default function Home() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white mb-4">
-                Klempner München – Sanitär & Heizung Notdienst 24/7
+                Münchner Sanitär und Heizung – Klempner Notdienst 24/7
               </h1>
               
               <p className="text-lg text-white/90 mb-4">
