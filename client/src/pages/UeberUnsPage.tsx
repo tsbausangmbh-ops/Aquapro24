@@ -362,7 +362,7 @@ export default function UeberUnsPage() {
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={technicianImage} 
-                    alt="Sanitär- und Heizungsmeister bei der Arbeit in München" 
+                    alt="Sanitärinstallateur München Heizungsinstallateur Meister bei der Arbeit - AquaPro24 Partnernetzwerk seit 2005" 
                     className="w-full h-80 object-cover"
                     loading="lazy"
                   />
@@ -446,7 +446,7 @@ export default function UeberUnsPage() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={workshopImage} 
-                  alt="Professionelle Sanitär-Werkstatt und Ausrüstung in München" 
+                  alt="Klempner Werkstatt München professionelle Ausrüstung - Sanitär Heizung Werkzeug Viessmann Vaillant Partner" 
                   className="w-full h-80 object-cover"
                   loading="lazy"
                 />

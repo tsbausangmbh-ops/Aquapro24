@@ -38,6 +38,7 @@ const guides = [
     title: "Wasserschaden - Was tun?",
     subtitle: "Erste Hilfe bei Rohrbruch und Wasserschäden",
     image: plumberImage,
+    alt: "Wasserschaden München Erste Hilfe Rohrbruch - Klempner Notdienst 24h Soforthilfe Wasserschaden beheben",
     intro: "Ein Wasserschaden kann jeden treffen. Ob geplatztes Rohr, defekte Waschmaschine oder Überschwemmung durch Starkregen - schnelles Handeln ist entscheidend, um den Schaden zu begrenzen.",
     sections: [
       {
@@ -82,6 +83,7 @@ const guides = [
     title: "Badsanierung planen",
     subtitle: "Von der Idee zum Traumbad - Schritt für Schritt",
     image: bathroomImage,
+    alt: "Badsanierung München planen Ratgeber - Komplettumbau Villeroy Boch Duravit Grohe Tipps Kosten",
     intro: "Eine Badsanierung ist eine der wertvollsten Investitionen in Ihr Zuhause. Mit der richtigen Planung wird aus dem stressigen Bauprojekt ein strukturierter Prozess mit vorhersehbarem Ergebnis.",
     sections: [
       {
@@ -141,6 +143,7 @@ const guides = [
     title: "Heizung richtig warten",
     subtitle: "So sparen Sie Energie und vermeiden Ausfälle",
     image: heatingImage,
+    alt: "Heizungswartung München Ratgeber - Viessmann Vaillant Buderus Wartung Tipps Energiesparen",
     intro: "Eine regelmäßig gewartete Heizung spart bis zu 15% Energie, läuft zuverlässiger und hält länger. Die jährliche Wartung kostet zwischen 120-200€ - die Einsparungen sind oft deutlich höher.",
     sections: [
       {
@@ -187,6 +190,7 @@ const guides = [
     title: "Wärmepumpe: Lohnt sich das?",
     subtitle: "Alle Fakten für Ihre Entscheidung",
     image: heatPumpImage,
+    alt: "Wärmepumpe München Ratgeber BAFA Förderung 70% - Viessmann Vaillant Wolf Luft-Wasser Kosten Vergleich",
     intro: "Die Wärmepumpe ist die Heizung der Zukunft. Mit bis zu 70% Förderung und stark gesunkenen Energiekosten lohnt sich der Umstieg für viele Haushalte. Aber ist Ihr Haus geeignet?",
     sections: [
       {
@@ -349,7 +353,7 @@ export default function RatgeberPage() {
                   <div className="rounded-xl overflow-hidden shadow-lg">
                     <img 
                       src={guide.image} 
-                      alt={guide.title}
+                      alt={guide.alt}
                       className="w-full h-48 object-cover"
                       loading="lazy"
                     />

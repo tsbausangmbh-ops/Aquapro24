@@ -111,7 +111,8 @@ const services = [
     description: "Wasserinstallation, Rohrbruch, Leckortung. 24h Notdienst.",
     features: ["Rohrbruch", "Leckortung", "Installation"],
     link: "/sanitaer",
-    image: sanitaerImage
+    image: sanitaerImage,
+    alt: "Sanitärinstallateur München Klempner Notdienst 24h - Wasserinstallation Rohrbruch Reparatur ab 92 Euro"
   },
   {
     icon: Wrench,
@@ -120,7 +121,8 @@ const services = [
     description: "Abfluss verstopft, WC blockiert. Spirale, Hochdruck.",
     features: ["24/7 Notdienst", "Kamera", "Festpreis"],
     link: "/rohrreinigung",
-    image: rohrreinigungImage
+    image: rohrreinigungImage,
+    alt: "Rohrreinigung München Abfluss verstopft - Kanalreinigung Hochdruckspülung Notdienst ab 81 Euro"
   },
   {
     icon: ShowerHead,
@@ -129,7 +131,8 @@ const services = [
     description: "Komplett-Umbau in 2-4 Wochen. Villeroy & Boch, Duravit.",
     features: ["3D-Planung", "5 Jahre Garantie", "Festpreis"],
     link: "/bad",
-    image: badImage
+    image: badImage,
+    alt: "Badsanierung München Komplettumbau - Villeroy Boch Duravit Grohe ab 16000 Euro Festpreis"
   },
   {
     icon: Thermometer,
@@ -138,7 +141,8 @@ const services = [
     description: "Durchlauferhitzer, Boiler. Vaillant, Stiebel Eltron.",
     features: ["Montage", "Wartung", "Austausch"],
     link: "/warmwasser",
-    image: warmwasserImage
+    image: warmwasserImage,
+    alt: "Durchlauferhitzer München Boiler Installation - Vaillant Stiebel Eltron Warmwasser ab 600 Euro"
   },
   {
     icon: Flame,
@@ -147,7 +151,8 @@ const services = [
     description: "Reparatur, Wartung, Austausch. Viessmann, Vaillant, Buderus.",
     features: ["24h Notdienst", "Wartung", "70% BAFA"],
     link: "/heizung",
-    image: heizungImage
+    image: heizungImage,
+    alt: "Heizungsinstallateur München Heizung Reparatur - Viessmann Vaillant Buderus Notdienst ab 154 Euro"
   },
   {
     icon: Flame,
@@ -156,15 +161,36 @@ const services = [
     description: "Luft-Wasser, Erdwärme. BAFA-Antrag inklusive.",
     features: ["Beratung", "Installation", "Förderung"],
     link: "/waermepumpe",
-    image: waermepumpeImage
+    image: waermepumpeImage,
+    alt: "Wärmepumpe München Installation BAFA Förderung 70% - Viessmann Vaillant Wolf Luft-Wasser"
   }
 ];
 
 const galleryItems = [
-  { image: galleryImage1, title: "Badsanierung Sendling", category: "Bad" },
-  { image: galleryImage2, title: "Luxusbad Bogenhausen", category: "Bad" },
-  { image: galleryImage3, title: "Wärmepumpe Pasing", category: "Heizung" },
-  { image: galleryImage4, title: "Zufriedene Kunden", category: "Referenz" }
+  { 
+    image: galleryImage1, 
+    title: "Badsanierung Sendling", 
+    category: "Bad",
+    alt: "Badsanierung München Sendling - moderne Badezimmer Renovierung Grohe Hansgrohe Komplettumbau"
+  },
+  { 
+    image: galleryImage2, 
+    title: "Luxusbad Bogenhausen", 
+    category: "Bad",
+    alt: "Luxusbad München Bogenhausen - freistehende Badewanne Villeroy Boch Design Badezimmer"
+  },
+  { 
+    image: galleryImage3, 
+    title: "Wärmepumpe Pasing", 
+    category: "Heizung",
+    alt: "Wärmepumpe München Pasing Installation - Vaillant aroTHERM Luft-Wasser BAFA Förderung"
+  },
+  { 
+    image: galleryImage4, 
+    title: "Zufriedene Kunden", 
+    category: "Referenz",
+    alt: "Zufriedene Kunden München AquaPro24 - 2800 Kundenbewertungen 4.9 Sterne Sanitär Heizung"
+  }
 ];
 
 const processSteps = [
@@ -348,7 +374,7 @@ export default function Home() {
                     <div className="relative h-32 overflow-hidden">
                       <img 
                         src={service.image} 
-                        alt={service.title}
+                        alt={service.alt}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -453,7 +479,7 @@ export default function Home() {
                 <div key={index} className="relative group overflow-hidden rounded-lg">
                   <img 
                     src={item.image} 
-                    alt={item.title}
+                    alt={item.alt}
                     className="w-full h-40 lg:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
