@@ -20,6 +20,27 @@ const MUNICH_AREAS = [
   { name: "Trudering", time: "25 Min", slug: "trudering" },
   { name: "Milbertshofen", time: "20 Min", slug: "milbertshofen" },
   { name: "Moosach", time: "22 Min", slug: "moosach" },
+  { name: "Nymphenburg", time: "18 Min", slug: "nymphenburg" },
+  { name: "Perlach", time: "22 Min", slug: "perlach" },
+  { name: "Solln", time: "20 Min", slug: "solln" },
+  { name: "Hadern", time: "20 Min", slug: "hadern" },
+  { name: "Allach", time: "25 Min", slug: "allach" },
+  { name: "Aubing", time: "28 Min", slug: "aubing" },
+  { name: "Feldmoching", time: "25 Min", slug: "feldmoching" },
+  { name: "Thalkirchen", time: "18 Min", slug: "thalkirchen" },
+  { name: "Ramersdorf", time: "20 Min", slug: "ramersdorf" },
+  { name: "Berg am Laim", time: "18 Min", slug: "berg-am-laim" },
+  { name: "Schwanthalerhöhe", time: "12 Min", slug: "schwanthalerhoehe" },
+  { name: "Au", time: "15 Min", slug: "au" },
+  { name: "Lehel", time: "12 Min", slug: "lehel" },
+  { name: "Freimann", time: "22 Min", slug: "freimann" },
+];
+
+const MUNICH_REGIONS = [
+  { name: "München Nord", slug: "muenchen-nord" },
+  { name: "München Süd", slug: "muenchen-sued" },
+  { name: "München West", slug: "muenchen-west" },
+  { name: "München Ost", slug: "muenchen-ost" },
 ];
 
 export default function ServiceAreas({ serviceName, highlightAreas = [] }: ServiceAreasProps) {
@@ -42,25 +63,37 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
               <MapPin className="w-5 h-5 text-primary" />
               Unsere Einsatzgebiete
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+              {MUNICH_REGIONS.map((region) => (
+                <Link 
+                  key={region.name}
+                  href={`/${region.slug}`}
+                  className="p-2 rounded-lg border bg-primary/10 border-primary/30 hover-elevate cursor-pointer block text-center"
+                  data-testid={`region-${region.slug}`}
+                >
+                  <span className="font-medium text-sm">{region.name}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
               {MUNICH_AREAS.map((area) => (
                 <Link 
                   key={area.name}
                   href={`/${area.slug}`}
-                  className={`p-3 rounded-lg border hover-elevate cursor-pointer block ${
+                  className={`p-2 rounded-lg border hover-elevate cursor-pointer block ${
                     highlightAreas.includes(area.name) 
                       ? "bg-primary/10 border-primary/30" 
                       : "bg-background"
                   }`}
-                  data-testid={`area-${area.name.toLowerCase()}`}
+                  data-testid={`area-${area.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-sm">{area.name}</span>
-                    <ArrowRight className="w-3 h-3 text-muted-foreground" />
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="font-medium text-xs">{area.name}</span>
+                    <ArrowRight className="w-3 h-3 text-muted-foreground shrink-0" />
                   </div>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                    <Clock className="w-3 h-3" />
-                    <span>ca. {area.time}</span>
+                    <Clock className="w-3 h-3 shrink-0" />
+                    <span>{area.time}</span>
                   </div>
                 </Link>
               ))}

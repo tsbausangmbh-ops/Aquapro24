@@ -17,11 +17,11 @@ const footerLinks = {
   areas: {
     title: "Einsatzgebiete",
     links: [
-      { label: "München Zentrum", href: "/kontakt" },
-      { label: "Schwabing-West", href: "/kontakt" },
-      { label: "Bogenhausen", href: "/kontakt" },
-      { label: "Sendling", href: "/kontakt" },
-      { label: "Pasing-Obermenzing", href: "/kontakt" },
+      { label: "München Nord", href: "/muenchen-nord" },
+      { label: "München Süd", href: "/muenchen-sued" },
+      { label: "München West", href: "/muenchen-west" },
+      { label: "München Ost", href: "/muenchen-ost" },
+      { label: "Notdienst München", href: "/notdienst-muenchen" },
     ],
   },
   info: {
@@ -43,6 +43,35 @@ const footerLinks = {
     ],
   },
 };
+
+const stadtteile = [
+  { label: "Schwabing", href: "/schwabing" },
+  { label: "Bogenhausen", href: "/bogenhausen" },
+  { label: "Sendling", href: "/sendling" },
+  { label: "Pasing", href: "/pasing" },
+  { label: "Maxvorstadt", href: "/maxvorstadt" },
+  { label: "Haidhausen", href: "/haidhausen" },
+  { label: "Neuhausen", href: "/neuhausen" },
+  { label: "Trudering", href: "/trudering" },
+  { label: "Laim", href: "/laim" },
+  { label: "Giesing", href: "/giesing" },
+  { label: "Moosach", href: "/moosach" },
+  { label: "Milbertshofen", href: "/milbertshofen" },
+  { label: "Nymphenburg", href: "/nymphenburg" },
+  { label: "Perlach", href: "/perlach" },
+  { label: "Solln", href: "/solln" },
+  { label: "Hadern", href: "/hadern" },
+  { label: "Allach", href: "/allach" },
+  { label: "Aubing", href: "/aubing" },
+  { label: "Feldmoching", href: "/feldmoching" },
+  { label: "Thalkirchen", href: "/thalkirchen" },
+  { label: "Ramersdorf", href: "/ramersdorf" },
+  { label: "Berg am Laim", href: "/berg-am-laim" },
+  { label: "Schwanthalerhöhe", href: "/schwanthalerhoehe" },
+  { label: "Au", href: "/au" },
+  { label: "Lehel", href: "/lehel" },
+  { label: "Freimann", href: "/freimann" },
+];
 
 export default function Footer() {
   return (
@@ -87,6 +116,22 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+        
+        <div className="border-t border-background/10 mt-4 pt-4">
+          <h4 className="font-semibold mb-3 text-sm">Alle Stadtteile in München</h4>
+          <div className="flex flex-wrap gap-x-3 gap-y-1">
+            {stadtteile.map((stadtteil, index) => (
+              <a 
+                key={index}
+                href={stadtteil.href}
+                className="text-xs text-background/60 hover:text-primary transition-colors"
+                data-testid={`link-footer-stadtteil-${index}`}
+              >
+                {stadtteil.label}
+              </a>
+            ))}
+          </div>
         </div>
         
         <div className="border-t border-background/10 mt-4 pt-4">
