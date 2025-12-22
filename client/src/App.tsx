@@ -124,7 +124,7 @@ function FloatingBackButton() {
       onClick={handleBack}
       variant="secondary"
       size="icon"
-      className="fixed left-4 top-24 z-[60] rounded-full shadow-xl bg-white dark:bg-slate-800 border-2 border-primary/30 hover:border-primary/50"
+      className="fixed left-4 top-1/2 -translate-y-1/2 z-[60] rounded-full shadow-xl bg-white dark:bg-slate-800 border-2 border-primary/30"
       data-testid="button-back"
       aria-label="Zurück"
     >
