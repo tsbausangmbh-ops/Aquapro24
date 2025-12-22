@@ -33,7 +33,7 @@ export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQP
   };
 
   return (
-    <section className="py-8 lg:py-12" data-testid="section-faq">
+    <section className="py-8 lg:py-6" data-testid="section-faq">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-8">
           <Badge variant="outline" className="mb-4 gap-1">

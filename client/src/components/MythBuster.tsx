@@ -23,7 +23,7 @@ export default function MythBuster() {
   return (
     <section className="py-6 bg-muted/20" data-testid="section-myth-buster">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <Badge className="mb-4 bg-red-600 text-white">
             <AlertTriangle className="w-3 h-3 mr-1" />
             Schluss mit Vorurteilen
