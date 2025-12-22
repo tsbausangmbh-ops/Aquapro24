@@ -103,6 +103,20 @@ function Router() {
         <Route path="/muenchen-sued">{() => <StadtteilPage stadtteil="sued" />}</Route>
         <Route path="/muenchen-west">{() => <StadtteilPage stadtteil="west" />}</Route>
         <Route path="/muenchen-ost">{() => <StadtteilPage stadtteil="ost" />}</Route>
+        <Route path="/nymphenburg">{() => <StadtteilPage stadtteil="nymphenburg" />}</Route>
+        <Route path="/perlach">{() => <StadtteilPage stadtteil="perlach" />}</Route>
+        <Route path="/solln">{() => <StadtteilPage stadtteil="solln" />}</Route>
+        <Route path="/hadern">{() => <StadtteilPage stadtteil="hadern" />}</Route>
+        <Route path="/allach">{() => <StadtteilPage stadtteil="allach" />}</Route>
+        <Route path="/aubing">{() => <StadtteilPage stadtteil="aubing" />}</Route>
+        <Route path="/feldmoching">{() => <StadtteilPage stadtteil="feldmoching" />}</Route>
+        <Route path="/thalkirchen">{() => <StadtteilPage stadtteil="thalkirchen" />}</Route>
+        <Route path="/ramersdorf">{() => <StadtteilPage stadtteil="ramersdorf" />}</Route>
+        <Route path="/berg-am-laim">{() => <StadtteilPage stadtteil="berg_am_laim" />}</Route>
+        <Route path="/schwanthalerhoehe">{() => <StadtteilPage stadtteil="schwanthalerhoehe" />}</Route>
+        <Route path="/au">{() => <StadtteilPage stadtteil="au" />}</Route>
+        <Route path="/lehel">{() => <StadtteilPage stadtteil="lehel" />}</Route>
+        <Route path="/freimann">{() => <StadtteilPage stadtteil="freimann" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </Suspense>

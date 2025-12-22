@@ -287,6 +287,230 @@ const STADTTEILE: Record<string, StadtteilData> = {
       { name: "Trudering", slug: "trudering" },
       { name: "Haidhausen", slug: "haidhausen" }
     ]
+  },
+  nymphenburg: {
+    name: "Nymphenburg",
+    slug: "nymphenburg",
+    anfahrt: "18 Minuten",
+    beschreibung: "Nymphenburg ist eines der exklusivsten Wohnviertel Münchens. Rund um das berühmte Schloss betreuen wir historische Villen und moderne Residenzen mit höchsten Ansprüchen.",
+    besonderheiten: [
+      "Schloss-Umfeld betreut",
+      "Villen & Residenzen",
+      "Premium-Installationen"
+    ],
+    nachbarStadtteile: [
+      { name: "Neuhausen", slug: "neuhausen" },
+      { name: "Pasing", slug: "pasing" },
+      { name: "Moosach", slug: "moosach" }
+    ]
+  },
+  perlach: {
+    name: "Perlach",
+    slug: "perlach",
+    anfahrt: "22 Minuten",
+    beschreibung: "Perlach und Neuperlach bieten eine Mischung aus Hochhaussiedlungen und Einfamilienhäusern. Wir sind erfahren mit großen Wohnanlagen und individuellen Häusern gleichermaßen.",
+    besonderheiten: [
+      "Wohnanlagen betreut",
+      "Einfamilienhäuser",
+      "Schnelle Verfügbarkeit"
+    ],
+    nachbarStadtteile: [
+      { name: "Giesing", slug: "giesing" },
+      { name: "Trudering", slug: "trudering" },
+      { name: "Sendling", slug: "sendling" }
+    ]
+  },
+  solln: {
+    name: "Solln",
+    slug: "solln",
+    anfahrt: "20 Minuten",
+    beschreibung: "Solln ist ein gehobenes Villenviertel im Münchner Süden. Die grüne Wohnlage mit vielen Einfamilienhäusern erfordert oft umfassende Heizungsmodernisierungen.",
+    besonderheiten: [
+      "Villenviertel",
+      "Heizungsmodernisierung",
+      "Große Grundstücke"
+    ],
+    nachbarStadtteile: [
+      { name: "Sendling", slug: "sendling" },
+      { name: "Giesing", slug: "giesing" },
+      { name: "Perlach", slug: "perlach" }
+    ]
+  },
+  hadern: {
+    name: "Hadern",
+    slug: "hadern",
+    anfahrt: "20 Minuten",
+    beschreibung: "Hadern im Südwesten Münchens ist geprägt vom Universitätsklinikum Großhadern. Wir betreuen viele Wohnungen und Häuser in dieser familienfreundlichen Gegend.",
+    besonderheiten: [
+      "Klinikum-Umfeld",
+      "Familienfreundlich",
+      "Gute Erreichbarkeit"
+    ],
+    nachbarStadtteile: [
+      { name: "Laim", slug: "laim" },
+      { name: "Pasing", slug: "pasing" },
+      { name: "Sendling", slug: "sendling" }
+    ]
+  },
+  allach: {
+    name: "Allach-Untermenzing",
+    slug: "allach",
+    anfahrt: "25 Minuten",
+    beschreibung: "Allach-Untermenzing am nordwestlichen Stadtrand bietet ländlichen Charme mit guter Anbindung. Hier sind Wärmepumpen und moderne Heizsysteme besonders gefragt.",
+    besonderheiten: [
+      "Ländlicher Charme",
+      "Wärmepumpen-Spezialist",
+      "Neubaugebiete"
+    ],
+    nachbarStadtteile: [
+      { name: "Moosach", slug: "moosach" },
+      { name: "Pasing", slug: "pasing" },
+      { name: "Feldmoching", slug: "feldmoching" }
+    ]
+  },
+  aubing: {
+    name: "Aubing-Lochhausen",
+    slug: "aubing",
+    anfahrt: "28 Minuten",
+    beschreibung: "Aubing-Lochhausen-Langwied ist der westlichste Münchner Bezirk. Viele Einfamilienhäuser und Neubaugebiete prägen das Bild - ideal für moderne Haustechnik.",
+    besonderheiten: [
+      "Westlichster Bezirk",
+      "Neubaugebiete",
+      "Einfamilienhaus-Experten"
+    ],
+    nachbarStadtteile: [
+      { name: "Pasing", slug: "pasing" },
+      { name: "Allach", slug: "allach" },
+      { name: "Laim", slug: "laim" }
+    ]
+  },
+  feldmoching: {
+    name: "Feldmoching-Hasenbergl",
+    slug: "feldmoching",
+    anfahrt: "25 Minuten",
+    beschreibung: "Feldmoching-Hasenbergl im Münchner Norden verbindet städtisches Wohnen mit dörflichem Charakter. Wir betreuen sowohl Wohnanlagen als auch ländliche Anwesen.",
+    besonderheiten: [
+      "Nördlichster Bezirk",
+      "Stadt & Land Mix",
+      "Wohnanlagen betreut"
+    ],
+    nachbarStadtteile: [
+      { name: "Milbertshofen", slug: "milbertshofen" },
+      { name: "Moosach", slug: "moosach" },
+      { name: "Allach", slug: "allach" }
+    ]
+  },
+  thalkirchen: {
+    name: "Thalkirchen-Obersendling",
+    slug: "thalkirchen",
+    anfahrt: "18 Minuten",
+    beschreibung: "Thalkirchen-Obersendling liegt idyllisch an der Isar mit Tierpark und Flaucher. Wir kennen die Besonderheiten der Altbauten und modernen Wohnanlagen in diesem beliebten Viertel.",
+    besonderheiten: [
+      "Isar-Nähe",
+      "Tierpark-Umfeld",
+      "Altbau & Neubau"
+    ],
+    nachbarStadtteile: [
+      { name: "Sendling", slug: "sendling" },
+      { name: "Giesing", slug: "giesing" },
+      { name: "Solln", slug: "solln" }
+    ]
+  },
+  ramersdorf: {
+    name: "Ramersdorf-Perlach",
+    slug: "ramersdorf",
+    anfahrt: "20 Minuten",
+    beschreibung: "Ramersdorf-Perlach ist einer der größten Münchner Bezirke. Von der Wohnsiedlung bis zum Einfamilienhaus - wir bieten passgenaue Lösungen für jeden Bedarf.",
+    besonderheiten: [
+      "Größter Bezirk",
+      "Vielfältige Bebauung",
+      "Schnelle Verfügbarkeit"
+    ],
+    nachbarStadtteile: [
+      { name: "Giesing", slug: "giesing" },
+      { name: "Trudering", slug: "trudering" },
+      { name: "Perlach", slug: "perlach" }
+    ]
+  },
+  berg_am_laim: {
+    name: "Berg am Laim",
+    slug: "berg-am-laim",
+    anfahrt: "18 Minuten",
+    beschreibung: "Berg am Laim verbindet traditionelle Münchner Wohnkultur mit moderner Entwicklung. Wir betreuen sowohl historische Gebäude als auch neue Wohnprojekte.",
+    besonderheiten: [
+      "Zentrale Ostlage",
+      "Tradition & Moderne",
+      "Gute Erreichbarkeit"
+    ],
+    nachbarStadtteile: [
+      { name: "Haidhausen", slug: "haidhausen" },
+      { name: "Trudering", slug: "trudering" },
+      { name: "Ramersdorf", slug: "ramersdorf" }
+    ]
+  },
+  schwanthalerhoehe: {
+    name: "Schwanthalerhöhe",
+    slug: "schwanthalerhoehe",
+    anfahrt: "12 Minuten",
+    beschreibung: "Die Schwanthalerhöhe liegt zentral zwischen Theresienwiese und Westend. Wir sind spezialisiert auf die Altbauten und Gewerbeimmobilien dieses lebendigen Viertels.",
+    besonderheiten: [
+      "Theresienwiese-Nähe",
+      "Zentrale Lage",
+      "Altbau-Spezialist"
+    ],
+    nachbarStadtteile: [
+      { name: "Maxvorstadt", slug: "maxvorstadt" },
+      { name: "Sendling", slug: "sendling" },
+      { name: "Laim", slug: "laim" }
+    ]
+  },
+  au: {
+    name: "Au-Haidhausen",
+    slug: "au",
+    anfahrt: "15 Minuten",
+    beschreibung: "Die Au und Haidhausen gehören zu den beliebtesten Münchner Vierteln. Historische Altbauten und eine lebendige Atmosphäre prägen diesen besonderen Stadtteil.",
+    besonderheiten: [
+      "Beliebtes Szeneviertel",
+      "Altbau-Experten",
+      "Isar-Nähe"
+    ],
+    nachbarStadtteile: [
+      { name: "Haidhausen", slug: "haidhausen" },
+      { name: "Giesing", slug: "giesing" },
+      { name: "Maxvorstadt", slug: "maxvorstadt" }
+    ]
+  },
+  lehel: {
+    name: "Lehel",
+    slug: "lehel",
+    anfahrt: "12 Minuten",
+    beschreibung: "Das Lehel ist eines der ältesten Münchner Viertel mit exklusiven Altbauwohnungen. Wir bieten behutsame Modernisierung bei Erhalt des historischen Charakters.",
+    besonderheiten: [
+      "Exklusives Altstadtviertel",
+      "Historische Substanz",
+      "Premium-Service"
+    ],
+    nachbarStadtteile: [
+      { name: "Maxvorstadt", slug: "maxvorstadt" },
+      { name: "Haidhausen", slug: "haidhausen" },
+      { name: "Schwabing", slug: "schwabing" }
+    ]
+  },
+  freimann: {
+    name: "Freimann",
+    slug: "freimann",
+    anfahrt: "22 Minuten",
+    beschreibung: "Freimann im Münchner Norden bietet eine Mischung aus Wohngebieten und Gewerbe. Die Allianz Arena und neue Wohnprojekte prägen diesen dynamischen Bezirk.",
+    besonderheiten: [
+      "Allianz Arena Nähe",
+      "Neue Wohnprojekte",
+      "Gewerbe & Wohnen"
+    ],
+    nachbarStadtteile: [
+      { name: "Schwabing", slug: "schwabing" },
+      { name: "Milbertshofen", slug: "milbertshofen" },
+      { name: "Bogenhausen", slug: "bogenhausen" }
+    ]
   }
 };
 
