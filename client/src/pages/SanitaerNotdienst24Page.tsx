@@ -67,7 +67,7 @@ export default function SanitaerNotdienst24Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitär Notdienst 24h München | Klempner 24/7 Soforthilfe"
+        title="Sanitär Notdienst München | 24h Soforthilfe"
         description="Sanitär Notdienst 24 Stunden München - Klempner Soforthilfe bei Rohrbruch, Wasserschaden, Verstopfung. 24/7 erreichbar. Jetzt anrufen: 0152 12274043"
         canonical="https://aquapro24.de/sanitaer-notdienst-24"
         keywords="Sanitär Notdienst 24h, Klempner Notdienst, Rohrbruch Notfall, Sanitär Notdienst München, 24h Klempner München, Notfall Klempner, Wasserschaden Notdienst, Rohrbruch sofort, Verstopfung Notdienst, WC Notfall München, Sanitär 24 Stunden, Klempner Soforthilfe, Nacht Notdienst Sanitär, Wochenende Klempner, Feiertag Sanitär Notdienst"

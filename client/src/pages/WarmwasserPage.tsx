@@ -107,7 +107,7 @@ export default function WarmwasserPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Durchlauferhitzer München | Boiler defekt | Warmwasser Reparatur"
+        title="Warmwasser Reparatur München | Boiler & Durchlauferhitzer"
         description="Durchlauferhitzer oder Boiler defekt? Warmwasser Reparatur in München für alle Marken. Schnell, zuverlässig, Festpreis."
         canonical="https://aquapro24.de/warmwasser"
         keywords="Warmwasser München, Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Durchlauferhitzer reparieren München, Boiler installieren München, kein warmes Wasser München, Warmwasser Notdienst München, Stiebel Eltron München, Vaillant München, Junkers München, Warmwasserbereiter München"

@@ -245,7 +245,7 @@ export default function RatgeberPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär Ratgeber München | Expertentipps | Haushaltstipps"
+        title="Sanitär Ratgeber München | Profi-Tipps"
         description="Sanitär Ratgeber mit Expertentipps: Haushaltstipps zu Rohrbruch, Wärmepumpe, Heizung. Verständlich erklärt für Hausbesitzer."
         canonical="https://kshw-muenchen.de/ratgeber"
         keywords="Wasserschaden was tun München, Ratgeber Badsanierung Schwabing, Tipps Heizungswartung Bogenhausen, Wärmepumpe Förderung Bayern 2024, Sanitär Tipps Sendling, Ratgeber Pasing, Tipps Maxvorstadt, Guides Haidhausen, Ratgeber Neuhausen"

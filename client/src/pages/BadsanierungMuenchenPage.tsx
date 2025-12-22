@@ -59,7 +59,7 @@ export default function BadsanierungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Badumbau München komplett | Sanierung stressfrei | moderne Bäder"
+        title="Badumbau München | Stressfrei vom Meisterbetrieb"
         description="Badumbau München komplett: Sanierung stressfrei mit modernen Bädern. Von Planung bis Übergabe - Koordination und saubere Ausführung."
         canonical="https://aquapro24.de/badsanierung-muenchen"
         keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, Bad modernisieren München, Badumbau München, Badsanierung Kosten München"

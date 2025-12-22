@@ -107,7 +107,7 @@ export default function ArmaturenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Wasserhahn tropft München | Mischbatterie tauschen | Armatur reparieren"
+        title="Wasserhahn tropft München | Armatur reparieren"
         description="Wasserhahn tropft? Mischbatterie tauschen oder Armatur reparieren in München. Festpreis ab 80€, schneller Service, saubere Arbeit."
         canonical="https://aquapro24.de/armaturen"
         keywords="Armaturen München, Armaturen austauschen München, Armaturen wechseln München, Armatur montieren München, Armaturentausch München, Wasserhahn einbauen München, Wasserhahn austauschen München, Wasserhahn wechseln München, Wasserhahn montieren München, Wasserhahn reparieren München, Wasserhahn tropft München, Mischbatterie austauschen München, Mischbatterie wechseln München, Mischbatterie montieren München, Küchenarmatur München, Küchenarmatur austauschen München, Küchenarmatur montieren München, Badarmatur München, Badarmatur wechseln München, Badarmatur montieren München, Waschtischarmatur München, Waschtischarmatur austauschen, Duscharmatur München, Duscharmatur wechseln München, Thermostatarmatur München, Thermostatarmatur einbauen München, Einhebelmischer München, Einhebelmischer austauschen, Grohe Montage München, Grohe Installation München, Hansgrohe Installation München, Hansgrohe Montage München, Geberit Armatur München, Blanco Armatur München, Hansa Armatur München, Armatureninstallateur München, Sanitärinstallateur Armaturen München, Armatur undicht München, Armatur defekt München, Armatur Notdienst München"

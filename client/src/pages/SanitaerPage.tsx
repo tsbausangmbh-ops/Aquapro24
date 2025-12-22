@@ -115,7 +115,7 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Abfluss verstopft München | Rohr undicht | Leckage beheben"
+        title="Sanitär München | Abfluss verstopft & Rohr undicht"
         description="Abfluss verstopft oder Rohr undicht in München? Leckage beheben durch Profis mit Festpreis ab 92€. Schnelle Termine, faire Abrechnung."
         canonical="https://aquapro24.de/sanitaer"
         keywords="Sanitär München, Sanitärinstallateur München, Klempner München, Installateur München, Sanitärtechniker München, Sanitärfirma München, Sanitär Notdienst München, Klempner Notdienst München, Armaturen austauschen München, Armaturen montieren München, Wasserhahn wechseln München, Wasserhahn austauschen München, Wasserhahn reparieren München, Wasserhahn tropft München, Mischbatterie austauschen München, Küchenarmatur montieren München, Badarmatur einbauen München, Rohrbruch München, Rohrreinigung München, Abfluss verstopft München, Wasserschaden München, undichtes Rohr München, WC verstopft München, Dusche verstopft München, Wasserleitung reparieren München, Wasseranschluss München, Wasserinstallation München, Spülkasten reparieren München, WC austauschen München, Toilette montieren München, Waschbecken montieren München, Waschtisch einbauen München, Siphon austauschen München, Sanitär Schwabing, Klempner Bogenhausen, Sanitär Sendling, Klempner Pasing, Sanitär Maxvorstadt, Klempner Haidhausen, Sanitär Neuhausen, Klempner Trudering, Sanitär Laim, Klempner Giesing, Sanitär Moosach, Klempner Milbertshofen, Sanitär Nymphenburg, Klempner Perlach, Grohe Montage München, Hansgrohe Installation München, Geberit München, Sanitärinstallation München, Sanitär Festpreis München"

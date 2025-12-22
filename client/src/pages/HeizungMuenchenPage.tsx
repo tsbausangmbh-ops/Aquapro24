@@ -59,7 +59,7 @@ export default function HeizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Heizungsservice München | Modernisierung Heizung | Effizienz steigern"
+        title="Heizungsservice München | Reparatur & Modernisierung"
         description="Heizungsservice München: Modernisierung Heizung und Effizienz steigern. Reparatur aller Systeme mit klarem Vorgehen und planbaren Lösungen."
         canonical="https://aquapro24.de/heizung-muenchen"
         keywords="Heizung München, Heizungsreparatur München, Heizungsmodernisierung München, Heizungstausch München, Gasheizung München, Heizung Wartung München, Heizungsinstallateur München"

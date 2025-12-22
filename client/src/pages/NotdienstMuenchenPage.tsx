@@ -60,7 +60,7 @@ export default function NotdienstMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Rohrbruch Notfall München | Wasserrohrbruch | Heizungsausfall 24h"
+        title="Notdienst München 24h | Rohrbruch & Heizungsausfall"
         description="Rohrbruch Notfall oder Wasserrohrbruch? Heizungsausfall 24h Notdienst München. Fotos senden, schnelle Rückmeldung, sofortige Hilfe."
         canonical="https://aquapro24.de/notdienst-muenchen"
         keywords="Notdienst München, Sanitär Notdienst München, Heizung Notdienst München, Rohrbruch Notdienst München, Klempner Notdienst München, 24h Notdienst München, Wasserschaden Notdienst München"
