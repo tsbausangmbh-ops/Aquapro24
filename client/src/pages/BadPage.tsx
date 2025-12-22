@@ -26,9 +26,9 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import galleryImage1 from "@assets/stock_images/walk_in_shower_glass_fffa4418.jpg";
-import galleryImage2 from "@assets/stock_images/luxury_bathroom_free_36f8138d.jpg";
-import galleryImage3 from "@assets/stock_images/barrier_free_accessi_3ba82b02.jpg";
+import galleryImage1 from "@assets/stock_images/simple_modern_walk_i_3c6447de.jpg";
+import galleryImage2 from "@assets/stock_images/elegant_bathroom_bat_6c196a81.jpg";
+import galleryImage3 from "@assets/stock_images/accessible_bathroom__53db66a8.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 
