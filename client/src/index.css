@@ -66,6 +66,47 @@ button, a, [role="button"], input, select, textarea {
   font-display: swap;
 }
 
+/* Mobile Performance: Reduzierte Animationen auf Mobile */
+@media (hover: none) and (pointer: coarse) {
+  .group-hover\:scale-105 {
+    transform: none !important;
+  }
+  
+  .transition-transform {
+    transition: none !important;
+  }
+  
+  .animate-fade-in-up,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-scale-in {
+    animation-duration: 0.2s !important;
+  }
+}
+
+/* Mobile Performance: Optimierte Scroll-Container */
+.scroll-smooth-mobile {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Mobile Performance: Lazy Image Placeholder */
+img[loading="lazy"] {
+  background-color: hsl(var(--muted));
+}
+
+/* Mobile Performance: Hardware-beschleunigte Transforms */
+.transform-gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Mobile Performance: Optimierte Sticky Header */
+.sticky {
+  will-change: transform;
+  contain: layout style paint;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

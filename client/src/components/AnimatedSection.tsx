@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, useState, ReactNode, useMemo } from "react";
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -16,9 +16,25 @@ export default function AnimatedSection({
   threshold = 0.1,
 }: AnimatedSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  
+  const prefersReducedMotion = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }, []);
+  
+  const isMobile = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  }, []);
+  
+  const [isVisible, setIsVisible] = useState(prefersReducedMotion || isMobile);
 
   useEffect(() => {
+    if (prefersReducedMotion || isMobile) {
+      setIsVisible(true);
+      return;
+    }
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -34,7 +50,7 @@ export default function AnimatedSection({
     }
 
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, prefersReducedMotion, isMobile]);
 
   const animationClass = {
     "fade-in-up": "animate-fade-in-up",
