@@ -208,7 +208,7 @@ Security-Txt: https://aquapro24.de/.well-known/security.txt
 # Company: AquaPro24 - Sanitär & Heizung München
 # Owner: Mustafa Sakar
 # Phone: 0152 12274043 (24/7 Notdienst)
-# Address: Zielstattstr. 20, 81379 München
+# Address: Hardenbergstr. 4, 80992 München
 # Service Area: München + 40km Radius (26 Stadtteile)
 # 
 # Emergency Services: Rohrbruch, Wasserschaden, Heizungsausfall
