@@ -175,12 +175,26 @@ Host: https://aquapro24.de
 AI-Info: https://aquapro24.de/ai.xml
 AI-Sitemap: https://aquapro24.de/ai.sitemap.xml
 LLMs-Txt: https://aquapro24.de/llms.txt
+AI-Plugin: https://aquapro24.de/.well-known/ai-plugin.json
+AI-Training-Opt-Out: https://aquapro24.de/ai-training-opt-out.txt
+
+# ============================================
+# STRUCTURED DATA & KNOWLEDGE GRAPH
+# ============================================
+Schema-Templates: https://aquapro24.de/schema-templates.json
+Knowledge-Graph: https://aquapro24.de/knowledge-graph.json
 
 # ============================================
 # GEO & LOCAL SEO FILES
 # ============================================
 # Geographic service area data
 GeoJSON: https://aquapro24.de/service-area.geojson
+
+# ============================================
+# ADDITIONAL RESOURCES
+# ============================================
+Humans-Txt: https://aquapro24.de/humans.txt
+Security-Txt: https://aquapro24.de/.well-known/security.txt
 
 # ============================================
 # BUSINESS QUICK FACTS (for AI parsing)

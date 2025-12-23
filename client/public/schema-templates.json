@@ -1,0 +1,297 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://aquapro24.de/#website",
+      "url": "https://aquapro24.de",
+      "name": "AquaPro24 - Sanitär & Heizung München",
+      "description": "Klempner München - Sanitär und Heizung Notdienst 24/7. Partnernetzwerk seit 2005. Festpreise ab 81€.",
+      "publisher": {
+        "@id": "https://aquapro24.de/#organization"
+      },
+      "inLanguage": "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://aquapro24.de/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://aquapro24.de/#organization",
+      "name": "AquaPro24",
+      "url": "https://aquapro24.de",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://aquapro24.de/#logo",
+        "url": "https://aquapro24.de/logo.png",
+        "contentUrl": "https://aquapro24.de/logo.png",
+        "width": 200,
+        "height": 200,
+        "caption": "AquaPro24 Logo"
+      },
+      "image": {
+        "@id": "https://aquapro24.de/#logo"
+      },
+      "sameAs": [
+        "https://www.facebook.com/aquapro24",
+        "https://www.instagram.com/aquapro24_muenchen",
+        "https://www.linkedin.com/company/aquapro24"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://aquapro24.de/#localbusiness",
+      "name": "AquaPro24",
+      "image": "https://aquapro24.de/og-image.jpg",
+      "priceRange": "€€",
+      "telephone": "+49-152-12274043",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zielstattstr. 20",
+        "addressLocality": "München",
+        "addressRegion": "Bayern",
+        "postalCode": "81379",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1351,
+        "longitude": 11.5820
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "847",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aquapro24.de/#notdienst",
+      "name": "24/7 Sanitär & Heizung Notdienst München",
+      "serviceType": "Emergency Plumbing and Heating Service",
+      "provider": {
+        "@id": "https://aquapro24.de/#localbusiness"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "München",
+        "sameAs": "https://de.wikipedia.org/wiki/München"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "servicePhone": "+49-152-12274043",
+        "availableLanguage": ["de", "en", "tr"]
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR",
+          "minPrice": "81"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aquapro24.de/#sanitaer",
+      "name": "Sanitärinstallation München",
+      "description": "Professionelle Sanitärarbeiten: Rohrbruch-Reparatur, Leckortung, WC-Montage, Wasserinstallation",
+      "serviceType": "Plumbing Service",
+      "provider": {
+        "@id": "https://aquapro24.de/#localbusiness"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "92",
+        "priceValidUntil": "2025-12-31"
+      },
+      "url": "https://aquapro24.de/sanitaer"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aquapro24.de/#heizung",
+      "name": "Heizungsservice München",
+      "description": "Heizungswartung, Heizungsreparatur, Therme-Reparatur, Heizungsmodernisierung",
+      "serviceType": "HVAC Service",
+      "provider": {
+        "@id": "https://aquapro24.de/#localbusiness"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "154",
+        "priceValidUntil": "2025-12-31"
+      },
+      "url": "https://aquapro24.de/heizung"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aquapro24.de/#rohrreinigung",
+      "name": "Rohrreinigung München",
+      "description": "Abfluss verstopft, WC verstopft, Kanalreinigung, Hochdruckspülung - Notdienst 24/7",
+      "serviceType": "Drain Cleaning Service",
+      "provider": {
+        "@id": "https://aquapro24.de/#localbusiness"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "81",
+        "priceValidUntil": "2025-12-31"
+      },
+      "url": "https://aquapro24.de/rohrreinigung"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aquapro24.de/#waermepumpe",
+      "name": "Wärmepumpe Installation München",
+      "description": "Luft-Wasser und Erdwärme-Wärmepumpen mit bis zu 70% BAFA Förderung",
+      "serviceType": "Heat Pump Installation",
+      "provider": {
+        "@id": "https://aquapro24.de/#localbusiness"
+      },
+      "url": "https://aquapro24.de/waermepumpe"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aquapro24.de/#badsanierung",
+      "name": "Badsanierung München",
+      "description": "Komplette Badsanierung, barrierefreie Bäder, Walk-in Duschen - 5 Jahre Garantie",
+      "serviceType": "Bathroom Renovation",
+      "provider": {
+        "@id": "https://aquapro24.de/#localbusiness"
+      },
+      "url": "https://aquapro24.de/bad"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aquapro24.de/faq#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet ein Klempner in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Kosten für einen Klempner in München beginnen ab 81€ für Rohrreinigung, ab 92€ für Sanitärarbeiten und ab 154€ für Heizungsservice. Alle Preise sind Festpreise ohne versteckte Kosten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es einen 24-Stunden Notdienst?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, AquaPro24 bietet einen 24/7 Notdienst für Rohrbruch, Wasserschaden, Heizungsausfall und verstopfte Abflüsse in München und Umgebung. Reaktionszeit: 45-60 Minuten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie hoch ist die BAFA Förderung für Wärmepumpen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die BAFA Förderung für Wärmepumpen beträgt bis zu 70% der Kosten: 30% Grundförderung + 20% Klimageschwindigkeitsbonus + 30% Einkommensbonus. Maximum: 23.100€. Wir übernehmen den kompletten Förderantrag kostenlos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Marken werden verbaut?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir arbeiten mit Premium-Marken: Grohe, Hansgrohe, Geberit, Villeroy & Boch (Sanitär) und Viessmann, Vaillant, Buderus, Wolf (Heizung). Alle Produkte mit Herstellergarantie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert eine Badsanierung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine komplette Badsanierung dauert in der Regel 2-4 Wochen, je nach Umfang. Wir bieten 5 Jahre Garantie auf alle Badsanierungen und arbeiten mit festem Zeitplan."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://aquapro24.de/notdienst#howto",
+      "name": "Was tun bei Rohrbruch? Soforthilfe-Anleitung",
+      "description": "Schritt-für-Schritt Anleitung bei Rohrbruch oder Wasserschaden in München",
+      "totalTime": "PT5M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "0"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Hauptwasserhahn zudrehen",
+          "text": "Drehen Sie sofort den Hauptwasserhahn zu, um weiteren Wasseraustritt zu stoppen. Der Hahn befindet sich meist im Keller oder Hausanschlussraum."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Strom abschalten",
+          "text": "Bei Wasserschaden in der Nähe von Steckdosen oder elektrischen Geräten: Sicherung ausschalten, um Kurzschlüsse zu vermeiden."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Wasser aufnehmen",
+          "text": "Nehmen Sie ausgetretenes Wasser mit Handtüchern, Lappen oder einem Nasssauger auf, um Folgeschäden zu minimieren."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Notdienst anrufen",
+          "text": "Rufen Sie unseren 24/7 Notdienst an: 0152 12274043. Wir sind in 45-60 Minuten bei Ihnen in München."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Schaden dokumentieren",
+          "text": "Fotografieren Sie den Schaden für Ihre Versicherung. Wir helfen Ihnen auch bei der Schadensmeldung."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://aquapro24.de/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aquapro24.de/"
+        }
+      ]
+    }
+  ]
+}

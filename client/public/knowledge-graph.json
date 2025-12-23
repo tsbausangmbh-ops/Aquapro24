@@ -1,0 +1,159 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "aquapro": "https://aquapro24.de/ontology/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  },
+  "@graph": [
+    {
+      "@id": "aquapro:AquaPro24",
+      "@type": "LocalBusiness",
+      "name": "AquaPro24",
+      "description": "Sanitär & Heizung Partnernetzwerk München seit 2005",
+      "foundingDate": "2005",
+      "founder": {
+        "@id": "aquapro:MustafaSakar"
+      },
+      "location": {
+        "@id": "aquapro:MunichHQ"
+      },
+      "hasService": [
+        { "@id": "aquapro:ServiceSanitaer" },
+        { "@id": "aquapro:ServiceHeizung" },
+        { "@id": "aquapro:ServiceRohrreinigung" },
+        { "@id": "aquapro:ServiceBadsanierung" },
+        { "@id": "aquapro:ServiceWaermepumpe" },
+        { "@id": "aquapro:ServiceNotdienst" }
+      ],
+      "servesArea": [
+        { "@id": "aquapro:AreaMunich" },
+        { "@id": "aquapro:AreaSchwabing" },
+        { "@id": "aquapro:AreaBogenhausen" },
+        { "@id": "aquapro:AreaMaxvorstadt" }
+      ],
+      "usesBrand": [
+        { "@id": "aquapro:BrandGrohe" },
+        { "@id": "aquapro:BrandViessmann" },
+        { "@id": "aquapro:BrandVaillant" }
+      ]
+    },
+    {
+      "@id": "aquapro:MustafaSakar",
+      "@type": "Person",
+      "name": "Mustafa Sakar",
+      "jobTitle": "Inhaber",
+      "worksFor": { "@id": "aquapro:AquaPro24" }
+    },
+    {
+      "@id": "aquapro:MunichHQ",
+      "@type": "Place",
+      "name": "AquaPro24 Zentrale München",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zielstattstr. 20",
+        "addressLocality": "München",
+        "postalCode": "81379",
+        "addressCountry": "DE"
+      },
+      "geo:lat": 48.1351,
+      "geo:long": 11.5820
+    },
+    {
+      "@id": "aquapro:ServiceSanitaer",
+      "@type": "Service",
+      "name": "Sanitärinstallation",
+      "description": "Rohrbruch-Reparatur, Leckortung, WC-Montage",
+      "priceRange": "ab 92€",
+      "isEmergencyService": true
+    },
+    {
+      "@id": "aquapro:ServiceHeizung",
+      "@type": "Service",
+      "name": "Heizungsservice",
+      "description": "Wartung, Reparatur, Modernisierung",
+      "priceRange": "ab 154€",
+      "isEmergencyService": true,
+      "hasFunding": "BAFA bis 70%"
+    },
+    {
+      "@id": "aquapro:ServiceRohrreinigung",
+      "@type": "Service",
+      "name": "Rohrreinigung",
+      "description": "Abfluss verstopft, WC verstopft, Kanalreinigung",
+      "priceRange": "ab 81€",
+      "isEmergencyService": true
+    },
+    {
+      "@id": "aquapro:ServiceBadsanierung",
+      "@type": "Service",
+      "name": "Badsanierung",
+      "description": "Komplettumbau, barrierefreie Bäder",
+      "warranty": "5 Jahre"
+    },
+    {
+      "@id": "aquapro:ServiceWaermepumpe",
+      "@type": "Service",
+      "name": "Wärmepumpe",
+      "description": "Luft-Wasser, Erdwärme Installation",
+      "hasFunding": "BAFA bis 70% (max 23.100€)"
+    },
+    {
+      "@id": "aquapro:ServiceNotdienst",
+      "@type": "Service",
+      "name": "24/7 Notdienst",
+      "description": "Sanitär und Heizung Notfälle",
+      "availability": "24/7/365",
+      "responseTime": "45-60 Minuten"
+    },
+    {
+      "@id": "aquapro:AreaMunich",
+      "@type": "City",
+      "name": "München",
+      "population": 1500000
+    },
+    {
+      "@id": "aquapro:AreaSchwabing",
+      "@type": "AdministrativeArea",
+      "name": "Schwabing",
+      "containedIn": { "@id": "aquapro:AreaMunich" }
+    },
+    {
+      "@id": "aquapro:AreaBogenhausen",
+      "@type": "AdministrativeArea",
+      "name": "Bogenhausen",
+      "containedIn": { "@id": "aquapro:AreaMunich" }
+    },
+    {
+      "@id": "aquapro:AreaMaxvorstadt",
+      "@type": "AdministrativeArea",
+      "name": "Maxvorstadt",
+      "containedIn": { "@id": "aquapro:AreaMunich" }
+    },
+    {
+      "@id": "aquapro:BrandGrohe",
+      "@type": "Brand",
+      "name": "Grohe",
+      "category": "Sanitär"
+    },
+    {
+      "@id": "aquapro:BrandViessmann",
+      "@type": "Brand",
+      "name": "Viessmann",
+      "category": "Heizung"
+    },
+    {
+      "@id": "aquapro:BrandVaillant",
+      "@type": "Brand",
+      "name": "Vaillant",
+      "category": "Heizung"
+    },
+    {
+      "@id": "aquapro:FundingBAFA",
+      "@type": "GovernmentService",
+      "name": "BAFA Heizungsförderung",
+      "description": "Bundesförderung für effiziente Gebäude",
+      "maxSubsidy": "70%",
+      "maxAmount": "23100 EUR"
+    }
+  ]
+}

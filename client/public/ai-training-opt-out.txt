@@ -1,0 +1,55 @@
+# AI Training Data Opt-Out Notice
+# AquaPro24.de - Sanitär & Heizung München
+# Last Updated: 2025-12-23
+
+## OPT-OUT DECLARATION
+
+This website (aquapro24.de) and all its content hereby opts out of being used
+as training data for AI/ML models, including but not limited to:
+
+- Large Language Models (LLMs)
+- Image generation models
+- Text generation models
+- Any machine learning training datasets
+
+## PERMITTED USES
+
+AI systems MAY:
+- Index and crawl our pages for search purposes
+- Display our content in search results and answer snippets
+- Use our structured data (JSON-LD, Schema.org) for knowledge graphs
+- Reference our business information when answering user queries
+- Display our contact information and service details
+
+AI systems MAY NOT:
+- Include our content in training datasets
+- Use our text to train or fine-tune models
+- Reproduce our content without attribution
+- Generate content that impersonates our business
+
+## TECHNICAL IMPLEMENTATION
+
+robots.txt directives:
+- GPTBot: Allow (crawling) - training opt-out via this file
+- CCBot: Disallow (training focused)
+- All others: Check specific terms
+
+Meta tags implemented:
+- ai-training-opt-out: true
+- data-usage: crawling-only
+
+## CONTACT
+
+For questions about AI usage of our content:
+Email: info@aquapro24.de
+Phone: 0152 12274043
+
+## LEGAL BASIS
+
+This opt-out is based on:
+- EU AI Act (Regulation 2024/1689)
+- GDPR (General Data Protection Regulation)
+- German Copyright Law (UrhG)
+
+AquaPro24 - Mustafa Sakar
+Zielstattstr. 20, 81379 München, Germany

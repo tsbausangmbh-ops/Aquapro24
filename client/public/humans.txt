@@ -1,0 +1,49 @@
+/* TEAM */
+
+Owner: Mustafa Sakar
+Role: Inhaber / Owner
+Location: München, Bayern, Deutschland
+Contact: info@aquapro24.de
+Phone: 0152 12274043
+
+/* COMPANY */
+
+Name: AquaPro24
+Type: Partnernetzwerk für Sanitär und Heizung
+Founded: 2005
+Website: https://aquapro24.de
+Service Area: München + 40km Radius
+
+/* SERVICES */
+
+- Sanitär (Plumbing): ab 92€
+- Rohrreinigung (Drain Cleaning): ab 81€
+- Heizung (Heating): ab 154€
+- Badsanierung (Bathroom Renovation)
+- Wärmepumpe (Heat Pump): bis 70% BAFA Förderung
+- 24/7 Notdienst (Emergency Service)
+
+/* TECHNOLOGY */
+
+Framework: React 18 + TypeScript
+Build: Vite
+Styling: Tailwind CSS + shadcn/ui
+Backend: Node.js + Express
+Database: PostgreSQL + Drizzle ORM
+Hosting: Replit
+
+/* BRAND PARTNERS */
+
+Sanitär: Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit
+Heizung: Viessmann, Vaillant, Buderus, Wolf
+
+/* CONTACT */
+
+Phone: 0152 12274043
+Email: info@aquapro24.de
+Address: Zielstattstr. 20, 81379 München
+Emergency: 24/7 verfügbar
+
+/* LAST UPDATE */
+
+Date: 2025-12-23
