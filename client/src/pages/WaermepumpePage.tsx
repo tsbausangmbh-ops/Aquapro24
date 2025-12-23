@@ -25,6 +25,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/stock_images/vaillant_arotherm_he_85021ffa.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const services = [
   {
@@ -415,6 +416,8 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="waermepumpe" />
+        
         <RelatedServices currentService="waermepumpe" />
       </main>
       

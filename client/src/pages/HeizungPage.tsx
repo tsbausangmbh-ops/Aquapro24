@@ -26,6 +26,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const services = [
   {
@@ -420,6 +421,8 @@ export default function HeizungPage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="heizung" />
+        
         <RelatedServices currentService="heizung" />
       </main>
       

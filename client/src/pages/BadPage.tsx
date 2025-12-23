@@ -36,6 +36,7 @@ import galleryImage2 from "@assets/stock_images/minimalist_luxury_ba_d497e62b.jp
 import galleryImage3 from "@assets/stock_images/modern_accessible_ba_f2b18796.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const packages = [
   {
@@ -666,6 +667,8 @@ export default function BadPage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="bad" />
+        
         <RelatedServices currentService="bad" />
       </main>
       

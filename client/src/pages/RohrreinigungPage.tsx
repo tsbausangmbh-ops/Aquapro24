@@ -26,6 +26,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/generated_images/clean_modern_drain_grate.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const services = [
   {
@@ -381,6 +382,8 @@ export default function RohrreinigungPage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="rohrreinigung" />
+        
         <RelatedServices currentService="rohrreinigung" />
       </main>
       

@@ -24,6 +24,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
 
 export default function NotdienstMuenchenPage() {
@@ -289,6 +290,7 @@ export default function NotdienstMuenchenPage() {
         <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
         <ServiceAreas serviceName="Notdienst"  />
+        <KeywordLinks currentPage="notdienst" />
         <RelatedServices currentService="sanitaer" />
       </main>
       

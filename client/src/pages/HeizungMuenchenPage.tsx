@@ -23,6 +23,7 @@ import {
 import { Link } from "wouter";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
 
 export default function HeizungMuenchenPage() {
@@ -262,6 +263,7 @@ export default function HeizungMuenchenPage() {
         />
         <TrustBar />
         <ServiceAreas serviceName="Heizung"  />
+        <KeywordLinks currentPage="heizung" />
         <RelatedServices currentService="heizung" />
       </main>
       

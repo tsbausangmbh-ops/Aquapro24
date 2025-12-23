@@ -27,6 +27,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/generated_images/tankless_water_heater.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const services = [
   {
@@ -416,6 +417,8 @@ export default function WarmwasserPage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="warmwasser" />
+        
         <RelatedServices currentService="warmwasser" />
       </main>
       

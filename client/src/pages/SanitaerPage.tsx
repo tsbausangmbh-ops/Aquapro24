@@ -27,6 +27,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const services = [
   {
@@ -433,6 +434,8 @@ export default function SanitaerPage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="sanitaer" />
+        
         <RelatedServices currentService="sanitaer" />
       </main>
       

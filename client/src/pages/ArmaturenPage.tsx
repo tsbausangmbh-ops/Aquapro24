@@ -26,6 +26,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/generated_images/modern_chrome_faucet.png";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
+import KeywordLinks from "@/components/KeywordLinks";
 
 const services = [
   {
@@ -415,6 +416,8 @@ export default function ArmaturenPage() {
           </div>
         </section>
 
+        <KeywordLinks currentPage="armaturen" />
+        
         <RelatedServices currentService="armaturen" />
       </main>
       
