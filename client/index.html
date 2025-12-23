@@ -33,6 +33,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
     <meta name="msapplication-TileImage" content="/favicon.ico" />
     <meta name="theme-color" content="#f97316" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=yes" />
+    
     <!-- Performance: DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -49,10 +55,16 @@
     
     <!-- Performance: Kritische CSS inline für schnelleren First Paint -->
     <style>
-      body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-      #root{min-height:100vh}
+      *{box-sizing:border-box}
+      body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeSpeed}
+      #root{min-height:100vh;min-height:100dvh}
+      img,video{max-width:100%;height:auto;display:block}
+      button,a{touch-action:manipulation}
+      @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
       .loader{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#fff}
       @media(prefers-color-scheme:dark){.loader{background:#0a0a0a}}
+      .skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:skeleton 1.5s infinite}
+      @keyframes skeleton{0%{background-position:200% 0}100%{background-position:-200% 0}}
     </style>
     
     <!-- Performance: Optimierte Schriftart (nur 2 statt 25+) -->
@@ -283,5 +295,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if('serviceWorker' in navigator){
+        window.addEventListener('load',()=>{
+          navigator.serviceWorker.register('/sw.js').catch(()=>{});
+        });
+      }
+    </script>
   </body>
 </html>

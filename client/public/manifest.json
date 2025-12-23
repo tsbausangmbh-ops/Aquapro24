@@ -1,0 +1,43 @@
+{
+  "name": "AquaPro24 - Sanitär & Heizung München",
+  "short_name": "AquaPro24",
+  "description": "Klempner München - Sanitär und Heizung Notdienst 24/7. Partnernetzwerk seit 2005.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "lang": "de",
+  "categories": ["business", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Notdienst anrufen",
+      "short_name": "Notdienst",
+      "description": "24/7 Notdienst direkt anrufen",
+      "url": "tel:+4915212274043",
+      "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Termin buchen",
+      "short_name": "Termin",
+      "description": "Online Termin vereinbaren",
+      "url": "/termin",
+      "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

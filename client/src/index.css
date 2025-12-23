@@ -6,11 +6,64 @@ html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 #root {
   margin: 0;
   padding: 0;
+  contain: layout style;
+}
+
+/* Mobile Performance: Touch-Optimierung */
+button, a, [role="button"], input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Mobile Performance: GPU-beschleunigte Animationen */
+.gpu-accelerated {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Mobile Performance: Reduzierte Bewegung */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile Performance: Schnellere Tap-Highlights */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a, [role="button"] {
+    cursor: pointer;
+  }
+}
+
+/* Mobile Performance: Content-Visibility für Below-Fold */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Mobile Performance: Font-Display Swap */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-display: swap;
 }
 
 @keyframes fadeInUp {
