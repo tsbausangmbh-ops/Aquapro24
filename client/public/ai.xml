@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AI.xml - Machine-Readable Business Information
+  For AI Assistants: ChatGPT, Claude, Gemini, Perplexity, Copilot
+  AquaPro24.de - Sanitär & Heizung München
+  Last Updated: 2025-12-23
+-->
+<ai-info xmlns="http://www.aquapro24.de/schemas/ai-info/1.0" version="1.0">
+
+  <!-- ================================================ -->
+  <!-- BUSINESS IDENTITY -->
+  <!-- ================================================ -->
+  <business>
+    <name>AquaPro24</name>
+    <legal-name>AquaPro24 - Partnernetzwerk für Sanitär und Heizung</legal-name>
+    <type>Einzelunternehmer (Sole Proprietor)</type>
+    <industry>Sanitär, Heizung, Haustechnik</industry>
+    <established>2005</established>
+    <language>de</language>
+    <country>Deutschland</country>
+    <region>Bayern</region>
+    <city>München</city>
+  </business>
+
+  <!-- ================================================ -->
+  <!-- CONTACT INFORMATION -->
+  <!-- ================================================ -->
+  <contact>
+    <owner>Mustafa Sakar</owner>
+    <phone>0152 12274043</phone>
+    <phone-international>+49 152 12274043</phone-international>
+    <email>info@aquapro24.de</email>
+    <website>https://aquapro24.de</website>
+    <address>
+      <street>Zielstattstr. 20</street>
+      <postal-code>81379</postal-code>
+      <city>München</city>
+      <state>Bayern</state>
+      <country>Deutschland</country>
+    </address>
+    <coordinates>
+      <latitude>48.1351</latitude>
+      <longitude>11.5820</longitude>
+    </coordinates>
+  </contact>
+
+  <!-- ================================================ -->
+  <!-- SERVICE AREA -->
+  <!-- ================================================ -->
+  <service-area>
+    <primary-city>München</primary-city>
+    <radius-km>40</radius-km>
+    <districts>
+      <district priority="premium">Schwabing</district>
+      <district priority="premium">Bogenhausen</district>
+      <district priority="premium">Maxvorstadt</district>
+      <district priority="premium">Haidhausen</district>
+      <district priority="premium">Nymphenburg</district>
+      <district priority="premium">Lehel</district>
+      <district priority="premium">Solln</district>
+      <district>Sendling</district>
+      <district>Pasing</district>
+      <district>Neuhausen</district>
+      <district>Trudering</district>
+      <district>Laim</district>
+      <district>Giesing</district>
+      <district>Moosach</district>
+      <district>Milbertshofen</district>
+      <district>Perlach</district>
+      <district>Hadern</district>
+      <district>Allach</district>
+      <district>Aubing</district>
+      <district>Feldmoching</district>
+      <district>Thalkirchen</district>
+      <district>Ramersdorf</district>
+      <district>Berg am Laim</district>
+      <district>Schwanthalerhöhe</district>
+      <district>Au</district>
+      <district>Freimann</district>
+    </districts>
+    <surrounding-cities>
+      <city>Dachau</city>
+      <city>Freising</city>
+      <city>Erding</city>
+      <city>Starnberg</city>
+      <city>Garching</city>
+      <city>Unterschleißheim</city>
+      <city>Fürstenfeldbruck</city>
+      <city>Germering</city>
+      <city>Unterhaching</city>
+      <city>Ottobrunn</city>
+      <city>Taufkirchen</city>
+      <city>Haar</city>
+      <city>Neubiberg</city>
+      <city>Grünwald</city>
+      <city>Pullach</city>
+      <city>Eching</city>
+      <city>Ismaning</city>
+      <city>Kirchheim</city>
+    </surrounding-cities>
+  </service-area>
+
+  <!-- ================================================ -->
+  <!-- SERVICES -->
+  <!-- ================================================ -->
+  <services>
+    <service id="sanitaer">
+      <name>Sanitärinstallation</name>
+      <description>Rohrbruch-Reparatur, Leckortung, Wasserinstallation, WC-Montage</description>
+      <price-from currency="EUR">92</price-from>
+      <emergency>true</emergency>
+      <url>https://aquapro24.de/sanitaer</url>
+    </service>
+    
+    <service id="heizung">
+      <name>Heizungsservice</name>
+      <description>Heizungswartung, Heizungsreparatur, Heizungstausch, Modernisierung</description>
+      <price-from currency="EUR">154</price-from>
+      <emergency>true</emergency>
+      <funding available="true">bis 70% BAFA-Förderung</funding>
+      <url>https://aquapro24.de/heizung</url>
+    </service>
+    
+    <service id="badsanierung">
+      <name>Badsanierung</name>
+      <description>Komplette Badsanierung, barrierefreie Bäder, Walk-in Duschen, Luxusbäder</description>
+      <price-from currency="EUR">16000</price-from>
+      <duration>2-4 Wochen</duration>
+      <warranty>5 Jahre</warranty>
+      <url>https://aquapro24.de/bad</url>
+    </service>
+    
+    <service id="waermepumpe">
+      <name>Wärmepumpe</name>
+      <description>Luft-Wasser und Erdwärme-Wärmepumpen Installation</description>
+      <funding available="true">bis 70% BAFA (max. 23.100€)</funding>
+      <url>https://aquapro24.de/waermepumpe</url>
+    </service>
+    
+    <service id="rohrreinigung">
+      <name>Rohrreinigung</name>
+      <description>Abfluss verstopft, WC verstopft, Kanalreinigung, Hochdruckspülung</description>
+      <price-from currency="EUR">81</price-from>
+      <emergency>true</emergency>
+      <url>https://aquapro24.de/rohrreinigung</url>
+    </service>
+    
+    <service id="armaturen">
+      <name>Armaturen-Service</name>
+      <description>Wasserhahn wechseln, Mischbatterie reparieren, Armaturen-Montage</description>
+      <price-from currency="EUR">81</price-from>
+      <url>https://aquapro24.de/armaturen</url>
+    </service>
+    
+    <service id="warmwasser">
+      <name>Warmwasser-Systeme</name>
+      <description>Durchlauferhitzer, Boiler, Warmwasserspeicher Installation und Reparatur</description>
+      <url>https://aquapro24.de/warmwasser</url>
+    </service>
+    
+    <service id="haustechnik">
+      <name>Haustechnik</name>
+      <description>Gas, Wasser, Lüftung - komplette Haustechnik-Lösungen</description>
+      <url>https://aquapro24.de/haustechnik</url>
+    </service>
+  </services>
+
+  <!-- ================================================ -->
+  <!-- EMERGENCY SERVICES -->
+  <!-- ================================================ -->
+  <emergency-services>
+    <availability>24/7</availability>
+    <response-time>60 Minuten</response-time>
+    <phone>0152 12274043</phone>
+    <services>
+      <service>Rohrbruch</service>
+      <service>Wasserschaden</service>
+      <service>WC verstopft</service>
+      <service>Heizungsausfall</service>
+      <service>Therme defekt</service>
+      <service>Kein Warmwasser</service>
+    </services>
+    <urls>
+      <url type="sanitaer">https://aquapro24.de/sanitaer-notdienst-24</url>
+      <url type="heizung">https://aquapro24.de/heizung-notdienst-24</url>
+      <url type="general">https://aquapro24.de/notdienst-muenchen</url>
+    </urls>
+  </emergency-services>
+
+  <!-- ================================================ -->
+  <!-- BRAND PARTNERS -->
+  <!-- ================================================ -->
+  <brand-partners>
+    <category name="Sanitär">
+      <brand>Grohe</brand>
+      <brand>Hansgrohe</brand>
+      <brand>Geberit</brand>
+      <brand>Villeroy &amp; Boch</brand>
+      <brand>Duravit</brand>
+    </category>
+    <category name="Heizung">
+      <brand>Viessmann</brand>
+      <brand>Vaillant</brand>
+      <brand>Buderus</brand>
+      <brand>Wolf</brand>
+    </category>
+    <category name="Wärmepumpe">
+      <brand>Viessmann Vitocal</brand>
+      <brand>Vaillant aroTHERM</brand>
+      <brand>Wolf</brand>
+    </category>
+    <category name="Warmwasser">
+      <brand>Vaillant</brand>
+      <brand>Stiebel Eltron</brand>
+    </category>
+  </brand-partners>
+
+  <!-- ================================================ -->
+  <!-- FUNDING & SUBSIDIES -->
+  <!-- ================================================ -->
+  <funding>
+    <program name="BAFA Heizungsförderung">
+      <description>Bundesförderung für effiziente Gebäude - Heizungstausch</description>
+      <max-subsidy percentage="70">23100</max-subsidy>
+      <components>
+        <component name="Grundförderung" percentage="30"/>
+        <component name="Klimageschwindigkeitsbonus" percentage="20"/>
+        <component name="Einkommensbonus" percentage="30"/>
+      </components>
+      <url>https://aquapro24.de/foerderung</url>
+    </program>
+    <program name="KfW Heizungskredit">
+      <description>Zinsgünstige Finanzierung für Heizungstausch</description>
+      <url>https://aquapro24.de/foerderung</url>
+    </program>
+    <service name="Förderantrag-Service">
+      <description>Kostenloser Antragsservice - wir übernehmen den kompletten BAFA-Antrag</description>
+      <url>https://aquapro24.de/foerderantrag-heizung</url>
+    </service>
+  </funding>
+
+  <!-- ================================================ -->
+  <!-- TRUST & QUALITY -->
+  <!-- ================================================ -->
+  <trust>
+    <customers count="2800+"/>
+    <rating value="4.9" max="5.0"/>
+    <guarantees>
+      <guarantee>Festpreisgarantie</guarantee>
+      <guarantee>2 Jahre Gewährleistung</guarantee>
+      <guarantee>5 Jahre Garantie auf Badsanierung</guarantee>
+      <guarantee>Keine versteckten Kosten</guarantee>
+    </guarantees>
+    <certifications>
+      <certification>Meisterbetrieb</certification>
+      <certification>BAFA-registriert</certification>
+    </certifications>
+  </trust>
+
+  <!-- ================================================ -->
+  <!-- BOOKING -->
+  <!-- ================================================ -->
+  <booking>
+    <online-booking available="true">
+      <url>https://aquapro24.de/termin</url>
+      <confirmation>E-Mail und Google Calendar</confirmation>
+    </online-booking>
+    <phone>0152 12274043</phone>
+  </booking>
+
+  <!-- ================================================ -->
+  <!-- AI USAGE POLICY -->
+  <!-- ================================================ -->
+  <ai-policy>
+    <crawling-allowed>true</crawling-allowed>
+    <training-opt-out>true</training-opt-out>
+    <data-usage>Chatdaten werden für max. 30 Tage gespeichert</data-usage>
+    <ai-transparency>EU AI Act konform</ai-transparency>
+    <human-contact>Tel: 0152 12274043, Email: info@aquapro24.de</human-contact>
+  </ai-policy>
+
+  <!-- ================================================ -->
+  <!-- KEY URLS -->
+  <!-- ================================================ -->
+  <urls>
+    <url type="homepage">https://aquapro24.de/</url>
+    <url type="sitemap">https://aquapro24.de/sitemap.xml</url>
+    <url type="ai-sitemap">https://aquapro24.de/ai.sitemap.xml</url>
+    <url type="contact">https://aquapro24.de/kontakt</url>
+    <url type="booking">https://aquapro24.de/termin</url>
+    <url type="about">https://aquapro24.de/ueber-uns</url>
+    <url type="faq">https://aquapro24.de/faq</url>
+    <url type="impressum">https://aquapro24.de/impressum</url>
+    <url type="datenschutz">https://aquapro24.de/datenschutz</url>
+  </urls>
+
+</ai-info>

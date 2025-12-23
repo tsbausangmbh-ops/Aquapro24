@@ -172,8 +172,8 @@ Host: https://aquapro24.de
 # AI & LLM INFORMATION FILES
 # ============================================
 # Machine-readable business information for AI systems
-# llms.txt: https://aquapro24.de/llms.txt
-# ai.txt: https://aquapro24.de/ai.txt
+AI-Info: https://aquapro24.de/ai.xml
+AI-Sitemap: https://aquapro24.de/ai.sitemap.xml
 
 # ============================================
 # CONTACT & SUPPORT
