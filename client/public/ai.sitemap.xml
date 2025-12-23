@@ -1,112 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <!--
-  AI.SITEMAP.XML - Enhanced Sitemap for AI Crawlers
+  AI.SITEMAP.XML - Enhanced Sitemap for AI Crawlers & LLMs
   AquaPro24.de - Sanitär & Heizung München
-  Optimized for: GPTBot, ClaudeBot, PerplexityBot, Gemini, Copilot
+  Optimized for: GPTBot, ClaudeBot, PerplexityBot, Gemini, Copilot, Anthropic
+  Schema: Custom AI namespace with semantic metadata
   Last Updated: 2025-12-23
   Total URLs: 62
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:ai="http://www.aquapro24.de/schemas/ai-sitemap/1.0">
+        xmlns:ai="http://www.aquapro24.de/schemas/ai-sitemap/1.0"
+        xmlns:schema="http://schema.org/">
 
-  <!-- ================================================ -->
-  <!-- HOMEPAGE -->
-  <!-- ================================================ -->
+  <!-- ====== HOMEPAGE ====== -->
   <url>
     <loc>https://aquapro24.de/</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <ai:page-type>homepage</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner München - Sanitär und Heizung Notdienst 24/7. Partnernetzwerk seit 2005. Festpreise ab 81€.</ai:summary>
-    <ai:keywords>Klempner München, Sanitär Notdienst, Heizung Notdienst, 24h Service, Installateur München</ai:keywords>
-    <ai:brands>Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Geberit</ai:brands>
+    <ai:region>DE-BY</ai:region>
+    <ai:summary>Klempner München - Sanitär und Heizung Notdienst 24/7. Partnernetzwerk seit 2005. Festpreise ab 81€. Tel: 0152 12274043</ai:summary>
+    <ai:keywords>Klempner München, Sanitär Notdienst, Heizung Notdienst, 24h Service, Installateur München, Rohrbruch, Wasserschaden</ai:keywords>
+    <ai:brands>Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Wolf, Geberit, Villeroy Boch, Duravit</ai:brands>
     <ai:emergency>true</ai:emergency>
+    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:schema-type>LocalBusiness, PlumbingService, HVACBusiness</ai:schema-type>
+    <ai:trust-signals>2800+ Kunden, 4.9/5 Sterne, seit 2005</ai:trust-signals>
   </url>
 
-  <!-- ================================================ -->
-  <!-- CORE SERVICE PAGES -->
-  <!-- ================================================ -->
+  <!-- ====== 24H EMERGENCY PAGES (Highest Priority) ====== -->
+  <url>
+    <loc>https://aquapro24.de/sanitaer-notdienst-24</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
+    <ai:page-type>emergency-service</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Sanitär Notdienst 24h München - Rohrbruch, Wasserschaden, WC verstopft. Soforthilfe in 60 Minuten. Festpreis vor Arbeitsbeginn.</ai:summary>
+    <ai:keywords>Sanitär Notdienst München, Klempner Notdienst 24h, Rohrbruch Soforthilfe, Wasserschaden Notfall, WC verstopft</ai:keywords>
+    <ai:emergency>true</ai:emergency>
+    <ai:response-time>60 Minuten</ai:response-time>
+    <ai:availability>24/7/365</ai:availability>
+    <ai:price-from currency="EUR">92</ai:price-from>
+    <ai:service-area>München und 40km Umkreis</ai:service-area>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/heizung-notdienst-24</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
+    <ai:page-type>emergency-service</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Heizung Notdienst 24h München - Heizungsausfall, Therme defekt, kein Warmwasser. Soforthilfe in 60 Minuten.</ai:summary>
+    <ai:keywords>Heizung Notdienst München, Heizungsreparatur 24h, Therme Notdienst, Heizungsausfall, kein Warmwasser</ai:keywords>
+    <ai:brands>Viessmann, Vaillant, Buderus, Wolf, Junkers</ai:brands>
+    <ai:emergency>true</ai:emergency>
+    <ai:response-time>60 Minuten</ai:response-time>
+    <ai:availability>24/7/365</ai:availability>
+    <ai:price-from currency="EUR">154</ai:price-from>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/notdienst-muenchen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <ai:page-type>emergency-landing</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Notdienst Sanitär und Heizung München - 24h Soforthilfe bei allen Notfällen. Festpreis-Garantie.</ai:summary>
+    <ai:keywords>Notdienst München, Klempner Notdienst, Heizung Notdienst, 24 Stunden Service</ai:keywords>
+    <ai:emergency>true</ai:emergency>
+    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:availability>24/7/365</ai:availability>
+  </url>
+
+  <!-- ====== CORE SERVICE PAGES ====== -->
   <url>
     <loc>https://aquapro24.de/sanitaer</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Sanitärinstallation München - Rohrbruch, Leckortung, WC-Montage. Notdienst 24/7. Ab 92€.</ai:summary>
-    <ai:keywords>Sanitär München, Rohrbruch Reparatur, Leckortung, WC Montage, Wasserinstallation</ai:keywords>
+    <ai:summary>Sanitärinstallation München - Rohrbruch, Leckortung, WC-Montage, Wasserinstallation. Notdienst 24/7. Ab 92€.</ai:summary>
+    <ai:keywords>Sanitär München, Rohrbruch Reparatur, Leckortung, WC Montage, Wasserinstallation, Klempner</ai:keywords>
+    <ai:brands>Grohe, Hansgrohe, Geberit</ai:brands>
     <ai:price-from currency="EUR">92</ai:price-from>
     <ai:emergency>true</ai:emergency>
+    <ai:schema-type>PlumbingService</ai:schema-type>
+    <ai:services>Rohrbruch Reparatur, Leckortung, WC Installation, Wasserleitung, Abfluss</ai:services>
   </url>
 
   <url>
     <loc>https://aquapro24.de/heizung</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Heizungsservice München - Wartung, Reparatur, Modernisierung. Notdienst 24/7. Ab 154€.</ai:summary>
-    <ai:keywords>Heizung München, Heizungswartung, Heizungsreparatur, Therme Reparatur, Heizungstausch</ai:keywords>
-    <ai:brands>Viessmann, Vaillant, Buderus, Wolf</ai:brands>
+    <ai:summary>Heizungsservice München - Wartung, Reparatur, Modernisierung, Austausch. Notdienst 24/7. Ab 154€. BAFA bis 70%.</ai:summary>
+    <ai:keywords>Heizung München, Heizungswartung, Heizungsreparatur, Therme Reparatur, Heizungstausch, Gasheizung</ai:keywords>
+    <ai:brands>Viessmann, Vaillant, Buderus, Wolf, Junkers</ai:brands>
     <ai:price-from currency="EUR">154</ai:price-from>
     <ai:emergency>true</ai:emergency>
     <ai:funding>BAFA bis 70%</ai:funding>
+    <ai:schema-type>HVACBusiness</ai:schema-type>
+    <ai:services>Heizungswartung, Heizungsreparatur, Heizungsaustausch, Gasheizung, Ölheizung</ai:services>
   </url>
 
   <url>
     <loc>https://aquapro24.de/bad</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Badsanierung München - Komplettumbau, barrierefreie Bäder, Luxusbäder. 5 Jahre Garantie.</ai:summary>
-    <ai:keywords>Badsanierung München, Bad Renovierung, barrierefreies Bad, Walk-in Dusche, Luxusbad</ai:keywords>
+    <ai:summary>Badsanierung München - Komplettumbau in 2-4 Wochen. Barrierefreie Bäder, Luxusbäder. 5 Jahre Garantie. Ab 16.000€.</ai:summary>
+    <ai:keywords>Badsanierung München, Bad Renovierung, barrierefreies Bad, Walk-in Dusche, Luxusbad, Badumbau</ai:keywords>
     <ai:brands>Grohe, Hansgrohe, Geberit, Villeroy Boch, Duravit</ai:brands>
+    <ai:price-from currency="EUR">16000</ai:price-from>
     <ai:emergency>false</ai:emergency>
+    <ai:duration>2-4 Wochen</ai:duration>
+    <ai:warranty>5 Jahre</ai:warranty>
+    <ai:funding>KfW Barrierefreies Bad</ai:funding>
   </url>
 
   <url>
     <loc>https://aquapro24.de/waermepumpe</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Wärmepumpe München - Installation Luft-Wasser und Erdwärme. Bis 70% BAFA Förderung.</ai:summary>
-    <ai:keywords>Wärmepumpe München, Luft-Wasser Wärmepumpe, Erdwärme, BAFA Förderung, Heizungstausch</ai:keywords>
-    <ai:brands>Viessmann Vitocal, Vaillant aroTHERM, Wolf</ai:brands>
+    <ai:summary>Wärmepumpe München - Installation Luft-Wasser und Erdwärme. Bis 70% BAFA Förderung (max. 23.100€). Kostenloser Förderantrag.</ai:summary>
+    <ai:keywords>Wärmepumpe München, Luft-Wasser Wärmepumpe, Erdwärme, BAFA Förderung, Heizungstausch, CO2-neutral</ai:keywords>
+    <ai:brands>Viessmann Vitocal, Vaillant aroTHERM, Wolf, Daikin</ai:brands>
     <ai:funding>BAFA bis 70% (max 23.100€)</ai:funding>
+    <ai:funding-details>30% Grundförderung + 20% Klimabonus + 30% Einkommensbonus</ai:funding-details>
     <ai:emergency>false</ai:emergency>
+    <ai:schema-type>HVACBusiness</ai:schema-type>
   </url>
 
   <url>
     <loc>https://aquapro24.de/rohrreinigung</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Rohrreinigung München - Abfluss verstopft, WC verstopft, Kanalreinigung. Notdienst 24/7. Ab 81€.</ai:summary>
-    <ai:keywords>Rohrreinigung München, Abfluss verstopft, WC verstopft, Kanalreinigung, Hochdruckspülung</ai:keywords>
+    <ai:summary>Rohrreinigung München - Abfluss verstopft, WC verstopft, Kanalreinigung. Notdienst 24/7. Ab 81€. 60 Min Anfahrt.</ai:summary>
+    <ai:keywords>Rohrreinigung München, Abfluss verstopft, WC verstopft, Kanalreinigung, Hochdruckspülung, Spirale</ai:keywords>
     <ai:price-from currency="EUR">81</ai:price-from>
     <ai:emergency>true</ai:emergency>
+    <ai:response-time>60 Minuten</ai:response-time>
+    <ai:services>Rohrreinigung, Abflussreinigung, Kanalreinigung, Kamerainspektion, Hochdruckspülung</ai:services>
   </url>
 
   <url>
     <loc>https://aquapro24.de/armaturen</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Armaturen-Service München - Wasserhahn wechseln, Mischbatterie reparieren. Ab 81€.</ai:summary>
-    <ai:keywords>Wasserhahn wechseln München, Armatur Montage, Mischbatterie Reparatur, Grohe Montage</ai:keywords>
-    <ai:brands>Grohe, Hansgrohe</ai:brands>
+    <ai:summary>Armaturen-Service München - Wasserhahn wechseln, Mischbatterie reparieren, Thermostat austauschen. Ab 81€.</ai:summary>
+    <ai:keywords>Wasserhahn wechseln München, Armatur Montage, Mischbatterie Reparatur, Thermostatarmatur</ai:keywords>
+    <ai:brands>Grohe, Hansgrohe, HANSA, Ideal Standard</ai:brands>
     <ai:price-from currency="EUR">81</ai:price-from>
     <ai:emergency>false</ai:emergency>
   </url>
@@ -114,97 +176,50 @@
   <url>
     <loc>https://aquapro24.de/warmwasser</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Warmwasser München - Durchlauferhitzer, Boiler Installation und Reparatur. Notdienst verfügbar.</ai:summary>
-    <ai:keywords>Durchlauferhitzer München, Boiler Reparatur, Warmwasserspeicher, Stiebel Eltron</ai:keywords>
-    <ai:brands>Vaillant, Stiebel Eltron</ai:brands>
+    <ai:summary>Warmwasser München - Durchlauferhitzer, Boiler, Warmwasserspeicher. Installation und Reparatur. Notdienst verfügbar.</ai:summary>
+    <ai:keywords>Durchlauferhitzer München, Boiler Reparatur, Warmwasserspeicher, Stiebel Eltron, Vaillant</ai:keywords>
+    <ai:brands>Vaillant, Stiebel Eltron, Bosch, AEG</ai:brands>
     <ai:emergency>true</ai:emergency>
   </url>
 
   <url>
     <loc>https://aquapro24.de/haustechnik</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <ai:page-type>service</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Haustechnik München - Gas, Wasser, Lüftung komplett. Komplettlösungen für Ihr Zuhause.</ai:summary>
+    <ai:summary>Haustechnik München - Gas, Wasser, Lüftung, Klimaanlage. Komplettlösungen für Ihr Zuhause.</ai:summary>
     <ai:keywords>Haustechnik München, Gasinstallation, Lüftungsanlage, Klimaanlage, Gebäudetechnik</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
 
+  <!-- ====== LANDING PAGES ====== -->
   <url>
     <loc>https://aquapro24.de/badsanierung</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <ai:page-type>service</ai:page-type>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <ai:page-type>landing</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Badsanierung München - Komplettumbau aus einer Hand. Barrierefreie Bäder mit KfW-Förderung.</ai:summary>
+    <ai:summary>Badsanierung München - Komplettumbau aus einer Hand. Barrierefreie Bäder mit KfW-Förderung. 5 Jahre Garantie.</ai:summary>
     <ai:keywords>Badsanierung München, Bad Komplettsanierung, barrierefrei umbauen, KfW Förderung Bad</ai:keywords>
     <ai:emergency>false</ai:emergency>
+    <ai:funding>KfW Barrierefrei</ai:funding>
   </url>
 
-  <!-- ================================================ -->
-  <!-- 24H EMERGENCY PAGES -->
-  <!-- ================================================ -->
-  <url>
-    <loc>https://aquapro24.de/sanitaer-notdienst-24</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <ai:page-type>emergency</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Sanitär Notdienst 24h München - Rohrbruch, Wasserschaden, WC verstopft. Soforthilfe in 60 Min.</ai:summary>
-    <ai:keywords>Sanitär Notdienst München, Klempner Notdienst 24h, Rohrbruch Soforthilfe, Wasserschaden Notfall</ai:keywords>
-    <ai:emergency>true</ai:emergency>
-    <ai:response-time>60 Minuten</ai:response-time>
-    <ai:availability>24/7</ai:availability>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/heizung-notdienst-24</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <ai:page-type>emergency</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Heizung Notdienst 24h München - Heizungsausfall, Therme defekt. Soforthilfe in 60 Min.</ai:summary>
-    <ai:keywords>Heizung Notdienst München, Heizungsreparatur 24h, Therme Notdienst, Heizungsausfall Soforthilfe</ai:keywords>
-    <ai:emergency>true</ai:emergency>
-    <ai:response-time>60 Minuten</ai:response-time>
-    <ai:availability>24/7</ai:availability>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/notdienst-muenchen</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <ai:page-type>emergency</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Notdienst Sanitär und Heizung München - 24h Soforthilfe bei allen Notfällen. Tel: 0152 12274043</ai:summary>
-    <ai:keywords>Notdienst München, Klempner Notdienst, Heizung Notdienst, 24 Stunden Service, Installateur Notfall</ai:keywords>
-    <ai:emergency>true</ai:emergency>
-    <ai:response-time>60 Minuten</ai:response-time>
-    <ai:availability>24/7</ai:availability>
-    <ai:phone>0152 12274043</ai:phone>
-  </url>
-
-  <!-- ================================================ -->
-  <!-- LANDING PAGES -->
-  <!-- ================================================ -->
   <url>
     <loc>https://aquapro24.de/sanitaer-muenchen</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
     <ai:page-type>landing</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Sanitär München - Klempner und Installateur Notdienst. Alle Sanitärarbeiten aus einer Hand.</ai:summary>
+    <ai:summary>Sanitär München - Klempner und Installateur Notdienst. Alle Sanitärarbeiten aus einer Hand. Festpreis-Garantie.</ai:summary>
     <ai:keywords>Sanitär München, Klempner München, Installateur München, Sanitärinstallation</ai:keywords>
     <ai:emergency>true</ai:emergency>
   </url>
@@ -213,10 +228,10 @@
     <loc>https://aquapro24.de/heizung-muenchen</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
     <ai:page-type>landing</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Heizung München - Reparatur, Wartung und Modernisierung vom Profi. BAFA Förderung bis 70%.</ai:summary>
+    <ai:summary>Heizung München - Reparatur, Wartung und Modernisierung vom Profi. BAFA Förderung bis 70%. Notdienst 24/7.</ai:summary>
     <ai:keywords>Heizung München, Heizungsbauer München, Heizungsinstallateur, Heizungsmodernisierung</ai:keywords>
     <ai:emergency>true</ai:emergency>
     <ai:funding>BAFA bis 70%</ai:funding>
@@ -225,11 +240,11 @@
   <url>
     <loc>https://aquapro24.de/badsanierung-muenchen</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <ai:page-type>landing</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Badsanierung München - Komplettumbau aus einer Hand. Barrierefreie Bäder mit Förderung.</ai:summary>
+    <ai:summary>Badsanierung München - Komplettumbau aus einer Hand. Barrierefreie Bäder mit Förderung. 5 Jahre Garantie.</ai:summary>
     <ai:keywords>Badsanierung München, Bad Renovierung München, Badumbau, barrierefreies Bad München</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
@@ -241,7 +256,7 @@
     <priority>0.85</priority>
     <ai:page-type>landing</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Wärmepumpe München - Installation mit bis 70% BAFA Förderung sichern. Kostenloser Förderantrag.</ai:summary>
+    <ai:summary>Wärmepumpe München - Installation mit bis 70% BAFA Förderung sichern. Kostenloser Förderantrag-Service.</ai:summary>
     <ai:keywords>Wärmepumpe München, Wärmepumpe Förderung, BAFA Antrag, Heizungstausch München</ai:keywords>
     <ai:funding>BAFA bis 70% (max 23.100€)</ai:funding>
     <ai:emergency>false</ai:emergency>
@@ -250,28 +265,27 @@
   <url>
     <loc>https://aquapro24.de/fussbodenheizung-muenchen</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <ai:page-type>landing</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Fußbodenheizung München - Installation und Reparatur vom Profi. Ideal für Wärmepumpen.</ai:summary>
-    <ai:keywords>Fußbodenheizung München, Fußbodenheizung Installation, Fußbodenheizung Reparatur</ai:keywords>
+    <ai:summary>Fußbodenheizung München - Installation, Nachrüstung und Reparatur. Ideal für Wärmepumpen.</ai:summary>
+    <ai:keywords>Fußbodenheizung München, Fußbodenheizung Installation, Fußbodenheizung Reparatur, nachrüsten</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
 
-  <!-- ================================================ -->
-  <!-- FUNDING PAGES -->
-  <!-- ================================================ -->
+  <!-- ====== FUNDING PAGES ====== -->
   <url>
     <loc>https://aquapro24.de/foerderung</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
     <ai:page-type>info</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Förderung Heizung München - BAFA, KfW und Steuerbonus 2025. Bis 70% Zuschuss sichern.</ai:summary>
-    <ai:keywords>BAFA Förderung Heizung, KfW Heizungskredit, Heizungsförderung 2025, Klimabonus</ai:keywords>
-    <ai:funding>BAFA 30% Grund + 20% Klima + 30% Einkommen</ai:funding>
+    <ai:summary>Förderung Heizung München 2025 - BAFA bis 70%, KfW Heizungskredit, Steuerbonus. Komplette Übersicht aller Zuschüsse.</ai:summary>
+    <ai:keywords>BAFA Förderung Heizung, KfW Heizungskredit, Heizungsförderung 2025, Klimabonus, Einkommensbonus</ai:keywords>
+    <ai:funding>30% Grund + 20% Klima + 30% Einkommen = max 70%</ai:funding>
+    <ai:funding-max currency="EUR">23100</ai:funding-max>
     <ai:emergency>false</ai:emergency>
   </url>
 
@@ -279,10 +293,10 @@
     <loc>https://aquapro24.de/foerderantrag</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <ai:page-type>info</ai:page-type>
+    <priority>0.80</priority>
+    <ai:page-type>tool</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Förderantrag Service München - Wir übernehmen den kompletten BAFA-Antrag. Kostenlos.</ai:summary>
+    <ai:summary>Förderantrag Service München - Wir übernehmen den kompletten BAFA-Antrag. Kostenlos und unverbindlich.</ai:summary>
     <ai:keywords>BAFA Antrag Service, Förderantrag Heizung, Antragsservice kostenlos</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
@@ -291,10 +305,10 @@
     <loc>https://aquapro24.de/foerderantrag-heizung</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <ai:page-type>info</ai:page-type>
+    <priority>0.80</priority>
+    <ai:page-type>tool</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Förderantrag Heizung München - Komplett kostenloser BAFA Antragsservice für Heizungstausch.</ai:summary>
+    <ai:summary>Förderantrag Heizung München - Komplett kostenloser BAFA Antragsservice für Heizungstausch und Wärmepumpe.</ai:summary>
     <ai:keywords>Förderantrag Heizung, BAFA Antragsservice, Heizungsförderung beantragen</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
@@ -303,51 +317,55 @@
     <loc>https://aquapro24.de/foerderrechner</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>tool</ai:page-type>
+    <priority>0.78</priority>
+    <ai:page-type>interactive-tool</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Förderrechner Heizung München - Berechnen Sie Ihre BAFA Förderung online.</ai:summary>
-    <ai:keywords>Förderrechner Heizung, BAFA Rechner, Heizungsförderung berechnen</ai:keywords>
+    <ai:summary>Förderrechner Heizung München - Berechnen Sie Ihre BAFA und KfW Förderung online. Sofort-Ergebnis.</ai:summary>
+    <ai:keywords>Förderrechner Heizung, BAFA Rechner, Heizungsförderung berechnen, Zuschuss Rechner</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
 
-  <!-- ================================================ -->
-  <!-- UTILITY PAGES -->
-  <!-- ================================================ -->
+  <!-- ====== BOOKING & CONTACT ====== -->
   <url>
     <loc>https://aquapro24.de/termin</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.92</priority>
     <ai:page-type>booking</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Termin online buchen München - Handwerker Wunschtermin für Sanitär und Heizung.</ai:summary>
+    <ai:summary>Termin online buchen München - Handwerker Wunschtermin für Sanitär und Heizung. Sofort-Bestätigung per E-Mail.</ai:summary>
     <ai:keywords>Termin buchen Klempner, Online Terminbuchung, Handwerker Termin München</ai:keywords>
     <ai:emergency>false</ai:emergency>
+    <ai:booking-available>true</ai:booking-available>
+    <ai:booking-type>Google Calendar Integration</ai:booking-type>
   </url>
 
   <url>
     <loc>https://aquapro24.de/kontakt</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.82</priority>
     <ai:page-type>contact</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Kontakt AquaPro24 München - Kostenlose Beratung. Tel: 0152 12274043</ai:summary>
+    <ai:summary>Kontakt AquaPro24 München - Kostenlose Beratung für Sanitär und Heizung. Tel: 0152 12274043</ai:summary>
     <ai:keywords>Kontakt Klempner München, Sanitär Beratung, Heizung Beratung kostenlos</ai:keywords>
-    <ai:phone>0152 12274043</ai:phone>
+    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:address>Hardenbergstr. 4, 80992 München</ai:address>
     <ai:emergency>false</ai:emergency>
   </url>
 
+  <!-- ====== INFORMATIONAL PAGES ====== -->
   <url>
     <loc>https://aquapro24.de/ueber-uns</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
     <ai:page-type>about</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>AquaPro24 München - Ihr Partnernetzwerk seit 2005. Inhaber Mustafa Sakar.</ai:summary>
+    <ai:summary>AquaPro24 München - Ihr Partnernetzwerk seit 2005. Inhaber Mustafa Sakar. 2.800+ zufriedene Kunden.</ai:summary>
     <ai:keywords>AquaPro24, Partnernetzwerk München, Mustafa Sakar, Sanitär Heizung Firma</ai:keywords>
+    <ai:established>2005</ai:established>
+    <ai:owner>Mustafa Sakar</ai:owner>
     <ai:emergency>false</ai:emergency>
   </url>
 
@@ -358,49 +376,51 @@
     <priority>0.75</priority>
     <ai:page-type>faq</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>FAQ Sanitär und Heizung München - Häufige Fragen zu Preisen, Service und Förderung.</ai:summary>
-    <ai:keywords>FAQ Klempner, Sanitär Preise, Heizung Kosten, häufige Fragen</ai:keywords>
+    <ai:summary>FAQ Sanitär und Heizung München - Häufige Fragen zu Preisen, Service, Förderung und Garantie beantwortet.</ai:summary>
+    <ai:keywords>FAQ Klempner, Sanitär Preise, Heizung Kosten, häufige Fragen, Festpreis</ai:keywords>
+    <ai:schema-type>FAQPage</ai:schema-type>
     <ai:emergency>false</ai:emergency>
   </url>
 
   <url>
     <loc>https://aquapro24.de/ratgeber</loc>
     <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
     <ai:page-type>guide</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Ratgeber München - Expertentipps für Sanitär, Heizung und Badsanierung.</ai:summary>
-    <ai:keywords>Ratgeber Sanitär, Heizungstipps, Wasserschaden Anleitung, Badsanierung Tipps</ai:keywords>
+    <ai:summary>Ratgeber München - Expertentipps für Sanitär, Heizung, Wasserschaden und Badsanierung. Praxisnahe Anleitungen.</ai:summary>
+    <ai:keywords>Ratgeber Sanitär, Heizungstipps, Wasserschaden Anleitung, Badsanierung Tipps, Erste Hilfe Rohrbruch</ai:keywords>
     <ai:emergency>false</ai:emergency>
   </url>
 
-  <!-- ================================================ -->
-  <!-- PREMIUM DISTRICTS -->
-  <!-- ================================================ -->
+  <!-- ====== PREMIUM DISTRICTS (High-Income Areas) ====== -->
   <url>
     <loc>https://aquapro24.de/schwabing</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Schwabing München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Schwabing, Sanitär Schwabing, Heizung Schwabing, Notdienst Schwabing</ai:keywords>
+    <ai:summary>Klempner Schwabing München - Sanitär, Heizung und Notdienst vor Ort. 45 Min Anfahrt.</ai:summary>
+    <ai:keywords>Klempner Schwabing, Sanitär Schwabing, Heizung Schwabing, Notdienst Schwabing München</ai:keywords>
     <ai:district>Schwabing</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
+    <ai:response-time>45 Minuten</ai:response-time>
   </url>
 
   <url>
     <loc>https://aquapro24.de/bogenhausen</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Bogenhausen München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Bogenhausen München - Sanitär, Heizung und Notdienst vor Ort. 45 Min Anfahrt.</ai:summary>
     <ai:keywords>Klempner Bogenhausen, Sanitär Bogenhausen, Heizung Bogenhausen, Notdienst Bogenhausen</ai:keywords>
     <ai:district>Bogenhausen</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -408,12 +428,13 @@
     <loc>https://aquapro24.de/maxvorstadt</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
     <ai:summary>Klempner Maxvorstadt München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Maxvorstadt, Sanitär Maxvorstadt, Heizung Maxvorstadt, Notdienst Maxvorstadt</ai:keywords>
+    <ai:keywords>Klempner Maxvorstadt, Sanitär Maxvorstadt, Heizung Maxvorstadt</ai:keywords>
     <ai:district>Maxvorstadt</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -421,12 +442,13 @@
     <loc>https://aquapro24.de/haidhausen</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
     <ai:summary>Klempner Haidhausen München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Haidhausen, Sanitär Haidhausen, Heizung Haidhausen, Notdienst Haidhausen</ai:keywords>
+    <ai:keywords>Klempner Haidhausen, Sanitär Haidhausen, Heizung Haidhausen</ai:keywords>
     <ai:district>Haidhausen</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -434,12 +456,13 @@
     <loc>https://aquapro24.de/nymphenburg</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
     <ai:summary>Klempner Nymphenburg München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Nymphenburg, Sanitär Nymphenburg, Heizung Nymphenburg, Notdienst Nymphenburg</ai:keywords>
+    <ai:keywords>Klempner Nymphenburg, Sanitär Nymphenburg, Heizung Nymphenburg</ai:keywords>
     <ai:district>Nymphenburg</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -447,12 +470,13 @@
     <loc>https://aquapro24.de/lehel</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
     <ai:summary>Klempner Lehel München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Lehel, Sanitär Lehel, Heizung Lehel, Notdienst Lehel</ai:keywords>
+    <ai:keywords>Klempner Lehel, Sanitär Lehel, Heizung Lehel</ai:keywords>
     <ai:district>Lehel</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -460,18 +484,17 @@
     <loc>https://aquapro24.de/solln</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
     <ai:summary>Klempner Solln München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Solln, Sanitär Solln, Heizung Solln, Notdienst Solln</ai:keywords>
+    <ai:keywords>Klempner Solln, Sanitär Solln, Heizung Solln</ai:keywords>
     <ai:district>Solln</ai:district>
+    <ai:district-type>premium</ai:district-type>
     <ai:emergency>true</ai:emergency>
   </url>
 
-  <!-- ================================================ -->
-  <!-- STANDARD DISTRICTS -->
-  <!-- ================================================ -->
+  <!-- ====== STANDARD DISTRICTS ====== -->
   <url>
     <loc>https://aquapro24.de/sendling</loc>
     <lastmod>2025-12-23</lastmod>
@@ -479,7 +502,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Sendling München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Sendling München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Sendling, Sanitär Sendling, Heizung Sendling</ai:keywords>
     <ai:district>Sendling</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -492,7 +515,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Pasing München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Pasing München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Pasing, Sanitär Pasing, Heizung Pasing</ai:keywords>
     <ai:district>Pasing</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -505,7 +528,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Neuhausen München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Neuhausen München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Neuhausen, Sanitär Neuhausen, Heizung Neuhausen</ai:keywords>
     <ai:district>Neuhausen</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -518,7 +541,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Trudering München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Trudering München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Trudering, Sanitär Trudering, Heizung Trudering</ai:keywords>
     <ai:district>Trudering</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -531,7 +554,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Laim München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Laim München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Laim, Sanitär Laim, Heizung Laim</ai:keywords>
     <ai:district>Laim</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -544,7 +567,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Giesing München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Giesing München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Giesing, Sanitär Giesing, Heizung Giesing</ai:keywords>
     <ai:district>Giesing</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -557,7 +580,7 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Moosach München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Moosach München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Moosach, Sanitär Moosach, Heizung Moosach</ai:keywords>
     <ai:district>Moosach</ai:district>
     <ai:emergency>true</ai:emergency>
@@ -570,48 +593,9 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Milbertshofen München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Milbertshofen München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Milbertshofen, Sanitär Milbertshofen, Heizung Milbertshofen</ai:keywords>
     <ai:district>Milbertshofen</ai:district>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/perlach</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner Perlach München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Perlach, Sanitär Perlach, Heizung Perlach</ai:keywords>
-    <ai:district>Perlach</ai:district>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/hadern</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner Hadern München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Hadern, Sanitär Hadern, Heizung Hadern</ai:keywords>
-    <ai:district>Hadern</ai:district>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/allach</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner Allach München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Allach, Sanitär Allach, Heizung Allach</ai:keywords>
-    <ai:district>Allach</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -622,35 +606,9 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Aubing München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Aubing München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Aubing, Sanitär Aubing, Heizung Aubing</ai:keywords>
     <ai:district>Aubing</ai:district>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/feldmoching</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner Feldmoching München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Feldmoching, Sanitär Feldmoching, Heizung Feldmoching</ai:keywords>
-    <ai:district>Feldmoching</ai:district>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/thalkirchen</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner Thalkirchen München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Thalkirchen, Sanitär Thalkirchen, Heizung Thalkirchen</ai:keywords>
-    <ai:district>Thalkirchen</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -661,9 +619,22 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Ramersdorf München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Ramersdorf München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Ramersdorf, Sanitär Ramersdorf, Heizung Ramersdorf</ai:keywords>
     <ai:district>Ramersdorf</ai:district>
+    <ai:emergency>true</ai:emergency>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/thalkirchen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <ai:page-type>district</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Klempner Thalkirchen München - Sanitär, Heizung und Notdienst.</ai:summary>
+    <ai:keywords>Klempner Thalkirchen, Sanitär Thalkirchen, Heizung Thalkirchen</ai:keywords>
+    <ai:district>Thalkirchen</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -674,35 +645,74 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Berg am Laim München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Berg am Laim München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Berg am Laim, Sanitär Berg am Laim, Heizung Berg am Laim</ai:keywords>
     <ai:district>Berg am Laim</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
   <url>
-    <loc>https://aquapro24.de/schwanthalerhoehe</loc>
+    <loc>https://aquapro24.de/feldmoching</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Schwanthalerhöhe München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Schwanthalerhöhe, Sanitär Schwanthalerhöhe, Heizung Schwanthalerhöhe</ai:keywords>
-    <ai:district>Schwanthalerhöhe</ai:district>
+    <ai:summary>Klempner Feldmoching München - Sanitär, Heizung und Notdienst.</ai:summary>
+    <ai:keywords>Klempner Feldmoching, Sanitär Feldmoching, Heizung Feldmoching</ai:keywords>
+    <ai:district>Feldmoching</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
   <url>
-    <loc>https://aquapro24.de/au</loc>
+    <loc>https://aquapro24.de/allach</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Au München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
-    <ai:keywords>Klempner Au, Sanitär Au München, Heizung Au München</ai:keywords>
-    <ai:district>Au</ai:district>
+    <ai:summary>Klempner Allach München - Sanitär, Heizung und Notdienst.</ai:summary>
+    <ai:keywords>Klempner Allach, Sanitär Allach, Heizung Allach</ai:keywords>
+    <ai:district>Allach</ai:district>
+    <ai:emergency>true</ai:emergency>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/hadern</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <ai:page-type>district</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Klempner Hadern München - Sanitär, Heizung und Notdienst.</ai:summary>
+    <ai:keywords>Klempner Hadern, Sanitär Hadern, Heizung Hadern</ai:keywords>
+    <ai:district>Hadern</ai:district>
+    <ai:emergency>true</ai:emergency>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/obergiesing</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <ai:page-type>district</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Klempner Obergiesing München - Sanitär, Heizung und Notdienst.</ai:summary>
+    <ai:keywords>Klempner Obergiesing, Sanitär Obergiesing, Heizung Obergiesing</ai:keywords>
+    <ai:district>Obergiesing</ai:district>
+    <ai:emergency>true</ai:emergency>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/untergiesing</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <ai:page-type>district</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Klempner Untergiesing München - Sanitär, Heizung und Notdienst.</ai:summary>
+    <ai:keywords>Klempner Untergiesing, Sanitär Untergiesing, Heizung Untergiesing</ai:keywords>
+    <ai:district>Untergiesing</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
@@ -713,91 +723,21 @@
     <priority>0.75</priority>
     <ai:page-type>district</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Klempner Freimann München - Sanitär, Heizung und Notdienst vor Ort.</ai:summary>
+    <ai:summary>Klempner Freimann München - Sanitär, Heizung und Notdienst.</ai:summary>
     <ai:keywords>Klempner Freimann, Sanitär Freimann, Heizung Freimann</ai:keywords>
     <ai:district>Freimann</ai:district>
     <ai:emergency>true</ai:emergency>
   </url>
 
-  <!-- ================================================ -->
-  <!-- REGION PAGES -->
-  <!-- ================================================ -->
-  <url>
-    <loc>https://aquapro24.de/muenchen-nord</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <ai:page-type>region</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner München Nord - Sanitär und Heizung für Schwabing, Milbertshofen, Freimann.</ai:summary>
-    <ai:keywords>Klempner München Nord, Sanitär Schwabing, Heizung Milbertshofen</ai:keywords>
-    <ai:region>München Nord</ai:region>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/muenchen-sued</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <ai:page-type>region</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner München Süd - Sanitär und Heizung für Sendling, Giesing, Solln.</ai:summary>
-    <ai:keywords>Klempner München Süd, Sanitär Sendling, Heizung Giesing</ai:keywords>
-    <ai:region>München Süd</ai:region>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/muenchen-west</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <ai:page-type>region</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner München West - Sanitär und Heizung für Pasing, Laim, Nymphenburg.</ai:summary>
-    <ai:keywords>Klempner München West, Sanitär Pasing, Heizung Nymphenburg</ai:keywords>
-    <ai:region>München West</ai:region>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/muenchen-ost</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <ai:page-type>region</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Klempner München Ost - Sanitär und Heizung für Bogenhausen, Trudering, Haidhausen.</ai:summary>
-    <ai:keywords>Klempner München Ost, Sanitär Bogenhausen, Heizung Trudering</ai:keywords>
-    <ai:region>München Ost</ai:region>
-    <ai:emergency>true</ai:emergency>
-  </url>
-
-  <!-- ================================================ -->
-  <!-- LEGAL PAGES -->
-  <!-- ================================================ -->
+  <!-- ====== LEGAL PAGES ====== -->
   <url>
     <loc>https://aquapro24.de/impressum</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
     <ai:page-type>legal</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Impressum AquaPro24 München - Mustafa Sakar, Zielstattstr. 20, 81379 München.</ai:summary>
-    <ai:keywords>Impressum AquaPro24, Mustafa Sakar, Handwerker München</ai:keywords>
-    <ai:emergency>false</ai:emergency>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/datenschutz</loc>
-    <lastmod>2025-12-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <ai:page-type>legal</ai:page-type>
-    <ai:language>de</ai:language>
-    <ai:summary>Datenschutzerklärung AquaPro24 München - DSGVO konform.</ai:summary>
-    <ai:keywords>Datenschutz AquaPro24, DSGVO, Datenschutzerklärung</ai:keywords>
+    <ai:summary>Impressum AquaPro24 München - Angaben gemäß § 5 TMG. Inhaber Mustafa Sakar.</ai:summary>
     <ai:emergency>false</ai:emergency>
   </url>
 
@@ -805,11 +745,21 @@
     <loc>https://aquapro24.de/agb</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
     <ai:page-type>legal</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>AGB AquaPro24 München - Festpreis und Garantie.</ai:summary>
-    <ai:keywords>AGB Sanitär München, Geschäftsbedingungen, Festpreisgarantie</ai:keywords>
+    <ai:summary>AGB AquaPro24 München - Allgemeine Geschäftsbedingungen für Sanitär und Heizung.</ai:summary>
+    <ai:emergency>false</ai:emergency>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/datenschutz</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+    <ai:page-type>legal</ai:page-type>
+    <ai:language>de</ai:language>
+    <ai:summary>Datenschutzerklärung AquaPro24 München - DSGVO-konform. Ihre Rechte.</ai:summary>
     <ai:emergency>false</ai:emergency>
   </url>
 
@@ -817,11 +767,10 @@
     <loc>https://aquapro24.de/cookie-richtlinie</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.25</priority>
     <ai:page-type>legal</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Cookie Richtlinie AquaPro24 - DSGVO transparent und sicher.</ai:summary>
-    <ai:keywords>Cookie Richtlinie, DSGVO Cookies, Cookie Policy</ai:keywords>
+    <ai:summary>Cookie-Richtlinie AquaPro24 - Informationen zu verwendeten Cookies.</ai:summary>
     <ai:emergency>false</ai:emergency>
   </url>
 
@@ -829,11 +778,11 @@
     <loc>https://aquapro24.de/barrierefreiheit</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <ai:page-type>legal</ai:page-type>
+    <priority>0.35</priority>
+    <ai:page-type>accessibility</ai:page-type>
     <ai:language>de</ai:language>
-    <ai:summary>Barrierefreiheitserklärung AquaPro24 - WCAG 2.1 AA / BITV 2.0 konform.</ai:summary>
-    <ai:keywords>Barrierefreiheit, WCAG, BITV, Accessibility</ai:keywords>
+    <ai:summary>Barrierefreiheitserklärung AquaPro24 - WCAG 2.1 AA konform. BITV 2.0.</ai:summary>
+    <ai:accessibility>WCAG 2.1 AA, BITV 2.0</ai:accessibility>
     <ai:emergency>false</ai:emergency>
   </url>
 
