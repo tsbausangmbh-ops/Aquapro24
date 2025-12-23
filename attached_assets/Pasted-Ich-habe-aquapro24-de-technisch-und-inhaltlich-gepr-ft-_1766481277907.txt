@@ -1,0 +1,105 @@
+Ich habe aquapro24.de technisch und inhaltlich geprüft – hier ist eine kompakte Crawl- und SEO-Analyse für deine Unternehmens- und Online-Strategie:
+
+✅ 1. Grundlegende Erreichbarkeit
+
+Die Seite https://aquapro24.de/
+ ist erreichbar und liefert Inhalte zu Sanierung, Bad & Heizung. 
+aquapro24.de
+
+Wichtige Unterseiten, die aktuell indexierbar und crawlbar sind:
+
+Startseite: Leistungen Komplettsanierung, Bad, Heizung, Wärmepumpen, KfW/BAFA-Förderberatung etc. 
+aquapro24.de
+
+Über uns: Firmenprofil mit Leistungsnetzwerk und Erfahrung seit 2005. 
+aquapro24.de
+
+➡️ Crawling technisch möglich: Inhalte werden im HTML ausgeliefert und sind nicht ausschließlich per JavaScript geladen – das bedeutet Google und andere Crawler können den Text in der Regel problemlos lesen.
+
+✅ 2. Sichtbarkeit wichtiger Inhalte
+
+Die Texte zu Leistungen und Vertrauen (z. B. „Partnernetzwerk“, „24/7 Notdienst“, „Festpreisgarantie“) sind direkt im HTML vorhanden. 
+aquapro24.de
+
+Das ist gut für:
+
+Semantische Erfassung
+
+Keyword-Zuordnung
+
+Indexierung relevanter Themenbereiche
+
+⚙️ 3. Crawl-Freundlichkeit – Technische Checkliste
+🛠 robots.txt
+
+Ich konnte robots.txt nicht automatisch prüfen.
+Bitte öffne im Browser:
+
+https://aquapro24.de/robots.txt
+
+
+→ Wenn dort kein Crawler-Block steht, kann Google alle Seiten crawlen.
+
+🔎 Sitemap
+
+Ebenso sollte geprüft werden:
+
+https://aquapro24.de/sitemap.xml
+
+
+→ Eine Sitemap hilft Crawlern, alle Unterseiten zu entdecken.
+
+🔗 Interne Verlinkung
+
+Stark strukturierte Navigation sorgt dafür, dass Crawler möglichst kurze Wege zu allen Unterseiten haben – z. B. Leistungen, Über uns, Kontakt, Ratgeberseiten, Referenzen.
+
+Wenn Seiten isoliert sind (Orphan Pages), werden sie schwerer gefunden.
+
+📌 Meta-Tags & Indexierung
+
+Bitte kontrollieren:
+
+Title Tags
+
+Meta Descriptions
+
+Headings (H1, H2…)
+
+Canonical Tags
+
+Damit stellst du sicher, dass jede Seite eindeutig indexiert wird.
+
+🧠 Empfehlung aus Sicht eines erfahrenen Energie- & Onlineberater
+
+Kurzfristige Maßnahmen (heute):
+✔ robots.txt & sitemap.xml prüfen
+✔ interne Linkstruktur optimieren
+✔ sicherstellen, dass alle Leistungsseiten mindestens 300–800 Wörter hochwertiger Text haben
+✔ Title & Description für jede Unterseite einzigartig
+
+Mittelfristige Maßnahmen (1–4 Wochen):
+📌 Erstellen von Landingpages zu spezifischen Themen, z. B.:
+
+Bad-Sanierung München
+
+Heizung & Wärmepumpen Förderung
+
+Notdienst Sanitär München
+
+Das erhöht crawlbare Inhalte und Sichtbarkeit.
+
+🔍 Mini-Crawl-Ergebnis (sichtbare Struktur)
+
+Die Seiten, die ich technisch gesehen habe, beinhalten klar strukturierte Inhalte, die ein Crawler erfassen sollte:
+
+📌 Startseite: Leistungen & Nutzen
+📌 Über uns: Firmenprofil
+(Struktur intern gut sichtbar, keine reine JS-Rendering-Seiten) 
+aquapro24.de
++1
+
+📌 Fazit
+
+aquapro24.de ist grundsätzlich crawlbar und indexierbar.
+Die Inhalte sind im HTML verfügbar und suchmaschinenfreundlich strukturiert.
+Damit du aber maximale Sichtbarkeit erreichst, solltest du die oben genannten technischen Punkte kontrollieren und optimieren.
