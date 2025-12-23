@@ -252,6 +252,8 @@ export default function BadPage() {
                 <img 
                   src={galleryImage1} 
                   alt="Walk-in Dusche München bodengleich rahmenlos - Badsanierung Grohe Hansgrohe ab 12.900 Euro" 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -267,6 +269,8 @@ export default function BadPage() {
                 <img 
                   src={galleryImage2} 
                   alt="Luxusbad München freistehende Badewanne Design - Komplettbad Villeroy Boch Duravit ab 24.900 Euro" 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -282,6 +286,8 @@ export default function BadPage() {
                 <img 
                   src={galleryImage3} 
                   alt="Barrierefreies Bad München KfW Förderung - altersgerechter Umbau Haltegriffe bodenebene Dusche" 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
