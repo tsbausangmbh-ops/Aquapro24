@@ -191,6 +191,12 @@ Knowledge-Graph: https://aquapro24.de/knowledge-graph.json
 GeoJSON: https://aquapro24.de/service-area.geojson
 
 # ============================================
+# ACCESSIBILITY
+# ============================================
+Accessibility-Statement: https://aquapro24.de/barrierefreiheit
+Accessibility-JSON: https://aquapro24.de/accessibility.json
+
+# ============================================
 # ADDITIONAL RESOURCES
 # ============================================
 Humans-Txt: https://aquapro24.de/humans.txt

@@ -246,7 +246,7 @@ export default function BarrierefreiheitPage() {
               <CardContent className="pt-6">
                 <p className="text-muted-foreground">
                   Diese Erklärung wurde am <strong>22. Dezember 2025</strong> erstellt 
-                  und zuletzt am <strong>22. Dezember 2025</strong> überprüft.
+                  und zuletzt am <strong>23. Dezember 2025</strong> überprüft.
                 </p>
               </CardContent>
             </Card>

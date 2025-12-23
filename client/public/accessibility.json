@@ -1,0 +1,133 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://aquapro24.de/barrierefreiheit",
+  "name": "Barrierefreiheitserklärung - AquaPro24 München",
+  "description": "Informationen zur digitalen Barrierefreiheit der Website aquapro24.de gemäß BITV 2.0 und WCAG 2.1",
+  "url": "https://aquapro24.de/barrierefreiheit",
+  "inLanguage": "de-DE",
+  "dateCreated": "2025-12-22",
+  "dateModified": "2025-12-23",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://aquapro24.de/#organization",
+    "name": "AquaPro24"
+  },
+  "accessibilityStatement": {
+    "@type": "CreativeWork",
+    "name": "Barrierefreiheitserklärung AquaPro24",
+    "conformsTo": [
+      {
+        "@type": "CreativeWork",
+        "name": "WCAG 2.1",
+        "url": "https://www.w3.org/TR/WCAG21/",
+        "version": "2.1",
+        "accessibilityLevel": "AA"
+      },
+      {
+        "@type": "Legislation",
+        "name": "BITV 2.0",
+        "legislationType": "Verordnung",
+        "jurisdiction": "Deutschland"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "EN 301 549",
+        "description": "Europäischer Standard für digitale Barrierefreiheit"
+      }
+    ],
+    "accessibilityFeature": [
+      "alternativeText",
+      "captions",
+      "structuralNavigation",
+      "readingOrder",
+      "tableOfContents",
+      "highContrastDisplay",
+      "displayTransformability",
+      "longDescription",
+      "unlocked"
+    ],
+    "accessibilityHazard": [
+      "noFlashingHazard",
+      "noMotionSimulationHazard",
+      "noSoundHazard"
+    ],
+    "accessibilityControl": [
+      "fullKeyboardControl",
+      "fullMouseControl",
+      "fullTouchControl",
+      "fullVoiceControl"
+    ],
+    "accessibilityAPI": [
+      "ARIA"
+    ]
+  },
+  "accessibilityFeatures": {
+    "keyboardNavigation": {
+      "status": "implemented",
+      "description": "Alle Funktionen sind vollständig per Tastatur bedienbar"
+    },
+    "screenReaderSupport": {
+      "status": "implemented",
+      "description": "ARIA-Labels und semantisches HTML für Screenreader"
+    },
+    "highContrast": {
+      "status": "implemented",
+      "description": "Windows High Contrast Mode unterstützt"
+    },
+    "reducedMotion": {
+      "status": "implemented",
+      "description": "prefers-reduced-motion respektiert"
+    },
+    "skipLinks": {
+      "status": "implemented",
+      "description": "Skip-Links zum Überspringen der Navigation"
+    },
+    "focusIndicators": {
+      "status": "implemented",
+      "description": "Sichtbare Fokus-Ringe für Tastaturnutzer"
+    },
+    "alternativeText": {
+      "status": "implemented",
+      "description": "Alle Bilder haben beschreibende Alt-Texte"
+    },
+    "formLabels": {
+      "status": "implemented",
+      "description": "Alle Formulare mit Labels und Fehlermeldungen"
+    },
+    "colorContrast": {
+      "status": "implemented",
+      "description": "WCAG 2.1 AA Kontrastverhältnis erfüllt"
+    },
+    "responsiveDesign": {
+      "status": "implemented",
+      "description": "Optimiert für alle Bildschirmgrößen"
+    }
+  },
+  "conformanceStatus": "fully-conformant",
+  "conformanceLevel": "AA",
+  "testedWith": [
+    "NVDA Screenreader",
+    "VoiceOver (macOS/iOS)",
+    "Windows High Contrast Mode",
+    "Keyboard-only navigation",
+    "WAVE Web Accessibility Evaluator",
+    "axe DevTools"
+  ],
+  "feedback": {
+    "@type": "ContactPoint",
+    "contactType": "Barrierefreiheit Feedback",
+    "telephone": "+49-152-12274043",
+    "email": "info@aquapro24.de",
+    "availableLanguage": ["de", "en"]
+  },
+  "enforcementProcedure": {
+    "@type": "GovernmentService",
+    "name": "Durchsetzungsstelle BITV",
+    "description": "Zuständige Stelle bei Beschwerden zur digitalen Barrierefreiheit",
+    "serviceArea": {
+      "@type": "AdministrativeArea",
+      "name": "Bayern"
+    }
+  }
+}
