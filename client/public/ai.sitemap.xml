@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AI Sitemap for AquaPro24.de
+  Optimized for AI crawlers: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Gemini
+  Last updated: 2025-12-22
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:ai="http://www.aquapro24.de/schemas/ai-sitemap/1.0">
+
+  <!-- ================================================ -->
+  <!-- PRIORITY PAGES FOR AI UNDERSTANDING -->
+  <!-- These pages contain the most important business information -->
+  <!-- ================================================ -->
+  
+  <url>
+    <loc>https://aquapro24.de/</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>homepage</ai:content-type>
+    <ai:topics>Klempner München, Sanitär Notdienst, Heizung Reparatur, Badsanierung, Wärmepumpe Installation, 24h Notdienst</ai:topics>
+    <ai:summary>AquaPro24 ist ein Münchner Partnernetzwerk für Sanitär und Heizung seit 2005. Leistungen: Notdienst 24/7, Badsanierung, Heizungswartung, Wärmepumpen mit BAFA-Förderung bis 70%. Festpreisgarantie, 2.800+ zufriedene Kunden, 4.9/5 Sterne Bewertung.</ai:summary>
+    <ai:business-info>
+      <ai:company>AquaPro24</ai:company>
+      <ai:owner>Mustafa Sakar</ai:owner>
+      <ai:phone>0152 12274043</ai:phone>
+      <ai:address>Zielstattstr. 20, 81379 München</ai:address>
+      <ai:service-area>München und Umgebung (40km Radius)</ai:service-area>
+    </ai:business-info>
+  </url>
+
+  <!-- SERVICE PAGES -->
+  <url>
+    <loc>https://aquapro24.de/sanitaer</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Sanitärinstallation, Rohrbruch Reparatur, Leckortung, Wasserinstallation, Grohe, Hansgrohe, Geberit</ai:topics>
+    <ai:summary>Sanitärservice in München: Rohrbruch-Reparatur ab 92€, Leckortung, Wasserinstallation, WC-Montage. Partner von Grohe, Hansgrohe, Geberit. Festpreisgarantie, 60 Min Anfahrt.</ai:summary>
+    <ai:pricing>ab 92 Euro</ai:pricing>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/heizung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Heizungsinstallation, Heizungswartung, Heizungsreparatur, Viessmann, Vaillant, Buderus, Wolf, BAFA Förderung</ai:topics>
+    <ai:summary>Heizungsservice in München: Wartung, Reparatur, Austausch ab 154€. Partner von Viessmann, Vaillant, Buderus, Wolf. Bis 70% BAFA-Förderung für Heizungstausch. 24/7 Notdienst.</ai:summary>
+    <ai:pricing>ab 154 Euro</ai:pricing>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/bad</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Badsanierung, Badumbau, Walk-in Dusche, barrierefreies Bad, Villeroy Boch, Duravit</ai:topics>
+    <ai:summary>Komplette Badsanierung in München in 2-4 Wochen. Barrierefreie Bäder, Walk-in Duschen, Luxusbäder. Partner von Villeroy Boch, Duravit, Grohe. Ab 16.000€, 5 Jahre Garantie, KfW-Förderung möglich.</ai:summary>
+    <ai:pricing>ab 16000 Euro</ai:pricing>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/waermepumpe</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Wärmepumpe Installation, Luft-Wasser Wärmepumpe, Erdwärme, BAFA Förderung, Viessmann Vitocal, Vaillant aroTHERM</ai:topics>
+    <ai:summary>Wärmepumpen-Installation in München mit bis zu 70% BAFA-Förderung (max. 23.100€). Luft-Wasser und Erdwärme-Systeme von Viessmann Vitocal, Vaillant aroTHERM, Wolf. Kostenloser Förderantrag-Service.</ai:summary>
+    <ai:pricing>mit bis zu 70% Förderung</ai:pricing>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/rohrreinigung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Rohrreinigung, Abfluss verstopft, Kanalreinigung, Hochdruckspülung, Kamerainspektion</ai:topics>
+    <ai:summary>Rohrreinigung in München ab 81€. Abfluss verstopft? WC verstopft? 24/7 Notdienst mit 60 Min Anfahrt. Spirale, Hochdruckspülung, Kamerainspektion. Festpreis ohne versteckte Kosten.</ai:summary>
+    <ai:pricing>ab 81 Euro</ai:pricing>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/armaturen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Wasserhahn wechseln, Armaturen Montage, Armaturen Reparatur, Grohe, Hansgrohe</ai:topics>
+    <ai:summary>Armaturen-Service in München ab 81€. Wasserhahn wechseln, Mischbatterie reparieren, tropfender Hahn. Montage von Grohe und Hansgrohe Armaturen. Festpreisgarantie.</ai:summary>
+    <ai:pricing>ab 81 Euro</ai:pricing>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/warmwasser</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Durchlauferhitzer, Boiler, Warmwasserspeicher, Vaillant, Stiebel Eltron</ai:topics>
+    <ai:summary>Warmwasser-Systeme in München: Durchlauferhitzer, Boiler, Warmwasserspeicher. Installation und Reparatur von Vaillant und Stiebel Eltron Geräten. Festpreisgarantie.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/haustechnik</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Haustechnik, Gasinstallation, Wasserinstallation, Lüftungstechnik</ai:topics>
+    <ai:summary>Komplette Haustechnik-Lösungen in München: Gas, Wasser, Lüftung. Neuinstallation und Sanierung für Privathaushalte und Gewerbe. Festpreisgarantie.</ai:summary>
+  </url>
+
+  <!-- 24H NOTDIENST -->
+  <url>
+    <loc>https://aquapro24.de/sanitaer-notdienst-24</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>emergency-service</ai:content-type>
+    <ai:topics>Sanitär Notdienst 24h, Rohrbruch Soforthilfe, Wasserschaden, WC verstopft Notfall</ai:topics>
+    <ai:summary>24 Stunden Sanitär-Notdienst in München. Rohrbruch, Wasserschaden, WC verstopft - Soforthilfe in 60 Minuten. Tel: 0152 12274043. Festpreis auch nachts und am Wochenende.</ai:summary>
+    <ai:emergency>true</ai:emergency>
+    <ai:response-time>60 Minuten</ai:response-time>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/heizung-notdienst-24</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>emergency-service</ai:content-type>
+    <ai:topics>Heizung Notdienst 24h, Heizungsausfall, Therme defekt, kein Warmwasser</ai:topics>
+    <ai:summary>24 Stunden Heizung-Notdienst in München. Heizungsausfall, Therme defekt, kein Warmwasser - Soforthilfe in 60 Minuten. Tel: 0152 12274043. Reparatur von Viessmann, Vaillant, Buderus.</ai:summary>
+    <ai:emergency>true</ai:emergency>
+    <ai:response-time>60 Minuten</ai:response-time>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/notdienst-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>emergency-service</ai:content-type>
+    <ai:topics>Notdienst München, Klempner Notdienst, Heizung Notdienst, 24h Soforthilfe</ai:topics>
+    <ai:summary>24/7 Notdienst für Sanitär und Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall - Tel: 0152 12274043. 60 Min Anfahrt, Festpreis, keine versteckten Kosten.</ai:summary>
+    <ai:emergency>true</ai:emergency>
+  </url>
+
+  <!-- FÖRDERUNG -->
+  <url>
+    <loc>https://aquapro24.de/foerderung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>information</ai:content-type>
+    <ai:topics>BAFA Förderung, KfW Förderung, Heizungsförderung 2025, Steuerbonus, Klimageschwindigkeitsbonus</ai:topics>
+    <ai:summary>Staatliche Förderung für Heizungstausch in München 2025: Bis 70% BAFA-Zuschuss (Grundförderung 30% + Klimabonus 20% + Einkommensbonus 30%). KfW-Kredit mit Tilgungszuschuss. Kostenloser Antragsservice.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/foerderantrag-heizung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>service</ai:content-type>
+    <ai:topics>Förderantrag BAFA, Förderantrag Service, Heizungsförderung beantragen</ai:topics>
+    <ai:summary>Kostenloser BAFA-Förderantragsservice in München. Wir übernehmen den kompletten Förderantrag für Ihre neue Heizung - Sie müssen nichts selbst machen.</ai:summary>
+  </url>
+
+  <!-- LANDING PAGES -->
+  <url>
+    <loc>https://aquapro24.de/sanitaer-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>landing-page</ai:content-type>
+    <ai:topics>Sanitär München, Klempner München, Installateur München</ai:topics>
+    <ai:summary>Ihr Sanitär-Partner in München für alle Installationsarbeiten. Reparatur, Neuinstallation, Notdienst. Festpreisgarantie, 2.800+ zufriedene Kunden.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/heizung-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>landing-page</ai:content-type>
+    <ai:topics>Heizung München, Heizungsinstallateur München, Heizungsfachbetrieb</ai:topics>
+    <ai:summary>Heizungsfachbetrieb in München für Wartung, Reparatur, Modernisierung. Partner von Viessmann, Vaillant, Buderus. BAFA-Förderung bis 70%.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/badsanierung-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>landing-page</ai:content-type>
+    <ai:topics>Badsanierung München, Badumbau München, Badrenovierung</ai:topics>
+    <ai:summary>Professionelle Badsanierung in München - alles aus einer Hand. Komplettumbau in 2-4 Wochen, barrierefreie Bäder, 5 Jahre Garantie.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/waermepumpe-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>landing-page</ai:content-type>
+    <ai:topics>Wärmepumpe München, Wärmepumpe Förderung, Wärmepumpe Installation</ai:topics>
+    <ai:summary>Wärmepumpen-Installation in München mit bis zu 70% BAFA-Förderung. Kostenlose Beratung, Förderantrag inklusive. Viessmann, Vaillant, Wolf Partner.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/fussbodenheizung-muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>landing-page</ai:content-type>
+    <ai:topics>Fußbodenheizung München, Fußbodenheizung nachrüsten, Fußbodenheizung Reparatur</ai:topics>
+    <ai:summary>Fußbodenheizung in München: Neuinstallation und Nachrüstung, Reparatur, Wartung. Ideal für Wärmepumpen-Kombination.</ai:summary>
+  </url>
+
+  <!-- COMPANY INFO -->
+  <url>
+    <loc>https://aquapro24.de/ueber-uns</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>about</ai:content-type>
+    <ai:topics>AquaPro24, Partnernetzwerk München, Firmenprofil, Team</ai:topics>
+    <ai:summary>AquaPro24 - Münchner Partnernetzwerk für Sanitär und Heizung seit 2005. Inhaber: Mustafa Sakar. 2.800+ zufriedene Kunden, 4.9/5 Sterne. Festpreisgarantie, 24/7 Notdienst.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/kontakt</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>contact</ai:content-type>
+    <ai:topics>Kontakt AquaPro24, Beratung München, Kostenvoranschlag</ai:topics>
+    <ai:summary>Kontakt zu AquaPro24: Tel 0152 12274043, Zielstattstr. 20, 81379 München. Kostenlose Beratung, Terminvereinbarung online möglich.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/termin</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>booking</ai:content-type>
+    <ai:topics>Termin buchen, Online Terminbuchung, Handwerker Termin</ai:topics>
+    <ai:summary>Online Terminbuchung bei AquaPro24 München. Wählen Sie Ihren Wunschtermin für Sanitär, Heizung oder Badsanierung. Bestätigung per E-Mail und Google Calendar.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/faq</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>faq</ai:content-type>
+    <ai:topics>FAQ Sanitär, FAQ Heizung, Preise, häufige Fragen</ai:topics>
+    <ai:summary>Häufig gestellte Fragen zu Sanitär und Heizung in München. Preisübersicht, Leistungen, Förderung, Garantie. Antworten auf die wichtigsten Kundenfragen.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/ratgeber</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>guide</ai:content-type>
+    <ai:topics>Ratgeber Sanitär, Ratgeber Heizung, Tipps Wasserschaden, Heizungswartung Anleitung</ai:topics>
+    <ai:summary>Expertentipps zu Sanitär und Heizung: Was tun bei Wasserschaden? Wann Heizung warten? Wie Badsanierung planen? Praktische Anleitungen und Checklisten.</ai:summary>
+  </url>
+
+  <!-- LEGAL -->
+  <url>
+    <loc>https://aquapro24.de/impressum</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>legal</ai:content-type>
+    <ai:summary>Impressum AquaPro24: Mustafa Sakar, Zielstattstr. 20, 81379 München. Einzelunternehmer.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/datenschutz</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>legal</ai:content-type>
+    <ai:summary>Datenschutzerklärung nach DSGVO für AquaPro24.de. Informationen zur Datenverarbeitung und Ihren Rechten.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/agb</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>legal</ai:content-type>
+    <ai:summary>Allgemeine Geschäftsbedingungen von AquaPro24 München. Festpreisgarantie, Gewährleistung, Zahlungsbedingungen.</ai:summary>
+  </url>
+
+  <url>
+    <loc>https://aquapro24.de/barrierefreiheit</loc>
+    <lastmod>2025-12-22</lastmod>
+    <ai:content-type>accessibility</ai:content-type>
+    <ai:summary>Barrierefreiheitserklärung nach WCAG 2.1 AA und BITV 2.0. Website vollständig barrierefrei, Tastaturnavigation, Screenreader-Unterstützung.</ai:summary>
+  </url>
+
+</urlset>

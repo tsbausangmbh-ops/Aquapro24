@@ -165,6 +165,7 @@ Disallow: /node_modules/
 # SITEMAP & HOST
 # ============================================
 Sitemap: https://aquapro24.de/sitemap.xml
+Sitemap: https://aquapro24.de/ai.sitemap.xml
 Host: https://aquapro24.de
 
 # ============================================

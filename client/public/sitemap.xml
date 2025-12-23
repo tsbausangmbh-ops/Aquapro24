@@ -735,45 +735,6 @@
     </image:image>
   </url>
 
-  <url>
-    <loc>https://aquapro24.de/perlach</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-perlach-muenchen.jpg</image:loc>
-      <image:title>Klempner Perlach München - Sanitär, Heizung und Notdienst 24/7</image:title>
-      <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Perlach - 60 Min Anfahrt</image:caption>
-      <image:geo_location>Perlach, München, Bayern, Deutschland</image:geo_location>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/hadern</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-hadern-muenchen.jpg</image:loc>
-      <image:title>Klempner Hadern München - Sanitär, Heizung und Notdienst 24/7</image:title>
-      <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Hadern - Festpreis Garantie</image:caption>
-      <image:geo_location>Hadern, München, Bayern, Deutschland</image:geo_location>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/allach</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-allach-muenchen.jpg</image:loc>
-      <image:title>Klempner Allach München - Sanitär, Heizung und Notdienst 24/7</image:title>
-      <image:caption>Ihr lokaler Sanitär- und Heizungspartner in München Allach - Wärmepumpe BAFA</image:caption>
-      <image:geo_location>Allach, München, Bayern, Deutschland</image:geo_location>
-    </image:image>
-  </url>
-
   <!-- Munich Region Pages -->
   <url>
     <loc>https://aquapro24.de/muenchen-nord</loc>
