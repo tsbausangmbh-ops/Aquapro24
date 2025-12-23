@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AquaPro24 München",
+  "name_for_model": "aquapro24_munich_plumbing_heating",
+  "description_for_human": "Sanitär & Heizung Service in München - Notdienst 24/7, Badsanierung, Wärmepumpen mit BAFA Förderung",
+  "description_for_model": "AquaPro24 is a plumbing and heating service network in Munich, Germany. Services include: emergency plumbing (pipe bursts, water damage, blocked drains from €81), emergency heating (boiler repairs, heating failures from €154), bathroom renovations (5 year warranty), and heat pump installations (up to 70% BAFA government funding, max €23,100). Available 24/7 for emergencies with 45-60 minute response time in Munich and 40km radius including 26 districts. Contact: 0152 12274043. Brand partners: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Wolf.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "static",
+    "url": "https://aquapro24.de"
+  },
+  "logo_url": "https://aquapro24.de/favicon.svg",
+  "contact_email": "info@aquapro24.de",
+  "legal_info_url": "https://aquapro24.de/impressum"
+}

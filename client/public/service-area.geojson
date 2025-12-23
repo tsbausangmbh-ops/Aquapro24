@@ -1,0 +1,272 @@
+{
+  "type": "FeatureCollection",
+  "name": "AquaPro24 Service Area München",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "headquarters",
+        "name": "AquaPro24 Zentrale",
+        "address": "Zielstattstr. 20, 81379 München",
+        "phone": "0152 12274043",
+        "website": "https://aquapro24.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5820, 48.1351]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "service_area",
+        "name": "München Kerngebiet",
+        "radius_km": 40,
+        "response_time": "45-60 Minuten",
+        "emergency_available": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5820, 48.1351]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Schwabing",
+        "url": "https://aquapro24.de/schwabing",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5719, 48.1621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Bogenhausen",
+        "url": "https://aquapro24.de/bogenhausen",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.6119, 48.1521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Maxvorstadt",
+        "url": "https://aquapro24.de/maxvorstadt",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5619, 48.1521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Haidhausen",
+        "url": "https://aquapro24.de/haidhausen",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5919, 48.1321]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Nymphenburg",
+        "url": "https://aquapro24.de/nymphenburg",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5019, 48.1621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Lehel",
+        "url": "https://aquapro24.de/lehel",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5819, 48.1421]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "premium",
+        "name": "Solln",
+        "url": "https://aquapro24.de/solln",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5219, 48.0721]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "standard",
+        "name": "Sendling",
+        "url": "https://aquapro24.de/sendling",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5319, 48.1121]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "standard",
+        "name": "Pasing",
+        "url": "https://aquapro24.de/pasing",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.4519, 48.1421]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "standard",
+        "name": "Neuhausen",
+        "url": "https://aquapro24.de/neuhausen",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5219, 48.1521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "district",
+        "category": "standard",
+        "name": "Trudering",
+        "url": "https://aquapro24.de/trudering",
+        "services": ["Sanitär", "Heizung", "Notdienst"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.6619, 48.1221]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "surrounding_city",
+        "name": "Dachau",
+        "distance_km": 20,
+        "services": ["Sanitär", "Heizung"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.4319, 48.2621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "surrounding_city",
+        "name": "Freising",
+        "distance_km": 35,
+        "services": ["Sanitär", "Heizung"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.7519, 48.4021]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "surrounding_city",
+        "name": "Starnberg",
+        "distance_km": 25,
+        "services": ["Sanitär", "Heizung"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.3419, 47.9921]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "surrounding_city",
+        "name": "Garching",
+        "distance_km": 15,
+        "services": ["Sanitär", "Heizung"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.6519, 48.2521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "surrounding_city",
+        "name": "Unterhaching",
+        "distance_km": 10,
+        "services": ["Sanitär", "Heizung"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.6119, 48.0621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "surrounding_city",
+        "name": "Germering",
+        "distance_km": 15,
+        "services": ["Sanitär", "Heizung"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.3719, 48.1321]
+      }
+    }
+  ]
+}

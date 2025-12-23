@@ -174,11 +174,36 @@ Host: https://aquapro24.de
 # Machine-readable business information for AI systems
 AI-Info: https://aquapro24.de/ai.xml
 AI-Sitemap: https://aquapro24.de/ai.sitemap.xml
+LLMs-Txt: https://aquapro24.de/llms.txt
 
 # ============================================
-# CONTACT & SUPPORT
+# GEO & LOCAL SEO FILES
 # ============================================
-# AquaPro24 - Sanitär & Heizung München
-# Tel: 0152 12274043
-# E-Mail: info@aquapro24.de
-# Adresse: Zielstattstr. 20, 81379 München
+# Geographic service area data
+GeoJSON: https://aquapro24.de/service-area.geojson
+
+# ============================================
+# BUSINESS QUICK FACTS (for AI parsing)
+# ============================================
+# Company: AquaPro24 - Sanitär & Heizung München
+# Owner: Mustafa Sakar
+# Phone: 0152 12274043 (24/7 Notdienst)
+# Address: Zielstattstr. 20, 81379 München
+# Service Area: München + 40km Radius (26 Stadtteile)
+# 
+# Emergency Services: Rohrbruch, Wasserschaden, Heizungsausfall
+# Response Time: 45-60 Minuten
+# 
+# Prices (netto):
+#   - Rohrreinigung: ab 81 EUR
+#   - Sanitär: ab 92 EUR  
+#   - Heizung: ab 154 EUR
+#
+# Funding: BAFA bis 70%, KfW Kredit
+# Rating: 4.9/5 (2.847+ Kunden)
+#
+# Brands: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Wolf
+#
+# Website: https://aquapro24.de
+# Booking: https://aquapro24.de/termin
+# Emergency: https://aquapro24.de/notdienst-muenchen
