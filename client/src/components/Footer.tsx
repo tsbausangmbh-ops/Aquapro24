@@ -14,14 +14,32 @@ const footerLinks = {
       { label: "Haustechnik", href: "/haustechnik" },
     ],
   },
-  areas: {
-    title: "Einsatzgebiete",
+  landingPages: {
+    title: "München Seiten",
     links: [
-      { label: "München Nord", href: "/muenchen-nord" },
-      { label: "München Süd", href: "/muenchen-sued" },
-      { label: "München West", href: "/muenchen-west" },
-      { label: "München Ost", href: "/muenchen-ost" },
+      { label: "Sanitär München", href: "/sanitaer-muenchen" },
+      { label: "Heizung München", href: "/heizung-muenchen" },
+      { label: "Badsanierung München", href: "/badsanierung-muenchen" },
+      { label: "Wärmepumpe München", href: "/waermepumpe-muenchen" },
+      { label: "Fußbodenheizung München", href: "/fussbodenheizung-muenchen" },
+      { label: "Badsanierung Komplett", href: "/badsanierung" },
+    ],
+  },
+  notdienst: {
+    title: "Notdienst 24h",
+    links: [
       { label: "Notdienst München", href: "/notdienst-muenchen" },
+      { label: "Sanitär Notdienst 24h", href: "/sanitaer-notdienst-24" },
+      { label: "Heizung Notdienst 24h", href: "/heizung-notdienst-24" },
+    ],
+  },
+  foerderung: {
+    title: "Förderung",
+    links: [
+      { label: "Förderung Übersicht", href: "/foerderung" },
+      { label: "Förderantrag Service", href: "/foerderantrag" },
+      { label: "Förderantrag Heizung", href: "/foerderantrag-heizung" },
+      { label: "Förderrechner", href: "/foerderrechner" },
     ],
   },
   info: {
@@ -31,6 +49,7 @@ const footerLinks = {
       { label: "FAQ & Preise", href: "/faq" },
       { label: "Ratgeber", href: "/ratgeber" },
       { label: "Kontakt", href: "/kontakt" },
+      { label: "Termin buchen", href: "/termin" },
     ],
   },
   legal: {
@@ -72,6 +91,8 @@ const stadtteile = [
   { label: "Au", href: "/au" },
   { label: "Lehel", href: "/lehel" },
   { label: "Freimann", href: "/freimann" },
+  { label: "Obergiesing", href: "/obergiesing" },
+  { label: "Untergiesing", href: "/untergiesing" },
 ];
 
 export default function Footer() {
@@ -84,34 +105,45 @@ export default function Footer() {
       </div>
       <footer className="bg-foreground text-background" role="contentinfo" aria-label="Fußbereich">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 lg:gap-4">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-4">
-              <img 
-                src={footerLogo} 
-                alt="AquaPro24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
-                className="h-12 object-contain"
-                width="120"
-                height="48"
-                loading="lazy"
-                decoding="async"
-                data-testid="img-footer-logo"
-              />
+              <a href="/" aria-label="AquaPro24 Startseite">
+                <img 
+                  src={footerLogo} 
+                  alt="AquaPro24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
+                  className="h-12 object-contain"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                  data-testid="img-footer-logo"
+                />
+              </a>
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              Ihr AquaProfi24-Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005. Planung, Koordination und Ausführung mit Partnerfirmen.
+              Ihr AquaProfi24-Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005.
             </p>
+            <div className="mt-3 text-xs text-background/60">
+              <p>Hardenbergstr. 4</p>
+              <p>80992 München</p>
+              <p className="mt-1">
+                <a href="tel:+4915212274043" className="hover:text-primary transition-colors">
+                  Tel: 0152 12274043
+                </a>
+              </p>
+            </div>
           </div>
           
           {Object.entries(footerLinks).map(([key, section]) => (
             <nav key={key} aria-label={section.title}>
-              <h4 className="font-semibold mb-4">{section.title}</h4>
-              <ul className="space-y-2" role="list">
+              <h4 className="font-semibold mb-3 text-sm">{section.title}</h4>
+              <ul className="space-y-1.5" role="list">
                 {section.links.map((link, index) => (
                   <li key={index}>
                     <a 
                       href={link.href}
-                      className="text-sm text-background/70 hover:text-primary transition-colors"
+                      className="text-xs text-background/70 hover:text-primary transition-colors"
                       data-testid={`link-footer-${key}-${index}`}
                     >
                       {link.label}

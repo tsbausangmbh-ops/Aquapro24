@@ -22,6 +22,15 @@ export default function Header() {
     { label: "Armaturen", href: "/armaturen" },
     { label: "Warmwasser", href: "/warmwasser" },
     { label: "Haustechnik", href: "/haustechnik" },
+    { label: "Fußbodenheizung", href: "/fussbodenheizung-muenchen" },
+  ];
+
+  const landingPages = [
+    { label: "Sanitär München", href: "/sanitaer-muenchen" },
+    { label: "Heizung München", href: "/heizung-muenchen" },
+    { label: "Badsanierung München", href: "/badsanierung-muenchen" },
+    { label: "Wärmepumpe München", href: "/waermepumpe-muenchen" },
+    { label: "Badsanierung Komplett", href: "/badsanierung" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -112,11 +121,12 @@ export default function Header() {
                 </button>
                 {servicesOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
                     role="menu"
                     aria-label="Leistungen Untermenü"
                     onMouseLeave={() => setServicesOpen(false)}
                   >
+                    <div className="px-4 py-1 text-xs font-semibold text-muted-foreground/60 uppercase">Services</div>
                     {servicePages.map((page) => (
                       <Link
                         key={page.href}
@@ -124,6 +134,19 @@ export default function Header() {
                         onClick={() => setServicesOpen(false)}
                         className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                         data-testid={`nav-${page.label.toLowerCase()}`}
+                      >
+                        {page.label}
+                      </Link>
+                    ))}
+                    <hr className="my-2 border-border" />
+                    <div className="px-4 py-1 text-xs font-semibold text-muted-foreground/60 uppercase">München</div>
+                    {landingPages.map((page) => (
+                      <Link
+                        key={page.href}
+                        href={page.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                        data-testid={`nav-landing-${page.label.toLowerCase().replace(/\s+/g, '-')}`}
                       >
                         {page.label}
                       </Link>
@@ -296,6 +319,20 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-left px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                   data-testid={`nav-mobile-${page.label.toLowerCase()}`}
+                >
+                  {page.label}
+                </Link>
+              ))}
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground/60 uppercase tracking-wider">
+                München Seiten
+              </div>
+              {landingPages.map((page) => (
+                <Link
+                  key={page.href}
+                  href={page.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-left px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                  data-testid={`nav-mobile-landing-${page.label.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   {page.label}
                 </Link>
