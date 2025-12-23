@@ -156,6 +156,21 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-background/10 mt-4 pt-4">
+          <h4 className="font-semibold mb-3 text-sm">Beliebte Seiten</h4>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4">
+            <a href="/notdienst-muenchen" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">Notdienst 24h</a>
+            <a href="/termin" className="text-xs text-background/70 hover:text-primary transition-colors">Termin buchen</a>
+            <a href="/foerderung" className="text-xs text-green-400 hover:text-green-300 transition-colors">Förderung 2025</a>
+            <a href="/sanitaer-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Sanitär München</a>
+            <a href="/heizung-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Heizung München</a>
+            <a href="/waermepumpe-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Wärmepumpe München</a>
+            <a href="/badsanierung-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Badsanierung München</a>
+            <a href="/faq" className="text-xs text-background/70 hover:text-primary transition-colors">FAQ & Preise</a>
+            <a href="/ratgeber" className="text-xs text-background/70 hover:text-primary transition-colors">Ratgeber</a>
+          </div>
+        </div>
+        
+        <div className="border-t border-background/10 mt-4 pt-4">
           <h4 className="font-semibold mb-3 text-sm">Alle Stadtteile in München</h4>
           <div className="flex flex-wrap gap-x-3 gap-y-1">
             {stadtteile.map((stadtteil, index) => (

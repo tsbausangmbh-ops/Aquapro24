@@ -67,6 +67,27 @@ const allServices: Service[] = [
     shortDescription: "Boiler, Durchlauferhitzer, Speicher",
     icon: Waves,
     color: "bg-rose-600"
+  },
+  {
+    slug: "fussbodenheizung-muenchen",
+    title: "Fußbodenheizung",
+    shortDescription: "Nachrüsten, Einbau, Wärmepumpe",
+    icon: Flame,
+    color: "bg-amber-500"
+  },
+  {
+    slug: "notdienst-muenchen",
+    title: "Notdienst 24h",
+    shortDescription: "Soforthilfe rund um die Uhr",
+    icon: Wrench,
+    color: "bg-red-600"
+  },
+  {
+    slug: "foerderung",
+    title: "Förderung",
+    shortDescription: "BAFA, KfW bis 70% Zuschuss",
+    icon: Home,
+    color: "bg-green-600"
   }
 ];
 

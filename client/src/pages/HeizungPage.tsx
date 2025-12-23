@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -163,6 +164,10 @@ export default function HeizungPage() {
         }}
       />
       <Header />
+      <Breadcrumbs items={[
+        { label: "Leistungen", href: "/" },
+        { label: "Heizung & Wartung" }
+      ]} />
       
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">

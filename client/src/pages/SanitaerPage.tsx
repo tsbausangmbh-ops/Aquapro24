@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -164,6 +165,10 @@ export default function SanitaerPage() {
         }}
       />
       <Header />
+      <Breadcrumbs items={[
+        { label: "Leistungen", href: "/" },
+        { label: "Sanitär & Klempner" }
+      ]} />
       
       <main id="main-content">
         {/* Hero Section */}
