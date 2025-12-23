@@ -1,0 +1,200 @@
+Technische Basis (Pflicht – sonst bremst alles andere)
+🔧 Crawling & Indexierung
+
+☐ https://aquapro24.de/robots.txt
+→ keine Disallow-Sperren, Sitemap verlinkt
+
+☐ https://aquapro24.de/sitemap.xml
+→ alle wichtigen Seiten enthalten
+
+☐ Statuscode 200 auf allen Seiten (keine 3xx/4xx/5xx)
+
+☐ keine noindex-Meta-Tags auf Leistungs- & Landingpages
+
+☐ Canonical-Tags korrekt (keine Selbst-Kannibalisierung)
+
+🎯 Ziel: Google darf alles sehen, lesen und indexieren
+
+2️⃣ URL- & Seitenstruktur (sehr wichtig für Crawl-Tiefe)
+🔗 URLs
+
+☐ kurze, sprechende URLs
+✅ /badsanierung-muenchen
+❌ /page?id=123
+
+☐ einheitlich mit oder ohne Slash
+
+☐ keine doppelten Inhalte über mehrere URLs
+
+🧱 Seitenarchitektur
+
+Empfohlene Struktur:
+
+/
+├─ /leistungen/
+│  ├─ /sanitaer-muenchen/
+│  ├─ /heizung-muenchen/
+│  ├─ /badsanierung-muenchen/
+│  ├─ /waermepumpe-muenchen/
+├─ /notdienst/
+├─ /ueber-uns/
+├─ /kontakt/
+
+
+🎯 Ziel: Jede Seite max. 2–3 Klicks von der Startseite entfernt
+
+3️⃣ Meta-Daten (CTR-Hebel Nr. 1)
+🏷 Meta-Title
+
+☐ jede Seite einzigartig
+
+☐ 55–60 Zeichen
+
+☐ Keyword + Stadt + Nutzen
+
+Beispiel:
+
+Sanitär & Heizung München | 24h-Notdienst | AquaPro24
+
+📝 Meta-Description
+
+☐ 140–160 Zeichen
+
+☐ Problemlösung + Vertrauen + CTA
+
+☐ keine Dopplungen
+
+Beispiel:
+
+Sanitär- & Heizungsservice in München ✓ Festpreise ✓ 24/7-Notdienst ✓ Jetzt kostenlose Erstberatung sichern
+
+🎯 Ziel: mehr Klicks aus Google, nicht nur Rankings
+
+4️⃣ Überschriften-Struktur (H1–H3)
+
+☐ genau 1× H1 pro Seite
+
+☐ H1 enthält Hauptkeyword + Stadt
+
+☐ H2 = Leistungsbereiche / Vorteile
+
+☐ H3 = Details, Ablauf, FAQs
+
+Beispiel H1:
+
+Sanitär & Heizung in München – AquaPro24
+
+🎯 Ziel: Google versteht sofort Thema & Relevanz
+
+5️⃣ Content-Qualität (Ranking-Faktor Nr. 1)
+✍️ Textumfang & Inhalt
+
+☐ Landingpages: 800–1.200 Wörter
+
+☐ Leistungen: 600–1.000 Wörter
+
+☐ jede Seite beantwortet:
+
+Was?
+
+Für wen?
+
+Ablauf?
+
+Preislogik?
+
+Vertrauen?
+
+🧠 Inhaltliche Pflicht-Elemente
+
+☐ klare Problembeschreibung
+
+☐ Lösungen + Vorteile
+
+☐ regionale Relevanz (München, Stadtteile)
+
+☐ FAQs (echte Fragen!)
+
+☐ Handlungsaufforderung (CTA)
+
+🎯 Ziel: Nutzerzufriedenheit + Verweildauer
+
+6️⃣ Interne Verlinkung (Crawl-Beschleuniger)
+
+☐ jede Seite verlinkt mind. 3–5 andere Seiten
+
+☐ Keyword-basierte Ankertexte
+✅ „Badsanierung in München“
+❌ „hier klicken“
+
+☐ Footer mit Leistungs- & Stadt-Links
+
+☐ keine „toten Seiten“ (Orphan Pages)
+
+🎯 Ziel: Google crawlt tiefer & häufiger
+
+7️⃣ Bilder & Medien (oft unterschätzt)
+
+☐ Alt-Tags mit Keyword + Stadt
+
+☐ Dateinamen sprechend
+❌ IMG_123.jpg
+✅ badsanierung-muenchen-aquapro24.jpg
+
+☐ Bilder komprimiert (PageSpeed!)
+
+☐ kein Text nur in Bildern
+
+🎯 Ziel: zusätzlicher Traffic über Google Bilder
+
+8️⃣ Local SEO (extrem wichtig für aquapro24.de)
+
+☐ vollständige Adresse im Footer
+
+☐ gleiche NAP-Daten überall (Website, Google)
+
+☐ Stadt & Einsatzgebiet im Text
+
+☐ lokale Keywords integriert:
+
+Sanitär München
+
+Heizung München
+
+Badsanierung München
+
+Notdienst Sanitär München
+
+🎯 Ziel: Top-3-Local-Pack
+
+9️⃣ Trust- & Conversion-Elemente
+
+☐ Telefonnummer klickbar
+
+☐ Kontaktformular leicht erreichbar
+
+☐ Trust-Elemente:
+
+Erfahrung
+
+Notdienst
+
+Festpreise
+
+Bewertungen / Referenzen
+
+☐ klare CTA auf jeder Seite
+
+🎯 Ziel: SEO + Umsatz, nicht nur Sichtbarkeit
+
+🔟 Strukturierte Daten (Bonus, aber stark)
+
+☐ LocalBusiness Schema
+
+☐ Service Schema
+
+☐ FAQ Schema
+
+☐ Öffnungszeiten, Adresse, Leistungen
+
+🎯 Ziel: Rich Snippets & höhere Klickrate

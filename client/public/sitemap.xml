@@ -2,18 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
         http://www.google.com/schemas/sitemap-image/1.1
-        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd
-        http://www.google.com/schemas/sitemap-video/1.1
-        http://www.google.com/schemas/sitemap-video/1.1/sitemap-video.xsd">
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
-  <!-- HOMEPAGE -->
+  <!-- ══════════════════════════════════════════════════════════════════
+       AQUAPRO24.DE - OPTIMIERTE XML-SITEMAP
+       Sanitär & Heizung München | Partnernetzwerk seit 2005
+       Letzte Aktualisierung: 2025-12-23
+       Gesamtseiten: 65 URLs
+       ══════════════════════════════════════════════════════════════════ -->
+
+  <!-- ═══════════════════ HOMEPAGE ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/</loc>
     <lastmod>2025-12-23</lastmod>
@@ -22,14 +25,14 @@
     <mobile:mobile/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/hero-sanitaer-heizung-muenchen.jpg</image:loc>
-      <image:title>Klempner München Sanitär Heizung Notdienst 24/7</image:title>
-      <image:caption>AquaPro24 Partnernetzwerk seit 2005 - 2800+ Kunden - 4.9 Sterne</image:caption>
+      <image:loc>https://aquapro24.de/images/klempner-sanitaer-heizung-muenchen-aquapro24.jpg</image:loc>
+      <image:title>Klempner München Sanitär Heizung Notdienst 24/7 - AquaPro24</image:title>
+      <image:caption>AquaPro24 Partnernetzwerk München - 2.800+ zufriedene Kunden - 4.9/5 Sterne Bewertung - Festpreise ab 81€</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- 24H NOTDIENST - Höchste Priorität -->
+  <!-- ═══════════════════ 24H NOTDIENST - HÖCHSTE PRIORITÄT ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/sanitaer-notdienst-24</loc>
     <lastmod>2025-12-23</lastmod>
@@ -38,9 +41,9 @@
     <mobile:mobile/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/sanitaer-notdienst-24"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/sanitaer-notdienst-24h-muenchen.jpg</image:loc>
-      <image:title>Sanitär Notdienst 24h München - Rohrbruch Soforthilfe</image:title>
-      <image:caption>24 Stunden Klempner Notdienst München - 60 Min vor Ort</image:caption>
+      <image:loc>https://aquapro24.de/images/sanitaer-notdienst-24h-rohrbruch-muenchen.jpg</image:loc>
+      <image:title>Sanitär Notdienst 24h München - Rohrbruch Wasserschaden Soforthilfe</image:title>
+      <image:caption>24 Stunden Klempner Notdienst München - 60 Minuten vor Ort - Festpreis ab 92€ - Tel: 0152 12274043</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -53,9 +56,9 @@
     <mobile:mobile/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/heizung-notdienst-24"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/heizung-notdienst-24h-muenchen.jpg</image:loc>
-      <image:title>Heizung Notdienst 24h München - Heizungsreparatur Soforthilfe</image:title>
-      <image:caption>24 Stunden Heizung Notdienst München - Viessmann Vaillant</image:caption>
+      <image:loc>https://aquapro24.de/images/heizung-notdienst-24h-reparatur-muenchen.jpg</image:loc>
+      <image:title>Heizung Notdienst 24h München - Heizungsausfall Reparatur Soforthilfe</image:title>
+      <image:caption>24 Stunden Heizung Notdienst München - Viessmann Vaillant Buderus Wolf - Festpreis ab 154€</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -66,14 +69,16 @@
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
     <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/notdienst-muenchen"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/notdienst-sanitaer-heizung-muenchen.jpg</image:loc>
-      <image:title>Notdienst Sanitär Heizung München 24h</image:title>
+      <image:loc>https://aquapro24.de/images/notdienst-sanitaer-heizung-24h-muenchen.jpg</image:loc>
+      <image:title>Notdienst Sanitär Heizung München 24h Soforthilfe</image:title>
+      <image:caption>Notdienst München 24/7 - Rohrbruch Heizungsausfall WC verstopft - 60 Min Anfahrt</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- CORE SERVICE PAGES -->
+  <!-- ═══════════════════ KERN-LEISTUNGSSEITEN ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/sanitaer</loc>
     <lastmod>2025-12-23</lastmod>
@@ -82,9 +87,9 @@
     <mobile:mobile/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/sanitaer"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/sanitaer-klempner-muenchen.jpg</image:loc>
-      <image:title>Sanitärinstallateur München Klempner ab 92€</image:title>
-      <image:caption>Sanitär München Rohrbruch Reparatur - Grohe Hansgrohe Geberit</image:caption>
+      <image:loc>https://aquapro24.de/images/sanitaer-installateur-klempner-muenchen.jpg</image:loc>
+      <image:title>Sanitärinstallateur Klempner München ab 92€ - Rohrbruch Leckortung</image:title>
+      <image:caption>Sanitär München - Grohe Hansgrohe Geberit - Rohrbruch Reparatur Leckortung WC Montage</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -97,9 +102,9 @@
     <mobile:mobile/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/heizung"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/heizung-wartung-muenchen.jpg</image:loc>
-      <image:title>Heizungsinstallateur München ab 154€</image:title>
-      <image:caption>Heizung München Viessmann Vaillant Buderus Wolf - BAFA 70%</image:caption>
+      <image:loc>https://aquapro24.de/images/heizung-wartung-reparatur-muenchen.jpg</image:loc>
+      <image:title>Heizungsinstallateur München ab 154€ - Wartung Reparatur Modernisierung</image:title>
+      <image:caption>Heizung München - Viessmann Vaillant Buderus Wolf Junkers - BAFA Förderung bis 70%</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -110,10 +115,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/bad"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
-      <image:title>Badsanierung München Komplettumbau ab 16000€</image:title>
-      <image:caption>Badsanierung München - Villeroy Boch Duravit Grohe</image:caption>
+      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen-aquapro24.jpg</image:loc>
+      <image:title>Badsanierung München Komplettumbau - Walk-in Dusche Luxusbad barrierefrei</image:title>
+      <image:caption>Badsanierung München ab 16.000€ - Villeroy Boch Duravit Grohe - 5 Jahre Garantie</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -124,10 +130,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
     <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/waermepumpe"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/waermepumpe-installation-muenchen.jpg</image:loc>
-      <image:title>Wärmepumpe München BAFA Förderung 70%</image:title>
-      <image:caption>Wärmepumpe München Viessmann Vitocal Vaillant aroTHERM</image:caption>
+      <image:loc>https://aquapro24.de/images/waermepumpe-installation-foerderung-muenchen.jpg</image:loc>
+      <image:title>Wärmepumpe München Installation - BAFA Förderung bis 70% sichern</image:title>
+      <image:caption>Wärmepumpe München - Viessmann Vitocal Vaillant aroTHERM Wolf - max 23.100€ Förderung</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -138,10 +145,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
     <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/rohrreinigung"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/rohrreinigung-abfluss-muenchen.jpg</image:loc>
-      <image:title>Rohrreinigung München ab 81€</image:title>
-      <image:caption>Rohrreinigung München Abfluss WC verstopft Notdienst</image:caption>
+      <image:loc>https://aquapro24.de/images/rohrreinigung-abfluss-verstopft-muenchen.jpg</image:loc>
+      <image:title>Rohrreinigung München ab 81€ - Abfluss WC verstopft Notdienst 24h</image:title>
+      <image:caption>Rohrreinigung München - Spirale Hochdruckspülung Kamerainspektion - 60 Min Anfahrt</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -151,9 +159,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/armaturen-wasserhahn-muenchen.jpg</image:loc>
-      <image:title>Wasserhahn wechseln München ab 81€</image:title>
+      <image:loc>https://aquapro24.de/images/wasserhahn-armatur-wechseln-muenchen.jpg</image:loc>
+      <image:title>Wasserhahn wechseln München ab 81€ - Armatur Montage Reparatur</image:title>
+      <image:caption>Armaturen München - Grohe Hansgrohe HANSA Ideal Standard - Mischbatterie Thermostat</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -163,9 +173,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/durchlauferhitzer-boiler-muenchen.jpg</image:loc>
-      <image:title>Durchlauferhitzer München Installation</image:title>
+      <image:loc>https://aquapro24.de/images/durchlauferhitzer-boiler-muenchen-installation.jpg</image:loc>
+      <image:title>Durchlauferhitzer München Installation - Boiler Warmwasserspeicher Reparatur</image:title>
+      <image:caption>Warmwasser München - Vaillant Stiebel Eltron Bosch AEG - Notdienst verfügbar</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -175,14 +187,16 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/haustechnik-gas-wasser-muenchen.jpg</image:loc>
-      <image:title>Haustechnik München Gas Wasser Lüftung</image:title>
+      <image:loc>https://aquapro24.de/images/haustechnik-gas-wasser-lueftung-muenchen.jpg</image:loc>
+      <image:title>Haustechnik München - Gas Wasser Lüftung Klimaanlage komplett</image:title>
+      <image:caption>Haustechnik München - Gasinstallation Lüftungsanlage Klimaanlage - Komplettlösungen</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- LANDING PAGES -->
+  <!-- ═══════════════════ LANDING PAGES ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/badsanierung</loc>
     <lastmod>2025-12-23</lastmod>
@@ -190,8 +204,9 @@
     <priority>0.88</priority>
     <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
-      <image:title>Badsanierung München Komplettumbau</image:title>
+      <image:loc>https://aquapro24.de/images/badsanierung-komplettsanierung-muenchen.jpg</image:loc>
+      <image:title>Badsanierung München - Komplettumbau aus einer Hand</image:title>
+      <image:caption>Badsanierung München - Barrierefreies Bad KfW Förderung - 5 Jahre Garantie</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -201,9 +216,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-installateur-muenchen.jpg</image:loc>
-      <image:title>Sanitär München Klempner Installateur</image:title>
+      <image:loc>https://aquapro24.de/images/sanitaer-klempner-installateur-muenchen.jpg</image:loc>
+      <image:title>Sanitär München - Klempner Installateur Notdienst 24/7</image:title>
+      <image:caption>Sanitär München - Festpreis-Garantie ab 92€ - 2.800+ zufriedene Kunden</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -213,9 +230,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/heizungsinstallateur-muenchen.jpg</image:loc>
-      <image:title>Heizung München Reparatur Wartung</image:title>
+      <image:loc>https://aquapro24.de/images/heizung-reparatur-wartung-muenchen.jpg</image:loc>
+      <image:title>Heizung München - Reparatur Wartung Modernisierung Profi</image:title>
+      <image:caption>Heizung München - BAFA Förderung bis 70% - Viessmann Vaillant Buderus Wolf</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -225,9 +244,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/badsanierung-komplett-muenchen.jpg</image:loc>
-      <image:title>Badsanierung München Komplettumbau</image:title>
+      <image:loc>https://aquapro24.de/images/badsanierung-renovierung-muenchen.jpg</image:loc>
+      <image:title>Badsanierung München - Komplettumbau Barrierefreies Bad</image:title>
+      <image:caption>Badsanierung München - 3D-Planung - Festpreis - 5 Jahre Garantie</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -237,9 +258,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/waermepumpe-foerderung-muenchen.jpg</image:loc>
-      <image:title>Wärmepumpe München 70% Förderung</image:title>
+      <image:loc>https://aquapro24.de/images/waermepumpe-foerderung-bafa-muenchen.jpg</image:loc>
+      <image:title>Wärmepumpe München - bis 70% BAFA Förderung sichern</image:title>
+      <image:caption>Wärmepumpe München - Kostenloser Förderantrag - max 23.100€ Zuschuss</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -249,22 +272,26 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
       <image:loc>https://aquapro24.de/images/fussbodenheizung-installation-muenchen.jpg</image:loc>
-      <image:title>Fußbodenheizung München Installation</image:title>
+      <image:title>Fußbodenheizung München - Installation Nachrüstung Reparatur</image:title>
+      <image:caption>Fußbodenheizung München - Dünnschicht Altbau geeignet - BAFA 20% Förderung</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- FÖRDERUNG PAGES -->
+  <!-- ═══════════════════ FÖRDERUNG PAGES ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/foerderung</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/bafa-kfw-foerderung-heizung.jpg</image:loc>
-      <image:title>BAFA KfW Förderung Heizung 2025</image:title>
+      <image:loc>https://aquapro24.de/images/bafa-kfw-foerderung-heizung-2025.jpg</image:loc>
+      <image:title>BAFA KfW Förderung Heizung 2025 München - bis 70% Zuschuss</image:title>
+      <image:caption>Förderung Heizung München - 30% Grund + 20% Klima + 30% Einkommen = max 70%</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -274,9 +301,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/foerderantrag-bafa-muenchen.jpg</image:loc>
-      <image:title>BAFA Förderantrag Service München</image:title>
+      <image:loc>https://aquapro24.de/images/foerderantrag-bafa-service-muenchen.jpg</image:loc>
+      <image:title>BAFA Förderantrag Service München - komplett kostenlos</image:title>
+      <image:caption>Förderantrag München - Wir übernehmen den kompletten Antrag - Unverbindlich</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -286,9 +315,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/foerderantrag-heizung-service.jpg</image:loc>
-      <image:title>Förderantrag Heizung kostenlos</image:title>
+      <image:loc>https://aquapro24.de/images/foerderantrag-heizung-waermepumpe-muenchen.jpg</image:loc>
+      <image:title>Förderantrag Heizung München - Wärmepumpe BAFA kostenlos</image:title>
+      <image:caption>Förderantrag Heizung - Heizungstausch Wärmepumpe - Antragsservice gratis</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -298,23 +329,27 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/foerderrechner-heizung-muenchen.jpg</image:loc>
-      <image:title>Förderrechner BAFA Heizung</image:title>
+      <image:loc>https://aquapro24.de/images/foerderrechner-bafa-heizung-muenchen.jpg</image:loc>
+      <image:title>Förderrechner BAFA Heizung München - Zuschuss online berechnen</image:title>
+      <image:caption>Förderrechner München - BAFA KfW Zuschuss sofort berechnen - Kostenlos</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- BOOKING & CONTACT -->
+  <!-- ═══════════════════ BUCHUNG & KONTAKT ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/termin</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.92</priority>
     <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aquapro24.de/termin"/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/termin-buchen-muenchen.jpg</image:loc>
-      <image:title>Termin online buchen München</image:title>
+      <image:loc>https://aquapro24.de/images/termin-online-buchen-handwerker-muenchen.jpg</image:loc>
+      <image:title>Termin online buchen München - Handwerker Wunschtermin</image:title>
+      <image:caption>Termin München - Sofort-Bestätigung per E-Mail - Google Calendar Integration</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -324,22 +359,26 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/kontakt-aquapro24-muenchen.jpg</image:loc>
-      <image:title>Kontakt AquaPro24 München</image:title>
+      <image:loc>https://aquapro24.de/images/kontakt-aquapro24-muenchen-beratung.jpg</image:loc>
+      <image:title>Kontakt AquaPro24 München - Kostenlose Beratung</image:title>
+      <image:caption>Kontakt München - Tel: 0152 12274043 - Hardenbergstr. 4, 80992 München</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- INFORMATIONAL PAGES -->
+  <!-- ═══════════════════ INFORMATIONSSEITEN ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/ueber-uns</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/team-aquapro24-muenchen.jpg</image:loc>
-      <image:title>AquaPro24 Team München</image:title>
+      <image:loc>https://aquapro24.de/images/team-aquapro24-partnernetzwerk-muenchen.jpg</image:loc>
+      <image:title>AquaPro24 Team München - Partnernetzwerk seit 2005</image:title>
+      <image:caption>AquaPro24 München - Inhaber Mustafa Sakar - 2.800+ zufriedene Kunden</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -349,6 +388,7 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
   </url>
 
   <url>
@@ -356,22 +396,26 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/ratgeber-sanitaer-heizung.jpg</image:loc>
-      <image:title>Ratgeber Sanitär Heizung München</image:title>
+      <image:loc>https://aquapro24.de/images/ratgeber-sanitaer-heizung-tipps-muenchen.jpg</image:loc>
+      <image:title>Ratgeber München - Expertentipps Sanitär Heizung Wasserschaden</image:title>
+      <image:caption>Ratgeber München - Erste Hilfe Rohrbruch - Heizungswartung - Badsanierung Tipps</image:caption>
       <image:geo_location>München, Bayern, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- PREMIUM DISTRICTS (80%) -->
+  <!-- ═══════════════════ PREMIUM STADTTEILE (Prio 0.80) ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/schwabing</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-schwabing-muenchen.jpg</image:loc>
-      <image:title>Klempner Schwabing München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-schwabing-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Schwabing München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Schwabing - 45 Min Anfahrt - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Schwabing, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -381,9 +425,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-bogenhausen-muenchen.jpg</image:loc>
-      <image:title>Klempner Bogenhausen München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-bogenhausen-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Bogenhausen München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Bogenhausen - 45 Min Anfahrt - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Bogenhausen, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -393,9 +439,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-maxvorstadt-muenchen.jpg</image:loc>
-      <image:title>Klempner Maxvorstadt München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-maxvorstadt-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Maxvorstadt München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Maxvorstadt - 30 Min Anfahrt Zentrum - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Maxvorstadt, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -405,9 +453,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-haidhausen-muenchen.jpg</image:loc>
-      <image:title>Klempner Haidhausen München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-haidhausen-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Haidhausen München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Haidhausen - 40 Min Anfahrt - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Haidhausen, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -417,9 +467,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-nymphenburg-muenchen.jpg</image:loc>
-      <image:title>Klempner Nymphenburg München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-nymphenburg-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Nymphenburg München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Nymphenburg - 35 Min Anfahrt - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Nymphenburg, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -429,9 +481,11 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-lehel-muenchen.jpg</image:loc>
-      <image:title>Klempner Lehel München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-lehel-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Lehel München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Lehel - 30 Min Anfahrt Zentrum - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Lehel, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -441,22 +495,25 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-solln-muenchen.jpg</image:loc>
-      <image:title>Klempner Solln München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-solln-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Solln München - Sanitär Heizung Notdienst</image:title>
+      <image:caption>Klempner Solln - 45 Min Anfahrt - Festpreis - 24h Notdienst</image:caption>
       <image:geo_location>Solln, München, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- STANDARD DISTRICTS (75%) -->
+  <!-- ═══════════════════ STANDARD STADTTEILE (Prio 0.75) ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/sendling</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-sendling-muenchen.jpg</image:loc>
-      <image:title>Klempner Sendling München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-sendling-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Sendling München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Sendling, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -466,9 +523,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-pasing-muenchen.jpg</image:loc>
-      <image:title>Klempner Pasing München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-pasing-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Pasing München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Pasing, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -478,9 +536,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-neuhausen-muenchen.jpg</image:loc>
-      <image:title>Klempner Neuhausen München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-neuhausen-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Neuhausen München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Neuhausen, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -490,9 +549,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-trudering-muenchen.jpg</image:loc>
-      <image:title>Klempner Trudering München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-trudering-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Trudering München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Trudering, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -502,9 +562,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-laim-muenchen.jpg</image:loc>
-      <image:title>Klempner Laim München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-laim-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Laim München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Laim, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -514,9 +575,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-giesing-muenchen.jpg</image:loc>
-      <image:title>Klempner Giesing München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-giesing-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Giesing München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Giesing, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -526,9 +588,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-moosach-muenchen.jpg</image:loc>
-      <image:title>Klempner Moosach München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-moosach-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Moosach München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Moosach, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -538,9 +601,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-milbertshofen-muenchen.jpg</image:loc>
-      <image:title>Klempner Milbertshofen München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-milbertshofen-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Milbertshofen München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Milbertshofen, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -550,9 +614,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-aubing-muenchen.jpg</image:loc>
-      <image:title>Klempner Aubing München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-aubing-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Aubing München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Aubing, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -562,9 +627,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-ramersdorf-muenchen.jpg</image:loc>
-      <image:title>Klempner Ramersdorf München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-ramersdorf-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Ramersdorf München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Ramersdorf, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -574,9 +640,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-thalkirchen-muenchen.jpg</image:loc>
-      <image:title>Klempner Thalkirchen München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-thalkirchen-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Thalkirchen München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Thalkirchen, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -586,9 +653,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-berg-am-laim-muenchen.jpg</image:loc>
-      <image:title>Klempner Berg am Laim München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-berg-am-laim-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Berg am Laim München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Berg am Laim, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -598,9 +666,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-feldmoching-muenchen.jpg</image:loc>
-      <image:title>Klempner Feldmoching München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-feldmoching-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Feldmoching München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Feldmoching, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -610,9 +679,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-allach-muenchen.jpg</image:loc>
-      <image:title>Klempner Allach München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-allach-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Allach München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Allach, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -622,9 +692,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-hadern-muenchen.jpg</image:loc>
-      <image:title>Klempner Hadern München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-hadern-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Hadern München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Hadern, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -634,9 +705,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-obergiesing-muenchen.jpg</image:loc>
-      <image:title>Klempner Obergiesing München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-obergiesing-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Obergiesing München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Obergiesing, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -646,9 +718,10 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-untergiesing-muenchen.jpg</image:loc>
-      <image:title>Klempner Untergiesing München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-untergiesing-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Untergiesing München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Untergiesing, München, Deutschland</image:geo_location>
     </image:image>
   </url>
@@ -658,14 +731,15 @@
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <mobile:mobile/>
     <image:image>
-      <image:loc>https://aquapro24.de/images/klempner-freimann-muenchen.jpg</image:loc>
-      <image:title>Klempner Freimann München</image:title>
+      <image:loc>https://aquapro24.de/images/klempner-freimann-sanitaer-heizung-muenchen.jpg</image:loc>
+      <image:title>Klempner Freimann München - Sanitär Heizung Notdienst</image:title>
       <image:geo_location>Freimann, München, Deutschland</image:geo_location>
     </image:image>
   </url>
 
-  <!-- LEGAL PAGES -->
+  <!-- ═══════════════════ RECHTLICHE SEITEN ═══════════════════ -->
   <url>
     <loc>https://aquapro24.de/impressum</loc>
     <lastmod>2025-12-23</lastmod>
