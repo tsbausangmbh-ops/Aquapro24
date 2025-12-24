@@ -2,6 +2,7 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import prerender from "prerender-node";
 
 const app = express();
 const httpServer = createServer(app);
@@ -10,6 +11,77 @@ declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
   }
+}
+
+// Prerender.io Middleware für SEO-Optimierung
+// Dient vorgerenderte HTML-Seiten an Suchmaschinen-Crawler und AI-Bots
+if (process.env.PRERENDER_TOKEN) {
+  app.use(
+    prerender
+      .set('prerenderToken', process.env.PRERENDER_TOKEN)
+      .set('protocol', 'https')
+      .set('forwardHeaders', true)
+      // Zusätzliche Crawler-Agents für AI-Bots und Sprachassistenten
+      .set('crawlerUserAgents', [
+        'googlebot',
+        'bingbot',
+        'yandex',
+        'baiduspider',
+        'facebookexternalhit',
+        'twitterbot',
+        'rogerbot',
+        'linkedinbot',
+        'embedly',
+        'quora link preview',
+        'showyoubot',
+        'outbrain',
+        'pinterest/0.',
+        'developers.google.com/+/web/snippet',
+        'slackbot',
+        'vkShare',
+        'W3C_Validator',
+        'redditbot',
+        'Applebot',
+        'WhatsApp',
+        'flipboard',
+        'tumblr',
+        'bitlybot',
+        'SkypeUriPreview',
+        'nuzzel',
+        'Discordbot',
+        'Google Page Speed',
+        'Qwantify',
+        'pinterestbot',
+        'Bitrix link preview',
+        'XING-contenttabreceiver',
+        'Chrome-Lighthouse',
+        'TelegramBot',
+        // AI Crawler und LLM Bots
+        'GPTBot',
+        'ChatGPT-User',
+        'ClaudeBot',
+        'Claude-Web',
+        'Anthropic-AI',
+        'PerplexityBot',
+        'Perplexity-User',
+        'Google-Extended',
+        'Gemini',
+        'Bard',
+        'cohere-ai',
+        'YouBot',
+        'CCBot',
+        'meta-externalagent',
+        'AI2Bot',
+        'Applebot-Extended',
+        'Bytespider',
+        // Voice Assistants
+        'Alexa Crawler',
+        'SiriBot'
+      ])
+  );
+  console.log('[prerender] Prerender.io middleware aktiviert für SEO & AI-Crawler');
+} else {
+  console.log('[prerender] PRERENDER_TOKEN nicht gesetzt - Prerender.io deaktiviert');
 }
 
 app.use(
