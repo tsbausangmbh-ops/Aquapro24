@@ -277,4 +277,8 @@ app.use((req, res, next) => {
       log(`serving on port ${port}`);
     },
   );
+
+  // Server Timeout-Konfiguration für stabile Verbindungen
+  httpServer.keepAliveTimeout = 120000;
+  httpServer.headersTimeout = 120000;
 })();
