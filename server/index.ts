@@ -94,6 +94,111 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+// 301 Redirects für SEO-Optimierung
+app.use((req, res, next) => {
+  const path = req.path;
+  const query = req.originalUrl.includes('?') ? req.originalUrl.slice(req.originalUrl.indexOf('?')) : '';
+  
+  // Skip für API-Routen, statische Dateien und Assets
+  if (path.startsWith('/api') || 
+      path.startsWith('/assets') || 
+      path.includes('.') ||
+      path === '/') {
+    return next();
+  }
+  
+  // 1. Trailing Slash entfernen (außer Root)
+  if (path.length > 1 && path.endsWith('/')) {
+    const newPath = path.slice(0, -1);
+    console.log(`[301] Trailing slash: ${path} -> ${newPath}`);
+    return res.redirect(301, newPath + query);
+  }
+  
+  // 2. Uppercase zu Lowercase
+  const lowerPath = path.toLowerCase();
+  if (path !== lowerPath) {
+    console.log(`[301] Lowercase: ${path} -> ${lowerPath}`);
+    return res.redirect(301, lowerPath + query);
+  }
+  
+  // 3. Legacy-URL-Redirects (alte Bookmarks)
+  const legacyRedirects: Record<string, string> = {
+    // Alte Service-URLs
+    '/leistungen/sanitaer': '/sanitaer',
+    '/leistungen/heizung': '/heizung',
+    '/leistungen/bad': '/bad',
+    '/leistungen/waermepumpe': '/waermepumpe',
+    '/leistungen/haustechnik': '/haustechnik',
+    '/services/sanitaer': '/sanitaer',
+    '/services/heizung': '/heizung',
+    '/services/plumbing': '/sanitaer',
+    '/services/heating': '/heizung',
+    // Alte Landing Pages
+    '/notfall': '/notdienst',
+    '/emergency': '/notdienst',
+    '/24h': '/notdienst',
+    '/24-stunden': '/notdienst',
+    '/soforthilfe': '/notdienst',
+    // Alte Kontakt-URLs
+    '/kontaktformular': '/kontakt',
+    '/contact': '/kontakt',
+    '/anfrage': '/kontakt',
+    // Alte Info-URLs
+    '/ueber-uns': '/ueber-uns',
+    '/about': '/ueber-uns',
+    '/about-us': '/ueber-uns',
+    '/team': '/ueber-uns',
+    '/unternehmen': '/ueber-uns',
+    // Alte Termin-URLs
+    '/termin-buchen': '/termin',
+    '/terminbuchung': '/termin',
+    '/appointment': '/termin',
+    '/booking': '/termin',
+    '/buchung': '/termin',
+    // Alte FAQ/Ratgeber URLs
+    '/hilfe': '/faq',
+    '/help': '/faq',
+    '/fragen': '/faq',
+    '/tipps': '/ratgeber',
+    '/blog': '/ratgeber',
+    '/news': '/ratgeber',
+    '/artikel': '/ratgeber',
+    // Alte Förderungs-URLs
+    '/foerderung-heizung': '/foerderung',
+    '/bafa': '/foerderung',
+    '/kfw': '/foerderung',
+    '/zuschuss': '/foerderung',
+    '/foerdermittel': '/foerderung',
+    // Service-spezifische Redirects
+    '/rohrreinigung-muenchen': '/rohrreinigung',
+    '/klempner-muenchen': '/sanitaer',
+    '/installateur-muenchen': '/sanitaer',
+    '/heizungsbauer-muenchen': '/heizung',
+    '/badsanierung-muenchen': '/badsanierung',
+    // Stadtteil ohne "muenchen" Suffix
+    '/schwabing': '/stadtteil/schwabing',
+    '/bogenhausen': '/stadtteil/bogenhausen',
+    '/sendling': '/stadtteil/sendling',
+    '/pasing': '/stadtteil/pasing',
+    '/maxvorstadt': '/stadtteil/maxvorstadt',
+    '/haidhausen': '/stadtteil/haidhausen',
+    '/neuhausen': '/stadtteil/neuhausen',
+    '/trudering': '/stadtteil/trudering',
+    '/laim': '/stadtteil/laim',
+    '/giesing': '/stadtteil/giesing',
+    '/moosach': '/stadtteil/moosach',
+    '/milbertshofen': '/stadtteil/milbertshofen',
+  };
+  
+  const redirectTo = legacyRedirects[path] || legacyRedirects[lowerPath];
+  if (redirectTo) {
+    console.log(`[301] Legacy: ${path} -> ${redirectTo}`);
+    return res.redirect(301, redirectTo + query);
+  }
+  
+  next();
+});
+
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",
