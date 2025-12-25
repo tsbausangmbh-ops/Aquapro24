@@ -291,6 +291,137 @@
     }
     </script>
     <!-- Alte große Font-Anfrage entfernt - jetzt nur 2 Schriftarten via preload oben -->
+    
+    <!-- Google WebSite Schema für Sitelinks Searchbox -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://aquapro24.de/#website",
+      "name": "AquaPro24 - Sanitär & Heizung München",
+      "alternateName": ["AquaPro 24", "KSHW München", "Klempner München"],
+      "url": "https://aquapro24.de",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "https://aquapro24.de/#organization"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://aquapro24.de/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        },
+        {
+          "@type": "ReadAction",
+          "target": "https://aquapro24.de/ratgeber"
+        }
+      ],
+      "about": [
+        {"@type": "Thing", "name": "Sanitär München"},
+        {"@type": "Thing", "name": "Heizung München"},
+        {"@type": "Thing", "name": "Klempner München"},
+        {"@type": "Thing", "name": "Badsanierung München"},
+        {"@type": "Thing", "name": "Wärmepumpe München"}
+      ],
+      "keywords": "Klempner München, Sanitär Notdienst, Heizung Reparatur, Badsanierung, Wärmepumpe, Rohrreinigung, 24h Notdienst",
+      "datePublished": "2005-01-01",
+      "dateModified": "2025-12-25"
+    }
+    </script>
+
+    <!-- Google Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://aquapro24.de/#organization",
+      "name": "AquaPro24",
+      "legalName": "KSHW München - Mustafa Sakar",
+      "url": "https://aquapro24.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aquapro24.de/favicon.png",
+        "width": 180,
+        "height": 180
+      },
+      "image": "https://aquapro24.de/favicon.png",
+      "description": "Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005.",
+      "foundingDate": "2005",
+      "founder": {
+        "@type": "Person",
+        "name": "Ali Kemal Kurt"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zielstattstr. 20",
+        "addressLocality": "München",
+        "addressRegion": "Bayern",
+        "postalCode": "81379",
+        "addressCountry": "DE"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+49-152-12274043",
+          "contactType": "customer service",
+          "areaServed": "DE-BY",
+          "availableLanguage": ["German", "Turkish", "English"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+49-152-12274043",
+          "contactType": "emergency",
+          "contactOption": "TollFree",
+          "areaServed": "München",
+          "availableLanguage": "German"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps/search/?api=1&query=KSHW+München+Zielstattstr+20",
+        "https://www.facebook.com/aquapro24",
+        "https://www.instagram.com/aquapro24_muenchen"
+      ]
+    }
+    </script>
+
+    <!-- Google Speakable Schema für Voice Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://aquapro24.de/#webpage",
+      "url": "https://aquapro24.de",
+      "name": "AquaPro24 - Klempner & Heizung München | 24h Notdienst",
+      "isPartOf": {"@id": "https://aquapro24.de/#website"},
+      "about": {"@id": "https://aquapro24.de/#organization"},
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://aquapro24.de/favicon.png"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".hero-subtitle",
+          ".emergency-phone",
+          ".service-summary"
+        ]
+      },
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": "main"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
