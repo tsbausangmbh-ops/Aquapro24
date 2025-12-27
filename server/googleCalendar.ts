@@ -1,37 +1,56 @@
-// Google Calendar Integration mit Service Account
+// Google Calendar Integration via Replit Connector
 // Single calendar approach: All events in primary calendar, filtered by service type (Gewerk)
 import { google } from 'googleapis';
 
-// Service Account Authentication - kein Refresh Token nötig!
-function getServiceAccountAuth() {
-  const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const privateKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
-  
-  if (!serviceAccountEmail || !privateKey) {
-    throw new Error('Google Service Account credentials not configured. Please set GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.');
+let connectionSettings: any;
+
+async function getAccessToken() {
+  if (connectionSettings && connectionSettings.settings.expires_at && new Date(connectionSettings.settings.expires_at).getTime() > Date.now()) {
+    return connectionSettings.settings.access_token;
   }
   
-  // Replace escaped newlines with actual newlines (from environment variable)
-  const formattedKey = privateKey.replace(/\\n/g, '\n');
-  
-  const auth = new google.auth.JWT({
-    email: serviceAccountEmail,
-    key: formattedKey,
-    scopes: ['https://www.googleapis.com/auth/calendar'],
-  });
-  
-  return auth;
+  const hostname = process.env.REPLIT_CONNECTORS_HOSTNAME;
+  const xReplitToken = process.env.REPL_IDENTITY 
+    ? 'repl ' + process.env.REPL_IDENTITY 
+    : process.env.WEB_REPL_RENEWAL 
+    ? 'depl ' + process.env.WEB_REPL_RENEWAL 
+    : null;
+
+  if (!xReplitToken) {
+    throw new Error('X_REPLIT_TOKEN not found for repl/depl');
+  }
+
+  connectionSettings = await fetch(
+    'https://' + hostname + '/api/v2/connection?include_secrets=true&connector_names=google-calendar',
+    {
+      headers: {
+        'Accept': 'application/json',
+        'X_REPLIT_TOKEN': xReplitToken
+      }
+    }
+  ).then(res => res.json()).then(data => data.items?.[0]);
+
+  const accessToken = connectionSettings?.settings?.access_token || connectionSettings.settings?.oauth?.credentials?.access_token;
+
+  if (!connectionSettings || !accessToken) {
+    throw new Error('Google Calendar not connected');
+  }
+  return accessToken;
 }
 
-// Get Google Calendar client with Service Account auth
+// WARNING: Never cache this client.
+// Access tokens expire, so a new client must be created each time.
+// Always call this function again to get a fresh client.
 export async function getUncachableGoogleCalendarClient() {
-  const auth = getServiceAccountAuth();
-  return google.calendar({ version: 'v3', auth });
-}
+  const accessToken = await getAccessToken();
 
-// Calendar ID - Service Account needs explicit calendar ID (shared calendar)
-// Set via environment variable or use default
-const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID || 'primary';
+  const oauth2Client = new google.auth.OAuth2();
+  oauth2Client.setCredentials({
+    access_token: accessToken
+  });
+
+  return google.calendar({ version: 'v3', auth: oauth2Client });
+}
 
 export interface CalendarEventData {
   name: string;
@@ -60,7 +79,9 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     const serviceLabel = capitalizedServices.join(', ') || 'Sanitär-Anfrage';
     const urgencyLabel = getUrgencyLabel(data.urgency, data.isEmergency);
     
-    console.log(`Creating event in calendar ${CALENDAR_ID} for services: ${serviceLabel}`);
+    // Always use primary calendar - service type is included in the event title for filtering
+    const calendarId = 'primary';
+    console.log(`Creating event in primary calendar for services: ${serviceLabel}`);
     
     const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
     const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
@@ -103,7 +124,7 @@ Terminwunsch: ${appointmentInfo}
     `.trim();
 
     const event = await calendar.events.insert({
-      calendarId: CALENDAR_ID,
+      calendarId: calendarId,
       requestBody: {
         summary: `AquaPro24 - Kunde - ${serviceLabel}`,
         description: eventDescription,
@@ -276,6 +297,9 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     }
   }
 
+  // Single calendar for all services - if a slot is taken, it's blocked for all Gewerke
+  const calendarId = 'primary';
+
   try {
     const calendar = await getUncachableGoogleCalendarClient();
     
@@ -285,9 +309,9 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     const endOfDay = new Date(date);
     endOfDay.setHours(23, 59, 59, 999);
 
-    // Fetch all events for the given date from the calendar
+    // Fetch all events for the given date from the primary calendar
     const response = await calendar.events.list({
-      calendarId: CALENDAR_ID,
+      calendarId: calendarId,
       timeMin: startOfDay.toISOString(),
       timeMax: endOfDay.toISOString(),
       singleEvents: true,
