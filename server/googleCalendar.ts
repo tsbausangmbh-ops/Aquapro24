@@ -289,14 +289,6 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     ];
   }
   
-  // Apply simulated 60% busy pattern (rotating weekly)
-  const busySlots = getSimulatedBusySlots(date, timeSlots.length);
-  for (let i = 0; i < timeSlots.length; i++) {
-    if (busySlots.has(i)) {
-      timeSlots[i].available = false;
-    }
-  }
-
   // Single calendar for all services - if a slot is taken, it's blocked for all Gewerke
   const calendarId = 'primary';
 
