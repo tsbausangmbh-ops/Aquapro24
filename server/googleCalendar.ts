@@ -313,9 +313,23 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
 
     const events = response.data.items || [];
     
-    // All events block all time slots regardless of service type (Gewerk)
-    // One calendar for all - if a slot is taken, it's taken for everyone
-    console.log(`Found ${events.length} events for date ${date}`);
+    // Count only AquaPro24 bookings (our events start with "AquaPro24")
+    const aquaProEvents = events.filter(e => e.summary?.startsWith('AquaPro24'));
+    const totalBookingsToday = aquaProEvents.length;
+    
+    // Maximum 2 bookings per day
+    const MAX_BOOKINGS_PER_DAY = 2;
+    
+    console.log(`Found ${events.length} total events, ${totalBookingsToday} AquaPro24 bookings for date ${date}`);
+    
+    // If already at max capacity, block all slots
+    if (totalBookingsToday >= MAX_BOOKINGS_PER_DAY) {
+      console.log(`Day ${date} is fully booked (${totalBookingsToday}/${MAX_BOOKINGS_PER_DAY} bookings)`);
+      for (const slot of timeSlots) {
+        slot.available = false;
+      }
+      return timeSlots;
+    }
     
     // Mark time slots as unavailable if they overlap with existing events
     // Including 90 minute buffer before and after each event
