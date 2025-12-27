@@ -80,7 +80,7 @@ export default function Header() {
         </div>
       </div>
       
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <header className="sticky top-0 z-[60] bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between gap-4 h-16">
             <Link href="/" className="flex items-center gap-2" aria-label="AquaPro24 - Zur Startseite">
@@ -121,7 +121,7 @@ export default function Header() {
                 </button>
                 {servicesOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-[70]"
                     role="menu"
                     aria-label="Leistungen Untermenü"
                     onMouseLeave={() => setServicesOpen(false)}
@@ -167,7 +167,7 @@ export default function Header() {
                 </button>
                 {notdienstOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                    className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-[70]"
                     role="menu"
                     aria-label="Notdienst 24 Untermenü"
                     onMouseLeave={() => setNotdienstOpen(false)}
@@ -241,7 +241,7 @@ export default function Header() {
                 </button>
                 {foerderungOpen && (
                   <div 
-                    className="absolute top-full right-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50"
+                    className="absolute top-full right-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-[70]"
                     role="menu"
                     aria-label="Förderung Untermenü"
                     onMouseLeave={() => setFoerderungOpen(false)}
@@ -299,7 +299,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div id="mobile-menu" className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-50">
+          <div id="mobile-menu" className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-[70]">
             <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
               <Link
                 href="/"

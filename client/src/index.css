@@ -104,7 +104,12 @@ img[loading="lazy"] {
 /* Mobile Performance: Optimierte Sticky Header */
 .sticky {
   will-change: transform;
-  contain: layout style paint;
+  contain: layout style;
+}
+
+/* Header braucht contain: none für Dropdown-Menüs */
+header.sticky {
+  contain: none;
 }
 
 @keyframes fadeInUp {
