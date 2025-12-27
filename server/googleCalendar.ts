@@ -1,28 +1,37 @@
-// Google Calendar Integration mit direkter Google Cloud OAuth2
+// Google Calendar Integration mit Service Account
 // Single calendar approach: All events in primary calendar, filtered by service type (Gewerk)
 import { google } from 'googleapis';
 
-// OAuth2 Client mit eigenen Google Cloud Credentials
-const oauth2Client = new google.auth.OAuth2(
-  process.env.GOOGLE_CLIENT_ID,
-  process.env.GOOGLE_CLIENT_SECRET,
-  'https://developers.google.com/oauthplayground' // Redirect URI für OAuth Playground
-);
-
-// Refresh Token aus Umgebungsvariablen setzen
-oauth2Client.setCredentials({
-  refresh_token: process.env.GOOGLE_REFRESH_TOKEN
-});
-
-// Token wird automatisch aktualisiert wenn nötig
-export async function getUncachableGoogleCalendarClient() {
-  // Prüfen ob alle erforderlichen Umgebungsvariablen vorhanden sind
-  if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET || !process.env.GOOGLE_REFRESH_TOKEN) {
-    throw new Error('Google OAuth credentials not configured. Please set GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and GOOGLE_REFRESH_TOKEN.');
+// Service Account Authentication - kein Refresh Token nötig!
+function getServiceAccountAuth() {
+  const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
+  const privateKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
+  
+  if (!serviceAccountEmail || !privateKey) {
+    throw new Error('Google Service Account credentials not configured. Please set GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.');
   }
-
-  return google.calendar({ version: 'v3', auth: oauth2Client });
+  
+  // Replace escaped newlines with actual newlines (from environment variable)
+  const formattedKey = privateKey.replace(/\\n/g, '\n');
+  
+  const auth = new google.auth.JWT({
+    email: serviceAccountEmail,
+    key: formattedKey,
+    scopes: ['https://www.googleapis.com/auth/calendar'],
+  });
+  
+  return auth;
 }
+
+// Get Google Calendar client with Service Account auth
+export async function getUncachableGoogleCalendarClient() {
+  const auth = getServiceAccountAuth();
+  return google.calendar({ version: 'v3', auth });
+}
+
+// Calendar ID - Service Account needs explicit calendar ID (shared calendar)
+// Set via environment variable or use default
+const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID || 'primary';
 
 export interface CalendarEventData {
   name: string;
@@ -51,9 +60,7 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     const serviceLabel = capitalizedServices.join(', ') || 'Sanitär-Anfrage';
     const urgencyLabel = getUrgencyLabel(data.urgency, data.isEmergency);
     
-    // Always use primary calendar - service type is included in the event title for filtering
-    const calendarId = 'primary';
-    console.log(`Creating event in primary calendar for services: ${serviceLabel}`);
+    console.log(`Creating event in calendar ${CALENDAR_ID} for services: ${serviceLabel}`);
     
     const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
     const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
@@ -96,7 +103,7 @@ Terminwunsch: ${appointmentInfo}
     `.trim();
 
     const event = await calendar.events.insert({
-      calendarId: calendarId,
+      calendarId: CALENDAR_ID,
       requestBody: {
         summary: `AquaPro24 - Kunde - ${serviceLabel}`,
         description: eventDescription,
@@ -269,9 +276,6 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     }
   }
 
-  // Single calendar for all services - if a slot is taken, it's blocked for all Gewerke
-  const calendarId = 'primary';
-
   try {
     const calendar = await getUncachableGoogleCalendarClient();
     
@@ -281,9 +285,9 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     const endOfDay = new Date(date);
     endOfDay.setHours(23, 59, 59, 999);
 
-    // Fetch all events for the given date from the primary calendar
+    // Fetch all events for the given date from the calendar
     const response = await calendar.events.list({
-      calendarId: calendarId,
+      calendarId: CALENDAR_ID,
       timeMin: startOfDay.toISOString(),
       timeMax: endOfDay.toISOString(),
       singleEvents: true,
