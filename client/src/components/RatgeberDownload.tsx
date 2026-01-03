@@ -22,10 +22,10 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 
 const ratgeberTopics = [
-  { icon: Wrench, text: "Wasserschaden Erste Hilfe" },
-  { icon: Flame, text: "Heizung richtig warten" },
-  { icon: Lightbulb, text: "Energiekosten senken" },
-  { icon: Shield, text: "Fördermittel sichern" }
+  { icon: Shield, text: "Schnellhilfe im Notfall" },
+  { icon: Flame, text: "Heizung & Warmwasser Tipps" },
+  { icon: Wrench, text: "Armaturen & Abfluss" },
+  { icon: Lightbulb, text: "Kostenfaktoren verstehen" }
 ];
 
 export default function RatgeberDownload() {
@@ -104,8 +104,8 @@ export default function RatgeberDownload() {
               Ratgeber München: Profi-Tipps für Ihr Zuhause
             </h2>
             <p className="text-muted-foreground mb-4">
-              Unser kostenloser Ratgeber mit Expertenwissen zu Sanitär, Heizung und Haustechnik. 
-              Lernen Sie, wie Sie kleine Probleme selbst lösen und wann Sie einen Fachmann rufen sollten.
+              Praxiswissen, Soforthilfe und Entscheidungsgrundlagen rund um Heizung und Sanitär. 
+              Verständlich, praxisnah – für Eigentümer, Vermieter und Bewohner in München.
             </p>
             
             <div className="grid grid-cols-2 gap-3 mb-4">
@@ -119,7 +119,7 @@ export default function RatgeberDownload() {
 
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
               <FileText className="w-4 h-4" />
-              <span>24 Seiten PDF</span>
+              <span>12 Kapitel</span>
               <span className="text-muted-foreground/50">|</span>
               <span>Sofort-Download</span>
               <span className="text-muted-foreground/50">|</span>
@@ -139,7 +139,7 @@ export default function RatgeberDownload() {
                     Sanitär & Heizung Tipps vom Münchner Fachbetrieb
                   </p>
                   <Badge variant="secondary" className="mt-2 text-xs">
-                    PDF, 2.4 MB
+                    PDF, 12 Kapitel
                   </Badge>
                 </div>
               </div>
