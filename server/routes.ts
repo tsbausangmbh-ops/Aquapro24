@@ -1130,19 +1130,19 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
               </p>
               
               <p style="color: #4b5563; line-height: 1.6;">
-                Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 Kapiteln zu den wichtigsten 
-                Themen rund um Heizung und Sanitär – von Notfall-Soforthilfe bis hin zu Kostenfaktoren.
+                Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 praktischen Tipps zu typischen 
+                Alltagsproblemen bei Heizung und Sanitär – verständlich erklärt, Schritt für Schritt.
               </p>
               
               <div style="background: white; border-left: 4px solid #f97316; padding: 20px; margin: 20px 0;">
-                <strong style="color: #1f2937;">Inhalt des Ratgebers:</strong>
+                <strong style="color: #1f2937;">Inhalt des Ratgebers (12 Tipps):</strong>
                 <ul style="color: #4b5563; margin: 10px 0; padding-left: 20px;">
-                  <li>Schnellhilfe im Notfall</li>
-                  <li>Heizungsprobleme erkennen & lösen</li>
-                  <li>Warmwasser & Armaturen</li>
-                  <li>Abfluss & Leckagen</li>
-                  <li>Badsanierung planen</li>
-                  <li>Kostenfaktoren verstehen</li>
+                  <li>Heizkörper gluckert oder wird nicht warm</li>
+                  <li>Heizungsdruck zu niedrig – Anlage schaltet ab</li>
+                  <li>Thermostat auf 5, aber Heizkörper bleibt kalt</li>
+                  <li>Warmwasser schwankt oder wird nicht heiß</li>
+                  <li>Wasserhahn tropft oder Abfluss läuft langsam</li>
+                  <li>WC spült schwach oder läuft nach</li>
                 </ul>
               </div>
               
@@ -1229,7 +1229,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 }
 
 function generateRatgeberPDF(): Buffer {
-  const pdfPath = path.join(process.cwd(), "attached_assets", "AquaPro24_Ratgeber_Heizung_und_Sanitaer_1767455255112.pdf");
+  const pdfPath = path.join(process.cwd(), "attached_assets", "AquaPro24_Ratgeber_Kleine_Probleme_Heizung_Sanitaer_FINAL_LANG_1767456424256.pdf");
   
   if (fs.existsSync(pdfPath)) {
     return fs.readFileSync(pdfPath);

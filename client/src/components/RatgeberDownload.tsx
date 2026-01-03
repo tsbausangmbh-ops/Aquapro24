@@ -22,12 +22,12 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 
 const ratgeberTopics = [
-  { icon: Shield, text: "Schnellhilfe im Notfall – Rohrbruch & Heizungsausfall" },
-  { icon: Flame, text: "Heizung: Heizkörper, Druck, Störungscodes, Wartung" },
-  { icon: Wrench, text: "Warmwasser: Boiler, Durchlauferhitzer, Mischer" },
-  { icon: Lightbulb, text: "Armaturen & Abfluss: Tropfen, Verstopfung, Leckage" },
-  { icon: Shield, text: "Badsanierung & Leitungsmodernisierung planen" },
-  { icon: Lightbulb, text: "Kostenfaktoren & Anfrage-Checkliste" }
+  { icon: Flame, text: "Heizkörper gluckert oder wird nicht warm" },
+  { icon: Flame, text: "Heizungsdruck zu niedrig – Anlage schaltet ab" },
+  { icon: Wrench, text: "Thermostat auf 5, Heizkörper bleibt kalt" },
+  { icon: Lightbulb, text: "Warmwasser schwankt oder wird nicht heiß" },
+  { icon: Wrench, text: "Wasserhahn tropft oder Abfluss läuft langsam" },
+  { icon: Shield, text: "Selbst lösen oder Hilfe holen – schnell entscheiden" }
 ];
 
 export default function RatgeberDownload() {
@@ -100,11 +100,11 @@ export default function RatgeberDownload() {
               Ratgeber München: Profi-Tipps für Ihr Zuhause
             </h2>
             <p className="text-muted-foreground mb-2">
-              Praxiswissen, Soforthilfe und Entscheidungsgrundlagen rund um Heizung und Sanitär. 
-              Verständlich, praxisnah – für Eigentümer, Vermieter und Bewohner in München.
+              Schnelle Selbsthilfe bei typischen Alltagsproblemen – verständlich erklärt, Schritt für Schritt. 
+              Für Eigentümer, Vermieter und Bewohner in München.
             </p>
             <p className="text-muted-foreground mb-4 text-sm">
-              <strong>12 Kapitel</strong> mit konkreten Tipps, die Ihnen Zeit, Geld und Nerven sparen. 
+              <strong>12 praktische Tipps</strong>, die Ihnen Zeit, Geld und Nerven sparen. 
               Erfahren Sie, wann Sie selbst handeln können – und wann Sie besser einen Fachmann rufen.
             </p>
             
