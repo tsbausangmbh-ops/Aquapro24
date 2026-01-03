@@ -34,12 +34,14 @@ export default function RatgeberDownload() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [captcha, setCaptcha] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const { toast } = useToast();
 
-  const isFormValid = name.trim() !== "" && email.trim() !== "" && email.includes("@") && privacyAccepted;
+  const isCaptchaValid = captcha.trim() === "4";
+  const isFormValid = name.trim() !== "" && email.trim() !== "" && email.includes("@") && privacyAccepted && isCaptchaValid;
 
   const handleSendEmail = async () => {
     if (!isFormValid) {
@@ -187,6 +189,21 @@ export default function RatgeberDownload() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     data-testid="input-ratgeber-phone"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <Label htmlFor="ratgeber-captcha" className="text-sm flex items-center gap-2">
+                    <Shield className="w-3 h-3" />
+                    Sicherheitsfrage: Was ist 2 + 2? *
+                  </Label>
+                  <Input
+                    id="ratgeber-captcha"
+                    type="text"
+                    placeholder="Ihre Antwort"
+                    value={captcha}
+                    onChange={(e) => setCaptcha(e.target.value)}
+                    data-testid="input-ratgeber-captcha"
                   />
                 </div>
 
