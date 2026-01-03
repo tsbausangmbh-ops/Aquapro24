@@ -938,6 +938,10 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     );
   }
 
+  // Add meta keywords
+  const keywordsTag = `<meta name="keywords" content="${page.keywords.join(', ')}" />`;
+  html = html.replace('</head>', `  ${keywordsTag}\n  </head>`);
+
   // Add Open Graph tags for social sharing
   const ogTags = `
     <meta property="og:title" content="${page.title}" />
@@ -946,8 +950,135 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="AquaPro24" />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:image" content="${BASE_URL}/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
   `;
   html = html.replace('</head>', `${ogTags}</head>`);
+
+  // Add Twitter Card tags
+  const twitterTags = `
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${page.title}" />
+    <meta name="twitter:description" content="${page.description}" />
+    <meta name="twitter:image" content="${BASE_URL}/og-image.jpg" />
+  `;
+  html = html.replace('</head>', `${twitterTags}</head>`);
+
+  // Add hreflang for German
+  html = html.replace('</head>', `  <link rel="alternate" hreflang="de" href="${canonicalUrl}" />\n  <link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />\n  </head>`);
+
+  // Add preconnect hints for performance
+  const preconnectTags = `
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  `;
+  html = html.replace('</head>', `${preconnectTags}</head>`);
+
+  // Add JSON-LD structured data for LocalBusiness
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${BASE_URL}#localbusiness`,
+    "name": "AquaPro24 - Sanitär & Heizung München",
+    "alternateName": "AquaPro24",
+    "description": page.description,
+    "url": canonicalUrl,
+    "telephone": "+49-89-444438872",
+    "email": "info@aquapro24.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hardenbergstr. 4",
+      "addressLocality": "München",
+      "postalCode": "80992",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.1801,
+      "longitude": 11.5167
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2847",
+      "bestRating": "5"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "München",
+      "sameAs": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
+    },
+    "sameAs": [
+      "https://www.facebook.com/aquapro24",
+      "https://www.instagram.com/aquapro24"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sanitär & Heizung Dienstleistungen",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rohrreinigung", "description": "Professionelle Rohrreinigung ab 81€"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heizungsreparatur", "description": "Heizungsreparatur ab 154€"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "24h Notdienst", "description": "Sanitär & Heizung Notdienst rund um die Uhr"}}
+      ]
+    }
+  };
+  const jsonLdScript = `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`;
+  html = html.replace('</head>', `${jsonLdScript}\n</head>`);
+
+  // Add WebSite schema for sitelinks searchbox
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": BASE_URL,
+    "name": "AquaPro24",
+    "description": "Sanitär & Heizung München - 24/7 Notdienst",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${BASE_URL}/suche?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+  const websiteSchemaScript = `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`;
+  html = html.replace('</head>', `${websiteSchemaScript}\n</head>`);
+
+  // Add BreadcrumbList schema
+  const breadcrumbParts = pagePath.split('/').filter(p => p);
+  if (breadcrumbParts.length > 0) {
+    const breadcrumbItems = [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL}
+    ];
+    let currentPath = '';
+    breadcrumbParts.forEach((part, index) => {
+      currentPath += '/' + part;
+      breadcrumbItems.push({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' '),
+        "item": BASE_URL + currentPath
+      });
+    });
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbItems
+    };
+    const breadcrumbScript = `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`;
+    html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
+  }
+
+  // Add robots meta tag for indexing
+  html = html.replace('</head>', `  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />\n  </head>`);
 
   // Inject content into root div
   const fullContent = `
@@ -971,22 +1102,51 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
 // Check if request is from a bot
 export function isBot(userAgent: string): boolean {
   const botPatterns = [
+    // Google bots
     'googlebot',
+    'googlebot-image',
+    'googlebot-news',
+    'googlebot-video',
+    'google-inspectiontool',
+    'google-extended',
+    'adsbot-google',
+    'mediapartners-google',
+    'storebot-google',
+    // Bing bots
     'bingbot',
+    'msnbot',
+    'bingpreview',
+    // Other search engines
     'yandexbot',
+    'yandexmobilebot',
     'duckduckbot',
     'slurp',
     'baiduspider',
+    'sogou',
+    // Social media bots
     'facebookexternalhit',
+    'facebookcatalog',
     'twitterbot',
     'linkedinbot',
+    'pinterest',
     'whatsapp',
     'telegrambot',
+    'discordbot',
+    'slackbot',
+    // Apple
     'applebot',
+    'applebot-extended',
+    // AI bots
     'gptbot',
     'chatgpt-user',
     'claude',
+    'claudebot',
+    'anthropic-ai',
     'perplexitybot',
+    'cohere-ai',
+    'amazonbot',
+    'meta-externalagent',
+    // SEO tools
     'semrushbot',
     'ahrefsbot',
     'mj12bot',
@@ -994,7 +1154,20 @@ export function isBot(userAgent: string): boolean {
     'petalbot',
     'bytespider',
     'rogerbot',
-    'screaming frog'
+    'screaming frog',
+    'sistrix',
+    'seokicks',
+    'xovibot',
+    'blexbot',
+    // Web archives
+    'archive.org_bot',
+    'ia_archiver',
+    // Other crawlers
+    'uptimerobot',
+    'pingdom',
+    'gtmetrix',
+    'lighthouse',
+    'pagespeed'
   ];
   
   const ua = userAgent.toLowerCase();
