@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import RatgeberDownload from "@/components/RatgeberDownload";
+import NLPQuestions from "@/components/NLPQuestions";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jpg";
 import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.png";
@@ -356,6 +357,8 @@ export default function Home() {
         </section>
 
         <TrustBar />
+
+        <NLPQuestions />
 
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
