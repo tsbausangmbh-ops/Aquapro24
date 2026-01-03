@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { 
   Download, 
@@ -11,7 +13,10 @@ import {
   Shield,
   Lightbulb,
   Wrench,
-  Flame
+  Flame,
+  User,
+  Mail,
+  Phone
 } from "lucide-react";
 import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
@@ -24,15 +29,20 @@ const ratgeberTopics = [
 ];
 
 export default function RatgeberDownload() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const { toast } = useToast();
 
+  const isFormValid = name.trim() !== "" && email.trim() !== "" && email.includes("@") && privacyAccepted;
+
   const handleDownload = async () => {
-    if (!privacyAccepted) {
+    if (!isFormValid) {
       toast({
-        title: "Datenschutz erforderlich",
-        description: "Bitte bestätigen Sie die Datenschutzerklärung, um den Ratgeber herunterzuladen.",
+        title: "Bitte alle Felder ausfüllen",
+        description: "Name, E-Mail und Datenschutz-Bestätigung sind erforderlich.",
         variant: "destructive"
       });
       return;
@@ -44,7 +54,12 @@ export default function RatgeberDownload() {
       const response = await fetch("/api/ratgeber-download", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ privacyAccepted: true })
+        body: JSON.stringify({ 
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          privacyAccepted: true 
+        })
       });
 
       if (!response.ok) {
@@ -130,7 +145,52 @@ export default function RatgeberDownload() {
               </div>
 
               <div className="space-y-3">
-                <div className="flex items-start gap-3">
+                <div className="space-y-1">
+                  <Label htmlFor="ratgeber-name" className="text-sm flex items-center gap-2">
+                    <User className="w-3 h-3" />
+                    Name *
+                  </Label>
+                  <Input
+                    id="ratgeber-name"
+                    type="text"
+                    placeholder="Ihr Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    data-testid="input-ratgeber-name"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <Label htmlFor="ratgeber-email" className="text-sm flex items-center gap-2">
+                    <Mail className="w-3 h-3" />
+                    E-Mail *
+                  </Label>
+                  <Input
+                    id="ratgeber-email"
+                    type="email"
+                    placeholder="ihre@email.de"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    data-testid="input-ratgeber-email"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <Label htmlFor="ratgeber-phone" className="text-sm flex items-center gap-2">
+                    <Phone className="w-3 h-3" />
+                    Telefon (optional)
+                  </Label>
+                  <Input
+                    id="ratgeber-phone"
+                    type="tel"
+                    placeholder="Ihre Telefonnummer"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    data-testid="input-ratgeber-phone"
+                  />
+                </div>
+
+                <div className="flex items-start gap-3 pt-2">
                   <Checkbox 
                     id="privacy-consent"
                     checked={privacyAccepted}
@@ -145,14 +205,14 @@ export default function RatgeberDownload() {
                     <Link href="/datenschutz" className="text-primary hover:underline">
                       Datenschutzerklärung
                     </Link>{" "}
-                    gelesen und akzeptiere diese. Meine Daten werden nur für den Download verwendet.
+                    gelesen und akzeptiere diese. *
                   </label>
                 </div>
 
                 <Button 
                   className="w-full gap-2"
                   onClick={handleDownload}
-                  disabled={!privacyAccepted || isDownloading}
+                  disabled={!isFormValid || isDownloading}
                   data-testid="button-download-ratgeber"
                 >
                   {isDownloading ? (
@@ -168,12 +228,16 @@ export default function RatgeberDownload() {
                   )}
                 </Button>
 
-                {privacyAccepted && (
+                {isFormValid && (
                   <div className="flex items-center gap-2 text-xs text-green-600 dark:text-green-400">
                     <CheckCircle2 className="w-3 h-3" />
-                    Datenschutz bestätigt - Download bereit
+                    Alle Felder ausgefüllt - Download bereit
                   </div>
                 )}
+
+                <p className="text-xs text-muted-foreground text-center">
+                  * Pflichtfelder
+                </p>
               </div>
             </CardContent>
           </Card>

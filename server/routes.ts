@@ -1064,7 +1064,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 
   app.post("/api/ratgeber-download", async (req, res) => {
     try {
-      const { privacyAccepted } = req.body;
+      const { name, email, phone, privacyAccepted } = req.body;
       
       if (!privacyAccepted) {
         return res.status(400).json({ 
@@ -1073,7 +1073,31 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
         });
       }
 
-      console.log("Ratgeber download requested with privacy consent");
+      if (!name || !email) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Name und E-Mail sind erforderlich" 
+        });
+      }
+
+      console.log(`Ratgeber download: ${name}, ${email}, ${phone || 'keine Telefonnummer'}`);
+
+      try {
+        await storage.createLead({
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone?.trim() || "",
+          address: "",
+          service: "Ratgeber Download",
+          message: "Ratgeber PDF heruntergeladen",
+          preferredDate: "",
+          preferredTime: "",
+          urgency: "normal",
+          source: "ratgeber"
+        });
+      } catch (leadError) {
+        console.error("Error saving ratgeber lead:", leadError);
+      }
 
       const pdfContent = generateRatgeberPDF();
       
