@@ -489,6 +489,8 @@ interface ChatMessage {
 }
 
 export async function registerRoutes(server: Server, app: Express): Promise<void> {
+  // Hinweis: Alle 301 Redirects sind zentral in server/index.ts definiert
+
   app.post("/api/leads", async (req, res) => {
     try {
       const leadData = req.body;
