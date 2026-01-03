@@ -3,56 +3,78 @@ import fs from "fs";
 import path from "path";
 import { generateStaticHTML, isBot, seoPages } from "./seoContent";
 
-// Bekannte Routen der SPA (aus sitemap.xml)
+// Bekannte Routen der SPA (aus sitemap.xml - alle Seiten synchronisiert)
 const KNOWN_ROUTES = new Set([
+  // Homepage
   '/',
+  // Service-Seiten
   '/sanitaer',
   '/armaturen',
   '/rohrreinigung',
   '/warmwasser',
   '/bad',
+  '/badsanierung',
   '/heizung',
   '/waermepumpe',
   '/haustechnik',
-  '/notdienst',
+  // Landing Pages
+  '/notdienst-muenchen',
   '/sanitaer-muenchen',
   '/heizung-muenchen',
   '/fussbodenheizung',
+  '/fussbodenheizung-muenchen',
   '/waermepumpe-muenchen',
-  '/badsanierung',
+  '/badsanierung-muenchen',
+  '/sanitaer-notdienst-24',
+  '/heizung-notdienst-24',
+  // Förderung
   '/foerderung',
-  '/sanitaer-notdienst-24h',
-  '/heizung-notdienst-24h',
+  '/foerderantrag',
+  '/foerderantrag-heizung',
+  '/foerderrechner',
+  // Utility-Seiten
   '/ueber-uns',
   '/termin',
   '/ratgeber',
   '/kontakt',
   '/faq',
+  // Legal
   '/impressum',
   '/agb',
   '/datenschutz',
   '/cookie-richtlinie',
   '/barrierefreiheit',
-  '/foerderantrag-heizung',
 ]);
 
-// Stadtteil-Prefix für dynamische Routen
-const STADTTEIL_PREFIX = '/stadtteil/';
+// Alle gültigen Stadtteile (synchronisiert mit sitemap.xml)
 const VALID_STADTTEILE = [
-  'schwabing', 'bogenhausen', 'sendling', 'pasing', 'maxvorstadt',
-  'haidhausen', 'neuhausen', 'trudering', 'laim', 'giesing',
-  'moosach', 'milbertshofen', 'nymphenburg', 'au', 'untergiesing',
-  'thalkirchen', 'berg-am-laim', 'ramersdorf'
+  // Premium Stadtteile
+  'schwabing', 'bogenhausen', 'maxvorstadt', 'haidhausen', 'nymphenburg', 'lehel', 'solln',
+  // Standard Stadtteile
+  'sendling', 'pasing', 'neuhausen', 'trudering', 'laim', 'giesing', 'moosach', 'milbertshofen',
+  'perlach', 'hadern', 'allach', 'aubing', 'feldmoching', 'thalkirchen', 'ramersdorf',
+  'berg-am-laim', 'schwanthalerhoehe', 'au', 'freimann',
+  // Regionen
+  'muenchen-nord', 'muenchen-ost', 'muenchen-sued', 'muenchen-west'
 ];
 
-function isValidRoute(path: string): boolean {
-  // Exakte Match
-  if (KNOWN_ROUTES.has(path)) return true;
+// Prefix für Stadtteil-Routen
+const STADTTEIL_PREFIX = '/stadtteil/';
+
+function isValidRoute(routePath: string): boolean {
+  // Exakte Match in bekannten Routen
+  if (KNOWN_ROUTES.has(routePath)) return true;
   
-  // Stadtteil-Routen
-  if (path.startsWith(STADTTEIL_PREFIX)) {
-    const stadtteil = path.slice(STADTTEIL_PREFIX.length);
+  // Stadtteil-Routen mit /stadtteil/ prefix
+  if (routePath.startsWith(STADTTEIL_PREFIX)) {
+    const stadtteil = routePath.slice(STADTTEIL_PREFIX.length);
     return VALID_STADTTEILE.includes(stadtteil);
+  }
+  
+  // Direkte Stadtteil-Routen (z.B. /schwabing)
+  const directPath = routePath.slice(1); // entferne führenden /
+  if (VALID_STADTTEILE.includes(directPath)) {
+    return true;
   }
   
   return false;
