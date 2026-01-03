@@ -1123,7 +1123,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
             </div>
             
             <div style="padding: 30px; background: #f9fafb;">
-              <h2 style="color: #1f2937;">Hallo ${name.trim()},</h2>
+              <h2 style="color: #1f2937; margin-top: 0;">Hallo ${name.trim()},</h2>
               
               <p style="color: #4b5563; line-height: 1.6;">
                 vielen Dank für Ihr Interesse an unserem <strong>Ratgeber Heizung & Sanitär</strong>!
