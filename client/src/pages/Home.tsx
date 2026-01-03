@@ -579,7 +579,7 @@ export default function Home() {
                   0152 12274043
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white" asChild>
+              <Button size="lg" className="bg-white text-primary border-white" asChild>
                 <Link href="/termin">
                   <Calendar className="w-4 h-4 mr-2" />
                   Termin buchen
