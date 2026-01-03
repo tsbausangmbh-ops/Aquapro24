@@ -1,6 +1,7 @@
 import express, { type Express, type Request } from "express";
 import fs from "fs";
 import path from "path";
+import { generateStaticHTML, isBot, seoPages } from "./seoContent";
 
 // Bekannte Routen der SPA (aus sitemap.xml)
 const KNOWN_ROUTES = new Set([
@@ -70,6 +71,7 @@ export function serveStatic(app: Express) {
   // SPA Fallback mit 404-Status für unbekannte Routen
   app.use("*", (req: Request, res) => {
     const requestPath = req.path;
+    const userAgent = req.headers['user-agent'] || '';
     
     // API-Routen, die nicht gefunden wurden -> 404 JSON
     if (requestPath.startsWith('/api')) {
@@ -83,7 +85,21 @@ export function serveStatic(app: Express) {
     
     // Prüfe ob die Route bekannt ist
     if (isValidRoute(requestPath)) {
-      // Bekannte Route -> 200 OK
+      // Check if request is from a search engine bot
+      if (isBot(userAgent)) {
+        console.log(`[SEO] Bot erkannt: ${userAgent.substring(0, 50)}... für ${requestPath}`);
+        
+        // Read index.html and inject SEO content
+        const indexPath = path.resolve(distPath, "index.html");
+        const indexHtml = fs.readFileSync(indexPath, 'utf-8');
+        const seoHtml = generateStaticHTML(requestPath, indexHtml);
+        
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.setHeader('X-SEO-Rendered', 'true');
+        return res.send(seoHtml);
+      }
+      
+      // Bekannte Route für normale User -> 200 OK
       res.sendFile(path.resolve(distPath, "index.html"));
     } else {
       // Unbekannte Route -> 404 Status + SPA (zeigt 404-Seite)
