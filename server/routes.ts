@@ -1147,14 +1147,9 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
               </div>
               
               <p style="color: #4b5563; line-height: 1.6;">
-                Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an!
+                Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an: 
+                <strong>0152 12274043</strong>
               </p>
-              
-              <div style="text-align: center; margin: 30px 0;">
-                <a href="tel:+4915212274043" style="display: inline-block; background: #f97316; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">
-                  Jetzt anrufen: 0152 12274043
-                </a>
-              </div>
               
               <p style="color: #4b5563; line-height: 1.6;">
                 Mit freundlichen Grüßen,<br>
