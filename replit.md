@@ -202,6 +202,16 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
   - `FAQPage.tsx`: Pricing overview (4 categories) and frequently asked questions with accordion
   - `RatgeberPage.tsx`: Educational guides with detailed articles (Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpe)
 
+### Appointment Booking Configuration (January 2026)
+- **Business Hours**: Monday-Friday 08:00-17:00 (closed Saturday/Sunday)
+- **Slot Duration**: 90 minutes per appointment
+- **Time Slots**: 08:00, 09:30, 11:00, 12:30, 14:00, 15:30 (6 slots per day)
+- **Buffer**: 90 minutes between appointments
+- **Simulated Occupancy**: 60% of slots shown as busy (deterministic weekly rotation)
+- **Max Bookings**: 2 appointments per day
+- **Google Calendar Integration**: Events created in primary calendar with 90-minute duration
+- **Email Notifications**: Customer confirmation + internal notification via IONOS SMTP
+
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)
 2. **Type Safety**: Shared schemas between frontend and backend using Drizzle-Zod

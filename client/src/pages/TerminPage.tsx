@@ -944,7 +944,9 @@ export default function TerminPage() {
                                   }}
                                   disabled={(date) =>
                                     isBefore(date, startOfToday()) ||
-                                    date > addDays(new Date(), 60)
+                                    date > addDays(new Date(), 60) ||
+                                    date.getDay() === 0 || // Sunday closed
+                                    date.getDay() === 6    // Saturday closed
                                   }
                                   locale={de}
                                   className="rounded-md border mx-auto"

@@ -84,7 +84,7 @@ export async function createCalendarEvent(data: CalendarEventData): Promise<stri
     console.log(`Creating event in primary calendar for services: ${serviceLabel}`);
     
     const startTime = getEventStartTime(data.preferredDate, data.preferredTime, data.urgency, data.isEmergency);
-    const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
+    const endTime = new Date(startTime.getTime() + 90 * 60 * 1000); // 90 minutes duration
     
     const formatDateGerman = (dateStr: string): string => {
       const date = new Date(dateStr);
@@ -258,36 +258,21 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
   const dateObj = new Date(date);
   const dayOfWeek = dateObj.getDay();
   
-  // Sunday (0) - no appointments
-  if (dayOfWeek === 0) {
+  // Saturday (6) and Sunday (0) - closed, no appointments
+  if (dayOfWeek === 0 || dayOfWeek === 6) {
     return [];
   }
   
-  let timeSlots: TimeSlot[];
-  
-  // Saturday (6): 10:00 - 15:00 (last appointment at 14:00)
-  if (dayOfWeek === 6) {
-    timeSlots = [
-      { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
-      { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
-      { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
-      { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
-      { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
-    ];
-  } else {
-    // Monday-Friday: 08:00 - 17:00 (last appointment at 16:00)
-    timeSlots = [
-      { time: "08:00", available: true, label: "08:00 - 09:00 Uhr" },
-      { time: "09:00", available: true, label: "09:00 - 10:00 Uhr" },
-      { time: "10:00", available: true, label: "10:00 - 11:00 Uhr" },
-      { time: "11:00", available: true, label: "11:00 - 12:00 Uhr" },
-      { time: "12:00", available: true, label: "12:00 - 13:00 Uhr" },
-      { time: "13:00", available: true, label: "13:00 - 14:00 Uhr" },
-      { time: "14:00", available: true, label: "14:00 - 15:00 Uhr" },
-      { time: "15:00", available: true, label: "15:00 - 16:00 Uhr" },
-      { time: "16:00", available: true, label: "16:00 - 17:00 Uhr" },
-    ];
-  }
+  // Monday-Friday: 08:00 - 17:00, 90-minute slots
+  // Slots: 08:00, 09:30, 11:00, 12:30, 14:00, 15:30 (last appointment ends at 17:00)
+  let timeSlots: TimeSlot[] = [
+    { time: "08:00", available: true, label: "08:00 - 09:30 Uhr" },
+    { time: "09:30", available: true, label: "09:30 - 11:00 Uhr" },
+    { time: "11:00", available: true, label: "11:00 - 12:30 Uhr" },
+    { time: "12:30", available: true, label: "12:30 - 14:00 Uhr" },
+    { time: "14:00", available: true, label: "14:00 - 15:30 Uhr" },
+    { time: "15:30", available: true, label: "15:30 - 17:00 Uhr" },
+  ];
   
   // Single calendar for all services - if a slot is taken, it's blocked for all Gewerke
   const calendarId = 'primary';
@@ -343,11 +328,10 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
         const bufferEnd = new Date(eventEnd.getTime() + BUFFER_MINUTES * 60 * 1000);
         
         for (const slot of timeSlots) {
-          const [slotHour] = slot.time.split(':').map(Number);
+          const [slotHour, slotMinute] = slot.time.split(':').map(Number);
           const slotStart = new Date(date);
-          slotStart.setHours(slotHour, 0, 0, 0);
-          const slotEnd = new Date(date);
-          slotEnd.setHours(slotHour + 1, 0, 0, 0);
+          slotStart.setHours(slotHour, slotMinute || 0, 0, 0);
+          const slotEnd = new Date(slotStart.getTime() + 90 * 60 * 1000); // 90 minute slots
           
           // Check if slot overlaps with event + buffer zone (90 min before and after)
           if (slotStart < bufferEnd && slotEnd > bufferStart) {
@@ -362,17 +346,33 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
     const today = new Date().toISOString().split('T')[0];
     if (date === today) {
       for (const slot of timeSlots) {
-        const [slotHour] = slot.time.split(':').map(Number);
-        if (slotHour <= now.getHours()) {
+        const [slotHour, slotMinute] = slot.time.split(':').map(Number);
+        const slotTime = slotHour * 60 + (slotMinute || 0);
+        const nowTime = now.getHours() * 60 + now.getMinutes();
+        if (slotTime <= nowTime) {
           slot.available = false;
         }
       }
     }
 
+    // Apply 60% simulated busy pattern - ensures consistent 60% occupancy display
+    const simulatedBusySlots = getSimulatedBusySlots(date, timeSlots.length);
+    timeSlots.forEach((slot, index) => {
+      if (slot.available && simulatedBusySlots.has(index)) {
+        slot.available = false;
+      }
+    });
+
     return timeSlots;
   } catch (error) {
     console.error('Failed to fetch calendar events:', error);
-    // Return all slots as available if calendar query fails
+    // Apply 60% busy simulation even when calendar fails
+    const simulatedBusySlots = getSimulatedBusySlots(date, timeSlots.length);
+    timeSlots.forEach((slot, index) => {
+      if (simulatedBusySlots.has(index)) {
+        slot.available = false;
+      }
+    });
     return timeSlots;
   }
 }
