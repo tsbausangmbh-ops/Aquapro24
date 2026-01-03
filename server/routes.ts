@@ -1080,7 +1080,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
         });
       }
 
-      console.log(`Ratgeber download: ${name}, ${email}, ${phone || 'keine Telefonnummer'}`);
+      console.log(`Ratgeber anfrage: ${name}, ${email}, ${phone || 'keine Telefonnummer'}`);
 
       try {
         await storage.createLead({
@@ -1089,7 +1089,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
           phone: phone?.trim() || "",
           address: "",
           service: "Ratgeber Download",
-          message: "Ratgeber PDF heruntergeladen",
+          message: "Ratgeber PDF per E-Mail angefordert",
           preferredDate: "",
           preferredTime: "",
           urgency: "normal",
@@ -1101,14 +1101,118 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 
       const pdfContent = generateRatgeberPDF();
       
-      res.setHeader("Content-Type", "application/pdf");
-      res.setHeader("Content-Disposition", "attachment; filename=AquaPro24_Ratgeber_Sanitaer_Heizung.pdf");
-      res.send(pdfContent);
+      await emailTransporter.sendMail({
+        from: `"AquaPro 24 München" <${process.env.SMTP_USER}>`,
+        to: email.trim(),
+        subject: "Ihr kostenloser Ratgeber: Heizung & Sanitär",
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <div style="background: linear-gradient(135deg, #f97316, #ea580c); padding: 30px; text-align: center;">
+              <h1 style="color: white; margin: 0;">AquaPro 24</h1>
+              <p style="color: white; margin: 10px 0 0 0;">Ihr Partnernetzwerk in München</p>
+            </div>
+            
+            <div style="padding: 30px; background: #f9fafb;">
+              <h2 style="color: #1f2937;">Hallo ${name.trim()},</h2>
+              
+              <p style="color: #4b5563; line-height: 1.6;">
+                vielen Dank für Ihr Interesse an unserem <strong>Ratgeber Heizung & Sanitär</strong>!
+              </p>
+              
+              <p style="color: #4b5563; line-height: 1.6;">
+                Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 Kapiteln zu den wichtigsten 
+                Themen rund um Heizung und Sanitär – von Notfall-Soforthilfe bis hin zu Kostenfaktoren.
+              </p>
+              
+              <div style="background: white; border-left: 4px solid #f97316; padding: 20px; margin: 20px 0;">
+                <strong style="color: #1f2937;">Inhalt des Ratgebers:</strong>
+                <ul style="color: #4b5563; margin: 10px 0; padding-left: 20px;">
+                  <li>Schnellhilfe im Notfall</li>
+                  <li>Heizungsprobleme erkennen & lösen</li>
+                  <li>Warmwasser & Armaturen</li>
+                  <li>Abfluss & Leckagen</li>
+                  <li>Badsanierung planen</li>
+                  <li>Kostenfaktoren verstehen</li>
+                </ul>
+              </div>
+              
+              <p style="color: #4b5563; line-height: 1.6;">
+                Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an!
+              </p>
+              
+              <div style="text-align: center; margin: 30px 0;">
+                <a href="tel:+4915212274043" style="display: inline-block; background: #f97316; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">
+                  Jetzt anrufen: 0152 12274043
+                </a>
+              </div>
+              
+              <p style="color: #4b5563; line-height: 1.6;">
+                Mit freundlichen Grüßen,<br>
+                <strong>Ihr AquaPro 24 Team</strong>
+              </p>
+            </div>
+            
+            <div style="background: #1f2937; padding: 20px; text-align: center;">
+              <p style="color: #9ca3af; margin: 0; font-size: 14px;">
+                AquaPro 24 | Hardenbergstr. 4 | 80992 München<br>
+                Tel: 0152 12274043 | info@aquapro24.de | aquapro24.de
+              </p>
+            </div>
+          </div>
+        `,
+        attachments: [
+          {
+            filename: "AquaPro24_Ratgeber_Heizung_Sanitaer.pdf",
+            content: pdfContent
+          }
+        ]
+      });
+
+      await emailTransporter.sendMail({
+        from: `"AquaPro 24 Website" <${process.env.SMTP_USER}>`,
+        to: process.env.SMTP_USER,
+        subject: `Neuer Ratgeber-Download: ${name.trim()}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px;">
+            <h2 style="color: #f97316;">Neuer Ratgeber-Download</h2>
+            
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">Name:</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${name.trim()}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">E-Mail:</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${email.trim()}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">Telefon:</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${phone?.trim() || 'Nicht angegeben'}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">Datum:</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${new Date().toLocaleString('de-DE')}</td>
+              </tr>
+            </table>
+            
+            <p style="color: #6b7280; margin-top: 20px;">
+              Der Ratgeber wurde automatisch an die angegebene E-Mail-Adresse gesendet.
+            </p>
+          </div>
+        `
+      });
+
+      console.log(`Ratgeber sent to ${email.trim()} and notification sent to company`);
+      
+      res.json({ 
+        success: true, 
+        message: "Ratgeber wurde per E-Mail versendet" 
+      });
     } catch (error) {
-      console.error("Error generating ratgeber PDF:", error);
+      console.error("Error sending ratgeber email:", error);
       res.status(500).json({ 
         success: false, 
-        error: "PDF-Generierung fehlgeschlagen" 
+        error: "E-Mail-Versand fehlgeschlagen. Bitte versuchen Sie es später erneut." 
       });
     }
   });

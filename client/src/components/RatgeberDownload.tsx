@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Download, 
+  Send, 
   FileText, 
   CheckCircle2, 
   BookOpen,
@@ -33,12 +33,13 @@ export default function RatgeberDownload() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [isDownloading, setIsDownloading] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
   const { toast } = useToast();
 
   const isFormValid = name.trim() !== "" && email.trim() !== "" && email.includes("@") && privacyAccepted;
 
-  const handleDownload = async () => {
+  const handleSendEmail = async () => {
     if (!isFormValid) {
       toast({
         title: "Bitte alle Felder ausfüllen",
@@ -48,7 +49,7 @@ export default function RatgeberDownload() {
       return;
     }
 
-    setIsDownloading(true);
+    setIsSending(true);
     
     try {
       const response = await fetch("/api/ratgeber-download", {
@@ -62,32 +63,25 @@ export default function RatgeberDownload() {
         })
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error("Download fehlgeschlagen");
+        throw new Error(data.error || "E-Mail-Versand fehlgeschlagen");
       }
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "AquaPro24_Ratgeber_Sanitaer_Heizung.pdf";
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-
+      setEmailSent(true);
       toast({
-        title: "Download gestartet",
-        description: "Ihr Ratgeber wird heruntergeladen. Viel Erfolg beim Lesen!"
+        title: "E-Mail versendet!",
+        description: `Der Ratgeber wurde an ${email.trim()} gesendet. Prüfen Sie Ihren Posteingang.`
       });
     } catch (error) {
       toast({
-        title: "Fehler beim Download",
-        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie uns.",
+        title: "Fehler beim Versand",
+        description: error instanceof Error ? error.message : "Bitte versuchen Sie es später erneut.",
         variant: "destructive"
       });
     } finally {
-      setIsDownloading(false);
+      setIsSending(false);
     }
   };
 
@@ -209,30 +203,44 @@ export default function RatgeberDownload() {
                   </label>
                 </div>
 
-                <Button 
-                  className="w-full gap-2"
-                  onClick={handleDownload}
-                  disabled={!isFormValid || isDownloading}
-                  data-testid="button-download-ratgeber"
-                >
-                  {isDownloading ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Download läuft...
-                    </>
-                  ) : (
-                    <>
-                      <Download className="w-4 h-4" />
-                      Ratgeber kostenlos herunterladen
-                    </>
-                  )}
-                </Button>
-
-                {isFormValid && (
-                  <div className="flex items-center gap-2 text-xs text-green-600 dark:text-green-400">
-                    <CheckCircle2 className="w-3 h-3" />
-                    Alle Felder ausgefüllt - Download bereit
+                {emailSent ? (
+                  <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900 rounded-lg p-4 text-center">
+                    <CheckCircle2 className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                    <p className="font-semibold text-green-800 dark:text-green-300">
+                      Ratgeber versendet!
+                    </p>
+                    <p className="text-sm text-green-700 dark:text-green-400 mt-1">
+                      Prüfen Sie Ihren Posteingang ({email})
+                    </p>
                   </div>
+                ) : (
+                  <>
+                    <Button 
+                      className="w-full gap-2"
+                      onClick={handleSendEmail}
+                      disabled={!isFormValid || isSending}
+                      data-testid="button-download-ratgeber"
+                    >
+                      {isSending ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          Wird gesendet...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          Ratgeber per E-Mail erhalten
+                        </>
+                      )}
+                    </Button>
+
+                    {isFormValid && (
+                      <div className="flex items-center gap-2 text-xs text-green-600 dark:text-green-400">
+                        <CheckCircle2 className="w-3 h-3" />
+                        Alle Felder ausgefüllt - E-Mail bereit
+                      </div>
+                    )}
+                  </>
                 )}
 
                 <p className="text-xs text-muted-foreground text-center">
