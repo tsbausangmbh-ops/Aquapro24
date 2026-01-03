@@ -1180,7 +1180,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 
       await emailTransporter.sendMail({
         from: `"AquaPro 24 Website" <${process.env.SMTP_USER}>`,
-        to: process.env.SMTP_USER,
+        to: "info@aquapro24.de",
         subject: `Neuer Ratgeber-Download: ${name.trim()}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px;">
