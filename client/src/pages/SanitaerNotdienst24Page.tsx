@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import FAQ from "@/components/FAQ";
@@ -271,7 +270,6 @@ export default function SanitaerNotdienst24Page() {
       </main>
       
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

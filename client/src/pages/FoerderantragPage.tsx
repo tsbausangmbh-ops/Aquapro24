@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
@@ -491,7 +490,6 @@ export default function FoerderantragPage() {
         </section>
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

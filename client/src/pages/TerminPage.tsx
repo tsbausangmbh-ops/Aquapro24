@@ -7,7 +7,6 @@ import { format, addDays, isBefore, startOfToday } from "date-fns";
 import { de } from "date-fns/locale";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -1255,7 +1254,6 @@ export default function TerminPage() {
         </section>
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
@@ -591,7 +590,6 @@ export default function Home() {
       </main>
       
       <Footer />
-      <AIChatWidget />
       <CookieBanner />
     </div>
   );

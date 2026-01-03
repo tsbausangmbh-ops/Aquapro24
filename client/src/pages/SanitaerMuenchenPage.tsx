@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
@@ -267,7 +266,6 @@ export default function SanitaerMuenchenPage() {
       </main>
       
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

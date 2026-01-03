@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import { Card, CardContent } from "@/components/ui/card";
@@ -579,7 +578,6 @@ export default function UeberUnsPage() {
         </section>
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

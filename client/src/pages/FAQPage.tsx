@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import { Badge } from "@/components/ui/badge";
@@ -286,7 +285,6 @@ export default function FAQPage() {
         </section>
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

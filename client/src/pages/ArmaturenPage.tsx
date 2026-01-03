@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import SimpleFAQ from "@/components/SimpleFAQ";
 import ServiceAreas from "@/components/ServiceAreas";
@@ -422,7 +421,6 @@ export default function ArmaturenPage() {
       </main>
       
       <Footer />
-      <AIChatWidget serviceCategory="sanitaer" />
     </div>
   );
 }

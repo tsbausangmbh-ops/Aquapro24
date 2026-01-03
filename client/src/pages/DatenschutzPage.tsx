@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Shield } from "lucide-react";
@@ -748,7 +747,6 @@ export default function DatenschutzPage() {
         </div>
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

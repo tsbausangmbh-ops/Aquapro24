@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { FileText } from "lucide-react";
@@ -267,7 +266,6 @@ export default function AGBPage() {
         </div>
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }
