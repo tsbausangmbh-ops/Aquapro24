@@ -89,23 +89,31 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professionelle <strong>Sanitärinstallationen</strong> in München – von der Rohrreinigung bis zur kompletten Wasserinstallation. Schnelle Hilfe bei Notfällen, faire Festpreise.</p>
         
-        <h2>Sanitär-Leistungen München</h2>
-        <ul style="line-height:2">
-          <li><strong>Rohrreinigung</strong> – ab 81€ netto, Abfluss verstopft Soforthilfe</li>
-          <li><strong>Armaturen-Montage</strong> – Wasserhahn wechseln, Mischbatterie einbauen</li>
-          <li><strong>Wasserschaden</strong> – Rohrbruch Notdienst, Leckortung, Trocknung</li>
-          <li><strong>WC-Installation</strong> – Toilette montieren, Spülkasten reparieren</li>
-          <li><strong>Wasserleitung</strong> – Neuverlegung, Altbausanierung, Druckprüfung</li>
-        </ul>
+        <h2>Sanitär-Leistungen München: Komplett-Service</h2>
         
-        <h2>Unsere Preise (netto)</h2>
+        <h3>Rohrreinigung München: Abfluss verstopft Soforthilfe ab 81€</h3>
+        <p>Professionelle Rohrreinigung mit Spirale oder Hochdruck. Küche, Bad, WC – schnelle Hilfe bei verstopften Abflüssen.</p>
+        
+        <h3>Wasserhahn wechseln München: Armaturen Montage & Reparatur</h3>
+        <p>Wasserhahn tropft? Mischbatterie defekt? Wir montieren alle Armaturen-Marken: Grohe, Hansgrohe, HANSA.</p>
+        
+        <h3>Rohrbruch München: Notdienst & Leckortung</h3>
+        <p>Wasserschaden durch Rohrbruch? Leckortung ohne Aufbruch, schnelle Reparatur, Trocknungsservice.</p>
+        
+        <h3>WC Installation München: Toilette montieren & reparieren</h3>
+        <p>Toilette läuft? Spülkasten defekt? Neue WC-Installation? Wir helfen schnell und zuverlässig.</p>
+        
+        <h2>Sanitär Preise München: Festpreisgarantie</h2>
         <ul>
-          <li>Rohrreinigung: ab 81€</li>
-          <li>Sanitär-Reparaturen: ab 92€</li>
+          <li>Rohrreinigung: ab 81€ netto</li>
+          <li>Sanitär-Reparaturen: ab 92€ netto</li>
           <li>Anfahrt München: 39€</li>
         </ul>
         
-        <h2>24/7 Sanitär Notdienst München</h2>
+        <h3>Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
+        <p>Wir geben 2 Jahre Garantie auf alle Sanitär-Arbeiten. Faire Festpreise ohne versteckte Kosten.</p>
+        
+        <h2>24/7 Sanitär Notdienst München: Soforthilfe</h2>
         <p>Rohrbruch? Wasserschaden? Wir sind rund um die Uhr für Sie da: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
         <p><a href="/termin">Online Termin buchen</a> | <a href="/notdienst-muenchen">Notdienst Info</a></p>
       </section>
@@ -120,20 +128,31 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professioneller <strong>Heizungsservice</strong> in München – Wartung, Reparatur und Modernisierung vom Fachmann. Schnelle Hilfe bei Heizungsausfall.</p>
         
-        <h2>Heizungs-Leistungen München</h2>
-        <ul style="line-height:2">
-          <li><strong>Heizungsreparatur</strong> – ab 154€ netto, alle Hersteller</li>
-          <li><strong>Heizungswartung</strong> – Jahresservice, Brennerwartung</li>
-          <li><strong>Heizungsaustausch</strong> – mit bis zu 70% BAFA-Förderung</li>
-          <li><strong>Gasheizung</strong> – Installation, Wartung, Reparatur</li>
-          <li><strong>Ölheizung</strong> – Service, Tankreinigung, Austausch</li>
-          <li><strong>Fußbodenheizung</strong> – <a href="/fussbodenheizung">Installation & Reparatur</a></li>
+        <h2>Heizungs-Leistungen München: Komplett-Service</h2>
+        
+        <h3>Heizungsreparatur München: Alle Hersteller ab 154€</h3>
+        <p>Schnelle Reparatur aller Heizungsmarken: Viessmann, Buderus, Vaillant, Wolf, Junkers. Festpreis ohne Überraschungen.</p>
+        
+        <h3>Heizungswartung München: Jahresservice vom Fachmann</h3>
+        <p>Regelmäßige Wartung spart Energie und verlängert die Lebensdauer. Brennerwartung, Abgasmessung, Sicherheitscheck.</p>
+        
+        <h3>Gasheizung München: Installation, Wartung & Reparatur</h3>
+        <p>Gasheizung-Service: Neuinstallation, Brennertausch, Therme-Reparatur. Gas-Notdienst 24/7.</p>
+        
+        <h3>Heizungsaustausch München: Mit bis zu 70% BAFA-Förderung</h3>
+        <p>Alte Heizung austauschen? Wir beraten zu Wärmepumpe, Gasbrennwert und Förderung. <a href="/foerderung">Mehr zur Förderung</a></p>
+        
+        <h3>Fußbodenheizung München: Installation & Reparatur</h3>
+        <p>Fußbodenheizung verlegen, spülen, entlüften, reparieren. <a href="/fussbodenheizung">Alle Infos</a></p>
+        
+        <h2>Heizung Preise München: Transparente Festpreise</h2>
+        <ul>
+          <li>Heizungsreparatur: ab 154€ netto</li>
+          <li>Heizungswartung: ab 119€ netto</li>
+          <li>Anfahrt München: 39€</li>
         </ul>
         
-        <h2>Heizungstausch mit Förderung</h2>
-        <p>Staatliche Förderung für Ihren Heizungstausch: <a href="/foerderung">Bis zu 70% BAFA-Förderung</a> für Wärmepumpen und effiziente Heizsysteme.</p>
-        
-        <h2>24/7 Heizung Notdienst München</h2>
+        <h2>24/7 Heizung Notdienst München: Soforthilfe</h2>
         <p>Heizung ausgefallen? Wir helfen sofort: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
       </section>
     `
@@ -147,16 +166,21 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Komplette <strong>Badsanierung in München</strong> – von der Planung bis zur Fertigstellung aus einer Hand. Barrierefreie Bäder mit KfW-Förderung.</p>
         
-        <h2>Badsanierung Leistungen</h2>
-        <ul style="line-height:2">
-          <li><strong>Komplettumbau</strong> – Fliesen, Sanitär, Elektrik, alles aus einer Hand</li>
-          <li><strong>Barrierefreies Bad</strong> – bodengleiche Dusche, Haltegriffe, mit KfW-Förderung</li>
-          <li><strong>Badmodernisierung</strong> – Teilsanierung, neue Armaturen, Waschtisch</li>
-          <li><strong>Walk-in Dusche</strong> – rahmenlos, bodengleich, modern</li>
-          <li><strong>Wellness-Bad</strong> – Freistehende Wannen, Regenduschen, Design</li>
-        </ul>
+        <h2>Badsanierung Leistungen München: Komplettumbau & Teilsanierung</h2>
         
-        <h2>KfW-Förderung für barrierefreie Bäder</h2>
+        <h3>Walk-in Dusche München: Bodengleich & rahmenlos</h3>
+        <p>Moderne Walk-in Duschen – bodengleich, rahmenlos und pflegeleicht. Ideal für barrierefreies Wohnen.</p>
+        
+        <h3>Luxusbad München: Freistehende Wannen & Design</h3>
+        <p>Wellness-Bad mit freistehenden Wannen, Regenduschen und hochwertigen Materialien.</p>
+        
+        <h3>Barrierefreies Bad München: KfW-gefördert</h3>
+        <p>Altersgerechter Umbau mit bodengleicher Dusche, Haltegriffen und rutschfesten Fliesen. Bis zu 6.250€ KfW-Zuschuss.</p>
+        
+        <h3>Bad Förderrechner München: Zuschuss berechnen</h3>
+        <p>Berechnen Sie Ihre Fördermöglichkeiten: <a href="/foerderrechner">Zum Förderrechner</a></p>
+        
+        <h2>KfW-Förderung München: Bis zu 6.250€ Zuschuss</h2>
         <p>Nutzen Sie staatliche Zuschüsse für Ihren Badumbau. <a href="/foerderung">Mehr zur Förderung</a></p>
         
         <h2>Kostenlose Beratung</h2>
@@ -173,23 +197,31 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Wärmepumpen-Installation</strong> in München – mit staatlicher Förderung bis zu 70%. Wir beraten Sie und helfen beim Förderantrag.</p>
         
-        <h2>Wärmepumpen-Typen</h2>
-        <ul style="line-height:2">
-          <li><strong>Luft-Wasser-Wärmepumpe</strong> – Einfache Installation, geringe Kosten</li>
-          <li><strong>Erdwärmepumpe</strong> – Höchste Effizienz, Erdsondenbohrung</li>
-          <li><strong>Hybridheizung</strong> – Wärmepumpe + Gas-Brennwert kombiniert</li>
-        </ul>
+        <h2>Wärmepumpen-Typen München: Welche passt zu Ihnen?</h2>
         
-        <h2>BAFA Förderung 2025</h2>
-        <ul>
-          <li>Grundförderung: 30%</li>
-          <li>Klimageschwindigkeitsbonus: +20%</li>
-          <li>Einkommensbonus: +30%</li>
-          <li><strong>Maximal: bis zu 70% Förderung</strong></li>
-        </ul>
+        <h3>Luft-Wasser-Wärmepumpe München: Einfache Installation</h3>
+        <p>Die beliebteste Wahl: Nutzt Außenluft als Wärmequelle. Geringe Installationskosten, keine Bohrungen nötig. Ideal für Bestandsgebäude.</p>
+        
+        <h3>Erdwärmepumpe München: Höchste Effizienz</h3>
+        <p>Erdsondenbohrung oder Flächenkollektor. Höchste Jahresarbeitszahl (JAZ), unabhängig von Außentemperatur. Premium-Lösung für Neubauten.</p>
+        
+        <h3>Hybrid-Wärmepumpe München: Wärmepumpe + Gas kombiniert</h3>
+        <p>Beste Lösung für Altbauten: Wärmepumpe deckt Grundlast, Gas springt bei Spitzenlast ein. Schrittweise Dekarbonisierung.</p>
+        
+        <h2>BAFA Förderung 2025 München: Bis zu 70% Zuschuss</h2>
+        
+        <h3>Klimageschwindigkeitsbonus Heizung München: 20% Extra-Förderung</h3>
+        <p>Bei Austausch einer funktionsfähigen fossilen Heizung vor 2028 erhalten Sie zusätzlich 20% Klimabonus.</p>
+        
+        <h3>Einkommensbonus Heizung München: 30% für Haushalte</h3>
+        <p>Haushalte mit bis zu 40.000€ zu versteuerndem Einkommen erhalten 30% Einkommensbonus zusätzlich.</p>
+        
+        <h3>KfW Heizungskredit München: Zinsgünstig finanzieren</h3>
+        <p>Ergänzend zur BAFA-Förderung: KfW-Kredit 358/359 mit günstigen Konditionen für Heizungstausch.</p>
+        
         <p><a href="/foerderung">Alle Details zur Förderung</a> | <a href="/foerderantrag-heizung">Kostenloser Förderantrag-Service</a></p>
         
-        <h2>Jetzt beraten lassen</h2>
+        <h2>Wärmepumpe München: Jetzt beraten lassen</h2>
         <p>Kostenlose Erstberatung: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
       </section>
     `
@@ -205,27 +237,36 @@ export const seoPages: Record<string, PageSEO> = {
         
         <p style="font-size:20px">Schnelle Hilfe bei <strong>Sanitär- und Heizungs-Notfällen</strong> in München. Anfahrt in 45-60 Minuten.</p>
         
-        <h2>Wann ist ein Notfall?</h2>
-        <ul style="line-height:2">
-          <li><strong>Rohrbruch</strong> – Wasser tritt aus, sofort absperren und anrufen</li>
-          <li><strong>Wasserschaden</strong> – Überflutung, Wassereintritt</li>
-          <li><strong>Heizungsausfall</strong> – Keine Wärme, kein Warmwasser</li>
-          <li><strong>Gasgeruch</strong> – Fenster öffnen, Haus verlassen, 112 rufen</li>
-          <li><strong>Verstopfung</strong> – WC/Abfluss komplett verstopft</li>
-        </ul>
+        <h2>Sanitär Notdienst München: Wann ist ein echter Notfall?</h2>
         
-        <h2>Notdienst-Preise (netto)</h2>
+        <h3>Rohrbruch München: Wasser sofort absperren</h3>
+        <p>Wasser tritt aus? Haupthahn zudrehen (meist im Keller), dann sofort anrufen.</p>
+        
+        <h3>Wasserschaden München: Erste Hilfe Maßnahmen</h3>
+        <p>Strom abschalten, Möbel hochstellen, Fotos für Versicherung machen.</p>
+        
+        <h3>Heizungsausfall München: Keine Panik</h3>
+        <p>Heizung prüfen: Thermostat, Sicherungen, Brenner-Reset. Wir helfen schnell.</p>
+        
+        <h3>Gasgeruch München: Sofort handeln</h3>
+        <p>Fenster öffnen, keine Schalter betätigen, Haus verlassen, 112 rufen!</p>
+        
+        <h2>Notdienst Preise München: Transparent & fair</h2>
         <ul>
           <li>Anfahrt Notdienst: 69€</li>
           <li>Rohrreinigung Notfall: ab 109€</li>
           <li>Heizungsreparatur Notfall: ab 189€</li>
         </ul>
         
-        <h2>Sofort-Hilfe Tipps</h2>
+        <h3>Notdienst Garantie München: Keine versteckten Kosten</h3>
+        <p>Festpreisgarantie auch im Notdienst. Keine Überraschungen auf der Rechnung.</p>
+        
+        <h2>Rohrbruch Soforthilfe München: 5 Schritte</h2>
         <ol>
           <li>Hauptwasserhahn zudrehen (meist im Keller)</li>
           <li>Strom abschalten bei Wasserschaden</li>
           <li>Fotos für Versicherung machen</li>
+          <li>Wasser aufwischen, Möbel schützen</li>
           <li>Uns anrufen: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></li>
         </ol>
       </section>
@@ -240,11 +281,17 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Buchen Sie Ihren <strong>Wunschtermin</strong> für Sanitär, Heizung oder Badsanierung in München – einfach und bequem online.</p>
         
-        <h2>Terminbuchung</h2>
+        <h2>Online Terminbuchung München: Schnell & einfach</h2>
         <p>Unsere Öffnungszeiten für Termine: <strong>Montag bis Freitag, 8:00 - 17:00 Uhr</strong></p>
         <p>Termine dauern 90 Minuten für eine gründliche Beratung vor Ort.</p>
         
-        <h2>So funktioniert's</h2>
+        <h3>Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
+        <p>Jeder Termin mit Festpreisgarantie. Keine versteckten Kosten.</p>
+        
+        <h3>Klempner Bewertungen München: 4.9/5 Sterne</h3>
+        <p>Über 2.847 zufriedene Kunden vertrauen AquaPro24.</p>
+        
+        <h2>So funktioniert die Terminbuchung</h2>
         <ol style="line-height:2">
           <li>Wählen Sie Ihren Wunschtermin im Kalender</li>
           <li>Geben Sie Ihre Kontaktdaten ein</li>
@@ -252,8 +299,11 @@ export const seoPages: Record<string, PageSEO> = {
           <li>Fertig – Sie erhalten eine Bestätigung per E-Mail</li>
         </ol>
         
-        <h2>Oder rufen Sie uns an</h2>
-        <p>Telefonische Terminvereinbarung: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
+        <h3>Handwerker Termin München: Was Sie erwartet</h3>
+        <p>Unser Techniker kommt pünktlich, analysiert das Problem und erstellt einen Festpreis-Kostenvoranschlag.</p>
+        
+        <h2>Telefonische Terminvereinbarung</h2>
+        <p>Lieber telefonisch? Kein Problem: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
       </section>
     `
   },
@@ -793,16 +843,26 @@ stadtteile.forEach(st => {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Klempner in ${st.name}</strong> – Schneller Sanitär- und Heizungsservice für ${st.plz} München.</p>
-        <h2>Leistungen in ${st.name}</h2>
-        <ul style="line-height:2">
-          <li><a href="/sanitaer">Sanitär</a> – Rohrreinigung, Armaturen, Wasserschaden</li>
-          <li><a href="/heizung">Heizung</a> – Reparatur, Wartung, Austausch</li>
-          <li><a href="/bad">Badsanierung</a> – Komplettumbau</li>
-          <li><a href="/notdienst-muenchen">24/7 Notdienst</a> – Soforthilfe</li>
-        </ul>
-        <h2>Anfahrtszeit ${st.name}</h2>
-        <p>Wir sind in ${st.name} in der Regel innerhalb von <strong>30-45 Minuten</strong> bei Ihnen.</p>
-        <p>Jetzt anrufen: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
+        
+        <h2>Sanitär & Heizung ${st.name}: Unsere Leistungen</h2>
+        
+        <h3>Rohrreinigung ${st.name} München: Abfluss verstopft Soforthilfe</h3>
+        <p>Professionelle Rohrreinigung in ${st.name}. Küche, Bad, WC – schnelle Hilfe ab 81€.</p>
+        
+        <h3>Heizungsreparatur ${st.name} München: Alle Marken</h3>
+        <p>Heizungsservice in ${st.name}: Viessmann, Buderus, Vaillant, Wolf. Reparatur ab 154€.</p>
+        
+        <h3>Notdienst ${st.name} München: 24/7 Soforthilfe</h3>
+        <p>Rohrbruch oder Heizungsausfall in ${st.name}? Wir sind in 30-45 Minuten bei Ihnen.</p>
+        
+        <h2>Klempner ${st.name}: Unsere Garantie</h2>
+        
+        <h3>Handwerker Garantie ${st.name} München: Ihr Sicherheitsversprechen</h3>
+        <p>2 Jahre Garantie auf alle Arbeiten. Festpreise ohne versteckte Kosten. 4.9/5 Sterne Bewertung.</p>
+        
+        <h2>Anfahrtszeit ${st.name}: 30-45 Minuten</h2>
+        <p>Wir sind in ${st.name} (${st.plz}) schnell für Sie da.</p>
+        <p>Jetzt anrufen: <a href="tel:+4989444438872"><strong>089 444438872</strong></a> | <a href="/termin">Termin buchen</a></p>
       </section>
     `
   };
