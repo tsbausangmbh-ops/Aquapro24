@@ -15,7 +15,9 @@ declare module "http" {
 
 // Prerender.io Middleware für SEO-Optimierung
 // Dient vorgerenderte HTML-Seiten an Suchmaschinen-Crawler und AI-Bots
-if (process.env.PRERENDER_TOKEN) {
+// Nur in Produktion aktiv - localhost wird von prerender.io als "url-invalid" abgelehnt
+const isProduction = process.env.NODE_ENV === 'production';
+if (process.env.PRERENDER_TOKEN && isProduction) {
   app.use(
     prerender
       .set('prerenderToken', process.env.PRERENDER_TOKEN)
@@ -112,6 +114,8 @@ if (process.env.PRERENDER_TOKEN) {
       ])
   );
   console.log('[prerender] Prerender.io middleware aktiviert für SEO & AI-Crawler');
+} else if (!isProduction) {
+  console.log('[prerender] Development-Modus - Prerender.io nur in Produktion aktiv');
 } else {
   console.log('[prerender] PRERENDER_TOKEN nicht gesetzt - Prerender.io deaktiviert');
 }
