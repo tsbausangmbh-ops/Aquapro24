@@ -91,16 +91,16 @@ export const seoPages: Record<string, PageSEO> = {
         
         <h2>Sanitär-Leistungen München: Komplett-Service</h2>
         
-        <h3>Rohrreinigung München: Abfluss verstopft Soforthilfe ab 81€</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Rohrreinigung München</span>: Abfluss verstopft Soforthilfe ab 81€</h3>
         <p>Professionelle Rohrreinigung mit Spirale oder Hochdruck. Küche, Bad, WC – schnelle Hilfe bei verstopften Abflüssen.</p>
         
-        <h3>Wasserhahn wechseln München: Armaturen Montage & Reparatur</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Wasserhahn wechseln München</span>: Armaturen Montage & Reparatur</h3>
         <p>Wasserhahn tropft? Mischbatterie defekt? Wir montieren alle Armaturen-Marken: Grohe, Hansgrohe, HANSA.</p>
         
-        <h3>Rohrbruch München: Notdienst & Leckortung</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Rohrbruch München</span>: Notdienst & Leckortung</h3>
         <p>Wasserschaden durch Rohrbruch? Leckortung ohne Aufbruch, schnelle Reparatur, Trocknungsservice.</p>
         
-        <h3>WC Installation München: Toilette montieren & reparieren</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">WC Installation München</span>: Toilette montieren & reparieren</h3>
         <p>Toilette läuft? Spülkasten defekt? Neue WC-Installation? Wir helfen schnell und zuverlässig.</p>
         
         <h2>Sanitär Preise München: Festpreisgarantie</h2>
@@ -110,7 +110,7 @@ export const seoPages: Record<string, PageSEO> = {
           <li>Anfahrt München: 39€</li>
         </ul>
         
-        <h3>Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Sanitär Garantie München</span>: 2 Jahre auf alle Arbeiten</h3>
         <p>Wir geben 2 Jahre Garantie auf alle Sanitär-Arbeiten. Faire Festpreise ohne versteckte Kosten.</p>
         
         <h2>24/7 Sanitär Notdienst München: Soforthilfe</h2>
@@ -130,19 +130,19 @@ export const seoPages: Record<string, PageSEO> = {
         
         <h2>Heizungs-Leistungen München: Komplett-Service</h2>
         
-        <h3>Heizungsreparatur München: Alle Hersteller ab 154€</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Heizungsreparatur München</span>: Alle Hersteller ab 154€</h3>
         <p>Schnelle Reparatur aller Heizungsmarken: Viessmann, Buderus, Vaillant, Wolf, Junkers. Festpreis ohne Überraschungen.</p>
         
-        <h3>Heizungswartung München: Jahresservice vom Fachmann</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Heizungswartung München</span>: Jahresservice vom Fachmann</h3>
         <p>Regelmäßige Wartung spart Energie und verlängert die Lebensdauer. Brennerwartung, Abgasmessung, Sicherheitscheck.</p>
         
-        <h3>Gasheizung München: Installation, Wartung & Reparatur</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Gasheizung München</span>: Installation, Wartung & Reparatur</h3>
         <p>Gasheizung-Service: Neuinstallation, Brennertausch, Therme-Reparatur. Gas-Notdienst 24/7.</p>
         
-        <h3>Heizungsaustausch München: Mit bis zu 70% BAFA-Förderung</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Heizungsaustausch München</span>: Mit bis zu 70% BAFA-Förderung</h3>
         <p>Alte Heizung austauschen? Wir beraten zu Wärmepumpe, Gasbrennwert und Förderung. <a href="/foerderung">Mehr zur Förderung</a></p>
         
-        <h3>Fußbodenheizung München: Installation & Reparatur</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Fußbodenheizung München</span>: Installation & Reparatur</h3>
         <p>Fußbodenheizung verlegen, spülen, entlüften, reparieren. <a href="/fussbodenheizung">Alle Infos</a></p>
         
         <h2>Heizung Preise München: Transparente Festpreise</h2>
@@ -168,16 +168,16 @@ export const seoPages: Record<string, PageSEO> = {
         
         <h2>Badsanierung Leistungen München: Komplettumbau & Teilsanierung</h2>
         
-        <h3>Walk-in Dusche München: Bodengleich & rahmenlos</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Walk-in Dusche München</span>: Bodengleich & rahmenlos</h3>
         <p>Moderne Walk-in Duschen – bodengleich, rahmenlos und pflegeleicht. Ideal für barrierefreies Wohnen.</p>
         
-        <h3>Luxusbad München: Freistehende Wannen & Design</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Luxusbad München</span>: Freistehende Wannen & Design</h3>
         <p>Wellness-Bad mit freistehenden Wannen, Regenduschen und hochwertigen Materialien.</p>
         
-        <h3>Barrierefreies Bad München: KfW-gefördert</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Barrierefreies Bad München</span>: KfW-gefördert</h3>
         <p>Altersgerechter Umbau mit bodengleicher Dusche, Haltegriffen und rutschfesten Fliesen. Bis zu 6.250€ KfW-Zuschuss.</p>
         
-        <h3>Bad Förderrechner München: Zuschuss berechnen</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Bad Förderrechner München</span>: Zuschuss berechnen</h3>
         <p>Berechnen Sie Ihre Fördermöglichkeiten: <a href="/foerderrechner">Zum Förderrechner</a></p>
         
         <h2>KfW-Förderung München: Bis zu 6.250€ Zuschuss</h2>
@@ -199,24 +199,24 @@ export const seoPages: Record<string, PageSEO> = {
         
         <h2>Wärmepumpen-Typen München: Welche passt zu Ihnen?</h2>
         
-        <h3>Luft-Wasser-Wärmepumpe München: Einfache Installation</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Luft-Wasser-Wärmepumpe München</span>: Einfache Installation</h3>
         <p>Die beliebteste Wahl: Nutzt Außenluft als Wärmequelle. Geringe Installationskosten, keine Bohrungen nötig. Ideal für Bestandsgebäude.</p>
         
-        <h3>Erdwärmepumpe München: Höchste Effizienz</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Erdwärmepumpe München</span>: Höchste Effizienz</h3>
         <p>Erdsondenbohrung oder Flächenkollektor. Höchste Jahresarbeitszahl (JAZ), unabhängig von Außentemperatur. Premium-Lösung für Neubauten.</p>
         
-        <h3>Hybrid-Wärmepumpe München: Wärmepumpe + Gas kombiniert</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Hybrid-Wärmepumpe München</span>: Wärmepumpe + Gas kombiniert</h3>
         <p>Beste Lösung für Altbauten: Wärmepumpe deckt Grundlast, Gas springt bei Spitzenlast ein. Schrittweise Dekarbonisierung.</p>
         
         <h2>BAFA Förderung 2025 München: Bis zu 70% Zuschuss</h2>
         
-        <h3>Klimageschwindigkeitsbonus Heizung München: 20% Extra-Förderung</h3>
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px">Klimageschwindigkeitsbonus Heizung München</span>: 20% Extra-Förderung</h3>
         <p>Bei Austausch einer funktionsfähigen fossilen Heizung vor 2028 erhalten Sie zusätzlich 20% Klimabonus.</p>
         
-        <h3>Einkommensbonus Heizung München: 30% für Haushalte</h3>
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px">Einkommensbonus Heizung München</span>: 30% für Haushalte</h3>
         <p>Haushalte mit bis zu 40.000€ zu versteuerndem Einkommen erhalten 30% Einkommensbonus zusätzlich.</p>
         
-        <h3>KfW Heizungskredit München: Zinsgünstig finanzieren</h3>
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px">KfW Heizungskredit München</span>: Zinsgünstig finanzieren</h3>
         <p>Ergänzend zur BAFA-Förderung: KfW-Kredit 358/359 mit günstigen Konditionen für Heizungstausch.</p>
         
         <p><a href="/foerderung">Alle Details zur Förderung</a> | <a href="/foerderantrag-heizung">Kostenloser Förderantrag-Service</a></p>
@@ -239,16 +239,16 @@ export const seoPages: Record<string, PageSEO> = {
         
         <h2>Sanitär Notdienst München: Wann ist ein echter Notfall?</h2>
         
-        <h3>Rohrbruch München: Wasser sofort absperren</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px">Rohrbruch München</span>: Wasser sofort absperren</h3>
         <p>Wasser tritt aus? Haupthahn zudrehen (meist im Keller), dann sofort anrufen.</p>
         
-        <h3>Wasserschaden München: Erste Hilfe Maßnahmen</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px">Wasserschaden München</span>: Erste Hilfe Maßnahmen</h3>
         <p>Strom abschalten, Möbel hochstellen, Fotos für Versicherung machen.</p>
         
-        <h3>Heizungsausfall München: Keine Panik</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px">Heizungsausfall München</span>: Keine Panik</h3>
         <p>Heizung prüfen: Thermostat, Sicherungen, Brenner-Reset. Wir helfen schnell.</p>
         
-        <h3>Gasgeruch München: Sofort handeln</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px">Gasgeruch München</span>: Sofort handeln</h3>
         <p>Fenster öffnen, keine Schalter betätigen, Haus verlassen, 112 rufen!</p>
         
         <h2>Notdienst Preise München: Transparent & fair</h2>
@@ -258,7 +258,7 @@ export const seoPages: Record<string, PageSEO> = {
           <li>Heizungsreparatur Notfall: ab 189€</li>
         </ul>
         
-        <h3>Notdienst Garantie München: Keine versteckten Kosten</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px">Notdienst Garantie München</span>: Keine versteckten Kosten</h3>
         <p>Festpreisgarantie auch im Notdienst. Keine Überraschungen auf der Rechnung.</p>
         
         <h2>Rohrbruch Soforthilfe München: 5 Schritte</h2>
@@ -285,10 +285,10 @@ export const seoPages: Record<string, PageSEO> = {
         <p>Unsere Öffnungszeiten für Termine: <strong>Montag bis Freitag, 8:00 - 17:00 Uhr</strong></p>
         <p>Termine dauern 90 Minuten für eine gründliche Beratung vor Ort.</p>
         
-        <h3>Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Sanitär Garantie München</span>: 2 Jahre auf alle Arbeiten</h3>
         <p>Jeder Termin mit Festpreisgarantie. Keine versteckten Kosten.</p>
         
-        <h3>Klempner Bewertungen München: 4.9/5 Sterne</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Klempner Bewertungen München</span>: 4.9/5 Sterne</h3>
         <p>Über 2.847 zufriedene Kunden vertrauen AquaPro24.</p>
         
         <h2>So funktioniert die Terminbuchung</h2>
@@ -299,7 +299,7 @@ export const seoPages: Record<string, PageSEO> = {
           <li>Fertig – Sie erhalten eine Bestätigung per E-Mail</li>
         </ol>
         
-        <h3>Handwerker Termin München: Was Sie erwartet</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Handwerker Termin München</span>: Was Sie erwartet</h3>
         <p>Unser Techniker kommt pünktlich, analysiert das Problem und erstellt einen Festpreis-Kostenvoranschlag.</p>
         
         <h2>Telefonische Terminvereinbarung</h2>
@@ -846,18 +846,18 @@ stadtteile.forEach(st => {
         
         <h2>Sanitär & Heizung ${st.name}: Unsere Leistungen</h2>
         
-        <h3>Rohrreinigung ${st.name} München: Abfluss verstopft Soforthilfe</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Rohrreinigung ${st.name} München</span>: Abfluss verstopft Soforthilfe</h3>
         <p>Professionelle Rohrreinigung in ${st.name}. Küche, Bad, WC – schnelle Hilfe ab 81€.</p>
         
-        <h3>Heizungsreparatur ${st.name} München: Alle Marken</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Heizungsreparatur ${st.name} München</span>: Alle Marken</h3>
         <p>Heizungsservice in ${st.name}: Viessmann, Buderus, Vaillant, Wolf. Reparatur ab 154€.</p>
         
-        <h3>Notdienst ${st.name} München: 24/7 Soforthilfe</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px">Notdienst ${st.name} München</span>: 24/7 Soforthilfe</h3>
         <p>Rohrbruch oder Heizungsausfall in ${st.name}? Wir sind in 30-45 Minuten bei Ihnen.</p>
         
         <h2>Klempner ${st.name}: Unsere Garantie</h2>
         
-        <h3>Handwerker Garantie ${st.name} München: Ihr Sicherheitsversprechen</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px">Handwerker Garantie ${st.name} München</span>: Ihr Sicherheitsversprechen</h3>
         <p>2 Jahre Garantie auf alle Arbeiten. Festpreise ohne versteckte Kosten. 4.9/5 Sterne Bewertung.</p>
         
         <h2>Anfahrtszeit ${st.name}: 30-45 Minuten</h2>
