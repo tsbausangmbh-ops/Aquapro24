@@ -149,9 +149,9 @@ const aboutPageSchema = {
   "mainEntity": {
     "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
     "@id": "https://aquapro24.de/#organization",
-    "name": "KSHW München - Sanitär & Heizung",
-    "alternateName": ["AquaPro 24", "KSHW München", "Sanitär München", "Heizung München"],
-    "legalName": "KSHW München - Mustafa Sakar",
+    "name": "AquaPro 24 - Sanitär & Heizung München",
+    "alternateName": ["AquaPro 24", "AquaPro24", "Sanitär München", "Heizung München"],
+    "legalName": "AquaPro 24 - Mustafa Sakar",
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
     "url": "https://aquapro24.de",

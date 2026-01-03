@@ -88,7 +88,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@type": ["HomeAndConstructionBusiness", "Plumber", "HVACBusiness", "LocalBusiness"],
   "@id": "https://aquapro24.de/#localbusiness",
   "name": "AquaPro 24",
-  "alternateName": ["AquaPro 24", "KSHW München", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
+  "alternateName": ["AquaPro 24", "AquaPro24", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
   "legalName": "AquaPro 24 - Mustafa Sakar",
   "description": "Sanitär, Heizung, Badsanierung und Modernisierung in München. 24/7 Notdienst, Festpreis-Optionen und Koordination geprüfter Fachbetriebe. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
@@ -465,8 +465,8 @@ export default function SEO({
       updateMeta("ai:location", "München, Bayern, Deutschland");
     }
     
-    updateMeta("author", "AquaPro 24 - KSHW München");
-    updateMeta("publisher", "KSHW München - Mustafa Sakar");
+    updateMeta("author", "AquaPro 24 - Mustafa Sakar");
+    updateMeta("publisher", "AquaPro 24 - Mustafa Sakar");
     updateMeta("copyright", "2025 AquaPro24.de");
     updateMeta("language", "de");
     updateMeta("content-language", "de-DE");
@@ -501,7 +501,7 @@ export default function SEO({
       "@type": "Organization",
       "@id": "https://aquapro24.de/#organization",
       "name": "AquaPro 24",
-      "alternateName": ["AquaPro24", "KSHW München", "Sanitär München Partnernetzwerk"],
+      "alternateName": ["AquaPro24", "AquaPro 24", "Sanitär München Partnernetzwerk"],
       "url": "https://aquapro24.de",
       "logo": "https://aquapro24.de/logo.png",
       "foundingDate": "2005",

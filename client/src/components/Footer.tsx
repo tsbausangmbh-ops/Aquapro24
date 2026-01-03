@@ -197,7 +197,7 @@ export default function Footer() {
           </div>
           <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
             <p className="text-xs text-background/40 text-center">
-              KI-Hinweis gemäß EU AI Act (Art. 50): KSHW München setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
+              KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
               Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen. 
               <a href="/impressum" className="hover:text-primary underline ml-1">Details im Impressum</a>
             </p>

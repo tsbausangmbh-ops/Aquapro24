@@ -169,7 +169,7 @@ export default function ChristmasPopup() {
             className="text-base md:text-lg mt-4 font-semibold"
             style={{ color: "#FFD700" }}
           >
-            Ihr Team von KSHW München
+            Ihr Team von AquaPro24
           </p>
         </div>
       </div>

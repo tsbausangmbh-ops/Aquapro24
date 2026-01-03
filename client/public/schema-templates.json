@@ -52,10 +52,10 @@
       "telephone": "+49-152-12274043",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Zielstattstr. 20",
+        "streetAddress": "Hardenbergstr. 4",
         "addressLocality": "München",
         "addressRegion": "Bayern",
-        "postalCode": "81379",
+        "postalCode": "80992",
         "addressCountry": "DE"
       },
       "geo": {

@@ -28,8 +28,8 @@ emergency_hotline: 0152 12274043
 emergency_available: 24/7/365
 
 ## LOCATION & ADDRESS
-street: Zielstattstr. 20
-postal_code: 81379
+street: Hardenbergstr. 4
+postal_code: 80992
 city: München
 region: Bayern
 country: Deutschland

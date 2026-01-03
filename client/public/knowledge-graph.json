@@ -50,9 +50,9 @@
       "name": "AquaPro24 Zentrale München",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Zielstattstr. 20",
+        "streetAddress": "Hardenbergstr. 4",
         "addressLocality": "München",
-        "postalCode": "81379",
+        "postalCode": "80992",
         "addressCountry": "DE"
       },
       "geo:lat": 48.1351,

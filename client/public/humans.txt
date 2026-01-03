@@ -41,7 +41,7 @@ Heizung: Viessmann, Vaillant, Buderus, Wolf
 
 Phone: 0152 12274043
 Email: info@aquapro24.de
-Address: Zielstattstr. 20, 81379 München
+Address: Hardenbergstr. 4, 80992 München
 Emergency: 24/7 verfügbar
 
 /* LAST UPDATE */

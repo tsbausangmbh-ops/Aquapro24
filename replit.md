@@ -1,8 +1,8 @@
-# KSHW München - Sanitär & Heizung
+# AquaPro24 - Sanitär & Heizung München
 
 ## Overview
 
-A professional German-language website for KSHW München (Inhaber: Mustafa Sakar), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
+A professional German-language website for AquaPro24 (Inhaber: Mustafa Sakar), a heating and plumbing service partner network based in Munich. The site is designed as a lead-generation landing page with NLP-psychology principles (pacing, future pacing, pattern interrupt, social proof) to convert service inquiries. Features include a multi-step chatbot widget for lead capture, service showcases, pricing transparency, customer testimonials, and prominent call-to-action elements for 24/7 support.
 
 ## Company Information
 - **Company**: AquaPro24

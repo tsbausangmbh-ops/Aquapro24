@@ -657,7 +657,7 @@ export default function DatenschutzPage() {
                   KI-Hinweis gemäß EU AI Act (Art. 50)
                 </h4>
                 <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
-                  <strong>Transparenzhinweis:</strong> KSHW München setzt zur Unterstützung der Geschäftsprozesse 
+                  <strong>Transparenzhinweis:</strong> AquaPro24 setzt zur Unterstützung der Geschäftsprozesse 
                   KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und 
                   Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten 
                   Mitarbeitern getroffen und verantwortet.

@@ -1,5 +1,5 @@
 # robots.txt for AquaPro24.de - Sanitär & Heizung München
-# Verwaltung & Betrieb durch KSHW München
+# Verwaltung & Betrieb durch AquaPro24
 # https://aquapro24.de
 
 # ============================================

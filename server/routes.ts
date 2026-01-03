@@ -112,9 +112,9 @@ Mit freundlichen Grüßen,
 Ihr AquaPro24 Team
 
 ---
-KSHW München
-Inhaber: Ali Kemal Kurt
-Zielstattstr. 20, 81379 München
+AquaPro24
+Inhaber: Mustafa Sakar
+Hardenbergstr. 4, 80992 München
 Tel: 0152 12274043
 E-Mail: info@aquapro24.de
 Web: aquapro24.de`;
