@@ -400,7 +400,7 @@ export default function SEO({
     updateMeta("business:contact_data:region", "Bayern", true);
     updateMeta("business:contact_data:postal_code", "80992", true);
     updateMeta("business:contact_data:country_name", "Deutschland", true);
-    updateMeta("business:contact_data:phone_number", "+49 152 12274043", true);
+    updateMeta("business:contact_data:phone_number", "+49 89 444438872", true);
     updateMeta("business:contact_data:email", "info@aquapro24.de", true);
     
     updateMeta("DC.coverage", "München, Bayern, Deutschland");
@@ -417,7 +417,7 @@ export default function SEO({
     updateMeta("ai:business-name", "AquaPro 24");
     updateMeta("ai:business-type", "Plumber, HVACBusiness, HomeAndConstructionBusiness");
     updateMeta("ai:service-area", "München, Bayern, Deutschland");
-    updateMeta("ai:phone", "+49 152 12274043");
+    updateMeta("ai:phone", "+49 89 444438872");
     updateMeta("ai:email", "info@aquapro24.de");
     updateMeta("ai:address", "Hardenbergstr. 4, 80992 München");
     updateMeta("ai:hours", "Mo-Fr 07:00-18:00, Sa 08:00-14:00, Notdienst 24/7");
