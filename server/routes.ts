@@ -1084,6 +1084,14 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 
       console.log(`Ratgeber anfrage: ${name}, ${email}, ${phone || 'keine Telefonnummer'}`);
 
+      if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+        console.error("SMTP credentials not configured - SMTP_USER or SMTP_PASS missing");
+        return res.status(500).json({ 
+          success: false, 
+          error: "E-Mail-System nicht konfiguriert. Bitte kontaktieren Sie uns unter 0152 12274043." 
+        });
+      }
+
       try {
         await storage.createLead({
           name: name.trim(),
