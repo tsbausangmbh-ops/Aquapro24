@@ -57,8 +57,8 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 items-start">
-          <div>
+        <div className="grid md:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col">
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-primary" />
               Unsere Einsatzgebiete
@@ -100,26 +100,34 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
             </div>
           </div>
 
-          <div className="bg-background rounded-lg border p-6">
+          <div className="bg-background rounded-lg border p-6 flex flex-col h-full">
             <h3 className="font-semibold text-lg mb-4">
               Warum Kunden in München uns vertrauen
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-4 text-sm flex-1">
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">1</span>
-                <span><strong>Lokale Fachbetriebe</strong> - Wir kennen München und seine Gebäudestrukturen</span>
+                <span><strong>Lokale Fachbetriebe</strong> - Wir kennen München und seine Gebäudestrukturen seit 2005</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">2</span>
-                <span><strong>Schnelle Anfahrt ab 60 Minuten</strong> im Stadtgebiet München</span>
+                <span><strong>Schnelle Anfahrt ab 60 Minuten</strong> im Stadtgebiet München - auch an Wochenenden</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">3</span>
-                <span><strong>Transparente Festpreise</strong> - Keine versteckten Kosten, faire Abrechnung</span>
+                <span><strong>Transparente Festpreise</strong> - Keine versteckten Kosten, faire Abrechnung vor Ort</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">4</span>
-                <span><strong>847+ zufriedene Münchner Kunden</strong> mit durchschnittlich 4.9 Sternen</span>
+                <span><strong>2.800+ zufriedene Münchner Kunden</strong> mit durchschnittlich 4.9 Sternen</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">5</span>
+                <span><strong>24/7 Notdienst</strong> - Rund um die Uhr erreichbar, auch an Feiertagen</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">6</span>
+                <span><strong>Markenqualität</strong> - Grohe, Viessmann, Vaillant, Buderus und mehr</span>
               </li>
             </ul>
             
