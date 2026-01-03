@@ -22,10 +22,12 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 
 const ratgeberTopics = [
-  { icon: Shield, text: "Schnellhilfe im Notfall" },
-  { icon: Flame, text: "Heizung & Warmwasser Tipps" },
-  { icon: Wrench, text: "Armaturen & Abfluss" },
-  { icon: Lightbulb, text: "Kostenfaktoren verstehen" }
+  { icon: Shield, text: "Schnellhilfe im Notfall – Rohrbruch & Heizungsausfall" },
+  { icon: Flame, text: "Heizung: Heizkörper, Druck, Störungscodes, Wartung" },
+  { icon: Wrench, text: "Warmwasser: Boiler, Durchlauferhitzer, Mischer" },
+  { icon: Lightbulb, text: "Armaturen & Abfluss: Tropfen, Verstopfung, Leckage" },
+  { icon: Shield, text: "Badsanierung & Leitungsmodernisierung planen" },
+  { icon: Lightbulb, text: "Kostenfaktoren & Anfrage-Checkliste" }
 ];
 
 export default function RatgeberDownload() {
@@ -97,14 +99,18 @@ export default function RatgeberDownload() {
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
               Ratgeber München: Profi-Tipps für Ihr Zuhause
             </h2>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-2">
               Praxiswissen, Soforthilfe und Entscheidungsgrundlagen rund um Heizung und Sanitär. 
               Verständlich, praxisnah – für Eigentümer, Vermieter und Bewohner in München.
             </p>
+            <p className="text-muted-foreground mb-4 text-sm">
+              <strong>12 Kapitel</strong> mit konkreten Tipps, die Ihnen Zeit, Geld und Nerven sparen. 
+              Erfahren Sie, wann Sie selbst handeln können – und wann Sie besser einen Fachmann rufen.
+            </p>
             
-            <div className="grid grid-cols-2 gap-3 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
               {ratgeberTopics.map((topic, index) => (
-                <div key={index} className="flex items-center gap-2 text-sm">
+                <div key={index} className="flex items-center gap-2 text-sm bg-muted/50 rounded-md p-2">
                   <topic.icon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>{topic.text}</span>
                 </div>
