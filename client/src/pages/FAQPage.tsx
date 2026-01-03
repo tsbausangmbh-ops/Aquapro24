@@ -268,20 +268,6 @@ export default function FAQPage() {
               Wir beraten Sie gerne persönlich - kostenlos und unverbindlich.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-4">
-              <Button size="lg" className="gap-2" asChild>
-                <Link href="/termin">
-                  <Calendar className="w-5 h-5" />
-                  Beratungstermin buchen
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2" asChild>
-                <a href="mailto:info@aquapro24.de?subject=Beratungsanfrage">
-                  <MessageSquare className="w-5 h-5" />
-                  Kostenlos beraten lassen
-                </a>
-              </Button>
-            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
                 <a href="tel:+4915212274043" data-testid="button-call-bottom">
