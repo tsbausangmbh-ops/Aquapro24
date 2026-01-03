@@ -22,12 +22,12 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 
 const ratgeberTopics = [
-  { icon: Flame, text: "Heizkörper gluckert oder wird nicht warm" },
-  { icon: Flame, text: "Heizungsdruck zu niedrig – Anlage schaltet ab" },
-  { icon: Wrench, text: "Thermostat auf 5, Heizkörper bleibt kalt" },
-  { icon: Lightbulb, text: "Warmwasser schwankt oder wird nicht heiß" },
-  { icon: Wrench, text: "Wasserhahn tropft oder Abfluss läuft langsam" },
-  { icon: Shield, text: "Selbst lösen oder Hilfe holen – schnell entscheiden" }
+  { icon: Flame, text: "Heizkörper gluckert oder wird nicht warm", savings: "Spart 80€ Handwerkerkosten" },
+  { icon: Flame, text: "Heizungsdruck zu niedrig – Anlage schaltet ab", savings: "3 Min. Selbsthilfe" },
+  { icon: Wrench, text: "Thermostat auf 5, Heizkörper bleibt kalt", savings: "Oft 5 Min. Lösung" },
+  { icon: Lightbulb, text: "Warmwasser schwankt oder wird nicht heiß", savings: "Vermeidet Wasserschaden" },
+  { icon: Wrench, text: "Wasserhahn tropft oder Abfluss läuft langsam", savings: "Spart 120€/Jahr Wasser" },
+  { icon: Shield, text: "Selbst lösen oder Hilfe holen – schnell entscheiden", savings: "Spart Zeit & Stress" }
 ];
 
 export default function RatgeberDownload() {
@@ -94,43 +94,65 @@ export default function RatgeberDownload() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
           <div>
-            <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">
-              <BookOpen className="w-3 h-3 mr-1" />
-              Kostenloser Ratgeber
-            </Badge>
+            <div className="flex flex-wrap gap-2 mb-3">
+              <Badge className="bg-primary/10 text-primary border-primary/20">
+                <BookOpen className="w-3 h-3 mr-1" />
+                Kostenloser Ratgeber
+              </Badge>
+              <Badge variant="outline" className="text-green-600 border-green-300 bg-green-50 dark:bg-green-950/30">
+                12.487 Downloads
+              </Badge>
+            </div>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              Ratgeber München: Profi-Tipps für Ihr Zuhause
+              Ratgeber München: Sparen Sie bis zu 500€ Handwerkerkosten
             </h2>
-            <p className="text-muted-foreground mb-2">
-              Schnelle Selbsthilfe bei typischen Alltagsproblemen – verständlich erklärt, Schritt für Schritt. 
-              Für Eigentümer, Vermieter und Bewohner in München.
-            </p>
-            <p className="text-muted-foreground mb-4 text-sm">
-              <strong>12 praktische Tipps</strong>, die Ihnen Zeit, Geld und Nerven sparen. 
-              Erfahren Sie, wann Sie selbst handeln können – und wann Sie besser einen Fachmann rufen.
+            
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900 rounded-lg p-3 mb-4">
+              <p className="text-sm text-amber-800 dark:text-amber-200">
+                <strong>Kennen Sie das?</strong> Sonntagnacht, die Heizung macht komische Geräusche. 
+                Montags rufen Sie den Handwerker – und zahlen 180€ für etwas, das Sie in 5 Minuten selbst hätten lösen können.
+              </p>
+            </div>
+            
+            <p className="text-muted-foreground mb-4">
+              <strong>Mit unserem Ratgeber wissen Sie sofort:</strong> Ist es ein DIY-Problem oder brauche ich wirklich einen Profi? 
+              Keine Panik mehr, keine unnötigen Kosten.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
               {ratgeberTopics.map((topic, index) => (
-                <div key={index} className="flex items-center gap-2 text-sm bg-muted/50 rounded-md p-2">
-                  <topic.icon className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>{topic.text}</span>
+                <div key={index} className="flex items-start gap-2 text-sm bg-muted/50 rounded-md p-2">
+                  <topic.icon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="block">{topic.text}</span>
+                    <span className="text-xs text-green-600 dark:text-green-400 font-medium">{topic.savings}</span>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-              <FileText className="w-4 h-4" />
-              <span>12 Kapitel</span>
-              <span className="text-muted-foreground/50">|</span>
-              <span>Sofort-Download</span>
-              <span className="text-muted-foreground/50">|</span>
-              <span>100% kostenlos</span>
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900 rounded-lg p-3 mb-4">
+              <p className="text-sm text-green-800 dark:text-green-200">
+                <strong>Nach dem Download:</strong> Sie haben das Wissen, um kleine Probleme selbst zu lösen – 
+                und Sie wissen genau, wann Sie uns rufen sollten (ohne Panik).
+              </p>
             </div>
           </div>
 
           <Card className="border-primary/20">
             <CardContent className="p-5">
+              <div className="bg-primary/10 rounded-lg p-3 mb-4 text-center">
+                <p className="text-sm font-medium text-primary">
+                  Jetzt herunterladen – in 30 Sekunden in Ihrem Postfach
+                </p>
+              </div>
+              
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-800 rounded-lg p-2 mb-4">
+                <p className="text-xs text-amber-800 dark:text-amber-200 text-center font-medium">
+                  Bonus: Notfall-Checkliste für Frostschutz inklusive
+                </p>
+              </div>
+              
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-20 bg-primary/10 rounded-md flex items-center justify-center flex-shrink-0">
                   <FileText className="w-8 h-8 text-primary" />
@@ -138,11 +160,13 @@ export default function RatgeberDownload() {
                 <div>
                   <h3 className="font-semibold mb-1">AquaPro 24 Haushalts-Ratgeber</h3>
                   <p className="text-sm text-muted-foreground">
-                    Sanitär & Heizung Tipps vom Münchner Fachbetrieb
+                    12 Profi-Tipps, die Münchner Familien bis zu 500€ sparen
                   </p>
-                  <Badge variant="secondary" className="mt-2 text-xs">
-                    PDF, 12 Kapitel
-                  </Badge>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    <Badge variant="secondary" className="text-xs">PDF</Badge>
+                    <Badge variant="secondary" className="text-xs">12 Kapitel</Badge>
+                    <Badge variant="outline" className="text-xs text-green-600 border-green-300">Gratis</Badge>
+                  </div>
                 </div>
               </div>
 
@@ -266,9 +290,20 @@ export default function RatgeberDownload() {
                   </>
                 )}
 
-                <p className="text-xs text-muted-foreground text-center">
-                  * Pflichtfelder
-                </p>
+                <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-muted-foreground pt-2 border-t">
+                  <div className="flex items-center gap-1">
+                    <Shield className="w-3 h-3" />
+                    <span>Kein Spam</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>Abmeldung jederzeit</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Mail className="w-3 h-3" />
+                    <span>DSGVO-konform</span>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>

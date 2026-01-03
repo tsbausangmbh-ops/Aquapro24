@@ -307,14 +307,25 @@ export default function Home() {
                 Münchner Sanitär und Heizung – Klempner Notdienst 24/7
               </h1>
               
-              <p className="text-lg text-white/90 mb-4">
-                <strong>Rohrbruch, WC verstopft, Heizung ausgefallen?</strong> Wir sind in 
-                45-60 Minuten bei Ihnen in München. Festpreis vor Arbeitsbeginn.
+              <p className="text-lg text-white/90 mb-3">
+                <strong>Wasser tropft? Heizung streikt? Abfluss verstopft?</strong>
               </p>
               
+              <p className="text-white/90 mb-4">
+                Wir verstehen, wie stressig das ist. Deshalb sind wir in <strong>45-60 Minuten</strong> bei Ihnen – 
+                mit Festpreis <em>vor</em> Arbeitsbeginn. Kein Risiko, keine Überraschungen.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> In einer Stunde ist Ihr Problem gelöst, 
+                  Sie können sich entspannen – und der Preis war genau wie besprochen.
+                </p>
+              </div>
+              
               <p className="text-white/80 mb-6">
-                <strong>Über 2.800 Münchner Familien</strong> vertrauen unserem Partnernetzwerk. 
-                Sanitär ab 92€, Rohrreinigung ab 81€, Heizungsreparatur ab 154€.
+                <strong>2.847 Münchner Familien</strong> haben diese Erfahrung bereits gemacht. 
+                Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
