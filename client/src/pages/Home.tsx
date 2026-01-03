@@ -29,6 +29,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "wouter";
+import RatgeberDownload from "@/components/RatgeberDownload";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.jpg";
 import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.png";
@@ -533,6 +534,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <RatgeberDownload />
 
         <ServiceAreas 
           serviceName="Sanitär & Heizung" 

@@ -1061,4 +1061,222 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
       });
     }
   });
+
+  app.post("/api/ratgeber-download", async (req, res) => {
+    try {
+      const { privacyAccepted } = req.body;
+      
+      if (!privacyAccepted) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Datenschutz muss akzeptiert werden" 
+        });
+      }
+
+      console.log("Ratgeber download requested with privacy consent");
+
+      const pdfContent = generateRatgeberPDF();
+      
+      res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Disposition", "attachment; filename=AquaPro24_Ratgeber_Sanitaer_Heizung.pdf");
+      res.send(pdfContent);
+    } catch (error) {
+      console.error("Error generating ratgeber PDF:", error);
+      res.status(500).json({ 
+        success: false, 
+        error: "PDF-Generierung fehlgeschlagen" 
+      });
+    }
+  });
+}
+
+function generateRatgeberPDF(): Buffer {
+  const pdfContent = `%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 10 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 10 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 8 0 R /Resources << /Font << /F1 10 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 1800 >>
+stream
+BT
+/F1 28 Tf
+50 780 Td
+(AquaPro 24 Haushalts-Ratgeber) Tj
+/F1 14 Tf
+0 -40 Td
+(Sanitaer und Heizung Tipps vom Muenchner Fachbetrieb) Tj
+/F1 12 Tf
+0 -50 Td
+(KAPITEL 1: WASSERSCHADEN - ERSTE HILFE) Tj
+/F1 10 Tf
+0 -25 Td
+(Was tun bei einem Wasserschaden?) Tj
+0 -18 Td
+(1. Ruhe bewahren und Strom abschalten) Tj
+0 -15 Td
+(   Bei Wasser in der Naehe von Steckdosen: Sicherung raus!) Tj
+0 -18 Td
+(2. Hauptwasserhahn zudrehen) Tj
+0 -15 Td
+(   Meist im Keller oder unter der Spuele) Tj
+0 -18 Td
+(3. Wasser aufnehmen) Tj
+0 -15 Td
+(   Handtuecher, Lappen, Eimer verwenden) Tj
+0 -18 Td
+(4. Fotos machen fuer die Versicherung) Tj
+0 -15 Td
+(   Dokumentieren Sie den Schaden ausfuehrlich) Tj
+0 -18 Td
+(5. Fachmann rufen: 0152 12274043) Tj
+0 -30 Td
+(KAPITEL 2: HEIZUNG RICHTIG WARTEN) Tj
+0 -18 Td
+(Jaehrliche Wartung spart Geld und verlaengert die Lebensdauer) Tj
+0 -18 Td
+(- Heizkoerper entlueften: Bei glucksenden Geraeuschen) Tj
+0 -15 Td
+(- Thermostatventile pruefen: Funktioniert die Regelung?) Tj
+0 -15 Td
+(- Wasserdruck kontrollieren: 1-2 bar sind optimal) Tj
+0 -15 Td
+(- Brenner reinigen lassen: Alle 1-2 Jahre vom Fachmann) Tj
+0 -30 Td
+(Tipp: Ein Entlueftungsschluessel kostet nur 3 Euro im Baumarkt!) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 1600 >>
+stream
+BT
+/F1 14 Tf
+50 780 Td
+(KAPITEL 3: ENERGIEKOSTEN SENKEN) Tj
+/F1 10 Tf
+0 -25 Td
+(Einfache Massnahmen mit grosser Wirkung:) Tj
+0 -20 Td
+(1. Heizung um 1 Grad senken = 6% Ersparnis) Tj
+0 -15 Td
+(2. Stosslueften statt Dauerkippen) Tj
+0 -15 Td
+(3. Heizkoerper nicht zustellen oder abdecken) Tj
+0 -15 Td
+(4. Nachts Rolllaeden schliessen) Tj
+0 -15 Td
+(5. Thermostatventile richtig einstellen) Tj
+0 -30 Td
+(KAPITEL 4: FOERDERMITTEL SICHERN) Tj
+0 -20 Td
+(Staatliche Foerderung fuer Ihre Heizung:) Tj
+0 -18 Td
+(BAFA Waermepumpen-Foerderung 2025:) Tj
+0 -15 Td
+(- Grundfoerderung: 30% der Investitionskosten) Tj
+0 -15 Td
+(- Klimageschwindigkeitsbonus: +20%) Tj
+0 -15 Td
+(- Einkommensbonus: +30% bei unter 40.000 Euro) Tj
+0 -15 Td
+(- Maximum: Bis zu 70% Foerderung moeglich!) Tj
+0 -25 Td
+(KfW Heizungskredit:) Tj
+0 -15 Td
+(- Zinsguenstige Finanzierung) Tj
+0 -15 Td
+(- Bis zu 120.000 Euro) Tj
+0 -15 Td
+(- Kombination mit BAFA moeglich) Tj
+0 -30 Td
+(Wir helfen Ihnen kostenlos beim Foerderantrag!) Tj
+0 -15 Td
+(Tel: 0152 12274043) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 1400 >>
+stream
+BT
+/F1 14 Tf
+50 780 Td
+(KAPITEL 5: WANN BRAUCHEN SIE EINEN FACHMANN?) Tj
+/F1 10 Tf
+0 -25 Td
+(Selbst machen:) Tj
+0 -18 Td
+(- Heizkoerper entlueften) Tj
+0 -15 Td
+(- Duschkopf entkalken) Tj
+0 -15 Td
+(- Siphon reinigen) Tj
+0 -15 Td
+(- Wasserhahn-Griff festziehen) Tj
+0 -25 Td
+(Fachmann rufen:) Tj
+0 -18 Td
+(- Rohrbruch oder starke Leckage) Tj
+0 -15 Td
+(- Heizung faellt komplett aus) Tj
+0 -15 Td
+(- Gasgeruch) Tj
+0 -15 Td
+(- Elektrische Probleme) Tj
+0 -15 Td
+(- Groessere Installationsarbeiten) Tj
+0 -40 Td
+/F1 12 Tf
+(IHR ANSPRECHPARTNER IN MUENCHEN) Tj
+/F1 10 Tf
+0 -20 Td
+(AquaPro 24 - Partnernetzwerk seit 2005) Tj
+0 -15 Td
+(Hardenbergstr. 4, 80992 Muenchen) Tj
+0 -15 Td
+(Telefon: 0152 12274043) Tj
+0 -15 Td
+(E-Mail: info@aquapro24.de) Tj
+0 -15 Td
+(Web: www.aquapro24.de) Tj
+0 -30 Td
+(24/7 Notdienst - Festpreisgarantie - 2.800+ zufriedene Kunden) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000125 00000 n 
+0000000264 00000 n 
+0000000403 00000 n 
+0000000542 00000 n 
+0000002395 00000 n 
+0000004048 00000 n 
+0000005501 00000 n 
+0000005501 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+5580
+%%EOF`;
+  
+  return Buffer.from(pdfContent, 'utf-8');
 }
