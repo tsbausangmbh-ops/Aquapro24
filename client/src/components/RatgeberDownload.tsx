@@ -31,7 +31,8 @@ const ratgeberTopics = [
 ];
 
 export default function RatgeberDownload() {
-  const [name, setName] = useState("");
+  const [vorname, setVorname] = useState("");
+  const [nachname, setNachname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [captcha, setCaptcha] = useState("");
@@ -41,13 +42,13 @@ export default function RatgeberDownload() {
   const { toast } = useToast();
 
   const isCaptchaValid = captcha.trim() === "4";
-  const isFormValid = name.trim() !== "" && email.trim() !== "" && email.includes("@") && privacyAccepted && isCaptchaValid;
+  const isFormValid = vorname.trim() !== "" && nachname.trim() !== "" && email.trim() !== "" && email.includes("@") && privacyAccepted && isCaptchaValid;
 
   const handleSendEmail = async () => {
     if (!isFormValid) {
       toast({
         title: "Bitte alle Felder ausfüllen",
-        description: "Name, E-Mail und Datenschutz-Bestätigung sind erforderlich.",
+        description: "Vorname, Nachname, E-Mail und Datenschutz-Bestätigung sind erforderlich.",
         variant: "destructive"
       });
       return;
@@ -60,7 +61,8 @@ export default function RatgeberDownload() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
-          name: name.trim(),
+          vorname: vorname.trim(),
+          nachname: nachname.trim(),
           email: email.trim(),
           phone: phone.trim(),
           privacyAccepted: true 
@@ -171,19 +173,35 @@ export default function RatgeberDownload() {
               </div>
 
               <div className="space-y-3">
-                <div className="space-y-1">
-                  <Label htmlFor="ratgeber-name" className="text-sm flex items-center gap-2">
-                    <User className="w-3 h-3" />
-                    Name *
-                  </Label>
-                  <Input
-                    id="ratgeber-name"
-                    type="text"
-                    placeholder="Ihr Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    data-testid="input-ratgeber-name"
-                  />
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="space-y-1">
+                    <Label htmlFor="ratgeber-vorname" className="text-sm flex items-center gap-2">
+                      <User className="w-3 h-3" />
+                      Vorname *
+                    </Label>
+                    <Input
+                      id="ratgeber-vorname"
+                      type="text"
+                      placeholder="Vorname"
+                      value={vorname}
+                      onChange={(e) => setVorname(e.target.value)}
+                      data-testid="input-ratgeber-vorname"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="ratgeber-nachname" className="text-sm flex items-center gap-2">
+                      <User className="w-3 h-3" />
+                      Nachname *
+                    </Label>
+                    <Input
+                      id="ratgeber-nachname"
+                      type="text"
+                      placeholder="Nachname"
+                      value={nachname}
+                      onChange={(e) => setNachname(e.target.value)}
+                      data-testid="input-ratgeber-nachname"
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-1">

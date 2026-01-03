@@ -1066,7 +1066,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 
   app.post("/api/ratgeber-download", async (req, res) => {
     try {
-      const { name, email, phone, privacyAccepted } = req.body;
+      const { vorname, nachname, email, phone, privacyAccepted } = req.body;
       
       if (!privacyAccepted) {
         return res.status(400).json({ 
@@ -1075,14 +1075,15 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
         });
       }
 
-      if (!name || !email) {
+      if (!vorname || !nachname || !email) {
         return res.status(400).json({ 
           success: false, 
-          error: "Name und E-Mail sind erforderlich" 
+          error: "Vorname, Nachname und E-Mail sind erforderlich" 
         });
       }
 
-      console.log(`Ratgeber anfrage: ${name}, ${email}, ${phone || 'keine Telefonnummer'}`);
+      const fullName = `${vorname.trim()} ${nachname.trim()}`;
+      console.log(`Ratgeber anfrage: ${fullName}, ${email}, ${phone || 'keine Telefonnummer'}`);
 
       if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
         console.error("SMTP credentials not configured - SMTP_USER or SMTP_PASS missing");
@@ -1094,12 +1095,12 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 
       try {
         await storage.createLead({
-          name: name.trim(),
+          name: fullName,
           email: email.trim(),
           phone: phone?.trim() || "",
           address: "",
           service: "Ratgeber Download",
-          message: "Ratgeber PDF per E-Mail angefordert",
+          message: `Ratgeber PDF per E-Mail angefordert (Vorname: ${vorname.trim()}, Nachname: ${nachname.trim()})`,
           preferredDate: "",
           preferredTime: "",
           urgency: "normal",
@@ -1115,7 +1116,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
         from: `"AquaPro 24 München" <${process.env.SMTP_USER}>`,
         to: email.trim(),
         subject: "Ihr kostenloser Ratgeber: Heizung & Sanitär",
-        html: `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f97316;padding:30px;text-align:center;"><span style="color:#ffffff;font-size:28px;font-weight:bold;">AquaPro 24</span><br><span style="color:#ffffff;font-size:14px;">Ihr Partnernetzwerk in München</span></td></tr><tr><td style="background-color:#f9fafb;padding:30px 30px 30px 30px;"><br><span style="color:#1f2937;font-size:20px;font-weight:bold;">Hallo ${name.trim()},</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">vielen Dank für Ihr Interesse an unserem <b>Ratgeber Heizung &amp; Sanitär</b>!</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 praktischen Tipps zu typischen Alltagsproblemen bei Heizung und Sanitär – verständlich erklärt, Schritt für Schritt.</span><br><br><table width="100%" cellpadding="15" cellspacing="0" border="0" style="background-color:#ffffff;border-left:4px solid #f97316;"><tr><td><b style="color:#1f2937;">Inhalt des Ratgebers (12 Tipps):</b><br><span style="color:#4b5563;font-size:14px;">• Heizkörper gluckert oder wird nicht warm<br>• Heizungsdruck zu niedrig – Anlage schaltet ab<br>• Thermostat auf 5, aber Heizkörper bleibt kalt<br>• Warmwasser schwankt oder wird nicht heiß<br>• Wasserhahn tropft oder Abfluss läuft langsam<br>• WC spült schwach oder läuft nach</span></td></tr></table><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an: <b>0152 12274043</b></span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Mit freundlichen Grüßen,<br><b>Ihr AquaPro 24 Team</b></span></td></tr><tr><td style="background-color:#fef2f2;padding:20px;text-align:center;border-top:3px solid #f97316;"><span style="color:#7c2d12;font-size:14px;">AquaPro 24 | Hardenbergstr. 4 | 80992 München<br>Tel: 0152 12274043 | info@aquapro24.de | aquapro24.de</span></td></tr></table></td></tr></table></body></html>`,
+        html: `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f97316;padding:30px;text-align:center;"><span style="color:#ffffff;font-size:28px;font-weight:bold;">AquaPro 24</span><br><span style="color:#ffffff;font-size:14px;">Ihr Partnernetzwerk in München</span></td></tr><tr><td style="background-color:#f9fafb;padding:30px 30px 30px 30px;"><br><span style="color:#1f2937;font-size:20px;font-weight:bold;">Hallo ${vorname.trim()},</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">vielen Dank für Ihr Interesse an unserem <b>Ratgeber Heizung &amp; Sanitär</b>!</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 praktischen Tipps zu typischen Alltagsproblemen bei Heizung und Sanitär – verständlich erklärt, Schritt für Schritt.</span><br><br><table width="100%" cellpadding="15" cellspacing="0" border="0" style="background-color:#ffffff;border-left:4px solid #f97316;"><tr><td><b style="color:#1f2937;">Inhalt des Ratgebers (12 Tipps):</b><br><span style="color:#4b5563;font-size:14px;">• Heizkörper gluckert oder wird nicht warm<br>• Heizungsdruck zu niedrig – Anlage schaltet ab<br>• Thermostat auf 5, aber Heizkörper bleibt kalt<br>• Warmwasser schwankt oder wird nicht heiß<br>• Wasserhahn tropft oder Abfluss läuft langsam<br>• WC spült schwach oder läuft nach</span></td></tr></table><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an: <b>0152 12274043</b></span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Mit freundlichen Grüßen,<br><b>Ihr AquaPro 24 Team</b></span></td></tr><tr><td style="background-color:#fef2f2;padding:20px;text-align:center;border-top:3px solid #f97316;"><span style="color:#7c2d12;font-size:14px;">AquaPro 24 | Hardenbergstr. 4 | 80992 München<br>Tel: 0152 12274043 | info@aquapro24.de | aquapro24.de</span></td></tr></table></td></tr></table></body></html>`,
         attachments: [
           {
             filename: "AquaPro24_Ratgeber_Heizung_Sanitaer.pdf",
@@ -1127,15 +1128,19 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
       await emailTransporter.sendMail({
         from: `"AquaPro 24 Website" <${process.env.SMTP_USER}>`,
         to: "info@aquapro24.de",
-        subject: `Neuer Ratgeber-Download: ${name.trim()}`,
+        subject: `Neuer Ratgeber-Download: ${fullName}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px;">
             <h2 style="color: #f97316;">Neuer Ratgeber-Download</h2>
             
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">Name:</td>
-                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${name.trim()}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">Vorname:</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${vorname.trim()}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">Nachname:</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e5e7eb;">${nachname.trim()}</td>
               </tr>
               <tr>
                 <td style="padding: 10px; border-bottom: 1px solid #e5e7eb; font-weight: bold;">E-Mail:</td>
