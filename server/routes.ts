@@ -4,6 +4,8 @@ import { storage } from "./storage";
 import { createCalendarEvent, getAvailableTimeSlots } from "./googleCalendar";
 import OpenAI from "openai";
 import nodemailer from "nodemailer";
+import fs from "fs";
+import path from "path";
 
 const emailTransporter = nodemailer.createTransport({
   host: "smtp.ionos.de",
@@ -1219,9 +1221,6 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 }
 
 function generateRatgeberPDF(): Buffer {
-  const fs = require("fs");
-  const path = require("path");
-  
   const pdfPath = path.join(process.cwd(), "attached_assets", "AquaPro24_Ratgeber_Heizung_und_Sanitaer_1767455255112.pdf");
   
   if (fs.existsSync(pdfPath)) {
