@@ -1122,8 +1122,8 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
               <p style="color: white; margin: 10px 0 0 0;">Ihr Partnernetzwerk in München</p>
             </div>
             
-            <div style="padding: 30px; background: #f9fafb;">
-              <h2 style="color: #1f2937; margin-top: 0;">Hallo ${name.trim()},</h2>
+            <div style="padding: 20px 30px 30px 30px; background: #f9fafb;">
+              <h2 style="color: #1f2937; margin: 0 0 15px 0;">Hallo ${name.trim()},</h2>
               
               <p style="color: #4b5563; line-height: 1.6;">
                 vielen Dank für Ihr Interesse an unserem <strong>Ratgeber Heizung & Sanitär</strong>!
