@@ -65,7 +65,7 @@ export default function NotdienstMuenchenPage() {
         description="Notdienst München 24h: Rohrbruch, Wasserschaden oder Heizungsausfall? Soforthilfe vom Sanitär- & Heizungsprofi."
         canonical="https://aquapro24.de/notdienst-muenchen"
         keywords="Notdienst München 24h Soforthilfe, Rohrbruch Wasserschaden sofort, Heizungsausfall Notfall München, Klempner Notdienst 60 Minuten, WC verstopft Soforthilfe München, Leckortung Wärmebild München, Sanitär Heizung Notdienst Festpreis"
-        aiSummary="AquaPro 24 Notdienst München: Schnelle Hilfe bei Rohrbruch, Wasseraustritt, Heizungsausfall. Fotos senden für schnelle Priorisierung. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Notdienst München: Schnelle Hilfe bei Rohrbruch, Wasseraustritt, Heizungsausfall. Fotos senden für schnelle Priorisierung. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Notdienst München", url: "https://aquapro24.de/notdienst-muenchen" }
@@ -124,7 +124,7 @@ export default function NotdienstMuenchenPage() {
             },
             {
               name: "Notdienst kontaktieren",
-              text: "Rufen Sie AquaPro 24 unter 0152 12274043 an oder senden Sie Fotos per WhatsApp. Beschreiben Sie kurz: Was ist passiert? Seit wann? Wie stark?"
+              text: "Rufen Sie AquaPro 24 unter 089 444438872 an oder senden Sie Fotos per WhatsApp. Beschreiben Sie kurz: Was ist passiert? Seit wann? Wie stark?"
             }
           ]
         }}
@@ -181,9 +181,9 @@ export default function NotdienstMuenchenPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-notdienst-muenchen">
+                  <a href="tel:+498912274043" data-testid="button-call-notdienst-muenchen">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
@@ -243,7 +243,7 @@ export default function NotdienstMuenchenPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-notdienst-2">
+                        <a href="tel:+498912274043" data-testid="button-call-notdienst-2">
                           <Phone className="w-4 h-4 mr-2" />
                           Jetzt anrufen
                         </a>

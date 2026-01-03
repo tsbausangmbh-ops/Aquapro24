@@ -71,7 +71,7 @@ export default function SanitaerNotdienst24Page() {
         description="Sanitär Notdienst München 24h: Verstopfung, Rohrbruch oder Wasserschaden – wir sind sofort für Sie da."
         canonical="https://aquapro24.de/sanitaer-notdienst-24"
         keywords="Sanitär Notdienst 24h München, Rohrbruch Soforthilfe Festpreis, Klempner Notfall Wochenende Feiertag, Wasserschaden Leck abdichten sofort, WC verstopft Entstopfung 24h, Wasserleitung geplatzt Notdienst, Abfluss verstopft Nacht München"
-        aiSummary="AquaPro 24 Sanitär Notdienst 24h München: Sofortige Hilfe bei Rohrbruch, Wasserschaden, Verstopfung und WC-Notfällen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Sanitär Notdienst 24h München: Sofortige Hilfe bei Rohrbruch, Wasserschaden, Verstopfung und WC-Notfällen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" },
@@ -160,9 +160,9 @@ export default function SanitaerNotdienst24Page() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-sanitaer-notdienst-24">
+                  <a href="tel:+498912274043" data-testid="button-call-sanitaer-notdienst-24">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
@@ -225,7 +225,7 @@ export default function SanitaerNotdienst24Page() {
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
                     <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                      <a href="tel:+4915212274043" data-testid="button-call-sanitaer-notdienst-24-2">
+                      <a href="tel:+498912274043" data-testid="button-call-sanitaer-notdienst-24-2">
                         <Phone className="w-4 h-4 mr-2" />
                         Jetzt anrufen
                       </a>

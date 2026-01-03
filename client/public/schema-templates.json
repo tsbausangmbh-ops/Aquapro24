@@ -49,7 +49,7 @@
       "name": "AquaPro24",
       "image": "https://aquapro24.de/og-image.jpg",
       "priceRange": "€€",
-      "telephone": "+49-152-12274043",
+      "telephone": "+49-89-444438872",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Hardenbergstr. 4",
@@ -100,7 +100,7 @@
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "servicePhone": "+49-152-12274043",
+        "servicePhone": "+49-89-444438872",
         "availableLanguage": ["de", "en", "tr"]
       },
       "hoursAvailable": {
@@ -271,7 +271,7 @@
           "@type": "HowToStep",
           "position": 4,
           "name": "Notdienst anrufen",
-          "text": "Rufen Sie unseren 24/7 Notdienst an: 0152 12274043. Wir sind in 45-60 Minuten bei Ihnen in München."
+          "text": "Rufen Sie unseren 24/7 Notdienst an: 089 444438872. Wir sind in 45-60 Minuten bei Ihnen in München."
         },
         {
           "@type": "HowToStep",

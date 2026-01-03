@@ -113,7 +113,7 @@ export default function DatenschutzPage() {
                   E-Mail-Adresse: <a href="mailto:info@aquapro24.de" className="text-secondary hover:underline">info@aquapro24.de</a>
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  Telefon: <a href="tel:+4915212274043" className="text-secondary hover:underline">0152 12274043</a>
+                  Telefon: <a href="tel:+498912274043" className="text-secondary hover:underline">089 444438872</a>
                 </p>
                 <p className="text-muted-foreground mb-2">
                   USt-IdNr: folgt
@@ -608,13 +608,13 @@ export default function DatenschutzPage() {
                   <strong>Transparenzhinweis gemäß Art. 50 EU AI Act:</strong><br />
                   Sie interagieren mit einem KI-System (Künstliche Intelligenz). Der Chat wird automatisch 
                   von einem KI-Assistenten bearbeitet, nicht von einem Menschen. Menschliche Mitarbeiter 
-                  sind während unserer Geschäftszeiten telefonisch erreichbar unter 0152 12274043.
+                  sind während unserer Geschäftszeiten telefonisch erreichbar unter 089 444438872.
                 </p>
               </div>
               <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
                 <li><strong>Risikoklassifizierung:</strong> Unser Chatbot ist als KI-System mit begrenztem Risiko ("Limited Risk") gemäß Art. 50 EU AI Act eingestuft.</li>
                 <li><strong>Transparenzpflicht erfüllt:</strong> Sie werden vor und während der Nutzung darauf hingewiesen, dass Sie mit einem KI-System interagieren.</li>
-                <li><strong>Menschliche Alternative:</strong> Telefon (0152 12274043), E-Mail (info@aquapro24.de) und persönlicher Kontakt stehen jederzeit zur Verfügung.</li>
+                <li><strong>Menschliche Alternative:</strong> Telefon (089 444438872), E-Mail (info@aquapro24.de) und persönlicher Kontakt stehen jederzeit zur Verfügung.</li>
                 <li><strong>Keine automatisierten Entscheidungen:</strong> Der Chatbot trifft keine rechtlich bindenden Entscheidungen. Alle Preisangaben sind unverbindliche Schätzungen.</li>
               </ul>
 
@@ -735,11 +735,11 @@ export default function DatenschutzPage() {
                   info@aquapro24.de
                 </a>
                 <a 
-                  href="tel:+4915212274043" 
+                  href="tel:+498912274043" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                   data-testid="link-privacy-phone"
                 >
-                  0152 12274043
+                  089 444438872
                 </a>
               </div>
             </section>

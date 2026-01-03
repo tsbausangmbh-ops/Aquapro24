@@ -27,7 +27,7 @@
       "name": "Notdienst anrufen",
       "short_name": "Notdienst",
       "description": "24/7 Notdienst direkt anrufen",
-      "url": "tel:+4915212274043",
+      "url": "tel:+498912274043",
       "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
     },
     {

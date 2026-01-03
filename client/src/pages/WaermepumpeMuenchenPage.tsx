@@ -65,7 +65,7 @@ export default function WaermepumpeMuenchenPage() {
         description="Wärmepumpe installieren in München: Fachgerechter Einbau, Förderberatung & komplette Abwicklung aus einer Hand."
         canonical="https://aquapro24.de/waermepumpe-muenchen"
         keywords="Wärmepumpe München, Wärmepumpe Installation München, Luft-Wasser-Wärmepumpe München, Wärmepumpe Förderung München, Heizungstausch Wärmepumpe München, Wärmepumpe Altbau München"
-        aiSummary="AquaPro 24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" },
@@ -156,9 +156,9 @@ export default function WaermepumpeMuenchenPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-waermepumpe-muenchen">
+                  <a href="tel:+498912274043" data-testid="button-call-waermepumpe-muenchen">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>

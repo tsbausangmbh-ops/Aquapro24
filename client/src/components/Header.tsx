@@ -65,15 +65,15 @@ export default function Header() {
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
             <a 
-              href="tel:+4915212274043" 
+              href="tel:+498912274043" 
               className="flex flex-col items-center text-center hover:underline"
               data-testid="link-emergency-phone"
-              aria-label="Jetzt anrufen: 0152 12274043"
+              aria-label="Jetzt anrufen: 089 444438872"
             >
               <span className="text-xs text-primary-foreground/80" aria-hidden="true">Anrufen:</span>
               <span className="font-bold text-base md:text-lg flex items-center gap-1">
                 <Phone className="w-4 h-4" aria-hidden="true" />
-                0152 12274043
+                089 444438872
               </span>
             </a>
           </div>

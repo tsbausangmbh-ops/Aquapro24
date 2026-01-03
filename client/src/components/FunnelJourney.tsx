@@ -7,7 +7,7 @@ const journeySteps = [
   {
     step: 1,
     icon: Phone,
-    title: "Anrufen: 0152 12274043",
+    title: "Anrufen: 089 444438872",
     subtitle: "24/7 erreichbar",
     description: "Rohrbruch, WC verstopft, Heizung aus? Rufen Sie an – wir sind in 45-60 Minuten bei Ihnen in München. Notdienst 365 Tage.",
     time: "5 Minuten",
@@ -110,9 +110,9 @@ export default function FunnelJourney() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <a href="tel:+4915212274043" data-testid="button-funnel-call">
+              <a href="tel:+498912274043" data-testid="button-funnel-call">
                 <Phone className="w-4 h-4 mr-2" />
-                0152 12274043
+                089 444438872
               </a>
             </Button>
             <Button size="lg" className="bg-secondary text-secondary-foreground" asChild>

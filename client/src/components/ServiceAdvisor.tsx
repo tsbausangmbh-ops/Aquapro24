@@ -175,13 +175,13 @@ export default function ServiceAdvisor({ serviceType }: ServiceAdvisorProps) {
       } else {
         setMessages(prev => [...prev, { 
           role: "assistant", 
-          content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte rufen Sie uns an: 0152 12274043" 
+          content: "Entschuldigung, ich bin gerade nicht erreichbar. Bitte rufen Sie uns an: 089 444438872" 
         }]);
       }
     } catch (error) {
       setMessages(prev => [...prev, { 
         role: "assistant", 
-        content: "Verbindungsfehler. Bitte versuchen Sie es erneut oder rufen Sie uns an: 0152 12274043" 
+        content: "Verbindungsfehler. Bitte versuchen Sie es erneut oder rufen Sie uns an: 089 444438872" 
       }]);
     } finally {
       setIsLoading(false);

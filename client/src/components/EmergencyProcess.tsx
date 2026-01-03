@@ -15,7 +15,7 @@ const serviceContent = {
       {
         icon: Phone,
         title: "1. Anruf",
-        description: "Sie rufen an unter 0152 12274043. Wir sind 24/7 erreichbar - auch nachts und am Wochenende.",
+        description: "Sie rufen an unter 089 444438872. Wir sind 24/7 erreichbar - auch nachts und am Wochenende.",
         time: "Sofort"
       },
       {
@@ -51,7 +51,7 @@ const serviceContent = {
       {
         icon: Phone,
         title: "1. Anruf",
-        description: "Sie rufen an unter 0152 12274043. Wir sind 24/7 erreichbar - auch Heiligabend und Silvester.",
+        description: "Sie rufen an unter 089 444438872. Wir sind 24/7 erreichbar - auch Heiligabend und Silvester.",
         time: "Sofort"
       },
       {
@@ -87,7 +87,7 @@ const serviceContent = {
       {
         icon: Phone,
         title: "1. Anruf",
-        description: "Sie rufen an unter 0152 12274043. Wir sind 24/7 erreichbar - auch bei überfluteten Bädern.",
+        description: "Sie rufen an unter 089 444438872. Wir sind 24/7 erreichbar - auch bei überfluteten Bädern.",
         time: "Sofort"
       },
       {
@@ -164,9 +164,9 @@ export default function EmergencyProcess({ serviceType, title, subtitle }: Emerg
               <p className="text-muted-foreground text-sm">24/7 erreichbar - auch nachts und am Wochenende</p>
             </div>
             <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-              <a href="tel:+4915212274043" data-testid="button-emergency-call">
+              <a href="tel:+498912274043" data-testid="button-emergency-call">
                 <Phone className="w-4 h-4 mr-2" />
-                0152 12274043
+                089 444438872
               </a>
             </Button>
           </div>

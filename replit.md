@@ -8,7 +8,7 @@ A professional German-language website for AquaPro24 (Inhaber: Mustafa Sakar), a
 - **Company**: AquaPro24
 - **Owner**: Mustafa Sakar  
 - **Address**: Hardenbergstr. 4, 80992 München
-- **Phone**: 0152 12274043
+- **Phone**: 089 444438872
 - **USt-IdNr**: folgt
 - **Type**: Einzelunternehmer (Sole Proprietor)
 - **Domain**: aquapro24.de

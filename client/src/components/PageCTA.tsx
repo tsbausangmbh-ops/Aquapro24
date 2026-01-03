@@ -81,7 +81,7 @@ export default function PageCTA({
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4" />
-            <span>24/7 Notdienst: <a href="tel:+4915212274043" className="font-medium text-foreground hover:text-primary">0152 12274043</a></span>
+            <span>24/7 Notdienst: <a href="tel:+498912274043" className="font-medium text-foreground hover:text-primary">089 444438872</a></span>
           </div>
           <span className="hidden sm:inline">|</span>
           <div className="flex items-center gap-2">

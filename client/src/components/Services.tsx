@@ -131,9 +131,9 @@ export default function Services() {
             <span className="text-foreground font-medium">Stellen Sie sich vor:</span> Heute Abend funktioniert alles wieder. Rufen Sie jetzt an!
           </p>
           <Button size="lg" className="gap-2" asChild data-testid="button-call-services">
-            <a href="tel:+4915212274043">
+            <a href="tel:+498912274043">
               <Phone className="w-5 h-5" />
-              0152 12274043
+              089 444438872
             </a>
           </Button>
         </div>

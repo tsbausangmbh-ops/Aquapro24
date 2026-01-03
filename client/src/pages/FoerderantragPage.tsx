@@ -180,10 +180,10 @@ export default function FoerderantragPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Förderantrag München: BAFA & KfW Antrag kostenlos | AquaPro24"
-        description="BAFA & KfW Förderantrag kostenlos für Sie. Wir übernehmen die komplette Antragstellung für Ihre Heizungsförderung in München. 100% Erfolgsquote. Tel: 0152 12274043"
+        description="BAFA & KfW Förderantrag kostenlos für Sie. Wir übernehmen die komplette Antragstellung für Ihre Heizungsförderung in München. 100% Erfolgsquote. Tel: 089 444438872"
         canonical="https://aquapro24.de/foerderantrag"
         keywords={keywords.join(", ")}
-        aiSummary="AquaPro24 München: Kostenloser Förderantrag Service für BAFA & KfW. 100% Erfolgsquote. Wir stellen den Antrag für Heizungsförderung komplett für Sie. Alle Unterlagen, Vollmacht, Statusüberwachung. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 München: Kostenloser Förderantrag Service für BAFA & KfW. 100% Erfolgsquote. Wir stellen den Antrag für Heizungsförderung komplett für Sie. Alle Unterlagen, Vollmacht, Statusüberwachung. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
@@ -242,9 +242,9 @@ export default function FoerderantragPage() {
               
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-antrag">
+                  <a href="tel:+498912274043" data-testid="button-call-antrag">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white" asChild>
@@ -475,9 +475,9 @@ export default function FoerderantragPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-antrag-cta">
+                <a href="tel:+498912274043" data-testid="button-call-antrag-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  089 444438872
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white" asChild>

@@ -414,9 +414,9 @@ export default function TerminPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-termin">
+                  <a href="tel:+498912274043" data-testid="button-call-termin">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
               </div>

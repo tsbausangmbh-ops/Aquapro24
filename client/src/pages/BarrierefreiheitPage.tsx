@@ -89,9 +89,9 @@ export default function BarrierefreiheitPage() {
 
               <div className="flex flex-wrap gap-3">
                 <Button asChild className="bg-white text-primary hover:bg-white/90">
-                  <a href="tel:+4915212274043" data-testid="button-call-accessibility">
+                  <a href="tel:+498912274043" data-testid="button-call-accessibility">
                     <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button variant="outline" asChild className="border-white/50 text-white hover:bg-white/10">
@@ -212,12 +212,12 @@ export default function BarrierefreiheitPage() {
                 </p>
                 <div className="space-y-3">
                   <a 
-                    href="tel:+4915212274043" 
+                    href="tel:+498912274043" 
                     className="flex items-center gap-2 text-primary hover:underline"
                     data-testid="link-accessibility-phone"
                   >
                     <Phone className="w-4 h-4" aria-hidden="true" />
-                    0152 12274043
+                    089 444438872
                   </a>
                   <a 
                     href="mailto:info@aquapro24.de?subject=Barrierefreiheit" 

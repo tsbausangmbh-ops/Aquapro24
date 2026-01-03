@@ -72,7 +72,7 @@ export default function HeizungNotdienst24Page() {
         description="Heizung Notdienst München: Schnelle Hilfe bei Ausfall, Störung oder Kälte – 24h erreichbar."
         canonical="https://aquapro24.de/heizung-notdienst-24"
         keywords="Heizung Notdienst 24h München, Heizungsausfall Soforthilfe Winter, Therme defekt Brenner Störung, Viessmann Vaillant Junkers Notdienst, Keine Wärme Notfall Festpreis, Heizung reparieren Wochenende, Gasheizung ausgefallen 24h Hilfe"
-        aiSummary="AquaPro 24 Heizung Notdienst 24h München: Sofortige Hilfe bei Heizungsausfall, Thermendefekt, Brennerstörung und Heizungsproblemen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 0152 12274043"
+        aiSummary="AquaPro 24 Heizung Notdienst 24h München: Sofortige Hilfe bei Heizungsausfall, Thermendefekt, Brennerstörung und Heizungsproblemen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" },
@@ -161,9 +161,9 @@ export default function HeizungNotdienst24Page() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-heizung-notdienst-24">
+                  <a href="tel:+498912274043" data-testid="button-call-heizung-notdienst-24">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
@@ -226,7 +226,7 @@ export default function HeizungNotdienst24Page() {
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
                     <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                      <a href="tel:+4915212274043" data-testid="button-call-heizung-notdienst-24-2">
+                      <a href="tel:+498912274043" data-testid="button-call-heizung-notdienst-24-2">
                         <Phone className="w-4 h-4 mr-2" />
                         Jetzt anrufen
                       </a>

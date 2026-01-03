@@ -29,9 +29,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    primary: "0152 12274043",
+    primary: "089 444438872",
     secondary: "24/7 Notdienst erreichbar",
-    action: "tel:+4915212274043"
+    action: "tel:+498912274043"
   },
   {
     icon: Mail,
@@ -106,7 +106,7 @@ export default function KontaktPage() {
         title="Sanitär Kontakt München | Angebot anfordern"
         description="Kontakt AquaPro 24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich."
         canonical="https://aquapro24.de/kontakt"
-        keywords="Sanitär Kontakt München kostenlos, Heizung Anfrage Festpreis, Klempner Notdienst 0152 12274043, Kostenvoranschlag unverbindlich München, Beratungstermin Badsanierung buchen, Wärmepumpe Beratung München, Erstberatung kostenlos vor Ort"
+        keywords="Sanitär Kontakt München kostenlos, Heizung Anfrage Festpreis, Klempner Notdienst 089 444438872, Kostenvoranschlag unverbindlich München, Beratungstermin Badsanierung buchen, Wärmepumpe Beratung München, Erstberatung kostenlos vor Ort"
       />
       <Header />
       <main id="main-content">

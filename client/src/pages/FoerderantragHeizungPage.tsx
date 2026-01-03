@@ -205,10 +205,10 @@ export default function FoerderantragHeizungPage() {
     <div className="min-h-screen flex flex-col">
       <SEO 
         title="Förderantrag Heizung München: Wärmepumpe bis 70% | AquaPro24"
-        description="Förderantrag Heizung München: Bis 70% für Wärmepumpe, Pellet, Solar. Kostenloser Antragsservice, alle Marken. Viessmann, Vaillant, Wolf. Tel: 0152 12274043"
+        description="Förderantrag Heizung München: Bis 70% für Wärmepumpe, Pellet, Solar. Kostenloser Antragsservice, alle Marken. Viessmann, Vaillant, Wolf. Tel: 089 444438872"
         canonical="https://aquapro24.de/foerderantrag-heizung"
         keywords={keywords.join(", ")}
-        aiSummary="AquaPro24 München: Förderantrag Heizung. BAFA bis 70% für Wärmepumpe (Viessmann, Vaillant, Wolf), Pellet, Solar. Kostenloser Antragsservice. Klimabonus, Einkommensbonus. Kontakt: 0152 12274043"
+        aiSummary="AquaPro24 München: Förderantrag Heizung. BAFA bis 70% für Wärmepumpe (Viessmann, Vaillant, Wolf), Pellet, Solar. Kostenloser Antragsservice. Klimabonus, Einkommensbonus. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
@@ -284,9 +284,9 @@ export default function FoerderantragHeizungPage() {
               
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-heizung">
+                  <a href="tel:+498912274043" data-testid="button-call-heizung">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white" asChild>
@@ -505,9 +505,9 @@ export default function FoerderantragHeizungPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-heizung-cta">
+                <a href="tel:+498912274043" data-testid="button-call-heizung-cta">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  089 444438872
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white" asChild>

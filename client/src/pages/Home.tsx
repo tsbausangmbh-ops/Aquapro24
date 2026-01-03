@@ -261,7 +261,7 @@ export default function Home() {
         canonical="https://aquapro24.de"
         keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrreinigung ab 81€ Festpreis, Heizung Notdienst München sofort, Rohrbruch Soforthilfe 60 Minuten, Badsanierung Komplettpreis München, Wärmepumpe BAFA 70% Förderung"
         speakable={{ cssSelector: ["h1", "[data-testid='button-call-hero']", ".text-white\\/90", ".text-white\\/80"] }}
-        aiSummary="AquaPro 24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. 2.800+ Kunden seit 2005, 4.9/5 Sterne. Tel: 0152 12274043"
+        aiSummary="AquaPro 24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. 2.800+ Kunden seit 2005, 4.9/5 Sterne. Tel: 089 444438872"
         serviceSchema={{
           name: "Sanitär & Heizung München - AquaPro 24",
           description: "Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen in München seit 2005. Über 2.847 zufriedene Kunden, Festpreisgarantie, 24/7 Notdienst.",
@@ -330,7 +330,7 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
-                  <a href="tel:+4915212274043">
+                  <a href="tel:+498912274043">
                     <Phone className="w-5 h-5" />
                     Jetzt anrufen
                   </a>
@@ -574,9 +574,9 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild data-testid="button-call-cta">
-                <a href="tel:+4915212274043">
+                <a href="tel:+498912274043">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  089 444438872
                 </a>
               </Button>
               <Button size="lg" className="bg-white text-primary border-white" asChild>

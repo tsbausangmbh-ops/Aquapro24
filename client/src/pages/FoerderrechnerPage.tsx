@@ -281,7 +281,7 @@ export default function FoerderrechnerPage() {
         description={`Förderrechner München Stand ${standDatum}: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen.`}
         canonical="https://aquapro24.de/foerderrechner"
         keywords={`Förderrechner München, KfW 458 Heizungsförderung, BAFA Dämmung, KfW 358 Kredit, KfW 455-B Barrierefreies Bad, Energieberater Förderung, Wärmepumpe 70% Förderung, iSFP Sanierungsfahrplan, BEG Förderung ${currentYear}`}
-        aiSummary={`AquaPro 24 Förderrechner München Stand ${standDatum}: KfW 458 Heizungsförderung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, KfW 358/359 Ergänzungskredit, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 0152 12274043`}
+        aiSummary={`AquaPro 24 Förderrechner München Stand ${standDatum}: KfW 458 Heizungsförderung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, KfW 358/359 Ergänzungskredit, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 089 444438872`}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
@@ -654,7 +654,7 @@ export default function FoerderrechnerPage() {
                       </div>
 
                       <Button size="lg" className="w-full" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-kfw458">
+                        <a href="tel:+498912274043" data-testid="button-call-kfw458">
                           <Phone className="w-4 h-4 mr-2" />
                           KfW 458 Beratung anfordern
                         </a>
@@ -762,7 +762,7 @@ export default function FoerderrechnerPage() {
                       </div>
 
                       <Button size="lg" className="w-full bg-orange-600 hover:bg-orange-700" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-bafa-daemmung">
+                        <a href="tel:+498912274043" data-testid="button-call-bafa-daemmung">
                           <Phone className="w-4 h-4 mr-2" />
                           BAFA Beratung anfordern
                         </a>
@@ -912,7 +912,7 @@ export default function FoerderrechnerPage() {
                       </div>
 
                       <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-kfw">
+                        <a href="tel:+498912274043" data-testid="button-call-kfw">
                           <Phone className="w-4 h-4 mr-2" />
                           KfW-Beratung anfordern
                         </a>
@@ -1126,7 +1126,7 @@ export default function FoerderrechnerPage() {
                       </div>
 
                       <Button size="lg" className="w-full bg-cyan-600 hover:bg-cyan-700" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-bad">
+                        <a href="tel:+498912274043" data-testid="button-call-bad">
                           <Phone className="w-4 h-4 mr-2" />
                           Bad-Beratung anfordern
                         </a>
@@ -1273,7 +1273,7 @@ export default function FoerderrechnerPage() {
                       </div>
 
                       <Button size="lg" className="w-full bg-purple-600 hover:bg-purple-700" asChild>
-                        <a href="tel:+4915212274043" data-testid="button-call-energieberater">
+                        <a href="tel:+498912274043" data-testid="button-call-energieberater">
                           <Phone className="w-4 h-4 mr-2" />
                           Energieberater vermitteln
                         </a>

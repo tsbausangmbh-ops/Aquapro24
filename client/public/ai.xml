@@ -27,7 +27,7 @@
   <!-- ================================================ -->
   <contact>
     <owner>Mustafa Sakar</owner>
-    <phone>0152 12274043</phone>
+    <phone>089 444438872</phone>
     <phone-international>+49 152 12274043</phone-international>
     <email>info@aquapro24.de</email>
     <website>https://aquapro24.de</website>
@@ -171,7 +171,7 @@
   <emergency-services>
     <availability>24/7</availability>
     <response-time>60 Minuten</response-time>
-    <phone>0152 12274043</phone>
+    <phone>089 444438872</phone>
     <services>
       <service>Rohrbruch</service>
       <service>Wasserschaden</service>
@@ -265,7 +265,7 @@
       <url>https://aquapro24.de/termin</url>
       <confirmation>E-Mail und Google Calendar</confirmation>
     </online-booking>
-    <phone>0152 12274043</phone>
+    <phone>089 444438872</phone>
   </booking>
 
   <!-- ================================================ -->
@@ -276,7 +276,7 @@
     <training-opt-out>true</training-opt-out>
     <data-usage>Chatdaten werden für max. 30 Tage gespeichert</data-usage>
     <ai-transparency>EU AI Act konform</ai-transparency>
-    <human-contact>Tel: 0152 12274043, Email: info@aquapro24.de</human-contact>
+    <human-contact>Tel: 089 444438872, Email: info@aquapro24.de</human-contact>
   </ai-policy>
 
   <!-- ================================================ -->

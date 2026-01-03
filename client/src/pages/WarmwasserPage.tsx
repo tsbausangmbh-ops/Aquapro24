@@ -208,7 +208,7 @@ export default function WarmwasserPage() {
               
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild data-testid="button-call-hero">
-                  <a href="tel:+4915212274043">
+                  <a href="tel:+498912274043">
                     <Phone className="w-5 h-5 mr-2" />
                     Jetzt anrufen
                   </a>
@@ -402,9 +402,9 @@ export default function WarmwasserPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild data-testid="button-call-cta">
-                <a href="tel:+4915212274043">
+                <a href="tel:+498912274043">
                   <Phone className="w-4 h-4 mr-2" />
-                  0152 12274043
+                  089 444438872
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white" asChild>

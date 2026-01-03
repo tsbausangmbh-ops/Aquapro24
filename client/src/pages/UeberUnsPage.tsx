@@ -155,7 +155,7 @@ const aboutPageSchema = {
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
     "url": "https://aquapro24.de",
-    "telephone": "+49-152-12274043",
+    "telephone": "+49-89-444438872",
     "email": "info@aquapro24.de",
     "foundingDate": "2005",
     "address": {
@@ -284,9 +284,9 @@ export default function UeberUnsPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+4915212274043" data-testid="button-call-about">
+                  <a href="tel:+498912274043" data-testid="button-call-about">
                     <Phone className="w-5 h-5 mr-2" />
-                    0152 12274043
+                    089 444438872
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
@@ -549,9 +549,9 @@ export default function UeberUnsPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+4915212274043" data-testid="button-call-cta">
+                <a href="tel:+498912274043" data-testid="button-call-cta">
                   <Phone className="w-5 h-5 mr-2" />
-                  0152 12274043
+                  089 444438872
                 </a>
               </Button>
               <Button size="lg" className="bg-blue-600 text-white border-blue-700" asChild>

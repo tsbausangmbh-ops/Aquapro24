@@ -108,7 +108,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://aquapro24.de/og-image.jpg",
     "https://aquapro24.de/team.jpg"
   ],
-  "telephone": "+49-152-12274043",
+  "telephone": "+49-89-444438872",
   "email": "info@aquapro24.de",
   "foundingDate": "2005",
   "numberOfEmployees": {
@@ -273,7 +273,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://www.facebook.com/aquapro24",
     "https://www.instagram.com/aquapro24_muenchen",
     "https://www.linkedin.com/company/aquapro24",
-    "https://wa.me/4915212274043"
+    "https://wa.me/4989444438872"
   ],
   "potentialAction": [
     {
@@ -289,7 +289,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "CommunicateAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "tel:+4915212274043"
+        "urlTemplate": "tel:+498912274043"
       }
     },
     {
@@ -304,7 +304,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+49-152-12274043",
+      "telephone": "+49-89-444438872",
       "contactType": "Kundenservice",
       "email": "info@aquapro24.de",
       "availableLanguage": ["de", "en", "tr", "hr", "pl", "ru", "uk"],
@@ -318,7 +318,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+49-152-12274043",
+      "telephone": "+49-89-444438872",
       "contactType": "emergency",
       "availableLanguage": ["de", "en", "tr"],
       "areaServed": "DE-BY"
@@ -437,7 +437,7 @@ export default function SEO({
     updateMeta("llm:key-services", "Klempner, Rohrreinigung, Heizungsreparatur, Wärmepumpe, Badsanierung");
     updateMeta("llm:unique-selling-points", "24/7 Notdienst, Festpreis, Bis 70% BAFA Förderung, 2 Jahre Garantie");
     updateMeta("llm:target-audience", "Hausbesitzer und Mieter in München und Umgebung");
-    updateMeta("llm:contact-action", "Anrufen: 0152 12274043 oder Termin online buchen");
+    updateMeta("llm:contact-action", "Anrufen: 089 444438872 oder Termin online buchen");
     
     updateMeta("gpt:summary", "Sanitär & Heizung Notdienst München - AquaPro 24 bietet 24/7 Klempner-Service, Heizungsreparatur und Badsanierung mit Festpreisgarantie.");
     updateMeta("gpt:location", "München, Bayern");
@@ -520,7 +520,7 @@ export default function SEO({
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+49-152-12274043",
+        "telephone": "+49-89-444438872",
         "contactType": "Kundenservice",
         "email": "info@aquapro24.de",
         "availableLanguage": ["de", "en", "tr"]
@@ -529,7 +529,7 @@ export default function SEO({
         "https://www.facebook.com/aquapro24",
         "https://www.instagram.com/aquapro24_muenchen",
         "https://www.linkedin.com/company/aquapro24",
-        "https://wa.me/4915212274043",
+        "https://wa.me/4989444438872",
         "https://www.google.com/maps/place/Hardenbergstr.+4,+80992+München",
         "https://www.yelp.de/biz/aquapro-24-münchen",
         "https://www.gelbeseiten.de/gsbiz/aquapro24",
@@ -723,7 +723,7 @@ export default function SEO({
           "name": stadttteil,
           "containedInPlace": { "@type": "City", "name": "München" }
         },
-        "telephone": "+49-152-12274043",
+        "telephone": "+49-89-444438872",
         "url": `https://aquapro24.de/${stadttteil.toLowerCase()}`
       };
       const stadtteilScript = document.createElement("script");

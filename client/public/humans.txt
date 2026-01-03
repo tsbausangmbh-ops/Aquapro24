@@ -4,7 +4,7 @@ Owner: Mustafa Sakar
 Role: Inhaber / Owner
 Location: München, Bayern, Deutschland
 Contact: info@aquapro24.de
-Phone: 0152 12274043
+Phone: 089 444438872
 
 /* COMPANY */
 
@@ -39,7 +39,7 @@ Heizung: Viessmann, Vaillant, Buderus, Wolf
 
 /* CONTACT */
 
-Phone: 0152 12274043
+Phone: 089 444438872
 Email: info@aquapro24.de
 Address: Hardenbergstr. 4, 80992 München
 Emergency: 24/7 verfügbar

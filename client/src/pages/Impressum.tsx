@@ -81,8 +81,8 @@ export default function Impressum() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-4 h-4 text-secondary" />
-                    <a href="tel:+4915212274043" className="hover:text-secondary transition-colors">
-                      0152 12274043
+                    <a href="tel:+498912274043" className="hover:text-secondary transition-colors">
+                      089 444438872
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">

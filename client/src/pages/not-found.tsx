@@ -11,7 +11,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
         title="Seite nicht gefunden | 404 | AquaPro 24 München"
-        description="Diese Seite existiert leider nicht. Besuchen Sie unsere Startseite für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst: 0152 12274043"
+        description="Diese Seite existiert leider nicht. Besuchen Sie unsere Startseite für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst: 089 444438872"
         canonical="https://aquapro24.de/404"
       />
       <Header />
@@ -34,7 +34,7 @@ export default function NotFound() {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <a href="tel:+4915212274043">
+                <a href="tel:+498912274043">
                   <Phone className="w-4 h-4 mr-2" />
                   Notdienst anrufen
                 </a>
