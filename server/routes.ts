@@ -1160,7 +1160,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
             <div style="background: #1f2937; padding: 20px; text-align: center;">
               <p style="color: #9ca3af; margin: 0; font-size: 14px;">
                 AquaPro 24 | Hardenbergstr. 4 | 80992 München<br>
-                Tel: 0152 12274043 | info@aquapro24.de | aquapro24.de
+                Tel: 0152 12274043 | info@aquapro24.de | <a href="https://aquapro24.de" style="color: #9ca3af;">aquapro24.de</a>
               </p>
             </div>
           </div>
