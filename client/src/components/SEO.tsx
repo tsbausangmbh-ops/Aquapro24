@@ -289,7 +289,7 @@ const LOCAL_BUSINESS_SCHEMA = {
       "@type": "CommunicateAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "tel:+498912274043"
+        "urlTemplate": "tel:+4989444438872"
       }
     },
     {

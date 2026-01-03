@@ -82,7 +82,7 @@
     <ai:keywords>Klempner München, Sanitär Notdienst, Heizung Notdienst, 24h Service, Installateur München, Rohrbruch, Wasserschaden, Heizungsausfall, WC verstopft</ai:keywords>
     <ai:brands>Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Wolf, Geberit, Villeroy Boch, Duravit</ai:brands>
     <ai:emergency>true</ai:emergency>
-    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:phone>+49 89 444438872</ai:phone>
     <ai:address>Hardenbergstr. 4, 80992 München</ai:address>
     <ai:geo-coordinates>48.1351,11.5820</ai:geo-coordinates>
     <ai:schema-type>LocalBusiness, PlumbingService, HVACBusiness</ai:schema-type>
@@ -108,7 +108,7 @@
     <ai:availability>24/7/365</ai:availability>
     <ai:price-from currency="EUR">92</ai:price-from>
     <ai:service-area>München und 40km Umkreis</ai:service-area>
-    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:phone>+49 89 444438872</ai:phone>
     <ai:voice-query>Sanitär Notdienst jetzt, Rohrbruch Hilfe, Wasserschaden Klempner</ai:voice-query>
     <ai:user-intent>Notfall melden, Sofortige Hilfe anfordern, Klempner rufen</ai:user-intent>
     <ai:urgency>hoch</ai:urgency>
@@ -128,7 +128,7 @@
     <ai:response-time>60 Minuten</ai:response-time>
     <ai:availability>24/7/365</ai:availability>
     <ai:price-from currency="EUR">154</ai:price-from>
-    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:phone>+49 89 444438872</ai:phone>
     <ai:voice-query>Heizung ausgefallen, Heizung Notdienst jetzt, Therme defekt Hilfe</ai:voice-query>
     <ai:user-intent>Heizungsausfall melden, Sofortige Reparatur, Notfall-Techniker</ai:user-intent>
     <ai:urgency>hoch</ai:urgency>
@@ -144,7 +144,7 @@
     <ai:summary>Notdienst Sanitär und Heizung München - 24h Soforthilfe bei allen Notfällen. Rohrbruch, Heizungsausfall, WC verstopft. Festpreis-Garantie. 60 Min Anfahrt.</ai:summary>
     <ai:keywords>Notdienst München, Klempner Notdienst, Heizung Notdienst, 24 Stunden Service, Sanitär Soforthilfe</ai:keywords>
     <ai:emergency>true</ai:emergency>
-    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:phone>+49 89 444438872</ai:phone>
     <ai:availability>24/7/365</ai:availability>
     <ai:voice-query>Notdienst Klempner München, Notfall Sanitär, Handwerker Notdienst</ai:voice-query>
   </url>
@@ -447,7 +447,7 @@
     <ai:language>de-DE</ai:language>
     <ai:summary>Kontakt AquaPro24 München - Kostenlose Beratung für Sanitär und Heizung. Tel: 089 444438872. Hardenbergstr. 4, 80992 München.</ai:summary>
     <ai:keywords>Kontakt Klempner München, Sanitär Beratung, Heizung Beratung kostenlos, AquaPro24 Kontakt</ai:keywords>
-    <ai:phone>+49 152 12274043</ai:phone>
+    <ai:phone>+49 89 444438872</ai:phone>
     <ai:address>Hardenbergstr. 4, 80992 München</ai:address>
     <ai:geo-coordinates>48.1751,11.5267</ai:geo-coordinates>
     <ai:emergency>false</ai:emergency>

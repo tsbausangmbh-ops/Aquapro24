@@ -95,7 +95,7 @@ export default function NLPQuestions() {
             
             <div className="flex flex-col gap-3">
               <Button size="lg" className="w-full gap-2" asChild data-testid="button-nlp-call">
-                <a href="tel:+498912274043">
+                <a href="tel:+4989444438872">
                   <Phone className="w-5 h-5" />
                   Jetzt kostenlos anrufen
                 </a>

@@ -128,7 +128,7 @@ export default function Footer() {
               <p>Hardenbergstr. 4</p>
               <p>80992 München</p>
               <p className="mt-1">
-                <a href="tel:+498912274043" className="hover:text-primary transition-colors">
+                <a href="tel:+4989444438872" className="hover:text-primary transition-colors">
                   Tel: 089 444438872
                 </a>
               </p>

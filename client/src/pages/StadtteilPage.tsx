@@ -635,7 +635,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                  <a href="tel:+498912274043" data-testid="button-call-stadtteil-hero">
+                  <a href="tel:+4989444438872" data-testid="button-call-stadtteil-hero">
                     <Phone className="w-4 h-4 mr-2" />
                     Jetzt anrufen
                   </a>
@@ -731,7 +731,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                   </ul>
                   <div className="mt-4 pt-4 border-t">
                     <Button className="w-full" asChild>
-                      <a href="tel:+498912274043" data-testid="button-call-garantie">
+                      <a href="tel:+4989444438872" data-testid="button-call-garantie">
                         <Phone className="w-4 h-4 mr-2" />
                         089 444438872
                       </a>
@@ -780,7 +780,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+498912274043" data-testid="button-call-stadtteil-cta">
+                <a href="tel:+4989444438872" data-testid="button-call-stadtteil-cta">
                   <Phone className="w-4 h-4 mr-2" />
                   089 444438872
                 </a>

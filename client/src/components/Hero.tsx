@@ -65,7 +65,7 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
-              <a href="tel:+498912274043">
+              <a href="tel:+4989444438872">
                 <Phone className="w-5 h-5" />
                 Jetzt anrufen
               </a>

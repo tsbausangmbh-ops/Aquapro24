@@ -21,7 +21,7 @@ website: https://aquapro24.de
 language: de-DE
 
 ## CONTACT INFORMATION
-phone: +49 152 12274043
+phone: +49 89 444438872
 phone_display: 089 444438872
 email: info@aquapro24.de
 emergency_hotline: 089 444438872

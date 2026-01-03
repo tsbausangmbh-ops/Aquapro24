@@ -89,7 +89,7 @@ export default function BarrierefreiheitPage() {
 
               <div className="flex flex-wrap gap-3">
                 <Button asChild className="bg-white text-primary hover:bg-white/90">
-                  <a href="tel:+498912274043" data-testid="button-call-accessibility">
+                  <a href="tel:+4989444438872" data-testid="button-call-accessibility">
                     <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
                     089 444438872
                   </a>
@@ -212,7 +212,7 @@ export default function BarrierefreiheitPage() {
                 </p>
                 <div className="space-y-3">
                   <a 
-                    href="tel:+498912274043" 
+                    href="tel:+4989444438872" 
                     className="flex items-center gap-2 text-primary hover:underline"
                     data-testid="link-accessibility-phone"
                   >

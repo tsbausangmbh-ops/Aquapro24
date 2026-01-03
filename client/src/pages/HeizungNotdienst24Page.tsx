@@ -161,7 +161,7 @@ export default function HeizungNotdienst24Page() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                  <a href="tel:+498912274043" data-testid="button-call-heizung-notdienst-24">
+                  <a href="tel:+4989444438872" data-testid="button-call-heizung-notdienst-24">
                     <Phone className="w-4 h-4 mr-2" />
                     089 444438872
                   </a>
@@ -226,7 +226,7 @@ export default function HeizungNotdienst24Page() {
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
                     <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                      <a href="tel:+498912274043" data-testid="button-call-heizung-notdienst-24-2">
+                      <a href="tel:+4989444438872" data-testid="button-call-heizung-notdienst-24-2">
                         <Phone className="w-4 h-4 mr-2" />
                         Jetzt anrufen
                       </a>

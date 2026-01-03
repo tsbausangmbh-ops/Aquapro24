@@ -34,7 +34,7 @@ export default function NotFound() {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <a href="tel:+498912274043">
+                <a href="tel:+4989444438872">
                   <Phone className="w-4 h-4 mr-2" />
                   Notdienst anrufen
                 </a>

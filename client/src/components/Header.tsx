@@ -65,7 +65,7 @@ export default function Header() {
               <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
             <a 
-              href="tel:+498912274043" 
+              href="tel:+4989444438872" 
               className="flex flex-col items-center text-center hover:underline"
               data-testid="link-emergency-phone"
               aria-label="Jetzt anrufen: 089 444438872"

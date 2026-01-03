@@ -113,7 +113,7 @@ export default function DatenschutzPage() {
                   E-Mail-Adresse: <a href="mailto:info@aquapro24.de" className="text-secondary hover:underline">info@aquapro24.de</a>
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  Telefon: <a href="tel:+498912274043" className="text-secondary hover:underline">089 444438872</a>
+                  Telefon: <a href="tel:+4989444438872" className="text-secondary hover:underline">089 444438872</a>
                 </p>
                 <p className="text-muted-foreground mb-2">
                   USt-IdNr: folgt
@@ -735,7 +735,7 @@ export default function DatenschutzPage() {
                   info@aquapro24.de
                 </a>
                 <a 
-                  href="tel:+498912274043" 
+                  href="tel:+4989444438872" 
                   className="inline-flex items-center gap-2 text-secondary hover:underline"
                   data-testid="link-privacy-phone"
                 >

@@ -245,7 +245,7 @@ export default function FAQPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+498912274043" data-testid="button-call-faq">
+                  <a href="tel:+4989444438872" data-testid="button-call-faq">
                     <Phone className="w-5 h-5 mr-2" />
                     Kostenlos beraten lassen
                   </a>
@@ -270,7 +270,7 @@ export default function FAQPage() {
             
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                <a href="tel:+498912274043" data-testid="button-call-bottom">
+                <a href="tel:+4989444438872" data-testid="button-call-bottom">
                   <Phone className="w-5 h-5 mr-2" />
                   089 444438872
                 </a>

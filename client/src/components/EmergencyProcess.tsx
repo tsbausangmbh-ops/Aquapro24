@@ -164,7 +164,7 @@ export default function EmergencyProcess({ serviceType, title, subtitle }: Emerg
               <p className="text-muted-foreground text-sm">24/7 erreichbar - auch nachts und am Wochenende</p>
             </div>
             <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-              <a href="tel:+498912274043" data-testid="button-emergency-call">
+              <a href="tel:+4989444438872" data-testid="button-emergency-call">
                 <Phone className="w-4 h-4 mr-2" />
                 089 444438872
               </a>

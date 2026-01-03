@@ -156,7 +156,7 @@ export default function WaermepumpeMuenchenPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:+498912274043" data-testid="button-call-waermepumpe-muenchen">
+                  <a href="tel:+4989444438872" data-testid="button-call-waermepumpe-muenchen">
                     <Phone className="w-4 h-4 mr-2" />
                     089 444438872
                   </a>

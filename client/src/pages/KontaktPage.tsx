@@ -31,7 +31,7 @@ const contactInfo = [
     title: "Telefon",
     primary: "089 444438872",
     secondary: "24/7 Notdienst erreichbar",
-    action: "tel:+498912274043"
+    action: "tel:+4989444438872"
   },
   {
     icon: Mail,
