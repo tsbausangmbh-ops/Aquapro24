@@ -37,10 +37,12 @@ async function sendLeadNotificationEmail(leadData: any): Promise<void> {
     (formattedDate && formattedTime ? `${formattedDate}, ${formattedTime} Uhr` : formattedDate || formattedTime) || 
     "Wird noch vereinbart";
 
+  const problemText = leadData.problem || leadData.description || (leadData.serviceTypes?.join(', ')) || "Nicht angegeben";
+  
   const internalEmailText = `NEUE TERMINANFRAGE - AQUAPRO24
 
 URSACHE / PROBLEM:
-${leadData.problem || "Nicht angegeben"}
+${problemText}
 
 KONTAKTDATEN:
 Name: ${leadData.name}
@@ -90,7 +92,7 @@ vielen Dank für Ihre Anfrage bei AquaPro24!
 Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.
 
 IHRE ANFRAGE:
-${leadData.problem || "Sanitär-/Heizungsservice"}
+${problemText}
 
 IHRE KONTAKTDATEN:
 Telefon: ${leadData.phone}
@@ -1101,12 +1103,12 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
           email: email.trim(),
           phone: phone?.trim() || "",
           address: "",
-          service: "Ratgeber Download",
-          message: `Ratgeber PDF per E-Mail angefordert (Vorname: ${vorname.trim()}, Nachname: ${nachname.trim()})`,
+          problem: `Ratgeber Download (Vorname: ${vorname.trim()}, Nachname: ${nachname.trim()})`,
           preferredDate: "",
           preferredTime: "",
           urgency: "normal",
-          source: "ratgeber"
+          source: "ratgeber",
+          createdAt: new Date()
         });
       } catch (leadError) {
         console.error("Error saving ratgeber lead:", leadError);
