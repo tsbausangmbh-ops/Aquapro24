@@ -251,7 +251,7 @@ export default function RatgeberPage() {
       <SEO 
         title="Sanitär Ratgeber München | Profi-Tipps"
         description="Sanitär Ratgeber München: Tipps zu Heizung, Bad & Haustechnik – Expertenwissen für Hausbesitzer."
-        canonical="https://kshw-muenchen.de/ratgeber"
+        canonical="https://aquapro24.de/ratgeber"
         keywords="Wasserschaden Erste Hilfe München, Heizung richtig entlüften Anleitung, Badsanierung planen Checkliste, Wärmepumpe Förderung 2025 beantragen, Heizkosten sparen Tipps München, Rohrbruch was tun Soforthilfe, BAFA Antrag richtig stellen"
       />
       <Header />
