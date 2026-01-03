@@ -1182,7 +1182,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
 }
 
 function generateRatgeberPDF(): Buffer {
-  const pdfPath = path.join(process.cwd(), "attached_assets", "AquaPro24_Ratgeber_Kleine_Probleme_Heizung_Sanitaer_FINAL_LANG_1767456424256.pdf");
+  const pdfPath = path.join(process.cwd(), "attached_assets", "AquaPro24_Ratgeber_Kleine_Probleme_Heizung_Sanitaer_FINAL_LANG_1767460997894.pdf");
   
   if (fs.existsSync(pdfPath)) {
     return fs.readFileSync(pdfPath);
