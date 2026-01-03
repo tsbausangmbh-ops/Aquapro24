@@ -15,7 +15,7 @@ export default function Impressum() {
         title="Impressum AquaPro 24 – Sanitär Heizung München | Mustafa Sakar"
         description="Impressum und rechtliche Angaben: AquaPro 24, Inhaber Mustafa Sakar, Hardenbergstr. 4, 80992 München. Kontakt und Ansprechpartner."
         canonical="https://aquapro24.de/impressum"
-        keywords="Impressum, AquaPro 24, KSHW München, Sanitär München, Heizung München, Kontakt"
+        keywords="Impressum AquaPro 24 München, Mustafa Sakar Inhaber, Hardenbergstr 4 München 80992, Partnernetzwerk Sanitär Heizung, Kontakt Klempner München, Einzelunternehmer Handwerk, Angaben DDG Pflichtangaben"
       />
       <Header />
       <main id="main-content">

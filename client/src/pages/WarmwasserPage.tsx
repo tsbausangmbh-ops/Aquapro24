@@ -142,7 +142,7 @@ export default function WarmwasserPage() {
         title="Durchlauferhitzer München | Boiler Reparatur & Installation"
         description="Durchlauferhitzer München: Kein Warmwasser? Boiler defekt? Schnelle Reparatur & Installation. Festpreis ab 120€."
         canonical="https://aquapro24.de/warmwasser"
-        keywords="Durchlauferhitzer München, Boiler München, Warmwasserspeicher München, Warmwasser Reparatur München"
+        keywords="Durchlauferhitzer München Installation, Boiler defekt Reparatur München, Warmwasserspeicher Austausch Festpreis, Kein Warmwasser Notdienst 24h, Durchlauferhitzer Stiebel Eltron Vaillant, Boiler Entkalkung Wartung München, Warmwasser Therme reparieren"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }

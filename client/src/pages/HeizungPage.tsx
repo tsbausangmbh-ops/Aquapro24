@@ -141,7 +141,7 @@ export default function HeizungPage() {
         title="Heizung und Heizungsinstallateur München – Notdienst & Wartung 24/7"
         description="Heizung & Heizungsinstallateur München: Heizung ausgefallen, Therme defekt? Schnelle Reparatur, Wartung & Notdienst. Festpreis ab 154€."
         canonical="https://aquapro24.de/heizung"
-        keywords="Heizung München, Heizungsinstallateur München, Heizung Notdienst München, Heizungsreparatur München, Heizungswartung München, Heizung kaputt München"
+        keywords="Heizung Notdienst München 24h, Heizungswartung ab 154€ Festpreis, Viessmann Vaillant Buderus Reparatur, Gasheizung tauschen Förderung, Thermostat Smart Tado Netatmo, Fußbodenheizung nachrüsten München, Heizkörper entlüften Ventil wechseln"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }

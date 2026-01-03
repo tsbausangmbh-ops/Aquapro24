@@ -140,7 +140,7 @@ export default function WaermepumpePage() {
         title="Wärmepumpe München | Bis 70% BAFA Förderung 2025"
         description="Wärmepumpe München: Bis 70% Förderung, Installation in 2-3 Tagen. Viessmann, Vaillant, Buderus. Jetzt Beratung!"
         canonical="https://aquapro24.de/waermepumpe"
-        keywords="Wärmepumpe München, Wärmepumpe Förderung 2025, BAFA Förderung Wärmepumpe, Luft-Wasser-Wärmepumpe München"
+        keywords="Wärmepumpe BAFA 70% Förderung 2025, Luft-Wasser-Wärmepumpe München, Viessmann Vaillant Buderus Installation, Wärmepumpe Altbau geeignet, Heizkosten sparen 50% München, Erdwärmepumpe Bohrung München, Wärmepumpe Förderantrag kostenlos"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" }

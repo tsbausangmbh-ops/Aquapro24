@@ -252,7 +252,7 @@ export default function RatgeberPage() {
         title="Sanitär Ratgeber München | Profi-Tipps"
         description="Sanitär Ratgeber München: Tipps zu Heizung, Bad & Haustechnik – Expertenwissen für Hausbesitzer."
         canonical="https://kshw-muenchen.de/ratgeber"
-        keywords="Wasserschaden was tun München, Ratgeber Badsanierung Schwabing, Tipps Heizungswartung Bogenhausen, Wärmepumpe Förderung Bayern 2024, Sanitär Tipps Sendling, Ratgeber Pasing, Tipps Maxvorstadt, Guides Haidhausen, Ratgeber Neuhausen"
+        keywords="Wasserschaden Erste Hilfe München, Heizung richtig entlüften Anleitung, Badsanierung planen Checkliste, Wärmepumpe Förderung 2025 beantragen, Heizkosten sparen Tipps München, Rohrbruch was tun Soforthilfe, BAFA Antrag richtig stellen"
       />
       <Header />
       <main id="main-content">

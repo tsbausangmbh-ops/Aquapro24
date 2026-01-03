@@ -367,7 +367,7 @@ export default function TerminPage() {
         title="Handwerker Termin München | Online buchen"
         description="Online Termin buchen in München: Sanitär & Heizung einfach online anfragen – Wunschzeit auswählen & bestätigen."
         canonical="https://aquapro24.de/termin"
-        keywords="Termin buchen München, Sanitär Termin, Heizung Termin, Klempner München online buchen"
+        keywords="Klempner Termin online buchen München, Sanitär Wunschtermin Echtzeit, Heizung Termin Wochenende möglich, Handwerker Terminbestätigung sofort, Badsanierung Beratungstermin München, Wärmepumpe Vor-Ort-Termin, Notdienst Termin 24h verfügbar"
       />
       <Header />
       <main id="main-content">

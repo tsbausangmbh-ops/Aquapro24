@@ -257,7 +257,7 @@ export default function Home() {
         title="Münchner Sanitär und Heizung – Klempner Notdienst 24/7"
         description="Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!"
         canonical="https://aquapro24.de"
-        keywords="Klempner München Notdienst, Sanitär ab 92€, Rohrreinigung ab 81€, Heizung reparieren ab 154€, Rohrbruch München, WC verstopft Soforthilfe, Wasserhahn wechseln ab 80€, Durchlauferhitzer ab 600€, Badsanierung München ab 16.000€, Wärmepumpe 70% BAFA, Grohe Hansgrohe Montage, Viessmann Vaillant Buderus Wolf"
+        keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrreinigung ab 81€ Festpreis, Heizung Notdienst München sofort, Rohrbruch Soforthilfe 60 Minuten, Badsanierung Komplettpreis München, Wärmepumpe BAFA 70% Förderung"
         speakable={{ cssSelector: ["h1", "[data-testid='button-call-hero']", ".text-white\\/90", ".text-white\\/80"] }}
         aiSummary="AquaPro 24 München: Klempner Notdienst 24/7, 45-60 Min. vor Ort. Festpreise: Sanitär ab 92€, Rohrreinigung ab 81€, Heizung ab 154€. 2.800+ Kunden seit 2005, 4.9/5 Sterne. Tel: 0152 12274043"
         serviceSchema={{

@@ -142,7 +142,7 @@ export default function HaustechnikPage() {
         title="Haustechnik München | Gas, Wasser, Lüftung komplett"
         description="Haustechnik München: Wasser-, Gas- & Lüftungsinstallation vom Fachbetrieb. Alles aus einer Hand. Jetzt beraten lassen!"
         canonical="https://aquapro24.de/haustechnik"
-        keywords="Haustechnik München, Gasinstallation München, Lüftungsanlage München, Smart Home München"
+        keywords="Haustechnik München komplett, Gasinstallation DVGW zertifiziert, Lüftungsanlage KWL BAFA Förderung, Smart Home Tado Netatmo, Wasserinstallation Neubau München, Gebäudetechnik aus einer Hand, Haustechnik Planung Festpreis"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Haustechnik", url: "https://aquapro24.de/haustechnik" }

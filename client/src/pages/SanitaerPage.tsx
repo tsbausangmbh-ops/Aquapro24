@@ -142,7 +142,7 @@ export default function SanitaerPage() {
         title="Sanitär und Sanitärinstallateur München – Klempner Notdienst 24/7"
         description="Sanitär & Sanitärinstallateur München: Rohrbruch, Abfluss verstopft, Wasserhahn tropft? Schnelle Hilfe, Festpreis ab 92€. Jetzt anrufen!"
         canonical="https://aquapro24.de/sanitaer"
-        keywords="Sanitär München, Sanitärinstallateur München, Klempner München, Installateur München, Sanitär Notdienst München, Rohrbruch München, Abfluss verstopft München"
+        keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrbruch Soforthilfe München, Wasserhahn wechseln Grohe Hansgrohe, Leckortung zerstörungsfrei München, WC montieren Geberit Villeroy, Sanitärinstallateur DIN 1988"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }

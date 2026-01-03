@@ -141,7 +141,7 @@ export default function RohrreinigungPage() {
         title="Rohrreinigung München | Abfluss verstopft 24/7"
         description="Rohrreinigung München: Abfluss verstopft, WC verstopft? 60 Min. Notdienst, Festpreis ab 81€. Jetzt anrufen!"
         canonical="https://aquapro24.de/rohrreinigung"
-        keywords="Rohrreinigung München, Abfluss verstopft München, Kanalreinigung München, WC verstopft München"
+        keywords="Rohrreinigung München ab 81€, Abfluss verstopft Notdienst 24h, WC verstopft Soforthilfe München, Kanalreinigung Hochdruckspülung, Kamerainspektion Rohr München, Verstopfung lösen ohne Chemie, Rohrbruch Notfall 60 Minuten"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Rohrreinigung", url: "https://aquapro24.de/rohrreinigung" }

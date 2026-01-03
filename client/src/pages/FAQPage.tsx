@@ -198,7 +198,7 @@ export default function FAQPage() {
         title="FAQ Sanitär & Heizung München – Preise & Tipps"
         description="Sanitär FAQ München: Antworten zu Preisen, Notdienst & Reparaturen – verständlich erklärt vom Fachbetrieb."
         canonical="https://kshw-muenchen.de/faq"
-        keywords="FAQ Sanitär München, Fragen Heizung Schwabing, Badsanierung Bogenhausen, Wärmepumpe Förderung Bayern, Sanitär Sendling, Klempner Pasing, Maxvorstadt, Haidhausen, Neuhausen"
+        keywords="Klempner Preise München Festpreis, Sanitär Kosten transparent erklärt, Heizung Reparatur was kostet, Notdienst München Kosten vorab, Badsanierung Preise Komplettpaket, Wärmepumpe BAFA Förderung 2025, Kostenvoranschlag verbindlich gratis"
       />
       <Header />
       <main id="main-content">

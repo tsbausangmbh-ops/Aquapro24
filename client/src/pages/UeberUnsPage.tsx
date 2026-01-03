@@ -230,7 +230,7 @@ export default function UeberUnsPage() {
         title="Sanitär & Heizung München | Partnernetzwerk seit 2005"
         description="Sanitär & Heizung München: Geprüftes Partnernetzwerk, Erfahrung seit 2005 & zuverlässige Fachbetriebe."
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="Über uns AquaPro 24 München, Partnernetzwerk Sanitär Schwabing, Heizung Fachbetrieb Bogenhausen, Installateur Sendling, Fachbetrieb Pasing, Sanitär Team Maxvorstadt, Heizungsbauer Haidhausen, Klempner Neuhausen, Sanitär Notdienst Trudering, Handwerker Laim, Installateur Giesing, Sanitär Moosach, Heizungsmonteur Milbertshofen"
+        keywords="AquaPro 24 Partnernetzwerk seit 2005, Geprüfte Fachbetriebe München, Sanitär Heizung aus einer Hand, 2800 zufriedene Kunden München, Festpreisgarantie alle Arbeiten, 24h Notdienst ganz München, Meisterbetriebe Sanitär Heizung"
         structuredData={aboutPageSchema}
       />
       <Header />

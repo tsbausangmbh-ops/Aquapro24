@@ -154,7 +154,7 @@ export default function BadPage() {
         title="Badsanierung München | Komplett & hochwertig"
         description="Badsanierung in München: Komplett, modern & stressfrei. Planung, Ausführung & Koordination aus einer Hand. Jetzt beraten lassen!"
         canonical="https://aquapro24.de/bad"
-        keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren, Komplettbad München, barrierefreies Bad München, Badumbau München"
+        keywords="Badsanierung München Komplettpreis, Barrierefreies Bad KfW Förderung, Walk-in Dusche bodengleich, Badumbau Festpreis 14 Tage, Villeroy Boch Duravit Keramag, Freistehende Badewanne München, Bad renovieren Altbau München"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Badsanierung", url: "https://aquapro24.de/bad" }
