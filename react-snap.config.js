@@ -41,21 +41,21 @@ module.exports = {
   // Don't auto-crawl, use explicit include list
   crawl: false,
   
-  // All 62 routes to pre-render
+  // All 62 routes matching App.tsx exactly
   include: [
     // Homepage
     "/",
     
-    // Core Service Pages (10)
+    // Core Service Pages (9)
     "/sanitaer",
     "/heizung",
     "/bad",
     "/badsanierung",
     "/waermepumpe",
+    "/haustechnik",
     "/rohrreinigung",
     "/armaturen",
     "/warmwasser",
-    "/haustechnik",
     
     // 24h Notdienst (3)
     "/sanitaer-notdienst-24",
@@ -75,14 +75,16 @@ module.exports = {
     "/foerderantrag-heizung",
     "/foerderrechner",
     
-    // Utility Pages (5)
+    // Buchung & Kontakt (2)
     "/termin",
     "/kontakt",
+    
+    // Informationsseiten (3)
     "/ueber-uns",
     "/faq",
     "/ratgeber",
     
-    // Premium Districts (7)
+    // Premium Stadtteile (7)
     "/schwabing",
     "/bogenhausen",
     "/maxvorstadt",
@@ -91,7 +93,7 @@ module.exports = {
     "/lehel",
     "/solln",
     
-    // Standard Districts (18)
+    // Standard Stadtteile (19)
     "/sendling",
     "/pasing",
     "/neuhausen",
