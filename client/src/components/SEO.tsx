@@ -356,6 +356,9 @@ export default function SEO({
   useEffect(() => {
     document.title = title;
     
+    // Auto-generate canonical if not provided - always point to self
+    const effectiveCanonical = canonical || `https://aquapro24.de${window.location.pathname}`;
+    
     const updateMeta = (name: string, content: string, property = false) => {
       const attr = property ? "property" : "name";
       let meta = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
@@ -376,7 +379,7 @@ export default function SEO({
     updateMeta("og:locale", "de_DE", true);
     updateMeta("og:site_name", "AquaPro 24 München", true);
     if (ogImage) updateMeta("og:image", ogImage, true);
-    if (canonical) updateMeta("og:url", canonical, true);
+    updateMeta("og:url", effectiveCanonical, true);
     
     updateMeta("twitter:card", "summary_large_image");
     updateMeta("twitter:title", title);
@@ -479,14 +482,12 @@ export default function SEO({
     updateMeta("coverage", "München, Bayern, Deutschland");
 
     let canonicalEl = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (canonical) {
-      if (!canonicalEl) {
-        canonicalEl = document.createElement("link");
-        canonicalEl.rel = "canonical";
-        document.head.appendChild(canonicalEl);
-      }
-      canonicalEl.href = canonical;
+    if (!canonicalEl) {
+      canonicalEl = document.createElement("link");
+      canonicalEl.rel = "canonical";
+      document.head.appendChild(canonicalEl);
     }
+    canonicalEl.href = effectiveCanonical;
 
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
@@ -690,7 +691,7 @@ export default function SEO({
       const speakableSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "@id": canonical || "https://aquapro24.de",
+        "@id": effectiveCanonical,
         "name": title,
         "speakable": {
           "@type": "SpeakableSpecification",
