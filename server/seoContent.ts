@@ -370,24 +370,25 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">AquaPro24 ist ein <strong>Partnernetzwerk für Sanitär und Heizung</strong> in München. Seit 2005 koordinieren wir erfahrene Handwerksbetriebe für schnelle und zuverlässige Hilfe.</p>
         
-        <h2>Unsere Geschichte</h2>
+        <h2>AquaPro24 Geschichte München: Seit 2005 für Sie da</h2>
         <p>Gegründet von Mustafa Sakar, hat sich AquaPro24 zum vertrauenswürdigen Partner für Sanitär- und Heizungsarbeiten in München entwickelt.</p>
         
-        <h2>Unsere Zahlen</h2>
-        <ul>
-          <li>Über 2.847 zufriedene Kunden</li>
-          <li>4.9/5 Sterne Bewertung</li>
-          <li>Partnernetzwerk seit 2005</li>
-          <li>26 Münchner Stadtteile + 40km Umkreis</li>
-        </ul>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Klempner München</strong></span>: 2.847+ zufriedene Kunden</h3>
+        <p>Über 2.847 zufriedene Kunden vertrauen AquaPro24 bei Sanitär- und Heizungsproblemen.</p>
         
-        <h2>Unsere Werte</h2>
-        <ul>
-          <li>Zuverlässigkeit – pünktlich und verlässlich</li>
-          <li>Transparenz – Festpreise ohne versteckte Kosten</li>
-          <li>Qualität – 2 Jahre Garantie auf alle Arbeiten</li>
-          <li>Schnelligkeit – Notdienst in 45-60 Minuten</li>
-        </ul>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Installateure München</strong></span>: 4.9/5 Sterne Bewertung</h3>
+        <p>Unsere Handwerker werden durchschnittlich mit 4.9/5 Sternen bewertet.</p>
+        
+        <h2>AquaPro24 Werte München: Zuverlässigkeit & Qualität</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Sanitär Festpreise München</strong></span>: Transparenz garantiert</h3>
+        <p>Keine versteckten Kosten. Sie wissen vorher, was es kostet.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Handwerker Garantie München</strong></span>: 2 Jahre auf alle Arbeiten</h3>
+        <p>Qualität, die überzeugt. 2 Jahre Garantie auf alle Leistungen.</p>
+        
+        <h2>Einsatzgebiet München: 26 Stadtteile + 40km Umkreis</h2>
+        <p><a href="/kontakt">Kontakt aufnehmen</a></p>
       </section>
     `
   },
@@ -659,8 +660,22 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:24px;color:#f97316"><strong>24/7 Notdienst: <a href="tel:+4989444438872">089 444438872</a></strong></p>
         <p style="font-size:20px"><strong>Sanitär-Notdienst</strong> rund um die Uhr in München. Schnelle Hilfe bei Rohrbruch, Wasserschaden und verstopftem Abfluss.</p>
-        <h2>Notfall-Leistungen</h2>
-        <ul><li>Rohrbruch Soforthilfe</li><li>Wasserschaden Beseitigung</li><li>Verstopfter Abfluss</li><li>WC Notfall</li></ul>
+        
+        <h2>Sanitär Notfall-Leistungen München: 24/7 Soforthilfe</h2>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Rohrbruch Soforthilfe München</strong></span>: Schnelle Reparatur</h3>
+        <p>Rohrbruch? Wir sind in 30-45 Minuten bei Ihnen. Wasserzufuhr absperren und Schaden begrenzen.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Wasserschaden Beseitigung München</strong></span>: Sofortmaßnahmen</h3>
+        <p>Wasserschaden im Haus? Wir stoppen das Leck und koordinieren die Trocknung.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Abfluss verstopft Notdienst München</strong></span>: 24h erreichbar</h3>
+        <p>Verstopfter Abfluss auch nachts und am Wochenende. Küche, Bad, WC – schnelle Hilfe.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>WC Notfall München</strong></span>: Toilette überläuft</h3>
+        <p>WC verstopft und überläuft? Notfall-Service rund um die Uhr verfügbar.</p>
+        
+        <h2>Sanitär Notdienst Anfahrt München: 30-45 Minuten</h2>
         <p><a href="/notdienst-muenchen">Alle Notdienst-Infos</a></p>
       </section>
     `
@@ -674,8 +689,23 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:24px;color:#f97316"><strong>24/7 Heizung Notdienst: <a href="tel:+4989444438872">089 444438872</a></strong></p>
         <p style="font-size:20px"><strong>Heizungs-Notdienst</strong> rund um die Uhr in München. Schnelle Hilfe wenn die Heizung ausgefallen ist.</p>
-        <h2>Notfall-Leistungen Heizung</h2>
-        <ul><li>Heizung ausgefallen</li><li>Kein Warmwasser</li><li>Therme defekt</li><li>Brenner Störung</li></ul>
+        
+        <h2>Heizung Notfall-Leistungen München: 24/7 Soforthilfe</h2>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Heizung ausgefallen München</strong></span>: Schnelle Reparatur</h3>
+        <p>Heizung kalt? Wir sind in 30-45 Minuten bei Ihnen. Alle Hersteller, alle Modelle.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Kein Warmwasser München</strong></span>: Sofort-Hilfe</h3>
+        <p>Kein Warmwasser? Wir prüfen Therme, Brenner und Warmwasserspeicher.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Therme defekt München</strong></span>: Notdienst alle Marken</h3>
+        <p>Gastherme defekt? Viessmann, Buderus, Vaillant, Wolf – wir reparieren alle Marken.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Brenner Störung München</strong></span>: 24h Reparatur</h3>
+        <p>Brennerstörung? Wir beheben den Fehler noch am selben Tag – auch nachts und am Wochenende.</p>
+        
+        <h2>Heizung Notdienst Anfahrt München: 30-45 Minuten</h2>
+        <p><a href="tel:+4989444438872">Jetzt anrufen: 089 444438872</a></p>
       </section>
     `
   },
@@ -687,8 +717,22 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Sanitär-Service</strong> in München – Ihr zuverlässiger Partner für alle Sanitärarbeiten.</p>
-        <h2>Unsere Sanitär-Leistungen</h2>
-        <ul><li><a href="/rohrreinigung">Rohrreinigung ab 81€</a></li><li><a href="/armaturen">Armaturen Montage</a></li><li><a href="/warmwasser">Warmwasser</a></li><li><a href="/bad">Badsanierung</a></li></ul>
+        
+        <h2>Sanitär-Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrreinigung München</strong></span>: Abfluss verstopft ab 81€</h3>
+        <p>Professionelle <a href="/rohrreinigung">Rohrreinigung</a> für Küche, Bad, WC. Schnelle Hilfe bei verstopften Abflüssen.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Armaturen Montage München</strong></span>: Wasserhahn wechseln</h3>
+        <p><a href="/armaturen">Armaturen Montage</a> und Reparatur. Alle Marken: Grohe, Hansgrohe, Hansa, Ideal Standard.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Warmwasser München</strong></span>: Boiler & Durchlauferhitzer</h3>
+        <p><a href="/warmwasser">Warmwasser</a>-Service: Boiler, Durchlauferhitzer, Warmwasserspeicher Installation & Reparatur.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Sanitär Notdienst München</strong></span>: 24/7 erreichbar</h3>
+        <p>Rohrbruch, Wasserschaden, verstopftes WC? Wir sind rund um die Uhr für Sie da.</p>
+        
+        <h2>Sanitär Preise München: Festpreisgarantie</h2>
         <p><a href="/termin">Termin buchen</a> | <a href="tel:+4989444438872">089 444438872</a></p>
       </section>
     `
@@ -701,8 +745,23 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Heizungs-Service</strong> in München – Reparatur, Wartung und Modernisierung vom Fachmann.</p>
-        <h2>Heizungs-Leistungen</h2>
-        <ul><li>Heizungsreparatur ab 154€</li><li>Jahreswartung</li><li><a href="/waermepumpe">Wärmepumpen</a></li><li><a href="/foerderung">Förderung bis 70%</a></li></ul>
+        
+        <h2>Heizungs-Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Heizungsreparatur München</strong></span>: Alle Marken ab 154€</h3>
+        <p>Professionelle Heizungsreparatur für alle Hersteller: Viessmann, Buderus, Vaillant, Wolf, Junkers.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Heizungswartung München</strong></span>: Jahresservice vom Fachmann</h3>
+        <p>Regelmäßige Wartung für optimale Effizienz und lange Lebensdauer Ihrer Heizungsanlage.</p>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Heizungsmodernisierung München</strong></span>: Mit bis zu 70% Förderung</h3>
+        <p>Heizungstausch mit BAFA-Förderung. <a href="/waermepumpe">Wärmepumpen</a> und <a href="/foerderung">Förderung bis 70%</a>.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Heizung Notdienst München</strong></span>: 24/7 Soforthilfe</h3>
+        <p>Heizungsausfall? Wir sind rund um die Uhr für Sie da. Schnelle Hilfe garantiert.</p>
+        
+        <h2>Heizung Preise München: Festpreisgarantie</h2>
+        <p><a href="/termin">Termin buchen</a> | <a href="tel:+4989444438872">089 444438872</a></p>
       </section>
     `
   },
@@ -725,7 +784,23 @@ export const seoPages: Record<string, PageSEO> = {
     keywords: ['Wärmepumpe München', 'BAFA Förderung', 'Heizungstausch München'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <p><strong>Wärmepumpen</strong> in München – Installation mit bis zu 70% Förderung.</p>
+        <p style="font-size:20px"><strong>Wärmepumpen</strong> in München – Installation mit bis zu 70% Förderung.</p>
+        
+        <h2>Wärmepumpen-Service München: Komplett-Paket</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Luft-Wasser-Wärmepumpe München</strong></span>: Einfache Installation</h3>
+        <p>Luft-Wasser-Wärmepumpen sind die beliebteste Wahl. Keine Erdarbeiten notwendig.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Erdwärmepumpe München</strong></span>: Höchste Effizienz</h3>
+        <p>Erdwärmepumpen nutzen konstante Bodentemperatur für maximale Effizienz.</p>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>BAFA Förderung Wärmepumpe München</strong></span>: Bis 70% Zuschuss</h3>
+        <p>Mit <a href="/foerderung">BAFA-Förderung</a> bis zu 70% der Kosten sparen. Wir helfen beim Antrag.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Wärmepumpe Beratung München</strong></span>: Kostenlos vor Ort</h3>
+        <p>Kostenlose Beratung vor Ort. Wir prüfen Ihr Haus und empfehlen die optimale Lösung.</p>
+        
+        <h2>Wärmepumpe Preise München: Mit Förderung kalkulieren</h2>
         <p><a href="/waermepumpe">Alle Infos</a> | <a href="/foerderung">Förderung</a> | <a href="/termin">Beratung</a></p>
       </section>
     `
@@ -847,14 +922,24 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Unser <strong>Ratgeber</strong> mit Expertentipps zu Sanitär und Heizung.</p>
-        <h2>Beliebte Themen</h2>
-        <ul style="line-height:2">
-          <li><strong>Wasserschaden</strong> – Was tun bei Rohrbruch? Soforthilfe-Tipps</li>
-          <li><strong>Badsanierung</strong> – Planung, Kosten, Förderung</li>
-          <li><strong>Heizungswartung</strong> – Wann und warum?</li>
-          <li><strong>Wärmepumpe</strong> – Lohnt sich der Umstieg?</li>
-        </ul>
-        <h2>Fragen?</h2>
+        
+        <h2>Sanitär Ratgeber München: Beliebte Themen</h2>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Wasserschaden München</strong></span>: Was tun bei Rohrbruch?</h3>
+        <p>Soforthilfe-Tipps bei Wasserschaden: Haupthahn absperren, Strom abschalten, Notdienst rufen.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Badsanierung München</strong></span>: Planung, Kosten, Förderung</h3>
+        <p>Was kostet eine Badsanierung? Wie lange dauert sie? Welche Förderung gibt es?</p>
+        
+        <h2>Heizung Ratgeber München: Wichtige Themen</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Heizungswartung München</strong></span>: Wann und warum?</h3>
+        <p>Jährliche Wartung spart Heizkosten und verlängert die Lebensdauer Ihrer Heizung.</p>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Wärmepumpe München</strong></span>: Lohnt sich der Umstieg?</h3>
+        <p>Wärmepumpe vs. Gastherme: Kosten, Förderung, Vorteile im Vergleich.</p>
+        
+        <h2>Sanitär Beratung München: Wir helfen Ihnen</h2>
         <p>Rufen Sie uns an: <a href="tel:+4989444438872">089 444438872</a></p>
       </section>
     `
