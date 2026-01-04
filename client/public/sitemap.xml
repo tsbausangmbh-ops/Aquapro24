@@ -7,7 +7,7 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- AQUAPRO24.DE - XML-SITEMAP - 62 URLs -->
+  <!-- AQUAPRO24.DE - XML-SITEMAP - 61 URLs -->
 
   <!-- HOMEPAGE -->
   <url>
@@ -116,13 +116,6 @@
   </url>
   <url>
     <loc>https://aquapro24.de/heizung-muenchen</loc>
-    <lastmod>2025-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <mobile:mobile/>
-  </url>
-  <url>
-    <loc>https://aquapro24.de/badsanierung-muenchen</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
