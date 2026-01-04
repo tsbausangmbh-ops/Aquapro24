@@ -341,22 +341,70 @@ export const seoPages: Record<string, PageSEO> = {
     h1: 'FAQ Sanitär & Heizung München – Preise & Tipps',
     keywords: ['FAQ', 'Preise Klempner', 'Kosten Sanitär', 'Heizung Kosten'],
     content: `
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was kostet ein Klempner in München?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unsere Preise (netto): Rohrreinigung ab 81€, Sanitär-Reparaturen ab 92€, Heizungsreparatur ab 154€. Anfahrt München: 39€."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie schnell kommt der Notdienst?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Im Großraum München sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Arbeiten Sie auch am Wochenende?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unser Notdienst ist 24/7 erreichbar, auch an Wochenenden und Feiertagen. Reguläre Termine vergeben wir Mo-Fr 8-17 Uhr."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Förderung gibt es für Heizungen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Für den Heizungstausch gibt es bis zu 70% BAFA-Förderung (30% Basis + 20% Klimabonus + 30% Einkommensbonus)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bieten Sie Festpreise?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, wir arbeiten mit transparenten Festpreisen. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Kostenvoranschlag."
+            }
+          }
+        ]
+      }
+      </script>
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <h2>Häufige Fragen</h2>
+        <h2>Häufige Fragen Sanitär München: Preise & Antworten</h2>
         
-        <h3>Was kostet ein Klempner in München?</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Klempner Preise München</strong></span>: Was kostet ein Klempner?</h3>
         <p>Unsere Preise (netto): Rohrreinigung ab 81€, Sanitär-Reparaturen ab 92€, Heizungsreparatur ab 154€. Anfahrt München: 39€.</p>
         
-        <h3>Wie schnell kommt der Notdienst?</h3>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Notdienst Anfahrt München</strong></span>: Wie schnell kommt der Notdienst?</h3>
         <p>Im Großraum München sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen.</p>
         
-        <h3>Arbeiten Sie auch am Wochenende?</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Sanitär Wochenende München</strong></span>: Arbeiten Sie auch am Wochenende?</h3>
         <p>Unser Notdienst ist 24/7 erreichbar, auch an Wochenenden und Feiertagen. Reguläre Termine vergeben wir Mo-Fr 8-17 Uhr.</p>
         
-        <h3>Welche Förderung gibt es für Heizungen?</h3>
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Heizung Förderung München</strong></span>: Welche Förderung gibt es für Heizungen?</h3>
         <p>Für den Heizungstausch gibt es bis zu 70% BAFA-Förderung (30% Basis + 20% Klimabonus + 30% Einkommensbonus). <a href="/foerderung">Mehr Infos</a></p>
         
-        <h3>Bieten Sie Festpreise?</h3>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Klempner Festpreis München</strong></span>: Bieten Sie Festpreise?</h3>
         <p>Ja, wir arbeiten mit transparenten Festpreisen. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Kostenvoranschlag.</p>
       </section>
     `
@@ -1227,8 +1275,11 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
   }
 
-  // Add robots meta tag for indexing
-  html = html.replace('</head>', `  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />\n  </head>`);
+  // Replace robots meta tag with extended version
+  html = html.replace(
+    /<meta name="robots" content="[^"]*" \/>/,
+    `<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />`
+  );
 
   // Inject content into root div
   const fullContent = `
