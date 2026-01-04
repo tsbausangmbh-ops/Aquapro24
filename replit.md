@@ -144,12 +144,16 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 - **Semantische HTML-Struktur**: Header, Main, Footer mit korrekten Landmarks
 - **Barrierefreiheitserklärung**: Dedizierte Seite unter /barrierefreiheit
 
-### Pre-Rendering für SEO (December 2025)
-- **react-snap**: Statische HTML-Generierung beim Build für besseres Crawling
-- **Hydration Support**: main.tsx nutzt hydrateRoot() für pre-gerenderte Seiten
-- **Alle 65+ Seiten**: Homepage, Services, Stadtteile, Landing Pages werden pre-gerendert
-- **Crawler-Optimierung**: Google, Bing, und KI-Assistenten erhalten vollständiges HTML
-- **Build-Zeit Integration**: Pre-Rendering läuft automatisch nach dem Vite-Build
+### Server-Side Rendering für SEO (Januar 2026)
+- **Eigene SSR-Lösung**: `server/seoContent.ts` + `server/static.ts` für Bot-spezifisches Rendering
+- **Bot-Erkennung**: 60+ User-Agent Patterns (Google, Bing, AI-Bots, Social Crawlers)
+- **Route-spezifisches HTML**: Jede der 65+ Seiten erhält individuellen H1/H2/H3 Content
+- **Keyword-Highlighting**: Farbcodierte Keywords im SSR-Output
+  - Orange (#fff3e0): Service-Keywords (Sanitär, Heizung, Bad)
+  - Rot (#ffebee): Notdienst-Keywords (Rohrbruch, Wasserschaden, Heizungsausfall)
+  - Grün (#e8f5e9): Förderungs-Keywords (BAFA, KfW, Steuerbonus)
+- **Development + Production**: SSR funktioniert in beiden Umgebungen
+- **Middleware-Architektur**: Bot-Requests werden vor Vite abgefangen
 
 ### Performance Optimizations (December 2025)
 - **Font Loading**: Reduziert von 25+ auf 2 Schriftarten (Inter, Plus Jakarta Sans)
