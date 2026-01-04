@@ -2,7 +2,7 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-import prerender from "prerender-node";
+// import prerender from "prerender-node"; // Deaktiviert - eigene SSR-Lösung
 
 const app = express();
 const httpServer = createServer(app);
@@ -13,112 +13,12 @@ declare module "http" {
   }
 }
 
-// Prerender.io Middleware für SEO-Optimierung
-// Dient vorgerenderte HTML-Seiten an Suchmaschinen-Crawler und AI-Bots
-// Nur in Produktion aktiv - localhost wird von prerender.io als "url-invalid" abgelehnt
+// Prerender.io DEAKTIVIERT - Eigene SSR-Lösung in static.ts wird verwendet
+// Die eigene SSR liefert vollständiges HTML mit H1/H2/H3 Content für Crawler
 const isProduction = process.env.NODE_ENV === 'production';
-if (process.env.PRERENDER_TOKEN && isProduction) {
-  app.use(
-    prerender
-      .set('prerenderToken', process.env.PRERENDER_TOKEN)
-      .set('protocol', 'https')
-      .set('forwardHeaders', true)
-      // Zusätzliche Crawler-Agents für AI-Bots und Sprachassistenten
-      .set('crawlerUserAgents', [
-        // Suchmaschinen-Crawler (spezifische Bot-Namen, keine generischen Strings)
-        'Googlebot',
-        'Googlebot-Image',
-        'Googlebot-Video',
-        'Googlebot-News',
-        'Storebot-Google',
-        'Google-InspectionTool',
-        'GoogleOther',
-        'bingbot',
-        'msnbot',
-        'YandexBot',
-        'YandexImages',
-        'Baiduspider',
-        'Sogou web spider',
-        'DuckDuckBot',
-        'Qwantify',
-        'SeznamBot',
-        'Yeti',
-        'Daumoa',
-        // Social Media Crawler
-        'facebookexternalhit',
-        'Facebot',
-        'Twitterbot',
-        'LinkedInBot',
-        'Pinterest',
-        'Pinterestbot',
-        'WhatsApp',
-        'TelegramBot',
-        'Discordbot',
-        'Slackbot',
-        'Slack-ImgProxy',
-        'vkShare',
-        'redditbot',
-        'Tumblr',
-        'FlipboardProxy',
-        'XING-contenttabreceiver',
-        'SkypeUriPreview',
-        // AI Crawler und LLM Bots
-        'GPTBot',
-        'ChatGPT-User',
-        'OAI-SearchBot',
-        'ClaudeBot',
-        'Claude-Web',
-        'anthropic-ai',
-        'PerplexityBot',
-        'Google-Extended',
-        'cohere-ai',
-        'YouBot',
-        'CCBot',
-        'meta-externalagent',
-        'Meta-ExternalAgent',
-        'FacebookBot',
-        'AI2Bot',
-        'Applebot-Extended',
-        'Bytespider',
-        'Diffbot',
-        'omgilibot',
-        'Amazonbot',
-        'PetalBot',
-        // SEO Tools (spezifische Bot-Namen)
-        'SemrushBot',
-        'AhrefsBot',
-        'MJ12bot',
-        'DotBot',
-        'DataForSeoBot',
-        'BLEXBot',
-        'PaperLiBot',
-        // Voice Assistants (nur spezifische Bot-Namen)
-        'Applebot',
-        // SEO & Analytics Tools
-        'Chrome-Lighthouse',
-        'PTST',
-        'GTmetrix',
-        'W3C_Validator',
-        'rogerbot',
-        'Embedly',
-        'Quora Link Preview',
-        'Outbrain',
-        'bitlybot',
-        'Bitrix link preview',
-        // News & RSS Aggregatoren
-        'Feedfetcher-Google',
-        'Feedly',
-        'NewsBlur',
-        // E-Commerce & Local
-        'Google-Shopping-Quality'
-      ])
-  );
-  console.log('[prerender] Prerender.io middleware aktiviert für SEO & AI-Crawler');
-} else if (!isProduction) {
-  console.log('[prerender] Development-Modus - Prerender.io nur in Produktion aktiv');
-} else {
-  console.log('[prerender] PRERENDER_TOKEN nicht gesetzt - Prerender.io deaktiviert');
-}
+console.log(`[SSR] Eigene SSR-Lösung aktiv (${isProduction ? 'Produktion' : 'Entwicklung'})`);
+// Alte prerender.io Konfiguration (auskommentiert für Referenz):
+// if (process.env.PRERENDER_TOKEN && isProduction) { prerender... }
 
 app.use(
   express.json({
@@ -378,6 +278,54 @@ app.use((req, res, next) => {
   if (process.env.NODE_ENV === "production") {
     serveStatic(app);
   } else {
+    // Bot-SSR-Middleware für Entwicklung (vor Vite)
+    const fs = await import("fs");
+    const pathModule = await import("path");
+    const { generateStaticHTML, isBot } = await import("./seoContent");
+    
+    app.use((req, res, next) => {
+      // Nur GET-Anfragen für HTML-Seiten
+      if (req.method !== 'GET') return next();
+      
+      const reqPath = req.path;
+      
+      // Skip API, Assets und statische Dateien
+      if (reqPath.startsWith('/api') || 
+          reqPath.startsWith('/assets') || 
+          reqPath.startsWith('/src') ||
+          reqPath.startsWith('/@') ||
+          reqPath.includes('.')) {
+        return next();
+      }
+      
+      const userAgent = req.headers['user-agent'] || '';
+      
+      // Bot-Erkennung: SSR für Crawler
+      if (isBot(userAgent)) {
+        console.log(`[SSR-DEV] Bot erkannt: ${userAgent.substring(0, 50)}... für ${reqPath}`);
+        
+        try {
+          const clientTemplate = pathModule.resolve(
+            import.meta.dirname,
+            "..",
+            "client",
+            "index.html"
+          );
+          const template = fs.readFileSync(clientTemplate, 'utf-8');
+          const seoHtml = generateStaticHTML(reqPath, template);
+          
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.setHeader('X-SEO-Rendered', 'true');
+          return res.status(200).send(seoHtml);
+        } catch (e) {
+          console.error('[SSR-DEV] Fehler:', e);
+          return next();
+        }
+      }
+      
+      next();
+    });
+    
     const { setupVite } = await import("./vite");
     await setupVite(httpServer, app);
   }
