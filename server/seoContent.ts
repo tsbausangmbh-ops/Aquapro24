@@ -314,20 +314,23 @@ export const seoPages: Record<string, PageSEO> = {
     keywords: ['Kontakt', 'AquaPro24 München', 'Telefon', 'Adresse', 'Beratung'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <h2>Kontaktdaten</h2>
-        <p><strong>AquaPro24</strong><br>
-        Inhaber: Mustafa Sakar<br>
-        Hardenbergstr. 4<br>
-        80992 München</p>
+        <h2>Kontaktdaten AquaPro24 München: So erreichen Sie uns</h2>
         
-        <p><strong>Telefon:</strong> <a href="tel:+4989444438872">089 444438872</a> (24/7 Notdienst)</p>
-        <p><strong>E-Mail:</strong> info@aquapro24.de</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Sanitär Beratung München</strong></span>: Kostenlos & unverbindlich</h3>
+        <p><strong>AquaPro24</strong> – Inhaber: Mustafa Sakar<br>
+        Hardenbergstr. 4, 80992 München</p>
         
-        <h2>Öffnungszeiten</h2>
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Klempner Notdienst München</strong></span>: 24/7 erreichbar</h3>
+        <p><strong>Telefon:</strong> <a href="tel:+4989444438872">089 444438872</a> (24/7 Notdienst)<br>
+        <strong>E-Mail:</strong> info@aquapro24.de</p>
+        
+        <h2>Öffnungszeiten Sanitär München: Terminvereinbarung</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Handwerker Termin München</strong></span>: Mo-Fr 8:00-17:00</h3>
         <p>Terminvereinbarung: Mo-Fr 8:00 - 17:00 Uhr<br>
-        Notdienst: 24/7 erreichbar</p>
+        Notdienst: 24/7 erreichbar – auch an Feiertagen!</p>
         
-        <h2>Online Termin buchen</h2>
+        <h2>Online Termin buchen München: Schnell & einfach</h2>
         <p><a href="/termin">Jetzt Wunschtermin online buchen</a></p>
       </section>
     `
@@ -475,21 +478,26 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Nutzen Sie die <strong>staatliche Förderung</strong> für Ihren Heizungstausch – bis zu 70% Zuschuss möglich!</p>
         
-        <h2>BAFA Förderung 2025</h2>
-        <ul style="line-height:2">
-          <li><strong>Grundförderung:</strong> 30% für alle förderfähigen Heizungen</li>
-          <li><strong>Klimageschwindigkeitsbonus:</strong> +20% bei Austausch alter Öl-/Gasheizung</li>
-          <li><strong>Einkommensbonus:</strong> +30% bei Haushaltseinkommen unter 40.000€</li>
-          <li><strong>Maximal:</strong> Bis zu 70% Förderung kombinierbar</li>
-        </ul>
+        <h2>BAFA Förderung 2025 München: Bis zu 70% Zuschuss</h2>
         
-        <h2>KfW-Ergänzungskredit</h2>
-        <p>Zusätzlich zur BAFA-Förderung: Zinsgünstiger Kredit bis 120.000€ für die Restsumme.</p>
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>BAFA Grundförderung München</strong></span>: 30% für alle Heizungen</h3>
+        <p>30% Grundförderung für alle förderfähigen Heizungen: Wärmepumpe, Pelletheizung, Solarthermie.</p>
         
-        <h2>Steuerbonus Alternative</h2>
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Klimageschwindigkeitsbonus München</strong></span>: +20% Extra</h3>
+        <p>20% Bonus beim Austausch alter Öl- oder Gasheizungen. Schnell handeln lohnt sich!</p>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Einkommensbonus Heizung München</strong></span>: +30% für Haushalte</h3>
+        <p>30% Einkommensbonus bei Haushaltseinkommen unter 40.000€ jährlich.</p>
+        
+        <h2>KfW-Ergänzungskredit München: Zinsgünstig finanzieren</h2>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>KfW Heizungskredit München</strong></span>: Bis 120.000€</h3>
+        <p>Zusätzlich zur BAFA-Förderung: Zinsgünstiger KfW-Kredit bis 120.000€ für die Restsumme.</p>
+        
+        <h2>Steuerbonus Heizung München: Alternative zur BAFA</h2>
         <p>Alternativ zur BAFA: 20% der Kosten über 3 Jahre von der Steuer absetzen.</p>
         
-        <h2>Kostenloser Förderantrag-Service</h2>
+        <h2>Förderantrag Service München: Komplett kostenlos</h2>
         <p>Wir helfen Ihnen beim Antrag – <a href="/foerderantrag-heizung">komplett kostenlos</a>!</p>
         <p>Beratung: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
       </section>
@@ -504,19 +512,24 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Komplette <strong>Haustechnik-Lösungen</strong> für München – Gas, Wasser, Heizung, Lüftung und Smart Home aus einer Hand.</p>
         
-        <h2>Haustechnik-Leistungen</h2>
-        <ul style="line-height:2">
-          <li><strong>Gasinstallation</strong> – Gasleitungen, Gasgeräte, Sicherheitsprüfung</li>
-          <li><strong>Wasserinstallation</strong> – Trinkwasser, Abwasser, Regenwassernutzung</li>
-          <li><strong>Lüftungsanlagen</strong> – Kontrollierte Wohnraumlüftung, Wärmerückgewinnung</li>
-          <li><strong>Smart Home</strong> – Intelligente Heizungssteuerung, Leckage-Sensoren</li>
-          <li><strong>Solarthermie</strong> – Warmwasser und Heizungsunterstützung</li>
-        </ul>
+        <h2>Haustechnik-Leistungen München: Komplett-Service</h2>
         
-        <h2>Komplettlösungen für Neubau und Sanierung</h2>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Gasinstallation München</strong></span>: Gasleitungen & Gasgeräte</h3>
+        <p>Professionelle Gasinstallation: Gasleitungen verlegen, Gasgeräte anschließen, Sicherheitsprüfung nach TRGI.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Wasserinstallation München</strong></span>: Trinkwasser & Abwasser</h3>
+        <p>Komplette Wasserinstallation: Trinkwasserleitungen, Abwasseranschlüsse, Regenwassernutzung für Ihr Zuhause.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Lüftungsanlagen München</strong></span>: Kontrollierte Wohnraumlüftung</h3>
+        <p>Moderne Lüftungstechnik mit Wärmerückgewinnung. Frische Luft, Schimmelschutz und Energieeffizienz.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Smart Home München</strong></span>: Intelligente Heizungssteuerung</h3>
+        <p>Intelligente Haustechnik: App-Steuerung für Heizung, Leckage-Sensoren, automatische Temperaturregelung.</p>
+        
+        <h2>Komplettlösungen Neubau & Sanierung München: Alles aus einer Hand</h2>
         <p>Wir koordinieren alle Gewerke für Ihre Haustechnik – von der Planung bis zur Abnahme.</p>
         
-        <h2>Jetzt beraten lassen</h2>
+        <h2>Haustechnik Beratung München: Jetzt Termin vereinbaren</h2>
         <p>Tel: <a href="tel:+4989444438872"><strong>089 444438872</strong></a> | <a href="/termin">Termin buchen</a></p>
       </section>
     `
@@ -616,13 +629,22 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Komplette <strong>Badsanierung in München</strong> – von der Planung bis zur Übergabe. Alles aus einer Hand.</p>
-        <h2>Badsanierung Leistungen</h2>
-        <ul style="line-height:2">
-          <li><strong>Komplettumbau</strong> – Fliesen, Sanitär, Elektrik</li>
-          <li><strong>Barrierefreies Bad</strong> – mit KfW-Förderung</li>
-          <li><strong>Walk-in Dusche</strong> – bodengleich, rahmenlos</li>
-          <li><strong>Teilsanierung</strong> – neue Armaturen, Waschtisch</li>
-        </ul>
+        
+        <h2>Badsanierung Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Badumbau München</strong></span>: Fliesen, Sanitär & Elektrik</h3>
+        <p>Kompletter Badumbau aus einer Hand. Fliesen, Sanitärinstallation, Elektrik – alles koordiniert.</p>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Barrierefreies Bad München</strong></span>: Mit KfW-Förderung</h3>
+        <p>Barrierefreie Bäder mit bis zu 6.250€ KfW-Zuschuss. Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Walk-in Dusche München</strong></span>: Bodengleich & rahmenlos</h3>
+        <p>Moderne Walk-in Duschen ohne Stolperkanten. Rahmenlose Glaswände für ein offenes Raumgefühl.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Teilsanierung Bad München</strong></span>: Armaturen & Waschtisch</h3>
+        <p>Teilsanierung für schnelle Ergebnisse: Neue Armaturen, Waschtisch, WC – ohne Komplettumbau.</p>
+        
+        <h2>Badsanierung Beratung München: Kostenlos vor Ort</h2>
         <p><a href="/termin">Kostenlose Beratung</a> | <a href="tel:+4989444438872">089 444438872</a></p>
       </section>
     `
@@ -715,8 +737,23 @@ export const seoPages: Record<string, PageSEO> = {
     keywords: ['Fußbodenheizung München', 'Fußbodenheizung Installation', 'Fußbodenheizung Reparatur'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <p><strong>Fußbodenheizung</strong> in München – Installation, Reparatur und Wartung vom Profi.</p>
-        <ul><li>Fußbodenheizung verlegen</li><li>Spülung und Entlüftung</li><li>Reparatur und Leckortung</li><li>Nachrüstung im Altbau</li></ul>
+        <p style="font-size:20px"><strong>Fußbodenheizung</strong> in München – Installation, Reparatur und Wartung vom Profi.</p>
+        
+        <h2>Fußbodenheizung Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Fußbodenheizung verlegen München</strong></span>: Neubau & Sanierung</h3>
+        <p>Professionelle Installation Ihrer Fußbodenheizung. Nassestrich und Trockensystem für Neubau und Sanierung.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Fußbodenheizung Spülung München</strong></span>: Entlüftung & Wartung</h3>
+        <p>Regelmäßige Spülung und Entlüftung für optimale Wärmeleistung. Hydraulischer Abgleich inklusive.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Fußbodenheizung Reparatur München</strong></span>: Leckortung & Notdienst</h3>
+        <p>Schnelle Reparatur bei Leckagen und Defekten. Professionelle Leckortung ohne große Bauarbeiten.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Fußbodenheizung Nachrüstung München</strong></span>: Altbau & Bestand</h3>
+        <p>Fußbodenheizung nachträglich einbauen. Auch im Altbau möglich mit flachen Systemen.</p>
+        
+        <h2>Fußbodenheizung Preise München: Festpreisgarantie</h2>
         <p><a href="/termin">Termin buchen</a> | <a href="tel:+4989444438872">089 444438872</a></p>
       </section>
     `
