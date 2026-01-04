@@ -281,7 +281,11 @@ app.use((req, res, next) => {
     // Bot-SSR-Middleware für Entwicklung (vor Vite)
     const fs = await import("fs");
     const pathModule = await import("path");
-    const { generateStaticHTML, isBot } = await import("./seoContent");
+    const { generateStaticHTML, isBot, seoPages, stadtteileData } = await import("./seoContent");
+    
+    // Gültige Routen für SSR (aus seoPages + Stadtteile)
+    const validRoutes = new Set(Object.keys(seoPages));
+    stadtteileData.forEach(st => validRoutes.add(`/${st.slug}`));
     
     app.use((req, res, next) => {
       // Nur GET-Anfragen für HTML-Seiten
@@ -300,8 +304,14 @@ app.use((req, res, next) => {
       
       const userAgent = req.headers['user-agent'] || '';
       
-      // Bot-Erkennung: SSR für Crawler
+      // Bot-Erkennung: SSR nur für gültige Routen
       if (isBot(userAgent)) {
+        // Prüfe ob Route gültig ist
+        if (!validRoutes.has(reqPath)) {
+          console.log(`[SSR-DEV] 404 für Bot: ${reqPath}`);
+          return next(); // Vite zeigt 404-Seite
+        }
+        
         console.log(`[SSR-DEV] Bot erkannt: ${userAgent.substring(0, 50)}... für ${reqPath}`);
         
         try {

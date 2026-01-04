@@ -530,13 +530,22 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professionelle <strong>Armaturen-Montage</strong> in München – Wasserhahn wechseln, Mischbatterie einbauen, tropfende Armaturen reparieren.</p>
-        <h2>Armaturen-Leistungen</h2>
-        <ul style="line-height:2">
-          <li><strong>Wasserhahn wechseln</strong> – Küche, Bad, alle Marken</li>
-          <li><strong>Mischbatterie montieren</strong> – Thermostat, Einhebelmischer</li>
-          <li><strong>Tropfende Armatur reparieren</strong> – Dichtung tauschen</li>
-          <li><strong>Design-Armaturen</strong> – Grohe, Hansgrohe, HANSA</li>
-        </ul>
+        
+        <h2>Armaturen-Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Wasserhahn wechseln München</strong></span>: Küche & Bad alle Marken</h3>
+        <p>Professioneller Austausch alter Wasserhähne. Wir montieren alle Marken: Grohe, Hansgrohe, HANSA, Blanco.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Mischbatterie München</strong></span>: Thermostat & Einhebelmischer</h3>
+        <p>Installation moderner Mischbatterien mit Temperaturregelung. Einhebelmischer, Thermostatarmaturen, berührungslose Armaturen.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Tropfender Wasserhahn München</strong></span>: Reparatur & Dichtung</h3>
+        <p>Wasserhahn tropft? Wir reparieren oder tauschen Dichtungen schnell und günstig. Kein tropfender Wasserhahn mehr.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Armaturen Garantie München</strong></span>: 2 Jahre auf alle Arbeiten</h3>
+        <p>Festpreise ohne versteckte Kosten. 2 Jahre Garantie auf Material und Montage.</p>
+        
+        <h2>Armaturen Preise München: Festpreisgarantie</h2>
         <p><a href="/termin">Termin buchen</a> | Tel: <a href="tel:+4989444438872">089 444438872</a></p>
       </section>
     `
@@ -549,14 +558,24 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Rohrreinigung in München</strong> – Schnelle Hilfe bei verstopften Abflüssen, WCs und Kanälen. Ab 81€ netto.</p>
-        <h2>Rohrreinigung Leistungen</h2>
-        <ul style="line-height:2">
-          <li><strong>Abfluss verstopft</strong> – Küche, Bad, Dusche ab 81€</li>
-          <li><strong>WC verstopft</strong> – Toilette freimachen, Notdienst</li>
-          <li><strong>Kanalreinigung</strong> – Hochdruckspülung, TV-Inspektion</li>
-          <li><strong>Rohrbruch</strong> – Leckortung, Reparatur</li>
-        </ul>
-        <h2>24/7 Notdienst</h2>
+        
+        <h2>Rohrreinigung Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Abfluss verstopft München</strong></span>: Küche, Bad, Dusche ab 81€</h3>
+        <p>Verstopfter Abfluss? Wir reinigen mit Spirale oder Hochdruck. Küche, Bad, Dusche – schnelle Hilfe garantiert.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>WC verstopft München</strong></span>: Toilette freimachen Notdienst</h3>
+        <p>Toilette verstopft? Professionelle WC-Reinigung ohne Beschädigung. Auch am Wochenende und Feiertagen.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Kanalreinigung München</strong></span>: Hochdruckspülung & TV-Inspektion</h3>
+        <p>Kanalreinigung mit modernster Technik. Hochdruckspülung, TV-Kamerainspektion zur Schadensanalyse.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Rohrbruch München</strong></span>: Leckortung & Reparatur</h3>
+        <p>Rohrbruch erkannt? Wir orten das Leck und reparieren schnell. Minimaler Aufwand, maximale Sicherheit.</p>
+        
+        <h2>Rohrreinigung Preise München: Festpreise ab 81€</h2>
+        
+        <h2>24/7 Notdienst München: Sofort-Hilfe</h2>
         <p>Sofort-Hilfe: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
       </section>
     `
@@ -569,13 +588,22 @@ export const seoPages: Record<string, PageSEO> = {
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Warmwasser-Lösungen</strong> für München – Durchlauferhitzer, Boiler und Warmwasserspeicher. Installation und Reparatur.</p>
-        <h2>Warmwasser-Leistungen</h2>
-        <ul style="line-height:2">
-          <li><strong>Durchlauferhitzer</strong> – elektrisch, Gas, Installation</li>
-          <li><strong>Boiler</strong> – Montage, Austausch, Reparatur</li>
-          <li><strong>Warmwasserspeicher</strong> – alle Größen</li>
-          <li><strong>Wärmepumpen-Boiler</strong> – energiesparend</li>
-        </ul>
+        
+        <h2>Warmwasser-Leistungen München: Komplett-Service</h2>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Durchlauferhitzer München</strong></span>: Elektrisch & Gas Installation</h3>
+        <p>Durchlauferhitzer Installation und Reparatur. Elektrische Durchlauferhitzer, Gas-Durchlauferhitzer – alle Marken.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Boiler München</strong></span>: Montage, Austausch & Reparatur</h3>
+        <p>Boiler-Service komplett: Montage neuer Geräte, Austausch alter Boiler, Reparatur bei Defekt.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Warmwasserspeicher München</strong></span>: Alle Größen & Marken</h3>
+        <p>Warmwasserspeicher von 50 bis 500 Liter. Für Einfamilienhäuser, Mehrfamilienhäuser und Gewerbe.</p>
+        
+        <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Wärmepumpen-Boiler München</strong></span>: Energiesparend & gefördert</h3>
+        <p>Moderne Wärmepumpen-Boiler mit BAFA-Förderung. Bis zu 70% geringere Betriebskosten.</p>
+        
+        <h2>Warmwasser Preise München: Festpreisgarantie</h2>
         <p>Tel: <a href="tel:+4989444438872">089 444438872</a> | <a href="/termin">Termin buchen</a></p>
       </section>
     `
@@ -797,7 +825,7 @@ export const seoPages: Record<string, PageSEO> = {
 };
 
 // === STADTTEIL SEITEN (synchronisiert mit sitemap.xml) ===
-const stadtteile = [
+export const stadtteileData = [
   // Premium Stadtteile
   { slug: 'schwabing', name: 'Schwabing', plz: '80796' },
   { slug: 'bogenhausen', name: 'Bogenhausen', plz: '81675' },
@@ -834,7 +862,7 @@ const stadtteile = [
 ];
 
 // Add all Stadtteil pages to seoPages
-stadtteile.forEach(st => {
+stadtteileData.forEach(st => {
   seoPages[`/${st.slug}`] = {
     title: `Klempner ${st.name} München – Sanitär, Heizung & Notdienst 24/7 | AquaPro24`,
     description: `Klempner in ${st.name} (${st.plz}): Sanitär, Heizung, Notdienst 24/7. Anfahrt 30-45 Min. Festpreise. Tel: 089 444438872`,
