@@ -137,8 +137,8 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung München – Wartung, Reparatur & Modernisierung"
-        description="Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit BAFA-Förderung. Alle Marken. Jetzt: 089 444438872"
+        title="Heizung München | Wartung, Reparatur, Austausch | AquaPro24"
+        description="Heizung defekt? AquaPro24 München: Wartung, Reparatur & Austausch – schnell, transparent, mit Festpreis. Notdienst möglich."
         canonical="https://aquapro24.de/heizung"
         keywords="Heizung Notdienst München 24h, Heizungswartung ab 154€ Festpreis, Viessmann Vaillant Buderus Reparatur, Gasheizung tauschen Förderung, Thermostat Smart Tado Netatmo, Fußbodenheizung nachrüsten München, Heizkörper entlüften Ventil wechseln"
         breadcrumbs={[

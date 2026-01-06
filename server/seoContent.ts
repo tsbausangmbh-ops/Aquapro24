@@ -81,8 +81,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/sanitaer': {
-    title: 'Sanitär München – Klempner für Rohrbruch, Armaturen & WC | AquaPro24',
-    description: 'Sanitär-Service München: Rohrreinigung ab 81€, Armaturen-Montage, WC-Reparatur, Rohrbruch-Beseitigung. Festpreise. Jetzt: 089 444438872',
+    title: 'Sanitär München | Rohrbruch, Armaturen, Wasserschaden | AquaPro24',
+    description: 'Sanitärservice in München: Rohrbruch, verstopfter Abfluss, Armaturen, Wasserschaden. Festpreis, schnelle Hilfe, Termin in 24h. Jetzt anfragen.',
     h1: 'Sanitär München – Klempner für Rohrbruch, Armaturen & WC',
     keywords: ['Sanitär München', 'Klempner', 'Rohrreinigung', 'Armaturen', 'WC Reparatur', 'Rohrbruch'],
     content: `
@@ -120,8 +120,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/heizung': {
-    title: 'Heizung München – Wartung, Reparatur & Modernisierung | AquaPro24',
-    description: 'Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit BAFA-Förderung. Alle Marken. Jetzt: 089 444438872',
+    title: 'Heizung München | Wartung, Reparatur, Austausch | AquaPro24',
+    description: 'Heizung defekt? AquaPro24 München: Wartung, Reparatur & Austausch – schnell, transparent, mit Festpreis. Notdienst möglich.',
     h1: 'Heizung München – Wartung, Reparatur & Modernisierung',
     keywords: ['Heizung München', 'Heizungsreparatur', 'Heizungswartung', 'Gasheizung', 'Heizungsaustausch'],
     content: `
@@ -189,9 +189,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/waermepumpe': {
-    title: 'Wärmepumpe München – bis 70% BAFA Förderung 2025 | AquaPro24',
-    description: 'Wärmepumpen-Installation in München mit bis zu 70% BAFA-Förderung. Luft-Wasser, Erdwärme. Förderantrag inklusive. Jetzt beraten: 089 444438872',
-    h1: 'Wärmepumpe München – bis 70% BAFA Förderung 2025',
+    title: 'Wärmepumpe München | Förderung & Einbau | AquaPro24',
+    description: 'Wärmepumpe in München: Beratung, Planung, Einbau – inkl. Förder-Check. Jetzt kostenloses Erstgespräch sichern.',
+    h1: 'Wärmepumpe München – Förderung & Einbau vom Profi',
     keywords: ['Wärmepumpe München', 'BAFA Förderung', 'Luft-Wasser-Wärmepumpe', 'Erdwärmepumpe', 'Heizungstausch'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -700,9 +700,9 @@ export const seoPages: Record<string, PageSEO> = {
   },
   // === LANDING PAGES ===
   '/sanitaer-notdienst-24': {
-    title: 'Sanitär Notdienst 24h München – Klempner Soforthilfe | AquaPro24',
-    description: 'Sanitär Notdienst 24 Stunden München: Rohrbruch, Wasserschaden, verstopfter Abfluss. Anfahrt 45-60 Min. Tel: 089 444438872',
-    h1: 'Sanitär Notdienst 24h München – Klempner Soforthilfe rund um die Uhr',
+    title: 'Sanitär Notdienst München 24/7 | Soforthilfe bei Rohrbruch | AquaPro24',
+    description: '24/7 Sanitär-Notdienst in München: Rohrbruch, Wasserschaden, Verstopfung. Schnelle Anfahrt, klare Kosten, Hilfe sofort.',
+    h1: 'Sanitär Notdienst München 24/7 – Soforthilfe bei Rohrbruch',
     keywords: ['Sanitär Notdienst 24h', 'Klempner Notdienst', 'Rohrbruch München', 'Wasserschaden'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
