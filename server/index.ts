@@ -13,18 +13,21 @@ declare module "http" {
   }
 }
 
-// Prerender.io Integration für SEO (nur in Produktion)
+// Prerender Integration für SEO (eigener Server auf localhost:3000)
 const isProduction = process.env.NODE_ENV === 'production';
-if (process.env.PRERENDER_TOKEN && isProduction) {
-  console.log(`[Prerender.io] Aktiviert (Produktion)`);
+const prerenderServiceUrl = process.env.PRERENDER_SERVICE_URL || 'http://localhost:3000';
+
+if (isProduction) {
+  console.log(`[Prerender] Aktiviert - Server: ${prerenderServiceUrl}`);
   app.use(prerender
-    .set('prerenderToken', process.env.PRERENDER_TOKEN)
+    .set('prerenderServiceUrl', prerenderServiceUrl)
+    .set('prerenderToken', process.env.PRERENDER_TOKEN || '')
     .set('protocol', 'https')
     .set('host', 'aquapro24.de')
     .set('forwardHeaders', true)
   );
 } else {
-  console.log(`[SSR] Eigene SSR-Lösung aktiv (${isProduction ? 'Produktion' : 'Entwicklung'})`);
+  console.log(`[SSR] Eigene SSR-Lösung aktiv (Entwicklung)`);
 }
 
 app.use(
