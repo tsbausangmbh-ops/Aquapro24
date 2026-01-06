@@ -813,18 +813,6 @@ export const seoPages: Record<string, PageSEO> = {
       </section>
     `
   },
-  '/badsanierung-muenchen': {
-    title: 'Badsanierung München – Komplettumbau aus einer Hand | AquaPro24',
-    description: 'Badsanierung München: Komplettumbau, barrierefreies Bad, Walk-in Dusche. Festpreis. Tel: 089 444438872',
-    h1: 'Badsanierung München – Komplettumbau aus einer Hand',
-    keywords: ['Badsanierung München', 'Badumbau', 'barrierefreies Bad München'],
-    content: `
-      <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <p><strong>Badsanierung in München</strong> – Komplettumbau, barrierefreie Bäder mit KfW-Förderung.</p>
-        <p><a href="/bad">Alle Badsanierung Infos</a> | <a href="/termin">Beratung buchen</a></p>
-      </section>
-    `
-  },
   '/waermepumpe-muenchen': {
     title: 'Wärmepumpe München – bis 70% Förderung sichern | AquaPro24',
     description: 'Wärmepumpen-Installation München mit bis zu 70% BAFA-Förderung. Beratung + Antrag inklusive. Tel: 089 444438872',
