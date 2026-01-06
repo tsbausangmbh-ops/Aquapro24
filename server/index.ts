@@ -327,7 +327,12 @@ app.use((req, res, next) => {
       // Nur GET-Anfragen für HTML-Seiten
       if (req.method !== 'GET') return next();
       
-      const reqPath = req.path;
+      let reqPath = req.path;
+      
+      // Normalize: remove trailing slash (except for root)
+      if (reqPath !== '/' && reqPath.endsWith('/')) {
+        reqPath = reqPath.slice(0, -1);
+      }
       
       // Skip API, Assets und statische Dateien
       if (reqPath.startsWith('/api') || 
@@ -342,7 +347,7 @@ app.use((req, res, next) => {
       
       // Bot-Erkennung: SSR nur für gültige Routen
       if (isBot(userAgent)) {
-        // Prüfe ob Route gültig ist
+        // Prüfe ob Route gültig ist (mit normalisiertem Pfad)
         if (!validRoutes.has(reqPath)) {
           console.log(`[SSR-DEV] 404 für Bot: ${reqPath}`);
           return next(); // Vite zeigt 404-Seite

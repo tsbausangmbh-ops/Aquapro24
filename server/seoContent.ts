@@ -1083,18 +1083,24 @@ const defaultPage: PageSEO = {
 
 // Generate static HTML for a given path
 export function generateStaticHTML(pagePath: string, indexHtml: string): string {
+  // Normalize path: remove trailing slash (except for root)
+  let normalizedPath = pagePath;
+  if (normalizedPath !== '/' && normalizedPath.endsWith('/')) {
+    normalizedPath = normalizedPath.slice(0, -1);
+  }
+  
   // Use page-specific SEO content or fallback to default
-  const page = seoPages[pagePath] || defaultPage;
+  const page = seoPages[normalizedPath] || defaultPage;
   
   // Log missing SEO definitions for future improvement
-  if (!seoPages[pagePath]) {
-    console.log(`[SEO] Warnung: Keine SEO-Definition für ${pagePath}, verwende Fallback`);
+  if (!seoPages[normalizedPath]) {
+    console.log(`[SEO] Warnung: Keine SEO-Definition für ${normalizedPath}, verwende Fallback`);
   }
 
-  // Determine canonical URL (normalize /stadtteil/X to /X)
-  let canonicalPath = pagePath;
-  if (pagePath.startsWith('/stadtteil/')) {
-    canonicalPath = '/' + pagePath.slice('/stadtteil/'.length);
+  // Determine canonical URL (normalize /stadtteil/X to /X, always without trailing slash)
+  let canonicalPath = normalizedPath;
+  if (normalizedPath.startsWith('/stadtteil/')) {
+    canonicalPath = '/' + normalizedPath.slice('/stadtteil/'.length);
   }
   const canonicalUrl = `${BASE_URL}${canonicalPath}`;
 

@@ -91,8 +91,13 @@ export function serveStatic(app: Express) {
 
   // SPA Fallback mit 404-Status für unbekannte Routen
   app.use("*", (req: Request, res) => {
-    const requestPath = req.path;
+    let requestPath = req.path;
     const userAgent = req.headers['user-agent'] || '';
+    
+    // Normalize: remove trailing slash (except for root)
+    if (requestPath !== '/' && requestPath.endsWith('/')) {
+      requestPath = requestPath.slice(0, -1);
+    }
     
     // API-Routen, die nicht gefunden wurden -> 404 JSON
     if (requestPath.startsWith('/api')) {
