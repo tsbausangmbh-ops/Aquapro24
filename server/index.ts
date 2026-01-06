@@ -318,6 +318,7 @@ app.use((req, res, next) => {
     const fs = await import("fs");
     const pathModule = await import("path");
     const { generateStaticHTML, isBot, seoPages, stadtteileData } = await import("./seoContent");
+    const { findBestRedirect } = await import("./static");
     
     // Gültige Routen für SSR (aus seoPages + Stadtteile)
     const validRoutes = new Set(Object.keys(seoPages));
@@ -349,6 +350,12 @@ app.use((req, res, next) => {
       if (isBot(userAgent)) {
         // Prüfe ob Route gültig ist (mit normalisiertem Pfad)
         if (!validRoutes.has(reqPath)) {
+          // Prüfe auf intelligente Weiterleitung
+          const redirectTarget = findBestRedirect(reqPath);
+          if (redirectTarget) {
+            console.log(`[SSR-DEV] 301 Redirect: ${reqPath} → ${redirectTarget}`);
+            return res.redirect(301, redirectTarget);
+          }
           console.log(`[SSR-DEV] 404 für Bot: ${reqPath}`);
           return next(); // Vite zeigt 404-Seite
         }
