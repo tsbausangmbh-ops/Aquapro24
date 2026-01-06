@@ -24,7 +24,6 @@ const KNOWN_ROUTES = new Set([
   '/fussbodenheizung',
   '/fussbodenheizung-muenchen',
   '/waermepumpe-muenchen',
-  '/badsanierung-muenchen',
   '/sanitaer-notdienst-24',
   '/heizung-notdienst-24',
   // Förderung
