@@ -81,10 +81,10 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/sanitaer': {
-    title: 'Sanitär München – Klempner & Installateur Notdienst 24/7 | AquaPro24',
-    description: 'Sanitär-Service in München: Rohrreinigung ab 81€, Armaturen-Montage, Wasserschaden-Beseitigung. 24/7 Notdienst. Festpreise. Jetzt: 089 444438872',
-    h1: 'Klempner München – Sanitär Notdienst 24/7',
-    keywords: ['Sanitär München', 'Klempner', 'Rohrreinigung', 'Installateur', 'Wasserschaden'],
+    title: 'Sanitär München – Klempner für Rohrbruch, Armaturen & WC | AquaPro24',
+    description: 'Sanitär-Service München: Rohrreinigung ab 81€, Armaturen-Montage, WC-Reparatur, Rohrbruch-Beseitigung. Festpreise. Jetzt: 089 444438872',
+    h1: 'Sanitär München – Klempner für Rohrbruch, Armaturen & WC',
+    keywords: ['Sanitär München', 'Klempner', 'Rohrreinigung', 'Armaturen', 'WC Reparatur', 'Rohrbruch'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professionelle <strong>Sanitärinstallationen</strong> in München – von der Rohrreinigung bis zur kompletten Wasserinstallation. Schnelle Hilfe bei Notfällen, faire Festpreise.</p>
@@ -120,10 +120,10 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/heizung': {
-    title: 'Heizung München – Notdienst & Wartung 24/7 | AquaPro24',
-    description: 'Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit BAFA-Förderung. 24/7 Notdienst. Jetzt: 089 444438872',
-    h1: 'Heizung München – Notdienst & Wartung 24/7',
-    keywords: ['Heizung München', 'Heizungsreparatur', 'Heizungswartung', 'Gasheizung', 'Notdienst'],
+    title: 'Heizung München – Wartung, Reparatur & Modernisierung | AquaPro24',
+    description: 'Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit BAFA-Förderung. Alle Marken. Jetzt: 089 444438872',
+    h1: 'Heizung München – Wartung, Reparatur & Modernisierung',
+    keywords: ['Heizung München', 'Heizungsreparatur', 'Heizungswartung', 'Gasheizung', 'Heizungsaustausch'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professioneller <strong>Heizungsservice</strong> in München – Wartung, Reparatur und Modernisierung vom Fachmann. Schnelle Hilfe bei Heizungsausfall.</p>

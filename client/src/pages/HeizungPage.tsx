@@ -137,8 +137,8 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung und Heizungsinstallateur München – Notdienst & Wartung 24/7"
-        description="Heizung & Heizungsinstallateur München: Heizung ausgefallen, Therme defekt? Schnelle Reparatur, Wartung & Notdienst. Festpreis ab 154€."
+        title="Heizung München – Wartung, Reparatur & Modernisierung"
+        description="Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit BAFA-Förderung. Alle Marken. Jetzt: 089 444438872"
         canonical="https://aquapro24.de/heizung"
         keywords="Heizung Notdienst München 24h, Heizungswartung ab 154€ Festpreis, Viessmann Vaillant Buderus Reparatur, Gasheizung tauschen Förderung, Thermostat Smart Tado Netatmo, Fußbodenheizung nachrüsten München, Heizkörper entlüften Ventil wechseln"
         breadcrumbs={[
@@ -185,7 +185,7 @@ export default function HeizungPage() {
               </Badge>
               
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-                Heizung München – Notdienst & Wartung 24/7
+                Heizung München – Wartung, Reparatur & Modernisierung
               </h1>
               
               <p className="text-xl text-white/90 mb-6">

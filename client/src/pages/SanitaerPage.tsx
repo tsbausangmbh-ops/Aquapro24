@@ -138,8 +138,8 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär und Sanitärinstallateur München – Klempner Notdienst 24/7"
-        description="Sanitär & Sanitärinstallateur München: Rohrbruch, Abfluss verstopft, Wasserhahn tropft? Schnelle Hilfe, Festpreis ab 92€. Jetzt anrufen!"
+        title="Sanitär München – Klempner für Rohrbruch, Armaturen & WC"
+        description="Sanitär-Service München: Rohrreinigung ab 81€, Armaturen-Montage, WC-Reparatur, Rohrbruch-Beseitigung. Festpreise. Jetzt: 089 444438872"
         canonical="https://aquapro24.de/sanitaer"
         keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrbruch Soforthilfe München, Wasserhahn wechseln Grohe Hansgrohe, Leckortung zerstörungsfrei München, WC montieren Geberit Villeroy, Sanitärinstallateur DIN 1988"
         breadcrumbs={[
@@ -187,7 +187,7 @@ export default function SanitaerPage() {
               </Badge>
               
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-                Sanitär München – Klempner Notdienst 24/7
+                Sanitär München – Klempner für Rohrbruch, Armaturen & WC
               </h1>
               
               <p className="text-xl text-white/90 mb-6">
