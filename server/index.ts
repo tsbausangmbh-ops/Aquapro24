@@ -13,10 +13,10 @@ declare module "http" {
   }
 }
 
-// Prerender.io Integration für SEO (Server-Side Rendering für Bots)
+// Prerender.io Integration für SEO (nur in Produktion)
 const isProduction = process.env.NODE_ENV === 'production';
-if (process.env.PRERENDER_TOKEN) {
-  console.log(`[Prerender.io] Aktiviert (${isProduction ? 'Produktion' : 'Entwicklung'})`);
+if (process.env.PRERENDER_TOKEN && isProduction) {
+  console.log(`[Prerender.io] Aktiviert (Produktion)`);
   app.use(prerender
     .set('prerenderToken', process.env.PRERENDER_TOKEN)
     .set('protocol', 'https')
@@ -24,7 +24,7 @@ if (process.env.PRERENDER_TOKEN) {
     .set('forwardHeaders', true)
   );
 } else {
-  console.log(`[Prerender.io] Token nicht gefunden - Fallback auf eigene SSR`);
+  console.log(`[SSR] Eigene SSR-Lösung aktiv (${isProduction ? 'Produktion' : 'Entwicklung'})`);
 }
 
 app.use(
