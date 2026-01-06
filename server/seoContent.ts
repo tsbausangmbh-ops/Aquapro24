@@ -1162,81 +1162,8 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   `;
   html = html.replace('</head>', `${preconnectTags}</head>`);
 
-  // Add JSON-LD structured data for LocalBusiness
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${BASE_URL}#localbusiness`,
-    "name": "AquaPro24 - Sanitär & Heizung München",
-    "alternateName": "AquaPro24",
-    "description": page.description,
-    "url": canonicalUrl,
-    "telephone": "+49-89-444438872",
-    "email": "info@aquapro24.de",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Hardenbergstr. 4",
-      "addressLocality": "München",
-      "postalCode": "80992",
-      "addressCountry": "DE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 48.1801,
-      "longitude": 11.5167
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "17:00"
-      }
-    ],
-    "priceRange": "€€",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "2847",
-      "bestRating": "5"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "München",
-      "sameAs": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
-    },
-    "sameAs": [
-      "https://www.facebook.com/aquapro24",
-      "https://www.instagram.com/aquapro24"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Sanitär & Heizung Dienstleistungen",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rohrreinigung", "description": "Professionelle Rohrreinigung ab 81€"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heizungsreparatur", "description": "Heizungsreparatur ab 154€"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "24h Notdienst", "description": "Sanitär & Heizung Notdienst rund um die Uhr"}}
-      ]
-    }
-  };
-  const jsonLdScript = `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`;
-  html = html.replace('</head>', `${jsonLdScript}\n</head>`);
-
-  // Add WebSite schema for sitelinks searchbox
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": BASE_URL,
-    "name": "AquaPro24",
-    "description": "Sanitär & Heizung München - 24/7 Notdienst",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${BASE_URL}/suche?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
-  };
-  const websiteSchemaScript = `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`;
-  html = html.replace('</head>', `${websiteSchemaScript}\n</head>`);
+  // Note: LocalBusiness and WebSite schemas are already defined in index.html
+  // SSR only adds BreadcrumbList for page-specific navigation
 
   // Add BreadcrumbList schema
   const breadcrumbParts = pagePath.split('/').filter(p => p);
