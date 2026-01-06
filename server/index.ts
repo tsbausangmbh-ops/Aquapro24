@@ -40,6 +40,32 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+// ============================================
+// CRAWLER-OPTIMIERUNG: Headers für SEO
+// ============================================
+app.use((req, res, next) => {
+  // X-Robots-Tag: Erlaubt Indexierung für alle Crawler
+  res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+  
+  // Cache-Control für statische Ressourcen
+  const path = req.path;
+  if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  } else if (path === '/sitemap.xml' || path === '/robots.txt') {
+    res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 Tag
+  } else if (path.startsWith('/api')) {
+    res.setHeader('Cache-Control', 'no-store');
+  } else {
+    // HTML-Seiten: kurzes Caching für schnelle Updates
+    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  }
+  
+  // Vary Header für korrektes Caching basierend auf User-Agent
+  res.setHeader('Vary', 'User-Agent, Accept-Encoding');
+  
+  next();
+});
+
 // 301 Redirects für SEO-Optimierung
 app.use((req, res, next) => {
   const path = req.path;
