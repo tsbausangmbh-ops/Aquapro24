@@ -1128,14 +1128,11 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   const keywordsTag = `<meta name="keywords" content="${page.keywords.join(', ')}" />`;
   html = html.replace('</head>', `  ${keywordsTag}\n  </head>`);
 
-  // Add Open Graph tags for social sharing
+  // Add page-specific Open Graph tags (og:type, og:locale, og:site_name already in index.html)
   const ogTags = `
     <meta property="og:title" content="${page.title}" />
     <meta property="og:description" content="${page.description}" />
     <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="AquaPro24" />
-    <meta property="og:locale" content="de_DE" />
     <meta property="og:image" content="${BASE_URL}/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -1151,17 +1148,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   `;
   html = html.replace('</head>', `${twitterTags}</head>`);
 
-  // Add hreflang for German
-  html = html.replace('</head>', `  <link rel="alternate" hreflang="de" href="${canonicalUrl}" />\n  <link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />\n  </head>`);
-
-  // Add preconnect hints for performance
-  const preconnectTags = `
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-  `;
-  html = html.replace('</head>', `${preconnectTags}</head>`);
-
+  // Note: hreflang and preconnect tags are already defined in index.html
   // Note: LocalBusiness and WebSite schemas are already defined in index.html
   // SSR only adds BreadcrumbList for page-specific navigation
 
