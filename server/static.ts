@@ -295,8 +295,16 @@ export function serveStatic(app: Express) {
         const indexHtml = fs.readFileSync(indexPath, 'utf-8');
         const seoHtml = generateStaticHTML(requestPath, indexHtml);
         
+        // Optimale Header für Crawler
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         res.setHeader('X-SEO-Rendered', 'true');
+        res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+        res.setHeader('Vary', 'User-Agent');
+        
+        // Canonical Link Header
+        const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
+        res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+        
         return res.send(seoHtml);
       }
       
