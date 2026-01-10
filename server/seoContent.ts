@@ -72,7 +72,7 @@ export const seoPages: Record<string, PageSEO> = {
         </ul>
         
         <h2>Einsatzgebiet: Ganz München + 40km Umkreis</h2>
-        <p>Wir sind in allen Münchner Stadtteilen für Sie da: <a href="/stadtteil/schwabing">Schwabing</a>, <a href="/stadtteil/bogenhausen">Bogenhausen</a>, <a href="/stadtteil/sendling">Sendling</a>, <a href="/stadtteil/pasing">Pasing</a>, <a href="/stadtteil/maxvorstadt">Maxvorstadt</a>, <a href="/stadtteil/haidhausen">Haidhausen</a>, <a href="/stadtteil/neuhausen">Neuhausen</a>, <a href="/stadtteil/trudering">Trudering</a>, <a href="/stadtteil/laim">Laim</a>, <a href="/stadtteil/giesing">Giesing</a>, <a href="/stadtteil/moosach">Moosach</a>, <a href="/stadtteil/milbertshofen">Milbertshofen</a> und weitere.</p>
+        <p>Wir sind in allen Münchner Stadtteilen für Sie da: <a href="/schwabing">Schwabing</a>, <a href="/bogenhausen">Bogenhausen</a>, <a href="/sendling">Sendling</a>, <a href="/pasing">Pasing</a>, <a href="/maxvorstadt">Maxvorstadt</a>, <a href="/haidhausen">Haidhausen</a>, <a href="/neuhausen">Neuhausen</a>, <a href="/trudering">Trudering</a>, <a href="/laim">Laim</a>, <a href="/giesing">Giesing</a>, <a href="/moosach">Moosach</a>, <a href="/milbertshofen">Milbertshofen</a> und weitere.</p>
         <p>Außerdem: Dachau, Freising, Starnberg, Fürstenfeldbruck, Erding, Garching, Unterschleißheim.</p>
         
         <h2>Jetzt Termin buchen</h2>
