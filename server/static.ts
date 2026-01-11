@@ -1,7 +1,8 @@
-import express, { type Express, type Request } from "express";
+import express, { type Express, type Request, type Response } from "express";
 import fs from "fs";
 import path from "path";
-import { generateStaticHTML, isBot, seoPages } from "./seoContent";
+import { generateStaticHTML, isBot, seoPages, stadtteileData } from "./seoContent";
+import { ssrCache, warmSSRCache } from "./ssrCache";
 
 // Bekannte Routen der SPA (aus sitemap.xml - alle Seiten synchronisiert)
 const KNOWN_ROUTES = new Set([
@@ -254,13 +255,68 @@ function isValidRoute(routePath: string): boolean {
   return false;
 }
 
-export function serveStatic(app: Express) {
+// Serve cached SSR response with ETag and Gzip support
+function serveCachedSSR(req: Request, res: Response, requestPath: string): boolean {
+  const cached = ssrCache.get(requestPath);
+  
+  if (!cached) {
+    return false;
+  }
+  
+  // ETag-based caching
+  const clientEtag = req.headers['if-none-match'];
+  if (clientEtag === cached.etag) {
+    res.status(304).end();
+    return true;
+  }
+  
+  // Optimale Header für Crawler
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.setHeader('X-SEO-Rendered', 'true');
+  res.setHeader('X-SSR-Cache', 'HIT');
+  res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+  res.setHeader('ETag', cached.etag);
+  res.setHeader('Vary', 'User-Agent, Accept-Encoding');
+  res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  
+  // Canonical Link Header
+  const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
+  res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+  
+  // Gzip if client supports it
+  const acceptEncoding = req.headers['accept-encoding'] || '';
+  if (acceptEncoding.includes('gzip')) {
+    res.setHeader('Content-Encoding', 'gzip');
+    res.setHeader('Content-Length', cached.gzipped.length);
+    res.send(cached.gzipped);
+  } else {
+    res.send(cached.html);
+  }
+  
+  return true;
+}
+
+export async function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
   if (!fs.existsSync(distPath)) {
     throw new Error(
       `Could not find the build directory: ${distPath}, make sure to build the client first`,
     );
   }
+  
+  // Pre-warm SSR cache beim Serverstart
+  const indexPath = path.resolve(distPath, "index.html");
+  const indexHtml = fs.readFileSync(indexPath, 'utf-8');
+  
+  // Alle Routen für Cache-Warming
+  const allRoutes = [
+    ...Object.keys(seoPages),
+    ...stadtteileData.map(st => `/${st.slug}`)
+  ];
+  
+  await warmSSRCache(allRoutes, (routePath: string) => {
+    return generateStaticHTML(routePath, indexHtml);
+  });
 
   app.use(express.static(distPath));
 
@@ -288,16 +344,24 @@ export function serveStatic(app: Express) {
     if (isValidRoute(requestPath)) {
       // Check if request is from a search engine bot
       if (isBot(userAgent)) {
-        console.log(`[SEO] Bot erkannt: ${userAgent.substring(0, 50)}... für ${requestPath}`);
+        console.log(`[SEO] Bot: ${userAgent.substring(0, 30)}... → ${requestPath}`);
         
-        // Read index.html and inject SEO content
-        const indexPath = path.resolve(distPath, "index.html");
-        const indexHtml = fs.readFileSync(indexPath, 'utf-8');
+        // Try cached response first (fast path)
+        if (serveCachedSSR(req, res, requestPath)) {
+          return;
+        }
+        
+        // Cache miss - generate and cache
+        console.log(`[SSR-Cache] MISS: ${requestPath}`);
         const seoHtml = generateStaticHTML(requestPath, indexHtml);
+        
+        // Cache for future requests (async, don't wait)
+        ssrCache.set(requestPath, seoHtml).catch(console.error);
         
         // Optimale Header für Crawler
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         res.setHeader('X-SEO-Rendered', 'true');
+        res.setHeader('X-SSR-Cache', 'MISS');
         res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
         res.setHeader('Vary', 'User-Agent');
         

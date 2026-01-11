@@ -312,17 +312,32 @@ app.use((req, res, next) => {
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
   if (process.env.NODE_ENV === "production") {
-    serveStatic(app);
+    await serveStatic(app);
   } else {
-    // Bot-SSR-Middleware für Entwicklung (vor Vite)
+    // Bot-SSR-Middleware für Entwicklung (vor Vite) mit Caching
     const fs = await import("fs");
     const pathModule = await import("path");
     const { generateStaticHTML, isBot, seoPages, stadtteileData } = await import("./seoContent");
     const { findBestRedirect } = await import("./static");
+    const { ssrCache, warmSSRCache } = await import("./ssrCache");
     
     // Gültige Routen für SSR (aus seoPages + Stadtteile)
     const validRoutes = new Set(Object.keys(seoPages));
     stadtteileData.forEach(st => validRoutes.add(`/${st.slug}`));
+    
+    // Pre-warm SSR cache für Entwicklung
+    const clientTemplate = pathModule.resolve(
+      import.meta.dirname,
+      "..",
+      "client",
+      "index.html"
+    );
+    const template = fs.readFileSync(clientTemplate, 'utf-8');
+    
+    const allRoutes = Array.from(validRoutes);
+    await warmSSRCache(allRoutes, (routePath: string) => {
+      return generateStaticHTML(routePath, template);
+    });
     
     app.use((req, res, next) => {
       // Nur GET-Anfragen für HTML-Seiten
@@ -353,32 +368,58 @@ app.use((req, res, next) => {
           // Prüfe auf intelligente Weiterleitung
           const redirectTarget = findBestRedirect(reqPath);
           if (redirectTarget) {
-            console.log(`[SSR-DEV] 301 Redirect: ${reqPath} → ${redirectTarget}`);
+            console.log(`[SSR-DEV] 301: ${reqPath} → ${redirectTarget}`);
             return res.redirect(301, redirectTarget);
           }
-          console.log(`[SSR-DEV] 404 für Bot: ${reqPath}`);
+          console.log(`[SSR-DEV] 404: ${reqPath}`);
           return next(); // Vite zeigt 404-Seite
         }
         
-        console.log(`[SSR-DEV] Bot erkannt: ${userAgent.substring(0, 50)}... für ${reqPath}`);
-        
-        try {
-          const clientTemplate = pathModule.resolve(
-            import.meta.dirname,
-            "..",
-            "client",
-            "index.html"
-          );
-          const template = fs.readFileSync(clientTemplate, 'utf-8');
-          const seoHtml = generateStaticHTML(reqPath, template);
+        // Try cached response first (fast path)
+        const cached = ssrCache.get(reqPath);
+        if (cached) {
+          // ETag-based caching
+          const clientEtag = req.headers['if-none-match'];
+          if (clientEtag === cached.etag) {
+            return res.status(304).end();
+          }
           
-          // Optimale Header für Crawler
+          console.log(`[SSR-DEV] Cache HIT: ${reqPath}`);
+          
           res.setHeader('Content-Type', 'text/html; charset=utf-8');
           res.setHeader('X-SEO-Rendered', 'true');
+          res.setHeader('X-SSR-Cache', 'HIT');
+          res.setHeader('ETag', cached.etag);
+          res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+          res.setHeader('Vary', 'User-Agent, Accept-Encoding');
+          
+          const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
+          res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+          
+          // Gzip if supported
+          const acceptEncoding = req.headers['accept-encoding'] || '';
+          if (acceptEncoding.includes('gzip')) {
+            res.setHeader('Content-Encoding', 'gzip');
+            return res.send(cached.gzipped);
+          }
+          return res.send(cached.html);
+        }
+        
+        // Cache miss - generate fresh
+        console.log(`[SSR-DEV] Cache MISS: ${reqPath}`);
+        
+        try {
+          const seoHtml = generateStaticHTML(reqPath, template);
+          
+          // Cache for future (async)
+          ssrCache.set(reqPath, seoHtml).catch(console.error);
+          
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.setHeader('X-SEO-Rendered', 'true');
+          res.setHeader('X-SSR-Cache', 'MISS');
           res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
           res.setHeader('Vary', 'User-Agent');
           
-          // Canonical Link Header
           const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
           res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
           
