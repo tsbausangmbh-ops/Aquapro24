@@ -255,7 +255,7 @@ function isValidRoute(routePath: string): boolean {
   return false;
 }
 
-// Serve cached SSR response with ETag and Gzip support
+// Serve cached SSR response with ETag, Brotli and Gzip support
 function serveCachedSSR(req: Request, res: Response, requestPath: string): boolean {
   const cached = ssrCache.get(requestPath);
   
@@ -279,18 +279,30 @@ function serveCachedSSR(req: Request, res: Response, requestPath: string): boole
   res.setHeader('Vary', 'User-Agent, Accept-Encoding');
   res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   
-  // Canonical Link Header
+  // Canonical Link Header + Resource Hints
   const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
-  res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+  res.setHeader('Link', [
+    `<${canonicalUrl}>; rel="canonical"`,
+    '</assets/index.css>; rel="preload"; as="style"',
+    '<https://fonts.googleapis.com>; rel="preconnect"'
+  ].join(', '));
   
-  // Gzip if client supports it
-  const acceptEncoding = req.headers['accept-encoding'] || '';
-  if (acceptEncoding.includes('gzip')) {
+  // Komprimierung: Brotli > Gzip > Unkomprimiert
+  const acceptEncoding = (req.headers['accept-encoding'] || '').toString();
+  
+  if (acceptEncoding.includes('br')) {
+    // Brotli (beste Komprimierung)
+    res.setHeader('Content-Encoding', 'br');
+    res.setHeader('Content-Length', cached.brotli.length);
+    res.send(cached.brotli);
+  } else if (acceptEncoding.includes('gzip')) {
+    // Gzip (fallback)
     res.setHeader('Content-Encoding', 'gzip');
     res.setHeader('Content-Length', cached.gzipped.length);
     res.send(cached.gzipped);
   } else {
-    res.send(cached.html);
+    // Unkomprimiert (minified)
+    res.send(cached.minified);
   }
   
   return true;

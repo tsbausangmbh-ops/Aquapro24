@@ -396,13 +396,16 @@ app.use((req, res, next) => {
           const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
           res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
           
-          // Gzip if supported
-          const acceptEncoding = req.headers['accept-encoding'] || '';
-          if (acceptEncoding.includes('gzip')) {
+          // Brotli > Gzip > Minified
+          const acceptEncoding = (req.headers['accept-encoding'] || '').toString();
+          if (acceptEncoding.includes('br')) {
+            res.setHeader('Content-Encoding', 'br');
+            return res.send(cached.brotli);
+          } else if (acceptEncoding.includes('gzip')) {
             res.setHeader('Content-Encoding', 'gzip');
             return res.send(cached.gzipped);
           }
-          return res.send(cached.html);
+          return res.send(cached.minified);
         }
         
         // Cache miss - generate fresh
