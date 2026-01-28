@@ -184,10 +184,9 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 - **Build**: esbuild for production bundling with dependency optimization
 
 ### Data Storage
-- **ORM**: Drizzle ORM with PostgreSQL dialect
-- **Schema Location**: `shared/schema.ts`
-- **Current Storage**: In-memory storage (`MemStorage`) for leads - designed to be swapped with database implementation
-- **Database Config**: Drizzle Kit configured for PostgreSQL migrations
+- **Storage**: In-memory storage (`MemStorage`) for leads and contact messages
+- **Schema Location**: `shared/schema.ts` (Zod-only schemas, no database)
+- **Note**: Database removed January 2026 - app uses in-memory storage only
 
 ### Component Structure
 - **UI Components**: Pre-built shadcn/ui components in `client/src/components/ui/`
@@ -218,7 +217,7 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 
 ### Key Design Decisions
 1. **Monorepo Structure**: Client, server, and shared code in single repository with path aliases (`@/`, `@shared/`, `@assets/`)
-2. **Type Safety**: Shared schemas between frontend and backend using Drizzle-Zod
+2. **Type Safety**: Shared schemas between frontend and backend using Zod
 3. **Lead Capture**: Multi-step conversational chatbot widget with webhook integration support
 4. **German Localization**: All UI text in German, targeting Munich local market
 5. **Mobile-First**: Responsive design with mobile breakpoint detection hook
@@ -234,7 +233,6 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 ### Data & Forms
 - TanStack React Query for API calls
 - React Hook Form with Zod validation
-- Drizzle ORM for database operations
 
 ### Styling
 - Tailwind CSS with custom color scheme (primary: orange, secondary: blue, accent: green)
@@ -243,7 +241,8 @@ Static H3 headings optimized with longtail keywords following pattern "Keyword M
 
 ### External Services (Configured)
 - Webhook URL via `VITE_WEBHOOK_URL` environment variable for lead submission
-- PostgreSQL database via `DATABASE_URL` environment variable
+- Google Calendar API for appointment booking
+- IONOS SMTP for email notifications
 
 ### Development Tools
 - Vite with React plugin
