@@ -16,6 +16,7 @@ interface OfferSchema {
 
 interface ServiceOfferItem {
   name: string;
+  price?: string;
 }
 
 interface BreadcrumbItem {
