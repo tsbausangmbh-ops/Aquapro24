@@ -2,7 +2,6 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-import prerender from "prerender-node";
 
 const app = express();
 const httpServer = createServer(app);
@@ -13,22 +12,9 @@ declare module "http" {
   }
 }
 
-// Prerender Integration für SEO (eigener Server auf localhost:3000)
+// SSR wird durch eigene Lösung gehandhabt (server/ssrCache.ts)
 const isProduction = process.env.NODE_ENV === 'production';
-const prerenderServiceUrl = process.env.PRERENDER_SERVICE_URL || 'http://localhost:3000';
-
-if (isProduction) {
-  console.log(`[Prerender] Aktiviert - Server: ${prerenderServiceUrl}`);
-  app.use(prerender
-    .set('prerenderServiceUrl', prerenderServiceUrl)
-    .set('prerenderToken', process.env.PRERENDER_TOKEN || '')
-    .set('protocol', 'https')
-    .set('host', 'aquapro24.de')
-    .set('forwardHeaders', true)
-  );
-} else {
-  console.log(`[SSR] Eigene SSR-Lösung aktiv (Entwicklung)`);
-}
+console.log(`[SSR] Eigene SSR-Lösung aktiv (${isProduction ? 'Production' : 'Entwicklung'})`);
 
 app.use(
   express.json({
