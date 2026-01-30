@@ -22,7 +22,7 @@ import {
   Send,
   Loader2,
 } from "lucide-react";
-import heroImage from "@assets/generated_images/customer_service_team_office.png";
+import heroImage from "@assets/generated_images/customer_service_team_office.webp";
 
 const contactInfo = [
   {

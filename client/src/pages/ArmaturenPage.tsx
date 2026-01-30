@@ -22,7 +22,7 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/modern_chrome_faucet.png";
+import heroImage from "@assets/generated_images/modern_chrome_faucet.webp";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";

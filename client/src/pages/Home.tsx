@@ -32,16 +32,16 @@ import RatgeberDownload from "@/components/RatgeberDownload";
 import NLPQuestions from "@/components/NLPQuestions";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.webp";
-import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.png";
+import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.webp";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.webp";
 import heizungImage from "@assets/stock_images/white_radiator_heate_2e8a306c.webp";
-import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_boiler.png";
-import waermepumpeImage from "@assets/generated_images/vaillant_heat_pump_outdoor_unit.png";
+import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_boiler.webp";
+import waermepumpeImage from "@assets/generated_images/vaillant_heat_pump_outdoor_unit.webp";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.webp";
 import galleryImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.webp";
-import galleryImage2 from "@assets/generated_images/luxury_neutral_modern_bathroom.png";
-import galleryImage3 from "@assets/generated_images/vaillant_arotherm_heat_pump_villa_garden.png";
-import galleryImage4 from "@assets/generated_images/happy_satisfied_customers_group_smiling.png";
+import galleryImage2 from "@assets/generated_images/luxury_neutral_modern_bathroom.webp";
+import galleryImage3 from "@assets/generated_images/vaillant_arotherm_heat_pump_villa_garden.webp";
+import galleryImage4 from "@assets/generated_images/happy_satisfied_customers_group_smiling.webp";
 
 const serviceOptions: { type: ServiceType; name: string; icon: typeof Droplets; description: string }[] = [
   { type: "sanitaer", name: "Sanitär", icon: Droplets, description: "Rohre, Armaturen, Leckage" },
