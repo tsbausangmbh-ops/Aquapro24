@@ -1,4 +1,4 @@
-import footerLogo from "@assets/Logo_1765472336857.png";
+import footerLogo from "@assets/komplett_neu_1769779126155.jpg";
 
 const footerLinks = {
   services: {
