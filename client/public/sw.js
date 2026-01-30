@@ -1,10 +1,16 @@
-const CACHE_NAME = 'aquapro24-v1';
+const CACHE_NAME = 'aquapro24-v2';
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
-  '/favicon.ico',
-  '/favicon.png'
+  '/favicon.ico'
 ];
+
+const CACHE_DURATION = {
+  images: 30 * 24 * 60 * 60 * 1000,
+  scripts: 7 * 24 * 60 * 60 * 1000,
+  styles: 7 * 24 * 60 * 60 * 1000,
+  fonts: 365 * 24 * 60 * 60 * 1000
+};
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -37,7 +43,12 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
-  if (event.request.destination === 'image') {
+  const isImage = event.request.destination === 'image' || url.pathname.match(/\.(webp|jpg|jpeg|png|gif|svg|ico)$/i);
+  const isFont = event.request.destination === 'font' || url.pathname.match(/\.(woff2?|ttf|eot)$/i);
+  const isScript = event.request.destination === 'script' || url.pathname.match(/\.js$/i);
+  const isStyle = event.request.destination === 'style' || url.pathname.match(/\.css$/i);
+  
+  if (isImage || isFont) {
     event.respondWith(
       caches.match(event.request).then((cached) => {
         if (cached) return cached;
@@ -51,6 +62,23 @@ self.addEventListener('fetch', (event) => {
           return response;
         });
       })
+    );
+    return;
+  }
+  
+  if (isScript || isStyle) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, clone);
+            });
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
     );
     return;
   }
