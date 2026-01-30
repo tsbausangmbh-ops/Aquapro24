@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Shield } from "lucide-react";
-import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.webp";
 
 export default function DatenschutzPage() {
   return (

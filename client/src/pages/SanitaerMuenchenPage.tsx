@@ -6,7 +6,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/professional_plumber_39413514.jpg";
+import heroImage from "@assets/stock_images/professional_plumber_39413514.webp";
 import { 
   Droplets, 
   Phone, 

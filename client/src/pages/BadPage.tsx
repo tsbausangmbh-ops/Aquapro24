@@ -29,10 +29,10 @@ import {
   HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.jpg";
-import galleryImage1 from "@assets/stock_images/minimalist_white_bat_63ea775a.jpg";
-import galleryImage2 from "@assets/stock_images/minimalist_luxury_ba_d497e62b.jpg";
-import galleryImage3 from "@assets/stock_images/modern_accessible_ba_f2b18796.jpg";
+import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.webp";
+import galleryImage1 from "@assets/stock_images/minimalist_white_bat_63ea775a.webp";
+import galleryImage2 from "@assets/stock_images/minimalist_luxury_ba_d497e62b.webp";
+import galleryImage3 from "@assets/stock_images/modern_accessible_ba_f2b18796.webp";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";

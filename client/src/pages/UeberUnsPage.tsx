@@ -29,8 +29,8 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import teamImage from "@assets/generated_images/company_team_professional_portrait.png";
-import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.jpg";
-import workshopImage from "@assets/stock_images/modern_plumbing_work_077b9e6b.jpg";
+import technicianImage from "@assets/stock_images/professional_plumber_8d5ea632.webp";
+import workshopImage from "@assets/stock_images/modern_plumbing_work_077b9e6b.webp";
 
 const stats = [
   { value: "Seit 2005", label: "Partnernetzwerk", sublabel: "in München aktiv" },

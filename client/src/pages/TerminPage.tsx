@@ -43,7 +43,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
-import heroImage from "@assets/stock_images/professional_plumber_39413514.jpg";
+import heroImage from "@assets/stock_images/professional_plumber_39413514.webp";
 
 const bookingSchema = z.object({
   serviceType: z.string().min(1, "Bitte wählen Sie einen Service"),

@@ -6,7 +6,7 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.jpg";
+import heroImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.webp";
 import { 
   AlertTriangle, 
   Phone, 

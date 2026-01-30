@@ -23,7 +23,7 @@ import {
   Droplets
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/smart_home_technolog_409ecefa.jpg";
+import heroImage from "@assets/stock_images/smart_home_technolog_409ecefa.webp";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";

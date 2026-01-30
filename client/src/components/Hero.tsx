@@ -8,7 +8,7 @@ import {
   AlertTriangle
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.jpg";
+import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
 
 export default function Hero() {
   return (

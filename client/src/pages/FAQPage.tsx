@@ -25,7 +25,7 @@ import {
   MessageSquare
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/professional_office__fb18ab1c.jpg";
+import heroImage from "@assets/stock_images/professional_office__fb18ab1c.webp";
 
 const faqs = [
   {

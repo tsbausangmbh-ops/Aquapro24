@@ -22,7 +22,7 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/heating_system_boile_6d071f6f.jpg";
+import heroImage from "@assets/stock_images/heating_system_boile_6d071f6f.webp";
 import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
