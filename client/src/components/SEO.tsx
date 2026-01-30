@@ -617,12 +617,21 @@ export default function SEO({
       const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbs.map((item, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "name": item.name,
-          "item": item.url
-        }))
+        "itemListElement": breadcrumbs.map((item, index, arr) => {
+          const listItem: Record<string, unknown> = {
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name
+          };
+          // Nur item hinzufügen wenn nicht das letzte Element (aktuelle Seite)
+          if (index < arr.length - 1) {
+            listItem["item"] = {
+              "@type": "WebPage",
+              "@id": item.url
+            };
+          }
+          return listItem;
+        })
       };
       const breadcrumbScript = document.createElement("script");
       breadcrumbScript.type = "application/ld+json";
