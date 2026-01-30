@@ -39,16 +39,8 @@ async function buildAll() {
   console.log("building client...");
   await viteBuild();
 
-  console.log("pre-rendering 62 pages for SEO...");
-  try {
-    execSync('npx react-snap', {
-      stdio: 'inherit',
-      env: { ...process.env, NODE_ENV: 'production' }
-    });
-    console.log("pre-rendering completed successfully! All 62 pages rendered.");
-  } catch (err) {
-    console.warn("pre-rendering skipped (may not be available in this environment)");
-  }
+  // SSR wird durch server/ssrCache.ts gehandhabt - kein react-snap nötig
+  console.log("SSR wird durch eigene Lösung bereitgestellt (server/ssrCache.ts)");
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));

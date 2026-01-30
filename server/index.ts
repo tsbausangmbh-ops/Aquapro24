@@ -327,8 +327,7 @@ app.use((req, res, next) => {
     
     // Pre-warm SSR cache für Entwicklung
     const clientTemplate = pathModule.resolve(
-      import.meta.dirname,
-      "..",
+      process.cwd(),
       "client",
       "index.html"
     );
