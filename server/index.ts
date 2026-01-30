@@ -425,8 +425,8 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // Server muss auf Port 5000 laufen - Replit erfordert diesen Port
-  const port = 5000;
+  // Server läuft auf Port 3006 (für VPS-Deployment)
+  const port = 3006;
   httpServer.listen(
     {
       port,
