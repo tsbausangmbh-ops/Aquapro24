@@ -425,8 +425,7 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // ALWAYS serve the app on port 5000 - this is the only port exposed by Replit
-  // Ignore PORT env var as Replit Autoscale may set incorrect values
+  // Server muss auf Port 5000 laufen - Replit erfordert diesen Port
   const port = 5000;
   httpServer.listen(
     {
