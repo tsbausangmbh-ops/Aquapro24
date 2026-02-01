@@ -1193,3 +1193,38 @@ function generateRatgeberPDF(): Buffer {
   console.error("Ratgeber PDF not found at:", pdfPath);
   throw new Error("PDF file not found");
 }
+
+// ============================================
+// GOOGLE 2026 SEO: IndexNow API
+// Echtzeit-Indexierung für Bing, Yandex, Seznam
+// ============================================
+const INDEXNOW_KEY = "aquapro24-indexnow-2026";
+const INDEXNOW_ENDPOINTS = [
+  "https://api.indexnow.org/indexnow",
+  "https://www.bing.com/indexnow",
+  "https://yandex.com/indexnow"
+];
+
+export async function notifyIndexNow(urls: string[]): Promise<void> {
+  if (!urls.length) return;
+  
+  const payload = {
+    host: "aquapro24.de",
+    key: INDEXNOW_KEY,
+    keyLocation: "https://aquapro24.de/indexnow-key.txt",
+    urlList: urls.slice(0, 10000) // Max 10k URLs
+  };
+  
+  for (const endpoint of INDEXNOW_ENDPOINTS) {
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      console.log(`[IndexNow] ${endpoint}: ${response.status}`);
+    } catch (e) {
+      console.error(`[IndexNow] ${endpoint} failed:`, e);
+    }
+  }
+}

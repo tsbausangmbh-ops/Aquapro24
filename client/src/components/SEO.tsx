@@ -553,6 +553,74 @@ export default function SEO({
     orgScript.textContent = JSON.stringify(organizationSchema);
     document.head.appendChild(orgScript);
 
+    // GOOGLE 2026: WebSite Schema mit Sitelinks SearchAction
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://aquapro24.de/#website",
+      "url": "https://aquapro24.de",
+      "name": "AquaPro24 - Sanitär & Heizung München",
+      "alternateName": ["AquaPro 24", "Klempner München", "Heizung München"],
+      "description": "Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst, Festpreisgarantie, bis 70% BAFA Förderung.",
+      "publisher": { "@id": "https://aquapro24.de/#organization" },
+      "inLanguage": "de-DE",
+      "copyrightYear": 2025,
+      "datePublished": "2005-01-01",
+      "dateModified": new Date().toISOString().split('T')[0],
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://aquapro24.de/suche?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "mainEntity": { "@id": "https://aquapro24.de/#localbusiness" }
+    };
+    const websiteScript = document.createElement("script");
+    websiteScript.type = "application/ld+json";
+    websiteScript.textContent = JSON.stringify(websiteSchema);
+    document.head.appendChild(websiteScript);
+
+    // GOOGLE 2026: WebPage Schema mit Speakable
+    const webpageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `https://aquapro24.de${window.location.pathname}#webpage`,
+      "url": effectiveCanonical,
+      "name": title,
+      "description": description,
+      "isPartOf": { "@id": "https://aquapro24.de/#website" },
+      "about": { "@id": "https://aquapro24.de/#localbusiness" },
+      "inLanguage": "de-DE",
+      "datePublished": "2024-01-01",
+      "dateModified": new Date().toISOString().split('T')[0],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://aquapro24.de/og-image.jpg"
+      },
+      "breadcrumb": { "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb` },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".hero-text", ".service-description", ".price-info"]
+      },
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": "main"
+      },
+      "significantLink": [
+        "https://aquapro24.de/termin",
+        "https://aquapro24.de/notdienst-muenchen",
+        "https://aquapro24.de/kontakt"
+      ]
+    };
+    const webpageScript = document.createElement("script");
+    webpageScript.type = "application/ld+json";
+    webpageScript.textContent = JSON.stringify(webpageSchema);
+    document.head.appendChild(webpageScript);
+
     if (serviceSchema) {
       const serviceSchemaData: Record<string, unknown> = {
         "@context": "https://schema.org",
