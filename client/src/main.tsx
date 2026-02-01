@@ -1,6 +1,10 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import { initINPOptimizations } from "./lib/inp-optimizer";
+
+// GOOGLE 2026: Initialize INP optimizations early
+initINPOptimizations();
 
 const rootElement = document.getElementById("root")!;
 
