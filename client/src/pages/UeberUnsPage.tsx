@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -128,6 +129,56 @@ const serviceAreas = [
   "Laim", "Giesing", "Moosach", "Milbertshofen"
 ];
 
+// GOOGLE 2026: ProfilePage Schema für E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
+const profilePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://aquapro24.de/ueber-uns#profilepage",
+  "dateCreated": "2005-01-01",
+  "dateModified": new Date().toISOString().split('T')[0],
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://aquapro24.de/#person-mustafa-sakar",
+    "name": "Mustafa Sakar",
+    "jobTitle": "Inhaber & Geschäftsführer",
+    "description": "Gründer von AquaPro24 München. Seit 2005 leitet er das Partnernetzwerk für Sanitär und Heizung mit über 2.800 zufriedenen Kunden.",
+    "image": "https://aquapro24.de/team-photo.webp",
+    "knowsAbout": [
+      "Sanitärinstallation",
+      "Heizungsmodernisierung", 
+      "Badsanierung",
+      "Wärmepumpen",
+      "Fußbodenheizung",
+      "Notdienst-Management",
+      "BAFA Förderung",
+      "KfW Förderung"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://aquapro24.de/#organization"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "Handwerkskammer für München und Oberbayern"
+    },
+    "award": [
+      "Top Handwerker München 2024",
+      "4.9 Sterne Google Bewertung"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Meisterbrief",
+        "name": "Installateur- und Heizungsbauermeister"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/mustafa-sakar-aquapro24",
+      "https://www.xing.com/profile/Mustafa_Sakar_AquaPro24"
+    ]
+  }
+};
+
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
@@ -223,6 +274,20 @@ const aboutPageSchema = {
 };
 
 export default function UeberUnsPage() {
+  // GOOGLE 2026: ProfilePage Schema für E-E-A-T einbetten
+  useEffect(() => {
+    const profileScript = document.createElement("script");
+    profileScript.type = "application/ld+json";
+    profileScript.id = "profilepage-schema";
+    profileScript.textContent = JSON.stringify(profilePageSchema);
+    document.head.appendChild(profileScript);
+    
+    return () => {
+      const existingScript = document.getElementById("profilepage-schema");
+      if (existingScript) existingScript.remove();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
