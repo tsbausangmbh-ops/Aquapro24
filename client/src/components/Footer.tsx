@@ -199,7 +199,9 @@ export default function Footer() {
             <p className="text-xs text-background/40 text-center">
               KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro 24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
               Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen.
-              <a href="/impressum" className="hover:text-primary underline ml-1">Details im Impressum</a>
+            </p>
+            <p className="text-xs text-background/40 text-center">
+              <a href="/impressum" className="hover:text-primary underline">Details im Impressum</a>
             </p>
           </div>
         </div>
