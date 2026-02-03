@@ -122,7 +122,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm text-background/70 max-w-xs">
-              Ihr AquaProfi24-Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005.
+              Ihr AquaPro 24 Fachteam für Sanitär, Heizung, Elektro und Badsanierung – seit 2005.
             </p>
             <div className="mt-3 text-xs text-background/60">
               <p>Hardenbergstr. 4</p>
