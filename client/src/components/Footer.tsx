@@ -1,4 +1,4 @@
-import footerLogo from "@assets/logo-optimized.webp";
+import footerLogo from "@assets/logo-small.webp";
 
 const footerLinks = {
   services: {
