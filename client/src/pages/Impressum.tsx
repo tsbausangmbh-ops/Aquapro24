@@ -104,7 +104,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-semibold mb-4">Betriebsverantwortung</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>
-                    Die Webseite AquaPro24.de wird von AquaPro 24 (Inhaber: Mustafa Sakar) verwaltet, betrieben und technisch administriert.
+                    Die Webseite AquaPro 24.de wird von AquaPro 24 (Inhaber: Mustafa Sakar) verwaltet, betrieben und technisch administriert.
                   </p>
                 </div>
               </CardContent>
@@ -165,7 +165,7 @@ export default function Impressum() {
                     KI-Hinweis gemäß EU AI Act (Art. 50)
                   </h3>
                   <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
-                    <strong>Transparenzhinweis:</strong> AquaPro24 setzt zur Unterstützung der Geschäftsprozesse 
+                    <strong>Transparenzhinweis:</strong> AquaPro 24 setzt zur Unterstützung der Geschäftsprozesse 
                     KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und 
                     Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten 
                     Mitarbeitern getroffen und verantwortet.

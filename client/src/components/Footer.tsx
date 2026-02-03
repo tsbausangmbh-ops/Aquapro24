@@ -108,10 +108,10 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 lg:gap-4">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-4">
-              <a href="/" aria-label="AquaPro24 Startseite">
+              <a href="/" aria-label="AquaPro 24 Startseite">
                 <img 
                   src={footerLogo} 
-                  alt="AquaPro24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
+                  alt="AquaPro 24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
                   className="w-14 h-14 object-contain rounded-sm"
                   width="56"
                   height="56"
@@ -197,7 +197,7 @@ export default function Footer() {
           </div>
           <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
             <p className="text-xs text-background/40 text-center">
-              KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
+              KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro 24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
               Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen. 
               <a href="/impressum" className="hover:text-primary underline ml-1">Details im Impressum</a>
             </p>

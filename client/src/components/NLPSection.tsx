@@ -64,7 +64,7 @@ export default function NLPSection({
               <h3 className="font-semibold text-lg text-green-800 dark:text-green-300">{solutionTitle}</h3>
             </div>
             <p className="text-sm text-green-700 dark:text-green-400 mb-4">
-              Mit AquaPro24 erleben Sie den Unterschied:
+              Mit AquaPro 24 erleben Sie den Unterschied:
             </p>
             <ul className="space-y-3">
               {solutions.map((solution, index) => (

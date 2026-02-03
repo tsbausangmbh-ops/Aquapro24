@@ -83,10 +83,10 @@ export default function Header() {
       <header className="sticky top-0 z-[60] bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between gap-4 h-16">
-            <Link href="/" className="flex items-center gap-2" aria-label="AquaPro24 - Zur Startseite">
+            <Link href="/" className="flex items-center gap-2" aria-label="AquaPro 24 - Zur Startseite">
               <img 
                 src={logoImage} 
-                alt="Klempner München - AquaPro24 Sanitär und Heizung Notdienst 24/7" 
+                alt="Klempner München - AquaPro 24 Sanitär und Heizung Notdienst 24/7" 
                 className="w-10 h-10 object-contain rounded-sm"
                 width="40"
                 height="40"

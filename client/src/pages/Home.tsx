@@ -190,7 +190,7 @@ const galleryItems = [
     image: galleryImage4, 
     title: "Zufriedene Kunden", 
     category: "Referenz",
-    alt: "Zufriedene Kunden München AquaPro24 - 2800 Kundenbewertungen 4.9 Sterne Sanitär Heizung"
+    alt: "Zufriedene Kunden München AquaPro 24 - 2800 Kundenbewertungen 4.9 Sterne Sanitär Heizung"
   }
 ];
 

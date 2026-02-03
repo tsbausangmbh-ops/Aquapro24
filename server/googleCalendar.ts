@@ -126,7 +126,7 @@ Terminwunsch: ${appointmentInfo}
     const event = await calendar.events.insert({
       calendarId: calendarId,
       requestBody: {
-        summary: `AquaPro24 - Kunde - ${serviceLabel}`,
+        summary: `AquaPro 24 - Kunde - ${serviceLabel}`,
         description: eventDescription,
         location: data.address,
         start: {
@@ -298,14 +298,14 @@ export async function getAvailableTimeSlots(date: string, serviceType?: string):
 
     const events = response.data.items || [];
     
-    // Count only AquaPro24 bookings (our events start with "AquaPro24")
-    const aquaProEvents = events.filter(e => e.summary?.startsWith('AquaPro24'));
+    // Count only AquaPro 24 bookings (our events start with "AquaPro 24")
+    const aquaProEvents = events.filter(e => e.summary?.startsWith('AquaPro 24'));
     const totalBookingsToday = aquaProEvents.length;
     
     // Maximum 2 bookings per day
     const MAX_BOOKINGS_PER_DAY = 2;
     
-    console.log(`Found ${events.length} total events, ${totalBookingsToday} AquaPro24 bookings for date ${date}`);
+    console.log(`Found ${events.length} total events, ${totalBookingsToday} AquaPro 24 bookings for date ${date}`);
     
     // If already at max capacity, block all slots
     if (totalBookingsToday >= MAX_BOOKINGS_PER_DAY) {

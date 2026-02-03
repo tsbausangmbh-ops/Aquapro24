@@ -89,7 +89,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@type": ["HomeAndConstructionBusiness", "Plumber", "HVACBusiness", "LocalBusiness"],
   "@id": "https://aquapro24.de/#localbusiness",
   "name": "AquaPro 24",
-  "alternateName": ["AquaPro 24", "AquaPro24", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
+  "alternateName": ["AquaPro 24", "AquaPro 24", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Badsanierung München"],
   "legalName": "AquaPro 24 - Mustafa Sakar",
   "description": "Sanitär, Heizung, Badsanierung und Modernisierung in München. 24/7 Notdienst, Festpreis-Optionen und Koordination geprüfter Fachbetriebe. Seit 2005 zuverlässiger Partner für Wasserinstallation, Wärmepumpen und Haustechnik.",
   "slogan": "Ihr Partnernetzwerk für München - 24/7 Notdienst",
@@ -452,7 +452,7 @@ export default function SEO({
     updateMeta("ai-act:human-oversight", "available");
     updateMeta("ai-act:provider", "AquaPro 24 - Mustafa Sakar");
     updateMeta("ai-act:contact", "info@aquapro24.de");
-    updateMeta("ai-act:ai-system-name", "AquaPro24 KI-Berater");
+    updateMeta("ai-act:ai-system-name", "AquaPro 24 KI-Berater");
     updateMeta("ai-act:ai-system-purpose", "Kundenberatung für Sanitär- und Heizungsdienstleistungen");
     updateMeta("ai-act:ai-model", "OpenAI GPT-4o-mini");
     updateMeta("ai-act:last-updated", "2025-12-22");
@@ -471,7 +471,7 @@ export default function SEO({
     
     updateMeta("author", "AquaPro 24 - Mustafa Sakar");
     updateMeta("publisher", "AquaPro 24 - Mustafa Sakar");
-    updateMeta("copyright", "2025 AquaPro24.de");
+    updateMeta("copyright", "2025 AquaPro 24.de");
     updateMeta("language", "de");
     updateMeta("content-language", "de-DE");
     updateMeta("audience", "Hausbesitzer, Mieter, Hausverwaltungen in München");
@@ -503,7 +503,7 @@ export default function SEO({
       "@type": "Organization",
       "@id": "https://aquapro24.de/#organization",
       "name": "AquaPro 24",
-      "alternateName": ["AquaPro24", "AquaPro 24", "Sanitär München Partnernetzwerk"],
+      "alternateName": ["AquaPro 24", "AquaPro 24", "Sanitär München Partnernetzwerk"],
       "url": "https://aquapro24.de",
       "logo": "https://aquapro24.de/logo.png",
       "foundingDate": "2005",
@@ -559,7 +559,7 @@ export default function SEO({
       "@type": "WebSite",
       "@id": "https://aquapro24.de/#website",
       "url": "https://aquapro24.de",
-      "name": "AquaPro24 - Sanitär & Heizung München",
+      "name": "AquaPro 24 - Sanitär & Heizung München",
       "alternateName": ["AquaPro 24", "Klempner München", "Heizung München"],
       "description": "Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst, Festpreisgarantie, bis 70% BAFA Förderung.",
       "publisher": { "@id": "https://aquapro24.de/#organization" },

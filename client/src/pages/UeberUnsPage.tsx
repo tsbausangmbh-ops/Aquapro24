@@ -141,7 +141,7 @@ const profilePageSchema = {
     "@id": "https://aquapro24.de/#person-mustafa-sakar",
     "name": "Mustafa Sakar",
     "jobTitle": "Inhaber & Geschäftsführer",
-    "description": "Gründer von AquaPro24 München. Seit 2005 leitet er das Partnernetzwerk für Sanitär und Heizung mit über 2.800 zufriedenen Kunden.",
+    "description": "Gründer von AquaPro 24 München. Seit 2005 leitet er das Partnernetzwerk für Sanitär und Heizung mit über 2.800 zufriedenen Kunden.",
     "image": "https://aquapro24.de/team-photo.webp",
     "knowsAbout": [
       "Sanitärinstallation",
@@ -174,7 +174,7 @@ const profilePageSchema = {
     ],
     "sameAs": [
       "https://www.linkedin.com/in/mustafa-sakar-aquapro24",
-      "https://www.xing.com/profile/Mustafa_Sakar_AquaPro24"
+      "https://www.xing.com/profile/Mustafa_Sakar_AquaPro 24"
     ]
   }
 };
@@ -200,7 +200,7 @@ const aboutPageSchema = {
     "@type": ["Plumber", "HVACBusiness", "LocalBusiness"],
     "@id": "https://aquapro24.de/#organization",
     "name": "AquaPro 24 - Sanitär & Heizung München",
-    "alternateName": ["AquaPro 24", "AquaPro24", "Sanitär München", "Heizung München"],
+    "alternateName": ["AquaPro 24", "AquaPro 24", "Sanitär München", "Heizung München"],
     "legalName": "AquaPro 24 - Mustafa Sakar",
     "description": "Ihr Münchner Partnernetzwerk für Sanitär, Heizung und Badsanierung. Seit 2005 verbinden wir geprüfte Fachbetriebe mit Kunden, die kompetente Hilfe brauchen.",
     "slogan": "Ihre Probleme lösen - schnell, fair, zuverlässig",
@@ -426,7 +426,7 @@ export default function UeberUnsPage() {
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={technicianImage} 
-                    alt="Sanitärinstallateur München Heizungsinstallateur Meister bei der Arbeit - AquaPro24 Partnernetzwerk seit 2005" 
+                    alt="Sanitärinstallateur München Heizungsinstallateur Meister bei der Arbeit - AquaPro 24 Partnernetzwerk seit 2005" 
                     className="w-full h-80 object-cover"
                     loading="lazy"
                   />

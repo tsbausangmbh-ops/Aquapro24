@@ -225,11 +225,11 @@ export default function FoerderungPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title={`Förderung Heizung München: KfW 458, BAFA & Steuerbonus ${currentYear} | AquaPro24`}
+        title={`Förderung Heizung München: KfW 458, BAFA & Steuerbonus ${currentYear} | AquaPro 24`}
         description={`Bis zu 70% Förderung für Ihre neue Heizung in München (Stand ${standDatum}). KfW 458 Wärmepumpe, BAFA Dämmung, KfW 455-B Bad. Kostenlose Beratung. Tel: 089 444438872`}
         canonical="https://aquapro24.de/foerderung"
         keywords={keywords.join(", ")}
-        aiSummary={`AquaPro24 München: Förderberatung Heizung & Wasser Stand ${standDatum}. KfW 458 bis 70% für Wärmepumpe, BAFA 15-20% Dämmung, KfW 455-B 12,5% Bad, KfW 358 Kredit bis 120.000€. Kostenloser Antragsservice. Kontakt: 089 444438872`}
+        aiSummary={`AquaPro 24 München: Förderberatung Heizung & Wasser Stand ${standDatum}. KfW 458 bis 70% für Wärmepumpe, BAFA 15-20% Dämmung, KfW 455-B 12,5% Bad, KfW 358 Kredit bis 120.000€. Kostenloser Antragsservice. Kontakt: 089 444438872`}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" }

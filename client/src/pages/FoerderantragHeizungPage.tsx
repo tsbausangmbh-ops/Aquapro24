@@ -203,11 +203,11 @@ export default function FoerderantragHeizungPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderantrag Heizung München: Wärmepumpe bis 70% | AquaPro24"
+        title="Förderantrag Heizung München: Wärmepumpe bis 70% | AquaPro 24"
         description="Förderantrag Heizung München: Bis 70% für Wärmepumpe, Pellet, Solar. Kostenloser Antragsservice, alle Marken. Viessmann, Vaillant, Wolf. Tel: 089 444438872"
         canonical="https://aquapro24.de/foerderantrag-heizung"
         keywords={keywords.join(", ")}
-        aiSummary="AquaPro24 München: Förderantrag Heizung. BAFA bis 70% für Wärmepumpe (Viessmann, Vaillant, Wolf), Pellet, Solar. Kostenloser Antragsservice. Klimabonus, Einkommensbonus. Kontakt: 089 444438872"
+        aiSummary="AquaPro 24 München: Förderantrag Heizung. BAFA bis 70% für Wärmepumpe (Viessmann, Vaillant, Wolf), Pellet, Solar. Kostenloser Antragsservice. Klimabonus, Einkommensbonus. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Förderung", url: "https://aquapro24.de/foerderung" },
