@@ -192,7 +192,7 @@ export default function Footer() {
               <p>© 2025 AquaPro 24 – Verwaltung & Betrieb durch Mustafa Sakar.</p>
             </div>
             <div className="text-sm text-background/50 text-center md:text-right">
-              <p>Webdesign powered by <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a></p>
+              <p>Webdesign powered by <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a> & <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHWmont d.o.o.</a></p>
             </div>
           </div>
           <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
