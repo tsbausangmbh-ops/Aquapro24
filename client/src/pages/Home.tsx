@@ -303,7 +303,7 @@ export default function Home() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white mb-4">
-                Münchner Sanitär und Heizung – Klempner Notdienst 24/7
+                AquaPro 24 München – Sanitär & Heizung Notdienst 24/7
               </h1>
               
               <p className="text-lg text-white/90 mb-3">
