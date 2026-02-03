@@ -191,14 +191,11 @@ export default function Footer() {
             <div className="text-sm text-background/50 text-center md:text-left">
               <p>© 2025 AquaPro 24 – Verwaltung & Betrieb durch Mustafa Sakar.</p>
             </div>
-            <div className="text-sm text-background/50 text-center md:text-right">
-              <p>Webdesign powered by <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a> & <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHWmont d.o.o.</a></p>
-            </div>
-          </div>
+                      </div>
           <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
             <p className="text-xs text-background/40 text-center">
               KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro 24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
-              Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen. 
+              Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen.
               <a href="/impressum" className="hover:text-primary underline ml-1">Details im Impressum</a>
             </p>
           </div>
