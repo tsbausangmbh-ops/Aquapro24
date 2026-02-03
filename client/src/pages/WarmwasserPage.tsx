@@ -229,7 +229,7 @@ export default function WarmwasserPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Warmwasser Leistungen München: Preise & Services</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Warmwasser München: Preise & Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Vom kleinen Untertischboiler bis zum großen Warmwasserspeicher.
               </p>

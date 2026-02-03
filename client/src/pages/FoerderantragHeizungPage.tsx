@@ -192,7 +192,7 @@ export default function FoerderantragHeizungPage() {
   ];
 
   const keywords = [
-    "Förderantrag Heizung München", "BAFA Wärmepumpe Antrag", "Heizungsförderung beantragen",
+    "AquaPro 24 Förderantrag Heizung München", "BAFA Wärmepumpe Antrag", "Heizungsförderung beantragen",
     "Wärmepumpe Förderung 2025", "Pelletheizung Förderung", "Solarthermie Zuschuss",
     "Fußbodenheizung Förderung", "Heizungstausch Förderantrag", "BAFA Antrag Heizung",
     "Klimageschwindigkeitsbonus", "70% Heizungsförderung", "Einkommensbonus Heizung",

@@ -227,7 +227,7 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Wärmepumpe Leistungen München: Preise & Services</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Wärmepumpe München: Preise & Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung über die Förderung bis zur Installation – alles aus einer Hand.
               </p>

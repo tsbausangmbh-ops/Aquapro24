@@ -213,7 +213,7 @@ export default function FoerderungPage() {
   ];
 
   const keywords = [
-    "Förderung Heizung München", "KfW 458 Wärmepumpe", "KfW 358 Heizungskredit",
+    "AquaPro 24 Förderung Heizung", "KfW 458 Wärmepumpe", "KfW 358 Heizungskredit",
     "70% Förderung Heizungstausch", "Klimageschwindigkeitsbonus", "Einkommensbonus Heizung",
     "Steuerbonus Heizung §35c", "Förderantrag Wärmepumpe", "KfW Antrag München",
     "Heizungsförderung beantragen", "Wärmepumpe Zuschuss", `BEG Förderung ${currentYear}`,

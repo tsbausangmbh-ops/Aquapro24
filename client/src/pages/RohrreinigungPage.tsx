@@ -228,7 +228,7 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Rohrreinigung Leistungen München: Preise & Services</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Rohrreinigung München: Preise & Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Egal ob Küche, Bad oder Keller – wir lösen jede Verstopfung.
               </p>
@@ -289,7 +289,7 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Rohrreinigung Garantie München: Unser Versprechen</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Rohrreinigung Garantie München: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>

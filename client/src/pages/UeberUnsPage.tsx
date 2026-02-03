@@ -435,7 +435,7 @@ export default function UeberUnsPage() {
               <div className="order-1 lg:order-2 space-y-6">
                 <Badge variant="outline">Unsere Geschichte</Badge>
                 <h2 className="text-3xl font-bold">
-                  Klempner Partnernetzwerk München: Warum wir AquaPro 24 gegründet haben
+                  Klempner AquaPro 24 Partnernetzwerk: Warum wir AquaPro 24 gegründet haben
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>

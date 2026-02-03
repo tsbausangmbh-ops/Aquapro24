@@ -246,7 +246,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Badsanierung München: Von der Vision zum Traumbad</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Badsanierung: Von der Vision zum Traumbad</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Moderne Bäder, professionelle Umsetzung, barrierefreie Lösungen – alles aus einer Hand.
               </p>
@@ -406,7 +406,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Bad Garantie München: Unser Versprechen</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Bad Garantie: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>

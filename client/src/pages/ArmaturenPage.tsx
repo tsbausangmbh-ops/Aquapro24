@@ -228,7 +228,7 @@ export default function ArmaturenPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Armaturen Service München: Leistungen & Preise</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Armaturen München: Leistungen & Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der einfachen Reparatur bis zum kompletten Duschsystem.
               </p>
@@ -289,7 +289,7 @@ export default function ArmaturenPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Wasserhahn Montage München: Unsere Garantien</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Wasserhahn Montage: Unsere Garantien</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>

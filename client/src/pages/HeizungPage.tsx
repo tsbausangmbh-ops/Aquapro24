@@ -232,7 +232,7 @@ export default function HeizungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Heizung Leistungen München: Preise & Services</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Heizung München: Leistungen Heizung Leistungen München: Preise & Services Preise</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Reparatur bis zur Neuinstallation – wir sind Ihr Heizungs-Partner in München.
               </p>
@@ -293,7 +293,7 @@ export default function HeizungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Heizung Garantie München: Unser Versprechen</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Heizung Garantie: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>

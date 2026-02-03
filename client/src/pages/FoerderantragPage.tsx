@@ -170,7 +170,7 @@ export default function FoerderantragPage() {
     "Förderantrag München", "BAFA Antrag stellen", "KfW Antrag Heizung",
     "Förderantrag Wärmepumpe", "BAFA Vollmacht", "Förderung beantragen",
     "Heizungsförderung Antrag", "BAFA Online Antrag", "KfW 458 beantragen",
-    "Förderantrag Service", "BAFA Unterlagen", "Förderantrag Hilfe",
+    "AquaPro 24 Förderantrag Service", "BAFA Unterlagen", "Förderantrag Hilfe",
     "Antragstellung Heizung", "BAFA Formulare", "Förderantrag kostenlos",
     "BEG Antrag München", "Heizungstausch Antrag", "BAFA Beratung München"
   ];
