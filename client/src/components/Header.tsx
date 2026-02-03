@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, MapPin, ChevronDown, Mail, Calendar as CalendarIcon, ArrowLeft } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import logoImage from "@assets/komplett_neu_1769779126155.jpg";
+import logoImage from "@assets/Logo_Weiß_1770158067416.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -87,7 +87,7 @@ export default function Header() {
               <img 
                 src={logoImage} 
                 alt="Klempner München - AquaPro24 Sanitär und Heizung Notdienst 24/7" 
-                className="w-10 h-10 object-contain rounded-md"
+                className="w-10 h-10 object-contain rounded-sm"
                 width="40"
                 height="40"
                 loading="eager"
