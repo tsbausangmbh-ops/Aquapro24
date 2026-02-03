@@ -27,7 +27,7 @@ export default function AGBPage() {
                 <FileText className="w-3 h-3" />
                 Rechtliches
               </Badge>
-              <h1 className="text-3xl lg:text-4xl font-bold text-white">AGB Sanitär München – Festpreis & Garantie</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold text-white">AquaPro 24 AGB München – Festpreis & Garantie</h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">AGB Sanitär</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreisgarantie</span>

@@ -266,7 +266,7 @@ export default function HaustechnikPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Haustechnik Ablauf München: So läuft Ihr Projekt</h2>
+              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Haustechnik Ablauf München: So läuft Ihr Projekt</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung bis zur fertigen Installation – ein Ansprechpartner.
               </p>

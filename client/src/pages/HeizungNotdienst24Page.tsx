@@ -181,7 +181,7 @@ export default function HeizungNotdienst24Page() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Heizung Notdienst München: Heizungsausfall, Therme & Brenner Störung
+              AquaPro 24 Heizung Notdienst München: Heizungsausfall, Therme & Brenner Störung
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {notfallLeistungen.map((item, index) => (
@@ -202,7 +202,7 @@ export default function HeizungNotdienst24Page() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              24/7 Heizung Notdienst München: Schnell & Zuverlässig
+              AquaPro 24 Heizung Notdienst München: Schnell & Zuverlässig 24/7
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {vertrauensElemente.map((item, index) => (

@@ -426,7 +426,7 @@ export default function TerminPage() {
         {/* Booking Form Section */}
         <section className="py-6 lg:py-8">
           <div className="max-w-3xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6 text-center">Klempner Termin online München: Wunschtermin in Echtzeit buchen</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">AquaPro 24 Termin online München: Wunschtermin in Echtzeit buchen</h2>
             
             {/* Progress Steps */}
             {step <= 12 && (
@@ -1208,7 +1208,7 @@ export default function TerminPage() {
         {/* Benefits Section */}
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold text-center mb-8">Sanitär Handwerker München: Festpreise, Garantie & Qualität</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">AquaPro 24 Handwerker München: Festpreise, Garantie & Qualität</h2>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
               {[

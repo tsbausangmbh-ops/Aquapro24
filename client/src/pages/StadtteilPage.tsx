@@ -655,7 +655,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-              Sanitär & Heizung München {data.name}: Alle Leistungen im Überblick
+              AquaPro 24 Sanitär & Heizung München {data.name}: Alle Leistungen im Überblick
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((service) => (
@@ -680,7 +680,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Klempner München {data.name}: Warum Kunden uns empfehlen
+                  AquaPro 24 Klempner München {data.name}: Warum Kunden uns empfehlen
                 </h2>
                 <ul className="space-y-3">
                   {data.besonderheiten.map((item, index) => (

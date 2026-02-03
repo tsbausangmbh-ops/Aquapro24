@@ -262,7 +262,7 @@ export default function FAQPage() {
 
         <section className="py-6 lg:py-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Klempner München kontaktieren: Kostenlose Beratung anfordern</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">AquaPro 24 München kontaktieren: Kostenlose Beratung anfordern</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Wir beraten Sie gerne persönlich - kostenlos und unverbindlich.
             </p>

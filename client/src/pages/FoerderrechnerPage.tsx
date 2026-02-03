@@ -1288,7 +1288,7 @@ export default function FoerderrechnerPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-              Fördervergleich München: BAFA vs. KfW vs. Steuerbonus
+              AquaPro 24 Fördervergleich München: BAFA vs. KfW vs. Steuerbonus
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Card>
