@@ -62,7 +62,7 @@ export default function Header() {
                 <MapPin className="w-4 h-4" aria-hidden="true" />
                 <span>München & Umgebung</span>
               </div>
-              <span className="hidden xl:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
+              <span className="hidden lg:inline text-xs text-primary-foreground/70">In Zusammenarbeit mit geprüften Sanitär-, Heizungs- und Elektromeistern</span>
             </div>
             <a 
               href="tel:+4989444438872" 
@@ -101,7 +101,7 @@ export default function Header() {
               </div>
             </Link>
 
-            <nav className="hidden xl:flex items-center gap-6" aria-label="Hauptnavigation">
+            <nav className="hidden lg:flex items-center gap-6" aria-label="Hauptnavigation">
               <Link 
                 href="/"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -287,7 +287,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="xl:hidden"
+              className="lg:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
@@ -300,7 +300,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div id="mobile-menu" className="xl:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-[70]">
+          <div id="mobile-menu" className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-[70]">
             <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
               <Link
                 href="/"
