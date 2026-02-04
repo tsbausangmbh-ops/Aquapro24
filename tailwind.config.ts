@@ -8,7 +8,7 @@ export default {
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
-      'xl': '1000px',
+      'xl': '920px',
       '2xl': '1536px',
     },
     extend: {
