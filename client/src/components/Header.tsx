@@ -101,7 +101,7 @@ export default function Header() {
               </div>
             </Link>
 
-            <nav className="hidden 2xl:flex items-center gap-6" aria-label="Hauptnavigation">
+            <nav className="hidden xl:flex items-center gap-6" aria-label="Hauptnavigation">
               <Link 
                 href="/"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -287,7 +287,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="2xl:hidden"
+              className="xl:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
@@ -300,7 +300,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div id="mobile-menu" className="2xl:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-[70]">
+          <div id="mobile-menu" className="xl:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-[70]">
             <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
               <Link
                 href="/"
