@@ -92,6 +92,7 @@ export default function Header() {
                 height="120"
                 loading="eager"
                 decoding="async"
+                fetchPriority="high"
                 data-testid="img-header-logo"
               />
               <div>
