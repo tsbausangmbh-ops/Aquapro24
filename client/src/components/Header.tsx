@@ -87,7 +87,7 @@ export default function Header() {
               <img 
                 src={logoImage} 
                 alt="Klempner München - AquaPro 24 Sanitär und Heizung Notdienst 24/7" 
-                className="h-12 w-auto object-contain"
+                className="h-10 w-auto object-contain rounded-lg"
                 width="180"
                 height="120"
                 loading="eager"
@@ -95,6 +95,10 @@ export default function Header() {
                 fetchPriority="high"
                 data-testid="img-header-logo"
               />
+              <div>
+                <span className="font-bold text-lg tracking-tight">Münchner</span>
+                <span className="block text-xs text-muted-foreground -mt-0.5">Heizung & Sanitär</span>
+              </div>
             </Link>
 
             <nav className="hidden lg:flex items-center gap-6" aria-label="Hauptnavigation">
