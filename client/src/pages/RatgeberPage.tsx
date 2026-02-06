@@ -355,6 +355,9 @@ export default function RatgeberPage() {
                       alt={guide.alt}
                       className="w-full h-48 object-cover"
                       loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="192"
                     />
                   </div>
                 </div>

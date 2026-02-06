@@ -429,6 +429,9 @@ export default function UeberUnsPage() {
                     alt="Sanitärinstallateur München Heizungsinstallateur Meister bei der Arbeit - AquaPro 24 Partnernetzwerk seit 2005" 
                     className="w-full h-80 object-cover"
                     loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="320"
                   />
                 </div>
               </div>
@@ -513,6 +516,9 @@ export default function UeberUnsPage() {
                   alt="Klempner Werkstatt München professionelle Ausrüstung - Sanitär Heizung Werkzeug Viessmann Vaillant Partner" 
                   className="w-full h-80 object-cover"
                   loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="320"
                 />
               </div>
             </div>
