@@ -376,6 +376,23 @@ export default function KontaktPage() {
           />
         </section>
       </main>
+      <section className="max-w-4xl mx-auto px-4 py-6">
+        <div className="border-t pt-4 space-y-1">
+          <p className="text-[10px] text-muted-foreground/60 font-semibold">Hinweis zum Vertragsabschluss</p>
+          <p className="text-[10px] text-muted-foreground/60">
+            Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar. Ein Vertragsabschluss über diese Website findet nicht statt.
+          </p>
+          <p className="text-[10px] text-muted-foreground/60">
+            Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande.
+          </p>
+          <p className="text-[10px] text-muted-foreground/60">
+            Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.
+          </p>
+          <p className="text-[10px] text-muted-foreground/60">
+            <a href="/impressum" className="underline hover:text-primary">Impressum</a> · <a href="/agb" className="underline hover:text-primary">AGB</a>
+          </p>
+        </div>
+      </section>
       <Footer />
     </div>
   );

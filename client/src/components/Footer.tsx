@@ -196,25 +196,6 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
-            <p className="text-xs text-background/40 text-center font-semibold">
-              Hinweis zum Vertragsabschluss
-            </p>
-            <p className="text-xs text-background/40 text-center">
-              Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar.
-              Ein Vertragsabschluss über diese Website findet nicht statt.
-            </p>
-            <p className="text-xs text-background/40 text-center">
-              Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung.
-              Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande.
-            </p>
-            <p className="text-xs text-background/40 text-center">
-              Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.
-            </p>
-            <p className="text-xs text-background/40 text-center">
-              <a href="/impressum" className="hover:text-primary underline">Impressum</a>
-              {" · "}
-              <a href="/agb" className="hover:text-primary underline">AGB</a>
-            </p>
             <p className="text-xs text-background/40 text-center">
               KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro 24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
               Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen.
