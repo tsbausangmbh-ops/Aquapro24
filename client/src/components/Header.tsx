@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, MapPin, ChevronDown, Mail, Calendar as CalendarIcon, ArrowLeft } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import logoImage from "@assets/logo-fast.webp";
+const logoImage = "/images/logo-fast.webp";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

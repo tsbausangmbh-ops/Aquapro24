@@ -1,4 +1,4 @@
-import footerLogo from "@assets/logo-fast.webp";
+const footerLogo = "/images/logo-fast.webp";
 
 const footerLinks = {
   services: {

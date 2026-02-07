@@ -35,7 +35,7 @@ app.use((req, res, next) => {
   
   // Cache-Control für statische Ressourcen
   const path = req.path;
-  if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+  if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   } else if (path === '/sitemap.xml' || path === '/robots.txt') {
     res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 Tag

@@ -8,14 +8,19 @@ import {
   AlertTriangle
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/hero-fast.webp";
-
 export default function Hero() {
   return (
     <section className="relative py-6 lg:py-8 overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      <img
+        src="/images/hero-fast.webp"
+        alt="Klempner München - Sanitär und Heizung Notdienst"
+        className="absolute inset-0 w-full h-full object-cover"
+        width="1200"
+        height="630"
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
+        data-testid="img-hero"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
       

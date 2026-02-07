@@ -330,6 +330,15 @@ export async function serveStatic(app: Express) {
     return generateStaticHTML(routePath, indexHtml);
   });
 
+  app.use('/images', express.static(path.resolve(distPath, 'images'), {
+    maxAge: '365d',
+    immutable: true,
+    setHeaders: (res) => {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      res.setHeader('Vary', 'Accept');
+    }
+  }));
+
   app.use(express.static(distPath));
 
   // SPA Fallback mit 404-Status für unbekannte Routen
