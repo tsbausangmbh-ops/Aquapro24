@@ -59,6 +59,7 @@ const contactInfo = [
 export default function KontaktPage() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -93,13 +94,9 @@ export default function KontaktPage() {
     try {
       await apiRequest("POST", "/api/contact", formData);
       
-      toast({
-        title: "Nachricht gesendet",
-        description: "Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.",
-      });
-      
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
       setPrivacyAccepted(false);
+      setIsSubmitted(true);
     } catch (error) {
       toast({
         title: "Fehler",
@@ -213,107 +210,129 @@ export default function KontaktPage() {
             
             <Card>
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                {isSubmitted ? (
+                  <div className="text-center py-8 space-y-4" data-testid="contact-success-message">
+                    <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto">
+                      <CheckCircle2 className="w-8 h-8 text-green-600 dark:text-green-400" />
+                    </div>
+                    <h3 className="text-xl font-bold">Nachricht erfolgreich gesendet!</h3>
+                    <p className="text-muted-foreground max-w-md mx-auto">
+                      Vielen Dank für Ihre Anfrage. Wir haben Ihnen eine Bestätigungs-E-Mail gesendet und melden uns innerhalb von 24 Stunden bei Ihnen.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Bei dringenden Anliegen erreichen Sie uns unter: <a href="tel:089444438872" className="text-primary font-semibold">089 444438872</a>
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => setIsSubmitted(false)}
+                      data-testid="button-contact-new-message"
+                    >
+                      Neue Nachricht schreiben
+                    </Button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Name *</Label>
+                        <Input
+                          id="name"
+                          placeholder="Ihr vollständiger Name"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          required
+                          data-testid="input-contact-name"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">E-Mail *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="ihre@email.de"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          required
+                          data-testid="input-contact-email"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Telefon (optional)</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          placeholder="0152 12345678"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          data-testid="input-contact-phone"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="subject">Betreff *</Label>
+                        <Input
+                          id="subject"
+                          placeholder="Worum geht es?"
+                          value={formData.subject}
+                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                          required
+                          data-testid="input-contact-subject"
+                        />
+                      </div>
+                    </div>
+                    
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name *</Label>
-                      <Input
-                        id="name"
-                        placeholder="Ihr vollständiger Name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      <Label htmlFor="message">Ihre Nachricht *</Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Beschreiben Sie Ihr Anliegen..."
+                        rows={5}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         required
-                        data-testid="input-contact-name"
+                        data-testid="input-contact-message"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">E-Mail *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="ihre@email.de"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                        data-testid="input-contact-email"
+                    
+                    <div className="flex items-start gap-3">
+                      <Checkbox 
+                        id="privacy"
+                        checked={privacyAccepted}
+                        onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                        data-testid="checkbox-contact-privacy"
                       />
+                      <Label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Ich habe die{" "}
+                        <a href="/datenschutz" target="_blank" className="text-primary underline hover:no-underline" data-testid="link-contact-datenschutz">
+                          Datenschutzerklärung
+                        </a>{" "}
+                        gelesen und stimme der Verarbeitung meiner Daten zu. *
+                      </Label>
                     </div>
-                  </div>
-                  
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon (optional)</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="0152 12345678"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        data-testid="input-contact-phone"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Betreff *</Label>
-                      <Input
-                        id="subject"
-                        placeholder="Worum geht es?"
-                        value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        required
-                        data-testid="input-contact-subject"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Ihre Nachricht *</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Beschreiben Sie Ihr Anliegen..."
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
-                      data-testid="input-contact-message"
-                    />
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Checkbox 
-                      id="privacy"
-                      checked={privacyAccepted}
-                      onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
-                      data-testid="checkbox-contact-privacy"
-                    />
-                    <Label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                      Ich habe die{" "}
-                      <a href="/datenschutz" target="_blank" className="text-primary underline hover:no-underline" data-testid="link-contact-datenschutz">
-                        Datenschutzerklärung
-                      </a>{" "}
-                      gelesen und stimme der Verarbeitung meiner Daten zu. *
-                    </Label>
-                  </div>
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full"
-                    disabled={isSubmitting || !privacyAccepted}
-                    data-testid="button-contact-submit"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        Wird gesendet...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        Nachricht senden
-                      </>
-                    )}
-                  </Button>
-                </form>
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full"
+                      disabled={isSubmitting || !privacyAccepted}
+                      data-testid="button-contact-submit"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                          Wird gesendet...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4 mr-2" />
+                          Nachricht senden
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                )}
               </CardContent>
             </Card>
           </div>
