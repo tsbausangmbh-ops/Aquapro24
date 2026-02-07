@@ -100,6 +100,7 @@ export default function HeizungMuenchenPage() {
             answer: "Idealerweise Fotos vom Gerät und Typenschild, Fehlercode falls vorhanden, und eine Beschreibung der Symptome (Geräusche, Ausfallzeiten). So können wir schneller helfen."
           }
         ]}
+        ogImageAlt="Heizung München Reparatur Wartung Installation Gasheizung - Heizungsinstallateur Meisterbetrieb"
       />
       <Header />
       

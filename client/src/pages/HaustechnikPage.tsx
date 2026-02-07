@@ -163,6 +163,7 @@ export default function HaustechnikPage() {
             reviewCount: 67
           }
         }}
+        ogImageAlt="Haustechnik München Gasinstallation Lüftung Smart Home - Gebäudetechnik Meisterbetrieb"
       />
       <Header />
       

@@ -13,6 +13,7 @@ export default function NotFound() {
         title="Seite nicht gefunden | 404 | AquaPro 24 München"
         description="Diese Seite existiert leider nicht. Besuchen Sie unsere Startseite für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst: 089 444438872"
         canonical="https://aquapro24.de/404"
+        ogImageAlt="Seite nicht gefunden AquaPro 24 München - Sanitär Heizung Notdienst Startseite"
       />
       <Header />
       <main className="flex-1 flex items-center justify-center p-4">

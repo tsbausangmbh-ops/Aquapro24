@@ -161,6 +161,7 @@ export default function WaermepumpePage() {
             reviewCount: 89
           }
         }}
+        ogImageAlt="Wärmepumpe Installation München Luft Wasser Erdwärme - Heizung modernisieren Förderung Festpreis"
       />
       <Header />
       

@@ -198,6 +198,7 @@ export default function FAQPage() {
         description="Sanitär FAQ München: Antworten zu Preisen, Notdienst & Reparaturen – verständlich erklärt vom Fachbetrieb."
         canonical="https://aquapro24.de/faq"
         keywords="Klempner Preise München Festpreis, Sanitär Kosten transparent erklärt, Heizung Reparatur was kostet, Notdienst München Kosten vorab, Badsanierung Preise Komplettpaket, Wärmepumpe BAFA Förderung 2025, Kostenvoranschlag verbindlich gratis"
+        ogImageAlt="FAQ Sanitär Heizung München häufige Fragen Preise Kosten Notdienst - AquaPro 24 Antworten"
       />
       <Header />
       <main id="main-content">

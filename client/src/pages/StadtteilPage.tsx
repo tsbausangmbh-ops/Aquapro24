@@ -583,6 +583,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             reviewCount: 127
           }
         }}
+        ogImageAlt="Sanitär Heizung Notdienst München Stadtteil lokal - Klempner Installateur in Ihrer Nähe"
       />
       <Header />
       

@@ -127,6 +127,7 @@ export default function NotdienstMuenchenPage() {
             }
           ]
         }}
+        ogImageAlt="Sanitär Notdienst München 24/7 Rohrbruch Verstopfung sofort - Notfall Klempner 60 Minuten"
       />
       <Header />
       

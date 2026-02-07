@@ -1238,23 +1238,25 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   const keywordsTag = `<meta name="keywords" content="${page.keywords.join(', ')}" />`;
   html = html.replace('</head>', `  ${keywordsTag}\n  </head>`);
 
-  // Add page-specific Open Graph tags (og:type, og:locale, og:site_name already in index.html)
+  const ogImageAltText = `${page.title} - AquaPro 24 Sanitär Heizung München`;
   const ogTags = `
     <meta property="og:title" content="${page.title}" />
     <meta property="og:description" content="${page.description}" />
     <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:image" content="${BASE_URL}/og-image.jpg" />
+    <meta property="og:image" content="${BASE_URL}/images/hero-fast.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="${ogImageAltText}" />
   `;
   html = html.replace('</head>', `${ogTags}</head>`);
 
-  // Add Twitter Card tags
   const twitterTags = `
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${page.title}" />
     <meta name="twitter:description" content="${page.description}" />
-    <meta name="twitter:image" content="${BASE_URL}/og-image.jpg" />
+    <meta name="twitter:image" content="${BASE_URL}/images/hero-fast.webp" />
+    <meta name="twitter:image:alt" content="${ogImageAltText}" />
   `;
   html = html.replace('</head>', `${twitterTags}</head>`);
 

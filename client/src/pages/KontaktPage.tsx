@@ -106,6 +106,7 @@ export default function KontaktPage() {
         description="Kontakt AquaPro 24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich."
         canonical="https://aquapro24.de/kontakt"
         keywords="Sanitär Kontakt München kostenlos, Heizung Anfrage Festpreis, Klempner Notdienst 089 444438872, Kostenvoranschlag unverbindlich München, Beratungstermin Badsanierung buchen, Wärmepumpe Beratung München, Erstberatung kostenlos vor Ort"
+        ogImageAlt="Kontakt AquaPro 24 München Terminbuchung Anfrage - Sanitär Heizung Beratung kostenlos"
       />
       <Header />
       <main id="main-content">

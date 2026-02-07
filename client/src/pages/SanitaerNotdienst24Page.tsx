@@ -107,6 +107,7 @@ export default function SanitaerNotdienst24Page() {
             answer: "Ja, unser Sanitär Notdienst ist 24 Stunden am Tag, 7 Tage die Woche und auch an Feiertagen für Sie erreichbar."
           }
         ]}
+        ogImageAlt="Sanitär Notdienst 24 Stunden München Rohrbruch Wasserschaden - Klempner Soforthilfe nachts Wochenende"
       />
       <Header />
       

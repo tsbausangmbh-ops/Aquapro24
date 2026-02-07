@@ -99,6 +99,7 @@ export default function FussbodenheizungMuenchenPage() {
             answer: "Aufbau (Estrich/Belag), Fläche und Ziel (Nachrüstung/Komplettsanierung). So können wir passende Optionen nennen."
           }
         ]}
+        ogImageAlt="Fußbodenheizung München nachrüsten einbauen Altbau Neubau - Kosten Festpreis Installation"
       />
       <Header />
       

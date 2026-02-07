@@ -14,6 +14,8 @@ export default function CookieRichtliniePage() {
         title="Cookie Richtlinie DSGVO – transparent & sicher"
         description="Cookie Richtlinie DSGVO: Nur technische Cookies, kein Tracking, keine Werbung. Transparente Cookie-Nutzung einfach erklärt."
         canonical="https://aquapro24.de/cookie-richtlinie"
+        keywords="Cookie Richtlinie DSGVO konform, Datenschutz Cookies Handwerker Website, technische Cookies Sanitär München, Cookie Einstellungen transparent, DSGVO Website Handwerksbetrieb, Cookie Policy Installateur München, Datenschutz Cookie Nutzung"
+        ogImageAlt="Cookie Richtlinie AquaPro 24 München - DSGVO konforme transparente Cookie-Nutzung ohne Tracking"
       />
       <Header />
       <main id="main-content">

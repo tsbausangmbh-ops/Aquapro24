@@ -278,6 +278,7 @@ export default function Home() {
             reviewCount: 2847
           }
         }}
+        ogImageAlt="AquaPro 24 Sanitär Heizung München 24/7 Notdienst - Klempner Installateur Meisterbetrieb seit 2005"
       />
       <Header />
       

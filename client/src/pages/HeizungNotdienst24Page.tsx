@@ -108,6 +108,7 @@ export default function HeizungNotdienst24Page() {
             answer: "Ja, unser Heizung Notdienst ist 24 Stunden am Tag, 7 Tage die Woche und auch an Feiertagen für Sie erreichbar."
           }
         ]}
+        ogImageAlt="Heizung Notdienst München 24 Stunden Heizungsausfall Reparatur sofort - Notfall Heizungsmonteur"
       />
       <Header />
       

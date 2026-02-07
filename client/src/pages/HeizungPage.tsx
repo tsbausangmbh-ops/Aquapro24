@@ -162,6 +162,7 @@ export default function HeizungPage() {
             reviewCount: 178
           }
         }}
+        ogImageAlt="Heizungsinstallation München Gasheizung Ölheizung Wartung Reparatur - alle Marken Festpreis"
       />
       <Header />
       <Breadcrumbs items={[

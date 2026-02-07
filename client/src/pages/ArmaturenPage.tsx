@@ -141,6 +141,7 @@ export default function ArmaturenPage() {
         description="Wasserhahn wechseln München: Armaturen montieren & reparieren. Grohe, Hansgrohe, Geberit. Festpreis ab 80€."
         canonical="https://aquapro24.de/armaturen"
         keywords="Wasserhahn wechseln ab 80€ München, Grohe Hansgrohe Armatur montieren, Wasserhahn tropft Reparatur, Unterputz Armatur Installation München, Thermostat Mischbatterie einbauen, Duscharmatur austauschen München, Wasserhahn Kartusche wechseln"
+        ogImageAlt="Wasserhahn wechseln München Armatur montieren Grohe Hansgrohe - Festpreis Sanitär Reparatur ab 80 Euro"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Armaturen", url: "https://aquapro24.de/armaturen" }

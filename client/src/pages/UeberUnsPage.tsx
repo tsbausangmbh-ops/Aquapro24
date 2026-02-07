@@ -296,6 +296,7 @@ export default function UeberUnsPage() {
         canonical="https://aquapro24.de/ueber-uns"
         keywords="AquaPro 24 Partnernetzwerk seit 2005, Geprüfte Fachbetriebe München, Sanitär Heizung aus einer Hand, 2800 zufriedene Kunden München, Festpreisgarantie alle Arbeiten, 24h Notdienst ganz München, Meisterbetriebe Sanitär Heizung"
         structuredData={aboutPageSchema}
+        ogImageAlt="Über uns AquaPro 24 München Sanitär Heizung Meisterbetrieb - Mustafa Sakar 20 Jahre Erfahrung"
       />
       <Header />
       <main id="main-content">

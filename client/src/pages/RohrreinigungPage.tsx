@@ -162,6 +162,7 @@ export default function RohrreinigungPage() {
             reviewCount: 112
           }
         }}
+        ogImageAlt="Rohrreinigung München Abfluss verstopft Kanalreinigung Rohrbruch - Notdienst Festpreis sofort"
       />
       <Header />
       

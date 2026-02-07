@@ -100,6 +100,7 @@ export default function SanitaerMuenchenPage() {
             answer: "Die Kosten hängen vom Umfang ab. Für Standard-Leistungen bieten wir klare Preisrahmen. Bei komplexeren Fällen erhalten Sie vorab eine transparente Einschätzung nach Sichtung Ihrer Fotos."
           }
         ]}
+        ogImageAlt="Sanitär München Installation Reparatur Wasserleitung - Sanitärinstallateur Meisterbetrieb Festpreis"
       />
       <Header />
       

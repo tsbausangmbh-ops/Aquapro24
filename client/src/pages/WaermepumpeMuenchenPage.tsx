@@ -101,6 +101,7 @@ export default function WaermepumpeMuenchenPage() {
             answer: "Ja, über BAFA und KfW sind bis zu 70% Förderung möglich. Die genaue Höhe hängt von verschiedenen Faktoren ab. Wir beraten Sie transparent zu den Möglichkeiten."
           }
         ]}
+        ogImageAlt="Wärmepumpe München Installation BAFA Förderung 70 Prozent - Viessmann Vaillant Wolf Meisterbetrieb"
       />
       <Header />
       

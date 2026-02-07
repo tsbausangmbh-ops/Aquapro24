@@ -163,6 +163,7 @@ export default function WarmwasserPage() {
             reviewCount: 86
           }
         }}
+        ogImageAlt="Warmwasser München Boiler Durchlauferhitzer Speicher - Installation Reparatur Festpreis sofort"
       />
       <Header />
       

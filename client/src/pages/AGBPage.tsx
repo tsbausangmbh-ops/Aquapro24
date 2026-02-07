@@ -12,6 +12,8 @@ export default function AGBPage() {
         title="AGB Sanitär München – Festpreis & Garantie"
         description="AGB Sanitär München: Festpreis Garantie und transparente Geschäftsbedingungen. 2 Jahre Garantie, faire Regeln für alle Kunden."
         canonical="https://aquapro24.de/agb"
+        keywords="AGB Sanitär Heizung München, Allgemeine Geschäftsbedingungen Handwerker, Festpreis Garantie Klempner, Gewährleistung Sanitärarbeiten München, Geschäftsbedingungen Notdienst, Vertragsbedingungen Installateur München, AGB Badsanierung Heizungsinstallation"
+        ogImageAlt="AGB Allgemeine Geschäftsbedingungen AquaPro 24 Sanitär Heizung München - Festpreis Garantie transparente Konditionen"
       />
       <Header />
       <main id="main-content">

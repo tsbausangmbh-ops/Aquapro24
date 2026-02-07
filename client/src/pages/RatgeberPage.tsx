@@ -252,6 +252,7 @@ export default function RatgeberPage() {
         description="Sanitär Ratgeber München: Tipps zu Heizung, Bad & Haustechnik – Expertenwissen für Hausbesitzer."
         canonical="https://aquapro24.de/ratgeber"
         keywords="Wasserschaden Erste Hilfe München, Heizung richtig entlüften Anleitung, Badsanierung planen Checkliste, Wärmepumpe Förderung 2025 beantragen, Heizkosten sparen Tipps München, Rohrbruch was tun Soforthilfe, BAFA Antrag richtig stellen"
+        ogImageAlt="Ratgeber Sanitär Heizung München Tipps Anleitungen Kosten - Experten Wissen Hausbesitzer"
       />
       <Header />
       <main id="main-content">

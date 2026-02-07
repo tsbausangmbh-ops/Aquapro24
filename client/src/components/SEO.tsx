@@ -63,6 +63,7 @@ interface SEOProps {
   canonical?: string;
   keywords?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   structuredData?: object;
   breadcrumbs?: BreadcrumbItem[];
   aiSummary?: string;
@@ -543,7 +544,8 @@ export default function SEO({
   description, 
   canonical, 
   keywords,
-  ogImage = "/og-image.jpg",
+  ogImage = "/images/hero-fast.webp",
+  ogImageAlt,
   structuredData,
   breadcrumbs,
   aiSummary,
@@ -578,13 +580,27 @@ export default function SEO({
     updateMeta("og:type", "website", true);
     updateMeta("og:locale", "de_DE", true);
     updateMeta("og:site_name", "AquaPro 24 München", true);
-    if (ogImage) updateMeta("og:image", ogImage, true);
+    if (ogImage) {
+      const fullOgImage = ogImage.startsWith("http") ? ogImage : `https://aquapro24.de${ogImage}`;
+      updateMeta("og:image", fullOgImage, true);
+      updateMeta("og:image:width", "1200", true);
+      updateMeta("og:image:height", "630", true);
+      updateMeta("og:image:type", "image/webp", true);
+      const altText = ogImageAlt || title;
+      updateMeta("og:image:alt", altText, true);
+    }
     updateMeta("og:url", effectiveCanonical, true);
     
     updateMeta("twitter:card", "summary_large_image");
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
     updateMeta("twitter:site", "@aquapro24");
+    if (ogImage) {
+      const fullOgImage = ogImage.startsWith("http") ? ogImage : `https://aquapro24.de${ogImage}`;
+      updateMeta("twitter:image", fullOgImage);
+      const altText = ogImageAlt || title;
+      updateMeta("twitter:image:alt", altText);
+    }
     
     updateMeta("geo.region", "DE-BY");
     updateMeta("geo.placename", "München");

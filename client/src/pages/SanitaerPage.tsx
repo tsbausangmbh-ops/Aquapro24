@@ -163,6 +163,7 @@ export default function SanitaerPage() {
             reviewCount: 156
           }
         }}
+        ogImageAlt="Sanitärinstallation München Wasserhahn Toilette Abfluss - Klempner Installateur alle Arbeiten Festpreis"
       />
       <Header />
       <Breadcrumbs items={[
