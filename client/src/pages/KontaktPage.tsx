@@ -60,6 +60,7 @@ export default function KontaktPage() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -94,6 +95,7 @@ export default function KontaktPage() {
     try {
       await apiRequest("POST", "/api/contact", formData);
       
+      setSubmittedEmail(formData.email);
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
       setPrivacyAccepted(false);
       setIsSubmitted(true);
@@ -217,7 +219,7 @@ export default function KontaktPage() {
                     </div>
                     <h3 className="text-xl font-bold">Nachricht erfolgreich gesendet!</h3>
                     <p className="text-muted-foreground max-w-md mx-auto">
-                      Vielen Dank für Ihre Anfrage. Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.
+                      Vielen Dank für Ihre Anfrage. Eine Bestätigung wurde an <span className="font-semibold text-foreground">{submittedEmail}</span> gesendet. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.
                     </p>
                     <p className="text-sm text-muted-foreground">
                       Bei dringenden Anliegen erreichen Sie uns unter: <a href="tel:089444438872" className="text-primary font-semibold">089 444438872</a>
