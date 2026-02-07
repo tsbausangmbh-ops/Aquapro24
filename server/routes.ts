@@ -688,7 +688,48 @@ Datenschutzerklärung: https://aquapro24.de/datenschutz`;
             text: emailText,
           });
         } catch (emailError) {
-          console.error("Failed to send contact email:", emailError);
+          console.error("Failed to send internal contact email:", emailError);
+        }
+
+        try {
+          const customerEmailHtml = `
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"></head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+  <div style="background: #f97316; padding: 20px; text-align: center;">
+    <h1 style="color: #fff; margin: 0; font-size: 22px;">AquaPro24</h1>
+    <p style="color: #fff; margin: 4px 0 0; font-size: 14px;">Sanitär & Heizung München</p>
+  </div>
+  <div style="padding: 24px; background: #ffffff;">
+    <p>Hallo ${name},</p>
+    <p>vielen Dank für Ihre Nachricht! Wir haben Ihre Anfrage erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+    <div style="background: #f8f8f8; border-left: 4px solid #f97316; padding: 16px; margin: 20px 0;">
+      <p style="margin: 0 0 8px; font-weight: bold;">Ihre Anfrage:</p>
+      <p style="margin: 0 0 4px;"><strong>Betreff:</strong> ${subject}</p>
+      <p style="margin: 0; white-space: pre-line;">${message}</p>
+    </div>
+    <p>Bei dringenden Anliegen erreichen Sie uns jederzeit telefonisch:</p>
+    <p style="font-size: 18px; font-weight: bold; color: #f97316;">
+      <a href="tel:089444438872" style="color: #f97316; text-decoration: none;">089 444 438 872</a>
+    </p>
+    <p>Mit freundlichen Grüßen,<br><strong>Ihr AquaPro24 Team</strong></p>
+  </div>
+  <div style="background: #f3f3f3; padding: 16px; text-align: center; font-size: 12px; color: #888;">
+    <p style="margin: 0;">AquaPro24 | Hardenbergstr. 4 | 80992 München</p>
+    <p style="margin: 4px 0 0;"><a href="https://aquapro24.de/datenschutz" style="color: #888;">Datenschutzerklärung</a></p>
+  </div>
+</body>
+</html>`;
+
+          await emailTransporter.sendMail({
+            from: process.env.SMTP_USER,
+            to: email,
+            subject: `Ihre Anfrage bei AquaPro24: ${subject}`,
+            html: customerEmailHtml,
+          });
+        } catch (emailError) {
+          console.error("Failed to send customer confirmation email:", emailError);
         }
       }
 
