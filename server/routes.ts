@@ -68,7 +68,8 @@ ZEITPUNKT: ${(() => {
   })()}
 
 ---
-Diese E-Mail wurde automatisch vom AquaPro24 Buchungssystem gesendet.`;
+Diese E-Mail wurde automatisch vom AquaPro24 Buchungssystem gesendet.
+Datenschutzerklärung: https://aquapro24.de/datenschutz`;
 
   const internalMailOptions = {
     from: process.env.SMTP_USER,
@@ -119,7 +120,9 @@ Inhaber: Mustafa Sakar
 Hardenbergstr. 4, 80992 München
 Tel: 089 444438872
 E-Mail: info@aquapro24.de
-Web: aquapro24.de`;
+Web: aquapro24.de
+
+Datenschutzerklärung: https://aquapro24.de/datenschutz`;
 
     const customerMailOptions = {
       from: process.env.SMTP_USER,
@@ -674,7 +677,8 @@ NACHRICHT:
 ${message}
 
 ---
-Diese E-Mail wurde automatisch vom AquaPro24 Kontaktformular gesendet.`;
+Diese E-Mail wurde automatisch vom AquaPro24 Kontaktformular gesendet.
+Datenschutzerklärung: https://aquapro24.de/datenschutz`;
 
         try {
           await emailTransporter.sendMail({
@@ -1131,7 +1135,7 @@ WICHTIG - DEIN VERHALTEN ALS BERATER:
         from: `"AquaPro 24 München" <${process.env.SMTP_USER}>`,
         to: email.trim(),
         subject: "Ihr kostenloser Ratgeber: Heizung & Sanitär",
-        html: `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f97316;padding:30px;text-align:center;"><span style="color:#ffffff;font-size:28px;font-weight:bold;">AquaPro 24</span><br><span style="color:#ffffff;font-size:14px;">Ihr Partnernetzwerk in München</span></td></tr><tr><td style="background-color:#f9fafb;padding:30px 30px 30px 30px;"><br><span style="color:#1f2937;font-size:20px;font-weight:bold;">Hallo ${vorname.trim()},</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">vielen Dank für Ihr Interesse an unserem <b>Ratgeber Heizung &amp; Sanitär</b>!</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 praktischen Tipps zu typischen Alltagsproblemen bei Heizung und Sanitär – verständlich erklärt, Schritt für Schritt.</span><br><br><table width="100%" cellpadding="15" cellspacing="0" border="0" style="background-color:#ffffff;border-left:4px solid #f97316;"><tr><td><b style="color:#1f2937;">Inhalt des Ratgebers (12 Tipps):</b><br><span style="color:#4b5563;font-size:14px;">• Heizkörper gluckert oder wird nicht warm<br>• Heizungsdruck zu niedrig – Anlage schaltet ab<br>• Thermostat auf 5, aber Heizkörper bleibt kalt<br>• Warmwasser schwankt oder wird nicht heiß<br>• Wasserhahn tropft oder Abfluss läuft langsam<br>• WC spült schwach oder läuft nach</span></td></tr></table><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an: <b>089 444438872</b></span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Mit freundlichen Grüßen,<br><b>Ihr AquaPro 24 Team</b></span></td></tr><tr><td style="background-color:#fef2f2;padding:20px;text-align:center;border-top:3px solid #f97316;"><span style="color:#7c2d12;font-size:14px;">AquaPro 24 | Hardenbergstr. 4 | 80992 München<br>Tel: 089 444438872 | info@aquapro24.de | aquapro24.de</span></td></tr></table></td></tr></table></body></html>`,
+        html: `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f97316;padding:30px;text-align:center;"><span style="color:#ffffff;font-size:28px;font-weight:bold;">AquaPro 24</span><br><span style="color:#ffffff;font-size:14px;">Ihr Partnernetzwerk in München</span></td></tr><tr><td style="background-color:#f9fafb;padding:30px 30px 30px 30px;"><br><span style="color:#1f2937;font-size:20px;font-weight:bold;">Hallo ${vorname.trim()},</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">vielen Dank für Ihr Interesse an unserem <b>Ratgeber Heizung &amp; Sanitär</b>!</span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Im Anhang finden Sie unseren kostenlosen Ratgeber mit 12 praktischen Tipps zu typischen Alltagsproblemen bei Heizung und Sanitär – verständlich erklärt, Schritt für Schritt.</span><br><br><table width="100%" cellpadding="15" cellspacing="0" border="0" style="background-color:#ffffff;border-left:4px solid #f97316;"><tr><td><b style="color:#1f2937;">Inhalt des Ratgebers (12 Tipps):</b><br><span style="color:#4b5563;font-size:14px;">• Heizkörper gluckert oder wird nicht warm<br>• Heizungsdruck zu niedrig – Anlage schaltet ab<br>• Thermostat auf 5, aber Heizkörper bleibt kalt<br>• Warmwasser schwankt oder wird nicht heiß<br>• Wasserhahn tropft oder Abfluss läuft langsam<br>• WC spült schwach oder läuft nach</span></td></tr></table><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Bei Fragen stehen wir Ihnen jederzeit zur Verfügung – rufen Sie uns einfach an: <b>089 444438872</b></span><br><br><span style="color:#4b5563;font-size:14px;line-height:1.6;">Mit freundlichen Grüßen,<br><b>Ihr AquaPro 24 Team</b></span></td></tr><tr><td style="background-color:#fef2f2;padding:20px;text-align:center;border-top:3px solid #f97316;"><span style="color:#7c2d12;font-size:14px;">AquaPro 24 | Hardenbergstr. 4 | 80992 München<br>Tel: 089 444438872 | info@aquapro24.de | aquapro24.de<br><a href="https://aquapro24.de/datenschutz" style="color:#7c2d12;font-size:12px;">Datenschutzerklärung</a></span></td></tr></table></td></tr></table></body></html>`,
         attachments: [
           {
             filename: "AquaPro24_Ratgeber_Heizung_Sanitaer.pdf",

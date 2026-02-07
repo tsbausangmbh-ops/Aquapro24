@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { Checkbox } from "@/components/ui/checkbox";
 import { 
   Phone, 
   Mail, 
@@ -58,6 +59,7 @@ const contactInfo = [
 export default function KontaktPage() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -78,6 +80,15 @@ export default function KontaktPage() {
       return;
     }
 
+    if (!privacyAccepted) {
+      toast({
+        title: "Datenschutz",
+        description: "Bitte stimmen Sie der Datenschutzerklärung zu.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       await apiRequest("POST", "/api/contact", formData);
@@ -88,6 +99,7 @@ export default function KontaktPage() {
       });
       
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      setPrivacyAccepted(false);
     } catch (error) {
       toast({
         title: "Fehler",
@@ -266,11 +278,27 @@ export default function KontaktPage() {
                     />
                   </div>
                   
+                  <div className="flex items-start gap-3">
+                    <Checkbox 
+                      id="privacy"
+                      checked={privacyAccepted}
+                      onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                      data-testid="checkbox-contact-privacy"
+                    />
+                    <Label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                      Ich habe die{" "}
+                      <a href="/datenschutz" target="_blank" className="text-primary underline hover:no-underline" data-testid="link-contact-datenschutz">
+                        Datenschutzerklärung
+                      </a>{" "}
+                      gelesen und stimme der Verarbeitung meiner Daten zu. *
+                    </Label>
+                  </div>
+
                   <Button 
                     type="submit" 
                     size="lg" 
                     className="w-full"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !privacyAccepted}
                     data-testid="button-contact-submit"
                   >
                     {isSubmitting ? (
