@@ -1,7 +1,9 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import SimpleFAQ from "@/components/SimpleFAQ";
+
+const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
@@ -255,11 +257,13 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <SimpleFAQ 
-          items={faqs} 
-          title="Ihre Fragen – unsere Antworten"
-          subtitle="Echte Beispiele von Kunden, denen wir geholfen haben"
-        />
+        <Suspense fallback={null}>
+          <SimpleFAQ 
+            items={faqs} 
+            title="Ihre Fragen – unsere Antworten"
+            subtitle="Echte Beispiele von Kunden, denen wir geholfen haben"
+          />
+        </Suspense>
 
         <section className="py-6 lg:py-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">

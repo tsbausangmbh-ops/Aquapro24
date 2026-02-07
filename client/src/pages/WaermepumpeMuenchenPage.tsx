@@ -1,7 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,10 +20,12 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
+
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function WaermepumpeMuenchenPage() {
   const schritte = [
@@ -220,11 +222,13 @@ export default function WaermepumpeMuenchenPage() {
                       Anfrage per E-Mail/Formular mit Eckdaten – wir melden uns mit einem nächsten Schritt.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                      <ServiceBooking 
-                        serviceType="waermepumpe"
-                        buttonText="Termin anfragen"
-                        buttonSize="lg"
-                      />
+                      <Suspense fallback={null}>
+                        <ServiceBooking 
+                          serviceType="waermepumpe"
+                          buttonText="Termin anfragen"
+                          buttonSize="lg"
+                        />
+                      </Suspense>
                       <Button size="lg" variant="outline" asChild>
                         <a href="mailto:info@aquapro24.de" data-testid="link-email-waermepumpe">
                           <Mail className="w-4 h-4 mr-2" />
@@ -265,7 +269,9 @@ export default function WaermepumpeMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Wärmepumpe"  />
+        <Suspense fallback={null}>
+            <ServiceAreas serviceName="Wärmepumpe"  />
+        </Suspense>
         <KeywordLinks currentPage="waermepumpe" />
         <RelatedServices currentService="waermepumpe" />
       </main>

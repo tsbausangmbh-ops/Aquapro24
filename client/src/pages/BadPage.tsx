@@ -1,8 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import SimpleFAQ from "@/components/SimpleFAQ";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
@@ -33,9 +32,12 @@ import heroImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.webp";
 import galleryImage1 from "@assets/stock_images/minimalist_white_bat_63ea775a.webp";
 import galleryImage2 from "@assets/stock_images/minimalist_luxury_ba_d497e62b.webp";
 import galleryImage3 from "@assets/stock_images/modern_accessible_ba_f2b18796.webp";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
+
+const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 const packages = [
   {
@@ -229,13 +231,15 @@ export default function BadPage() {
                     Jetzt beraten lassen
                   </a>
                 </Button>
-                <ServiceBooking 
-                  serviceType="bad"
-                  buttonText="Termin buchen"
-                  buttonSize="lg"
-                  buttonVariant="outline"
-                  buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
-                />
+                <Suspense fallback={null}>
+                  <ServiceBooking 
+                    serviceType="bad"
+                    buttonText="Termin buchen"
+                    buttonSize="lg"
+                    buttonVariant="outline"
+                    buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
+                  />
+                </Suspense>
               </div>
             </div>
           </div>
@@ -618,15 +622,19 @@ export default function BadPage() {
           </div>
         </section>
 
-        <ServiceAreas 
-          serviceName="Badsanierung" 
-          highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
-        />
+        <Suspense fallback={null}>
+            <ServiceAreas 
+              serviceName="Badsanierung" 
+              highlightAreas={["Bogenhausen", "Schwabing", "Sendling"]}
+            />
+        </Suspense>
 
-        <SimpleFAQ 
-          items={faqItems}
-          title="Häufige Fragen zur Badsanierung"
-        />
+        <Suspense fallback={null}>
+          <SimpleFAQ 
+            items={faqItems}
+            title="Häufige Fragen zur Badsanierung"
+          />
+        </Suspense>
 
         {/* Partnernetzwerk Angebot */}
         <section className="py-6 lg:py-8 bg-muted/50">
@@ -638,11 +646,13 @@ export default function BadPage() {
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
             </p>
-            <ServiceBooking 
-              serviceType="bad"
-              buttonText="Jetzt Angebot anfordern"
-              buttonSize="lg"
-            />
+            <Suspense fallback={null}>
+              <ServiceBooking 
+                serviceType="bad"
+                buttonText="Jetzt Angebot anfordern"
+                buttonSize="lg"
+              />
+            </Suspense>
           </div>
         </section>
 

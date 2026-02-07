@@ -1,7 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,10 +19,12 @@ import {
   Calendar
 } from "lucide-react";
 import { Link } from "wouter";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
+
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function FussbodenheizungMuenchenPage() {
   const vorteile = [
@@ -210,11 +212,13 @@ export default function FussbodenheizungMuenchenPage() {
                       Schreiben Sie uns kurz Aufbau (Estrich/Belag), Fläche und Ziel (Nachrüstung/Komplettsanierung) – wir antworten mit Optionen.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                      <ServiceBooking 
-                        serviceType="heizung"
-                        buttonText="Termin anfragen"
-                        buttonSize="lg"
-                      />
+                      <Suspense fallback={null}>
+                        <ServiceBooking 
+                          serviceType="heizung"
+                          buttonText="Termin anfragen"
+                          buttonSize="lg"
+                        />
+                      </Suspense>
                       <Button size="lg" variant="outline" asChild>
                         <a href="mailto:info@aquapro24.de" data-testid="link-email-fussbodenheizung">
                           <Mail className="w-4 h-4 mr-2" />
@@ -255,7 +259,9 @@ export default function FussbodenheizungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Fußbodenheizung"  />
+        <Suspense fallback={null}>
+            <ServiceAreas serviceName="Fußbodenheizung"  />
+        </Suspense>
         <KeywordLinks currentPage="heizung" />
         <RelatedServices currentService="heizung" />
       </main>

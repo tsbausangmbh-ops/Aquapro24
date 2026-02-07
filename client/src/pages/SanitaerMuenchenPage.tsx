@@ -1,7 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,10 +20,12 @@ import {
   MapPin
 } from "lucide-react";
 import { Link } from "wouter";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
+
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function SanitaerMuenchenPage() {
   const leistungen = [
@@ -216,11 +218,13 @@ export default function SanitaerMuenchenPage() {
                       Schreiben Sie uns über das Formular oder per E-Mail – wir antworten zeitnah mit den nächsten Schritten.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                      <ServiceBooking 
-                        serviceType="sanitaer"
-                        buttonText="Termin anfragen"
-                        buttonSize="lg"
-                      />
+                      <Suspense fallback={null}>
+                        <ServiceBooking 
+                          serviceType="sanitaer"
+                          buttonText="Termin anfragen"
+                          buttonSize="lg"
+                        />
+                      </Suspense>
                       <Button size="lg" variant="outline" asChild>
                         <a href="mailto:info@aquapro24.de" data-testid="link-email-sanitaer">
                           <Mail className="w-4 h-4 mr-2" />
@@ -261,7 +265,9 @@ export default function SanitaerMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Sanitär"  />
+        <Suspense fallback={null}>
+            <ServiceAreas serviceName="Sanitär"  />
+        </Suspense>
         <KeywordLinks currentPage="sanitaer" />
         <RelatedServices currentService="sanitaer" />
       </main>

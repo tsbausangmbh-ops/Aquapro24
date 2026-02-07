@@ -1,7 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,10 +20,12 @@ import {
   Home
 } from "lucide-react";
 import { Link } from "wouter";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
+
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function BadsanierungMuenchenPage() {
   const schritte = [
@@ -219,11 +221,13 @@ export default function BadsanierungMuenchenPage() {
                       Schreiben Sie uns Ihre Bad-Wünsche – wir antworten mit einem klaren Ablauf & Terminoptionen.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                      <ServiceBooking 
-                        serviceType="bad"
-                        buttonText="Termin anfragen"
-                        buttonSize="lg"
-                      />
+                      <Suspense fallback={null}>
+                        <ServiceBooking 
+                          serviceType="bad"
+                          buttonText="Termin anfragen"
+                          buttonSize="lg"
+                        />
+                      </Suspense>
                       <Button size="lg" variant="outline" asChild>
                         <a href="mailto:info@aquapro24.de" data-testid="link-email-badsanierung">
                           <Mail className="w-4 h-4 mr-2" />
@@ -264,7 +268,9 @@ export default function BadsanierungMuenchenPage() {
           ]}
         />
         <TrustBar />
-        <ServiceAreas serviceName="Badsanierung"  />
+        <Suspense fallback={null}>
+            <ServiceAreas serviceName="Badsanierung"  />
+        </Suspense>
         <KeywordLinks currentPage="bad" />
         <RelatedServices currentService="bad" />
       </main>

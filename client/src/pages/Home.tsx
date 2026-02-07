@@ -1,12 +1,8 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
 import SEO from "@/components/SEO";
-import SimpleFAQ from "@/components/SimpleFAQ";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
-import ServiceBooking, { type ServiceType } from "@/components/ServiceBooking";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,8 +24,6 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "wouter";
-import RatgeberDownload from "@/components/RatgeberDownload";
-import NLPQuestions from "@/components/NLPQuestions";
 import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.webp";
 import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.webp";
@@ -38,6 +32,16 @@ import heizungImage from "@assets/stock_images/white_radiator_heate_2e8a306c.web
 import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_boiler.webp";
 import waermepumpeImage from "@assets/generated_images/vaillant_heat_pump_outdoor_unit.webp";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.webp";
+
+const CookieBanner = lazy(() => import("@/components/CookieBanner"));
+const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const RatgeberDownload = lazy(() => import("@/components/RatgeberDownload"));
+const NLPQuestions = lazy(() => import("@/components/NLPQuestions"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
+
+type ServiceType = 'sanitaer' | 'bad' | 'heizung' | 'waermepumpe' | 'haustechnik';
+
 import galleryImage1 from "@assets/stock_images/modern_bathroom_reno_d985ed76.webp";
 import galleryImage2 from "@assets/generated_images/luxury_neutral_modern_bathroom.webp";
 import galleryImage3 from "@assets/generated_images/vaillant_arotherm_heat_pump_villa_garden.webp";
@@ -89,11 +93,13 @@ function ServiceSelection() {
         </div>
         
         {selectedService ? (
-          <ServiceBooking 
-            serviceType={selectedService}
-            buttonText={`${serviceOptions.find(s => s.type === selectedService)?.name}-Angebot anfordern`}
-            buttonSize="lg"
-          />
+          <Suspense fallback={<div className="h-12 flex items-center justify-center"><p className="text-sm text-muted-foreground">Laden...</p></div>}>
+            <ServiceBooking 
+              serviceType={selectedService}
+              buttonText={`${serviceOptions.find(s => s.type === selectedService)?.name}-Angebot anfordern`}
+              buttonSize="lg"
+            />
+          </Suspense>
         ) : (
           <p className="text-sm text-muted-foreground">
             Bitte wählen Sie oben Ihr Gewerk aus, um fortzufahren.
@@ -284,9 +290,15 @@ export default function Home() {
       
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroImage})` }}
+          <img
+            src={heroImage}
+            alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24"
+            className="absolute inset-0 w-full h-full object-cover"
+            width="1200"
+            height="630"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
@@ -369,7 +381,9 @@ export default function Home() {
 
         <TrustBar />
 
-        <NLPQuestions />
+        <Suspense fallback={null}>
+          <NLPQuestions />
+        </Suspense>
 
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -435,7 +449,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -482,7 +496,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -553,17 +567,23 @@ export default function Home() {
           </div>
         </section>
 
-        <RatgeberDownload />
+        <Suspense fallback={null}>
+          <RatgeberDownload />
+        </Suspense>
 
-        <ServiceAreas 
-          serviceName="Sanitär & Heizung" 
-          highlightAreas={["Schwabing", "Bogenhausen", "Sendling", "Pasing"]}
-        />
+        <Suspense fallback={null}>
+          <ServiceAreas 
+            serviceName="Sanitär & Heizung" 
+            highlightAreas={["Schwabing", "Bogenhausen", "Sendling", "Pasing"]}
+          />
+        </Suspense>
 
-        <SimpleFAQ 
-          items={faqItems}
-          title="Häufige Fragen"
-        />
+        <Suspense fallback={null}>
+          <SimpleFAQ 
+            items={faqItems}
+            title="Häufige Fragen"
+          />
+        </Suspense>
 
         <ServiceSelection />
 
@@ -595,7 +615,9 @@ export default function Home() {
       </main>
       
       <Footer />
-      <CookieBanner />
+      <Suspense fallback={null}>
+        <CookieBanner />
+      </Suspense>
     </div>
   );
 }

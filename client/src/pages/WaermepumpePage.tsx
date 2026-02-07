@@ -1,8 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import SimpleFAQ from "@/components/SimpleFAQ";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,9 +21,12 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/stock_images/vaillant_arotherm_he_85021ffa.webp";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
+
+const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 const services = [
   {
@@ -211,13 +213,15 @@ export default function WaermepumpePage() {
                     Kostenlose Beratung
                   </a>
                 </Button>
-                <ServiceBooking 
-                  serviceType="waermepumpe"
-                  buttonText="Termin buchen"
-                  buttonSize="lg"
-                  buttonVariant="outline"
-                  buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
-                />
+                <Suspense fallback={null}>
+                  <ServiceBooking 
+                    serviceType="waermepumpe"
+                    buttonText="Termin buchen"
+                    buttonSize="lg"
+                    buttonVariant="outline"
+                    buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
+                  />
+                </Suspense>
               </div>
             </div>
           </div>
@@ -362,15 +366,19 @@ export default function WaermepumpePage() {
           </div>
         </section>
 
-        <ServiceAreas 
-          serviceName="Wärmepumpen-Installation" 
-          highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
-        />
+        <Suspense fallback={null}>
+            <ServiceAreas 
+              serviceName="Wärmepumpen-Installation" 
+              highlightAreas={["Bogenhausen", "Trudering", "Haidhausen"]}
+            />
+        </Suspense>
 
-        <SimpleFAQ 
-          items={faqItems}
-          title="Häufige Fragen"
-        />
+        <Suspense fallback={null}>
+          <SimpleFAQ 
+            items={faqItems}
+            title="Häufige Fragen"
+          />
+        </Suspense>
 
         {/* Partnernetzwerk Angebot */}
         <section className="py-6 lg:py-8 bg-muted/50">
@@ -382,11 +390,13 @@ export default function WaermepumpePage() {
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
             </p>
-            <ServiceBooking 
-              serviceType="waermepumpe"
-              buttonText="Jetzt Angebot anfordern"
-              buttonSize="lg"
-            />
+            <Suspense fallback={null}>
+              <ServiceBooking 
+                serviceType="waermepumpe"
+                buttonText="Jetzt Angebot anfordern"
+                buttonSize="lg"
+              />
+            </Suspense>
           </div>
         </section>
 

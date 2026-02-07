@@ -1,7 +1,7 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import ServiceAreas from "@/components/ServiceAreas";
 import TrustBar from "@/components/TrustBar";
 import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
@@ -21,10 +21,12 @@ import {
   FileText
 } from "lucide-react";
 import { Link } from "wouter";
-import ServiceBooking from "@/components/ServiceBooking";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 import FAQ from "@/components/FAQ";
+
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
+const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function NotdienstMuenchenPage() {
   const notfaelle = [
@@ -289,7 +291,9 @@ export default function NotdienstMuenchenPage() {
         />
         <EmergencyProcess serviceType="sanitaer" />
         <TrustBar />
-        <ServiceAreas serviceName="Notdienst"  />
+        <Suspense fallback={null}>
+            <ServiceAreas serviceName="Notdienst"  />
+        </Suspense>
         <KeywordLinks currentPage="notdienst" />
         <RelatedServices currentService="sanitaer" />
       </main>
