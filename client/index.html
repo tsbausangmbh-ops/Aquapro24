@@ -326,7 +326,7 @@
       ],
       "keywords": "Klempner München, Sanitär Notdienst, Heizung Reparatur, Badsanierung, Wärmepumpe, Rohrreinigung, 24h Notdienst",
       "datePublished": "2005-01-01",
-      "dateModified": "2025-12-25"
+      "dateModified": "2026-02-07"
     }
     </script>
 
@@ -424,6 +424,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Google 2026: Speculation Rules API for instant navigation -->
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "where": { "href_matches": ["/sanitaer", "/heizung", "/bad", "/waermepumpe", "/haustechnik", "/termin", "/notdienst-muenchen", "/faq", "/kontakt", "/ueber-uns", "/ratgeber"] },
+          "eagerness": "moderate"
+        }
+      ],
+      "prerender": [
+        {
+          "where": { "href_matches": ["/termin", "/notdienst-muenchen", "/sanitaer"] },
+          "eagerness": "moderate"
+        }
+      ]
+    }
+    </script>
     <!-- Service Worker deaktiviert - keine PWA -->
     <!--
     <script>

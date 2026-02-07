@@ -90,6 +90,7 @@ const FOUNDER_PERSON_SCHEMA = {
   "name": "Mustafa Sakar",
   "givenName": "Mustafa",
   "familyName": "Sakar",
+  "url": "https://aquapro24.de/ueber-uns",
   "jobTitle": "Inhaber & Geschäftsführer",
   "description": "Gründer von AquaPro 24, erfahrener Sanitär- und Heizungsexperte mit über 20 Jahren Berufserfahrung in München. Spezialist für Wärmepumpen, Badsanierung und 24/7 Notdienst-Koordination.",
   "worksFor": { "@id": "https://aquapro24.de/#organization" },

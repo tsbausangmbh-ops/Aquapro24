@@ -1262,7 +1262,38 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   // Note: LocalBusiness and WebSite schemas are already defined in index.html
   // SSR only adds BreadcrumbList for page-specific navigation
 
-  // Add BreadcrumbList schema
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    "url": canonicalUrl,
+    "name": page.title,
+    "description": page.description,
+    "isPartOf": { "@id": `${BASE_URL}/#website` },
+    "about": { "@id": `${BASE_URL}/#localbusiness` },
+    "author": {
+      "@type": "Person",
+      "@id": `${BASE_URL}/#founder`,
+      "name": "Mustafa Sakar",
+      "url": `${BASE_URL}/ueber-uns`
+    },
+    "publisher": { "@id": `${BASE_URL}/#organization` },
+    "inLanguage": "de-DE",
+    "datePublished": "2024-01-01",
+    "dateModified": "2026-02-07",
+    "lastReviewed": "2026-02-07",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".hero-text", ".service-description"]
+    },
+    "mainContentOfPage": {
+      "@type": "WebPageElement",
+      "cssSelector": "main"
+    }
+  };
+  const webPageScript = `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`;
+  html = html.replace('</head>', `${webPageScript}\n</head>`);
+
   const breadcrumbParts = pagePath.split('/').filter(p => p);
   if (breadcrumbParts.length > 0) {
     const breadcrumbItems = [

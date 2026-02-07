@@ -27,26 +27,38 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 // ============================================
+// SECURITY HEADERS - Google 2026 Trust Signals
+// ============================================
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(self), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()');
+  res.setHeader('X-DNS-Prefetch-Control', 'on');
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+  if (process.env.NODE_ENV === 'production' || process.env.REPL_SLUG) {
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  }
+  next();
+});
+
+// ============================================
 // CRAWLER-OPTIMIERUNG: Headers für SEO
 // ============================================
 app.use((req, res, next) => {
-  // X-Robots-Tag: Erlaubt Indexierung für alle Crawler
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   
-  // Cache-Control für statische Ressourcen
   const path = req.path;
   if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   } else if (path === '/sitemap.xml' || path === '/robots.txt') {
-    res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 Tag
+    res.setHeader('Cache-Control', 'public, max-age=86400');
   } else if (path.startsWith('/api')) {
     res.setHeader('Cache-Control', 'no-store');
   } else {
-    // HTML-Seiten: kurzes Caching für schnelle Updates
     res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   }
   
-  // Vary Header für korrektes Caching basierend auf User-Agent
   res.setHeader('Vary', 'User-Agent, Accept-Encoding');
   
   next();
