@@ -1,12 +1,27 @@
 // Static SEO content for search engine crawlers
 // This provides full HTML content when prerender.io fails
 
+export interface PageFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface PageServiceSchema {
+  name: string;
+  description: string;
+  serviceType: string;
+  priceRange?: string;
+  areaServed?: string;
+}
+
 export interface PageSEO {
   title: string;
   description: string;
   h1: string;
   content: string;
   keywords: string[];
+  serviceSchema?: PageServiceSchema;
+  faqs?: PageFAQ[];
 }
 
 const baseContent = `
@@ -85,6 +100,19 @@ export const seoPages: Record<string, PageSEO> = {
     description: 'Sanitärservice in München: Rohrbruch, verstopfter Abfluss, Armaturen, Wasserschaden. Festpreis, schnelle Hilfe, Termin in 24h. Jetzt anfragen.',
     h1: 'Sanitär München – Klempner für Rohrbruch, Armaturen & WC',
     keywords: ['Sanitär München', 'Klempner', 'Rohrreinigung', 'Armaturen', 'WC Reparatur', 'Rohrbruch'],
+    serviceSchema: {
+      name: 'Sanitär-Service München',
+      description: 'Professionelle Sanitärinstallationen in München – Rohrreinigung, Armaturen, Rohrbruch-Reparatur, WC-Installation. Festpreise ab 81€ netto.',
+      serviceType: 'PlumbingService',
+      priceRange: '€€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was kostet eine Rohrreinigung in München?', answer: 'Eine professionelle Rohrreinigung kostet bei AquaPro 24 ab 81€ netto. Anfahrt München: 39€. Festpreisgarantie ohne versteckte Kosten.' },
+      { question: 'Wie schnell kommt ein Klempner bei Rohrbruch?', answer: 'Bei einem Rohrbruch-Notfall in München sind wir innerhalb von 45-60 Minuten bei Ihnen. Unser 24/7 Notdienst ist rund um die Uhr erreichbar.' },
+      { question: 'Welche Sanitärleistungen bietet AquaPro 24?', answer: 'Wir bieten Rohrreinigung, Armaturen-Montage, Rohrbruch-Reparatur, WC-Installation, Leckortung und Wasserschaden-Beseitigung in München.' },
+      { question: 'Gibt es eine Garantie auf Sanitärarbeiten?', answer: 'Ja, wir geben 2 Jahre Garantie auf alle Sanitärarbeiten und eingebauten Materialien. Festpreisgarantie ohne Überraschungen.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professionelle <strong>Sanitärinstallationen</strong> in München – von der Rohrreinigung bis zur kompletten Wasserinstallation. Schnelle Hilfe bei Notfällen, faire Festpreise.</p>
@@ -124,6 +152,19 @@ export const seoPages: Record<string, PageSEO> = {
     description: 'Heizung defekt? AquaPro 24 München: Wartung, Reparatur & Austausch – schnell, transparent, mit Festpreis. Notdienst möglich.',
     h1: 'Heizung München – Wartung, Reparatur & Modernisierung',
     keywords: ['Heizung München', 'Heizungsreparatur', 'Heizungswartung', 'Gasheizung', 'Heizungsaustausch'],
+    serviceSchema: {
+      name: 'Heizungs-Service München',
+      description: 'Professioneller Heizungsservice in München – Wartung, Reparatur und Modernisierung aller Hersteller. Festpreise ab 154€ netto.',
+      serviceType: 'HVACBusiness',
+      priceRange: '€€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was kostet eine Heizungsreparatur in München?', answer: 'Eine Heizungsreparatur kostet bei AquaPro 24 ab 154€ netto. Alle Hersteller: Viessmann, Buderus, Vaillant, Wolf, Junkers. Festpreisgarantie.' },
+      { question: 'Wie oft sollte die Heizung gewartet werden?', answer: 'Eine jährliche Heizungswartung wird empfohlen. Sie spart Energie, verlängert die Lebensdauer und beugt Ausfällen vor. Ab 119€ netto bei AquaPro 24.' },
+      { question: 'Welche Förderung gibt es beim Heizungstausch?', answer: 'Bis zu 70% BAFA-Förderung: 30% Grundförderung + 20% Klimabonus + 30% Einkommensbonus. Wir helfen beim Antrag – kostenlos.' },
+      { question: 'Bietet AquaPro 24 einen Heizung-Notdienst?', answer: 'Ja, unser 24/7 Heizungs-Notdienst ist rund um die Uhr erreichbar. Anfahrt in 45-60 Minuten im Großraum München. Tel: 089 444438872.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Professioneller <strong>Heizungsservice</strong> in München – Wartung, Reparatur und Modernisierung vom Fachmann. Schnelle Hilfe bei Heizungsausfall.</p>
@@ -162,6 +203,19 @@ export const seoPages: Record<string, PageSEO> = {
     description: 'Badsanierung in München: Komplettumbau, barrierefreies Bad mit KfW-Förderung, Badmodernisierung. Festpreis. Jetzt beraten: 089 444438872',
     h1: 'Badsanierung München – Komplettumbau vom Profi',
     keywords: ['Badsanierung München', 'Badumbau', 'barrierefreies Bad', 'Badmodernisierung', 'KfW Förderung'],
+    serviceSchema: {
+      name: 'Badsanierung München',
+      description: 'Komplette Badsanierung in München – Planung, Umbau und Fertigstellung aus einer Hand. Barrierefreie Bäder mit KfW-Förderung bis 6.250€.',
+      serviceType: 'PlumbingService',
+      priceRange: '€€€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was kostet eine Badsanierung in München?', answer: 'Eine Badsanierung bei AquaPro 24 beginnt ab ca. 16.000€ für eine Komplettsanierung. Der genaue Preis hängt von Größe, Ausstattung und Umfang ab. Kostenlose Beratung vor Ort.' },
+      { question: 'Gibt es Förderung für barrierefreie Bäder?', answer: 'Ja, bis zu 6.250€ KfW-Zuschuss für barrierefreie Badumbauten (Programm 455-B). Bodengleiche Dusche, Haltegriffe, rutschfeste Fliesen werden gefördert.' },
+      { question: 'Wie lange dauert eine Badsanierung?', answer: 'Eine komplette Badsanierung dauert in der Regel 2-4 Wochen, je nach Umfang. Teilsanierungen sind oft in 3-5 Tagen erledigt.' },
+      { question: 'Was gehört zu einer Komplettsanierung?', answer: 'Demontage, Rohinstallation, Fliesen, Sanitärobjekte, Armaturen, Beleuchtung, Lüftung – alles aus einer Hand bei AquaPro 24.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Komplette <strong>Badsanierung in München</strong> – von der Planung bis zur Fertigstellung aus einer Hand. Barrierefreie Bäder mit KfW-Förderung.</p>
@@ -193,6 +247,19 @@ export const seoPages: Record<string, PageSEO> = {
     description: 'Wärmepumpe in München: Beratung, Planung, Einbau – inkl. Förder-Check. Jetzt kostenloses Erstgespräch sichern.',
     h1: 'Wärmepumpe München – Förderung & Einbau vom Profi',
     keywords: ['Wärmepumpe München', 'BAFA Förderung', 'Luft-Wasser-Wärmepumpe', 'Erdwärmepumpe', 'Heizungstausch'],
+    serviceSchema: {
+      name: 'Wärmepumpen-Installation München',
+      description: 'Wärmepumpen-Installation in München mit bis zu 70% BAFA-Förderung. Luft-Wasser, Erdwärme, Hybrid. Beratung und Förderantrag inklusive.',
+      serviceType: 'HVACBusiness',
+      priceRange: '€€€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was kostet eine Wärmepumpe in München?', answer: 'Eine Luft-Wasser-Wärmepumpe kostet ca. 15.000-25.000€, eine Erdwärmepumpe 20.000-35.000€. Mit BAFA-Förderung bis zu 70% sparen.' },
+      { question: 'Welche BAFA-Förderung gibt es für Wärmepumpen?', answer: 'Bis zu 70% BAFA-Zuschuss: 30% Grundförderung + 20% Klimageschwindigkeitsbonus + 30% Einkommensbonus. AquaPro 24 hilft kostenlos beim Antrag.' },
+      { question: 'Welche Wärmepumpe ist die beste für Altbauten?', answer: 'Für Altbauten empfehlen wir Luft-Wasser-Wärmepumpen oder Hybrid-Systeme (Wärmepumpe + Gas). Keine Erdarbeiten nötig, einfache Installation.' },
+      { question: 'Lohnt sich eine Wärmepumpe in München?', answer: 'Ja, besonders mit BAFA-Förderung. Wärmepumpen senken Heizkosten um bis zu 50% und machen unabhängig von steigenden Gaspreisen.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Wärmepumpen-Installation</strong> in München – mit staatlicher Förderung bis zu 70%. Wir beraten Sie und helfen beim Förderantrag.</p>
@@ -231,6 +298,19 @@ export const seoPages: Record<string, PageSEO> = {
     description: '24/7 Notdienst für Sanitär & Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall. Anfahrt in 45-60 Min. Jetzt: 089 444438872',
     h1: 'Notdienst Sanitär & Heizung München – 24h Soforthilfe',
     keywords: ['Notdienst München', 'Sanitär Notdienst', 'Heizung Notdienst', 'Rohrbruch', '24h'],
+    serviceSchema: {
+      name: '24/7 Sanitär & Heizung Notdienst München',
+      description: '24-Stunden-Notdienst für Sanitär und Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall. Anfahrt in 45-60 Minuten.',
+      serviceType: 'EmergencyService',
+      priceRange: '€€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was kostet der Sanitär-Notdienst in München?', answer: 'Anfahrt Notdienst: 69€. Rohrreinigung Notfall: ab 109€. Heizungsreparatur Notfall: ab 189€. Festpreisgarantie auch im Notdienst.' },
+      { question: 'Wie schnell kommt der Notdienst?', answer: 'Im Großraum München sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen – rund um die Uhr, auch an Wochenenden und Feiertagen.' },
+      { question: 'Was soll ich bei einem Rohrbruch tun?', answer: '1. Hauptwasserhahn zudrehen (meist im Keller), 2. Strom abschalten bei Wasserschaden, 3. Fotos für Versicherung, 4. AquaPro 24 anrufen: 089 444438872.' },
+      { question: 'Ist der Notdienst auch am Wochenende erreichbar?', answer: 'Ja, unser Notdienst ist 365 Tage im Jahr, 24 Stunden am Tag erreichbar – auch an Feiertagen. Tel: 089 444438872.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:24px;color:#f97316"><strong>24/7 Notdienst: <a href="tel:+4989444438872">089 444438872</a></strong></p>
@@ -557,6 +637,18 @@ export const seoPages: Record<string, PageSEO> = {
     description: 'Haustechnik-Service in München: Gasinstallation, Wasserinstallation, Lüftungsanlagen, Smart Home. Komplettlösungen. Tel: 089 444438872',
     h1: 'Haustechnik München – Gas, Wasser, Lüftung komplett',
     keywords: ['Haustechnik München', 'Gasinstallation', 'Wasserinstallation', 'Lüftung', 'Smart Home'],
+    serviceSchema: {
+      name: 'Haustechnik München',
+      description: 'Komplette Haustechnik-Lösungen für München – Gasinstallation, Wasserinstallation, Lüftungsanlagen und Smart Home aus einer Hand.',
+      serviceType: 'PlumbingService',
+      priceRange: '€€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was umfasst Haustechnik?', answer: 'Haustechnik umfasst Gasinstallation, Wasserinstallation, Heizungstechnik, Lüftungsanlagen und Smart-Home-Steuerung für Ihr Zuhause.' },
+      { question: 'Bietet AquaPro 24 Gasinstallationen an?', answer: 'Ja, wir führen professionelle Gasinstallationen nach TRGI durch: Gasleitungen verlegen, Gasgeräte anschließen, Sicherheitsprüfungen.' },
+      { question: 'Was kostet eine Lüftungsanlage?', answer: 'Die Kosten hängen von der Größe und dem System ab. Kontrollierte Wohnraumlüftung mit Wärmerückgewinnung – kostenlose Beratung vor Ort.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Komplette <strong>Haustechnik-Lösungen</strong> für München – Gas, Wasser, Heizung, Lüftung und Smart Home aus einer Hand.</p>
@@ -617,6 +709,18 @@ export const seoPages: Record<string, PageSEO> = {
     description: 'Rohrreinigung München ab 81€: Abfluss verstopft, WC verstopft, Kanalreinigung. 24/7 Notdienst. Sofort-Termin: 089 444438872',
     h1: 'Rohrreinigung München – Abfluss verstopft Notdienst 24/7',
     keywords: ['Rohrreinigung München', 'Abfluss verstopft', 'WC verstopft', 'Kanalreinigung', 'Notdienst'],
+    serviceSchema: {
+      name: 'Rohrreinigung München',
+      description: 'Professionelle Rohrreinigung in München ab 81€. Abfluss verstopft, WC verstopft, Kanalreinigung. 24/7 Notdienst verfügbar.',
+      serviceType: 'PlumbingService',
+      priceRange: '€',
+      areaServed: 'München'
+    },
+    faqs: [
+      { question: 'Was kostet eine Rohrreinigung in München?', answer: 'Rohrreinigung ab 81€ netto bei AquaPro 24. Kanalreinigung mit Hochdruckspülung und TV-Inspektion auf Anfrage. Festpreise.' },
+      { question: 'Wie wird ein verstopfter Abfluss gereinigt?', answer: 'Wir nutzen professionelle Spiralen oder Hochdruckspülung. Je nach Verstopfungsgrad und Leitungsdurchmesser wählen wir die optimale Methode.' },
+      { question: 'Gibt es einen Notdienst für verstopfte Abflüsse?', answer: 'Ja, unser 24/7 Notdienst ist auch für verstopfte Abflüsse erreichbar – nachts, am Wochenende und an Feiertagen. Tel: 089 444438872.' }
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px"><strong>Rohrreinigung in München</strong> – Schnelle Hilfe bei verstopften Abflüssen, WCs und Kanälen. Ab 81€ netto.</p>
@@ -1183,6 +1287,67 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
   }
 
+  // Add Service schema if page has one
+  if (page.serviceSchema) {
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": page.serviceSchema.name,
+      "description": page.serviceSchema.description,
+      "serviceType": page.serviceSchema.serviceType,
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": `${BASE_URL}/#organization`,
+        "name": "AquaPro 24",
+        "telephone": "+49 89 444438872",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hardenbergstr. 4",
+          "addressLocality": "München",
+          "postalCode": "80992",
+          "addressCountry": "DE"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": page.serviceSchema.areaServed || "München",
+        "@id": "https://www.wikidata.org/wiki/Q1726"
+      },
+      "url": canonicalUrl,
+      ...(page.serviceSchema.priceRange ? { "priceRange": page.serviceSchema.priceRange } : {}),
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": `${BASE_URL}/termin`,
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+49 89 444438872",
+          "contactType": "customer service",
+          "availableLanguage": ["de", "en", "tr"]
+        }
+      }
+    };
+    const serviceScript = `<script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>`;
+    html = html.replace('</head>', `${serviceScript}\n</head>`);
+  }
+
+  // Add FAQPage schema if page has FAQs
+  if (page.faqs && page.faqs.length > 0) {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": page.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+    const faqScript = `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`;
+    html = html.replace('</head>', `${faqScript}\n</head>`);
+  }
+
   // Replace robots meta tag with extended version
   html = html.replace(
     /<meta name="robots" content="[^"]*" \/>/,
@@ -1190,11 +1355,13 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   );
 
   // Inject content into root div
+  const lastUpdated = '7. Februar 2026';
   const fullContent = `
     ${baseContent}
     <main style="font-family:system-ui,-apple-system,sans-serif;color:#333">
       <h1 style="font-size:32px;padding:40px 20px 0;max-width:1200px;margin:0 auto">${page.h1}</h1>
       ${page.content}
+      <p style="max-width:1200px;margin:20px auto 0;padding:0 20px;font-size:13px;color:#888">Zuletzt aktualisiert: ${lastUpdated}</p>
     </main>
     ${footerContent}
   `;

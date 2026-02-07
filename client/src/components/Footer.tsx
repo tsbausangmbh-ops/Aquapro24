@@ -197,6 +197,9 @@ export default function Footer() {
           </div>
           <div className="mt-3 pt-3 border-t border-background/10 space-y-2">
             <p className="text-xs text-background/40 text-center">
+              Zuletzt aktualisiert: 7. Februar 2026
+            </p>
+            <p className="text-xs text-background/40 text-center">
               KI-Hinweis gemäß EU AI Act (Art. 50): AquaPro 24 setzt KI-basierte Systeme zur Unterstützung der Geschäftsprozesse ein. 
               Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen.
             </p>
