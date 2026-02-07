@@ -7,15 +7,18 @@ import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 
-const emailTransporter = nodemailer.createTransport({
-  host: "smtp.ionos.de",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+function createEmailTransporter() {
+  return nodemailer.createTransport({
+    host: "smtp.ionos.de",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+}
+const emailTransporter = createEmailTransporter();
 
 async function sendLeadNotificationEmail(leadData: any): Promise<void> {
   if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
