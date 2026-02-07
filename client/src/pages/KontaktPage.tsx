@@ -219,7 +219,10 @@ export default function KontaktPage() {
                     </div>
                     <h3 className="text-xl font-bold">Nachricht erfolgreich gesendet!</h3>
                     <p className="text-muted-foreground max-w-md mx-auto">
-                      Vielen Dank für Ihre Anfrage. Eine Bestätigung wurde an <span className="font-semibold text-foreground">{submittedEmail}</span> gesendet. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.
+                      Vielen Dank für Ihre Anfrage. Unser Team hat Ihre Nachricht erhalten und meldet sich innerhalb von 24 Stunden bei Ihnen.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Eine Bestätigung wurde an <span className="font-semibold text-foreground">{submittedEmail}</span> gesendet.
                     </p>
                     <p className="text-sm text-muted-foreground">
                       Bei dringenden Anliegen erreichen Sie uns unter: <a href="tel:089444438872" className="text-primary font-semibold">089 444438872</a>
