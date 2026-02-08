@@ -195,7 +195,7 @@ export default function FoerderantragHeizungPage() {
 
   const keywords = [
     "AquaPro 24 Förderantrag Heizung München", "BAFA Wärmepumpe Antrag", "Heizungsförderung beantragen",
-    "Wärmepumpe Förderung 2025", "Pelletheizung Förderung", "Solarthermie Zuschuss",
+    "Wärmepumpe Förderung 2026", "Pelletheizung Förderung", "Solarthermie Zuschuss",
     "Fußbodenheizung Förderung", "Heizungstausch Förderantrag", "BAFA Antrag Heizung",
     "Klimageschwindigkeitsbonus", "70% Heizungsförderung", "Einkommensbonus Heizung",
     "Viessmann Wärmepumpe", "Vaillant Förderung", "Wolf Wärmepumpe Zuschuss",
@@ -221,7 +221,7 @@ export default function FoerderantragHeizungPage() {
           description: "BAFA Förderantrag für Heizungstausch. Wärmepumpe, Pellet, Solar bis 70% Förderung. Kostenloser Antragsservice.",
           serviceType: "Förderantrag",
           urlSlug: "foerderantrag-heizung",
-          catalogName: "Heizungsförderung 2025",
+          catalogName: "Heizungsförderung 2026",
           serviceOffers: [
             { name: "Wärmepumpe Förderantrag", price: "Inklusive" },
             { name: "Pelletheizung Förderantrag", price: "Inklusive" },
@@ -344,7 +344,7 @@ export default function FoerderantragHeizungPage() {
                 Heizungsförderung München: Alle förderfähigen Systeme
               </h2>
               <p className="text-muted-foreground">
-                Diese Heizungssysteme werden 2025 staatlich gefördert
+                Diese Heizungssysteme werden 2026 staatlich gefördert
               </p>
             </div>
 
@@ -483,7 +483,7 @@ export default function FoerderantragHeizungPage() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Die Wärmepumpe ist das am stärksten geförderte Heizsystem 2025. Mit bis zu 70% 
+                Die Wärmepumpe ist das am stärksten geförderte Heizsystem 2026. Mit bis zu 70% 
                 Förderung sinkt der Eigenanteil auf ein Minimum. Wir verbauen Wärmepumpen 
                 aller führenden Hersteller: Viessmann Vitocal, Vaillant aroTHERM, Wolf CHA.
               </p>

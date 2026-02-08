@@ -274,7 +274,7 @@ export default function FoerderungPage() {
             answer: "Ja! Nach Erhalt der KfW 458 Zuschuss-Zusage können Sie den KfW 358/359 Ergänzungskredit beantragen: bis 120.000€ zu günstigen Zinsen für den verbleibenden Eigenanteil."
           }
         ]}
-        ogImageAlt="Förderung Heizung München BAFA KfW 2025 Zuschuss Wärmepumpe - staatliche Förderprogramme Überblick"
+        ogImageAlt="Förderung Heizung München BAFA KfW 2026 Zuschuss Wärmepumpe - staatliche Förderprogramme Überblick"
       />
       <Header />
       

@@ -72,7 +72,7 @@ export const seoPages: Record<string, PageSEO> = {
           <li><a href="/sanitaer"><strong>Sanitär München</strong></a> – Rohrreinigung, Armaturen, Wasserschaden ab 81€</li>
           <li><a href="/heizung"><strong>Heizung München</strong></a> – Wartung, Reparatur, Austausch ab 154€</li>
           <li><a href="/bad"><strong>Badsanierung München</strong></a> – Komplettumbau aus einer Hand</li>
-          <li><a href="/waermepumpe"><strong>Wärmepumpe München</strong></a> – bis 70% BAFA Förderung 2025</li>
+          <li><a href="/waermepumpe"><strong>Wärmepumpe München</strong></a> – bis 70% BAFA Förderung 2026</li>
           <li><a href="/notdienst-muenchen"><strong>24/7 Notdienst</strong></a> – Soforthilfe bei Rohrbruch & Heizungsausfall</li>
         </ul>
         
@@ -275,7 +275,7 @@ export const seoPages: Record<string, PageSEO> = {
         <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Hybrid-Wärmepumpe München</strong></span>: Wärmepumpe + Gas kombiniert</h3>
         <p>Beste Lösung für Altbauten: Wärmepumpe deckt Grundlast, Gas springt bei Spitzenlast ein. Schrittweise Dekarbonisierung.</p>
         
-        <h2>BAFA Förderung 2025 München: Bis zu 70% Zuschuss</h2>
+        <h2>BAFA Förderung 2026 München: Bis zu 70% Zuschuss</h2>
         
         <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>Klimageschwindigkeitsbonus Heizung München</strong></span>: 20% Extra-Förderung</h3>
         <p>Bei Austausch einer funktionsfähigen fossilen Heizung vor 2028 erhalten Sie zusätzlich 20% Klimabonus.</p>
@@ -607,7 +607,7 @@ export const seoPages: Record<string, PageSEO> = {
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <p style="font-size:20px">Nutzen Sie die <strong>staatliche Förderung</strong> für Ihren Heizungstausch – bis zu 70% Zuschuss möglich!</p>
         
-        <h2>BAFA Förderung 2025 München: Bis zu 70% Zuschuss</h2>
+        <h2>BAFA Förderung 2026 München: Bis zu 70% Zuschuss</h2>
         
         <h3><span style="background:#e8f5e9;padding:2px 6px;border-radius:4px"><strong>BAFA Grundförderung München</strong></span>: 30% für alle Heizungen</h3>
         <p>30% Grundförderung für alle förderfähigen Heizungen: Wärmepumpe, Pelletheizung, Solarthermie.</p>
