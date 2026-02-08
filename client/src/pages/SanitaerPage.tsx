@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -449,6 +450,17 @@ export default function SanitaerPage() {
         <RelatedServices currentService="sanitaer" />
       </main>
       
+      <InternalLinks
+        title="Verwandte Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung ab 81€" },
+          { href: "/armaturen", text: "Armaturen & Wasserhähne", description: "Grohe, Hansgrohe & mehr" },
+          { href: "/bad", text: "Badsanierung komplett", description: "Komplettumbau aus einer Hand" },
+          { href: "/warmwasser", text: "Warmwasser-Lösungen", description: "Boiler, Durchlauferhitzer, Speicher" },
+          { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Rohrbruch & Wasserschaden Soforthilfe" },
+        ]}
+      />
       <Footer />
     </div>
   );

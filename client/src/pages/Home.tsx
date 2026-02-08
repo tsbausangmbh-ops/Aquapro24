@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
@@ -614,6 +615,18 @@ export default function Home() {
         </section>
       </main>
       
+      <InternalLinks
+        title="Weitere Services in München"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär-Service München", description: "Rohrreinigung, Armaturen, WC-Reparatur ab 81€" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch ab 154€" },
+          { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
+          { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% BAFA-Förderung sichern" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst München", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Förderberatung" },
+        ]}
+      />
       <Footer />
       <Suspense fallback={null}>
         <CookieBanner />

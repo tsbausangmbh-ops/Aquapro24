@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -446,6 +447,17 @@ export default function KontaktPage() {
           </p>
         </div>
       </section>
+      <InternalLinks
+        title="Unsere Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur, Austausch" },
+          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
+          { href: "/termin", text: "Online-Termin buchen", description: "Schnell & unkompliziert" },
+          { href: "/faq", text: "Häufige Fragen", description: "Preise, Ablauf & mehr" },
+        ]}
+      />
       <Footer />
     </div>
   );

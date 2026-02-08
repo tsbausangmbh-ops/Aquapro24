@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 
 const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
@@ -289,6 +290,17 @@ export default function FAQPage() {
           </div>
         </section>
       </main>
+      <InternalLinks
+        title="Unsere Leistungen im Detail"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung bis Neuinstallation" },
+          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Beratung" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
+        ]}
+      />
       <Footer />
     </div>
   );

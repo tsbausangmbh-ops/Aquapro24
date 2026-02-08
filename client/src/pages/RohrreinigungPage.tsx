@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
@@ -397,6 +398,17 @@ export default function RohrreinigungPage() {
         <RelatedServices currentService="rohrreinigung" />
       </main>
       
+      <InternalLinks
+        title="Weitere Sanitär-Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär komplett", description: "Alle Sanitär-Leistungen im Überblick" },
+          { href: "/sanitaer-notdienst-24", text: "24h Notdienst Sanitär", description: "Sofort-Hilfe bei Verstopfung" },
+          { href: "/armaturen", text: "Armaturen-Service", description: "Austausch & Reparatur" },
+          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
+          { href: "/kontakt", text: "Jetzt anfragen", description: "Kostenlose Erstberatung" },
+        ]}
+      />
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -688,6 +689,17 @@ export default function BadPage() {
         <RelatedServices currentService="bad" />
       </main>
       
+      <InternalLinks
+        title="Passende Services zur Badsanierung"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär-Installationen", description: "Armaturen, WC, Waschbecken" },
+          { href: "/armaturen", text: "Premium-Armaturen", description: "Grohe, Hansgrohe, Duravit" },
+          { href: "/warmwasser", text: "Warmwasser-Systeme", description: "Boiler & Durchlauferhitzer" },
+          { href: "/foerderung", text: "Förderung für Badsanierung", description: "KfW-Zuschüsse für barrierefreies Bad" },
+          { href: "/kontakt", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
+        ]}
+      />
       <Footer />
     </div>
   );

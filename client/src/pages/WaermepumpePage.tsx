@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
@@ -431,6 +432,17 @@ export default function WaermepumpePage() {
         <RelatedServices currentService="waermepumpe" />
       </main>
       
+      <InternalLinks
+        title="Rund um Heizung & Förderung"
+        variant="footer-cta"
+        links={[
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/foerderung", text: "Förderung 2026", description: "BAFA bis 70%, KfW-Kredit" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
+          { href: "/foerderantrag-heizung", text: "Förderantrag Heizung", description: "Schritt-für-Schritt zum Zuschuss" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
+        ]}
+      />
       <Footer />
     </div>
   );

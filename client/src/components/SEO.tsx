@@ -558,8 +558,12 @@ export default function SEO({
   useEffect(() => {
     document.title = title;
     
-    // Auto-generate canonical if not provided - always point to self
-    const effectiveCanonical = canonical || `https://aquapro24.de${window.location.pathname}`;
+    const CANONICAL_OVERRIDES: Record<string, string> = {
+      '/badsanierung': '/bad',
+    };
+    const currentPath = window.location.pathname;
+    const canonicalOverride = CANONICAL_OVERRIDES[currentPath];
+    const effectiveCanonical = canonical || `https://aquapro24.de${canonicalOverride || currentPath}`;
     
     const updateMeta = (name: string, content: string, property = false) => {
       const attr = property ? "property" : "name";

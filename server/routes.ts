@@ -496,7 +496,182 @@ interface ChatMessage {
   content: string;
 }
 
+const crawlerLog: Array<{timestamp: string; bot: string; path: string; statusCode: number; ip: string}> = [];
+const MAX_CRAWLER_LOG = 500;
+
+function identifyBot(ua: string): string | null {
+  const lc = ua.toLowerCase();
+  if (lc.includes('googlebot')) return 'Googlebot';
+  if (lc.includes('bingbot')) return 'Bingbot';
+  if (lc.includes('yandexbot')) return 'YandexBot';
+  if (lc.includes('duckduckbot')) return 'DuckDuckBot';
+  if (lc.includes('baiduspider')) return 'Baiduspider';
+  if (lc.includes('applebot')) return 'Applebot';
+  if (lc.includes('gptbot')) return 'GPTBot';
+  if (lc.includes('claudebot') || lc.includes('anthropic')) return 'ClaudeBot';
+  if (lc.includes('perplexitybot')) return 'PerplexityBot';
+  if (lc.includes('facebot')) return 'Facebot';
+  if (lc.includes('twitterbot')) return 'Twitterbot';
+  if (lc.includes('linkedinbot')) return 'LinkedInBot';
+  if (lc.includes('semrushbot')) return 'SemrushBot';
+  if (lc.includes('ahrefsbot')) return 'AhrefsBot';
+  if (lc.includes('mj12bot')) return 'MJ12Bot';
+  if (lc.includes('screaming frog')) return 'ScreamingFrog';
+  if (lc.includes('sistrix')) return 'SISTRIX';
+  if (lc.includes('archive.org') || lc.includes('ia_archiver')) return 'InternetArchive';
+  if (lc.includes('uptimerobot')) return 'UptimeRobot';
+  if (lc.includes('lighthouse') || lc.includes('pagespeed')) return 'Lighthouse';
+  return null;
+}
+
+const SITEMAP_URLS: Array<{loc: string; changefreq: string; priority: number; section: string}> = [
+  { loc: '/', changefreq: 'daily', priority: 1.0, section: 'Homepage' },
+  { loc: '/sanitaer-notdienst-24', changefreq: 'daily', priority: 0.98, section: '24h Notdienst' },
+  { loc: '/heizung-notdienst-24', changefreq: 'daily', priority: 0.98, section: '24h Notdienst' },
+  { loc: '/notdienst-muenchen', changefreq: 'daily', priority: 0.95, section: '24h Notdienst' },
+  { loc: '/sanitaer', changefreq: 'weekly', priority: 0.95, section: 'Leistungen' },
+  { loc: '/heizung', changefreq: 'weekly', priority: 0.95, section: 'Leistungen' },
+  { loc: '/bad', changefreq: 'weekly', priority: 0.95, section: 'Leistungen' },
+  { loc: '/waermepumpe', changefreq: 'weekly', priority: 0.95, section: 'Leistungen' },
+  { loc: '/haustechnik', changefreq: 'weekly', priority: 0.90, section: 'Leistungen' },
+  { loc: '/rohrreinigung', changefreq: 'weekly', priority: 0.90, section: 'Leistungen' },
+  { loc: '/armaturen', changefreq: 'weekly', priority: 0.85, section: 'Leistungen' },
+  { loc: '/warmwasser', changefreq: 'weekly', priority: 0.85, section: 'Leistungen' },
+  { loc: '/sanitaer-muenchen', changefreq: 'weekly', priority: 0.90, section: 'Landing Pages' },
+  { loc: '/heizung-muenchen', changefreq: 'weekly', priority: 0.90, section: 'Landing Pages' },
+  { loc: '/badsanierung-muenchen', changefreq: 'weekly', priority: 0.90, section: 'Landing Pages' },
+  { loc: '/waermepumpe-muenchen', changefreq: 'weekly', priority: 0.90, section: 'Landing Pages' },
+  { loc: '/fussbodenheizung-muenchen', changefreq: 'weekly', priority: 0.85, section: 'Landing Pages' },
+  { loc: '/notdienst-muenchen', changefreq: 'daily', priority: 0.90, section: 'Landing Pages' },
+  { loc: '/foerderung', changefreq: 'weekly', priority: 0.85, section: 'Förderung' },
+  { loc: '/foerderantrag', changefreq: 'weekly', priority: 0.80, section: 'Förderung' },
+  { loc: '/foerderantrag-heizung', changefreq: 'weekly', priority: 0.80, section: 'Förderung' },
+  { loc: '/foerderrechner', changefreq: 'weekly', priority: 0.80, section: 'Förderung' },
+  { loc: '/termin', changefreq: 'weekly', priority: 0.90, section: 'Buchung' },
+  { loc: '/kontakt', changefreq: 'monthly', priority: 0.80, section: 'Buchung' },
+  { loc: '/ueber-uns', changefreq: 'monthly', priority: 0.70, section: 'Info' },
+  { loc: '/faq', changefreq: 'monthly', priority: 0.70, section: 'Info' },
+  { loc: '/ratgeber', changefreq: 'weekly', priority: 0.75, section: 'Info' },
+  { loc: '/schwabing', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/bogenhausen', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/maxvorstadt', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/haidhausen', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/nymphenburg', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/lehel', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/solln', changefreq: 'monthly', priority: 0.80, section: 'Premium Stadtteile' },
+  { loc: '/sendling', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/pasing', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/neuhausen', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/trudering', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/laim', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/giesing', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/moosach', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/milbertshofen', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/perlach', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/hadern', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/allach', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/aubing', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/feldmoching', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/thalkirchen', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/ramersdorf', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/berg-am-laim', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/schwanthalerhoehe', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/au', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/freimann', changefreq: 'monthly', priority: 0.75, section: 'Stadtteile' },
+  { loc: '/muenchen-nord', changefreq: 'monthly', priority: 0.70, section: 'Regionen' },
+  { loc: '/muenchen-sued', changefreq: 'monthly', priority: 0.70, section: 'Regionen' },
+  { loc: '/muenchen-west', changefreq: 'monthly', priority: 0.70, section: 'Regionen' },
+  { loc: '/muenchen-ost', changefreq: 'monthly', priority: 0.70, section: 'Regionen' },
+  { loc: '/impressum', changefreq: 'yearly', priority: 0.30, section: 'Rechtliches' },
+  { loc: '/agb', changefreq: 'yearly', priority: 0.30, section: 'Rechtliches' },
+  { loc: '/datenschutz', changefreq: 'yearly', priority: 0.30, section: 'Rechtliches' },
+  { loc: '/cookie-richtlinie', changefreq: 'yearly', priority: 0.25, section: 'Rechtliches' },
+  { loc: '/barrierefreiheit', changefreq: 'yearly', priority: 0.35, section: 'Rechtliches' },
+];
+
+const CANONICAL_MAP: Record<string, string> = {
+  '/badsanierung': '/bad',
+};
+
 export async function registerRoutes(server: Server, app: Express): Promise<void> {
+
+  app.use((req, res, next) => {
+    const ua = req.headers['user-agent'] || '';
+    const bot = identifyBot(ua);
+    if (bot && !req.path.startsWith('/api') && !req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2)$/)) {
+      const entry = {
+        timestamp: new Date().toISOString(),
+        bot,
+        path: req.path,
+        statusCode: 200,
+        ip: (req.headers['x-forwarded-for'] as string || req.ip || '').split(',')[0].trim()
+      };
+      res.on('finish', () => { entry.statusCode = res.statusCode; });
+      crawlerLog.push(entry);
+      if (crawlerLog.length > MAX_CRAWLER_LOG) crawlerLog.shift();
+      console.log(`[Crawler] ${bot} -> ${req.path}`);
+    }
+    next();
+  });
+
+  app.get("/sitemap.xml", (_req, res) => {
+    const today = new Date().toISOString().split('T')[0];
+    const baseUrl = 'https://aquapro24.de';
+    const seen = new Set<string>();
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
+    xml += `        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">\n`;
+    
+    for (const entry of SITEMAP_URLS) {
+      if (seen.has(entry.loc)) continue;
+      seen.add(entry.loc);
+      
+      const canonical = CANONICAL_MAP[entry.loc];
+      if (canonical) continue;
+      
+      xml += `  <url>\n`;
+      xml += `    <loc>${baseUrl}${entry.loc}</loc>\n`;
+      xml += `    <lastmod>${today}</lastmod>\n`;
+      xml += `    <changefreq>${entry.changefreq}</changefreq>\n`;
+      xml += `    <priority>${entry.priority.toFixed(2)}</priority>\n`;
+      if (entry.section !== 'Rechtliches') {
+        xml += `    <mobile:mobile/>\n`;
+      }
+      xml += `  </url>\n`;
+    }
+    
+    xml += `</urlset>`;
+    
+    res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.send(xml);
+  });
+
+  app.get("/api/crawler-stats", (_req, res) => {
+    const botCounts: Record<string, number> = {};
+    const pathCounts: Record<string, number> = {};
+    const last24h = new Date(Date.now() - 86400000).toISOString();
+    
+    const recentLogs = crawlerLog.filter(l => l.timestamp >= last24h);
+    
+    for (const entry of recentLogs) {
+      botCounts[entry.bot] = (botCounts[entry.bot] || 0) + 1;
+      pathCounts[entry.path] = (pathCounts[entry.path] || 0) + 1;
+    }
+    
+    const sortedBots = Object.entries(botCounts).sort((a, b) => b[1] - a[1]);
+    const sortedPaths = Object.entries(pathCounts).sort((a, b) => b[1] - a[1]).slice(0, 20);
+    
+    res.json({
+      total24h: recentLogs.length,
+      totalAll: crawlerLog.length,
+      bots: Object.fromEntries(sortedBots),
+      topPaths: Object.fromEntries(sortedPaths),
+      lastEntries: crawlerLog.slice(-20).reverse(),
+      googlebotLast: crawlerLog.filter(l => l.bot === 'Googlebot').slice(-5).reverse()
+    });
+  });
 
   app.post("/api/web-vitals", (req, res) => {
     try {

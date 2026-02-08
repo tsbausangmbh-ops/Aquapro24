@@ -1201,9 +1201,15 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     console.log(`[SEO] Warnung: Keine SEO-Definition für ${normalizedPath}, verwende Fallback`);
   }
 
-  // Determine canonical URL (normalize /stadtteil/X to /X, always without trailing slash)
+  // Canonical-Bündelung: Duplikate auf Hauptseite zeigen
+  const CANONICAL_OVERRIDES: Record<string, string> = {
+    '/badsanierung': '/bad',
+  };
+  
   let canonicalPath = normalizedPath;
-  if (normalizedPath.startsWith('/stadtteil/')) {
+  if (CANONICAL_OVERRIDES[normalizedPath]) {
+    canonicalPath = CANONICAL_OVERRIDES[normalizedPath];
+  } else if (normalizedPath.startsWith('/stadtteil/')) {
     canonicalPath = '/' + normalizedPath.slice('/stadtteil/'.length);
   }
   const canonicalUrl = `${BASE_URL}${canonicalPath}`;
