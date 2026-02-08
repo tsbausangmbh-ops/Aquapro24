@@ -25,7 +25,8 @@ import {
   Zap,
   Users,
   AlertTriangle,
-  Gift
+  Gift,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
@@ -282,45 +283,81 @@ export default function FoerderungPage() {
           <HeroPicture heroKey="hero_foerderung" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl">
-              <Badge className="mb-4 bg-green-500 text-white">
-                <Gift className="w-3 h-3 mr-1" />
-                Bis zu 70% staatliche Förderung {currentYear}
-              </Badge>
-              
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Förderung Heizung München – KfW 458, BAFA & Steuerbonus {currentYear}
               </h1>
-              
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 max-w-2xl">
-                Sichern Sie sich bis zu <strong>70% staatliche Förderung</strong> für Ihre neue Wärmepumpe. 
+
+              <div className="sr-only" data-testid="keyword-cloud">
+                {keywords.map((keyword, index) => (
+                  <span key={index} className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">{keyword}</span>
+                ))}
+              </div>
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Neue Heizung geplant? Bis zu 70% Förderung sichern!</strong>
+              </p>
+
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                Sichern Sie sich bis zu 70% staatliche Förderung für Ihre neue Wärmepumpe. 
                 Wir übernehmen die komplette Antragstellung kostenlos für Sie.
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {keywords.slice(0, 12).map((keyword, index) => (
-                  <span 
-                    key={index}
-                    className="px-2 py-1 text-xs bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80"
-                  >
-                    {keyword}
-                  </span>
-                ))}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Ihre neue Heizung wird installiert – und 70% der Kosten übernimmt der Staat.
+                </p>
               </div>
-              
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-foerderung">
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 444438872
+
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.847 Münchner Familien</strong> vertrauen uns bei der Förderberatung – Beratung kostenlos | Förderantrag inklusive
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-foerderung">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white" asChild>
-                  <Link href="/foerderrechner" data-testid="link-foerderrechner">
-                    <Calculator className="w-4 h-4 mr-2" />
-                    Förderung berechnen
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-foerderung"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Bis zu 70% Förderung</span>
+                </div>
               </div>
             </div>
           </div>

@@ -17,7 +17,8 @@ import {
   Shield,
   Wrench,
   ShowerHead,
-  CircleAlert
+  CircleAlert,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -114,14 +115,20 @@ export default function SanitaerNotdienst24Page() {
       <main id="main-content" className="flex-1">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_sanitaer_notdienst" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl">
-              <Badge className="mb-4 bg-red-600 text-white">
-                <AlertTriangle className="w-3 h-3 mr-1" />
-                24h Notdienst
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Sanitär Notdienst 24h München: Klempner Soforthilfe rund um die Uhr
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -146,28 +153,47 @@ export default function SanitaerNotdienst24Page() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Festpreis</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Notfall München</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 mt-4">
-                Sanitär-Notfall mitten in der Nacht? Rohrbruch am Wochenende? WC verstopft am Feiertag? 
-                Unser Sanitär Notdienst ist 24 Stunden am Tag, 7 Tage die Woche für Sie in München erreichbar. 
-                Schnelle Hilfe bei Rohrbruch, Wasserschaden, Verstopfung und allen sanitären Notfällen.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Rohrbruch mitten in der Nacht? WC verstopft am Wochenende?</strong>
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
-                Senden Sie uns Fotos vom Problem, Ihre Adresse und eine kurze Beschreibung – 
-                wir melden uns schnellstmöglich mit Verfügbarkeit und transparenter Preiseinschätzung.
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                Unser Sanitär Notdienst ist 24/7 für Sie in München erreichbar. Ab 30 Min. vor Ort, transparente Festpreise.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-sanitaer-notdienst-24">
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 444438872
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> 2 Uhr nachts, Wasser läuft aus dem Rohr unter der Spüle – Sie rufen an, und in 30 Minuten ist ein Klempner da, stoppt das Wasser und repariert die Leitung. Ohne Wartezeit, ohne Überraschungen bei der Rechnung.
+                </p>
+              </div>
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.800+ zufriedene Kunden</strong> · Sanitär-Notdienst ab 149€ Festpreis
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-sanitaer-notdienst-24">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                  <Link href="/kontakt" data-testid="link-kontakt-sanitaer-notdienst">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Notfall melden
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-sanitaer-notdienst">
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Ab 30 Min. vor Ort</span>
+                </div>
               </div>
             </div>
           </div>

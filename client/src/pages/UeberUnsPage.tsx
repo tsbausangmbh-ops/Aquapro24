@@ -306,16 +306,24 @@ export default function UeberUnsPage() {
             className="absolute inset-0 bg-contain md:bg-cover bg-top md:bg-center"
             style={{ backgroundImage: `url(${teamImage})`, backgroundColor: '#1a1a1a' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <Badge variant="secondary" className="gap-2 mb-4">
-                <BadgeCheck className="w-4 h-4" />
-                Geprüfte Fachbetriebe München
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight text-white mb-4">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 AquaPro 24 München – Ihr Partnernetzwerk seit 2005
               </h1>
+
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Partnernetzwerk Sanitär</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">geprüfte Fachbetriebe</span>
@@ -338,28 +346,60 @@ export default function UeberUnsPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">transparente Abrechnung</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">5 Jahre Gewährleistung</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed mb-4">
-                <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
-                das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
-                Rechnung höher ausfiel als besprochen.
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong>
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
+
+              <p className="text-sm sm:text-base text-white/90 mb-4">
                 Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
-                <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen.
+                zuverlässige, faire und schnelle Hilfe verdienen.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-about">
-                    <Phone className="w-5 h-5 mr-2" />
-                    089 444438872
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Ein Handwerker, der pünktlich kommt, faire Festpreise nennt und sauber arbeitet – seit 20 Jahren Ihr Vertrauenspartner in München.
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.847 Münchner Familien</strong> vertrauen uns – Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-about">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-about"
+                >
                   <Link href="/termin">
-                    <Calendar className="w-5 h-5 mr-2" />
+                    <Clock className="w-4 h-4" />
                     24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Seit 2005 aktiv</span>
+                </div>
               </div>
             </div>
           </div>

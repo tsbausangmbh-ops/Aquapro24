@@ -21,7 +21,8 @@ import {
   Wrench,
   Calendar,
   MessageSquare,
-  MessageCircle
+  MessageCircle,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.webp";
@@ -258,16 +259,24 @@ export default function RatgeberPage() {
       <main id="main-content">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_ratgeber" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4 gap-1">
-                <BookOpen className="w-3 h-3" />
-                Ratgeber & Tipps
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Ratgeber München – Expertentipps Sanitär & Heizung
               </h1>
+
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wasserschaden was tun</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rohrbruch Erste Hilfe</span>
@@ -290,14 +299,61 @@ export default function RatgeberPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieberater München</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Expertentipps Haustechnik</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
-                <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 
-                Wissen aus über 35 Jahren Erfahrung in München.
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Praktische Tipps vom Partnernetzwerk.</strong>
               </p>
-              <p className="text-white/80">
+
+              <p className="text-sm sm:text-base text-white/90 mb-4">
                 Von der Ersten Hilfe bei Wasserschäden bis zur Frage, ob sich eine Wärmepumpe 
-                für Sie lohnt - hier finden Sie fundierte Antworten.
+                für Sie lohnt - hier finden Sie fundierte Antworten aus über 35 Jahren Erfahrung.
               </p>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Sie wissen genau, was zu tun ist – ob Wasserschaden, Heizungsproblem oder Badsanierung – dank Expertenwissen aus erster Hand.
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.847 Münchner Familien</strong> vertrauen unserem Expertenwissen – Beratung kostenlos | Festpreise garantiert
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-ratgeber">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
+                  </a>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-ratgeber"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Über 35 Jahre Erfahrung</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Mail, Phone, MapPin, FileText } from "lucide-react";
+import { ArrowLeft, Mail, Phone, MapPin, FileText, Clock, CheckCircle2, AlertTriangle, Star } from "lucide-react";
 import { Link } from "wouter";
 import { HeroPicture } from "@/components/ResponsiveHero";
 
@@ -20,18 +20,26 @@ export default function Impressum() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
+        <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_impressum" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4 gap-1">
-                <FileText className="w-3 h-3" />
-                Rechtliches
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Impressum AquaPro 24 – Sanitär Heizung München
               </h1>
+
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Impressum AquaPro 24</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Inhaber Mustafa Sakar</span>
@@ -43,9 +51,60 @@ export default function Impressum() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Einzelunternehmer</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rechtliches</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/80">
-                Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</strong>
               </p>
+
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                AquaPro 24, Inhaber Mustafa Sakar – Ihr zuverlässiger Partner für Sanitär & Heizung in München seit 2005.
+              </p>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Ein Handwerksbetrieb, der mit vollem Namen hinter seiner Arbeit steht – transparent, erreichbar und seit 20 Jahren zuverlässig.
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.847 Münchner Familien</strong> vertrauen uns – Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-impressum">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
+                  </a>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-impressum"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Seit 2005 aktiv</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

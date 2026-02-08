@@ -17,7 +17,9 @@ import {
   Mail,
   Camera,
   Clock,
-  FileText
+  FileText,
+  AlertTriangle,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import RelatedServices from "@/components/RelatedServices";
@@ -109,14 +111,20 @@ export default function HeizungMuenchenPage() {
       <main id="main-content" className="flex-1">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_heizung_muenchen" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl">
-              <Badge className="mb-4 bg-red-600 text-white">
-                <Flame className="w-3 h-3 mr-1" />
-                Heizung München
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Heizung München – Reparatur, Wartung & Modernisierung Profi
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -141,31 +149,48 @@ export default function HeizungMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Heizkosten senken</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Heizung</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
-                Wenn die Heizung streikt oder modernisiert werden soll, zählt vor allem eins: eine Lösung, 
-                die planbar ist und dauerhaft funktioniert. AquaPro 24 unterstützt Sie in München bei 
-                Heizungsreparaturen, Austausch, Optimierung und Modernisierung. Von der ersten Einschätzung 
-                bis zur Umsetzung arbeiten wir mit einem klaren Vorgehen – damit Sie wissen, was passiert, 
-                wann es passiert und warum.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Heizung streikt mitten im Winter? Heizkörper bleiben kalt?</strong>
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
-                Senden Sie uns Ihre Anfrage idealerweise mit Fotos vom Gerät/Typenschild und einer kurzen 
-                Beschreibung (Fehlercode, Geräusche, Ausfallzeiten). So sparen wir Zeit und können Ihnen 
-                schneller einen passenden Termin nennen.
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                AquaPro 24 unterstützt Sie in München bei Heizungsreparaturen, Austausch, Optimierung 
+                und Modernisierung. Ab 60 Min. Reaktionszeit, transparente Festpreise.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-heizung-muenchen">
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 444438872
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Es ist Dezember, die Heizung fällt abends aus – und innerhalb einer Stunde steht ein Fachmann vor Ihrer Tür, diagnostiziert das Problem und repariert es sofort. So arbeiten wir.
+                </p>
+              </div>
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.800+ zufriedene Kunden</strong> · Heizungsreparatur ab 89€ Festpreis
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-heizung-muenchen">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                  <Link href="/kontakt" data-testid="link-kontakt-heizung">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Anfrage senden
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-heizung">
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Alle Heizungsmarken</span>
+                </div>
               </div>
             </div>
           </div>

@@ -17,7 +17,9 @@ import {
   Mail,
   Camera,
   Clock,
-  MapPin
+  MapPin,
+  AlertTriangle,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import RelatedServices from "@/components/RelatedServices";
@@ -109,14 +111,20 @@ export default function SanitaerMuenchenPage() {
       <main id="main-content" className="flex-1">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_sanitaer_muenchen" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl">
-              <Badge variant="secondary" className="mb-4">
-                <Droplets className="w-3 h-3 mr-1" />
-                Sanitär München
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Sanitär München – Klempner Installation & Reparatur Festpreis
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -141,30 +149,47 @@ export default function SanitaerMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">transparente Preise</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">geprüfte Fachbetriebe</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
-                AquaPro 24 ist Ihr Ansprechpartner für Sanitärarbeiten in München – von der sauberen 
-                Installation bis zur schnellen Reparatur. Ob undichte Armatur, defektes Eckventil, 
-                WC-Spülung, Wasseranschluss für Küche oder die komplette Erneuerung von Leitungen: 
-                Wir kümmern uns strukturiert, transparent und mit einem klaren Ablauf.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Wasserhahn tropft? Abfluss verstopft? WC-Spülung defekt?</strong>
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
-                Damit wir Ihnen schnell helfen können, senden Sie uns bitte kurz Adresse, Problem, 
-                Fotos und – wenn möglich – den Zeitraum, in dem wir Zugang haben. So erhalten Sie 
-                zügig eine konkrete Rückmeldung mit Terminoptionen.
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                AquaPro 24 ist Ihr Ansprechpartner für Sanitärarbeiten in München. Ab 60 Min. Reaktionszeit, transparente Festpreise.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-sanitaer-muenchen">
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 444438872
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Der Wasserhahn in der Küche tropft seit Tagen – Sie rufen an, und noch am selben Tag kommt ein Fachmann, tauscht die Dichtung und alles ist erledigt. Genau so arbeiten wir.
+                </p>
+              </div>
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.800+ zufriedene Kunden</strong> · Sanitär-Reparatur ab 79€ Festpreis
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-sanitaer-muenchen">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                  <Link href="/kontakt" data-testid="link-kontakt-sanitaer">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Anfrage senden
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-sanitaer">
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Festpreisgarantie</span>
+                </div>
               </div>
             </div>
           </div>

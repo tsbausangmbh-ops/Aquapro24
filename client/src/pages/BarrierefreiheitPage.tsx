@@ -15,8 +15,13 @@ import {
   Mail,
   CheckCircle,
   AlertCircle,
-  Shield
+  Shield,
+  Clock,
+  CheckCircle2,
+  AlertTriangle,
+  Star
 } from "lucide-react";
+import { HeroPicture } from "@/components/ResponsiveHero";
 
 const accessibilityFeatures = [
   {
@@ -73,40 +78,80 @@ export default function BarrierefreiheitPage() {
       <Header />
 
       <main id="main-content">
-        <section className="relative py-12 lg:py-16 overflow-hidden">
+        <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <Badge className="mb-4 bg-white/20 text-white border-white/30">
-                <Shield className="w-3 h-3 mr-1" aria-hidden="true" />
-                WCAG 2.1 AA konform
-              </Badge>
-              
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Barrierefreiheitserklärung München
               </h1>
-              
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
-                AquaPro 24 München verpflichtet sich, die digitale Barrierefreiheit für Menschen 
-                mit Behinderungen zu gewährleisten. Wir verbessern kontinuierlich die Benutzerfreundlichkeit 
-                für alle Besucher unserer Website.
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Digitale Barrierefreiheit für alle Besucher</strong>
               </p>
 
-              <div className="flex flex-wrap gap-3">
-                <Button asChild className="bg-white text-primary hover:bg-white/90">
-                  <a href="tel:+4989444438872" data-testid="button-call-accessibility">
-                    <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
-                    089 444438872
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                AquaPro 24 München verpflichtet sich, die digitale Barrierefreiheit für Menschen 
+                mit Behinderungen zu gewährleisten. WCAG 2.1 AA konform.
+              </p>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Eine Website, die für jeden zugänglich ist – ob mit Screenreader, Tastatur oder mobil. Barrierefreiheit ist für uns selbstverständlich.
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.847 Münchner Familien</strong> vertrauen uns – Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-accessibility">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button variant="outline" asChild className="border-white/50 text-white hover:bg-white/10">
-                  <a href="mailto:info@aquapro24.de?subject=Barrierefreiheit" data-testid="button-email-accessibility">
-                    <Mail className="w-4 h-4 mr-2" aria-hidden="true" />
-                    Feedback senden
-                  </a>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-accessibility"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
+                  </Link>
                 </Button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>WCAG 2.1 AA konform</span>
+                </div>
               </div>
             </div>
           </div>

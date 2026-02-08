@@ -987,16 +987,24 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
       <main id="main-content" className="flex-1">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_stadtteil" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl">
-              <Badge variant="secondary" className="mb-4">
-                <MapPin className="w-3 h-3 mr-1" />
-                München {data.name}
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Klempner {data.name} München – Sanitär, Heizung & Notdienst
               </h1>
+
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Installateur {data.name}</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner vor Ort</span>
@@ -1014,32 +1022,59 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Preise</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">lokaler Service</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Sanitär- oder Heizungsproblem in {data.name}?</strong>
+              </p>
+
+              <p className="text-sm sm:text-base text-white/90 mb-4">
                 {data.beschreibung}
               </p>
-              <div className="flex items-center gap-4 text-white/80 mb-6">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-primary" />
-                  <span>Anfahrt: ca. {data.anfahrt}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <span>4.9/5 Bewertung</span>
-                </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Sie rufen an – und in ca. {data.anfahrt} ist ein geprüfter Fachbetrieb bei Ihnen in {data.name}, mit Festpreis und allem Material.
+                </p>
               </div>
-              <div className="flex flex-wrap gap-3">
-                <Button size="lg" className="bg-red-600 text-white border-red-700" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-stadtteil-hero">
-                    <Phone className="w-4 h-4 mr-2" />
+
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.847 Münchner Familien</strong> vertrauen uns – Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-stadtteil-hero">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white bg-white/10 backdrop-blur-sm" asChild>
-                  <Link href="/termin" data-testid="button-termin-stadtteil-hero">
-                    <Clock className="w-4 h-4 mr-2" />
-                    Online Termin buchen
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-stadtteil-hero"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Anfahrt ca. {data.anfahrt}</span>
+                </div>
               </div>
             </div>
           </div>

@@ -18,7 +18,8 @@ import {
   Mail,
   MapPin,
   Clock,
-  FileText
+  FileText,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import RelatedServices from "@/components/RelatedServices";
@@ -136,14 +137,20 @@ export default function NotdienstMuenchenPage() {
       <main id="main-content" className="flex-1">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_notdienst" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl">
-              <Badge className="mb-4 bg-red-600 text-white">
-                <AlertTriangle className="w-3 h-3 mr-1" />
-                Notdienst München
-              </Badge>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Notdienst München 24h – Rohrbruch & Heizungsausfall Soforthilfe
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -168,29 +175,47 @@ export default function NotdienstMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sofort Klempner München</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Notdienst</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
-                Bei Rohrbruch, Wasseraustritt oder Heizungsausfall zählt Tempo – aber auch eine saubere 
-                Einschätzung. AquaPro 24 bietet Notdienst-Optionen in München und Umgebung. Damit wir 
-                schnell priorisieren können, senden Sie uns bitte Fotos/Videos, Adresse, Erreichbarkeit 
-                vor Ort und eine Kurzbeschreibung (Was ist passiert? Seit wann? Wie stark?).
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Rohrbruch? Wasserrohr geplatzt? Heizung ausgefallen?</strong>
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
-                Sie erhalten schnell eine Rückmeldung mit Verfügbarkeit, Vorgehen und – wenn möglich – 
-                einer transparenten Einschätzung zu Aufwand/Preisrahmen.
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                AquaPro 24 bietet Notdienst rund um die Uhr in München und Umgebung. Ab 60 Min. vor Ort, transparente Festpreise.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700" asChild>
-                  <a href="tel:+4989444438872" data-testid="button-call-notdienst-muenchen">
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 444438872
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Sonntagabend, Wasserrohrbruch in der Küche – Sie rufen an, und in 45 Minuten steht ein Fachmann vor der Tür, stoppt das Wasser und repariert das Rohr. Kein Warten, kein Stress.
+                </p>
+              </div>
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>2.800+ zufriedene Kunden</strong> · Notdienst-Einsatz ab 149€ Festpreis
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-notdienst-muenchen">
+                  <a href="tel:+4989444438872">
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                  <Link href="/kontakt" data-testid="link-kontakt-notdienst">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Notfall melden
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-notdienst">
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
                   </Link>
                 </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Ab 60 Min. vor Ort</span>
+                </div>
               </div>
             </div>
           </div>
