@@ -1,4 +1,5 @@
 import express, { type Request, Response, NextFunction } from "express";
+import compression from "compression";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
@@ -15,6 +16,15 @@ declare module "http" {
 // SSR wird durch eigene Lösung gehandhabt (server/ssrCache.ts)
 const isProduction = process.env.NODE_ENV === 'production';
 console.log(`[SSR] Eigene SSR-Lösung aktiv (${isProduction ? 'Production' : 'Entwicklung'})`);
+
+app.use(compression({
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) return false;
+    return compression.filter(req, res);
+  },
+  threshold: 1024,
+  level: 6,
+}));
 
 app.use(
   express.json({
