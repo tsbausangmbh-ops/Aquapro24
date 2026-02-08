@@ -134,7 +134,7 @@ export default function NotdienstMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative pt-8 pb-6 lg:pt-10 lg:pb-8 overflow-hidden">
+        <section className="relative pt-16 pb-6 lg:pt-20 lg:pb-8 overflow-hidden">
           <HeroPicture heroKey="hero_notdienst" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
