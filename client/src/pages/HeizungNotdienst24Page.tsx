@@ -67,8 +67,8 @@ export default function HeizungNotdienst24Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Heizung Notdienst München | 24h Reparatur"
-        description="Heizung Notdienst München: Schnelle Hilfe bei Ausfall, Störung oder Kälte – 24h erreichbar."
+        title="Heizung Notdienst 24h München – Heizungsreparatur Soforthilfe | AquaPro 24"
+        description="Heizung Notdienst 24 Stunden München: Heizung ausgefallen, kein Warmwasser. Anfahrt 45-60 Min. Tel: 089 444438872"
         canonical="https://aquapro24.de/heizung-notdienst-24"
         keywords="Heizung Notdienst 24h München, Heizungsausfall Soforthilfe Winter, Therme defekt Brenner Störung, Viessmann Vaillant Junkers Notdienst, Keine Wärme Notfall Festpreis, Heizung reparieren Wochenende, Gasheizung ausgefallen 24h Hilfe"
         aiSummary="AquaPro 24 Heizung Notdienst 24h München: Sofortige Hilfe bei Heizungsausfall, Thermendefekt, Brennerstörung und Heizungsproblemen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 089 444438872"

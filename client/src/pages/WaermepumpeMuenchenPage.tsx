@@ -62,8 +62,8 @@ export default function WaermepumpeMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Wärmepumpe installieren München | Profi-Service"
-        description="Wärmepumpe installieren in München: Fachgerechter Einbau, Förderberatung & komplette Abwicklung aus einer Hand."
+        title="Wärmepumpe München – bis 70% Förderung sichern | AquaPro 24"
+        description="Wärmepumpen-Installation München mit bis zu 70% BAFA-Förderung. Beratung + Antrag inklusive. Tel: 089 444438872"
         canonical="https://aquapro24.de/waermepumpe-muenchen"
         keywords="Wärmepumpe München, Wärmepumpe Installation München, Luft-Wasser-Wärmepumpe München, Wärmepumpe Förderung München, Heizungstausch Wärmepumpe München, Wärmepumpe Altbau München"
         aiSummary="AquaPro 24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 089 444438872"

@@ -60,8 +60,8 @@ export default function FussbodenheizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Fußbodenheizung München | Nachrüsten & Einbau"
-        description="Fußbodenheizung in München: Nachrüsten oder Neubau – effiziente Wärme & hoher Komfort. Jetzt Angebot anfordern!"
+        title="Fußbodenheizung München – Installation & Reparatur Profi | AquaPro 24"
+        description="Fußbodenheizung München: Installation, Reparatur, Spülung, Entlüftung. Festpreise. Tel: 089 444438872"
         canonical="https://aquapro24.de/fussbodenheizung-muenchen"
         keywords="Fußbodenheizung München, Fußbodenheizung nachrüsten München, Fußbodenheizung verlegen München, Fußbodenheizung Altbau München, Fußbodenheizung Kosten München, Flächenheizung München"
         aiSummary="AquaPro 24 Fußbodenheizung München: Nachrüstung, Umbau, Integration in moderne Systeme. Prüfung Aufbauhöhe, Regelung, Untergrund. Kontakt: 089 444438872"

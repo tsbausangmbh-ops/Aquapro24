@@ -9,8 +9,8 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutz DSGVO München – Ihre Rechte"
-        description="Datenschutz DSGVO konform: Ihre Rechte und unsere Datenverarbeitung transparent erklärt. So schützen wir Ihre persönlichen Daten."
+        title="Datenschutz DSGVO München – Ihre Rechte | AquaPro 24"
+        description="Datenschutzerklärung von AquaPro 24. DSGVO-konform. Ihre Rechte auf Auskunft, Löschung, Widerspruch."
         canonical="https://aquapro24.de/datenschutz"
         keywords="Datenschutzerklärung DSGVO München, Datenschutz Sanitär Heizung Handwerker, personenbezogene Daten Schutz, DSGVO konform Handwerksbetrieb, Datenschutzbeauftragter München, Datenverarbeitung transparent Installateur, Datenschutzrechte Kunden München"
         ogImageAlt="Datenschutzerklärung AquaPro 24 München - DSGVO konformer Schutz Ihrer persönlichen Daten"

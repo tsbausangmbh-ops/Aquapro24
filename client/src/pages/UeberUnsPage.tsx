@@ -291,8 +291,8 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär & Heizung München | Partnernetzwerk seit 2005"
-        description="Sanitär & Heizung München: Geprüftes Partnernetzwerk, Erfahrung seit 2005 & zuverlässige Fachbetriebe."
+        title="AquaPro 24 München – Ihr Partnernetzwerk seit 2005"
+        description="AquaPro 24 - Partnernetzwerk für Sanitär & Heizung in München seit 2005. Über 2.847 zufriedene Kunden. 4.9/5 Sterne."
         canonical="https://aquapro24.de/ueber-uns"
         keywords="AquaPro 24 Partnernetzwerk seit 2005, Geprüfte Fachbetriebe München, Sanitär Heizung aus einer Hand, 2800 zufriedene Kunden München, Festpreisgarantie alle Arbeiten, 24h Notdienst ganz München, Meisterbetriebe Sanitär Heizung"
         structuredData={aboutPageSchema}

@@ -263,8 +263,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Münchner Sanitär und Heizung – Klempner Notdienst 24/7"
-        description="Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!"
+        title="Klempner München – Sanitär & Heizung Notdienst 24/7 | AquaPro 24"
+        description="AquaPro 24 - Ihr Partner für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst. Festpreise. 2.847+ zufriedene Kunden. Jetzt anrufen: 089 444438872"
         canonical="https://aquapro24.de"
         keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrreinigung ab 81€ Festpreis, Heizung Notdienst München sofort, Rohrbruch Soforthilfe 60 Minuten, Badsanierung Komplettpreis München, Wärmepumpe BAFA 70% Förderung"
         speakable={{ cssSelector: ["h1", "[data-testid='button-call-hero']", ".text-white\\/90", ".text-white\\/80"] }}

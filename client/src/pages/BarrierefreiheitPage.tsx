@@ -64,8 +64,8 @@ export default function BarrierefreiheitPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Barrierefreiheitserklärung – AquaPro 24 München"
-        description="Barrierefreiheitserklärung für AquaPro 24 München. Informationen zur digitalen Barrierefreiheit unserer Website gemäß BITV 2.0 und WCAG 2.1."
+        title="Barrierefreiheit – WCAG 2.1 AA | AquaPro 24"
+        description="Barrierefreiheitserklärung von AquaPro 24. WCAG 2.1 AA und BITV 2.0 konform. Kontakt für Feedback: 089 444438872"
         canonical="https://aquapro24.de/barrierefreiheit"
         keywords="Barrierefreiheitserklärung WCAG 2.1 AA, BITV 2.0 konform München, Screenreader optimierte Website, Tastaturnavigation barrierefrei, Digitale Barrierefreiheit Handwerker, Accessibility Sanitär Heizung, Inklusive Webseite München"
         ogImageAlt="Barrierefreiheitserklärung AquaPro 24 München - WCAG 2.1 AA BITV 2.0 barrierefreie Website"
