@@ -16,35 +16,12 @@ class AppErrorBoundary extends Component<{ children: ReactNode }, { hasError: bo
     return { hasError: true };
   }
   componentDidCatch(error: Error) {
-    const msg = error.message || "";
-    const isHookError =
-      msg.includes("useContext") ||
-      msg.includes("useRef") ||
-      msg.includes("useEffect") ||
-      msg.includes("useState") ||
-      msg.includes("useMemo") ||
-      msg.includes("useCallback") ||
-      msg.includes("Invalid hook call") ||
-      msg.includes("Cannot read properties of null");
-    if (isHookError) {
-      const key = "__reload_count";
-      const count = parseInt(sessionStorage.getItem(key) || "0", 10);
-      if (count < 3) {
-        sessionStorage.setItem(key, String(count + 1));
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.getRegistrations().then(regs => {
-            regs.forEach(r => r.unregister());
-          }).catch(() => {});
-        }
-        if ("caches" in window) {
-          window.caches.keys().then(names => {
-            Promise.all(names.map(n => window.caches.delete(n)));
-          }).catch(() => {});
-        }
-        setTimeout(() => {
-          window.location.replace(window.location.pathname + "?_cache_bust=" + Date.now());
-        }, 100);
-      }
+    if (
+      error.message?.includes("useContext") ||
+      error.message?.includes("useRef") ||
+      error.message?.includes("Invalid hook call")
+    ) {
+      window.location.reload();
     }
   }
   render() {

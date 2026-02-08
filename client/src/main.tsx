@@ -1,4 +1,3 @@
-import "./dep-preload";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
