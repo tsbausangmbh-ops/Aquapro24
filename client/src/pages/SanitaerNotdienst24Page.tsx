@@ -112,7 +112,7 @@ export default function SanitaerNotdienst24Page() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "1.5rem"}}>
+        <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
           <HeroPicture heroKey="hero_sanitaer_notdienst" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
