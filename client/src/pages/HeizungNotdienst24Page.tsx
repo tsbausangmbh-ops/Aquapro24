@@ -161,7 +161,7 @@ export default function HeizungNotdienst24Page() {
               <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 Unser Heizung Notdienst ist 24/7 für Sie in München erreichbar. Ab 30 Min. vor Ort, transparente Festpreise.
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Freitagabend, die Heizung fällt komplett aus, draußen -5°C – Sie rufen an, und innerhalb von 45 Minuten steht ein Heizungsmonteur vor der Tür, findet den Fehler und bringt die Heizung wieder zum Laufen. So arbeiten wir.
                 </p>
@@ -176,7 +176,7 @@ export default function HeizungNotdienst24Page() {
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-heizung-notdienst">
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} asChild data-testid="button-termin-heizung-notdienst">
                   <Link href="/termin">
                     <Clock className="w-4 h-4" />
                     24h Terminbuchung

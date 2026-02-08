@@ -182,7 +182,7 @@ export default function NotdienstMuenchenPage() {
               <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 AquaPro 24 bietet Notdienst rund um die Uhr in München und Umgebung. Ab 60 Min. vor Ort, transparente Festpreise.
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sonntagabend, Wasserrohrbruch in der Küche – Sie rufen an, und in 45 Minuten steht ein Fachmann vor der Tür, stoppt das Wasser und repariert das Rohr. Kein Warten, kein Stress.
                 </p>
@@ -197,7 +197,7 @@ export default function NotdienstMuenchenPage() {
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-notdienst">
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} asChild data-testid="button-termin-notdienst">
                   <Link href="/termin">
                     <Clock className="w-4 h-4" />
                     24h Terminbuchung

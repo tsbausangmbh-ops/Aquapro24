@@ -1031,7 +1031,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 {data.beschreibung}
               </p>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie rufen an – und in ca. {data.anfahrt} ist ein geprüfter Fachbetrieb bei Ihnen in {data.name}, mit Festpreis und allem Material.
                 </p>
@@ -1051,7 +1051,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} 
                   asChild
                   data-testid="button-termin-stadtteil-hero"
                 >

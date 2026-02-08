@@ -109,7 +109,7 @@ export default function BarrierefreiheitPage() {
                 mit Behinderungen zu gewährleisten. WCAG 2.1 AA konform.
               </p>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Eine Website, die für jeden zugänglich ist – ob mit Screenreader, Tastatur oder mobil. Barrierefreiheit ist für uns selbstverständlich.
                 </p>
@@ -129,7 +129,7 @@ export default function BarrierefreiheitPage() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} 
                   asChild
                   data-testid="button-termin-accessibility"
                 >

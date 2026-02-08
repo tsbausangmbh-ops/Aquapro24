@@ -157,7 +157,7 @@ export default function HeizungMuenchenPage() {
                 AquaPro 24 unterstützt Sie in München bei Heizungsreparaturen, Austausch, Optimierung 
                 und Modernisierung. Ab 60 Min. Reaktionszeit, transparente Festpreise.
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Es ist Dezember, die Heizung fällt abends aus – und innerhalb einer Stunde steht ein Fachmann vor Ihrer Tür, diagnostiziert das Problem und repariert es sofort. So arbeiten wir.
                 </p>
@@ -172,7 +172,7 @@ export default function HeizungMuenchenPage() {
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-heizung">
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} asChild data-testid="button-termin-heizung">
                   <Link href="/termin">
                     <Clock className="w-4 h-4" />
                     24h Terminbuchung

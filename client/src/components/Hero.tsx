@@ -78,7 +78,7 @@ export default function Hero() {
             <Button 
               size="lg" 
               variant="outline"
-              className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+              className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} 
               asChild
               data-testid="button-termin-hero"
             >

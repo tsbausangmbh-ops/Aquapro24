@@ -218,7 +218,7 @@ export default function BadPage() {
                 Ihr neues Traumbad in 2-4 Wochen. Festpreis ab 16.000€, 5 Jahre Garantie, alle Gewerke aus einer Hand.
               </p>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie betreten Ihr neues Bad – bodengleiche Regendusche, stilvolle Fliesen, warmes Licht. In nur 3 Wochen haben wir Ihr altes Bad in eine Wohlfühloase verwandelt. Festpreis, alles aus einer Hand.
                 </p>
@@ -238,7 +238,7 @@ export default function BadPage() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} 
                   asChild
                   data-testid="button-termin-hero"
                 >

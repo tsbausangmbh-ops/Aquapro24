@@ -158,7 +158,7 @@ export default function WaermepumpeMuenchenPage() {
               <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 AquaPro 24 unterstützt Sie bei der Planung und Installation Ihrer Wärmepumpe in München. Bis zu 70% Förderung, transparente Festpreise.
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
+              <div className="backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie tauschen Ihre alte Gasheizung gegen eine moderne Wärmepumpe – der Staat übernimmt bis zu 70% der Kosten, und Sie sparen ab Tag eins Heizkosten. Wir kümmern uns um alles: Beratung, Förderantrag und Installation.
                 </p>
@@ -173,7 +173,7 @@ export default function WaermepumpeMuenchenPage() {
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" asChild data-testid="button-termin-waermepumpe">
+                <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.3)", color: "white" }} asChild data-testid="button-termin-waermepumpe">
                   <Link href="/termin">
                     <Clock className="w-4 h-4" />
                     24h Terminbuchung
