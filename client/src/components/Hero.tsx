@@ -10,7 +10,7 @@ import {
 import { Link } from "wouter";
 export default function Hero() {
   return (
-    <section className="relative pt-6 pb-16 lg:pt-8 lg:pb-24 overflow-hidden">
+    <section className="relative py-6 lg:py-8 overflow-hidden">
       <img
         src="/images/hero-fast.webp"
         alt="Klempner München - Sanitär und Heizung Notdienst"
@@ -26,7 +26,7 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div className="max-w-3xl">
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-4">
             <Badge className="bg-destructive text-destructive-foreground gap-1">
               <AlertTriangle className="w-3 h-3" />
               24/7 Notdienst
@@ -37,7 +37,7 @@ export default function Hero() {
             </Badge>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight text-white mb-6 lg:mb-8">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight text-white mb-4">
             Klempner München – Sanitär & Heizung Notdienst 24/7
           </h1>
           <div className="sr-only">
@@ -58,17 +58,17 @@ export default function Hero() {
             <span>Seit 2005 in München</span>
           </div>
           
-          <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
+          <p className="text-sm sm:text-base text-white/90 mb-4">
             <strong>Rohrbruch, WC verstopft, Heizung ausgefallen?</strong> Wir sind in 
             45-60 Minuten bei Ihnen in München. Festpreis vor Arbeitsbeginn.
           </p>
           
-          <p className="text-white/80 mb-8 lg:mb-10">
+          <p className="text-white/80 mb-6">
             <strong>Über 2.800 Münchner Familien</strong> vertrauen unserem Partnernetzwerk. 
             Sanitär ab 92€, Rohrreinigung ab 81€, Heizungsreparatur ab 154€. Alle Marken: Grohe, Viessmann, Vaillant.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
               <a href="tel:+4989444438872">
                 <Phone className="w-5 h-5" />
