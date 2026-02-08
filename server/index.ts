@@ -65,8 +65,10 @@ app.use((req, res, next) => {
       res.setHeader('Pragma', 'no-cache');
     }
   } else {
-    if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
-      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    if (path.match(/\.(js|css)$/)) {
+      res.setHeader('Cache-Control', 'public, max-age=86400, must-revalidate');
+    } else if (path.match(/\.(png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
+      res.setHeader('Cache-Control', 'public, max-age=604800');
     } else if (path === '/sitemap.xml' || path === '/robots.txt') {
       res.setHeader('Cache-Control', 'public, max-age=86400');
     } else if (path.startsWith('/api')) {
