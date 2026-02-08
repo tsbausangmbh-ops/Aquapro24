@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
@@ -63,10 +64,10 @@ export default function NotdienstMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Notdienst München 24h | Rohrbruch & Heizungsausfall"
-        description="Notdienst München 24h: Rohrbruch, Wasserschaden oder Heizungsausfall? Soforthilfe vom Sanitär- & Heizungsprofi."
+        title={seoMeta['/notdienst-muenchen'].title}
+        description={seoMeta['/notdienst-muenchen'].description}
         canonical="https://aquapro24.de/notdienst-muenchen"
-        keywords="Notdienst München 24h Soforthilfe, Rohrbruch Wasserschaden sofort, Heizungsausfall Notfall München, Klempner Notdienst 60 Minuten, WC verstopft Soforthilfe München, Leckortung Wärmebild München, Sanitär Heizung Notdienst Festpreis"
+        keywords={seoMeta['/notdienst-muenchen'].keywords.join(', ')}
         aiSummary="AquaPro 24 Notdienst München: Schnelle Hilfe bei Rohrbruch, Wasseraustritt, Heizungsausfall. Fotos senden für schnelle Priorisierung. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

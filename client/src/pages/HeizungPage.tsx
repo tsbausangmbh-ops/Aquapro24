@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
@@ -142,10 +143,10 @@ export default function HeizungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Heizung München | Wartung, Reparatur, Austausch | AquaPro 24"
-        description="Heizung defekt? AquaPro 24 München: Wartung, Reparatur & Austausch – schnell, transparent, mit Festpreis. Notdienst möglich."
+        title={seoMeta['/heizung'].title}
+        description={seoMeta['/heizung'].description}
         canonical="https://aquapro24.de/heizung"
-        keywords="Heizung Notdienst München 24h, Heizungswartung ab 154€ Festpreis, Viessmann Vaillant Buderus Reparatur, Gasheizung tauschen Förderung, Thermostat Smart Tado Netatmo, Fußbodenheizung nachrüsten München, Heizkörper entlüften Ventil wechseln"
+        keywords={seoMeta['/heizung'].keywords.join(', ')}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Heizung", url: "https://aquapro24.de/heizung" }

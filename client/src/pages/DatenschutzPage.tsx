@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Phone, Clock, CheckCircle2, AlertTriangle, Star } from "lucide-react";
@@ -11,10 +12,10 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutz DSGVO München – Ihre Rechte"
-        description="Datenschutz DSGVO konform: Ihre Rechte und unsere Datenverarbeitung transparent erklärt. So schützen wir Ihre persönlichen Daten."
+        title={seoMeta['/datenschutz'].title}
+        description={seoMeta['/datenschutz'].description}
         canonical="https://aquapro24.de/datenschutz"
-        keywords="Datenschutzerklärung DSGVO München, Datenschutz Sanitär Heizung Handwerker, personenbezogene Daten Schutz, DSGVO konform Handwerksbetrieb, Datenschutzbeauftragter München, Datenverarbeitung transparent Installateur, Datenschutzrechte Kunden München"
+        keywords={seoMeta['/datenschutz'].keywords.join(', ')}
         ogImageAlt="Datenschutzerklärung AquaPro 24 München - DSGVO konformer Schutz Ihrer persönlichen Daten"
       />
       <Header />

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -12,10 +13,10 @@ export default function CookieRichtliniePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Cookie Richtlinie DSGVO – transparent & sicher"
-        description="Cookie Richtlinie DSGVO: Nur technische Cookies, kein Tracking, keine Werbung. Transparente Cookie-Nutzung einfach erklärt."
+        title={seoMeta['/cookie-richtlinie'].title}
+        description={seoMeta['/cookie-richtlinie'].description}
         canonical="https://aquapro24.de/cookie-richtlinie"
-        keywords="Cookie Richtlinie DSGVO konform, Datenschutz Cookies Handwerker Website, technische Cookies Sanitär München, Cookie Einstellungen transparent, DSGVO Website Handwerksbetrieb, Cookie Policy Installateur München, Datenschutz Cookie Nutzung"
+        keywords={seoMeta['/cookie-richtlinie'].keywords.join(', ')}
         ogImageAlt="Cookie Richtlinie AquaPro 24 München - DSGVO konforme transparente Cookie-Nutzung ohne Tracking"
       />
       <Header />

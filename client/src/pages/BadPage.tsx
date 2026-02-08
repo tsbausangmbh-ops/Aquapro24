@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
@@ -154,10 +155,10 @@ export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Badsanierung München | Komplett & hochwertig"
-        description="Badsanierung in München: Komplett, modern & stressfrei. Planung, Ausführung & Koordination aus einer Hand. Jetzt beraten lassen!"
+        title={seoMeta['/bad'].title}
+        description={seoMeta['/bad'].description}
         canonical="https://aquapro24.de/bad"
-        keywords="Badsanierung München Komplettpreis, Barrierefreies Bad KfW Förderung, Walk-in Dusche bodengleich, Badumbau Festpreis 14 Tage, Villeroy Boch Duravit Keramag, Freistehende Badewanne München, Bad renovieren Altbau München"
+        keywords={seoMeta['/bad'].keywords.join(', ')}
         ogImageAlt="Badsanierung München Komplett Badezimmer renovieren modern barrierefrei - Festpreis Villeroy Boch Duravit"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

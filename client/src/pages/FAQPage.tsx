@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 
 const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
 import { Badge } from "@/components/ui/badge";
@@ -199,10 +200,10 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AquaPro 24 FAQ Sanitär & Heizung München – Preise & Tipps"
-        description="Sanitär FAQ München: Antworten zu Preisen, Notdienst & Reparaturen – verständlich erklärt vom Fachbetrieb."
+        title={seoMeta['/faq'].title}
+        description={seoMeta['/faq'].description}
         canonical="https://aquapro24.de/faq"
-        keywords="Klempner Preise München Festpreis, Sanitär Kosten transparent erklärt, Heizung Reparatur was kostet, Notdienst München Kosten vorab, Badsanierung Preise Komplettpaket, Wärmepumpe BAFA Förderung 2025, Kostenvoranschlag verbindlich gratis"
+        keywords={seoMeta['/faq'].keywords.join(', ')}
         ogImageAlt="FAQ Sanitär Heizung München häufige Fragen Preise Kosten Notdienst - AquaPro 24 Antworten"
       />
       <Header />

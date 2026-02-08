@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
@@ -142,10 +143,10 @@ export default function SanitaerPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär München | Rohrbruch, Armaturen, Wasserschaden | AquaPro 24"
-        description="Sanitärservice in München: Rohrbruch, verstopfter Abfluss, Armaturen, Wasserschaden. Festpreis, schnelle Hilfe, Termin in 24h. Jetzt anfragen."
+        title={seoMeta['/sanitaer'].title}
+        description={seoMeta['/sanitaer'].description}
         canonical="https://aquapro24.de/sanitaer"
-        keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrbruch Soforthilfe München, Wasserhahn wechseln Grohe Hansgrohe, Leckortung zerstörungsfrei München, WC montieren Geberit Villeroy, Sanitärinstallateur DIN 1988"
+        keywords={seoMeta['/sanitaer'].keywords.join(', ')}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Sanitär", url: "https://aquapro24.de/sanitaer" }

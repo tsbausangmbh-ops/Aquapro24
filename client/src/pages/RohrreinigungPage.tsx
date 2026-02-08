@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -142,10 +143,10 @@ export default function RohrreinigungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Rohrreinigung München | Abfluss verstopft 24/7"
-        description="Rohrreinigung München: Abfluss verstopft, WC verstopft? 60 Min. Notdienst, Festpreis ab 81€. Jetzt anrufen!"
+        title={seoMeta['/rohrreinigung'].title}
+        description={seoMeta['/rohrreinigung'].description}
         canonical="https://aquapro24.de/rohrreinigung"
-        keywords="Rohrreinigung München ab 81€, Abfluss verstopft Notdienst 24h, WC verstopft Soforthilfe München, Kanalreinigung Hochdruckspülung, Kamerainspektion Rohr München, Verstopfung lösen ohne Chemie, Rohrbruch Notfall 60 Minuten"
+        keywords={seoMeta['/rohrreinigung'].keywords.join(', ')}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Rohrreinigung", url: "https://aquapro24.de/rohrreinigung" }

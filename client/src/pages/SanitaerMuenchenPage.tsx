@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -63,10 +64,10 @@ export default function SanitaerMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitär Installateur München | Schnell & zuverlässig"
-        description="Ihr Sanitär Installateur in München: Schnelle Hilfe bei Reparaturen, Notfällen & Installationen. Jetzt Termin sichern!"
+        title={seoMeta['/sanitaer-muenchen'].title}
+        description={seoMeta['/sanitaer-muenchen'].description}
         canonical="https://aquapro24.de/sanitaer-muenchen"
-        keywords="Sanitär München, Sanitärinstallateur München, Sanitärinstallation München, Klempner München, Installateur München, Sanitärtechniker München, Sanitärfirma München, Armaturen austauschen München, Armaturen montieren München, Wasserhahn wechseln München, Wasserhahn austauschen München, Armatur reparieren München, WC Austausch München, WC montieren München, Toilette einbauen München, Waschtisch München, Waschtisch montieren München, Waschbecken einbauen München, Spülkasten reparieren München, Spülkasten austauschen München, Sanitär Notdienst München, Klempner Notdienst München, Rohrbruch München, Rohrreinigung München, Abfluss verstopft München, Wasserleitung München, Wasseranschluss München, Grohe München, Hansgrohe München, Geberit München, Sanitär Festpreis München, Sanitär günstig München"
+        keywords={seoMeta['/sanitaer-muenchen'].keywords.join(', ')}
         aiSummary="AquaPro 24 Sanitär München: Professionelle Sanitärarbeiten - Armaturen, Leckagen, WC-Austausch, Badsanierung-Vorbereitung. Transparenter Ablauf, schnelle Rückmeldung. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

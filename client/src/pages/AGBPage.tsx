@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FileText, Phone, Clock, CheckCircle2, AlertTriangle, Star } from "lucide-react";
@@ -11,10 +12,10 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AGB Sanitär München – Festpreis & Garantie"
-        description="AGB Sanitär München: Festpreis Garantie und transparente Geschäftsbedingungen. 2 Jahre Garantie, faire Regeln für alle Kunden."
+        title={seoMeta['/agb'].title}
+        description={seoMeta['/agb'].description}
         canonical="https://aquapro24.de/agb"
-        keywords="AGB Sanitär Heizung München, Allgemeine Geschäftsbedingungen Handwerker, Festpreis Garantie Klempner, Gewährleistung Sanitärarbeiten München, Geschäftsbedingungen Notdienst, Vertragsbedingungen Installateur München, AGB Badsanierung Heizungsinstallation"
+        keywords={seoMeta['/agb'].keywords.join(', ')}
         ogImageAlt="AGB Allgemeine Geschäftsbedingungen AquaPro 24 Sanitär Heizung München - Festpreis Garantie transparente Konditionen"
       />
       <Header />

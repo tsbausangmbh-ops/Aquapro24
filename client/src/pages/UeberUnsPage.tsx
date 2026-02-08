@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -291,10 +292,10 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär & Heizung München | Partnernetzwerk seit 2005"
-        description="Sanitär & Heizung München: Geprüftes Partnernetzwerk, Erfahrung seit 2005 & zuverlässige Fachbetriebe."
+        title={seoMeta['/ueber-uns'].title}
+        description={seoMeta['/ueber-uns'].description}
         canonical="https://aquapro24.de/ueber-uns"
-        keywords="AquaPro 24 Partnernetzwerk seit 2005, Geprüfte Fachbetriebe München, Sanitär Heizung aus einer Hand, 2800 zufriedene Kunden München, Festpreisgarantie alle Arbeiten, 24h Notdienst ganz München, Meisterbetriebe Sanitär Heizung"
+        keywords={seoMeta['/ueber-uns'].keywords.join(', ')}
         structuredData={aboutPageSchema}
         ogImageAlt="Über uns AquaPro 24 München Sanitär Heizung Meisterbetrieb - Mustafa Sakar 20 Jahre Erfahrung"
       />

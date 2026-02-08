@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -65,10 +66,10 @@ export default function WaermepumpeMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Wärmepumpe installieren München | Profi-Service"
-        description="Wärmepumpe installieren in München: Fachgerechter Einbau, Förderberatung & komplette Abwicklung aus einer Hand."
+        title={seoMeta['/waermepumpe-muenchen'].title}
+        description={seoMeta['/waermepumpe-muenchen'].description}
         canonical="https://aquapro24.de/waermepumpe-muenchen"
-        keywords="Wärmepumpe München, Wärmepumpe Installation München, Luft-Wasser-Wärmepumpe München, Wärmepumpe Förderung München, Heizungstausch Wärmepumpe München, Wärmepumpe Altbau München"
+        keywords={seoMeta['/waermepumpe-muenchen'].keywords.join(', ')}
         aiSummary="AquaPro 24 Wärmepumpe München: Beratung, Planung, Installation. Prüfung Gebäudedaten, Heizlast, Hydraulik. Transparente Schritte. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

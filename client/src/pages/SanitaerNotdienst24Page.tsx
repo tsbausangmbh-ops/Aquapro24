@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
@@ -67,10 +68,10 @@ export default function SanitaerNotdienst24Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Sanitär Notdienst München 24/7 | Soforthilfe bei Rohrbruch | AquaPro 24"
-        description="24/7 Sanitär-Notdienst in München: Rohrbruch, Wasserschaden, Verstopfung. Schnelle Anfahrt, klare Kosten, Hilfe sofort."
+        title={seoMeta['/sanitaer-notdienst-24'].title}
+        description={seoMeta['/sanitaer-notdienst-24'].description}
         canonical="https://aquapro24.de/sanitaer-notdienst-24"
-        keywords="Sanitär Notdienst 24h München, Rohrbruch Soforthilfe Festpreis, Klempner Notfall Wochenende Feiertag, Wasserschaden Leck abdichten sofort, WC verstopft Entstopfung 24h, Wasserleitung geplatzt Notdienst, Abfluss verstopft Nacht München"
+        keywords={seoMeta['/sanitaer-notdienst-24'].keywords.join(', ')}
         aiSummary="AquaPro 24 Sanitär Notdienst 24h München: Sofortige Hilfe bei Rohrbruch, Wasserschaden, Verstopfung und WC-Notfällen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

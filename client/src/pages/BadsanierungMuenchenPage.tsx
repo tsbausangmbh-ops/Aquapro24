@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,10 +65,10 @@ export default function BadsanierungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Badumbau München | Stressfrei vom Partnernetzwerk"
-        description="Badumbau in München ohne Stress: Modernes Design, feste Abläufe & klare Kosten. Jetzt kostenlos beraten lassen!"
+        title={seoMeta['/badsanierung-muenchen'].title}
+        description={seoMeta['/badsanierung-muenchen'].description}
         canonical="https://aquapro24.de/badsanierung-muenchen"
-        keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, Bad modernisieren München, Badumbau München, Badsanierung Kosten München"
+        keywords={seoMeta['/badsanierung-muenchen'].keywords.join(', ')}
         ogImageAlt="Badumbau München stressfrei Badsanierung Komplettbad renovieren - Partnernetzwerk Festpreis Garantie"
         aiSummary="AquaPro 24 Badsanierung München: Komplette Begleitung von Planung bis Übergabe. Bestandsaufnahme, Ablaufplan, Umsetzung mit geprüften Gewerken. Kontakt: 089 444438872"
         breadcrumbs={[

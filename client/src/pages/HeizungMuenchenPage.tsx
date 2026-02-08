@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -63,10 +64,10 @@ export default function HeizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Heizungsservice München | Reparatur & Modernisierung"
-        description="Heizungsservice München: Reparatur, Modernisierung & Effizienzsteigerung. Kompetente Beratung vom Partnernetzwerk."
+        title={seoMeta['/heizung-muenchen'].title}
+        description={seoMeta['/heizung-muenchen'].description}
         canonical="https://aquapro24.de/heizung-muenchen"
-        keywords="Heizung München, Heizungsreparatur München, Heizungsmodernisierung München, Heizungstausch München, Gasheizung München, Heizung Wartung München, Heizungsinstallateur München"
+        keywords={seoMeta['/heizung-muenchen'].keywords.join(', ')}
         aiSummary="AquaPro 24 Heizung München: Reparatur, Modernisierung, Austausch aller Heizungssysteme. Planbare Lösungen, transparentes Vorgehen. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

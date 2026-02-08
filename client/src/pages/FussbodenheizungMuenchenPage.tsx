@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -63,10 +64,10 @@ export default function FussbodenheizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Fußbodenheizung München | Nachrüsten & Einbau"
-        description="Fußbodenheizung in München: Nachrüsten oder Neubau – effiziente Wärme & hoher Komfort. Jetzt Angebot anfordern!"
+        title={seoMeta['/fussbodenheizung-muenchen'].title}
+        description={seoMeta['/fussbodenheizung-muenchen'].description}
         canonical="https://aquapro24.de/fussbodenheizung-muenchen"
-        keywords="Fußbodenheizung München, Fußbodenheizung nachrüsten München, Fußbodenheizung verlegen München, Fußbodenheizung Altbau München, Fußbodenheizung Kosten München, Flächenheizung München"
+        keywords={seoMeta['/fussbodenheizung-muenchen'].keywords.join(', ')}
         aiSummary="AquaPro 24 Fußbodenheizung München: Nachrüstung, Umbau, Integration in moderne Systeme. Prüfung Aufbauhöhe, Regelung, Untergrund. Kontakt: 089 444438872"
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },

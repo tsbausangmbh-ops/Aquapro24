@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,10 +13,10 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Impressum AquaPro 24 – Sanitär Heizung München | Mustafa Sakar"
-        description="Impressum und rechtliche Angaben: AquaPro 24, Inhaber Mustafa Sakar, Hardenbergstr. 4, 80992 München. Kontakt und Ansprechpartner."
+        title={seoMeta['/impressum'].title}
+        description={seoMeta['/impressum'].description}
         canonical="https://aquapro24.de/impressum"
-        keywords="Impressum AquaPro 24 München, Mustafa Sakar Inhaber, Hardenbergstr 4 München 80992, Partnernetzwerk Sanitär Heizung, Kontakt Klempner München, Einzelunternehmer Handwerk, Angaben DDG Pflichtangaben"
+        keywords={seoMeta['/impressum'].keywords.join(', ')}
         ogImageAlt="Impressum AquaPro 24 München Hardenbergstr 4 - Sanitär Heizung Inhaber Mustafa Sakar"
       />
       <Header />

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -179,10 +180,10 @@ export default function FoerderantragPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderantrag München: BAFA & KfW Antrag kostenlos | AquaPro 24"
-        description="BAFA & KfW Förderantrag kostenlos für Sie. Wir übernehmen die komplette Antragstellung für Ihre Heizungsförderung in München. 100% Erfolgsquote. Tel: 089 444438872"
+        title={seoMeta['/foerderantrag'].title}
+        description={seoMeta['/foerderantrag'].description}
         canonical="https://aquapro24.de/foerderantrag"
-        keywords={keywords.join(", ")}
+        keywords={seoMeta['/foerderantrag'].keywords.join(', ')}
         ogImageAlt="BAFA KfW Förderantrag München kostenloser Service Heizungsförderung - 100 Prozent Erfolgsquote"
         aiSummary="AquaPro 24 München: Kostenloser Förderantrag Service für BAFA & KfW. 100% Erfolgsquote. Wir stellen den Antrag für Heizungsförderung komplett für Sie. Alle Unterlagen, Vollmacht, Statusüberwachung. Kontakt: 089 444438872"
         breadcrumbs={[

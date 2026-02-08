@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -142,10 +143,10 @@ export default function WarmwasserPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Durchlauferhitzer München | Boiler Reparatur & Installation"
-        description="Durchlauferhitzer München: Kein Warmwasser? Boiler defekt? Schnelle Reparatur & Installation. Festpreis ab 120€."
+        title={seoMeta['/warmwasser'].title}
+        description={seoMeta['/warmwasser'].description}
         canonical="https://aquapro24.de/warmwasser"
-        keywords="Durchlauferhitzer München Installation, Boiler defekt Reparatur München, Warmwasserspeicher Austausch Festpreis, Kein Warmwasser Notdienst 24h, Durchlauferhitzer Stiebel Eltron Vaillant, Boiler Entkalkung Wartung München, Warmwasser Therme reparieren"
+        keywords={seoMeta['/warmwasser'].keywords.join(', ')}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Warmwasser", url: "https://aquapro24.de/warmwasser" }

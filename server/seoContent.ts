@@ -1,5 +1,6 @@
 // Static SEO content for search engine crawlers
 // This provides full HTML content when prerender.io fails
+import { seoMeta } from "../shared/seoMeta";
 
 export interface PageFAQ {
   question: string;
@@ -982,7 +983,8 @@ export const seoPages: Record<string, PageSEO> = {
       name: 'Badsanierung München - Planung & Umsetzung',
       description: 'Badsanierung München: Bestandsaufnahme, Ablaufplan, koordinierte Umsetzung. Modern, sauber geplant, stressfrei.',
       serviceType: 'Badsanierung',
-      urlSlug: 'badsanierung-muenchen'
+      priceRange: '€€€',
+      areaServed: 'München'
     },
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">

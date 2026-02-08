@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -69,10 +70,10 @@ export default function BarrierefreiheitPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Barrierefreiheitserklärung – AquaPro 24 München"
-        description="Barrierefreiheitserklärung für AquaPro 24 München. Informationen zur digitalen Barrierefreiheit unserer Website gemäß BITV 2.0 und WCAG 2.1."
+        title={seoMeta['/barrierefreiheit'].title}
+        description={seoMeta['/barrierefreiheit'].description}
         canonical="https://aquapro24.de/barrierefreiheit"
-        keywords="Barrierefreiheitserklärung WCAG 2.1 AA, BITV 2.0 konform München, Screenreader optimierte Website, Tastaturnavigation barrierefrei, Digitale Barrierefreiheit Handwerker, Accessibility Sanitär Heizung, Inklusive Webseite München"
+        keywords={seoMeta['/barrierefreiheit'].keywords.join(', ')}
         ogImageAlt="Barrierefreiheitserklärung AquaPro 24 München - WCAG 2.1 AA BITV 2.0 barrierefreie Website"
       />
       <Header />

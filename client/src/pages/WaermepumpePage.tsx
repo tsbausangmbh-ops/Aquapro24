@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -141,10 +142,10 @@ export default function WaermepumpePage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Wärmepumpe München | Förderung & Einbau | AquaPro 24"
-        description="Wärmepumpe in München: Beratung, Planung, Einbau – inkl. Förder-Check. Jetzt kostenloses Erstgespräch sichern."
+        title={seoMeta['/waermepumpe'].title}
+        description={seoMeta['/waermepumpe'].description}
         canonical="https://aquapro24.de/waermepumpe"
-        keywords="Wärmepumpe BAFA 70% Förderung 2025, Luft-Wasser-Wärmepumpe München, Viessmann Vaillant Buderus Installation, Wärmepumpe Altbau geeignet, Heizkosten sparen 50% München, Erdwärmepumpe Bohrung München, Wärmepumpe Förderantrag kostenlos"
+        keywords={seoMeta['/waermepumpe'].keywords.join(', ')}
         breadcrumbs={[
           { name: "Home", url: "https://aquapro24.de/" },
           { name: "Wärmepumpe", url: "https://aquapro24.de/waermepumpe" }

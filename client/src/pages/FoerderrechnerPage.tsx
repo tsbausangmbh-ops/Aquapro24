@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -279,10 +280,10 @@ export default function FoerderrechnerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title={`Förderrechner München | KfW 458, BAFA & Energieberater ${currentYear}`}
-        description={`Förderrechner München Stand ${standDatum}: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen.`}
+        title={seoMeta['/foerderrechner'].title}
+        description={seoMeta['/foerderrechner'].description}
         canonical="https://aquapro24.de/foerderrechner"
-        keywords={`Förderrechner München, KfW 458 Heizungsförderung, BAFA Dämmung, KfW 358 Kredit, KfW 455-B Barrierefreies Bad, Energieberater Förderung, Wärmepumpe 70% Förderung, iSFP Sanierungsfahrplan, BEG Förderung ${currentYear}`}
+        keywords={seoMeta['/foerderrechner'].keywords.join(', ')}
         ogImageAlt="Förderrechner Heizung München BAFA KfW Zuschuss berechnen - Wärmepumpe Pellet Solar Förderung"
         aiSummary={`AquaPro 24 Förderrechner München Stand ${standDatum}: KfW 458 Heizungsförderung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, KfW 358/359 Ergänzungskredit, Energieberater 80% gefördert. Alle Programme im Vergleich. Kontakt: 089 444438872`}
         breadcrumbs={[
