@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Performance: Preload kritische Ressourcen -->
-    <link rel="modulepreload" href="/src/main.tsx">
+    <link rel="modulepreload" href="/src/main.tsx?v=2">
     <link rel="preload" href="/images/logo-fast.webp" as="image" type="image/webp" fetchpriority="high">
     
     <!-- Performance: Kritische CSS inline für schnelleren First Paint -->
@@ -418,7 +418,19 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script>
+    (function(){
+      if(sessionStorage.getItem('__cache_cleared'))return;
+      if('caches' in window){
+        caches.keys().then(function(n){n.forEach(function(k){caches.delete(k)})});
+      }
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(s){s.unregister()})});
+      }
+      sessionStorage.setItem('__cache_cleared','1');
+    })();
+    </script>
+    <script type="module" src="/src/main.tsx?v=2"></script>
     <!-- Google 2026: Speculation Rules API for instant navigation -->
     <script type="speculationrules">
     {

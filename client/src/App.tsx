@@ -31,16 +31,19 @@ class AppErrorBoundary extends Component<{ children: ReactNode }, { hasError: bo
       const count = parseInt(sessionStorage.getItem(key) || "0", 10);
       if (count < 3) {
         sessionStorage.setItem(key, String(count + 1));
-        const clearAndReload = () => {
-          window.location.href = window.location.pathname + "?_t=" + Date.now();
-        };
-        if (typeof window !== "undefined" && "caches" in window) {
-          window.caches.keys().then((names: string[]) => {
-            Promise.all(names.map((n: string) => window.caches.delete(n))).then(clearAndReload);
-          }).catch(clearAndReload);
-        } else {
-          clearAndReload();
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.getRegistrations().then(regs => {
+            regs.forEach(r => r.unregister());
+          }).catch(() => {});
         }
+        if ("caches" in window) {
+          window.caches.keys().then(names => {
+            Promise.all(names.map(n => window.caches.delete(n)));
+          }).catch(() => {});
+        }
+        setTimeout(() => {
+          window.location.replace(window.location.pathname + "?_cache_bust=" + Date.now());
+        }, 100);
       }
     }
   }
