@@ -2,6 +2,31 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+      (function() {
+        if (typeof caches !== 'undefined') {
+          caches.keys().then(function(names) {
+            for (var name of names) caches.delete(name);
+          });
+        }
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (var registration of registrations) registration.unregister();
+          });
+        }
+        var BUILD_ID = 'v20260208b';
+        var stored = sessionStorage.getItem('_bid');
+        if (stored && stored !== BUILD_ID) {
+          sessionStorage.setItem('_bid', BUILD_ID);
+          location.replace(location.pathname + '?_cb=' + Date.now());
+        } else {
+          sessionStorage.setItem('_bid', BUILD_ID);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Münchner Sanitär und Heizung – Klempner Notdienst 24/7</title>
     <meta name="description" content="Klempner &amp; Sanitär in München – 24h Notdienst bei Rohrbruch &amp; Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!" />
@@ -43,7 +68,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Performance: Preload kritische Ressourcen -->
-    <link rel="modulepreload" href="/src/main.tsx">
+    <!-- modulepreload removed to prevent stale module caching -->
     <link rel="preload" href="/images/logo-fast.webp" as="image" type="image/webp" fetchpriority="high">
     
     <!-- Performance: Kritische CSS inline für schnelleren First Paint -->
