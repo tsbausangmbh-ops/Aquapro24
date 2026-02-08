@@ -241,18 +241,20 @@ export default function KontaktPage() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
+                        <Label htmlFor="name">Name <span aria-hidden="true">*</span><span className="sr-only">(Pflichtfeld)</span></Label>
                         <Input
                           id="name"
                           placeholder="Ihr vollständiger Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           required
+                          aria-required="true"
+                          autoComplete="name"
                           data-testid="input-contact-name"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">E-Mail *</Label>
+                        <Label htmlFor="email">E-Mail <span aria-hidden="true">*</span><span className="sr-only">(Pflichtfeld)</span></Label>
                         <Input
                           id="email"
                           type="email"
@@ -260,6 +262,8 @@ export default function KontaktPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           required
+                          aria-required="true"
+                          autoComplete="email"
                           data-testid="input-contact-email"
                         />
                       </div>
@@ -267,31 +271,33 @@ export default function KontaktPage() {
                     
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Telefon (optional)</Label>
+                        <Label htmlFor="phone">Telefon <span className="text-muted-foreground">(optional)</span></Label>
                         <Input
                           id="phone"
                           type="tel"
                           placeholder="0152 12345678"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          autoComplete="tel"
                           data-testid="input-contact-phone"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="subject">Betreff *</Label>
+                        <Label htmlFor="subject">Betreff <span aria-hidden="true">*</span><span className="sr-only">(Pflichtfeld)</span></Label>
                         <Input
                           id="subject"
                           placeholder="Worum geht es?"
                           value={formData.subject}
                           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                           required
+                          aria-required="true"
                           data-testid="input-contact-subject"
                         />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="message">Ihre Nachricht *</Label>
+                      <Label htmlFor="message">Ihre Nachricht <span aria-hidden="true">*</span><span className="sr-only">(Pflichtfeld)</span></Label>
                       <Textarea
                         id="message"
                         placeholder="Beschreiben Sie Ihr Anliegen..."
@@ -299,6 +305,7 @@ export default function KontaktPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         required
+                        aria-required="true"
                         data-testid="input-contact-message"
                       />
                     </div>

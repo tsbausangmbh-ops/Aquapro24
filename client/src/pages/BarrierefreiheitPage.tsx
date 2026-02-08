@@ -46,12 +46,18 @@ const conformanceItems = [
   { text: "Tastaturnavigation für alle interaktiven Elemente", status: "complete" },
   { text: "ARIA-Labels für Buttons und Links", status: "complete" },
   { text: "Semantische HTML-Struktur", status: "complete" },
-  { text: "Fokus-Indikatoren für Tastaturnutzer", status: "complete" },
+  { text: "Fokus-Indikatoren für Tastaturnutzer (WCAG 2.4.7)", status: "complete" },
   { text: "Reduzierte Bewegung bei Systemeinstellung", status: "complete" },
   { text: "Alternative Texte für Bilder", status: "complete" },
   { text: "Formulare mit Labels und Fehlermeldungen", status: "complete" },
   { text: "Farbkontrast WCAG 2.1 AA konform", status: "complete" },
-  { text: "Responsive Design für alle Geräte", status: "complete" }
+  { text: "Responsive Design für alle Geräte", status: "complete" },
+  { text: "Fokus-Management bei Seitenwechsel", status: "complete" },
+  { text: "Live-Regions für Screen-Reader-Ankündigungen", status: "complete" },
+  { text: "ARIA-Attribute für Pflichtfelder (aria-required)", status: "complete" },
+  { text: "Dropdown-Menüs mit aria-expanded und ESC-Schließung", status: "complete" },
+  { text: "Windows High Contrast Mode Unterstützung", status: "complete" },
+  { text: "Autocomplete-Attribute für Formularfelder", status: "complete" }
 ];
 
 export default function BarrierefreiheitPage() {

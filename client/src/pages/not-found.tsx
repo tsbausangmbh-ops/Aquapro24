@@ -16,7 +16,7 @@ export default function NotFound() {
         ogImageAlt="Seite nicht gefunden AquaPro 24 München - Sanitär Heizung Notdienst Startseite"
       />
       <Header />
-      <main className="flex-1 flex items-center justify-center p-4">
+      <main id="main-content" className="flex-1 flex items-center justify-center p-4">
         <Card className="w-full max-w-md">
           <CardContent className="pt-6 text-center">
             <div className="flex flex-col items-center gap-4 mb-6">

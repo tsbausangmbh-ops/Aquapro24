@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +12,41 @@ export default function Header() {
   const [notdienstOpen, setNotdienstOpen] = useState(false);
   const [foerderungOpen, setFoerderungOpen] = useState(false);
   const [location] = useLocation();
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const notdienstRef = useRef<HTMLDivElement>(null);
+  const foerderungRef = useRef<HTMLDivElement>(null);
+
+  const closeAllDropdowns = useCallback(() => {
+    setServicesOpen(false);
+    setNotdienstOpen(false);
+    setFoerderungOpen(false);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeAllDropdowns();
+        setMobileMenuOpen(false);
+      }
+    };
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+      if (servicesRef.current && !servicesRef.current.contains(target)) setServicesOpen(false);
+      if (notdienstRef.current && !notdienstRef.current.contains(target)) setNotdienstOpen(false);
+      if (foerderungRef.current && !foerderungRef.current.contains(target)) setFoerderungOpen(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [closeAllDropdowns]);
+
+  useEffect(() => {
+    closeAllDropdowns();
+    setMobileMenuOpen(false);
+  }, [location, closeAllDropdowns]);
 
   const servicePages = [
     { label: "Sanitär", href: "/sanitaer" },
@@ -106,11 +141,13 @@ export default function Header() {
               >
                 Start
               </Link>
-              <div className="relative">
+              <div className="relative" ref={servicesRef}>
                 <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={() => { closeAllDropdowns(); setServicesOpen(!servicesOpen); }}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeAllDropdowns(); setServicesOpen(!servicesOpen); } }}
                   aria-expanded={servicesOpen}
                   aria-haspopup="true"
+                  aria-controls="services-menu"
                   className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="nav-services"
                 >
@@ -119,6 +156,7 @@ export default function Header() {
                 </button>
                 {servicesOpen && (
                   <div 
+                    id="services-menu"
                     className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-[70]"
                     role="menu"
                     aria-label="Leistungen Untermenü"
@@ -129,21 +167,23 @@ export default function Header() {
                       <Link
                         key={page.href}
                         href={page.href}
+                        role="menuitem"
                         onClick={() => setServicesOpen(false)}
-                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                         data-testid={`nav-${page.label.toLowerCase()}`}
                       >
                         {page.label}
                       </Link>
                     ))}
-                    <hr className="my-2 border-border" />
-                    <div className="px-4 py-1 text-xs font-semibold text-muted-foreground/60 uppercase">München</div>
+                    <hr className="my-2 border-border" aria-hidden="true" />
+                    <div className="px-4 py-1 text-xs font-semibold text-muted-foreground/60 uppercase" aria-hidden="true">München</div>
                     {landingPages.map((page) => (
                       <Link
                         key={page.href}
                         href={page.href}
+                        role="menuitem"
                         onClick={() => setServicesOpen(false)}
-                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                         data-testid={`nav-landing-${page.label.toLowerCase().replace(/\s+/g, '-')}`}
                       >
                         {page.label}
@@ -152,11 +192,13 @@ export default function Header() {
                   </div>
                 )}
               </div>
-              <div className="relative">
+              <div className="relative" ref={notdienstRef}>
                 <button
-                  onClick={() => setNotdienstOpen(!notdienstOpen)}
+                  onClick={() => { closeAllDropdowns(); setNotdienstOpen(!notdienstOpen); }}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeAllDropdowns(); setNotdienstOpen(!notdienstOpen); } }}
                   aria-expanded={notdienstOpen}
                   aria-haspopup="true"
+                  aria-controls="notdienst-menu"
                   className="flex items-center gap-1 text-sm font-medium text-red-600 hover:text-red-700 transition-colors"
                   data-testid="nav-notdienst-24"
                 >
@@ -165,6 +207,7 @@ export default function Header() {
                 </button>
                 {notdienstOpen && (
                   <div 
+                    id="notdienst-menu"
                     className="absolute top-full left-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-[70]"
                     role="menu"
                     aria-label="Notdienst 24 Untermenü"
@@ -172,16 +215,18 @@ export default function Header() {
                   >
                     <Link
                       href="/sanitaer-notdienst-24"
+                      role="menuitem"
                       onClick={() => setNotdienstOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                       data-testid="nav-sanitaer-notdienst-24"
                     >
                       Sanitär Notdienst 24h
                     </Link>
                     <Link
                       href="/heizung-notdienst-24"
+                      role="menuitem"
                       onClick={() => setNotdienstOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                       data-testid="nav-heizung-notdienst-24"
                     >
                       Heizung Notdienst 24h
@@ -226,11 +271,13 @@ export default function Header() {
                   24h Terminbuchung
                 </Link>
               </Button>
-              <div className="relative">
+              <div className="relative" ref={foerderungRef}>
                 <button
-                  onClick={() => setFoerderungOpen(!foerderungOpen)}
+                  onClick={() => { closeAllDropdowns(); setFoerderungOpen(!foerderungOpen); }}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeAllDropdowns(); setFoerderungOpen(!foerderungOpen); } }}
                   aria-expanded={foerderungOpen}
                   aria-haspopup="true"
+                  aria-controls="foerderung-menu"
                   className="flex items-center gap-1 px-4 py-2 text-sm font-medium bg-green-600/80 text-white border border-green-700/50 rounded-md hover:bg-green-600 transition-colors"
                   data-testid="nav-foerderung-dropdown"
                 >
@@ -239,6 +286,7 @@ export default function Header() {
                 </button>
                 {foerderungOpen && (
                   <div 
+                    id="foerderung-menu"
                     className="absolute top-full right-0 mt-2 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-[70]"
                     role="menu"
                     aria-label="Förderung Untermenü"
@@ -246,32 +294,36 @@ export default function Header() {
                   >
                     <Link
                       href="/foerderung"
+                      role="menuitem"
                       onClick={() => setFoerderungOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                       data-testid="nav-foerderung-info"
                     >
                       Förderung Info
                     </Link>
                     <Link
                       href="/foerderantrag"
+                      role="menuitem"
                       onClick={() => setFoerderungOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                       data-testid="nav-foerderantrag"
                     >
                       Förderantrag
                     </Link>
                     <Link
                       href="/foerderantrag-heizung"
+                      role="menuitem"
                       onClick={() => setFoerderungOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                       data-testid="nav-foerderantrag-heizung"
                     >
                       Förderantrag Heizung
                     </Link>
                     <Link
                       href="/foerderrechner"
+                      role="menuitem"
                       onClick={() => setFoerderungOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
                       data-testid="nav-foerderrechner"
                     >
                       Förderrechner

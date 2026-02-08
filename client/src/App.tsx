@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { lazy, Suspense, useState, useEffect, startTransition } from "react";
 import MobileCallButton from "@/components/MobileCallButton";
 import { queryClient } from "./lib/queryClient";
@@ -6,6 +6,45 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Loader2 } from "lucide-react";
+
+function FocusManager() {
+  const [location] = useLocation();
+  useEffect(() => {
+    const main = document.getElementById("main-content");
+    if (main) {
+      main.setAttribute("tabindex", "-1");
+      main.focus({ preventScroll: true });
+      main.removeAttribute("tabindex");
+    }
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
+
+function LiveAnnouncer() {
+  const [location] = useLocation();
+  const [announcement, setAnnouncement] = useState("");
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const h1 = document.querySelector("h1");
+      if (h1?.textContent) {
+        setAnnouncement(h1.textContent);
+      }
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [location]);
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      className="sr-only"
+      data-testid="live-announcer"
+    >
+      {announcement}
+    </div>
+  );
+}
 
 // Lazy load popups - nicht kritisch für First Paint
 const ChristmasPopup = lazy(() => import("@/components/ChristmasPopup"));
@@ -155,6 +194,8 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <FocusManager />
+        <LiveAnnouncer />
         <DelayedPopups />
         <Toaster />
         <Router />
