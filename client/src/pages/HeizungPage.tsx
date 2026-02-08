@@ -19,7 +19,9 @@ import {
   Calendar,
   Users,
   Hammer,
-  Settings
+  Settings,
+  AlertTriangle,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import { HeroPicture } from "@/components/ResponsiveHero";
@@ -179,52 +181,74 @@ export default function HeizungPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-2xl">
-              <Badge className="mb-4 bg-white/20 text-white border-white/30">
-                <Flame className="w-3 h-3 mr-1" />
-                24/7 Notdienst
-              </Badge>
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
               
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Heizung München – Wartung, Reparatur & Modernisierung
               </h1>
               
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
-                Heizung ausgefallen? Wir helfen schnell und zum Festpreis. 
-                45-60 Minuten Reaktionszeit bei Notfällen.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Heizung ausgefallen oder Therme defekt?</strong>
               </p>
               
-              <div className="flex flex-wrap gap-3 mb-8">
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>Festpreis ab 154€</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>45-60 Min. vor Ort</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>Alle Marken</span>
-                </div>
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                Wir helfen schnell und zum Festpreis. 45-60 Minuten Reaktionszeit bei Notfällen – alle Marken, 24/7 erreichbar.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Mitten im Winter fällt die Heizung aus. Sie rufen uns an – in 50 Minuten ist unser Techniker da und bringt Ihre Heizung wieder zum Laufen. Festpreis, alle Marken.
+                </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild data-testid="button-call-hero">
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>Über 2.400 zufriedene Kunden</strong> – Heizungsreparatur ab 154€ zum Festpreis
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
                   <a href="tel:+4989444438872">
-                    <Phone className="w-5 h-5 mr-2" />
+                    <Phone className="w-5 h-5" />
                     Jetzt anrufen
                   </a>
                 </Button>
-                <Suspense fallback={null}>
-                  <ServiceBooking 
-                    serviceType="heizung"
-                    buttonText="Termin buchen"
-                    buttonSize="lg"
-                    buttonVariant="outline"
-                    buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
-                  />
-                </Suspense>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-hero"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Alle Marken</span>
+                </div>
               </div>
             </div>
           </div>

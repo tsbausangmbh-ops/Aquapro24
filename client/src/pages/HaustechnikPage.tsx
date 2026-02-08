@@ -19,7 +19,9 @@ import {
   Gauge,
   Home,
   Wind,
-  Droplets
+  Droplets,
+  AlertTriangle,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import { HeroPicture } from "@/components/ResponsiveHero";
@@ -175,52 +177,74 @@ export default function HaustechnikPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-2xl">
-              <Badge className="mb-4 bg-white/20 text-white border-white/30">
-                <Settings className="w-3 h-3 mr-1" />
-                Komplettservice
-              </Badge>
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
               
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Haustechnik München – Gas, Wasser, Lüftung komplett
               </h1>
               
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
-                Ein Ansprechpartner für alle Gewerke: Wasserinstallation, Gastechnik, 
-                Lüftung und Smart Home – professionell aus einer Hand.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Neubau, Sanierung oder Modernisierung Ihrer Haustechnik?</strong>
               </p>
               
-              <div className="flex flex-wrap gap-3 mb-8">
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>Alles aus einer Hand</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>DVGW-zertifiziert</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
-                </div>
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                Ein Ansprechpartner für alle Gewerke: Wasserinstallation, Gastechnik, Lüftung und Smart Home – professionell aus einer Hand.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Ihr Neubau braucht Wasser, Gas und Lüftung – drei verschiedene Firmen, drei verschiedene Termine? Nicht bei uns. Ein Anruf, ein Ansprechpartner, alles aus einer Hand. Festpreis, perfekt koordiniert.
+                </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild data-testid="button-call-hero">
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>Über 580 Projekte realisiert</strong> – Haustechnik ab 92€/Std. zum Festpreis
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
                   <a href="tel:+4989444438872">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Jetzt anfragen
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Suspense fallback={null}>
-                  <ServiceBooking 
-                    serviceType="haustechnik"
-                    buttonText="Beratungstermin"
-                    buttonSize="lg"
-                    buttonVariant="outline"
-                    buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
-                  />
-                </Suspense>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-hero"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>DVGW-zertifiziert</span>
+                </div>
               </div>
             </div>
           </div>

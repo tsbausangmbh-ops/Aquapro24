@@ -18,7 +18,9 @@ import {
   Calendar,
   Users,
   Hammer,
-  Settings
+  Settings,
+  AlertTriangle,
+  Star
 } from "lucide-react";
 import { Link } from "wouter";
 import { HeroPicture } from "@/components/ResponsiveHero";
@@ -174,52 +176,74 @@ export default function WaermepumpePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="max-w-2xl">
-              <Badge className="mb-4 bg-green-600/80 text-white border-green-500/50">
-                <Leaf className="w-3 h-3 mr-1" />
-                Bis 70% Förderung
-              </Badge>
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge className="bg-destructive text-destructive-foreground gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  24/7 Notdienst
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  4.9 Google-Bewertung
+                </Badge>
+              </div>
               
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 Wärmepumpe München – bis 70% BAFA Förderung 2025
               </h1>
               
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
-                Heizen Sie unabhängig, klimaneutral und sparen Sie bis zu 50% Heizkosten. 
-                Jetzt mit maximaler Förderung umsteigen.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+                <strong>Hohe Heizkosten und steigende Gaspreise belasten Sie?</strong>
               </p>
               
-              <div className="flex flex-wrap gap-3 mb-8">
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>Bis 70% Förderung</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>50% Heizkosten sparen</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Garantie</span>
-                </div>
+              <p className="text-sm sm:text-base text-white/90 mb-4">
+                Heizen Sie unabhängig, klimaneutral und sparen Sie bis zu 50% Heizkosten. Jetzt mit bis zu 70% BAFA-Förderung umsteigen.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+                <p className="text-white/90 text-sm">
+                  <strong className="text-accent">Stellen Sie sich vor:</strong> Ihre Gasheizung ist 20 Jahre alt und frisst Geld. Wir installieren Ihre neue Wärmepumpe in 2-3 Tagen – mit bis zu 70% Förderung zahlen Sie nur einen Bruchteil. Ab sofort 50% weniger Heizkosten.
+                </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild data-testid="button-call-hero">
+              <p className="text-sm sm:text-base text-white/80 mb-6">
+                <strong>Über 320 installierte Wärmepumpen</strong> – Luft-Wasser ab 12.000€ (vor Förderung)
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
                   <a href="tel:+4989444438872">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Kostenlose Beratung
+                    <Phone className="w-5 h-5" />
+                    Jetzt anrufen
                   </a>
                 </Button>
-                <Suspense fallback={null}>
-                  <ServiceBooking 
-                    serviceType="waermepumpe"
-                    buttonText="Termin buchen"
-                    buttonSize="lg"
-                    buttonVariant="outline"
-                    buttonClassName="backdrop-blur-sm bg-white/10 border-white/30 text-white"
-                  />
-                </Suspense>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="gap-2 backdrop-blur-sm bg-white/10 border-white/30 text-white" 
+                  asChild
+                  data-testid="button-termin-hero"
+                >
+                  <Link href="/termin">
+                    <Clock className="w-4 h-4" />
+                    24h Terminbuchung
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Geprüfte Fachbetriebe</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>München & Umgebung</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <span>Bis 70% Förderung</span>
+                </div>
               </div>
             </div>
           </div>
