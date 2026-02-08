@@ -127,7 +127,7 @@ export default function Header() {
                 {...{ fetchpriority: "high" } as any}
                 data-testid="img-header-logo"
               />
-              <div>
+              <div className="text-center xl:text-left">
                 <span className="font-bold text-lg tracking-tight">Münchner</span>
                 <span className="block text-xs text-muted-foreground -mt-0.5">Heizung & Sanitär</span>
               </div>
