@@ -86,6 +86,24 @@ const heroMobileMap: Record<string, () => Promise<{ default: string }>> = {
   hero_cookie: () => import("@assets/hero_mobile/hero_cookie.webp"),
 };
 
+function useHeroImages(heroKey: string) {
+  const [desktopSrc, setDesktopSrc] = useState<string>("");
+  const [mobileSrc, setMobileSrc] = useState<string>("");
+
+  useEffect(() => {
+    const desktopLoader = heroDesktopMap[heroKey];
+    const mobileLoader = heroMobileMap[heroKey];
+    if (desktopLoader) {
+      desktopLoader().then((mod) => setDesktopSrc(mod.default));
+    }
+    if (mobileLoader) {
+      mobileLoader().then((mod) => setMobileSrc(mod.default));
+    }
+  }, [heroKey]);
+
+  return { desktopSrc, mobileSrc };
+}
+
 export function useHeroImage(heroKey: string) {
   const isMobile = useIsMobile();
   const [src, setSrc] = useState<string>("");
@@ -101,6 +119,45 @@ export function useHeroImage(heroKey: string) {
   return src;
 }
 
+interface HeroPictureProps {
+  heroKey: string;
+  alt?: string;
+}
+
+export function HeroPicture({ heroKey, alt = "" }: HeroPictureProps) {
+  const { desktopSrc, mobileSrc } = useHeroImages(heroKey);
+
+  if (!desktopSrc && !mobileSrc) {
+    return (
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: "#1a1a1a" }}
+      />
+    );
+  }
+
+  return (
+    <picture className="absolute inset-0 w-full h-full" data-testid="hero-picture">
+      {mobileSrc && (
+        <source
+          media={`(max-width: ${mobileBreakpoint - 1}px)`}
+          srcSet={mobileSrc}
+          type="image/webp"
+        />
+      )}
+      <img
+        src={desktopSrc || mobileSrc}
+        alt={alt}
+        role={alt ? undefined : "presentation"}
+        loading="eager"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ objectPosition: "center" }}
+      />
+    </picture>
+  );
+}
+
 interface HeroBackgroundProps {
   heroKey: string;
   gradient?: string;
@@ -109,18 +166,36 @@ interface HeroBackgroundProps {
 }
 
 export default function HeroBackground({ heroKey, gradient, className, children }: HeroBackgroundProps) {
-  const heroSrc = useHeroImage(heroKey);
+  const { desktopSrc, mobileSrc } = useHeroImages(heroKey);
   const defaultGradient = "bg-gradient-to-r from-black/85 via-black/70 to-black/50";
 
   return (
     <section className={`relative py-6 lg:py-8 overflow-hidden ${className || ""}`}>
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: heroSrc ? `url(${heroSrc})` : undefined,
-          backgroundColor: "#1a1a1a",
-        }}
-      />
+      {(desktopSrc || mobileSrc) ? (
+        <picture className="absolute inset-0 w-full h-full">
+          {mobileSrc && (
+            <source
+              media={`(max-width: ${mobileBreakpoint - 1}px)`}
+              srcSet={mobileSrc}
+              type="image/webp"
+            />
+          )}
+          <img
+            src={desktopSrc || mobileSrc}
+            alt=""
+            role="presentation"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center" }}
+          />
+        </picture>
+      ) : (
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "#1a1a1a" }}
+        />
+      )}
       <div className={`absolute inset-0 ${gradient || defaultGradient}`} />
       {children}
     </section>

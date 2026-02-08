@@ -5,10 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cookie, Shield, Settings, Info } from "lucide-react";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 
 export default function CookieRichtliniePage() {
-  const heroSrc = useHeroImage("hero_cookie");
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -21,10 +20,7 @@ export default function CookieRichtliniePage() {
       <Header />
       <main id="main-content">
         <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_cookie" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">

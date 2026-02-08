@@ -28,7 +28,7 @@ import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.we
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.webp";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.webp";
 import plumberImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 
 const guides = [
   {
@@ -245,7 +245,6 @@ const guides = [
 ];
 
 export default function RatgeberPage() {
-  const heroSrc = useHeroImage("hero_ratgeber");
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -258,10 +257,7 @@ export default function RatgeberPage() {
       <Header />
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_ratgeber" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">

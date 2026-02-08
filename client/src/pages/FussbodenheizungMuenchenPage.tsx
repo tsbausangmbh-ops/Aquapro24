@@ -6,7 +6,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 import { 
   Thermometer, 
   Phone, 
@@ -27,7 +27,6 @@ const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
 const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function FussbodenheizungMuenchenPage() {
-  const heroSrc = useHeroImage("hero_fussbodenheizung");
   const vorteile = [
     {
       icon: Thermometer,
@@ -108,10 +107,7 @@ export default function FussbodenheizungMuenchenPage() {
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_fussbodenheizung" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">

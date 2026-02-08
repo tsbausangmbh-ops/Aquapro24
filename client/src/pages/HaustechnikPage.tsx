@@ -22,7 +22,7 @@ import {
   Droplets
 } from "lucide-react";
 import { Link } from "wouter";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 
@@ -137,7 +137,6 @@ const faqItems = [
 ];
 
 export default function HaustechnikPage() {
-  const heroSrc = useHeroImage("hero_haustechnik");
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -172,10 +171,7 @@ export default function HaustechnikPage() {
       
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_haustechnik" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">

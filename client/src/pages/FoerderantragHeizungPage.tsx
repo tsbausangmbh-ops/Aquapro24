@@ -5,7 +5,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 import { 
   FileText,
   Phone, 
@@ -31,7 +31,6 @@ import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
 
 export default function FoerderantragHeizungPage() {
-  const heroSrc = useHeroImage("hero_foerderantrag_heizung");
   const heizungsarten = [
     {
       icon: Leaf,
@@ -251,10 +250,7 @@ export default function FoerderantragHeizungPage() {
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_foerderantrag_heizung" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">

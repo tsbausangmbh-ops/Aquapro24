@@ -29,7 +29,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 import galleryImage1 from "@assets/stock_images/minimalist_white_bat_63ea775a.webp";
 import galleryImage2 from "@assets/stock_images/minimalist_luxury_ba_d497e62b.webp";
 import galleryImage3 from "@assets/stock_images/modern_accessible_ba_f2b18796.webp";
@@ -150,7 +150,6 @@ const faqItems = [
 ];
 
 export default function BadPage() {
-  const heroSrc = useHeroImage("hero_bad");
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -189,10 +188,7 @@ export default function BadPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_bad" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">

@@ -24,7 +24,7 @@ import {
   Send,
   Loader2,
 } from "lucide-react";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 
 const contactInfo = [
   {
@@ -58,7 +58,6 @@ const contactInfo = [
 ];
 
 export default function KontaktPage() {
-  const heroSrc = useHeroImage("hero_kontakt");
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -125,10 +124,7 @@ export default function KontaktPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_kontakt" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">

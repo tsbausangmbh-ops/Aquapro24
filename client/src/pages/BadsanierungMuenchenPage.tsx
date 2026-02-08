@@ -6,7 +6,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useHeroImage } from "@/components/ResponsiveHero";
+import { HeroPicture } from "@/components/ResponsiveHero";
 import { 
   Droplets, 
   Phone, 
@@ -28,7 +28,6 @@ const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
 const ServiceBooking = lazy(() => import("@/components/ServiceBooking"));
 
 export default function BadsanierungMuenchenPage() {
-  const heroSrc = useHeroImage("hero_badsanierung");
   const schritte = [
     {
       icon: FileText,
@@ -109,10 +108,7 @@ export default function BadsanierungMuenchenPage() {
       
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
-          />
+          <HeroPicture heroKey="hero_badsanierung" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
