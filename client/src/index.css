@@ -183,6 +183,13 @@ header.sticky {
     padding-bottom: 1rem;
   }
 
+  main > section.relative.overflow-hidden {
+    min-height: 280px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .gap-4 {
     gap: 0.75rem;
   }
