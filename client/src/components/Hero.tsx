@@ -10,7 +10,7 @@ import {
 import { Link } from "wouter";
 export default function Hero() {
   return (
-    <section className="relative py-6 lg:py-8 overflow-hidden">
+    <section className="relative py-12 lg:py-16 overflow-hidden">
       <img
         src="/images/hero-fast.webp"
         alt="Klempner München - Sanitär und Heizung Notdienst"
