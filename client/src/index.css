@@ -138,11 +138,15 @@ img[loading="lazy"] {
   contain: layout style;
 }
 
-/* Hero-Sections: kompaktes Padding oben für alle Bildschirmgrößen */
+/* Abstand zwischen Header und Hero-Section */
+main#main-content {
+  margin-top: 2rem !important;
+}
+
+/* Hero-Sections: internes Padding */
 main > section.relative.overflow-hidden {
   padding-top: 2rem !important;
   padding-bottom: 0.75rem !important;
-  margin-top: 0 !important;
 }
 
 /* Header braucht contain: none für Dropdown-Menüs */
