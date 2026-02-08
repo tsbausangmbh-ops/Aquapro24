@@ -59,14 +59,19 @@ app.use((req, res, next) => {
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   
   const path = req.path;
+  const isProd = process.env.NODE_ENV === 'production';
   if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
-    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    if (isProd) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    }
   } else if (path === '/sitemap.xml' || path === '/robots.txt') {
-    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.setHeader('Cache-Control', isProd ? 'public, max-age=86400' : 'no-cache');
   } else if (path.startsWith('/api')) {
     res.setHeader('Cache-Control', 'no-store');
   } else {
-    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    res.setHeader('Cache-Control', isProd ? 'public, max-age=3600, stale-while-revalidate=86400' : 'no-cache, no-store, must-revalidate');
   }
   
   res.setHeader('Vary', 'User-Agent, Accept-Encoding');
