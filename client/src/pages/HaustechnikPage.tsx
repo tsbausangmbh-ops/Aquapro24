@@ -172,9 +172,9 @@ export default function HaustechnikPage() {
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_haustechnik" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-2xl">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Settings className="w-3 h-3 mr-1" />

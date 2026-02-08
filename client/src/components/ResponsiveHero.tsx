@@ -129,7 +129,7 @@ export function HeroPicture({ heroKey, alt = "" }: HeroPictureProps) {
 
   return (
     <div
-      className="absolute inset-0 w-full h-full"
+      className="hero-image-wrapper"
       style={{ backgroundColor: "#1a1a1a" }}
       data-testid="hero-picture"
     >
@@ -148,17 +148,7 @@ export function HeroPicture({ heroKey, alt = "" }: HeroPictureProps) {
             role={alt ? undefined : "presentation"}
             loading="eager"
             decoding="async"
-            width="1920"
-            height="1080"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
+            className="hero-image"
           />
         </picture>
       )}
@@ -179,7 +169,7 @@ export default function HeroBackground({ heroKey, gradient, className, children 
   return (
     <section className={`relative py-6 lg:py-8 overflow-hidden ${className || ""}`}>
       <HeroPicture heroKey={heroKey} />
-      <div className={`absolute inset-0 ${gradient || defaultGradient}`} />
+      <div className={`hero-gradient absolute inset-0 ${gradient || defaultGradient}`} />
       {children}
     </section>
   );

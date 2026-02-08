@@ -132,6 +132,24 @@ img[loading="lazy"] {
   will-change: transform;
 }
 
+/* Hero Image: Desktop = Overlay-Hintergrund, Mobil = Bild oben, Text unten */
+.hero-image-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Mobile Performance: Optimierte Sticky Header */
 .sticky {
   will-change: transform;
@@ -183,11 +201,45 @@ header.sticky {
     padding-bottom: 1rem;
   }
 
+  .hero-image-wrapper {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 200px !important;
+    overflow: hidden;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   main > section.relative.overflow-hidden {
-    min-height: 280px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    overflow: visible !important;
+  }
+
+  .hero-gradient {
+    display: none !important;
+  }
+
+  .hero-text-content {
+    color: hsl(var(--foreground));
+  }
+
+  .hero-text-content .text-white {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .hero-text-content .text-white\/90,
+  .hero-text-content .text-white\/80,
+  .hero-text-content .text-white\/70 {
+    color: hsl(var(--muted-foreground)) !important;
   }
 
   .gap-4 {

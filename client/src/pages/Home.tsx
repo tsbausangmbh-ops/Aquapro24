@@ -293,9 +293,9 @@ export default function Home() {
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_home" alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2 mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">

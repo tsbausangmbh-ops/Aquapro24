@@ -209,8 +209,8 @@ export default function FoerderantragPage() {
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_foerderantrag" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
-          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
                 <Shield className="w-3 h-3 mr-1" />
