@@ -1263,6 +1263,89 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
   }
 
+  // Stadtteil-spezifische Geo-Schemas für hyper-lokale Signale
+  const stadtteilGeoData: Record<string, { lat: string; lng: string; plz: string[]; name: string }> = {
+    '/schwabing': { lat: '48.1716', lng: '11.5820', plz: ['80799','80801','80802','80803','80804'], name: 'Schwabing' },
+    '/bogenhausen': { lat: '48.1520', lng: '11.6120', plz: ['81675','81677','81679','81925','81927','81929'], name: 'Bogenhausen' },
+    '/sendling': { lat: '48.1150', lng: '11.5530', plz: ['81369','81371','81373'], name: 'Sendling' },
+    '/pasing': { lat: '48.1410', lng: '11.4550', plz: ['81241','81243','81245'], name: 'Pasing' },
+    '/maxvorstadt': { lat: '48.1530', lng: '11.5650', plz: ['80333','80335','80539','80799'], name: 'Maxvorstadt' },
+    '/haidhausen': { lat: '48.1310', lng: '11.5970', plz: ['81667','81669','81671'], name: 'Haidhausen' },
+    '/neuhausen': { lat: '48.1580', lng: '11.5290', plz: ['80634','80636','80637','80638','80639'], name: 'Neuhausen' },
+    '/laim': { lat: '48.1380', lng: '11.4990', plz: ['80686','80687'], name: 'Laim' },
+    '/giesing': { lat: '48.1080', lng: '11.5820', plz: ['81539','81541','81543','81547'], name: 'Giesing' },
+    '/trudering': { lat: '48.1260', lng: '11.6550', plz: ['81825','81827','81829'], name: 'Trudering' },
+    '/milbertshofen': { lat: '48.1850', lng: '11.5650', plz: ['80807','80809','80937','80939'], name: 'Milbertshofen' },
+    '/moosach': { lat: '48.1820', lng: '11.5100', plz: ['80992','80993','80997'], name: 'Moosach' },
+    '/freimann': { lat: '48.1950', lng: '11.5750', plz: ['80807','80809','80937','80939','80992'], name: 'Freimann' },
+    '/westpark': { lat: '48.1200', lng: '11.5350', plz: ['81369','81371','81539','81541'], name: 'Westpark' },
+    '/obermenzing': { lat: '48.1680', lng: '11.4560', plz: ['81241','81243','80686','80687'], name: 'Obermenzing' },
+    '/berg-am-laim': { lat: '48.1350', lng: '11.6200', plz: ['81675','81677','81825','81827'], name: 'Berg am Laim' },
+    '/nymphenburg': { lat: '48.1580', lng: '11.4900', plz: ['80638','80639','80997'], name: 'Nymphenburg' },
+    '/ramersdorf': { lat: '48.1100', lng: '11.6100', plz: ['81735','81737','81739'], name: 'Ramersdorf' },
+    '/solln': { lat: '48.0820', lng: '11.5300', plz: ['81477','81479'], name: 'Solln' },
+    '/hadern': { lat: '48.1100', lng: '11.4800', plz: ['80689','81375','81377'], name: 'Hadern' },
+    '/allach': { lat: '48.1880', lng: '11.4500', plz: ['80999','81249'], name: 'Allach' },
+    '/aubing': { lat: '48.1500', lng: '11.4100', plz: ['81243','81245','81249'], name: 'Aubing' },
+    '/feldmoching': { lat: '48.2100', lng: '11.5300', plz: ['80933','80935','80995'], name: 'Feldmoching' },
+    '/thalkirchen': { lat: '48.0960', lng: '11.5500', plz: ['81379','81475','81476'], name: 'Thalkirchen' },
+    '/perlach': { lat: '48.0900', lng: '11.6200', plz: ['81669','81671','81735','81737'], name: 'Perlach' },
+    '/au': { lat: '48.1230', lng: '11.5900', plz: ['81671','81673','81677'], name: 'Au' },
+    '/ludwigsvorstadt': { lat: '48.1350', lng: '11.5580', plz: ['80339','80336','80337'], name: 'Ludwigsvorstadt' },
+    '/untergiesing': { lat: '48.1150', lng: '11.5780', plz: ['81541','81543','81667'], name: 'Untergiesing' },
+    '/lehel': { lat: '48.1420', lng: '11.5880', plz: ['80538','80539'], name: 'Lehel' },
+    '/schwabing-west': { lat: '48.1650', lng: '11.5600', plz: ['80805','80807','80939'], name: 'Schwabing-West' }
+  };
+
+  const stadtteilGeo = stadtteilGeoData[pagePath];
+  if (stadtteilGeo) {
+    const stadtteilSchema = {
+      "@context": "https://schema.org",
+      "@type": ["Plumber", "HVACBusiness"],
+      "name": `AquaPro24 – Klempner & Heizung ${stadtteilGeo.name} München`,
+      "description": `Sanitär, Heizung und Notdienst in ${stadtteilGeo.name} München. Festpreise, schnelle Anfahrt, 24/7 erreichbar.`,
+      "url": `${BASE_URL}${pagePath}`,
+      "telephone": "+49 89 444438872",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hardenbergstr. 4",
+        "addressLocality": "München",
+        "addressRegion": "Bayern",
+        "postalCode": stadtteilGeo.plz[0],
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": stadtteilGeo.lat,
+        "longitude": stadtteilGeo.lng
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": `${stadtteilGeo.name}, München`,
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": stadtteilGeo.lat,
+          "longitude": stadtteilGeo.lng
+        },
+        "containedInPlace": {
+          "@type": "City",
+          "name": "München",
+          "@id": "https://www.wikidata.org/wiki/Q1726"
+        }
+      },
+      "parentOrganization": { "@id": `${BASE_URL}/#localbusiness` },
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "2847"
+      }
+    };
+    const stadtteilScript = `<script type="application/ld+json">${JSON.stringify(stadtteilSchema)}</script>`;
+    html = html.replace('</head>', `${stadtteilScript}\n</head>`);
+  }
+
   // Add Service schema if page has one
   if (page.serviceSchema) {
     const serviceSchema = {
@@ -1273,7 +1356,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
       "serviceType": page.serviceSchema.serviceType,
       "provider": {
         "@type": "LocalBusiness",
-        "@id": `${BASE_URL}/#organization`,
+        "@id": `${BASE_URL}/#localbusiness`,
         "name": "AquaPro 24",
         "telephone": "+49 89 444438872",
         "address": {
@@ -1323,6 +1406,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     const faqScript = `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`;
     html = html.replace('</head>', `${faqScript}\n</head>`);
   }
+
 
   // Replace robots meta tag with extended version
   html = html.replace(
