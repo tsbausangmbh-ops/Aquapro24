@@ -59,8 +59,8 @@ const footerContent = `
 
 export const seoPages: Record<string, PageSEO> = {
   '/': {
-    title: 'Klempner München – Sanitär & Heizung Notdienst 24/7 | AquaPro 24',
-    description: 'AquaPro 24 - Ihr Partner für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst. Festpreise. 2.847+ zufriedene Kunden. Jetzt anrufen: 089 444438872',
+    title: 'Münchner Sanitär und Heizung – Klempner Notdienst 24/7',
+    description: 'Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!',
     h1: 'Klempner München – Sanitär & Heizung Notdienst 24/7',
     keywords: ['Klempner München', 'Sanitär Notdienst', 'Heizung München', 'Installateur', '24h Notdienst'],
     content: `
@@ -199,8 +199,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/bad': {
-    title: 'Badsanierung München – Komplettumbau vom Profi | AquaPro 24',
-    description: 'Badsanierung in München: Komplettumbau, barrierefreies Bad mit KfW-Förderung, Badmodernisierung. Festpreis. Jetzt beraten: 089 444438872',
+    title: 'Badsanierung München | Komplett & hochwertig',
+    description: 'Badsanierung in München: Komplett, modern & stressfrei. Planung, Ausführung & Koordination aus einer Hand. Jetzt beraten lassen!',
     h1: 'Badsanierung München – Komplettumbau vom Profi',
     keywords: ['Badsanierung München', 'Badumbau', 'barrierefreies Bad', 'Badmodernisierung', 'KfW Förderung'],
     serviceSchema: {
@@ -294,9 +294,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/notdienst-muenchen': {
-    title: 'Notdienst Sanitär & Heizung München – 24h Soforthilfe | AquaPro 24',
-    description: '24/7 Notdienst für Sanitär & Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall. Anfahrt in 45-60 Min. Jetzt: 089 444438872',
-    h1: 'Notdienst Sanitär & Heizung München – 24h Soforthilfe',
+    title: 'Notdienst München 24h | Rohrbruch & Heizungsausfall',
+    description: 'Notdienst München 24h: Rohrbruch, Wasserschaden oder Heizungsausfall? Soforthilfe vom Sanitär- & Heizungsprofi.',
+    h1: 'Notdienst München 24h – Rohrbruch & Heizungsausfall Soforthilfe',
     keywords: ['Notdienst München', 'Sanitär Notdienst', 'Heizung Notdienst', 'Rohrbruch', '24h'],
     serviceSchema: {
       name: '24/7 Sanitär & Heizung Notdienst München',
@@ -353,8 +353,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/termin': {
-    title: 'Termin online buchen München – Handwerker Wunschtermin | AquaPro 24',
-    description: 'Buchen Sie Ihren Handwerker-Termin online. Sanitär, Heizung, Badsanierung in München. Wunschtermin Mo-Fr 8-17 Uhr. Jetzt buchen!',
+    title: 'Handwerker Termin München | Online buchen',
+    description: 'Online Termin buchen in München: Sanitär & Heizung einfach online anfragen – Wunschzeit auswählen & bestätigen.',
     h1: 'Termin online buchen München – Handwerker Wunschtermin',
     keywords: ['Termin buchen', 'Handwerker München', 'Online Terminbuchung', 'Klempner Termin'],
     content: `
@@ -388,8 +388,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/kontakt': {
-    title: 'Kontakt AquaPro 24 München – Kostenlose Beratung | AquaPro 24',
-    description: 'Kontaktieren Sie AquaPro 24 in München. Tel: 089 444438872. Hardenbergstr. 4, 80992 München. Kostenlose Beratung für Sanitär & Heizung.',
+    title: 'Sanitär AquaPro 24 Kontakt München | Angebot anfordern',
+    description: 'Kontakt AquaPro 24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich.',
     h1: 'Kontakt AquaPro 24 München – Kostenlose Beratung',
     keywords: ['Kontakt', 'AquaPro 24 München', 'Telefon', 'Adresse', 'Beratung'],
     content: `
@@ -416,8 +416,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/faq': {
-    title: 'FAQ Sanitär & Heizung München – Preise & Tipps | AquaPro 24',
-    description: 'Häufige Fragen zu Sanitär & Heizung: Preise, Notdienst-Kosten, Förderung. Rohrreinigung ab 81€, Heizungsreparatur ab 154€.',
+    title: 'AquaPro 24 FAQ Sanitär & Heizung München – Preise & Tipps',
+    description: 'Sanitär FAQ München: Antworten zu Preisen, Notdienst & Reparaturen – verständlich erklärt vom Fachbetrieb.',
     h1: 'FAQ Sanitär & Heizung München – Preise & Tipps',
     keywords: ['FAQ', 'Preise Klempner', 'Kosten Sanitär', 'Heizung Kosten'],
     content: `
@@ -490,8 +490,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/ueber-uns': {
-    title: 'AquaPro 24 München – Ihr Partnernetzwerk seit 2005',
-    description: 'AquaPro 24 - Partnernetzwerk für Sanitär & Heizung in München seit 2005. Über 2.847 zufriedene Kunden. 4.9/5 Sterne.',
+    title: 'Sanitär & Heizung München | Partnernetzwerk seit 2005',
+    description: 'Sanitär & Heizung München: Geprüftes Partnernetzwerk, Erfahrung seit 2005 & zuverlässige Fachbetriebe.',
     h1: 'AquaPro 24 München – Ihr Partnernetzwerk seit 2005',
     keywords: ['Über uns', 'AquaPro 24', 'Partnernetzwerk', 'München', 'Geschichte'],
     content: `
@@ -521,9 +521,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/impressum': {
-    title: 'Impressum AquaPro 24 München – Mustafa Sakar',
-    description: 'Impressum AquaPro 24. Inhaber: Mustafa Sakar. Hardenbergstr. 4, 80992 München. Tel: 089 444438872.',
-    h1: 'Impressum AquaPro 24 München – Mustafa Sakar',
+    title: 'Impressum AquaPro 24 – Sanitär Heizung München | Mustafa Sakar',
+    description: 'Impressum und rechtliche Angaben: AquaPro 24, Inhaber Mustafa Sakar, Hardenbergstr. 4, 80992 München. Kontakt und Ansprechpartner.',
+    h1: 'Impressum AquaPro 24 – Sanitär Heizung München',
     keywords: ['Impressum', 'AquaPro 24', 'Mustafa Sakar', 'München'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -548,8 +548,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/datenschutz': {
-    title: 'Datenschutz DSGVO München – Ihre Rechte | AquaPro 24',
-    description: 'Datenschutzerklärung von AquaPro 24. DSGVO-konform. Ihre Rechte auf Auskunft, Löschung, Widerspruch.',
+    title: 'Datenschutz DSGVO München – Ihre Rechte',
+    description: 'Datenschutz DSGVO konform: Ihre Rechte und unsere Datenverarbeitung transparent erklärt. So schützen wir Ihre persönlichen Daten.',
     h1: 'Datenschutz DSGVO München – Ihre Rechte',
     keywords: ['Datenschutz', 'DSGVO', 'Datenschutzerklärung', 'Ihre Rechte'],
     content: `
@@ -576,8 +576,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/agb': {
-    title: 'AGB Sanitär München – Festpreis & Garantie | AquaPro 24',
-    description: 'Allgemeine Geschäftsbedingungen von AquaPro 24. Festpreisgarantie, 2 Jahre Gewährleistung, transparente Konditionen.',
+    title: 'AGB Sanitär München – Festpreis & Garantie',
+    description: 'AGB Sanitär München: Festpreis Garantie und transparente Geschäftsbedingungen. 2 Jahre Garantie, faire Regeln für alle Kunden.',
     h1: 'AGB Sanitär München – Festpreis & Garantie',
     keywords: ['AGB', 'Geschäftsbedingungen', 'Festpreis', 'Garantie'],
     content: `
@@ -599,9 +599,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/foerderung': {
-    title: 'Förderung Heizung München: BAFA, KfW & Steuerbonus 2025 | AquaPro 24',
-    description: 'Heizungsförderung 2025: Bis zu 70% BAFA-Zuschuss, KfW-Kredit, Steuerbonus. Wärmepumpe, Heizungstausch. Kostenlose Beratung: 089 444438872',
-    h1: 'Förderung Heizung München: BAFA, KfW & Steuerbonus 2025',
+    title: 'Förderung Heizung München: KfW 458, BAFA & Steuerbonus 2026 | AquaPro 24',
+    description: 'Bis zu 70% Förderung für Ihre neue Heizung in München (Stand 02/2026). KfW 458 Wärmepumpe, BAFA Dämmung, KfW 455-B Bad. Kostenlose Beratung. Tel: 089 444438872',
+    h1: 'Förderung Heizung München – KfW 458, BAFA & Steuerbonus 2026',
     keywords: ['BAFA Förderung', 'KfW Kredit', 'Heizungsförderung', 'Wärmepumpe Zuschuss', 'Steuerbonus'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -633,8 +633,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/haustechnik': {
-    title: 'Haustechnik München – Gas, Wasser, Lüftung komplett | AquaPro 24',
-    description: 'Haustechnik-Service in München: Gasinstallation, Wasserinstallation, Lüftungsanlagen, Smart Home. Komplettlösungen. Tel: 089 444438872',
+    title: 'Haustechnik München | Gas, Wasser, Lüftung komplett',
+    description: 'Haustechnik München: Wasser-, Gas- & Lüftungsinstallation vom Fachbetrieb. Alles aus einer Hand. Jetzt beraten lassen!',
     h1: 'Haustechnik München – Gas, Wasser, Lüftung komplett',
     keywords: ['Haustechnik München', 'Gasinstallation', 'Wasserinstallation', 'Lüftung', 'Smart Home'],
     serviceSchema: {
@@ -677,8 +677,8 @@ export const seoPages: Record<string, PageSEO> = {
   },
   // === ADDITIONAL SERVICE PAGES ===
   '/armaturen': {
-    title: 'Wasserhahn wechseln München – Armaturen Montage & Reparatur | AquaPro 24',
-    description: 'Armaturen-Service München: Wasserhahn wechseln, Mischbatterie montieren, tropfende Armatur reparieren. Festpreise. Tel: 089 444438872',
+    title: 'Wasserhahn wechseln München | Armaturen Montage',
+    description: 'Wasserhahn wechseln München: Armaturen montieren & reparieren. Grohe, Hansgrohe, Geberit. Festpreis ab 80€.',
     h1: 'Wasserhahn wechseln München – Armaturen Montage & Reparatur',
     keywords: ['Wasserhahn wechseln', 'Armaturen München', 'Mischbatterie', 'tropfender Wasserhahn'],
     content: `
@@ -705,8 +705,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/rohrreinigung': {
-    title: 'Rohrreinigung München – Abfluss verstopft Notdienst 24/7 | AquaPro 24',
-    description: 'Rohrreinigung München ab 81€: Abfluss verstopft, WC verstopft, Kanalreinigung. 24/7 Notdienst. Sofort-Termin: 089 444438872',
+    title: 'Rohrreinigung München | Abfluss verstopft 24/7',
+    description: 'Rohrreinigung München: Abfluss verstopft, WC verstopft? 60 Min. Notdienst, Festpreis ab 81€. Jetzt anrufen!',
     h1: 'Rohrreinigung München – Abfluss verstopft Notdienst 24/7',
     keywords: ['Rohrreinigung München', 'Abfluss verstopft', 'WC verstopft', 'Kanalreinigung', 'Notdienst'],
     serviceSchema: {
@@ -747,8 +747,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/warmwasser': {
-    title: 'Durchlauferhitzer München – Boiler Reparatur & Installation | AquaPro 24',
-    description: 'Warmwasser-Service München: Durchlauferhitzer, Boiler, Warmwasserspeicher. Installation & Reparatur. Tel: 089 444438872',
+    title: 'Durchlauferhitzer München | Boiler Reparatur & Installation',
+    description: 'Durchlauferhitzer München: Kein Warmwasser? Boiler defekt? Schnelle Reparatur & Installation. Festpreis ab 120€.',
     h1: 'Durchlauferhitzer München – Boiler Reparatur & Installation',
     keywords: ['Durchlauferhitzer München', 'Boiler', 'Warmwasserspeicher', 'Warmwasser'],
     content: `
@@ -833,8 +833,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/heizung-notdienst-24': {
-    title: 'Heizung Notdienst 24h München – Heizungsreparatur Soforthilfe | AquaPro 24',
-    description: 'Heizung Notdienst 24 Stunden München: Heizung ausgefallen, kein Warmwasser. Anfahrt 45-60 Min. Tel: 089 444438872',
+    title: 'Heizung Notdienst München | 24h Reparatur',
+    description: 'Heizung Notdienst München: Schnelle Hilfe bei Ausfall, Störung oder Kälte – 24h erreichbar.',
     h1: 'Heizung Notdienst 24h München – Heizungsreparatur Soforthilfe rund um die Uhr',
     keywords: ['Heizung Notdienst 24h', 'Heizung ausgefallen', 'Heizungsreparatur Notdienst'],
     content: `
@@ -862,9 +862,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/sanitaer-muenchen': {
-    title: 'Sanitär München – Klempner & Installateur Notdienst | AquaPro 24',
-    description: 'Sanitär-Service München: Rohrreinigung, Armaturen, Wasserschaden. 24/7 Notdienst. Festpreise. Tel: 089 444438872',
-    h1: 'Sanitär München – Klempner & Installateur Notdienst',
+    title: 'Sanitär Installateur München | Schnell & zuverlässig',
+    description: 'Ihr Sanitär Installateur in München: Schnelle Hilfe bei Reparaturen, Notfällen & Installationen. Jetzt Termin sichern!',
+    h1: 'Sanitär München – Klempner Installation & Reparatur Festpreis',
     keywords: ['Sanitär München', 'Klempner München', 'Installateur', 'Sanitärinstallation'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -890,9 +890,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/heizung-muenchen': {
-    title: 'Heizung München – Reparatur, Wartung & Modernisierung | AquaPro 24',
-    description: 'Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit Förderung. Tel: 089 444438872',
-    h1: 'Heizung München – Reparatur, Wartung & Modernisierung Profi',
+    title: 'Heizungsservice München | Reparatur & Modernisierung',
+    description: 'Heizungsservice München: Reparatur, Modernisierung & Effizienzsteigerung. Kompetente Beratung vom Partnernetzwerk.',
+    h1: 'Heizung München – Wartung, Reparatur & Modernisierung Profi',
     keywords: ['Heizung München', 'Heizungsreparatur', 'Heizungswartung', 'Heizungsmodernisierung'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -918,9 +918,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/waermepumpe-muenchen': {
-    title: 'Wärmepumpe München – bis 70% Förderung sichern | AquaPro 24',
-    description: 'Wärmepumpen-Installation München mit bis zu 70% BAFA-Förderung. Beratung + Antrag inklusive. Tel: 089 444438872',
-    h1: 'Wärmepumpe München – bis 70% Förderung sichern',
+    title: 'Wärmepumpe installieren München | Profi-Service',
+    description: 'Wärmepumpe installieren in München: Fachgerechter Einbau, Förderberatung & komplette Abwicklung aus einer Hand.',
+    h1: 'Wärmepumpe München – Beratung & Installation mit Förderung',
     keywords: ['Wärmepumpe München', 'BAFA Förderung', 'Heizungstausch München'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -946,9 +946,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/fussbodenheizung-muenchen': {
-    title: 'Fußbodenheizung München – Installation & Reparatur Profi | AquaPro 24',
-    description: 'Fußbodenheizung München: Installation, Reparatur, Spülung, Entlüftung. Festpreise. Tel: 089 444438872',
-    h1: 'Fußbodenheizung München – Installation & Reparatur Profi',
+    title: 'Fußbodenheizung München | Nachrüsten & Einbau',
+    description: 'Fußbodenheizung München: Nachrüsten, verlegen & reparieren vom Profi. Festpreise & kompetente Beratung.',
+    h1: 'Fußbodenheizung München – nachrüsten & verlegen vom Profi',
     keywords: ['Fußbodenheizung München', 'Fußbodenheizung Installation', 'Fußbodenheizung Reparatur'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -994,8 +994,8 @@ export const seoPages: Record<string, PageSEO> = {
   },
   // === FÖRDERUNG PAGES ===
   '/foerderantrag': {
-    title: 'Förderantrag Heizung München – Kostenloser Service | AquaPro 24',
-    description: 'Kostenloser Förderantrag-Service für BAFA & KfW. Wir helfen beim Antrag für Wärmepumpe & Heizungstausch. Tel: 089 444438872',
+    title: 'Förderantrag München: BAFA & KfW Antrag kostenlos | AquaPro 24',
+    description: 'BAFA & KfW Förderantrag kostenlos für Sie. Wir übernehmen die komplette Antragstellung für Ihre Heizungsförderung in München. 100% Erfolgsquote. Tel: 089 444438872',
     h1: 'Förderantrag Service München – Komplett kostenlos',
     keywords: ['Förderantrag', 'BAFA Antrag', 'KfW Antrag', 'Heizung Förderung'],
     content: `
@@ -1006,9 +1006,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/foerderantrag-heizung': {
-    title: 'Förderantrag Heizung München – Kostenloser BAFA Service | AquaPro 24',
-    description: 'Kostenloser BAFA-Förderantrag für Heizungstausch. Wärmepumpe bis 70% gefördert. Tel: 089 444438872',
-    h1: 'Förderantrag Heizung München – Kostenloser BAFA Service',
+    title: 'Förderantrag Heizung München: Wärmepumpe bis 70% | AquaPro 24',
+    description: 'Förderantrag Heizung München: Bis 70% für Wärmepumpe, Pellet, Solar. Kostenloser Antragsservice, alle Marken. Viessmann, Vaillant, Wolf. Tel: 089 444438872',
+    h1: 'Förderantrag Heizung München – Wärmepumpe & Pellet bis 70%',
     keywords: ['Förderantrag Heizung', 'BAFA Antrag Heizung', 'Wärmepumpe Förderung'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -1018,9 +1018,9 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/foerderrechner': {
-    title: 'Förderrechner Heizung München – Zuschuss berechnen | AquaPro 24',
-    description: 'Berechnen Sie Ihre BAFA-Förderung für Heizungstausch. Bis zu 70% Zuschuss möglich. Tel: 089 444438872',
-    h1: 'Förderrechner Heizung München – Zuschuss berechnen',
+    title: 'Förderrechner München | KfW 458, BAFA & Energieberater 2026',
+    description: 'Förderrechner München Stand 02/2026: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen.',
+    h1: 'Förderrechner München – KfW 458, BAFA & Energieberater 2026',
     keywords: ['Förderrechner', 'BAFA Rechner', 'Heizung Förderung berechnen'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -1031,9 +1031,9 @@ export const seoPages: Record<string, PageSEO> = {
   },
   // === LEGAL/UTILITY PAGES ===
   '/barrierefreiheit': {
-    title: 'Barrierefreiheit – WCAG 2.1 AA | AquaPro 24',
-    description: 'Barrierefreiheitserklärung von AquaPro 24. WCAG 2.1 AA und BITV 2.0 konform. Kontakt für Feedback: 089 444438872',
-    h1: 'Barrierefreiheitserklärung – AquaPro 24',
+    title: 'Barrierefreiheitserklärung – AquaPro 24 München',
+    description: 'Barrierefreiheitserklärung für AquaPro 24 München. Informationen zur digitalen Barrierefreiheit unserer Website gemäß BITV 2.0 und WCAG 2.1.',
+    h1: 'Barrierefreiheitserklärung München',
     keywords: ['Barrierefreiheit', 'WCAG', 'BITV', 'Accessibility'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
@@ -1043,8 +1043,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/cookie-richtlinie': {
-    title: 'Cookie Richtlinie DSGVO – transparent & sicher | AquaPro 24',
-    description: 'Cookie-Richtlinie von AquaPro 24. DSGVO-konform. Informationen zu verwendeten Cookies.',
+    title: 'Cookie Richtlinie DSGVO – transparent & sicher',
+    description: 'Cookie Richtlinie DSGVO: Nur technische Cookies, kein Tracking, keine Werbung. Transparente Cookie-Nutzung einfach erklärt.',
     h1: 'Cookie Richtlinie DSGVO – transparent & sicher',
     keywords: ['Cookie Richtlinie', 'DSGVO', 'Cookies', 'Datenschutz'],
     content: `
@@ -1055,8 +1055,8 @@ export const seoPages: Record<string, PageSEO> = {
     `
   },
   '/ratgeber': {
-    title: 'Ratgeber München – Expertentipps Sanitär & Heizung | AquaPro 24',
-    description: 'Ratgeber für Sanitär & Heizung: Tipps zu Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpe. Expertenwissen von AquaPro 24.',
+    title: 'Sanitär Ratgeber München | Profi-Tipps',
+    description: 'Sanitär Ratgeber München: Tipps zu Heizung, Bad & Haustechnik – Expertenwissen für Hausbesitzer.',
     h1: 'Ratgeber München – Expertentipps Sanitär & Heizung',
     keywords: ['Ratgeber', 'Sanitär Tipps', 'Heizung Tipps', 'Wasserschaden', 'Badsanierung'],
     content: `

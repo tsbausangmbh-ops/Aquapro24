@@ -142,6 +142,7 @@ img[loading="lazy"] {
 main > section.relative.overflow-hidden {
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
+  margin-top: 0 !important;
 }
 
 /* Header braucht contain: none für Dropdown-Menüs */
@@ -193,6 +194,7 @@ header.sticky {
     min-height: 280px !important;
     padding-top: 2rem !important;
     padding-bottom: 0.5rem !important;
+    margin-top: 0 !important;
   }
 
   .gap-4 {
