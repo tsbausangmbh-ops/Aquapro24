@@ -262,7 +262,7 @@ export default function RatgeberPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -273,7 +273,7 @@ export default function RatgeberPage() {
                 </Badge>
               </div>
 
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 Ratgeber München – Expertentipps Sanitär & Heizung
               </h1>
 
@@ -300,26 +300,26 @@ export default function RatgeberPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Expertentipps Haustechnik</span>
               </div>
 
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Praktische Tipps vom Partnernetzwerk.</strong>
               </p>
 
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 Von der Ersten Hilfe bei Wasserschäden bis zur Frage, ob sich eine Wärmepumpe 
                 für Sie lohnt - hier finden Sie fundierte Antworten aus über 35 Jahren Erfahrung.
               </p>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie wissen genau, was zu tun ist – ob Wasserschaden, Heizungsproblem oder Badsanierung – dank Expertenwissen aus erster Hand.
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>2.847 Münchner Familien</strong> vertrauen unserem Expertenwissen – Beratung kostenlos | Festpreise garantiert
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-ratgeber">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -340,7 +340,7 @@ export default function RatgeberPage() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -456,7 +456,7 @@ export default function RatgeberPage() {
               <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center">
                       <Wrench className="w-6 h-6 text-primary" />
                     </div>
                     <div>

@@ -309,7 +309,7 @@ export default function FoerderrechnerPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -320,7 +320,7 @@ export default function FoerderrechnerPage() {
                 </Badge>
               </div>
 
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 Förderrechner München – KfW 458, BAFA & Energieberater {currentYear}
               </h1>
 
@@ -335,26 +335,26 @@ export default function FoerderrechnerPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BEG Förderung {currentYear}</span>
               </div>
 
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Wie viel Förderung steht Ihnen zu?</strong>
               </p>
 
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 Stand {standDatum}: KfW 458 für Heizung (bis 70%), BAFA für Dämmung (15-20%), KfW 455-B für barrierefreies Bad (12,5%). 
                 Berechnen Sie Ihre individuelle Förderung.
               </p>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie wissen in 2 Minuten genau, wie viel Förderung Sie für Ihre Sanierung bekommen – und sparen tausende Euro.
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>2.847 Münchner Familien</strong> haben bereits ihre Förderung berechnet – KfW bis 70% | BAFA bis 20%
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-foerderrechner">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -375,7 +375,7 @@ export default function FoerderrechnerPage() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -1347,7 +1347,7 @@ export default function FoerderrechnerPage() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center">
               AquaPro 24 Fördervergleich München: BAFA vs. KfW vs. Steuerbonus
             </h2>
             <div className="grid md:grid-cols-3 gap-6">

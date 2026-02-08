@@ -182,7 +182,7 @@ export default function HeizungPage() {
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -193,29 +193,29 @@ export default function HeizungPage() {
                 </Badge>
               </div>
               
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 Heizung München – Wartung, Reparatur & Modernisierung
               </h1>
               
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Heizung ausgefallen oder Therme defekt?</strong>
               </p>
               
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 Wir helfen schnell und zum Festpreis. 45-60 Minuten Reaktionszeit bei Notfällen – alle Marken, 24/7 erreichbar.
               </p>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Mitten im Winter fällt die Heizung aus. Sie rufen uns an – in 50 Minuten ist unser Techniker da und bringt Ihre Heizung wieder zum Laufen. Festpreis, alle Marken.
                 </p>
               </div>
               
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>Über 2.400 zufriedene Kunden</strong> – Heizungsreparatur ab 154€ zum Festpreis
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -236,7 +236,7 @@ export default function HeizungPage() {
                 </Button>
               </div>
               
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -256,7 +256,7 @@ export default function HeizungPage() {
 
         <TrustBar />
 
-        <section className="py-6 lg:py-8">
+        <section className="py-4 sm:py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Heizung München: Leistungen Heizung Leistungen München: Preise & Services Preise</h2>
@@ -293,7 +293,7 @@ export default function HeizungPage() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8 bg-muted/30">
+        <section className="py-4 sm:py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Heizung Ablauf München: So einfach geht's</h2>
@@ -317,7 +317,7 @@ export default function HeizungPage() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8">
+        <section className="py-4 sm:py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Heizung Garantie: Unser Versprechen</h2>
@@ -326,11 +326,11 @@ export default function HeizungPage() {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
               {guarantees.map((item, index) => (
                 <Card key={index}>
                   <CardContent className="p-5 text-center">
-                    <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-3" />
                     <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
@@ -342,7 +342,7 @@ export default function HeizungPage() {
 
         <section className="py-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
+            <div className="text-center mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">Heizung Marken München: Viessmann & Vaillant</h2>
               <p className="text-muted-foreground text-sm">
                 Wir reparieren und installieren alle führenden Heizungsmarken.
@@ -376,7 +376,7 @@ export default function HeizungPage() {
 
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6">
               Heizungsfachbetrieb München: Ihr zuverlässiger Partner
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -408,7 +408,7 @@ export default function HeizungPage() {
         </Suspense>
 
         {/* Partnernetzwerk Angebot */}
-        <section className="py-6 lg:py-8 bg-muted/50">
+        <section className="py-4 sm:py-6 lg:py-8 bg-muted/50">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
             <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">

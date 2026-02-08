@@ -60,7 +60,7 @@ function ServiceSelection() {
   const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
   
   return (
-    <section className="py-6 lg:py-8 bg-muted/50">
+    <section className="py-4 sm:py-6 lg:py-8 bg-muted/50">
       <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
         <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
         <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
@@ -70,7 +70,7 @@ function ServiceSelection() {
           Wählen Sie Ihr Gewerk – wir stellen Ihnen die passenden Fragen für ein maßgeschneidertes Angebot.
         </p>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-3 sm:mb-6">
           {serviceOptions.map((service) => (
             <Card 
               key={service.type}
@@ -297,7 +297,7 @@ export default function Home() {
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -308,32 +308,32 @@ export default function Home() {
                 </Badge>
               </div>
               
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 AquaPro 24 München – Sanitär & Heizung Notdienst 24/7
               </h1>
               
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Wasser tropft? Heizung streikt? Abfluss verstopft?</strong>
               </p>
               
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 Wir verstehen, wie stressig das ist. Deshalb sind wir in <strong>45-60 Minuten</strong> bei Ihnen – 
                 mit Festpreis <em>vor</em> Arbeitsbeginn. Kein Risiko, keine Überraschungen.
               </p>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> In einer Stunde ist Ihr Problem gelöst, 
                   Sie können sich entspannen – und der Preis war genau wie besprochen.
                 </p>
               </div>
               
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>2.847 Münchner Familien</strong> haben diese Erfahrung bereits gemacht. 
                 Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-hero">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -354,7 +354,7 @@ export default function Home() {
                 </Button>
               </div>
               
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -378,9 +378,9 @@ export default function Home() {
           <NLPQuestions />
         </Suspense>
 
-        <section className="py-6 lg:py-8">
+        <section className="py-4 sm:py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
+            <div className="text-center mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Sanitär & Heizung München: Alle Leistungen
               </h2>
@@ -389,7 +389,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {services.map((service, index) => (
                 <Link key={index} href={service.link}>
                   <Card className="h-full hover-elevate cursor-pointer group overflow-hidden">
@@ -408,7 +408,7 @@ export default function Home() {
                         {service.price}
                       </Badge>
                     </div>
-                    <CardContent className="p-4">
+                    <CardContent className="p-3 sm:p-4">
                       <div className="flex items-center gap-2 mb-2">
                         <service.icon className="w-4 h-4 text-primary" />
                         <h3 className="font-semibold text-lg" data-testid={`text-service-title-${index}`}>
@@ -442,9 +442,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8 bg-muted/30 content-auto">
+        <section className="py-4 sm:py-6 lg:py-8 bg-muted/30 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
+            <div className="text-center mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Klempner München: So läuft Ihr Auftrag ab
               </h2>
@@ -453,10 +453,10 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
               {processSteps.map((step) => (
                 <div key={step.step} className="text-center">
-                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3 text-lg font-bold">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3 text-lg font-bold">
                     {step.step}
                   </div>
                   <h3 className="text-base sm:text-lg font-semibold mb-1">{step.title}</h3>
@@ -467,19 +467,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8">
+        <section className="py-4 sm:py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
+            <div className="text-center mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Sanitär Garantie München: Unser Versprechen
               </h2>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
               {guarantees.map((item, index) => (
                 <Card key={index} className="text-center">
-                  <CardContent className="p-4">
-                    <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <CardContent className="p-3 sm:p-4">
+                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-3" />
                     <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
@@ -489,9 +489,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6 lg:py-8 bg-muted/30 content-auto">
+        <section className="py-4 sm:py-6 lg:py-8 bg-muted/30 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-6">
+            <div className="text-center mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Projekte München: Referenzen unserer Arbeit
               </h2>

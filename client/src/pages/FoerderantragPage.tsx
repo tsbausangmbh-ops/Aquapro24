@@ -213,7 +213,7 @@ export default function FoerderantragPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -224,7 +224,7 @@ export default function FoerderantragPage() {
                 </Badge>
               </div>
 
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 Förderantrag München – BAFA & KfW Antrag kostenlos
               </h1>
 
@@ -234,26 +234,26 @@ export default function FoerderantragPage() {
                 ))}
               </div>
 
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Förderantrag zu kompliziert? Wir erledigen das für Sie!</strong>
               </p>
 
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 Wir übernehmen die komplette Antragstellung für Ihre 
                 Heizungsförderung – kostenlos und mit 100% Erfolgsquote.
               </p>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie lehnen sich zurück – und wir kümmern uns um den gesamten Förderantrag, von A bis Z, komplett kostenlos.
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>2.847 Münchner Familien</strong> vertrauen uns – Antragsservice kostenlos | 100% Erfolgsquote
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-antrag">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -274,7 +274,7 @@ export default function FoerderantragPage() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -294,7 +294,7 @@ export default function FoerderantragPage() {
 
         <TrustBar />
 
-        <section className="py-6 lg:py-8">
+        <section className="py-4 sm:py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
@@ -309,7 +309,7 @@ export default function FoerderantragPage() {
               {serviceVorteile.map((vorteil, index) => (
                 <Card key={index} className="text-center">
                   <CardContent className="pt-6">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <vorteil.icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-base sm:text-lg font-bold mb-2">{vorteil.title}</h3>

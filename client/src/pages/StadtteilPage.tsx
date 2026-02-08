@@ -990,7 +990,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -1001,7 +1001,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 </Badge>
               </div>
 
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 Klempner {data.name} München – Sanitär, Heizung & Notdienst
               </h1>
 
@@ -1023,25 +1023,25 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">lokaler Service</span>
               </div>
 
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Sanitär- oder Heizungsproblem in {data.name}?</strong>
               </p>
 
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 {data.beschreibung}
               </p>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> Sie rufen an – und in ca. {data.anfahrt} ist ein geprüfter Fachbetrieb bei Ihnen in {data.name}, mit Festpreis und allem Material.
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>2.847 Münchner Familien</strong> vertrauen uns – Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-stadtteil-hero">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -1062,7 +1062,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -1084,14 +1084,14 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-4 sm:mb-6">
               AquaPro 24 Sanitär & Heizung München {data.name}: Alle Leistungen im Überblick
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
               {SERVICES.map((service) => (
                 <Link key={service.title} href={service.link}>
                   <Card className="h-full hover-elevate cursor-pointer">
-                    <CardContent className="p-4">
+                    <CardContent className="p-3 sm:p-4">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                         <service.icon className="w-5 h-5 text-primary" />
                       </div>
@@ -1136,7 +1136,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Shield className="w-6 h-6 text-primary" />
                     </div>
                     <div>
@@ -1220,7 +1220,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6">
               Häufige Fragen: Sanitär & Heizung in {data.name}
             </h2>
             <div className="space-y-4">
@@ -1321,14 +1321,14 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-2">
               Installateur München nahe {data.name}: Nachbarstadtteile im Einsatzgebiet
             </h2>
-            <p className="text-muted-foreground text-center mb-6">
+            <p className="text-muted-foreground text-center mb-4 sm:mb-6">
               Wir sind auch in den Nachbarstadtteilen für Sie da
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
               {data.nachbarStadtteile.map((nachbar) => (
                 <Link key={nachbar.slug} href={`/${nachbar.slug}`}>
                   <Card className="hover-elevate cursor-pointer">
-                    <CardContent className="p-4 flex items-center justify-between">
+                    <CardContent className="p-3 sm:p-4 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5 text-primary" />
                         <span className="font-medium">{nachbar.name}</span>

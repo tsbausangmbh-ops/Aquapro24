@@ -115,7 +115,7 @@ export default function BadsanierungMuenchenPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   24/7 Notdienst
@@ -125,7 +125,7 @@ export default function BadsanierungMuenchenPage() {
                   4.9 Google-Bewertung
                 </Badge>
               </div>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
                 Badsanierung München – Komplettumbau stressfrei & modern
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -150,21 +150,21 @@ export default function BadsanierungMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung Bad</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Badsanierung</span>
               </div>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">
                 <strong>Altes Bad satt? Fliesen kaputt? Traumbad gewünscht?</strong>
               </p>
-              <p className="text-sm sm:text-base text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-2 sm:mb-4">
                 AquaPro 24 begleitet Ihre Badsanierung in München von der Planung bis zur Übergabe. Alles aus einer Hand, transparente Festpreise.
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-4 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-4 border border-white/20">
                 <p className="text-white/90 text-sm">
                   <strong className="text-accent">Stellen Sie sich vor:</strong> In nur 2-3 Wochen verwandeln wir Ihr altes Badezimmer in eine moderne Wohlfühloase – mit bodengleicher Dusche, Regenbrause und zeitlosen Fliesen. Ohne Stress, ohne versteckte Kosten.
                 </p>
               </div>
-              <p className="text-sm sm:text-base text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-6">
                 <strong>2.800+ zufriedene Kunden</strong> · Badsanierung ab 8.900€ Festpreis
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-6">
                 <Button size="lg" className="gap-2 text-base" asChild data-testid="button-call-badsanierung-muenchen">
                   <a href="tel:+4989444438872">
                     <Phone className="w-5 h-5" />
@@ -178,7 +178,7 @@ export default function BadsanierungMuenchenPage() {
                   </Link>
                 </Button>
               </div>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-sm">
                 <div className="flex items-center gap-2 text-white/80">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
                   <span>Geprüfte Fachbetriebe</span>
@@ -223,7 +223,7 @@ export default function BadsanierungMuenchenPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center">
                 Badsanierung Kosten München: Angebot mit Festpreis anfordern
               </h2>
               <p className="text-center text-muted-foreground mb-8">
