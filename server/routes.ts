@@ -989,7 +989,7 @@ KOMMUNIKATIONSSTIL:
 - Konkrete Beispiele und Preisrahmen nennen
 - Keine Fachbegriffe ohne Erklärung
 
-PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, München, Stand 02.2026, +30% Beratungsaufschlag):
 - Teilsanierung: ab 9.100 EUR
 - Komplettsanierung klein (bis 5m²): 16.900-28.100 EUR
 - Komplettsanierung mittel (5-8m²): 23.900-45.000 EUR
@@ -1039,7 +1039,7 @@ KOMMUNIKATIONSSTIL:
 - Soforthilfe-Tipps wo möglich
 - Realistische Preise nennen
 
-PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, München, Stand 02.2026, +30% Beratungsaufschlag):
 - Stundensatz Installateur: 115-161 EUR
 - Anfahrt + 1. Stunde: 225-330 EUR
 - Kleine Reparaturen (Armatur, WC): 225-365 EUR
@@ -1082,7 +1082,7 @@ KOMMUNIKATIONSSTIL:
 - Kompetent aber verständlich
 - Förderungen und Einsparpotenziale betonen
 
-PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, München, Stand 02.2026, +30% Beratungsaufschlag):
 - Heizungswartung Gas/Öl: 296-514 EUR
 - Heizung reparieren: 456-1.097 EUR
 - Stundensatz Heizungsbauer: 147-169 EUR
@@ -1126,7 +1126,7 @@ KOMMUNIKATIONSSTIL:
 - Förderungen immer erwähnen
 - Wirtschaftlichkeit betonen
 
-PREISRAHMEN (netto, vor Förderung, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, vor Förderung, Stand 02.2026, +30% Beratungsaufschlag):
 - Luft-Wasser-Wärmepumpe komplett: 28.100-54.900 EUR
 - Sole-Wasser-Wärmepumpe (Erdwärme): 36.500-91.400 EUR
 - Wasser-Wasser-Wärmepumpe: 40.800-83.000 EUR
@@ -1176,7 +1176,7 @@ SOFORTHILFE-TIPPS:
 - Saugglocke richtig anwenden
 - Siphon unter dem Waschbecken prüfen
 
-PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, München, Stand 02.2026, +30% Beratungsaufschlag):
 - Einfache Rohrreinigung: 225-365 EUR
 - Maschinelle Reinigung: 365-730 EUR
 - Kanalreinigung: 549-1.097 EUR
@@ -1198,7 +1198,7 @@ KOMMUNIKATIONSSTIL:
 - IMMER formelle Anrede "Sie"
 - Praktisch und verständlich
 
-PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, München, Stand 02.2026, +30% Beratungsaufschlag):
 - Durchlauferhitzer inkl. Montage: 914-1.828 EUR
 - Boiler 80-150L inkl. Montage: 1.265-2.531 EUR
 - Warmwasserspeicher inkl. Montage: 2.812-5.624 EUR
@@ -1219,7 +1219,7 @@ KOMMUNIKATIONSSTIL:
 - IMMER formelle Anrede "Sie"
 - Design und Funktionalität verbinden
 
-PREISRAHMEN (netto, München, Stand 12.2025, +30% Beratungsaufschlag):
+PREISRAHMEN (netto, München, Stand 02.2026, +30% Beratungsaufschlag):
 - Einfache Armatur inkl. Montage: 183-456 EUR
 - Hochwertige Markenarmatur inkl. Montage: 365-914 EUR
 - Thermostat-Armatur inkl. Montage: 549-1.097 EUR

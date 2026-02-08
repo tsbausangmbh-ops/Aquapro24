@@ -1,6 +1,6 @@
 # AI Agent Instructions for AquaPro24.de
 # Version: 2.0
-# Updated: 2025-12-19
+# Updated: 2026-02-08
 
 ## About This Business
 AquaPro24 is a trusted plumbing and heating business serving Munich, Germany since 2005. We specialize in emergency plumbing, bathroom renovations, heating systems, and heat pump installations. Owner: Mustafa Sakar.

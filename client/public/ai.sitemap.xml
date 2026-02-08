@@ -15,7 +15,7 @@
   
   Schema: Custom AI namespace mit semantischen Metadaten
   Letzte Aktualisierung: 2026-02-07
-  Gesamtseiten: 64 URLs
+  Gesamtseiten: 61 URLs
   
   Geo-Targeting: München + 40km Umkreis (18 Städte)
   Sprache: Deutsch (de-DE)
@@ -52,7 +52,7 @@
   - Heizung: Viessmann, Vaillant, Buderus, Wolf, Junkers
   - Warmwasser: Stiebel Eltron, Bosch, AEG
   
-  FÖRDERUNG 2025:
+  FÖRDERUNG 2026:
   - BAFA Heizungsförderung: 30% Basis + 20% Klimabonus + 30% Einkommensbonus = max 70%
   - Maximaler Zuschuss: 23.100€
   - KfW Heizungskredit: Zinsgünstige Finanzierung
@@ -214,14 +214,14 @@
     <ai:page-type>service</ai:page-type>
     <ai:language>de-DE</ai:language>
     <ai:summary>Wärmepumpe München - Installation Luft-Wasser und Erdwärme. Bis 70% BAFA Förderung (max 23.100€). Kostenloser Förderantrag-Service. Viessmann Vaillant Wolf.</ai:summary>
-    <ai:keywords>Wärmepumpe München, Luft-Wasser Wärmepumpe, Erdwärme, BAFA Förderung 2025, Heizungstausch, CO2-neutral heizen, Wärmepumpe nachrüsten</ai:keywords>
+    <ai:keywords>Wärmepumpe München, Luft-Wasser Wärmepumpe, Erdwärme, BAFA Förderung 2026, Heizungstausch, CO2-neutral heizen, Wärmepumpe nachrüsten</ai:keywords>
     <ai:brands>Viessmann Vitocal, Vaillant aroTHERM, Wolf CHA, Daikin, Bosch</ai:brands>
     <ai:funding>BAFA bis 70% (max 23.100€)</ai:funding>
     <ai:funding-details>30% Grundförderung + 20% Klimabonus + 30% Einkommensbonus</ai:funding-details>
     <ai:emergency>false</ai:emergency>
     <ai:schema-type>HVACBusiness</ai:schema-type>
     <ai:voice-query>Wärmepumpe Kosten, Wärmepumpe Förderung, Wärmepumpe nachrüsten</ai:voice-query>
-    <ai:faq-topics>Lohnt sich Wärmepumpe, Welche Förderung 2025, Wärmepumpe Altbau</ai:faq-topics>
+    <ai:faq-topics>Lohnt sich Wärmepumpe, Welche Förderung 2026, Wärmepumpe Altbau</ai:faq-topics>
   </url>
 
   <url>
@@ -284,19 +284,8 @@
   </url>
 
   <!-- ═══════════════════ LANDING PAGES ═══════════════════ -->
-  <url>
-    <loc>https://aquapro24.de/badsanierung</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-    <ai:page-type>landing</ai:page-type>
-    <ai:language>de-DE</ai:language>
-    <ai:summary>Badsanierung München - Komplettumbau aus einer Hand. Barrierefreie Bäder mit KfW-Förderung. 3D-Badplanung kostenlos. 5 Jahre Garantie. Festpreis.</ai:summary>
-    <ai:keywords>Badsanierung München, Bad Komplettsanierung, barrierefrei umbauen, KfW Förderung Bad, Bad renovieren</ai:keywords>
-    <ai:emergency>false</ai:emergency>
-    <ai:funding>KfW Barrierefrei</ai:funding>
-    <ai:voice-query>Bad sanieren München, Badsanierung komplett, Bad barrierefrei umbauen</ai:voice-query>
-  </url>
+  <!-- /badsanierung ist Canonical-Redirect → /bad (siehe CANONICAL_MAP) -->
+  <!-- /fussbodenheizung hat keinen eigenen Client-Route → nur /fussbodenheizung-muenchen existiert -->
 
   <url>
     <loc>https://aquapro24.de/sanitaer-muenchen</loc>
@@ -349,7 +338,7 @@
     <ai:keywords>Wärmepumpe München, Wärmepumpe Förderung, BAFA Antrag München, Heizungstausch Wärmepumpe, Wärmepumpe installieren</ai:keywords>
     <ai:funding>BAFA bis 70% (max 23.100€)</ai:funding>
     <ai:emergency>false</ai:emergency>
-    <ai:voice-query>Wärmepumpe München, Wärmepumpe Förderung 2025, Wärmepumpe einbauen</ai:voice-query>
+    <ai:voice-query>Wärmepumpe München, Wärmepumpe Förderung 2026, Wärmepumpe einbauen</ai:voice-query>
   </url>
 
   <url>
@@ -373,12 +362,12 @@
     <priority>0.88</priority>
     <ai:page-type>info</ai:page-type>
     <ai:language>de-DE</ai:language>
-    <ai:summary>Förderung Heizung München 2025 - BAFA bis 70%, KfW Heizungskredit, Steuerbonus. Komplette Übersicht: 30% Grund + 20% Klima + 30% Einkommen = max 70%.</ai:summary>
-    <ai:keywords>BAFA Förderung Heizung 2025, KfW Heizungskredit, Heizungsförderung, Klimabonus, Einkommensbonus, Steuerbonus Heizung</ai:keywords>
+    <ai:summary>Förderung Heizung München 2026 - BAFA bis 70%, KfW Heizungskredit, Steuerbonus. Komplette Übersicht: 30% Grund + 20% Klima + 30% Einkommen = max 70%.</ai:summary>
+    <ai:keywords>BAFA Förderung Heizung 2026, KfW Heizungskredit, Heizungsförderung, Klimabonus, Einkommensbonus, Steuerbonus Heizung</ai:keywords>
     <ai:funding>30% Grund + 20% Klima + 30% Einkommen = max 70%</ai:funding>
     <ai:funding-max currency="EUR">23100</ai:funding-max>
     <ai:emergency>false</ai:emergency>
-    <ai:voice-query>Heizung Förderung 2025, BAFA Förderung Wärmepumpe, wie viel Förderung Heizung</ai:voice-query>
+    <ai:voice-query>Heizung Förderung 2026, BAFA Förderung Wärmepumpe, wie viel Förderung Heizung</ai:voice-query>
     <ai:faq-topics>Wie hoch ist die Förderung, Wer bekommt Einkommensbonus, Klimabonus Voraussetzungen</ai:faq-topics>
   </url>
 
@@ -819,33 +808,7 @@
     <ai:voice-query>Klempner Hadern, Sanitär Hadern</ai:voice-query>
   </url>
 
-  <url>
-    <loc>https://aquapro24.de/obergiesing</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de-DE</ai:language>
-    <ai:summary>Klempner Obergiesing München - Sanitär, Heizung und Notdienst. 24h erreichbar.</ai:summary>
-    <ai:keywords>Klempner Obergiesing, Sanitär Obergiesing, Heizung Obergiesing</ai:keywords>
-    <ai:district>Obergiesing</ai:district>
-    <ai:emergency>true</ai:emergency>
-    <ai:voice-query>Klempner Obergiesing, Installateur Obergiesing</ai:voice-query>
-  </url>
-
-  <url>
-    <loc>https://aquapro24.de/untergiesing</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <ai:page-type>district</ai:page-type>
-    <ai:language>de-DE</ai:language>
-    <ai:summary>Klempner Untergiesing München - Sanitär, Heizung und Notdienst. 24h erreichbar.</ai:summary>
-    <ai:keywords>Klempner Untergiesing, Sanitär Untergiesing, Heizung Untergiesing</ai:keywords>
-    <ai:district>Untergiesing</ai:district>
-    <ai:emergency>true</ai:emergency>
-    <ai:voice-query>Klempner Untergiesing, Sanitär Untergiesing</ai:voice-query>
-  </url>
+  <!-- Ehemalige Unter-Stadtteile entfernt: werden über /giesing abgedeckt -->
 
   <url>
     <loc>https://aquapro24.de/freimann</loc>

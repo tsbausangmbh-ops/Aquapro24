@@ -53,7 +53,7 @@ const footerContent = `
         <a href="/agb" style="color:#ccc;margin-right:15px">AGB</a>
         <a href="/barrierefreiheit" style="color:#ccc">Barrierefreiheit</a>
       </nav>
-      <p style="margin-top:20px;color:#888">© 2025 AquaPro 24. Alle Rechte vorbehalten.</p>
+      <p style="margin-top:20px;color:#888">© 2026 AquaPro 24. Alle Rechte vorbehalten.</p>
     </div>
   </footer>
 `;

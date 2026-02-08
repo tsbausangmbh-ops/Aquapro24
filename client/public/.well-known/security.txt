@@ -1,5 +1,5 @@
 # Security Policy for AquaPro24.de
-# Last updated: 2025-12-23
+# Last updated: 2026-02-08
 
 Contact: mailto:info@aquapro24.de
 Contact: tel:+49-89-444438872

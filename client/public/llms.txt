@@ -1,7 +1,7 @@
 # AquaPro24 - Sanitär & Heizung München
 # Machine-readable information for AI assistants and language models
 # Optimized for: ChatGPT, Claude, Gemini, Perplexity, Copilot, Bing AI
-# Last updated: 2025-12-23
+# Last updated: 2026-02-08
 
 ## QUICK FACTS
 > Business: AquaPro24 - Plumbing & Heating Service Network Munich
@@ -139,7 +139,7 @@ surrounding_cities:
   - Unterhaching, Ottobrunn, Taufkirchen, Haar
   - Neubiberg, Grünwald, Pullach, Eching, Ismaning, Kirchheim
 
-## FUNDING & SUBSIDIES (Förderung 2025)
+## FUNDING & SUBSIDIES (Förderung 2026)
 ### BAFA Heizungsförderung
 - base_subsidy: 30%
 - climate_bonus: 20% (Klimageschwindigkeitsbonus)

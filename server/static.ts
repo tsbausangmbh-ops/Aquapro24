@@ -22,7 +22,6 @@ const KNOWN_ROUTES = new Set([
   '/notdienst-muenchen',
   '/sanitaer-muenchen',
   '/heizung-muenchen',
-  '/fussbodenheizung',
   '/fussbodenheizung-muenchen',
   '/waermepumpe-muenchen',
   '/sanitaer-notdienst-24',
@@ -202,7 +201,7 @@ export function findBestRedirect(path: string): string | null {
   if (lowerPath.includes('heizung') || lowerPath.includes('heiz') || lowerPath.includes('waerme') || lowerPath.includes('warm')) {
     if (lowerPath.includes('pumpe')) return '/waermepumpe';
     if (lowerPath.includes('notdienst') || lowerPath.includes('24')) return '/heizung-notdienst-24';
-    if (lowerPath.includes('boden') || lowerPath.includes('fuss')) return '/fussbodenheizung';
+    if (lowerPath.includes('boden') || lowerPath.includes('fuss')) return '/fussbodenheizung-muenchen';
     return '/heizung';
   }
   
