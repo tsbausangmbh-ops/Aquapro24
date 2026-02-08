@@ -1,11 +1,43 @@
 import { Switch, Route, useLocation } from "wouter";
-import { lazy, Suspense, useState, useEffect, startTransition } from "react";
+import { lazy, Suspense, useState, useEffect, startTransition, Component, type ReactNode } from "react";
 import MobileCallButton from "@/components/MobileCallButton";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Loader2 } from "lucide-react";
+
+class AppErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: Error) {
+    if (
+      error.message?.includes("useContext") ||
+      error.message?.includes("useRef") ||
+      error.message?.includes("Invalid hook call")
+    ) {
+      window.location.reload();
+    }
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-background">
+          <div className="flex flex-col items-center gap-4 p-8 text-center">
+            <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            <p className="text-muted-foreground text-sm">Seite wird neu geladen...</p>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function FocusManager() {
   const [location] = useLocation();
@@ -192,16 +224,18 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <FocusManager />
-        <LiveAnnouncer />
-        <DelayedPopups />
-        <Toaster />
-        <Router />
-        <MobileCallButton />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <AppErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <FocusManager />
+          <LiveAnnouncer />
+          <DelayedPopups />
+          <Toaster />
+          <Router />
+          <MobileCallButton />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </AppErrorBoundary>
   );
 }
 
