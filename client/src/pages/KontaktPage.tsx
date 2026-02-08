@@ -24,7 +24,7 @@ import {
   Send,
   Loader2,
 } from "lucide-react";
-import heroImage from "@assets/generated_images/customer_service_team_office.webp";
+import heroImage from "@assets/hero_kontakt.png";
 
 const contactInfo = [
   {

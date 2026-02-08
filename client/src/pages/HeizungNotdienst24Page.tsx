@@ -6,7 +6,7 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/heating_technician_r_d9832fb9.webp";
+import heroImage from "@assets/hero_heizung_notdienst.png";
 import { 
   AlertTriangle, 
   Phone, 

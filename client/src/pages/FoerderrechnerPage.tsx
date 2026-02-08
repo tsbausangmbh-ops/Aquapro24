@@ -11,7 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import heroImage from "@assets/stock_images/heat_pump_installati_53374252.webp";
+import heroImage from "@assets/hero_foerderrechner.png";
 import { 
   Calculator,
   Phone, 

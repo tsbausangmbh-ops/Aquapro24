@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { FileText } from "lucide-react";
-import heroImage from "@assets/stock_images/professional_office__fb18ab1c.webp";
+import heroImage from "@assets/hero_agb.png";
 
 export default function AGBPage() {
   return (

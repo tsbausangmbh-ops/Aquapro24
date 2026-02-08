@@ -28,7 +28,7 @@ import bathroomImage from "@assets/stock_images/modern_bathroom_reno_d985ed76.we
 import heatingImage from "@assets/stock_images/heating_system_boile_6d071f6f.webp";
 import heatPumpImage from "@assets/stock_images/heat_pump_installati_6831dd34.webp";
 import plumberImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
-import heroImage from "@assets/generated_images/expert_reading_technical_guide.webp";
+import heroImage from "@assets/hero_ratgeber.png";
 
 const guides = [
   {

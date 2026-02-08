@@ -22,7 +22,7 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/tankless_water_heater.webp";
+import heroImage from "@assets/hero_warmwasser.png";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 

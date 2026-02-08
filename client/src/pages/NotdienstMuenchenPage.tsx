@@ -7,7 +7,7 @@ import EmergencyProcess from "@/components/EmergencyProcess";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/emergency_plumber_fi_2fcdef5d.webp";
+import heroImage from "@assets/hero_notdienst.png";
 import { 
   AlertTriangle, 
   Phone, 

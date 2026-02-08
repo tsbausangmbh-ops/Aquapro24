@@ -6,7 +6,7 @@ import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/stock_images/underfloor_heating_i_77879d46.webp";
+import heroImage from "@assets/hero_fussbodenheizung.png";
 import { 
   Thermometer, 
   Phone, 

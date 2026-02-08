@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cookie, Shield, Settings, Info } from "lucide-react";
-import heroImage from "@assets/stock_images/professional_office__fb18ab1c.webp";
+import heroImage from "@assets/hero_cookie.png";
 
 export default function CookieRichtliniePage() {
   return (

@@ -21,7 +21,7 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/vaillant_arotherm_he_85021ffa.webp";
+import heroImage from "@assets/hero_waermepumpe.png";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 

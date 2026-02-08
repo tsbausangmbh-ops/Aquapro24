@@ -23,7 +23,7 @@ import {
   AlertTriangle
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
+import heroImage from "@assets/hero_sanitaer.png";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 

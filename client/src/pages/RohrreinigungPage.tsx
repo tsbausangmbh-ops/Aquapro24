@@ -22,7 +22,7 @@ import {
   ShowerHead
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/clean_modern_drain_grate.webp";
+import heroImage from "@assets/hero_rohrreinigung.png";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 

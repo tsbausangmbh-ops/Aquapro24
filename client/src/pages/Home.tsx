@@ -25,7 +25,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/stock_images/professional_plumber_be6e9e4a.webp";
+import heroImage from "@assets/hero_home.png";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.webp";
 import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.webp";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.webp";

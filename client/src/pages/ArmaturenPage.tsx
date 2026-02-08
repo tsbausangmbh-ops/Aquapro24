@@ -21,7 +21,7 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/modern_chrome_faucet.webp";
+import heroImage from "@assets/hero_armaturen.png";
 import RelatedServices from "@/components/RelatedServices";
 import KeywordLinks from "@/components/KeywordLinks";
 
