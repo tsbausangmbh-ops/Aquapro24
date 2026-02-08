@@ -973,6 +973,40 @@ export const seoPages: Record<string, PageSEO> = {
       </section>
     `
   },
+  '/badsanierung-muenchen': {
+    title: 'Badumbau München | Stressfrei vom Partnernetzwerk',
+    description: 'Badumbau in München ohne Stress: Modernes Design, feste Abläufe & klare Kosten. Jetzt kostenlos beraten lassen!',
+    h1: 'Badsanierung München – Komplettumbau stressfrei & modern',
+    keywords: ['Badsanierung München', 'Bad renovieren München', 'Badezimmer sanieren', 'Komplettbad München', 'Badumbau München'],
+    serviceSchema: {
+      name: 'Badsanierung München - Planung & Umsetzung',
+      description: 'Badsanierung München: Bestandsaufnahme, Ablaufplan, koordinierte Umsetzung. Modern, sauber geplant, stressfrei.',
+      serviceType: 'Badsanierung',
+      urlSlug: 'badsanierung-muenchen'
+    },
+    content: `
+      <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
+        <p style="font-size:20px"><strong>Badsanierung München</strong> – Komplettumbau stressfrei und modern. Von der Planung bis zur Übergabe.</p>
+        
+        <h2>Badsanierung Leistungen München</h2>
+        
+        <h3><span style="background:#e0f7fa;padding:2px 6px;border-radius:4px"><strong>Bestandsaufnahme & Beratung</strong></span></h3>
+        <p>Professionelle Bestandsaufnahme Ihres Badezimmers. Individuelle Beratung zu Design, Material und Kosten.</p>
+        
+        <h3><span style="background:#e0f7fa;padding:2px 6px;border-radius:4px"><strong>Ablaufplanung & Koordination</strong></span></h3>
+        <p>Detaillierter Ablaufplan mit festen Terminen. Koordination aller Gewerke aus einer Hand.</p>
+        
+        <h3><span style="background:#e0f7fa;padding:2px 6px;border-radius:4px"><strong>Teil- und Komplettsanierung</strong></span></h3>
+        <p>Ob Teilsanierung oder Komplettumbau – wir begleiten Sie durch den gesamten Prozess.</p>
+        
+        <h2>Badsanierung München – Häufige Fragen</h2>
+        <p><strong>Wie lange dauert eine Badsanierung?</strong> Je nach Umfang 2-4 Wochen. Nach der Bestandsaufnahme erhalten Sie einen konkreten Ablaufplan.</p>
+        <p><strong>Was kostet eine Badsanierung?</strong> Die Kosten hängen von Größe, Ausstattung und Umfang ab. Transparente Einschätzung nach Sichtung.</p>
+        
+        <p><a href="/termin">Beratung buchen</a> | <a href="tel:+4989444438872">089 444438872</a></p>
+      </section>
+    `
+  },
   '/fussbodenheizung': {
     title: 'Fußbodenheizung München – Installation & Reparatur | AquaPro 24',
     description: 'Fußbodenheizung München: Installation, Reparatur, Spülung, Entlüftung. Festpreise ab 154€. Tel: 089 444438872',

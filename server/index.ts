@@ -187,7 +187,6 @@ app.use((req, res, next) => {
     '/bad-renovieren': '/badsanierung',
     '/bad-sanieren': '/badsanierung',
     '/badumbau': '/badsanierung',
-    '/badsanierung-muenchen': '/badsanierung',
     '/waermepumpen': '/waermepumpe',
     '/waermepumpen-muenchen': '/waermepumpe-muenchen',
     '/fussbodenheizung': '/fussbodenheizung-muenchen',
