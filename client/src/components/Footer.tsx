@@ -108,7 +108,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 lg:gap-4">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-4">
-              <a href="/" aria-label="AquaPro 24 Startseite">
+              <a href="/" aria-label="AquaPro 24 Startseite" className="flex items-center gap-3">
                 <img 
                   src={footerLogo} 
                   alt="AquaPro 24 München - Sanitärinstallateur und Heizungsinstallateur Partnernetzwerk seit 2005" 
@@ -119,6 +119,10 @@ export default function Footer() {
                   decoding="async"
                   data-testid="img-footer-logo"
                 />
+                <div>
+                  <span className="text-base font-bold text-background block">Münchner</span>
+                  <span className="text-xs text-background/70">Heizung & Sanitär</span>
+                </div>
               </a>
             </div>
             <p className="text-sm text-background/70 max-w-xs">
