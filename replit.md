@@ -40,6 +40,7 @@ Preferred communication style: Simple, everyday language.
 ### Key Design Decisions
 - **Monorepo Structure**: Client, server, and shared code within a single repository with path aliases.
 - **Type Safety**: Shared Zod schemas between frontend and backend.
+- **SEO Consolidation**: `shared/seoMeta.ts` is the single source of truth for page title, description, keywords, and h1 for all 33+ routes. Server (`seoContent.ts`) spreads from seoMeta, client pages import from `@shared/seoMeta`.
 - **Lead Capture**: Multi-step conversational chatbot widget with webhook integration.
 - **German Localization**: All UI text is in German, targeting the Munich local market.
 - **Mobile-First**: Responsive design with mobile breakpoint detection.
