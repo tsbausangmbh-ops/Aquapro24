@@ -138,6 +138,12 @@ img[loading="lazy"] {
   contain: layout style;
 }
 
+/* Hero-Sections: kompaktes Padding oben für alle Bildschirmgrößen */
+main > section.relative.overflow-hidden {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
 /* Header braucht contain: none für Dropdown-Menüs */
 header.sticky {
   contain: none;
