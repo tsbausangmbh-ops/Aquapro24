@@ -205,7 +205,7 @@ export default function FAQPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_faq" alt="" />
           <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">

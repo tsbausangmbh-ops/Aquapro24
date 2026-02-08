@@ -207,7 +207,7 @@ export default function FoerderantragPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_foerderantrag" alt="" />
           <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">

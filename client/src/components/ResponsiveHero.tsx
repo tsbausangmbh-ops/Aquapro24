@@ -167,7 +167,7 @@ export default function HeroBackground({ heroKey, gradient, className, children 
   const defaultGradient = "bg-gradient-to-r from-black/85 via-black/70 to-black/50";
 
   return (
-    <section className={`relative py-6 lg:py-8 overflow-hidden ${className || ""}`}>
+    <section className={`hero-section relative py-6 lg:py-8 overflow-hidden ${className || ""}`}>
       <HeroPicture heroKey={heroKey} />
       <div className={`hero-gradient absolute inset-0 ${gradient || defaultGradient}`} />
       {children}
