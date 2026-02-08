@@ -191,7 +191,7 @@ header.sticky {
 
   main > section.relative.overflow-hidden {
     min-height: 280px !important;
-    padding-top: 1rem !important;
+    padding-top: 2rem !important;
     padding-bottom: 0.5rem !important;
   }
 
