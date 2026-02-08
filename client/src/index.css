@@ -138,14 +138,8 @@ img[loading="lazy"] {
   contain: layout style;
 }
 
-/* Abstand zwischen Header und Hero-Section */
-main#main-content {
-  margin-top: 2rem !important;
-}
-
 /* Hero-Sections: internes Padding */
 main > section.relative.overflow-hidden {
-  padding-top: 2rem !important;
   padding-bottom: 0.75rem !important;
 }
 
@@ -196,9 +190,7 @@ header.sticky {
 
   main > section.relative.overflow-hidden {
     min-height: 280px !important;
-    padding-top: 2rem !important;
     padding-bottom: 0.5rem !important;
-    margin-top: 0 !important;
   }
 
   .gap-4 {
