@@ -185,9 +185,8 @@ header.sticky {
 
   main > section.relative.overflow-hidden {
     min-height: 280px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
 
   .gap-4 {
