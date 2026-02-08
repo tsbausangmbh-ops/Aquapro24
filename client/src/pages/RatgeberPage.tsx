@@ -248,8 +248,8 @@ export default function RatgeberPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Sanitär Ratgeber München | Profi-Tipps"
-        description="Sanitär Ratgeber München: Tipps zu Heizung, Bad & Haustechnik – Expertenwissen für Hausbesitzer."
+        title="Ratgeber München – Expertentipps Sanitär & Heizung | AquaPro 24"
+        description="Ratgeber für Sanitär & Heizung: Tipps zu Wasserschaden, Badsanierung, Heizungswartung, Wärmepumpe. Expertenwissen von AquaPro 24."
         canonical="https://aquapro24.de/ratgeber"
         keywords="Wasserschaden Erste Hilfe München, Heizung richtig entlüften Anleitung, Badsanierung planen Checkliste, Wärmepumpe Förderung 2025 beantragen, Heizkosten sparen Tipps München, Rohrbruch was tun Soforthilfe, BAFA Antrag richtig stellen"
         ogImageAlt="Ratgeber Sanitär Heizung München Tipps Anleitungen Kosten - Experten Wissen Hausbesitzer"
