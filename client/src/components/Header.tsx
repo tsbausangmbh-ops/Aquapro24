@@ -114,8 +114,8 @@ export default function Header() {
       
       <header className="sticky top-0 z-[60] bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between gap-2 md:gap-4 h-12 md:h-16">
-            <Link href="/" className="flex items-center gap-1.5 md:gap-2" aria-label="AquaPro 24 - Zur Startseite">
+          <div className="flex items-center justify-between gap-2 md:gap-4 h-12 md:h-16 relative">
+            <Link href="/" className="flex items-center gap-1.5 md:gap-2 xl:relative" aria-label="AquaPro 24 - Zur Startseite">
               <img 
                 src={logoImage} 
                 alt="Klempner München - AquaPro 24 Sanitär und Heizung Notdienst 24/7" 
@@ -127,11 +127,15 @@ export default function Header() {
                 {...{ fetchpriority: "high" } as any}
                 data-testid="img-header-logo"
               />
-              <div className="flex flex-col items-center xl:items-start">
+              <div className="hidden xl:flex flex-col items-start">
                 <span className="font-bold text-lg tracking-tight">Münchner</span>
                 <span className="text-xs text-muted-foreground -mt-0.5">Heizung & Sanitär</span>
               </div>
             </Link>
+            <div className="xl:hidden absolute left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+              <span className="font-bold text-lg tracking-tight">Münchner</span>
+              <span className="text-xs text-muted-foreground -mt-0.5">Heizung & Sanitär</span>
+            </div>
 
             <nav className="hidden xl:flex items-center gap-6" aria-label="Hauptnavigation">
               <Link 
