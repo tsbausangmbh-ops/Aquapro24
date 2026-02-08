@@ -41,21 +41,79 @@ export default function Hero() {
             Klempner München – Sanitär & Heizung Notdienst 24/7
           </h1>
           <div className="sr-only">
-            <span>Klempner München Notdienst 24h</span><span>·</span>
-            <span>Sanitär Notdienst ab 92€</span><span>·</span>
+            <span>Klempner München</span><span>·</span>
+            <span>Sanitärinstallateur München</span><span>·</span>
+            <span>Sanitärinstallateure München</span><span>·</span>
+            <span>Sanitär München</span><span>·</span>
+            <span>Installateur München</span><span>·</span>
+            <span>Klempner Notdienst München 24h</span><span>·</span>
+            <span>Sanitär Notdienst München</span><span>·</span>
+            <span>Sanitär Notdienst München 24h</span><span>·</span>
+            <span>Klempner München sofort</span><span>·</span>
+            <span>Notfall Klempner München</span><span>·</span>
+            <span>Klempner in meiner Nähe München</span><span>·</span>
+            <span>Gas Wasserinstallateur München</span><span>·</span>
+            <span>Anlagenmechaniker SHK München</span><span>·</span>
+            <span>SHK München</span><span>·</span>
+            <span>Heizungsbauer München</span><span>·</span>
+            <span>Heizungsinstallateur München</span><span>·</span>
             <span>Rohrreinigung München ab 81€</span><span>·</span>
-            <span>WC verstopft Soforthilfe</span><span>·</span>
-            <span>Rohrbruch reparieren München</span><span>·</span>
-            <span>Heizung reparieren ab 154€</span><span>·</span>
-            <span>Wasserhahn wechseln ab 80€</span><span>·</span>
-            <span>Durchlauferhitzer einbauen ab 600€</span><span>·</span>
+            <span>Sanitär Reparatur München ab 92€</span><span>·</span>
+            <span>Heizungsreparatur München ab 154€</span><span>·</span>
+            <span>Armaturen austauschen München ab 89€</span><span>·</span>
+            <span>Wasserhahn wechseln München</span><span>·</span>
+            <span>Wasserhahn tropft München</span><span>·</span>
+            <span>Mischbatterie wechseln München</span><span>·</span>
+            <span>Küchenarmatur wechseln München</span><span>·</span>
+            <span>Kleinteile Dienst München</span><span>·</span>
+            <span>Dichtung wechseln München</span><span>·</span>
+            <span>Siphon wechseln München</span><span>·</span>
+            <span>Eckventil tauschen München</span><span>·</span>
+            <span>WC verstopft München Soforthilfe</span><span>·</span>
+            <span>Toilette verstopft München</span><span>·</span>
+            <span>Abfluss verstopft München</span><span>·</span>
+            <span>Rohrbruch München</span><span>·</span>
+            <span>Wasserrohr geplatzt München</span><span>·</span>
+            <span>Wasserschaden München</span><span>·</span>
+            <span>Heizung ausgefallen München</span><span>·</span>
+            <span>Heizung defekt München</span><span>·</span>
+            <span>Heizung wird nicht warm München</span><span>·</span>
+            <span>Gastherme Störung München</span><span>·</span>
+            <span>Durchlauferhitzer München ab 120€</span><span>·</span>
+            <span>Boiler reparieren München</span><span>·</span>
+            <span>kein Warmwasser München</span><span>·</span>
             <span>Badsanierung München ab 16.000€</span><span>·</span>
-            <span>Wärmepumpe 70% BAFA-Förderung</span><span>·</span>
-            <span>Grohe Hansgrohe Geberit Montage</span><span>·</span>
-            <span>Viessmann Vaillant Buderus Wolf</span><span>·</span>
-            <span>Installateur Schwabing Bogenhausen</span><span>·</span>
-            <span>2.800+ zufriedene Kunden</span><span>·</span>
-            <span>Seit 2005 in München</span>
+            <span>barrierefreies Bad München</span><span>·</span>
+            <span>Wärmepumpe München BAFA 70% 2026</span><span>·</span>
+            <span>Fußbodenheizung München</span><span>·</span>
+            <span>Grohe Hansgrohe Geberit HANSA Montage</span><span>·</span>
+            <span>Viessmann Vaillant Buderus Wolf Junkers</span><span>·</span>
+            <span>Klempner München Kosten</span><span>·</span>
+            <span>Klempner München Preise</span><span>·</span>
+            <span>Klempner München Festpreis</span><span>·</span>
+            <span>Klempner München Bewertungen</span><span>·</span>
+            <span>Klempner München Empfehlung</span><span>·</span>
+            <span>bester Klempner München</span><span>·</span>
+            <span>Klempner München seriös</span><span>·</span>
+            <span>Klempner München ohne Abzocke</span><span>·</span>
+            <span>Klempner München Wochenende</span><span>·</span>
+            <span>Klempner München Feiertag</span><span>·</span>
+            <span>Klempner München Nacht</span><span>·</span>
+            <span>Sanitär Notdienst München Festpreis</span><span>·</span>
+            <span>Sanitär Notdienst München seriös</span><span>·</span>
+            <span>Klempner Schwabing</span><span>·</span>
+            <span>Klempner Bogenhausen</span><span>·</span>
+            <span>Klempner Sendling</span><span>·</span>
+            <span>Klempner Pasing</span><span>·</span>
+            <span>Klempner Haidhausen</span><span>·</span>
+            <span>Klempner Neuhausen</span><span>·</span>
+            <span>Klempner Maxvorstadt</span><span>·</span>
+            <span>Klempner Laim</span><span>·</span>
+            <span>Klempner Giesing</span><span>·</span>
+            <span>Klempner Trudering</span><span>·</span>
+            <span>2.800+ zufriedene Kunden seit 2005</span><span>·</span>
+            <span>4,9 Sterne Google-Bewertung München</span><span>·</span>
+            <span>Meisterbetrieb Partnernetzwerk München</span>
           </div>
           
           <p className="text-sm sm:text-base text-white/90 mb-4">

@@ -63,33 +63,53 @@ export const seoPages: Record<string, PageSEO> = {
     ...seoMeta['/'],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <p style="font-size:20px;line-height:1.6">Willkommen bei AquaPro 24 – Ihrem zuverlässigen Partnernetzwerk für <strong>Sanitär, Heizung und Badsanierung</strong> in München und Umgebung. Seit 2005 sind wir für über 2.847 zufriedene Kunden im Einsatz.</p>
+        <p style="font-size:20px;line-height:1.6">Willkommen bei AquaPro 24 – Ihrem zuverlässigen <strong>Klempner & Sanitärinstallateur in München</strong>. Unser Partnernetzwerk bietet seit 2005 professionellen Service für <strong>Sanitär, Heizung und Badsanierung</strong> in München und Umgebung. Über 2.847 zufriedene Kunden vertrauen uns.</p>
         
-        <h2>Unsere Leistungen in München</h2>
+        <h2>Klempner München: Unsere Leistungen 2026</h2>
         <ul style="line-height:2">
-          <li><a href="/sanitaer"><strong>Sanitär München</strong></a> – Rohrreinigung, Armaturen, Wasserschaden ab 81€</li>
-          <li><a href="/heizung"><strong>Heizung München</strong></a> – Wartung, Reparatur, Austausch ab 154€</li>
-          <li><a href="/bad"><strong>Badsanierung München</strong></a> – Komplettumbau aus einer Hand</li>
-          <li><a href="/waermepumpe"><strong>Wärmepumpe München</strong></a> – bis 70% BAFA Förderung 2026</li>
-          <li><a href="/notdienst-muenchen"><strong>24/7 Notdienst</strong></a> – Soforthilfe bei Rohrbruch & Heizungsausfall</li>
+          <li><a href="/sanitaer"><strong>Sanitärinstallateur München</strong></a> – Rohrreinigung, Armaturen austauschen, Wasserschaden, WC Reparatur ab 81€</li>
+          <li><a href="/armaturen"><strong>Armaturen & Wasserhahn wechseln München</strong></a> – Grohe, Hansgrohe, HANSA Montage, Kleinteile-Service ab 89€</li>
+          <li><a href="/rohrreinigung"><strong>Rohrreinigung München</strong></a> – Abfluss verstopft, WC verstopft, Kanalreinigung ab 81€</li>
+          <li><a href="/heizung"><strong>Heizungsreparatur München</strong></a> – Wartung, Reparatur, Austausch aller Marken ab 154€</li>
+          <li><a href="/bad"><strong>Badsanierung München</strong></a> – Komplettumbau, barrierefreies Bad, KfW-Förderung</li>
+          <li><a href="/waermepumpe"><strong>Wärmepumpe München</strong></a> – Einbau, BAFA-Förderung bis 70%, KfW 458</li>
+          <li><a href="/warmwasser"><strong>Durchlauferhitzer & Boiler München</strong></a> – Reparatur, Installation, kein Warmwasser</li>
+          <li><a href="/fussbodenheizung"><strong>Fußbodenheizung München</strong></a> – Nachrüsten, Spülung, Reparatur</li>
+          <li><a href="/notdienst-muenchen"><strong>Klempner Notdienst München 24/7</strong></a> – Rohrbruch, Wasserschaden, Heizungsausfall</li>
         </ul>
         
-        <h2>Warum AquaPro 24?</h2>
+        <h2>Sanitärinstallateur München – Armaturen, Kleinteile & Reparaturen</h2>
+        <p>Unser <strong>Sanitärinstallateur-Service</strong> in München umfasst alle Arbeiten rund um Ihre Sanitäranlagen: <strong>Wasserhahn wechseln</strong>, Mischbatterie austauschen, Küchenarmatur montieren, Duscharmatur reparieren. Auch für <strong>Kleinteile-Dienst</strong>: Dichtung wechseln, Siphon tauschen, Eckventil erneuern, Perlator wechseln. Wir arbeiten mit allen Marken: Grohe, Hansgrohe, HANSA, Geberit, Ideal Standard.</p>
+        
+        <h2>Klempner München Kosten & Preise 2026</h2>
         <ul style="line-height:2">
-          <li>✓ Über 2.847 zufriedene Kunden</li>
-          <li>✓ 4.9/5 Sterne Bewertung</li>
-          <li>✓ Partnernetzwerk seit 2005</li>
+          <li><strong>Rohrreinigung München:</strong> ab 81€ Festpreis</li>
+          <li><strong>Armaturen wechseln:</strong> ab 89€ inkl. Montage</li>
+          <li><strong>Sanitär Reparatur:</strong> ab 92€ (Kleinteile, Dichtung, Siphon)</li>
+          <li><strong>Heizungsreparatur:</strong> ab 154€ alle Marken</li>
+          <li><strong>Durchlauferhitzer:</strong> ab 120€ Reparatur</li>
+          <li><strong>Notdienst München:</strong> Festpreis ohne Nacht-/Wochenendaufschlag</li>
+        </ul>
+        
+        <h2>Warum AquaPro 24 – Ihr Klempner in München?</h2>
+        <ul style="line-height:2">
+          <li>✓ Über 2.847 zufriedene Kunden seit 2005</li>
+          <li>✓ 4,9/5 Sterne Google-Bewertung</li>
+          <li>✓ Geprüfte Sanitärinstallateure & Heizungsbauer</li>
           <li>✓ Festpreisgarantie – keine versteckten Kosten</li>
           <li>✓ 2 Jahre Garantie auf alle Arbeiten</li>
-          <li>✓ Anfahrt in 45-60 Minuten im Großraum München</li>
+          <li>✓ Anfahrt in 30-45 Minuten im Großraum München</li>
+          <li>✓ 24/7 Notdienst – auch Wochenende & Feiertag</li>
+          <li>✓ Seriös & ohne Abzocke – transparente Preise</li>
         </ul>
         
-        <h2>Einsatzgebiet: Ganz München + 40km Umkreis</h2>
-        <p>Wir sind in allen Münchner Stadtteilen für Sie da: <a href="/schwabing">Schwabing</a>, <a href="/bogenhausen">Bogenhausen</a>, <a href="/sendling">Sendling</a>, <a href="/pasing">Pasing</a>, <a href="/maxvorstadt">Maxvorstadt</a>, <a href="/haidhausen">Haidhausen</a>, <a href="/neuhausen">Neuhausen</a>, <a href="/trudering">Trudering</a>, <a href="/laim">Laim</a>, <a href="/giesing">Giesing</a>, <a href="/moosach">Moosach</a>, <a href="/milbertshofen">Milbertshofen</a> und weitere.</p>
-        <p>Außerdem: Dachau, Freising, Starnberg, Fürstenfeldbruck, Erding, Garching, Unterschleißheim.</p>
+        <h2>Klempner München: Alle Stadtteile</h2>
+        <p>Unser <strong>Sanitärinstallateur</strong> ist in allen Münchner Stadtteilen für Sie da:</p>
+        <p><a href="/schwabing">Klempner Schwabing</a>, <a href="/bogenhausen">Klempner Bogenhausen</a>, <a href="/sendling">Klempner Sendling</a>, <a href="/pasing">Klempner Pasing</a>, <a href="/maxvorstadt">Klempner Maxvorstadt</a>, <a href="/haidhausen">Klempner Haidhausen</a>, <a href="/neuhausen">Klempner Neuhausen</a>, <a href="/nymphenburg">Klempner Nymphenburg</a>, <a href="/lehel">Klempner Lehel</a>, <a href="/trudering">Klempner Trudering</a>, <a href="/laim">Klempner Laim</a>, <a href="/giesing">Klempner Giesing</a>, <a href="/moosach">Klempner Moosach</a>, <a href="/milbertshofen">Klempner Milbertshofen</a>, <a href="/perlach">Klempner Perlach</a>, <a href="/solln">Klempner Solln</a>, <a href="/au">Klempner Au</a>, <a href="/berg-am-laim">Klempner Berg am Laim</a>, <a href="/schwanthalerhoehe">Klempner Schwanthalerhöhe</a>, <a href="/thalkirchen">Klempner Thalkirchen</a>, <a href="/ramersdorf">Klempner Ramersdorf</a>, <a href="/allach">Klempner Allach</a>, <a href="/aubing">Klempner Aubing</a>, <a href="/feldmoching">Klempner Feldmoching</a>, <a href="/freimann">Klempner Freimann</a>, <a href="/hadern">Klempner Hadern</a></p>
+        <p>Außerdem: Dachau, Freising, Starnberg, Fürstenfeldbruck, Erding, Garching, Unterschleißheim, Ottobrunn, Germering.</p>
         
-        <h2>Jetzt Termin buchen</h2>
-        <p>Buchen Sie Ihren <a href="/termin"><strong>Wunschtermin online</strong></a> oder rufen Sie uns an: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
+        <h2>Klempner München – Jetzt Termin buchen</h2>
+        <p>Buchen Sie Ihren <a href="/termin"><strong>Wunschtermin online</strong></a> oder rufen Sie Ihren <strong>Sanitärinstallateur in München</strong> direkt an: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
       </section>
     `
   },
@@ -110,35 +130,48 @@ export const seoPages: Record<string, PageSEO> = {
     ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <p style="font-size:20px">Professionelle <strong>Sanitärinstallationen</strong> in München – von der Rohrreinigung bis zur kompletten Wasserinstallation. Schnelle Hilfe bei Notfällen, faire Festpreise.</p>
+        <p style="font-size:20px">Ihr <strong>Sanitärinstallateur in München</strong> – professionelle Sanitärinstallationen von der Rohrreinigung über Armaturen austauschen bis zur kompletten Wasserinstallation. Schnelle Hilfe bei Notfällen, faire Festpreise, 24/7 Notdienst.</p>
         
-        <h2>Sanitär-Leistungen München: Komplett-Service</h2>
+        <h2>Sanitärinstallateur München: Komplett-Service 2026</h2>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrreinigung München</strong></span>: Abfluss verstopft Soforthilfe ab 81€</h3>
-        <p>Professionelle Rohrreinigung mit Spirale oder Hochdruck. Küche, Bad, WC – schnelle Hilfe bei verstopften Abflüssen.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrreinigung München</strong></span> – Abfluss verstopft Soforthilfe ab 81€</h3>
+        <p>Professionelle <strong>Rohrreinigung</strong> mit Spirale oder Hochdruck. Küche, Bad, WC, Dusche – schnelle Hilfe bei verstopften Abflüssen. Kanalreinigung, TV-Kanalinspektion, Hochdruckspülung. <a href="/rohrreinigung">Mehr zur Rohrreinigung München</a></p>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Wasserhahn wechseln München</strong></span>: Armaturen Montage & Reparatur</h3>
-        <p>Wasserhahn tropft? Mischbatterie defekt? Wir montieren alle Armaturen-Marken: Grohe, Hansgrohe, HANSA.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Armaturen austauschen München</strong></span> – Wasserhahn wechseln & Montage ab 89€</h3>
+        <p><strong>Wasserhahn tropft</strong>? Mischbatterie defekt? Küchenarmatur wechseln? Unser Sanitärinstallateur montiert alle Armaturen-Marken: Grohe, Hansgrohe, HANSA, Geberit, Ideal Standard, Blanco. Einhebelmischer, Thermostatarmatur, Niederdruck-Armatur. <a href="/armaturen">Mehr zu Armaturen München</a></p>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrbruch München</strong></span>: Notdienst & Leckortung</h3>
-        <p>Wasserschaden durch Rohrbruch? Leckortung ohne Aufbruch, schnelle Reparatur, Trocknungsservice.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Kleinteile-Dienst München</strong></span> – Dichtung, Siphon, Eckventil ab 45€</h3>
+        <p>Schneller <strong>Kleinteile-Service</strong> vom Sanitärinstallateur: Dichtung wechseln, Siphon tauschen, Eckventil erneuern, Perlator wechseln, Brauseschlauch erneuern. Kleinreparaturen schnell & günstig.</p>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>WC Installation München</strong></span>: Toilette montieren & reparieren</h3>
-        <p>Toilette läuft? Spülkasten defekt? Neue WC-Installation? Wir helfen schnell und zuverlässig.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrbruch München</strong></span> – Notdienst & Leckortung 24/7</h3>
+        <p><strong>Wasserschaden</strong> durch Rohrbruch? Wasserrohr geplatzt? Leckortung ohne Aufbruch, schnelle Reparatur, Trocknungsservice. <a href="/sanitaer-notdienst-24">Sanitär Notdienst 24/7</a></p>
         
-        <h2>Sanitär Preise München: Festpreisgarantie</h2>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>WC & Toilette München</strong></span> – Installation, Reparatur & Verstopfung</h3>
+        <p><strong>Toilette verstopft</strong>? WC Spülkasten defekt? Toilette läuft nach? Neue WC-Installation, Wand-WC montieren, Geberit Unterputz-Spülkasten. Schnell und zuverlässig.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Waschbecken & Spüle München</strong></span> – Montage & Anschluss</h3>
+        <p>Waschbecken montieren, Spüle einbauen, Küchenspüle anschließen. Sanitärinstallateur für Neuinstallation und Austausch in München.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Wasserleitung München</strong></span> – Reparatur & Installation</h3>
+        <p>Wasserleitung reparieren, Wasseranschluss herstellen, Wasserfilter einbauen. Gas Wasserinstallateur für alle Leitungsarbeiten.</p>
+        
+        <h2>Sanitär München Kosten & Preise 2026</h2>
         <ul>
-          <li>Rohrreinigung: ab 81€ netto</li>
-          <li>Sanitär-Reparaturen: ab 92€ netto</li>
-          <li>Anfahrt München: 39€</li>
+          <li><strong>Rohrreinigung München:</strong> ab 81€ Festpreis</li>
+          <li><strong>Armaturen wechseln:</strong> ab 89€ inkl. Montage</li>
+          <li><strong>Kleinteile-Dienst:</strong> ab 45€ (Dichtung, Siphon, Eckventil)</li>
+          <li><strong>Sanitär-Reparaturen:</strong> ab 92€ Festpreis</li>
+          <li><strong>WC-Reparatur:</strong> ab 92€ Festpreis</li>
+          <li><strong>Anfahrt München:</strong> 39€</li>
+          <li><strong>Notdienst:</strong> kein Nacht-/Wochenendaufschlag</li>
         </ul>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Sanitär Garantie München</strong></span>: 2 Jahre auf alle Arbeiten</h3>
-        <p>Wir geben 2 Jahre Garantie auf alle Sanitär-Arbeiten. Faire Festpreise ohne versteckte Kosten.</p>
+        <h2>Sanitärinstallateur München – Garantie & Qualität</h2>
+        <p>2 Jahre Garantie auf alle Arbeiten. Geprüfte Sanitärinstallateure im Partnernetzwerk. Festpreise ohne versteckte Kosten. Seit 2005, 2.800+ zufriedene Kunden, 4,9 Sterne.</p>
         
-        <h2>24/7 Sanitär Notdienst München: Soforthilfe</h2>
-        <p>Rohrbruch? Wasserschaden? Wir sind rund um die Uhr für Sie da: <a href="tel:+4989444438872"><strong>089 444438872</strong></a></p>
-        <p><a href="/termin">Online Termin buchen</a> | <a href="/notdienst-muenchen">Notdienst Info</a></p>
+        <h2>Sanitär Notdienst München 24/7</h2>
+        <p>Rohrbruch? WC verstopft? Wasserschaden? Ihr <strong>Sanitärinstallateur</strong> ist rund um die Uhr für Sie da – auch nachts, am Wochenende und Feiertag. Seriös & ohne Abzocke.</p>
+        <p>Jetzt anrufen: <a href="tel:+4989444438872"><strong>089 444438872</strong></a> | <a href="/termin">Online Termin buchen</a></p>
       </section>
     `
   },
@@ -1063,37 +1096,87 @@ export const stadtteileData = [
 // Add all Stadtteil pages to seoPages
 stadtteileData.forEach(st => {
   seoPages[`/${st.slug}`] = {
-    title: `Klempner ${st.name} München – Sanitär, Heizung & Notdienst 24/7 | AquaPro 24`,
-    description: `Klempner in ${st.name} (${st.plz}): Sanitär, Heizung, Notdienst 24/7. Anfahrt 30-45 Min. Festpreise. Tel: 089 444438872`,
-    h1: `Klempner ${st.name} München – Sanitär, Heizung & Notdienst 24/7`,
-    keywords: [`Klempner ${st.name}`, `Sanitär ${st.name}`, `Heizung ${st.name}`, `Notdienst ${st.name}`],
+    title: `Klempner ${st.name} München | Sanitärinstallateur Notdienst 24/7 Festpreis 2026 | AquaPro 24`,
+    description: `Klempner ${st.name} München ✓ Sanitärinstallateur ✓ Notdienst 24/7 ✓ Rohrreinigung ab 81€ ✓ Heizungsreparatur ab 154€ ✓ Armaturen ✓ 30 Min Anfahrt ${st.plz}. Tel: 089 444438872`,
+    h1: `Klempner ${st.name} München – Sanitärinstallateur & Notdienst 24/7`,
+    keywords: [
+      `Klempner ${st.name}`, `Klempner ${st.name} München`, `Klempner München ${st.name}`,
+      `Sanitär ${st.name}`, `Sanitär ${st.name} München`, `Sanitärinstallateur ${st.name}`,
+      `Sanitärinstallateur ${st.name} München`, `Sanitärinstallateure ${st.name}`,
+      `Installateur ${st.name}`, `Installateur ${st.name} München`,
+      `Heizung ${st.name}`, `Heizung ${st.name} München`, `Heizungsreparatur ${st.name}`,
+      `Heizungswartung ${st.name}`, `Heizungsbauer ${st.name}`, `Heizungsinstallateur ${st.name}`,
+      `Notdienst ${st.name}`, `Notdienst ${st.name} München`, `Klempner Notdienst ${st.name}`,
+      `Sanitär Notdienst ${st.name}`, `Heizung Notdienst ${st.name}`,
+      `Rohrreinigung ${st.name}`, `Rohrreinigung ${st.name} München`,
+      `Abfluss verstopft ${st.name}`, `WC verstopft ${st.name}`, `Toilette verstopft ${st.name}`,
+      `Rohrbruch ${st.name}`, `Rohrbruch ${st.name} München`,
+      `Wasserschaden ${st.name}`, `Wasserschaden ${st.name} München`,
+      `Armaturen ${st.name}`, `Wasserhahn wechseln ${st.name}`, `Armaturen austauschen ${st.name}`,
+      `Badsanierung ${st.name}`, `Badsanierung ${st.name} München`, `Badumbau ${st.name}`,
+      `Wärmepumpe ${st.name}`, `Wärmepumpe ${st.name} München`,
+      `Durchlauferhitzer ${st.name}`, `Boiler ${st.name}`, `kein Warmwasser ${st.name}`,
+      `Fußbodenheizung ${st.name}`, `Fußbodenheizung ${st.name} München`,
+      `Gas Wasserinstallateur ${st.name}`, `SHK ${st.name}`,
+      `Klempner ${st.plz}`, `Sanitär ${st.plz}`, `Installateur ${st.plz}`,
+      `Handwerker ${st.name} München`, `Klempner in der Nähe ${st.name}`,
+    ],
     content: `
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
-        <p style="font-size:20px"><strong>Klempner in ${st.name}</strong> – Schneller Sanitär- und Heizungsservice für ${st.plz} München.</p>
+        <p style="font-size:20px"><strong>Klempner & Sanitärinstallateur in ${st.name}</strong> – Ihr zuverlässiger Sanitär- und Heizungsservice für ${st.plz} München. Festpreise, schnelle Anfahrt, 24/7 Notdienst.</p>
         
-        <h2>Sanitär & Heizung ${st.name}: Unsere Leistungen</h2>
+        <h2>Sanitärinstallateur ${st.name} München: Alle Leistungen 2026</h2>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrreinigung ${st.name} München</strong></span>: Abfluss verstopft Soforthilfe</h3>
-        <p>Professionelle Rohrreinigung in ${st.name}. Küche, Bad, WC – schnelle Hilfe ab 81€.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Rohrreinigung ${st.name} München</strong></span> – Abfluss verstopft? Soforthilfe ab 81€</h3>
+        <p>Professionelle Rohrreinigung in ${st.name} (${st.plz}): Küche, Bad, WC, Dusche – schnelle Hilfe bei verstopftem Abfluss. Kanalreinigung, TV-Inspektion, Hochdruckspülung. Festpreis ab 81€, Anfahrt in 30 Minuten.</p>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Heizungsreparatur ${st.name} München</strong></span>: Alle Marken</h3>
-        <p>Heizungsservice in ${st.name}: Viessmann, Buderus, Vaillant, Wolf. Reparatur ab 154€.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Armaturen & Wasserhahn wechseln ${st.name}</strong></span> – Montage ab 89€</h3>
+        <p>Armaturen austauschen in ${st.name}: Wasserhahn, Mischbatterie, Küchenarmatur, Duscharmatur. Grohe, Hansgrohe, HANSA Montage. Kleinteile-Service: Dichtung, Siphon, Eckventil, Perlator wechseln.</p>
         
-        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Notdienst ${st.name} München</strong></span>: 24/7 Soforthilfe</h3>
-        <p>Rohrbruch oder Heizungsausfall in ${st.name}? Wir sind in 30-45 Minuten bei Ihnen.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Sanitärinstallation ${st.name} München</strong></span> – Komplett-Service</h3>
+        <p>Sanitärinstallateur in ${st.name}: Waschbecken montieren, WC einbauen, Spüle anschließen, Dusche installieren, Wasseranschluss herstellen. Reparatur & Neuinstallation.</p>
         
-        <h2>Klempner ${st.name}: Unsere Garantie</h2>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Heizungsreparatur ${st.name} München</strong></span> – Alle Marken ab 154€</h3>
+        <p>Heizungsservice in ${st.name}: Viessmann, Buderus, Vaillant, Wolf, Junkers. Wartung, Reparatur, Austausch. Gastherme, Brennwerttherme, Ölheizung. Heizkörper tauschen, Thermostat wechseln, Heizung entlüften.</p>
         
-        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Handwerker Garantie ${st.name} München</strong></span>: Ihr Sicherheitsversprechen</h3>
-        <p>2 Jahre Garantie auf alle Arbeiten. Festpreise ohne versteckte Kosten. 4.9/5 Sterne Bewertung.</p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Wärmepumpe ${st.name} München</strong></span> – BAFA-Förderung bis 70%</h3>
+        <p>Wärmepumpe installieren in ${st.name}: Luft-Wasser-Wärmepumpe, Erdwärmepumpe. BAFA-Förderung 2026 bis 70%, KfW 458 Kredit. Kostenlose Beratung.</p>
         
-        <h2>Anfahrtszeit ${st.name}: 30-45 Minuten</h2>
-        <p>Wir sind in ${st.name} (${st.plz}) schnell für Sie da.</p>
-        <p>Jetzt anrufen: <a href="tel:+4989444438872"><strong>089 444438872</strong></a> | <a href="/termin">Termin buchen</a></p>
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Badsanierung ${st.name} München</strong></span> – Komplettumbau</h3>
+        <p>Badsanierung in ${st.name}: Badumbau, barrierefreies Bad, bodengleiche Dusche, Badewanne zu Dusche. KfW-Förderung. Festpreis ab 16.000€.</p>
+        
+        <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Durchlauferhitzer & Boiler ${st.name}</strong></span> – Warmwasser-Service</h3>
+        <p>Kein Warmwasser in ${st.name}? Durchlauferhitzer reparieren, Boiler austauschen, Warmwasserspeicher einbauen. Stiebel Eltron, Vaillant, AEG. Ab 120€.</p>
+        
+        <h3><span style="background:#ffebee;padding:2px 6px;border-radius:4px"><strong>Notdienst ${st.name} München 24/7</strong></span> – Soforthilfe bei Rohrbruch & Heizungsausfall</h3>
+        <p>Klempner Notdienst in ${st.name}: Rohrbruch, Wasserschaden, WC verstopft, Heizung ausgefallen. 24/7 erreichbar, 30 Minuten Anfahrt, Festpreis, seriös & ohne Abzocke. Auch nachts, Wochenende & Feiertag.</p>
+        
+        <h2>Klempner ${st.name}: Preise & Kosten 2026</h2>
+        <ul>
+          <li><strong>Rohrreinigung ${st.name}:</strong> ab 81€ (Küche, Bad, WC)</li>
+          <li><strong>Armaturen wechseln ${st.name}:</strong> ab 89€ (Wasserhahn, Mischbatterie)</li>
+          <li><strong>Sanitär Reparatur ${st.name}:</strong> ab 92€ (Dichtung, Siphon, Kleinteile)</li>
+          <li><strong>Heizungsreparatur ${st.name}:</strong> ab 154€ (alle Marken)</li>
+          <li><strong>Durchlauferhitzer ${st.name}:</strong> ab 120€ (Reparatur & Austausch)</li>
+          <li><strong>Notdienst ${st.name}:</strong> Festpreis, kein Nacht-/Wochenendaufschlag</li>
+        </ul>
+        
+        <h2>Warum AquaPro 24 in ${st.name}?</h2>
+        <ul>
+          <li>✓ <strong>2.800+ zufriedene Kunden</strong> in München seit 2005</li>
+          <li>✓ <strong>4,9 Sterne</strong> Google-Bewertung</li>
+          <li>✓ <strong>Festpreis</strong> vor Arbeitsbeginn – ohne versteckte Kosten</li>
+          <li>✓ <strong>30 Min Anfahrt</strong> nach ${st.name} (${st.plz})</li>
+          <li>✓ <strong>2 Jahre Garantie</strong> auf alle Arbeiten</li>
+          <li>✓ <strong>Geprüfte Meisterbetriebe</strong> im Partnernetzwerk</li>
+        </ul>
+        
+        <h2>Anfahrtszeit ${st.name}: 30 Minuten</h2>
+        <p>Unser Klempner & Sanitärinstallateur ist in ${st.name} (${st.plz} München) schnell für Sie da – auch im Notdienst 24/7.</p>
+        <p><strong>Jetzt anrufen:</strong> <a href="tel:+4989444438872"><strong>089 444438872</strong></a> | <a href="/termin"><strong>Online Termin buchen</strong></a></p>
       </section>
     `
   };
-  // Also add /stadtteil/slug path
   seoPages[`/stadtteil/${st.slug}`] = seoPages[`/${st.slug}`];
 });
 
