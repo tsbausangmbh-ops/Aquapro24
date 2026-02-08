@@ -16,12 +16,32 @@ class AppErrorBoundary extends Component<{ children: ReactNode }, { hasError: bo
     return { hasError: true };
   }
   componentDidCatch(error: Error) {
-    if (
-      error.message?.includes("useContext") ||
-      error.message?.includes("useRef") ||
-      error.message?.includes("Invalid hook call")
-    ) {
-      window.location.reload();
+    const msg = error.message || "";
+    const isHookError =
+      msg.includes("useContext") ||
+      msg.includes("useRef") ||
+      msg.includes("useEffect") ||
+      msg.includes("useState") ||
+      msg.includes("useMemo") ||
+      msg.includes("useCallback") ||
+      msg.includes("Invalid hook call") ||
+      msg.includes("Cannot read properties of null");
+    if (isHookError) {
+      const key = "__reload_count";
+      const count = parseInt(sessionStorage.getItem(key) || "0", 10);
+      if (count < 3) {
+        sessionStorage.setItem(key, String(count + 1));
+        const clearAndReload = () => {
+          window.location.href = window.location.pathname + "?_t=" + Date.now();
+        };
+        if (typeof window !== "undefined" && "caches" in window) {
+          window.caches.keys().then((names: string[]) => {
+            Promise.all(names.map((n: string) => window.caches.delete(n))).then(clearAndReload);
+          }).catch(clearAndReload);
+        } else {
+          clearAndReload();
+        }
+      }
     }
   }
   render() {
