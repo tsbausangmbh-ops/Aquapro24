@@ -294,7 +294,7 @@ export default function Home() {
           <img
             src={heroImage}
             alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain md:object-cover object-top bg-black/90"
             width="1200"
             height="630"
             loading="eager"

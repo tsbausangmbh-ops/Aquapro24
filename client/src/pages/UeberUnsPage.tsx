@@ -303,8 +303,8 @@ export default function UeberUnsPage() {
         {/* Hero Section - H1 optimiert für SEO */}
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${teamImage})` }}
+            className="absolute inset-0 bg-contain md:bg-cover bg-top md:bg-center"
+            style={{ backgroundImage: `url(${teamImage})`, backgroundColor: '#1a1a1a' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
