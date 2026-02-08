@@ -2,32 +2,6 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <script>
-      (function() {
-        if (typeof caches !== 'undefined') {
-          caches.keys().then(function(names) {
-            for (var name of names) caches.delete(name);
-          });
-        }
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.getRegistrations().then(function(registrations) {
-            for (var registration of registrations) registration.unregister();
-          });
-        }
-        window.__REACT_ERROR_COUNT = 0;
-        window.addEventListener('error', function(e) {
-          if (e.message && e.message.indexOf('useRef') !== -1 && window.__REACT_ERROR_COUNT < 1) {
-            window.__REACT_ERROR_COUNT++;
-            console.log('[Cache-Fix] Stale module detected, forcing reload...');
-            sessionStorage.setItem('_cache_cleared', '1');
-            location.replace(location.pathname + '?_cb=' + Date.now());
-          }
-        });
-      })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Münchner Sanitär und Heizung – Klempner Notdienst 24/7</title>
     <meta name="description" content="Klempner &amp; Sanitär in München – 24h Notdienst bei Rohrbruch &amp; Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!" />
@@ -69,7 +43,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Performance: Preload kritische Ressourcen -->
-    <!-- modulepreload removed to prevent stale module caching -->
     <link rel="preload" href="/images/logo-fast.webp" as="image" type="image/webp" fetchpriority="high">
     
     <!-- Performance: Kritische CSS inline für schnelleren First Paint -->
@@ -444,7 +417,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx?v=20260208c"></script>
+    <script type="module" src="/src/main.tsx"></script>
     <!-- Google 2026: Speculation Rules API for instant navigation -->
     <script type="speculationrules">
     {
@@ -462,15 +435,5 @@
       ]
     }
     </script>
-    <!-- Service Worker deaktiviert - keine PWA -->
-    <!--
-    <script>
-      if('serviceWorker' in navigator){
-        window.addEventListener('load',()=>{
-          navigator.serviceWorker.register('/sw.js').catch(()=>{});
-        });
-      }
-    </script>
-    -->
   </body>
 </html>
