@@ -54,7 +54,7 @@ export default function Header() {
       >
         Zum Hauptinhalt springen
       </a>
-      <div className="bg-primary text-primary-foreground py-2" aria-label="Kontaktinformationen">
+      <div className="bg-primary text-primary-foreground py-1 md:py-2" aria-label="Kontaktinformationen">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-2 md:gap-4 text-sm">
             <div className="flex items-center gap-4 flex-wrap justify-center">
@@ -66,15 +66,12 @@ export default function Header() {
             </div>
             <a 
               href="tel:+4989444438872" 
-              className="flex flex-col items-center text-center hover:underline"
+              className="flex items-center gap-1.5 text-center hover:underline"
               data-testid="link-emergency-phone"
               aria-label="Jetzt anrufen: 089 444438872"
             >
-              <span className="text-xs text-primary-foreground/80" aria-hidden="true">Anrufen:</span>
-              <span className="font-bold text-base md:text-lg flex items-center gap-1">
-                <Phone className="w-4 h-4" aria-hidden="true" />
-                089 444438872
-              </span>
+              <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" aria-hidden="true" />
+              <span className="font-bold text-sm md:text-lg">089 444438872</span>
             </a>
           </div>
         </div>
@@ -82,17 +79,17 @@ export default function Header() {
       
       <header className="sticky top-0 z-[60] bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between gap-4 h-16">
-            <Link href="/" className="flex items-center gap-2" aria-label="AquaPro 24 - Zur Startseite">
+          <div className="flex items-center justify-between gap-2 md:gap-4 h-12 md:h-16">
+            <Link href="/" className="flex items-center gap-1.5 md:gap-2" aria-label="AquaPro 24 - Zur Startseite">
               <img 
                 src={logoImage} 
                 alt="Klempner München - AquaPro 24 Sanitär und Heizung Notdienst 24/7" 
-                className="h-14 w-auto object-contain rounded-xl"
+                className="h-10 md:h-14 w-auto object-contain rounded-xl"
                 width="180"
                 height="120"
                 loading="eager"
                 decoding="async"
-                fetchPriority="high"
+                {...{ fetchpriority: "high" } as any}
                 data-testid="img-header-logo"
               />
               <div>
@@ -300,7 +297,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div id="mobile-menu" className="xl:hidden absolute top-16 left-0 right-0 bg-background border-b border-border p-4 shadow-lg z-[70]">
+          <div id="mobile-menu" className="xl:hidden absolute top-12 md:top-16 left-0 right-0 bg-background border-b border-border p-3 md:p-4 shadow-lg z-[70] max-h-[70vh] overflow-y-auto">
             <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
               <Link
                 href="/"

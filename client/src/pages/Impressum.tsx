@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Mail, Phone, MapPin, FileText } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/hero_impressum.png";
+import { useHeroImage } from "@/components/ResponsiveHero";
 
 export default function Impressum() {
+  const heroSrc = useHeroImage("hero_impressum");
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -22,8 +23,8 @@ export default function Impressum() {
       <main id="main-content">
         <section className="relative py-8 lg:py-8 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-contain md:bg-cover bg-top md:bg-center"
-            style={{ backgroundImage: `url(${heroImage})`, backgroundColor: '#1a1a1a' }}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">

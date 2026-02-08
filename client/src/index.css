@@ -148,6 +148,34 @@ header.sticky {
   .grid {
     contain: layout style;
   }
+
+  section {
+    scroll-margin-top: 60px;
+  }
+
+  main > section h1,
+  main > div h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  main > section h2,
+  main > div h2 {
+    font-size: 1.375rem !important;
+    line-height: 1.25 !important;
+  }
+
+  main > section.mobile-compact {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Mobile: Floating CTA Platz am Seitenende */
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 4rem !important;
+  }
 }
 
 @keyframes fadeInUp {

@@ -25,7 +25,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/hero_home.png";
+import { useHeroImage } from "@/components/ResponsiveHero";
 import sanitaerImage from "@assets/stock_images/professional_plumber_39413514.webp";
 import rohrreinigungImage from "@assets/generated_images/drain_cleaning_machine_with_technician.webp";
 import badImage from "@assets/stock_images/modern_white_grey_ba_130a1b23.webp";
@@ -259,6 +259,8 @@ const faqItems = [
 ];
 
 export default function Home() {
+  const heroSrc = useHeroImage("hero_home");
+  
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -291,15 +293,11 @@ export default function Home() {
       
       <main id="main-content">
         <section className="relative py-6 lg:py-8 overflow-hidden">
-          <img
-            src={heroImage}
-            alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24"
-            className="absolute inset-0 w-full h-full object-contain md:object-cover object-top bg-black/90"
-            width="1200"
-            height="630"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
+            role="img"
+            aria-label="Klempner München - Sanitär und Heizung Notdienst AquaPro 24"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           

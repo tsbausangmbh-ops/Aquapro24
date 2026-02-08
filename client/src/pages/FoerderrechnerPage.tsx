@@ -11,7 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import heroImage from "@assets/hero_foerderrechner.png";
+import { useHeroImage } from "@/components/ResponsiveHero";
 import { 
   Calculator,
   Phone, 
@@ -38,6 +38,7 @@ import { Link } from "wouter";
 import FAQ from "@/components/FAQ";
 
 export default function FoerderrechnerPage() {
+  const heroSrc = useHeroImage("hero_foerderrechner");
   const [selectedMassnahmen, setSelectedMassnahmen] = useState<string[]>(["waermepumpe"]);
   const [gebaeudeAlter, setGebaeudeAlter] = useState("vor2024");
   const [einkommen, setEinkommen] = useState("ueber40000");
@@ -303,8 +304,8 @@ export default function FoerderrechnerPage() {
       <main id="main-content" className="flex-1">
         <section className="relative py-6 lg:py-8 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-contain md:bg-cover bg-top md:bg-center"
-            style={{ backgroundImage: `url(${heroImage})`, backgroundColor: '#1a1a1a' }}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
