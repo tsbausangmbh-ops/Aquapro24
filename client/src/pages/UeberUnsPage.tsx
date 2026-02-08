@@ -301,7 +301,7 @@ export default function UeberUnsPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section - H1 optimiert für SEO */}
-        <section className="relative pt-16 pb-6 lg:pt-20 lg:pb-8 overflow-hidden">
+        <section className="relative overflow-hidden" style={{paddingTop: "4rem", paddingBottom: "1.5rem"}}>
           <div 
             className="absolute inset-0 bg-contain md:bg-cover bg-top md:bg-center"
             style={{ backgroundImage: `url(${teamImage})`, backgroundColor: '#1a1a1a' }}
