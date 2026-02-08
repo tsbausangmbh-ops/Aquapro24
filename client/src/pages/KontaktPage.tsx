@@ -136,7 +136,7 @@ export default function KontaktPage() {
                 <Phone className="w-3 h-3" />
                 Kontakt
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                 Kontakt AquaPro 24 München – Kostenlose Beratung
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -161,7 +161,7 @@ export default function KontaktPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Festpreise</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">info@aquapro24.de</span>
               </div>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
                 <strong>Fragen zu Ihrem Projekt?</strong> Wir sind für Sie da - telefonisch, 
                 per E-Mail oder persönlich vor Ort.
               </p>
@@ -182,7 +182,7 @@ export default function KontaktPage() {
                     <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
                       <info.icon className="w-7 h-7 text-secondary" />
                     </div>
-                    <h3 className="font-semibold mb-2">{info.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{info.title}</h3>
                     {info.action ? (
                       <a 
                         href={info.action} 
@@ -206,7 +206,7 @@ export default function KontaktPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-3xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3">Sanitär Anfrage München: Schreiben Sie uns</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Sanitär Anfrage München: Schreiben Sie uns</h2>
               <p className="text-muted-foreground">
                 Haben Sie eine Frage oder möchten Sie ein Angebot? Wir antworten innerhalb von 24 Stunden.
               </p>
@@ -219,7 +219,7 @@ export default function KontaktPage() {
                     <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto">
                       <CheckCircle2 className="w-8 h-8 text-green-600 dark:text-green-400" />
                     </div>
-                    <h3 className="text-xl font-bold">Nachricht erfolgreich gesendet!</h3>
+                    <h3 className="text-lg sm:text-xl font-bold">Nachricht erfolgreich gesendet!</h3>
                     <p className="text-muted-foreground max-w-md mx-auto">
                       Vielen Dank für Ihre Anfrage. Unser Team hat Ihre Nachricht erhalten und meldet sich innerhalb von 24 Stunden bei Ihnen.
                     </p>
@@ -356,7 +356,7 @@ export default function KontaktPage() {
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <CalendarIcon className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Handwerker Termin München: Online Wunschtermin buchen
             </h2>
             <p className="text-lg mb-6 opacity-90">
@@ -373,7 +373,7 @@ export default function KontaktPage() {
         {/* Benefits Section */}
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold text-center mb-8">Klempner Service München: Das erwartet Sie bei AquaPro 24</h2>
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-8">Klempner Service München: Das erwartet Sie bei AquaPro 24</h2>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
               {[
@@ -401,7 +401,7 @@ export default function KontaktPage() {
                     <Shield className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
+                    <h3 className="text-base sm:text-lg font-bold">Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
                     <p className="text-sm text-muted-foreground">Auf alle unsere Arbeiten gewähren wir eine zweijährige Garantie.</p>
                   </div>
                 </CardContent>
@@ -414,7 +414,7 @@ export default function KontaktPage() {
                     <Star className="w-7 h-7 fill-yellow-400 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Klempner Bewertungen München: 4.9/5 Sterne</h3>
+                    <h3 className="text-base sm:text-lg font-bold">Klempner Bewertungen München: 4.9/5 Sterne</h3>
                     <p className="text-sm text-muted-foreground">Über 2.847 zufriedene Kunden in München vertrauen uns.</p>
                   </div>
                 </CardContent>

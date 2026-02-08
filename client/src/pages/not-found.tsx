@@ -21,7 +21,7 @@ export default function NotFound() {
           <CardContent className="pt-6 text-center">
             <div className="flex flex-col items-center gap-4 mb-6">
               <AlertCircle className="h-16 w-16 text-destructive" />
-              <h1 className="text-3xl font-bold">AquaPro 24 – Seite nicht gefunden</h1>
+              <h1 className="text-lg sm:text-xl lg:text-3xl font-bold">AquaPro 24 – Seite nicht gefunden</h1>
               <p className="text-muted-foreground">
                 Die angeforderte Seite existiert leider nicht oder wurde verschoben.
               </p>

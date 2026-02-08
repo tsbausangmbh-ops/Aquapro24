@@ -184,11 +184,11 @@ export default function WaermepumpePage() {
                 Bis 70% Förderung
               </Badge>
               
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Wärmepumpe München – bis 70% BAFA Förderung 2025
               </h1>
               
-              <p className="text-xl text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 Heizen Sie unabhängig, klimaneutral und sparen Sie bis zu 50% Heizkosten. 
                 Jetzt mit maximaler Förderung umsteigen.
               </p>
@@ -234,8 +234,8 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Wärmepumpe München: Preise & Services</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Wärmepumpe München: Preise & Services</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung über die Förderung bis zur Installation – alles aus einer Hand.
               </p>
             </div>
@@ -250,7 +250,7 @@ export default function WaermepumpePage() {
                       </div>
                       <Badge variant="secondary">{service.price}</Badge>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{service.title}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {service.features.map((feature, i) => (
@@ -271,8 +271,8 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Wärmepumpe Ablauf München: So läuft Ihr Projekt</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Wärmepumpe Ablauf München: So läuft Ihr Projekt</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Von der ersten Beratung bis zur laufenden Wärmepumpe – wir begleiten Sie.
               </p>
             </div>
@@ -284,7 +284,7 @@ export default function WaermepumpePage() {
                     <step.icon className="w-8 h-8 text-green-600" />
                   </div>
                   <div className="text-sm font-medium text-green-600 mb-2">Schritt {step.step}</div>
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -295,7 +295,7 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Wärmepumpe Vorteile München: Förderung & Ersparnis</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Wärmepumpe Vorteile München: Förderung & Ersparnis</h2>
               <p className="text-muted-foreground">
                 Warum sich der Umstieg auf eine Wärmepumpe jetzt lohnt.
               </p>
@@ -306,7 +306,7 @@ export default function WaermepumpePage() {
                 <Card key={index}>
                   <CardContent className="p-5 text-center">
                     <Shield className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -318,7 +318,7 @@ export default function WaermepumpePage() {
         <section className="py-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-2">Wärmepumpe Marken München: Viessmann & Vaillant</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">Wärmepumpe Marken München: Viessmann & Vaillant</h2>
               <p className="text-muted-foreground text-sm">
                 Wir installieren Wärmepumpen führender Hersteller.
               </p>
@@ -351,7 +351,7 @@ export default function WaermepumpePage() {
 
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
               Wärmepumpe München: Ihr Spezialist vor Ort
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -386,10 +386,10 @@ export default function WaermepumpePage() {
         <section className="py-6 lg:py-8 bg-muted/50">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Ihr kostenloses Angebot in 10 Schritten
             </h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            <p className="text-muted-foreground mb-4 sm:mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
             </p>
             <Suspense fallback={null}>
@@ -404,10 +404,10 @@ export default function WaermepumpePage() {
 
         <section className="py-6 bg-green-600 text-white">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Kostenlose Wärmepumpen-Beratung
             </h2>
-            <p className="text-white/80 mb-6 max-w-xl mx-auto">
+            <p className="text-white/80 mb-4 sm:mb-6 max-w-xl mx-auto">
               Ist Ihr Haus geeignet? Wie hoch ist Ihre Förderung? 
               Wir beantworten alle Fragen – kostenlos und unverbindlich.
             </p>

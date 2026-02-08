@@ -37,7 +37,7 @@ export default function PageCTA({
   return (
     <section className="py-6 bg-gradient-to-br from-secondary/10 via-background to-primary/5">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-3">
+        <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">
           {title}
         </h2>
         <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">

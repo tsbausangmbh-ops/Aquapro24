@@ -119,7 +119,7 @@ export default function FussbodenheizungMuenchenPage() {
                 <Thermometer className="w-3 h-3 mr-1" />
                 Fußbodenheizung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
                 Fußbodenheizung München – nachrüsten & verlegen vom Profi
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -144,7 +144,7 @@ export default function FussbodenheizungMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieeffizienz steigern</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Fußbodenheizung</span>
               </div>
-              <p className="text-lg text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 Fußbodenheizung bedeutet Komfort – aber nur, wenn Aufbauhöhe, Regelung und Untergrund 
                 richtig geplant sind. AquaPro 24 hilft in München bei Nachrüstung, Umbau und Integration 
                 in moderne Heizsysteme. Wir prüfen gemeinsam, was technisch sinnvoll ist und wie sich 
@@ -170,7 +170,7 @@ export default function FussbodenheizungMuenchenPage() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
               Fußbodenheizung nachrüsten München: Vorteile & Energieeffizienz
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -180,7 +180,7 @@ export default function FussbodenheizungMuenchenPage() {
                     <div className="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-6 h-6 text-amber-600" />
                     </div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -192,7 +192,7 @@ export default function FussbodenheizungMuenchenPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
                 Fußbodenheizung verlegen München: Anfrage & Beratungstermin
               </h2>
               <p className="text-center text-muted-foreground mb-8">
@@ -209,7 +209,7 @@ export default function FussbodenheizungMuenchenPage() {
               <div className="text-center">
                 <Card className="bg-amber-500/5 border-amber-500/20">
                   <CardContent className="pt-6">
-                    <p className="text-lg font-medium mb-4">
+                    <p className="text-sm sm:text-base lg:text-lg font-medium mb-4">
                       Schreiben Sie uns kurz Aufbau (Estrich/Belag), Fläche und Ziel (Nachrüstung/Komplettsanierung) – wir antworten mit Optionen.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">

@@ -998,7 +998,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <MapPin className="w-3 h-3 mr-1" />
                 München {data.name}
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
                 Klempner {data.name} München – Sanitär, Heizung & Notdienst
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -1018,7 +1018,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">faire Preise</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">lokaler Service</span>
               </div>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
                 {data.beschreibung}
               </p>
               <div className="flex items-center gap-4 text-white/80 mb-6">
@@ -1053,7 +1053,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-6">
               AquaPro 24 Sanitär & Heizung München {data.name}: Alle Leistungen im Überblick
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1064,7 +1064,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                         <service.icon className="w-5 h-5 text-primary" />
                       </div>
-                      <h3 className="font-semibold mb-1">{service.title}</h3>
+                      <h3 className="text-base sm:text-lg font-semibold mb-1">{service.title}</h3>
                       <p className="text-sm text-muted-foreground">{service.description}</p>
                     </CardContent>
                   </Card>
@@ -1078,7 +1078,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
                   AquaPro 24 Klempner München {data.name}: Warum Kunden uns empfehlen
                 </h2>
                 <ul className="space-y-3">
@@ -1109,7 +1109,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                       <Shield className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Handwerker Garantie {data.name} München: Ihr Sicherheitsversprechen</h3>
+                      <h3 className="text-base sm:text-lg font-semibold">Handwerker Garantie {data.name} München: Ihr Sicherheitsversprechen</h3>
                       <p className="text-sm text-muted-foreground">Für alle Arbeiten in {data.name}</p>
                     </div>
                   </div>
@@ -1143,7 +1143,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Sanitär & Heizung in {data.name}: Was Sie wissen sollten
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6" data-testid="text-stadtteil-detail">
@@ -1189,7 +1189,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
               Häufige Fragen: Sanitär & Heizung in {data.name}
             </h2>
             <div className="space-y-4">
@@ -1213,7 +1213,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-xl font-bold mb-4">Unsere Leistungen in {data.name}</h2>
+            <h2 className="text-lg sm:text-xl font-bold mb-4">Unsere Leistungen in {data.name}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               <Link href="/sanitaer" data-testid="link-sanitaer-stadtteil">
                 <Card className="hover-elevate cursor-pointer">
@@ -1287,7 +1287,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-2">
               Installateur München nahe {data.name}: Nachbarstadtteile im Einsatzgebiet
             </h2>
             <p className="text-muted-foreground text-center mb-6">
@@ -1313,7 +1313,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-6 bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Klempner München {data.name}: Notdienst & Termin online buchen
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">

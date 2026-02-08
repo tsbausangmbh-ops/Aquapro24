@@ -221,11 +221,11 @@ export default function FoerderantragPage() {
                 Kostenloser Antragsservice inklusive
               </Badge>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Förderantrag München – BAFA & KfW Antrag kostenlos
               </h1>
               
-              <p className="text-lg text-white/90 mb-4 max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 max-w-2xl">
                 Wir übernehmen die <strong>komplette Antragstellung</strong> für Ihre 
                 Heizungsförderung – kostenlos und mit 100% Erfolgsquote.
               </p>
@@ -264,7 +264,7 @@ export default function FoerderantragPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Förderantrag Service München: Ihre Vorteile
               </h2>
               <p className="text-muted-foreground">
@@ -279,7 +279,7 @@ export default function FoerderantragPage() {
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <vorteil.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="font-bold mb-2">{vorteil.title}</h3>
+                    <h3 className="text-base sm:text-lg font-bold mb-2">{vorteil.title}</h3>
                     <p className="text-sm text-muted-foreground">{vorteil.description}</p>
                   </CardContent>
                 </Card>
@@ -291,7 +291,7 @@ export default function FoerderantragPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 KfW/BAFA Antrag München: So läuft der Prozess ab
               </h2>
               <p className="text-muted-foreground">
@@ -308,7 +308,7 @@ export default function FoerderantragPage() {
                   <CardContent className="pt-14 pb-4">
                     <div className="flex items-center gap-2 mb-2">
                       <schritt.icon className="w-5 h-5 text-primary" />
-                      <h3 className="font-bold">{schritt.title}</h3>
+                      <h3 className="text-base sm:text-lg font-bold">{schritt.title}</h3>
                     </div>
                     <Badge variant="secondary" className="mb-3">{schritt.dauer}</Badge>
                     <p className="text-sm text-muted-foreground mb-3">{schritt.description}</p>
@@ -330,7 +330,7 @@ export default function FoerderantragPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Förderantrag Unterlagen München: Was Sie benötigen
               </h2>
               <p className="text-muted-foreground">
@@ -371,7 +371,7 @@ export default function FoerderantragPage() {
         <section className="py-6 bg-destructive/5 border-y border-destructive/20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Förderantrag Fehler München: Das vermeiden wir für Sie
               </h2>
               <p className="text-muted-foreground">
@@ -393,7 +393,7 @@ export default function FoerderantragPage() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-bold">{fehler.fehler}</h3>
+                          <h3 className="text-base sm:text-lg font-bold">{fehler.fehler}</h3>
                           {fehler.schweregrad === 'kritisch' && (
                             <Badge variant="destructive" className="text-xs">Kritisch</Badge>
                           )}
@@ -414,7 +414,7 @@ export default function FoerderantragPage() {
 
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               BAFA Online Antrag München: So funktioniert es
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -423,13 +423,13 @@ export default function FoerderantragPage() {
                 Mit unserer Vollmacht übernehmen wir den gesamten Prozess für Sie – von der 
                 Registrierung bis zur Einreichung aller Unterlagen.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Förderantrag Service München: Komplett kostenlos</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">Förderantrag Service München: Komplett kostenlos</h3>
               <p>
                 Bei Beauftragung einer Heizungsinstallation ist unser Förderantrag-Service 
                 komplett kostenlos. Sie unterschreiben nur eine Vollmacht und wir kümmern uns 
                 um den Rest. Wir haben bisher 100% aller Förderanträge erfolgreich bewilligt bekommen.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">KfW 458 Kredit München: Ergänzungskredit beantragen</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">KfW 458 Kredit München: Ergänzungskredit beantragen</h3>
               <p>
                 Zusätzlich zum BAFA-Zuschuss können Sie den KfW-Ergänzungskredit beantragen. 
                 Dieser zinsgünstige Kredit finanziert den nach Förderung verbleibenden Eigenanteil. 
@@ -467,7 +467,7 @@ export default function FoerderantragPage() {
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Förderantrag starten München: Jetzt beraten lassen
             </h2>
             <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">

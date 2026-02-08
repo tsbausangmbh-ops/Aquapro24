@@ -218,7 +218,7 @@ export default function FAQPage() {
                 <HelpCircle className="w-3 h-3" />
                 20 Häufige Fragen
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                 FAQ Sanitär & Heizung München – Preise & Tipps
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -243,7 +243,7 @@ export default function FAQPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Terminverfügbarkeit</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Wochenende Einsatz</span>
               </div>
-              <p className="text-lg text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 Hier finden Sie Antworten auf die häufigsten Fragen - mit echten Beispielen 
                 von Kunden, denen wir geholfen haben.
               </p>
@@ -269,7 +269,7 @@ export default function FAQPage() {
 
         <section className="py-6 lg:py-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">AquaPro 24 München kontaktieren: Kostenlose Beratung anfordern</h2>
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">AquaPro 24 München kontaktieren: Kostenlose Beratung anfordern</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Wir beraten Sie gerne persönlich - kostenlos und unverbindlich.
             </p>

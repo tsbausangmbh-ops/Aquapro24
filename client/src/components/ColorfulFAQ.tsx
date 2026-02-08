@@ -80,7 +80,7 @@ export default function ColorfulFAQ({ items, title = "Häufige Fragen", subtitle
             Häufige Fragen
           </Badge>
           {title && (
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">{title}</h2>
+            <h2 className="text-2xl md:text-xl sm:text-2xl lg:text-4xl font-bold mb-3">{title}</h2>
           )}
           {subtitle && (
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{subtitle}</p>

@@ -228,7 +228,7 @@ export default function ServiceAdvisor({ serviceType }: ServiceAdvisorProps) {
                 KI-Berater
               </Badge>
             </div>
-            <h2 className={`text-2xl md:text-3xl font-bold mb-2 ${config.color}`}>
+            <h2 className={`text-lg sm:text-xl lg:text-3xl font-bold mb-2 ${config.color}`}>
               {config.title}
             </h2>
             <p className="text-muted-foreground">

@@ -44,7 +44,7 @@ export default function NLPQuestions() {
             <HelpCircle className="w-3 h-3 mr-1" />
             Kennen Sie das?
           </Badge>
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+          <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
             Haben Sie eines dieser Probleme?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

@@ -84,11 +84,11 @@ export default function BarrierefreiheitPage() {
                 WCAG 2.1 AA konform
               </Badge>
               
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Barrierefreiheitserklärung München
               </h1>
               
-              <p className="text-lg text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 AquaPro 24 München verpflichtet sich, die digitale Barrierefreiheit für Menschen 
                 mit Behinderungen zu gewährleisten. Wir verbessern kontinuierlich die Benutzerfreundlichkeit 
                 für alle Besucher unserer Website.
@@ -114,7 +114,7 @@ export default function BarrierefreiheitPage() {
 
         <div className="max-w-4xl mx-auto px-4 lg:px-8 py-12">
           <section className="mb-10" aria-labelledby="standards-heading">
-            <h2 id="standards-heading" className="text-2xl font-semibold mb-4">
+            <h2 id="standards-heading" className="text-lg sm:text-xl font-semibold mb-4">
               Angewandte Standards
             </h2>
             <Card>
@@ -133,7 +133,7 @@ export default function BarrierefreiheitPage() {
           </section>
 
           <section className="mb-10" aria-labelledby="features-heading">
-            <h2 id="features-heading" className="text-2xl font-semibold mb-4">
+            <h2 id="features-heading" className="text-lg sm:text-xl font-semibold mb-4">
               Barrierefreiheits-Funktionen
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
@@ -154,7 +154,7 @@ export default function BarrierefreiheitPage() {
           </section>
 
           <section className="mb-10" aria-labelledby="conformance-heading">
-            <h2 id="conformance-heading" className="text-2xl font-semibold mb-4">
+            <h2 id="conformance-heading" className="text-lg sm:text-xl font-semibold mb-4">
               Konformitätsstatus
             </h2>
             <Card>
@@ -182,13 +182,13 @@ export default function BarrierefreiheitPage() {
           </section>
 
           <section className="mb-10" aria-labelledby="tips-heading">
-            <h2 id="tips-heading" className="text-2xl font-semibold mb-4">
+            <h2 id="tips-heading" className="text-lg sm:text-xl font-semibold mb-4">
               Tipps zur Nutzung
             </h2>
             <Card>
               <CardContent className="pt-6 space-y-4">
                 <div>
-                  <h3 className="font-medium mb-2">Tastaturkürzel</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium mb-2">Tastaturkürzel</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li><kbd className="px-2 py-0.5 bg-muted rounded text-xs">Tab</kbd> – Zum nächsten Element navigieren</li>
                     <li><kbd className="px-2 py-0.5 bg-muted rounded text-xs">Shift + Tab</kbd> – Zum vorherigen Element navigieren</li>
@@ -197,7 +197,7 @@ export default function BarrierefreiheitPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2">Schriftgröße anpassen</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium mb-2">Schriftgröße anpassen</h3>
                   <p className="text-sm text-muted-foreground">
                     Nutzen Sie die Zoom-Funktion Ihres Browsers (Strg/Cmd + Plus/Minus) 
                     um die Schriftgröße anzupassen.
@@ -208,7 +208,7 @@ export default function BarrierefreiheitPage() {
           </section>
 
           <section className="mb-10" aria-labelledby="feedback-heading">
-            <h2 id="feedback-heading" className="text-2xl font-semibold mb-4">
+            <h2 id="feedback-heading" className="text-lg sm:text-xl font-semibold mb-4">
               Feedback & Kontakt
             </h2>
             <Card>
@@ -246,7 +246,7 @@ export default function BarrierefreiheitPage() {
           </section>
 
           <section aria-labelledby="date-heading">
-            <h2 id="date-heading" className="text-2xl font-semibold mb-4">
+            <h2 id="date-heading" className="text-lg sm:text-xl font-semibold mb-4">
               Erstellungsdatum
             </h2>
             <Card>

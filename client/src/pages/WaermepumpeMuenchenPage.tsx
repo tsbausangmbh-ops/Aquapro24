@@ -121,7 +121,7 @@ export default function WaermepumpeMuenchenPage() {
                 <Leaf className="w-3 h-3 mr-1" />
                 Wärmepumpe München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
                 Wärmepumpe München – Beratung & Installation mit Förderung
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -146,13 +146,13 @@ export default function WaermepumpeMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieausweis prüfen</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Wärmepumpe</span>
               </div>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
                 Sie möchten in München auf Wärmepumpe umstellen? Entscheidend sind Gebäudedaten, 
                 Heizlast, Hydraulik und die richtige Einbindung ins System. AquaPro 24 unterstützt 
                 Sie bei der Planung und Umsetzung – inklusive sinnvoller Vorbereitung (z. B. 
                 Anpassungen an Verteilung/Regelung) und transparenter Schritte.
               </p>
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
                 Senden Sie uns für die Ersteinschätzung: Baujahr, Wohnfläche, Heizkörper/Fußbodenheizung, 
                 aktuelles System und – falls vorhanden – Energieausweis. So können wir realistisch 
                 beurteilen, welche Lösung passt.
@@ -177,7 +177,7 @@ export default function WaermepumpeMuenchenPage() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
               Wärmepumpe installieren München: Planung, BAFA-Förderung & Umsetzung
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -190,7 +190,7 @@ export default function WaermepumpeMuenchenPage() {
                     <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-6 h-6 text-orange-600" />
                     </div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -202,7 +202,7 @@ export default function WaermepumpeMuenchenPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
                 Wärmepumpe Beratung München: Kostenlose Ersteinschätzung anfordern
               </h2>
               <p className="text-center text-muted-foreground mb-8">
@@ -219,7 +219,7 @@ export default function WaermepumpeMuenchenPage() {
               <div className="text-center">
                 <Card className="bg-orange-500/5 border-orange-500/20">
                   <CardContent className="pt-6">
-                    <p className="text-lg font-medium mb-4">
+                    <p className="text-sm sm:text-base lg:text-lg font-medium mb-4">
                       Anfrage per E-Mail/Formular mit Eckdaten – wir melden uns mit einem nächsten Schritt.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">

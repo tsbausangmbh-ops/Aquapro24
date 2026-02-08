@@ -63,10 +63,10 @@ function ServiceSelection() {
     <section className="py-6 lg:py-8 bg-muted/50">
       <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
         <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+        <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
           Klempner Angebot München: Kostenlos in 10 Schritten
         </h2>
-        <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+        <p className="text-muted-foreground mb-4 sm:mb-6 max-w-xl mx-auto">
           Wählen Sie Ihr Gewerk – wir stellen Ihnen die passenden Fragen für ein maßgeschneidertes Angebot.
         </p>
         
@@ -314,15 +314,15 @@ export default function Home() {
                 </Badge>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-4">
                 AquaPro 24 München – Sanitär & Heizung Notdienst 24/7
               </h1>
               
-              <p className="text-lg text-white/90 mb-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-3">
                 <strong>Wasser tropft? Heizung streikt? Abfluss verstopft?</strong>
               </p>
               
-              <p className="text-white/90 mb-4">
+              <p className="text-sm sm:text-base text-white/90 mb-4">
                 Wir verstehen, wie stressig das ist. Deshalb sind wir in <strong>45-60 Minuten</strong> bei Ihnen – 
                 mit Festpreis <em>vor</em> Arbeitsbeginn. Kein Risiko, keine Überraschungen.
               </p>
@@ -334,7 +334,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <p className="text-white/80 mb-6">
+              <p className="text-sm sm:text-base text-white/80 mb-6">
                 <strong>2.847 Münchner Familien</strong> haben diese Erfahrung bereits gemacht. 
                 Festpreise: Sanitär ab 92€ | Rohrreinigung ab 81€ | Heizung ab 154€
               </p>
@@ -387,7 +387,7 @@ export default function Home() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Sanitär & Heizung München: Alle Leistungen
               </h2>
               <p className="text-muted-foreground">
@@ -451,7 +451,7 @@ export default function Home() {
         <section className="py-6 lg:py-8 bg-muted/30 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Klempner München: So läuft Ihr Auftrag ab
               </h2>
               <p className="text-muted-foreground">
@@ -465,7 +465,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3 text-lg font-bold">
                     {step.step}
                   </div>
-                  <h3 className="font-semibold mb-1">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-1">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -476,7 +476,7 @@ export default function Home() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Sanitär Garantie München: Unser Versprechen
               </h2>
             </div>
@@ -486,7 +486,7 @@ export default function Home() {
                 <Card key={index} className="text-center">
                   <CardContent className="p-4">
                     <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -498,7 +498,7 @@ export default function Home() {
         <section className="py-6 lg:py-8 bg-muted/30 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Projekte München: Referenzen unserer Arbeit
               </h2>
               <p className="text-muted-foreground">
@@ -534,7 +534,7 @@ export default function Home() {
         <section className="py-4">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-4">
-              <h2 className="text-xl font-bold mb-2">AquaPro 24 Sanitär München: Qualität für Ihr Zuhause</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-2">AquaPro 24 Sanitär München: Qualität für Ihr Zuhause</h2>
             </div>
             
             <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
@@ -588,10 +588,10 @@ export default function Home() {
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Sanitär oder Heizung Problem? Wir helfen sofort!
             </h2>
-            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+            <p className="text-primary-foreground/80 mb-4 sm:mb-6 max-w-xl mx-auto">
               Rufen Sie uns an oder buchen Sie direkt einen Termin. 
               Festpreis, schnelle Hilfe, 2 Jahre Garantie.
             </p>

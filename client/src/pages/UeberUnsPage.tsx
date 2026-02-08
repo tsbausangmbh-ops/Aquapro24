@@ -313,7 +313,7 @@ export default function UeberUnsPage() {
                 <BadgeCheck className="w-4 h-4" />
                 Geprüfte Fachbetriebe München
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight text-white mb-4">
                 AquaPro 24 München – Ihr Partnernetzwerk seit 2005
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -338,12 +338,12 @@ export default function UeberUnsPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">transparente Abrechnung</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">5 Jahre Gewährleistung</span>
               </div>
-              <p className="text-lg text-white/90 leading-relaxed mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed mb-4">
                 <strong>Sie haben ein Problem mit Sanitär oder Heizung?</strong> Wir wissen, wie frustrierend 
                 das sein kann - besonders wenn der letzte Handwerker nicht pünktlich war oder die 
                 Rechnung höher ausfiel als besprochen.
               </p>
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
                 Seit 2005 verbinden wir geprüfte Fachbetriebe mit Münchnern, die 
                 <strong> zuverlässige, faire und schnelle Hilfe</strong> verdienen.
               </p>
@@ -387,10 +387,10 @@ export default function UeberUnsPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <Badge variant="outline" className="mb-4">Wir verstehen Ihre Frustration</Badge>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
                 Handwerker München Erfahrungen: Diese Probleme kennen Sie sicher
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Schlechte Erfahrungen mit Handwerkern? Sie sind nicht allein. Deshalb haben wir 
                 AquaPro 24 gegründet - um diese Probleme ein für alle Mal zu lösen.
               </p>
@@ -404,7 +404,7 @@ export default function UeberUnsPage() {
                         <item.icon className="w-5 h-5 text-destructive" />
                       </div>
                       <div className="space-y-2">
-                        <h3 className="font-semibold text-lg">{item.problem}</h3>
+                        <h3 className="text-base sm:text-lg font-semibold">{item.problem}</h3>
                         <p className="text-sm text-muted-foreground italic">"{item.nlpText}"</p>
                         <div className="flex items-center gap-2 text-accent pt-2">
                           <TrendingUp className="w-4 h-4" />
@@ -438,7 +438,7 @@ export default function UeberUnsPage() {
               </div>
               <div className="order-1 lg:order-2 space-y-6">
                 <Badge variant="outline">Unsere Geschichte</Badge>
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-lg sm:text-xl lg:text-3xl font-bold">
                   Klempner AquaPro 24 Partnernetzwerk: Warum wir AquaPro 24 gegründet haben
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -467,8 +467,8 @@ export default function UeberUnsPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Unsere Werte</Badge>
-              <h2 className="text-3xl font-bold mb-4">Sanitär Fachbetrieb München: Unsere Werte & Qualitätsstandards</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">Sanitär Fachbetrieb München: Unsere Werte & Qualitätsstandards</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Diese Prinzipien sind keine Marketing-Phrasen - sie bestimmen jede Entscheidung 
                 und jeden Handgriff unserer Partnerbetriebe.
               </p>
@@ -480,7 +480,7 @@ export default function UeberUnsPage() {
                     <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <value.icon className="w-7 h-7 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{value.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{value.title}</h3>
                     <p className="text-sm text-muted-foreground">{value.description}</p>
                   </CardContent>
                 </Card>
@@ -495,7 +495,7 @@ export default function UeberUnsPage() {
             <div className="grid lg:grid-cols-2 gap-6 items-center">
               <div className="space-y-6">
                 <Badge variant="outline">Warum AquaPro 24?</Badge>
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-lg sm:text-xl lg:text-3xl font-bold">
                   Installateur München Qualität: Das unterscheidet uns von anderen
                 </h2>
                 <p className="text-muted-foreground">
@@ -534,10 +534,10 @@ export default function UeberUnsPage() {
                 <MapPin className="w-3 h-3 mr-1" />
                 Einsatzgebiet
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
                 Klempner Einsatzgebiet München: Alle Stadtteile & Umgebung
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Egal in welchem Stadtteil Sie wohnen - unsere Partnerbetriebe sind ab 60 Minuten vor Ort.
               </p>
             </div>
@@ -560,8 +560,8 @@ export default function UeberUnsPage() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <Badge variant="secondary" className="mb-4">Echte Kundenstimmen</Badge>
-              <h2 className="text-3xl font-bold mb-4">Sanitär Bewertungen München: Echte Kundenstimmen</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">Sanitär Bewertungen München: Echte Kundenstimmen</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Echte Bewertungen von echten Kunden aus München - ungefiltert und authentisch
               </p>
             </div>
@@ -597,7 +597,7 @@ export default function UeberUnsPage() {
         {/* CTA Section */}
         <section className="py-6 lg:pt-8 pb-4 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Klempner beauftragen München: Kostenlose Beratung anfordern
             </h2>
             <p className="text-primary-foreground/80 mb-4 max-w-2xl mx-auto text-lg">

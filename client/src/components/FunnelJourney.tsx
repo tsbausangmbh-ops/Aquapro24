@@ -42,7 +42,7 @@ export default function FunnelJourney() {
             <Star className="w-3 h-3 mr-1" />
             Ihr Weg zur Lösung
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-lg sm:text-xl lg:text-4xl font-bold mb-4">
             Klempner München: So läuft Ihr Auftrag ab
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

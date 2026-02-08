@@ -269,7 +269,7 @@ export default function RatgeberPage() {
                 <BookOpen className="w-3 h-3" />
                 Ratgeber & Tipps
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                 Ratgeber München – Expertentipps Sanitär & Heizung
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -294,7 +294,7 @@ export default function RatgeberPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Energieberater München</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Expertentipps Haustechnik</span>
               </div>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
                 <strong>Praktische Tipps vom Partnernetzwerk.</strong> Hier teilen wir unser 
                 Wissen aus über 35 Jahren Erfahrung in München.
               </p>
@@ -320,7 +320,7 @@ export default function RatgeberPage() {
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                         <guide.icon className="w-6 h-6 text-primary" />
                       </div>
-                      <h3 className="font-semibold mb-2">{guide.title}</h3>
+                      <h3 className="text-base sm:text-lg font-semibold mb-2">{guide.title}</h3>
                       <p className="text-sm text-muted-foreground">{guide.subtitle}</p>
                     </CardContent>
                   </Card>
@@ -344,7 +344,7 @@ export default function RatgeberPage() {
                       <guide.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h2 className="text-2xl md:text-3xl font-bold">{guide.title}</h2>
+                      <h2 className="text-lg sm:text-xl lg:text-3xl font-bold">{guide.title}</h2>
                       <p className="text-muted-foreground">{guide.subtitle}</p>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export default function RatgeberPage() {
                       <Wrench className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">AquaPro 24 Beratung München: Wir helfen Ihnen</h3>
+                      <h3 className="text-base sm:text-lg font-semibold">AquaPro 24 Beratung München: Wir helfen Ihnen</h3>
                       <p className="text-sm text-muted-foreground">Wir beraten Sie kostenlos und unverbindlich</p>
                     </div>
                   </div>
@@ -426,7 +426,7 @@ export default function RatgeberPage() {
 
         <section className="py-6 lg:pt-8 pb-4 bg-secondary text-secondary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               AquaPro 24 Sanitär Beratung München: Kostenlose Expertenberatung anfordern
             </h2>
             <p className="text-secondary-foreground/80 mb-4 max-w-2xl mx-auto">

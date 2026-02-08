@@ -48,7 +48,7 @@ export default function ServiceAreas({ serviceName, highlightAreas = [] }: Servi
     <section className="py-6 bg-secondary/5" data-testid="section-service-areas">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-5">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">
             {serviceName} in München & Umgebung
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

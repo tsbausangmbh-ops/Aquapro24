@@ -28,7 +28,7 @@ export default function MythBuster() {
             <AlertTriangle className="w-3 h-3 mr-1" />
             Schluss mit Vorurteilen
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-lg sm:text-xl lg:text-4xl font-bold mb-4">
             Was Sie vielleicht über Handwerker denken...
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

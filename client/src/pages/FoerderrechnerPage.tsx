@@ -314,7 +314,7 @@ export default function FoerderrechnerPage() {
                 <Calculator className="w-3 h-3 mr-1" />
                 Förderrechner {currentYear}
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
                 Förderrechner München – KfW 458, BAFA & Energieberater {currentYear}
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -327,7 +327,7 @@ export default function FoerderrechnerPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">iSFP Sanierungsfahrplan</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">BEG Förderung {currentYear}</span>
               </div>
-              <p className="text-lg text-white/90 mb-4 mt-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 mt-4">
                 Stand {standDatum}: KfW 458 für Heizung (bis 70%), BAFA für Dämmung (15-20%), KfW 455-B für barrierefreies Bad (12,5%). 
                 Berechnen Sie Ihre individuelle Förderung.
               </p>
@@ -581,7 +581,7 @@ export default function FoerderrechnerPage() {
                         <p className="text-5xl font-bold text-green-600" data-testid="text-kfw458-betrag">
                           {bafaErgebnis.foerderBetrag.toLocaleString('de-DE')} EUR
                         </p>
-                        <p className="text-lg text-muted-foreground mt-2">
+                        <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mt-2">
                           = {bafaErgebnis.gesamtProzent}% der förderfähigen Kosten (max. 30.000€)
                         </p>
                       </div>
@@ -869,7 +869,7 @@ export default function FoerderrechnerPage() {
                         <p className="text-5xl font-bold text-blue-600" data-testid="text-kfw-zuschuss">
                           {kfwErgebnis.zuschussBetrag.toLocaleString('de-DE')} EUR
                         </p>
-                        <p className="text-lg text-muted-foreground mt-2">
+                        <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mt-2">
                           = {kfwErgebnis.tilgungszuschuss}% vom Kredit
                         </p>
                       </div>
@@ -1074,7 +1074,7 @@ export default function FoerderrechnerPage() {
                         <p className="text-5xl font-bold text-cyan-600" data-testid="text-bad-betrag">
                           {badErgebnis.foerderBetrag.toLocaleString('de-DE')} EUR
                         </p>
-                        <p className="text-lg text-muted-foreground mt-2">
+                        <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mt-2">
                           = {badErgebnis.foerderProzent}% der Investitionskosten
                         </p>
                       </div>
@@ -1230,7 +1230,7 @@ export default function FoerderrechnerPage() {
                         <p className="text-5xl font-bold text-purple-600" data-testid="text-berater-eigenanteil">
                           {energieberaterErgebnis.eigenanteil.toLocaleString('de-DE')} EUR
                         </p>
-                        <p className="text-lg text-muted-foreground mt-2">
+                        <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mt-2">
                           nach {energieberaterErgebnis.foerderungProzent}% Förderung
                         </p>
                       </div>
@@ -1289,7 +1289,7 @@ export default function FoerderrechnerPage() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
               AquaPro 24 Fördervergleich München: BAFA vs. KfW vs. Steuerbonus
             </h2>
             <div className="grid md:grid-cols-3 gap-6">

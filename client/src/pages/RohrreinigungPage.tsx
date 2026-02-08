@@ -185,11 +185,11 @@ export default function RohrreinigungPage() {
                 24/7 Notdienst
               </Badge>
               
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Rohrreinigung München – Abfluss verstopft Notdienst 24/7
               </h1>
               
-              <p className="text-xl text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 Abfluss verstopft? Wir sind in 60 Minuten bei Ihnen und lösen 
                 jede Verstopfung – mechanisch, sauber und zum Festpreis.
               </p>
@@ -235,8 +235,8 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Rohrreinigung München: Preise & Services</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Rohrreinigung München: Preise & Services</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Egal ob Küche, Bad oder Keller – wir lösen jede Verstopfung.
               </p>
             </div>
@@ -251,7 +251,7 @@ export default function RohrreinigungPage() {
                       </div>
                       <Badge variant="secondary">{service.price}</Badge>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{service.title}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {service.features.map((feature, i) => (
@@ -272,8 +272,8 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Abfluss Ablauf München: So einfach geht's</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Abfluss Ablauf München: So einfach geht's</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Von Ihrem Anruf bis zum freien Abfluss.
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function RohrreinigungPage() {
                     <step.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -296,7 +296,7 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Rohrreinigung Garantie München: Unser Versprechen</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Rohrreinigung Garantie München: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>
@@ -307,7 +307,7 @@ export default function RohrreinigungPage() {
                 <Card key={index}>
                   <CardContent className="p-5 text-center">
                     <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -318,7 +318,7 @@ export default function RohrreinigungPage() {
 
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
               Rohrreinigung München: Ihr Spezialist vor Ort
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -353,10 +353,10 @@ export default function RohrreinigungPage() {
         <section className="py-6 lg:py-8 bg-muted/50">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Ihr kostenloses Angebot in 10 Schritten
             </h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            <p className="text-muted-foreground mb-4 sm:mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
             </p>
             <Suspense fallback={null}>
@@ -371,10 +371,10 @@ export default function RohrreinigungPage() {
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Abfluss verstopft? Wir helfen sofort!
             </h2>
-            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+            <p className="text-primary-foreground/80 mb-4 sm:mb-6 max-w-xl mx-auto">
               Ob Küche, Bad oder WC – bei verstopften Abflüssen sind wir in 60 Minuten da.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

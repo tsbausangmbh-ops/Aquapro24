@@ -40,7 +40,7 @@ export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQP
             <HelpCircle className="w-3 h-3" />
             FAQ
           </Badge>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">{title}</h2>
+          <h2 className="text-2xl md:text-xl sm:text-2xl lg:text-4xl font-bold mb-3">{title}</h2>
           {subtitle && (
             <p className="text-muted-foreground text-lg">{subtitle}</p>
           )}

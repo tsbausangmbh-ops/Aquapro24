@@ -29,7 +29,7 @@ export default function CustomerStories({
     <section className="py-6 md:py-6 bg-muted/30" data-testid="section-customer-stories">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">{title}</h2>
+          <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">{title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </div>
 

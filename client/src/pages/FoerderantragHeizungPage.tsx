@@ -263,11 +263,11 @@ export default function FoerderantragHeizungPage() {
                 Bis zu 70% BAFA Förderung 2025
               </Badge>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Förderantrag Heizung München – Wärmepumpe & Pellet bis 70%
               </h1>
               
-              <p className="text-lg text-white/90 mb-4 max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 max-w-2xl">
                 Sichern Sie sich die <strong>maximale Förderung</strong> für Ihre neue Heizung. 
                 Wärmepumpe, Pellet oder Solar – wir übernehmen den Antrag kostenlos.
               </p>
@@ -306,7 +306,7 @@ export default function FoerderantragHeizungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Heizungsförderung München: Alle förderfähigen Systeme
               </h2>
               <p className="text-muted-foreground">
@@ -359,7 +359,7 @@ export default function FoerderantragHeizungPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Förderbeispiele Heizung München: Konkrete Berechnungen
               </h2>
               <p className="text-muted-foreground">
@@ -413,7 +413,7 @@ export default function FoerderantragHeizungPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 BAFA Antrag Heizung München: So läuft es ab
               </h2>
               <p className="text-muted-foreground">
@@ -431,7 +431,7 @@ export default function FoerderantragHeizungPage() {
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold">{schritt.title}</h3>
+                      <h3 className="text-base sm:text-lg font-semibold">{schritt.title}</h3>
                       <Badge variant="secondary" className="text-xs">{schritt.dauer}</Badge>
                     </div>
                     <p className="text-sm text-muted-foreground">{schritt.beschreibung}</p>
@@ -444,7 +444,7 @@ export default function FoerderantragHeizungPage() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Wärmepumpe Förderung München: Viessmann, Vaillant, Wolf
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -453,13 +453,13 @@ export default function FoerderantragHeizungPage() {
                 Förderung sinkt der Eigenanteil auf ein Minimum. Wir verbauen Wärmepumpen 
                 aller führenden Hersteller: Viessmann Vitocal, Vaillant aroTHERM, Wolf CHA.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Förderantrag Service München: Komplett kostenlos</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">Förderantrag Service München: Komplett kostenlos</h3>
               <p>
                 Bei Beauftragung ist unser Förderantrag-Service komplett kostenlos. Sie 
                 unterschreiben nur eine Vollmacht – wir erledigen den Rest. Von der 
                 Registrierung im BAFA-Portal bis zur Einreichung aller Unterlagen.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Klimageschwindigkeitsbonus: 20% Extra bis 2028</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">Klimageschwindigkeitsbonus: 20% Extra bis 2028</h3>
               <p>
                 Wer seine alte Öl- oder Gasheizung (älter als 20 Jahre) jetzt austauscht, 
                 erhält 20% Klimageschwindigkeitsbonus. Dieser Bonus wird ab 2029 schrittweise 
@@ -497,7 +497,7 @@ export default function FoerderantragHeizungPage() {
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Heizungs-Förderantrag starten: Kostenlose Beratung
             </h2>
             <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">

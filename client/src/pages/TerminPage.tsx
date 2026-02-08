@@ -385,7 +385,7 @@ export default function TerminPage() {
                 <CalendarIcon className="w-3 h-3 mr-1" />
                 Online Terminbuchung
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                 Termin online buchen München – Handwerker Wunschtermin
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -410,7 +410,7 @@ export default function TerminPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">schnelle Rückmeldung</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">keine Warteschleife</span>
               </div>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
                 Buchen Sie online Ihren Wunschtermin. Wir prüfen die Verfügbarkeit in Echtzeit und melden uns bei Ihnen.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -428,7 +428,7 @@ export default function TerminPage() {
         {/* Booking Form Section */}
         <section className="py-6 lg:py-8">
           <div className="max-w-3xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6 text-center">AquaPro 24 Termin online München: Wunschtermin in Echtzeit buchen</h2>
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">AquaPro 24 Termin online München: Wunschtermin in Echtzeit buchen</h2>
             
             {/* Progress Steps */}
             {step <= 12 && (
@@ -463,7 +463,7 @@ export default function TerminPage() {
                   <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
                     <CheckCircle2 className="w-8 h-8 text-accent" />
                   </div>
-                  <h2 className="text-2xl font-bold mb-4">Vielen Dank!</h2>
+                  <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">Vielen Dank!</h2>
                   <p className="text-muted-foreground mb-6">
                     Ihre Terminanfrage wurde erfolgreich übermittelt. Wir prüfen die 
                     Verfügbarkeit und melden uns innerhalb weniger Stunden bei Ihnen.
@@ -1210,7 +1210,7 @@ export default function TerminPage() {
         {/* Benefits Section */}
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold text-center mb-8">AquaPro 24 Handwerker München: Festpreise, Garantie & Qualität</h2>
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold text-center mb-8">AquaPro 24 Handwerker München: Festpreise, Garantie & Qualität</h2>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
               {[
@@ -1237,7 +1237,7 @@ export default function TerminPage() {
                     <Shield className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
+                    <h3 className="text-base sm:text-lg font-bold">Sanitär Garantie München: 2 Jahre auf alle Arbeiten</h3>
                     <p className="text-sm text-muted-foreground">Auf alle unsere Arbeiten gewähren wir eine zweijährige Garantie.</p>
                   </div>
                 </CardContent>
@@ -1248,7 +1248,7 @@ export default function TerminPage() {
                     <Star className="w-7 h-7 fill-yellow-400 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Klempner Bewertungen München: 4.9/5 Sterne</h3>
+                    <h3 className="text-base sm:text-lg font-bold">Klempner Bewertungen München: 4.9/5 Sterne</h3>
                     <p className="text-sm text-muted-foreground">Über 2.847 zufriedene Kunden in München vertrauen uns.</p>
                   </div>
                 </CardContent>

@@ -9,7 +9,7 @@ export default function CTABanner() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
       
       <div className="relative max-w-4xl mx-auto px-4 lg:px-8 text-center text-secondary-foreground">
-        <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-4">
+        <h2 className="text-xl sm:text-2xl lg:text-5xl font-bold tracking-tight mb-4">
           Klempner München: Jetzt Festpreis-Angebot sichern!
         </h2>
         <h3 className="text-xl lg:text-2xl text-white/90 mb-2">

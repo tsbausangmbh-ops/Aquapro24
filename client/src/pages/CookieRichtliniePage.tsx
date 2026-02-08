@@ -20,7 +20,7 @@ export default function CookieRichtliniePage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
@@ -35,7 +35,7 @@ export default function CookieRichtliniePage() {
                 </Badge>
                 <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold text-white">AquaPro 24 Cookie Richtlinie DSGVO – transparent & sicher</h1>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white">AquaPro 24 Cookie Richtlinie DSGVO – transparent & sicher</h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Cookie Richtlinie</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">DSGVO konform</span>
@@ -74,7 +74,7 @@ export default function CookieRichtliniePage() {
           <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
             
             <section>
-              <h2 className="text-xl font-semibold mb-4">1. Verantwortlicher</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">1. Verantwortlicher</h2>
               <p className="text-muted-foreground mb-4">
                 Verantwortlich für die Verwendung von Cookies auf dieser Website ist:
               </p>
@@ -90,7 +90,7 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">2. Rechtsgrundlage für Cookies</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">2. Rechtsgrundlage für Cookies</h2>
               <p className="text-muted-foreground mb-4">
                 Die Verwendung von Cookies erfolgt auf unterschiedlichen Rechtsgrundlagen:
               </p>
@@ -112,7 +112,7 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">3. Arten von Cookies</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">3. Arten von Cookies</h2>
               
               <div className="space-y-6">
                 <Card>
@@ -123,7 +123,7 @@ export default function CookieRichtliniePage() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
-                          <h3 className="font-semibold">Technisch notwendige Cookies</h3>
+                          <h3 className="text-base sm:text-lg font-semibold">Technisch notwendige Cookies</h3>
                           <Badge variant="secondary" className="text-xs">Erforderlich</Badge>
                         </div>
                         <p className="text-sm text-muted-foreground mb-3">
@@ -166,7 +166,7 @@ export default function CookieRichtliniePage() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
-                          <h3 className="font-semibold">Funktionale Cookies</h3>
+                          <h3 className="text-base sm:text-lg font-semibold">Funktionale Cookies</h3>
                           <Badge variant="outline" className="text-xs">Optional</Badge>
                         </div>
                         <p className="text-sm text-muted-foreground mb-3">
@@ -198,14 +198,14 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">4. Cookies von Drittanbietern</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">4. Cookies von Drittanbietern</h2>
               <p className="text-muted-foreground mb-4">
                 Wir nutzen Dienste von Drittanbietern, die möglicherweise eigene Cookies setzen:
               </p>
               
               <div className="space-y-4">
                 <div className="border-l-2 border-secondary pl-4">
-                  <h3 className="font-medium">Google Calendar</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium">Google Calendar</h3>
                   <p className="text-sm text-muted-foreground">
                     Für die Terminbuchung nutzen wir Google Calendar. Google setzt dabei eigene Cookies.<br />
                     <a href="https://policies.google.com/privacy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">
@@ -215,7 +215,7 @@ export default function CookieRichtliniePage() {
                 </div>
                 
                 <div className="border-l-2 border-secondary pl-4">
-                  <h3 className="font-medium">Google Maps</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium">Google Maps</h3>
                   <p className="text-sm text-muted-foreground">
                     Für die Standortanzeige nutzen wir Google Maps. Google setzt dabei eigene Cookies.<br />
                     <a href="https://policies.google.com/privacy" className="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">
@@ -225,7 +225,7 @@ export default function CookieRichtliniePage() {
                 </div>
                 
                 <div className="border-l-2 border-secondary pl-4">
-                  <h3 className="font-medium">OpenAI KI-Agent für die Kostenschätzung</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium">OpenAI KI-Agent für die Kostenschätzung</h3>
                   <p className="text-sm text-muted-foreground">
                     Unser KI-Agent für die Kostenschätzung basiert auf der Technologie von OpenAI.<br /><br />
                     Bei der Nutzung des Chat-Assistenten werden Ihre Eingaben an OpenAI-Server übermittelt.<br /><br />
@@ -242,14 +242,14 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">5. Ihre Cookie-Einstellungen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">5. Ihre Cookie-Einstellungen</h2>
               <p className="text-muted-foreground mb-4">
                 Sie haben verschiedene Möglichkeiten, Cookies zu verwalten:
               </p>
               
               <div className="space-y-4">
                 <div className="border-l-2 border-accent pl-4">
-                  <h3 className="font-medium">Cookie-Banner</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium">Cookie-Banner</h3>
                   <p className="text-sm text-muted-foreground">
                     Beim ersten Besuch unserer Website können Sie über den Cookie-Banner Ihre 
                     Präferenzen festlegen. Sie können diese Einstellungen jederzeit ändern.
@@ -257,7 +257,7 @@ export default function CookieRichtliniePage() {
                 </div>
                 
                 <div className="border-l-2 border-accent pl-4">
-                  <h3 className="font-medium">Browser-Einstellungen</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium">Browser-Einstellungen</h3>
                   <p className="text-sm text-muted-foreground">
                     Sie können Ihren Browser so einstellen, dass er Cookies blockiert oder Sie 
                     benachrichtigt, wenn Cookies gesendet werden. Beachten Sie, dass einige 
@@ -266,7 +266,7 @@ export default function CookieRichtliniePage() {
                 </div>
                 
                 <div className="border-l-2 border-accent pl-4">
-                  <h3 className="font-medium">Cookies löschen</h3>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-medium">Cookies löschen</h3>
                   <p className="text-sm text-muted-foreground">
                     Sie können bereits gesetzte Cookies jederzeit in Ihren Browser-Einstellungen löschen.
                   </p>
@@ -275,7 +275,7 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">6. Browser-spezifische Anleitungen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">6. Browser-spezifische Anleitungen</h2>
               <p className="text-muted-foreground mb-4">
                 So verwalten Sie Cookies in gängigen Browsern:
               </p>
@@ -304,7 +304,7 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">7. Änderungen dieser Cookie-Richtlinie</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">7. Änderungen dieser Cookie-Richtlinie</h2>
               <p className="text-muted-foreground mb-4">
                 Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen 
                 in unserer Cookie-Praxis oder aus anderen betrieblichen, rechtlichen oder 
@@ -316,7 +316,7 @@ export default function CookieRichtliniePage() {
             </section>
 
             <section className="bg-muted/30 rounded-lg p-6 mt-8">
-              <h2 className="text-xl font-semibold mb-4">Fragen zu Cookies?</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Fragen zu Cookies?</h2>
               <p className="text-muted-foreground mb-4">
                 Bei Fragen zur Verwendung von Cookies auf unserer Website kontaktieren Sie uns gerne:
               </p>

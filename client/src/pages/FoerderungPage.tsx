@@ -292,11 +292,11 @@ export default function FoerderungPage() {
                 Bis zu 70% staatliche Förderung {currentYear}
               </Badge>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Förderung Heizung München – KfW 458, BAFA & Steuerbonus {currentYear}
               </h1>
               
-              <p className="text-lg text-white/90 mb-4 max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 max-w-2xl">
                 Sichern Sie sich bis zu <strong>70% staatliche Förderung</strong> für Ihre neue Wärmepumpe. 
                 Wir übernehmen die komplette Antragstellung kostenlos für Sie.
               </p>
@@ -335,10 +335,10 @@ export default function FoerderungPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Heizungsförderung München: Alle Programme im Überblick
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Drei Wege zur Förderung Ihrer neuen Heizung – wir beraten Sie, welcher für Sie optimal ist.
               </p>
             </div>
@@ -350,11 +350,11 @@ export default function FoerderungPage() {
                     <div className="flex items-center gap-3 mb-2">
                       <programm.icon className="w-8 h-8" />
                       <div>
-                        <h3 className="font-bold text-lg">{programm.title}</h3>
+                        <h3 className="text-base sm:text-lg font-bold">{programm.title}</h3>
                         <p className="text-sm text-white/80">{programm.subtitle}</p>
                       </div>
                     </div>
-                    <div className="text-3xl font-bold">
+                    <div className="text-lg sm:text-xl lg:text-3xl font-bold">
                       bis {programm.maxFoerderung}
                     </div>
                   </div>
@@ -404,7 +404,7 @@ export default function FoerderungPage() {
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Förderbeispiele München: So viel sparen Sie
               </h2>
               <p className="text-muted-foreground">
@@ -469,7 +469,7 @@ export default function FoerderungPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
                 Förderantrag München: So läuft der Prozess ab
               </h2>
               <p className="text-muted-foreground">
@@ -486,7 +486,7 @@ export default function FoerderungPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">{schritt.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">{schritt.title}</h3>
                     <p className="text-sm text-muted-foreground">{schritt.beschreibung}</p>
                   </div>
                 </div>
@@ -497,7 +497,7 @@ export default function FoerderungPage() {
 
         <section className="py-6 bg-destructive/5 border-y border-destructive/20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
               Wichtige Hinweise München: Das müssen Sie wissen
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -509,7 +509,7 @@ export default function FoerderungPage() {
                         <hinweis.icon className="w-5 h-5 text-destructive" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">{hinweis.title}</h3>
+                        <h3 className="text-base sm:text-lg font-semibold mb-1">{hinweis.title}</h3>
                         <p className="text-sm text-muted-foreground">{hinweis.text}</p>
                       </div>
                     </div>
@@ -522,7 +522,7 @@ export default function FoerderungPage() {
 
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               KfW 458 Förderung Wärmepumpe München: Alle Details {currentYear}
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -532,19 +532,19 @@ export default function FoerderungPage() {
                 (Programm 458/459), nicht mehr über das BAFA. Für Wärmepumpen können Sie bis zu 70% 
                 der förderfähigen Kosten als Zuschuss erhalten (max. 30.000€ pro Wohneinheit).
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Klimageschwindigkeitsbonus Heizung München: 20% Extra-Förderung</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">Klimageschwindigkeitsbonus Heizung München: 20% Extra-Förderung</h3>
               <p>
                 Wer seine alte Öl-, Kohle-, Gas- oder Nachtspeicherheizung durch eine Wärmepumpe 
                 ersetzt, erhält zusätzlich 20% Klimageschwindigkeitsbonus. Dieser Bonus gilt 
                 noch bis 2028 und wird dann schrittweise reduziert. Schnell handeln lohnt sich!
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Einkommensbonus Heizung München: 30% für Haushalte</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">Einkommensbonus Heizung München: 30% für Haushalte</h3>
               <p>
                 Haushalte mit einem zu versteuernden Jahreseinkommen unter 40.000 EUR erhalten 
                 zusätzlich 30% Einkommensbonus. Als Nachweis dient der Einkommensteuerbescheid. 
                 So wird die neue Heizung auch für kleinere Einkommen erschwinglich.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">KfW 358/359 Ergänzungskredit München: Zinsgünstig finanzieren</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">KfW 358/359 Ergänzungskredit München: Zinsgünstig finanzieren</h3>
               <p>
                 Der KfW 358/359 Ergänzungskredit kann zusätzlich zum KfW 458 Zuschuss 
                 beantragt werden. Für den nach Förderung verbleibenden Eigenanteil erhalten Sie 
@@ -583,7 +583,7 @@ export default function FoerderungPage() {
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Förderberatung München: Kostenlos und unverbindlich
             </h2>
             <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">

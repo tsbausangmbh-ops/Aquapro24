@@ -18,7 +18,7 @@ export default function AGBPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
@@ -30,7 +30,7 @@ export default function AGBPage() {
                 <FileText className="w-3 h-3" />
                 Rechtliches
               </Badge>
-              <h1 className="text-3xl lg:text-4xl font-bold text-white">AquaPro 24 AGB München – Festpreis & Garantie</h1>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white">AquaPro 24 AGB München – Festpreis & Garantie</h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">AGB Sanitär</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreisgarantie</span>
@@ -51,7 +51,7 @@ export default function AGBPage() {
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 1 Geltungsbereich</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 1 Geltungsbereich</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
                 AquaPro 24, Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München 
@@ -70,7 +70,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 2 Vertragsschluss und Angebote</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 2 Vertragsschluss und Angebote</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Unsere Angebote sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich 
                 als verbindlich gekennzeichnet sind.
@@ -93,7 +93,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 3 Preise und Zahlungsbedingungen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 3 Preise und Zahlungsbedingungen</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer von derzeit 19%.
               </p>
@@ -116,7 +116,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 4 Leistungsumfang und Ausführung</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 4 Leistungsumfang und Ausführung</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Der Leistungsumfang ergibt sich aus dem Angebot bzw. der Auftragsbestätigung.
               </p>
@@ -135,7 +135,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 5 Mitwirkungspflichten des Auftraggebers</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 5 Mitwirkungspflichten des Auftraggebers</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Der Auftraggeber ist verpflichtet, uns über alle Umstände zu informieren, die für 
                 die Durchführung der Arbeiten von Bedeutung sein können.
@@ -151,7 +151,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 6 Gewährleistung</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 6 Gewährleistung</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Für unsere Arbeiten gewähren wir eine Gewährleistung von 2 Jahren ab Abnahme, 
                 soweit gesetzlich nicht längere Fristen vorgeschrieben sind.
@@ -175,7 +175,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 7 Haftung</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 7 Haftung</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Wir haften unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers 
                 oder der Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden.
@@ -191,7 +191,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 8 Eigentumsvorbehalt</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 8 Eigentumsvorbehalt</h2>
               <p className="text-muted-foreground mb-4">
                 Alle gelieferten Materialien und Geräte bleiben bis zur vollständigen Bezahlung 
                 unser Eigentum.
@@ -199,7 +199,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 9 Stornierung und Rücktritt</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 9 Stornierung und Rücktritt</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Eine kostenlose Stornierung ist bis 48 Stunden vor dem vereinbarten Termin 
                 möglich.
@@ -216,7 +216,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 10 KI-Agent für die Kostenschätzung und OpenAI</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 10 KI-Agent für die Kostenschätzung und OpenAI</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Auf unserer Website setzen wir einen KI-Agent für die Kostenschätzung ein, 
                 der auf der Technologie von OpenAI basiert.<br /><br />
@@ -240,7 +240,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 11 Datenschutz</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 11 Datenschutz</h2>
               <p className="text-muted-foreground mb-4">
                 Die Erhebung und Verarbeitung personenbezogener Daten erfolgt gemäß unserer 
                 Datenschutzerklärung und den Bestimmungen der DSGVO.
@@ -248,7 +248,7 @@ export default function AGBPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4">§ 12 Schlussbestimmungen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">§ 12 Schlussbestimmungen</h2>
               <p className="text-muted-foreground mb-4">
                 (1) Es gilt das Recht der Bundesrepublik Deutschland.
               </p>

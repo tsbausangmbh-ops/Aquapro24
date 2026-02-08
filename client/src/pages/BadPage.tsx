@@ -202,11 +202,11 @@ export default function BadPage() {
                 Traumbad vom Profi
               </Badge>
               
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Badsanierung München – Komplettumbau vom Profi
               </h1>
               
-              <p className="text-xl text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 Ihr neues Traumbad in 2-4 Wochen. Festpreis ab 16.000€, 
                 5 Jahre Garantie, alle Gewerke aus einer Hand.
               </p>
@@ -253,8 +253,8 @@ export default function BadPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Badsanierung: Von der Vision zum Traumbad</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Badsanierung: Von der Vision zum Traumbad</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Moderne Bäder, professionelle Umsetzung, barrierefreie Lösungen – alles aus einer Hand.
               </p>
             </div>
@@ -324,8 +324,8 @@ export default function BadPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Bad Preise München: Transparente Pakete</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Bad Preise München: Transparente Pakete</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Transparente Preise, klare Leistungen. Wählen Sie das Paket, das zu Ihnen passt.
               </p>
             </div>
@@ -346,7 +346,7 @@ export default function BadPage() {
                   )}
                   <CardContent className="p-6">
                     <div className="text-center mb-6">
-                      <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
+                      <h3 className="text-lg sm:text-xl font-bold mb-2">{pkg.name}</h3>
                       <div className="text-3xl font-bold text-primary mb-1">{pkg.price}</div>
                       <div className="text-sm text-muted-foreground">
                         {pkg.size} | {pkg.duration}
@@ -394,8 +394,8 @@ export default function BadPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Badsanierung Ablauf München: So läuft Ihr Projekt</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Badsanierung Ablauf München: So läuft Ihr Projekt</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Von der ersten Beratung bis zur Schlüsselübergabe – transparent und stressfrei.
               </p>
             </div>
@@ -407,7 +407,7 @@ export default function BadPage() {
                     <step.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -419,7 +419,7 @@ export default function BadPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Bad Garantie: Unser Versprechen</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Bad Garantie: Unser Versprechen</h2>
               <p className="text-muted-foreground">
                 Sicherheit und Qualität – darauf können Sie sich verlassen.
               </p>
@@ -430,7 +430,7 @@ export default function BadPage() {
                 <Card key={index}>
                   <CardContent className="p-5 text-center">
                     <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -447,8 +447,8 @@ export default function BadPage() {
                 <Euro className="w-3 h-3 mr-1" />
                 Staatliche Förderung
               </Badge>
-              <h2 className="text-3xl font-bold mb-3">Bad Förderung München: KfW-Zuschuss bis 6.250€</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Bad Förderung München: KfW-Zuschuss bis 6.250€</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Bis zu 6.250€ Zuschuss vom Staat für Ihren barrierefreien Badumbau. Wir beraten Sie und helfen beim Antrag.
               </p>
             </div>
@@ -460,7 +460,7 @@ export default function BadPage() {
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                       <Calculator className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold">Bad Förderrechner München: Zuschuss berechnen</h3>
+                    <h3 className="text-lg sm:text-xl font-bold">Bad Förderrechner München: Zuschuss berechnen</h3>
                   </div>
                   
                   <div className="space-y-4">
@@ -562,7 +562,7 @@ export default function BadPage() {
         <section className="py-4 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-2">Markenqualität für Ihr Bad</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">Markenqualität für Ihr Bad</h2>
               <p className="text-muted-foreground text-sm">
                 Wir verbauen nur Produkte von führenden Herstellern.
               </p>
@@ -600,7 +600,7 @@ export default function BadPage() {
         {/* SEO Text Section */}
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
               Ihr Traumbad in besten Händen
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -614,7 +614,7 @@ export default function BadPage() {
                 keine Abstimmungsprobleme. Wir koordinieren Sanitär, Fliesen, Elektrik und Malerarbeiten – 
                 Sie haben nur einen Ansprechpartner.
               </p>
-              <h3 className="text-xl font-semibold text-foreground mt-6">Barrierefreies Bad München: Mit staatlicher Förderung</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6">Barrierefreies Bad München: Mit staatlicher Förderung</h3>
               <p>
                 Barrierefreie Bäder sind nicht nur für Senioren sinnvoll. Bodengleiche Duschen, breite 
                 Türen und rutschfeste Böden bieten Komfort für alle Generationen. Mit der KfW-Förderung 
@@ -642,10 +642,10 @@ export default function BadPage() {
         <section className="py-6 lg:py-8 bg-muted/50">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Ihr kostenloses Angebot in 10 Schritten
             </h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            <p className="text-muted-foreground mb-4 sm:mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
             </p>
             <Suspense fallback={null}>
@@ -661,10 +661,10 @@ export default function BadPage() {
         {/* CTA Section */}
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Bereit für Ihr neues Traumbad?
             </h2>
-            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+            <p className="text-primary-foreground/80 mb-4 sm:mb-6 max-w-xl mx-auto">
               Kostenlose Beratung, unverbindliches Angebot, 3D-Visualisierung inklusive. 
               Rufen Sie uns an oder buchen Sie direkt einen Termin.
             </p>

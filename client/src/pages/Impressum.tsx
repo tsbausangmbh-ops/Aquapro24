@@ -21,7 +21,7 @@ export default function Impressum() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
@@ -33,7 +33,7 @@ export default function Impressum() {
                 <FileText className="w-3 h-3" />
                 Rechtliches
               </Badge>
-              <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                 Impressum AquaPro 24 – Sanitär Heizung München
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -47,7 +47,7 @@ export default function Impressum() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Einzelunternehmer</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Rechtliches</span>
               </div>
-              <p className="text-lg text-white/80">
+              <p className="text-sm sm:text-base lg:text-lg text-white/80">
                 Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function Impressum() {
             <div className="space-y-4">
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="text-foreground font-medium text-lg">AquaPro 24</p>
                   <p>Inhaber: Mustafa Sakar</p>
@@ -79,7 +79,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Kontakt</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Kontakt</h2>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-4 h-4 text-secondary" />
@@ -103,7 +103,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Betriebsverantwortung</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Betriebsverantwortung</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>
                     Die Webseite AquaPro 24.de wird von AquaPro 24 (Inhaber: Mustafa Sakar) verwaltet, betrieben und technisch administriert.
@@ -114,7 +114,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Unternehmensform</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Unternehmensform</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Einzelunternehmer</p>
                   <p>Inhaber: Mustafa Sakar</p>
@@ -124,7 +124,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Umsatzsteuer-ID</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Umsatzsteuer-ID</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
                   <p className="text-foreground font-medium">folgt</p>
@@ -134,7 +134,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Mustafa Sakar</p>
                   <p>Hardenbergstr. 4</p>
@@ -145,7 +145,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Hinweis zur KI-Beratung</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Hinweis zur KI-Beratung</h2>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
                     Auf dieser Website setzen wir KI-gestützte Berater ein, die auf Basis von OpenAI-Technologie 
@@ -181,7 +181,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Streitschlichtung</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Streitschlichtung</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
                     Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{" "}
@@ -205,7 +205,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Haftung für Inhalte</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Haftung für Inhalte</h2>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
                     Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten 
@@ -227,7 +227,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Haftung für Links</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Haftung für Links</h2>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
                     Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen 
@@ -248,7 +248,7 @@ export default function Impressum() {
 
             <Card>
               <CardContent className="p-6 lg:p-8">
-                <h2 className="text-xl font-semibold mb-4">Urheberrecht</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Urheberrecht</h2>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
                     Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen 

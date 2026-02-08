@@ -125,7 +125,7 @@ export default function SanitaerNotdienst24Page() {
                 <AlertTriangle className="w-3 h-3 mr-1" />
                 24h Notdienst
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
                 Sanitär Notdienst 24h München: Klempner Soforthilfe rund um die Uhr
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -150,12 +150,12 @@ export default function SanitaerNotdienst24Page() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Klempner Festpreis</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Sanitär Notfall München</span>
               </div>
-              <p className="text-lg text-white/90 mb-4 mt-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 mt-4">
                 Sanitär-Notfall mitten in der Nacht? Rohrbruch am Wochenende? WC verstopft am Feiertag? 
                 Unser Sanitär Notdienst ist 24 Stunden am Tag, 7 Tage die Woche für Sie in München erreichbar. 
                 Schnelle Hilfe bei Rohrbruch, Wasserschaden, Verstopfung und allen sanitären Notfällen.
               </p>
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
                 Senden Sie uns Fotos vom Problem, Ihre Adresse und eine kurze Beschreibung – 
                 wir melden uns schnellstmöglich mit Verfügbarkeit und transparenter Preiseinschätzung.
               </p>
@@ -181,7 +181,7 @@ export default function SanitaerNotdienst24Page() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
               Klempner Notdienst München: Rohrbruch, Wasserschaden & Verstopfung
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -191,7 +191,7 @@ export default function SanitaerNotdienst24Page() {
                     <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-6 h-6 text-red-600" />
                     </div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -202,7 +202,7 @@ export default function SanitaerNotdienst24Page() {
 
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
               24/7 Sanitär Notdienst München: Schnell & Zuverlässig
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -212,7 +212,7 @@ export default function SanitaerNotdienst24Page() {
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -221,7 +221,7 @@ export default function SanitaerNotdienst24Page() {
             <div className="text-center">
               <Card className="bg-red-500/5 border-red-500/20 max-w-2xl mx-auto">
                 <CardContent className="pt-6">
-                  <p className="text-lg font-medium mb-4">
+                  <p className="text-sm sm:text-base lg:text-lg font-medium mb-4">
                     Sanitär-Notfall? Rufen Sie jetzt an oder senden Sie uns eine Nachricht mit Fotos!
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">

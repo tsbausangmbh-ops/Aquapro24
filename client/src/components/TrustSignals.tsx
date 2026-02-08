@@ -78,7 +78,7 @@ export default function TrustSignals({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-6">
             {signals.map((signal, index) => (
               <div key={index} className="text-center group cursor-default">
-                <div className="text-2xl md:text-3xl font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-110">{signal.value}</div>
+                <div className="text-lg sm:text-xl lg:text-3xl font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-110">{signal.value}</div>
                 <div className="text-sm text-primary-foreground/80">{signal.title}</div>
               </div>
             ))}
@@ -96,7 +96,7 @@ export default function TrustSignals({
             <CheckCircle className="w-3 h-3 mr-1" />
             Warum uns Münchner vertrauen
           </Badge>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
             Ihre Sicherheit ist uns wichtig
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

@@ -65,7 +65,7 @@ export default function Testimonials() {
               <Star key={star} className="w-6 h-6 fill-primary text-primary" />
             ))}
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4">
             München spricht über uns: 4.9 Sterne für Sanitär & Wasserinstallation
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">

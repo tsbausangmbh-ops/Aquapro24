@@ -105,7 +105,7 @@ export default function RatgeberDownload() {
                 12.487 Downloads
               </Badge>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">
               Ratgeber München: Sparen Sie bis zu 500€ Handwerkerkosten
             </h2>
             

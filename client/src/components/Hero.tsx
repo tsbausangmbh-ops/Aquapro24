@@ -58,7 +58,7 @@ export default function Hero() {
             <span>Seit 2005 in München</span>
           </div>
           
-          <p className="text-lg text-white/90 mb-4">
+          <p className="text-sm sm:text-base text-white/90 mb-4">
             <strong>Rohrbruch, WC verstopft, Heizung ausgefallen?</strong> Wir sind in 
             45-60 Minuten bei Ihnen in München. Festpreis vor Arbeitsbeginn.
           </p>

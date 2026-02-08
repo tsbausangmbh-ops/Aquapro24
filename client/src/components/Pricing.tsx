@@ -321,7 +321,7 @@ export default function Pricing() {
             <Shield className="w-3 h-3 mr-1" />
             Festpreis-Garantie München
           </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight mb-4">
             Stellen Sie sich vor: Sie kennen den Festpreis, bevor wir starten
           </h2>
           <h3 className="text-xl text-foreground font-medium mb-2">

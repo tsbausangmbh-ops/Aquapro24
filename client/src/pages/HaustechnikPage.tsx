@@ -185,11 +185,11 @@ export default function HaustechnikPage() {
                 Komplettservice
               </Badge>
               
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-4">
                 Haustechnik München – Gas, Wasser, Lüftung komplett
               </h1>
               
-              <p className="text-xl text-white/90 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6">
                 Ein Ansprechpartner für alle Gewerke: Wasserinstallation, Gastechnik, 
                 Lüftung und Smart Home – professionell aus einer Hand.
               </p>
@@ -235,8 +235,8 @@ export default function HaustechnikPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Haustechnik München: Preise & Services</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Haustechnik München: Preise & Services</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Moderne Haustechnik für Komfort, Sicherheit und Energieeffizienz.
               </p>
             </div>
@@ -251,7 +251,7 @@ export default function HaustechnikPage() {
                       </div>
                       <Badge variant="secondary">{service.price}</Badge>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{service.title}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {service.features.map((feature, i) => (
@@ -272,8 +272,8 @@ export default function HaustechnikPage() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">AquaPro 24 Haustechnik Ablauf München: So läuft Ihr Projekt</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">AquaPro 24 Haustechnik Ablauf München: So läuft Ihr Projekt</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Von der Beratung bis zur fertigen Installation – ein Ansprechpartner.
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function HaustechnikPage() {
                     <step.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div className="text-sm font-medium text-primary mb-2">Schritt {step.step}</div>
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -296,7 +296,7 @@ export default function HaustechnikPage() {
         <section className="py-6 lg:py-8">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-3">Haustechnik Vorteile München: Alles aus einer Hand</h2>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">Haustechnik Vorteile München: Alles aus einer Hand</h2>
               <p className="text-muted-foreground">
                 Warum alles aus einer Hand die beste Lösung ist.
               </p>
@@ -307,7 +307,7 @@ export default function HaustechnikPage() {
                 <Card key={index}>
                   <CardContent className="p-5 text-center">
                     <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -318,7 +318,7 @@ export default function HaustechnikPage() {
 
         <section className="py-6">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6">
               Haustechnik München: Ihr Partner vor Ort
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -354,10 +354,10 @@ export default function HaustechnikPage() {
         <section className="py-6 lg:py-8 bg-muted/50">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <Badge className="mb-4">Münchner Partnernetzwerk</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Ihr kostenloses Angebot in 10 Schritten
             </h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            <p className="text-muted-foreground mb-4 sm:mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen zu Ihrem Projekt – wir erstellen Ihnen ein maßgeschneidertes Angebot.
             </p>
             <Suspense fallback={null}>
@@ -372,10 +372,10 @@ export default function HaustechnikPage() {
 
         <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4">
               Haustechnik-Projekt geplant?
             </h2>
-            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
+            <p className="text-primary-foreground/80 mb-4 sm:mb-6 max-w-xl mx-auto">
               Ob Neubau, Sanierung oder Modernisierung – wir planen und realisieren 
               Ihre Haustechnik professionell.
             </p>

@@ -120,7 +120,7 @@ export default function BadsanierungMuenchenPage() {
                 <Droplets className="w-3 h-3 mr-1" />
                 Badsanierung München
               </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 text-white">
                 Badsanierung München – Komplettumbau stressfrei & modern
               </h1>
               <div className="sr-only" data-testid="keyword-cloud">
@@ -145,13 +145,13 @@ export default function BadsanierungMuenchenPage() {
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">KfW Förderung Bad</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Festpreis Badsanierung</span>
               </div>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4">
                 Eine Badsanierung ist mehr als neue Fliesen – sie ist Koordination, Timing und saubere 
                 Ausführung. AquaPro 24 begleitet Ihre Badsanierung in München von der Planung bis zur 
                 Übergabe: Bestandsaufnahme, Empfehlungen zur Ausstattung, Ablaufplan und Umsetzung 
                 mit geprüften Gewerken.
               </p>
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6">
                 Damit Sie schneller ein Angebot erhalten, senden Sie uns bitte: Raummaße (oder Grundriss), 
                 Fotos, Wunschstil (modern/klassisch), und ob es um Teil- oder Komplettsanierung geht. 
                 Wir melden uns mit einem konkreten Vorschlag zum weiteren Vorgehen.
@@ -176,7 +176,7 @@ export default function BadsanierungMuenchenPage() {
 
         <section className="py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
               Badumbau München: Ablauf von Planung bis Fertigstellung
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -189,7 +189,7 @@ export default function BadsanierungMuenchenPage() {
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-6 h-6 text-cyan-600" />
                     </div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -201,7 +201,7 @@ export default function BadsanierungMuenchenPage() {
         <section className="py-6">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-6 text-center">
                 Badsanierung Kosten München: Angebot mit Festpreis anfordern
               </h2>
               <p className="text-center text-muted-foreground mb-8">
@@ -218,7 +218,7 @@ export default function BadsanierungMuenchenPage() {
               <div className="text-center">
                 <Card className="bg-cyan-500/5 border-cyan-500/20">
                   <CardContent className="pt-6">
-                    <p className="text-lg font-medium mb-4">
+                    <p className="text-sm sm:text-base lg:text-lg font-medium mb-4">
                       Schreiben Sie uns Ihre Bad-Wünsche – wir antworten mit einem klaren Ablauf & Terminoptionen.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">

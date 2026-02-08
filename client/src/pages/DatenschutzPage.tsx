@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: heroSrc ? `url(${heroSrc})` : undefined, backgroundColor: '#1a1a1a' }}
@@ -33,7 +33,7 @@ export default function DatenschutzPage() {
                 </Badge>
                 <Badge variant="outline" className="bg-white/10 border-white/30 text-white">Stand: Dezember 2025</Badge>
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold text-white">Datenschutz DSGVO München – Ihre Rechte</h1>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white">Datenschutz DSGVO München – Ihre Rechte</h1>
               <div className="sr-only" data-testid="keyword-cloud">
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Datenschutz DSGVO</span>
                 <span className="inline-flex px-2 py-0.5 text-xs rounded-md bg-white/10 text-white/80 border border-white/20">Ihre Rechte</span>
@@ -57,7 +57,7 @@ export default function DatenschutzPage() {
             
             {/* Präambel */}
             <section id="m716">
-              <h2 className="text-xl font-semibold mb-4">Präambel</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Präambel</h2>
               <p className="text-muted-foreground mb-4">
                 Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer 
                 personenbezogenen Daten (nachfolgend auch kurz als "Daten" bezeichnet) wir zu welchen Zwecken 
@@ -74,7 +74,7 @@ export default function DatenschutzPage() {
 
             {/* Inhaltsübersicht */}
             <section>
-              <h2 className="text-xl font-semibold mb-4">Inhaltsübersicht</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Inhaltsübersicht</h2>
               <ul className="list-disc list-inside text-muted-foreground space-y-1 columns-1 md:columns-2">
                 <li><a href="#m716" className="text-secondary hover:underline">Präambel</a></li>
                 <li><a href="#m3" className="text-secondary hover:underline">Verantwortlicher</a></li>
@@ -99,7 +99,7 @@ export default function DatenschutzPage() {
 
             {/* Verantwortlicher */}
             <section id="m3">
-              <h2 className="text-xl font-semibold mb-4">Verantwortlicher</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Verantwortlicher</h2>
               <div className="bg-muted/30 rounded-lg p-6">
                 <p className="text-muted-foreground mb-2">
                   <strong>AquaPro 24</strong><br />
@@ -128,7 +128,7 @@ export default function DatenschutzPage() {
 
             {/* Übersicht der Verarbeitungen */}
             <section id="mOverview">
-              <h2 className="text-xl font-semibold mb-4">Übersicht der Verarbeitungen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Übersicht der Verarbeitungen</h2>
               <p className="text-muted-foreground mb-4">
                 Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer 
                 Verarbeitung zusammen und verweist auf die betroffenen Personen.
@@ -174,7 +174,7 @@ export default function DatenschutzPage() {
 
             {/* Rechtsgrundlagen */}
             <section id="m2427">
-              <h2 className="text-xl font-semibold mb-4">Maßgebliche Rechtsgrundlagen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Maßgebliche Rechtsgrundlagen</h2>
               <p className="text-muted-foreground mb-4">
                 <strong>Maßgebliche Rechtsgrundlagen nach der DSGVO:</strong> Im Folgenden erhalten Sie eine 
                 Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. 
@@ -221,7 +221,7 @@ export default function DatenschutzPage() {
 
             {/* Sicherheitsmaßnahmen */}
             <section id="m27">
-              <h2 className="text-xl font-semibold mb-4">Sicherheitsmaßnahmen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Sicherheitsmaßnahmen</h2>
               <p className="text-muted-foreground mb-4">
                 Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, 
                 der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung 
@@ -257,7 +257,7 @@ export default function DatenschutzPage() {
 
             {/* Übermittlung */}
             <section id="m25">
-              <h2 className="text-xl font-semibold mb-4">Übermittlung von personenbezogenen Daten</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Übermittlung von personenbezogenen Daten</h2>
               <p className="text-muted-foreground mb-4">
                 Im Rahmen unserer Verarbeitung von personenbezogenen Daten kommt es vor, dass diese an andere 
                 Stellen, Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt 
@@ -279,7 +279,7 @@ export default function DatenschutzPage() {
 
             {/* Internationale Datentransfers */}
             <section id="m24">
-              <h2 className="text-xl font-semibold mb-4">Internationale Datentransfers</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Internationale Datentransfers</h2>
               <p className="text-muted-foreground mb-4">
                 <strong>Datenverarbeitung in Drittländern:</strong> Sofern wir Daten in ein Drittland 
                 (d. h. außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR)) 
@@ -324,7 +324,7 @@ export default function DatenschutzPage() {
 
             {/* Datenspeicherung und Löschung */}
             <section id="m12">
-              <h2 className="text-xl font-semibold mb-4">Allgemeine Informationen zur Datenspeicherung und Löschung</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Allgemeine Informationen zur Datenspeicherung und Löschung</h2>
               <p className="text-muted-foreground mb-4">
                 Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, 
                 sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen 
@@ -365,7 +365,7 @@ export default function DatenschutzPage() {
 
             {/* Rechte der betroffenen Personen */}
             <section id="m10">
-              <h2 className="text-xl font-semibold mb-4">Rechte der betroffenen Personen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Rechte der betroffenen Personen</h2>
               <p className="text-muted-foreground mb-4">
                 Rechte der betroffenen Personen aus der DSGVO: Ihnen stehen als Betroffene nach der DSGVO 
                 verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:
@@ -423,7 +423,7 @@ export default function DatenschutzPage() {
 
             {/* Geschäftliche Leistungen */}
             <section id="m317">
-              <h2 className="text-xl font-semibold mb-4">Geschäftliche Leistungen</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Geschäftliche Leistungen</h2>
               <p className="text-muted-foreground mb-4">
                 Wir verarbeiten Daten unserer Vertrags- und Geschäftspartner, z. B. Kunden und Interessenten 
                 (zusammenfassend als „Vertragspartner" bezeichnet), im Rahmen von vertraglichen und 
@@ -465,7 +465,7 @@ export default function DatenschutzPage() {
 
             {/* Zahlungsverfahren */}
             <section id="m326">
-              <h2 className="text-xl font-semibold mb-4">Zahlungsverfahren</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Zahlungsverfahren</h2>
               <p className="text-muted-foreground mb-4">
                 Im Rahmen von Vertrags- und sonstigen Rechtsbeziehungen, aufgrund gesetzlicher Pflichten oder 
                 sonst auf Grundlage unserer berechtigten Interessen bieten wir den betroffenen Personen 
@@ -495,7 +495,7 @@ export default function DatenschutzPage() {
 
             {/* Webhosting */}
             <section id="m225">
-              <h2 className="text-xl font-semibold mb-4">Bereitstellung des Onlineangebots und Webhosting</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Bereitstellung des Onlineangebots und Webhosting</h2>
               <p className="text-muted-foreground mb-4">
                 Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen 
                 zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, 
@@ -522,7 +522,7 @@ export default function DatenschutzPage() {
 
             {/* Cookies */}
             <section id="m134">
-              <h2 className="text-xl font-semibold mb-4">Einsatz von Cookies</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Einsatz von Cookies</h2>
               <p className="text-muted-foreground mb-4">
                 Unter dem Begriff „Cookies" werden Funktionen, die Informationen auf Endgeräten der Nutzer 
                 speichern und aus ihnen auslesen, verstanden. Cookies können ferner in Bezug auf unterschiedliche 
@@ -553,7 +553,7 @@ export default function DatenschutzPage() {
 
             {/* Kontakt */}
             <section id="m182">
-              <h2 className="text-xl font-semibold mb-4">Kontakt- und Anfrageverwaltung</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Kontakt- und Anfrageverwaltung</h2>
               <p className="text-muted-foreground mb-4">
                 Bei der Kontaktaufnahme mit uns (z. B. per Kontaktformular, E-Mail, Telefon oder via 
                 soziale Medien) sowie im Rahmen bestehender Nutzer- und Geschäftsbeziehungen werden 
@@ -573,7 +573,7 @@ export default function DatenschutzPage() {
 
             {/* Webanalyse */}
             <section id="m263">
-              <h2 className="text-xl font-semibold mb-4">Webanalyse, Monitoring und Optimierung</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Webanalyse, Monitoring und Optimierung</h2>
               <p className="text-muted-foreground mb-4">
                 Die Webanalyse dient der Auswertung der Besucherströme unseres Onlineangebotes und kann 
                 Verhalten, Interessen oder demographische Informationen zu den Besuchern umfassen. 
@@ -593,7 +593,7 @@ export default function DatenschutzPage() {
 
             {/* KI-Chatbot */}
             <section id="mKI">
-              <h2 className="text-xl font-semibold mb-4">KI-Chatbot, OpenAI & EU AI Act</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">KI-Chatbot, OpenAI & EU AI Act</h2>
               <p className="text-muted-foreground mb-4">
                 Auf unserer Website setzen wir einen KI-gestützten Chatbot ein, der auf der Technologie 
                 von OpenAI basiert. Dieser Assistent dient der ersten Beratung zu Sanitär-, Heizungs- und 
@@ -672,7 +672,7 @@ export default function DatenschutzPage() {
 
             {/* Google Calendar */}
             <section id="mGoogle">
-              <h2 className="text-xl font-semibold mb-4">Google Calendar Integration</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Google Calendar Integration</h2>
               <p className="text-muted-foreground mb-4">
                 Für die Online-Terminbuchung nutzen wir Google Calendar. Bei der Terminbuchung werden Ihre 
                 Kontaktdaten und Terminwünsche an Google Ireland Limited übermittelt und dort gespeichert.
@@ -698,7 +698,7 @@ export default function DatenschutzPage() {
 
             {/* WhatsApp */}
             <section id="mWhatsApp">
-              <h2 className="text-xl font-semibold mb-4">WhatsApp Business</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">WhatsApp Business</h2>
               <p className="text-muted-foreground mb-4">
                 Wir bieten die Möglichkeit, uns über WhatsApp zu kontaktieren. Bei der Nutzung von WhatsApp 
                 werden Daten an WhatsApp Ireland Limited übermittelt.
@@ -723,7 +723,7 @@ export default function DatenschutzPage() {
 
             {/* Kontaktbox */}
             <section className="bg-muted/30 rounded-lg p-6 mt-8">
-              <h2 className="text-xl font-semibold mb-4">Fragen zum Datenschutz?</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">Fragen zum Datenschutz?</h2>
               <p className="text-muted-foreground mb-4">
                 Wir nehmen den Schutz Ihrer Daten ernst. Bei Fragen zur Verarbeitung Ihrer 
                 personenbezogenen Daten oder zur Ausübung Ihrer Rechte kontaktieren Sie uns gerne:

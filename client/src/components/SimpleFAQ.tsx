@@ -42,7 +42,7 @@ export default function SimpleFAQ({ items, title = "Häufige Fragen", subtitle }
             FAQ
           </Badge>
           {title && (
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">{title}</h2>
+            <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-3">{title}</h2>
           )}
           {subtitle && (
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">{subtitle}</p>
