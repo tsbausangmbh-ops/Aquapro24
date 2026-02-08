@@ -50,6 +50,7 @@ const heroDesktopMap: Record<string, () => Promise<{ default: string }>> = {
   hero_datenschutz: () => import("@assets/hero_webp/hero_datenschutz.webp"),
   hero_agb: () => import("@assets/hero_webp/hero_agb.webp"),
   hero_cookie: () => import("@assets/hero_webp/hero_cookie.webp"),
+  hero_barrierefreiheit: () => import("@assets/hero_webp/hero_barrierefreiheit.webp"),
 };
 
 const heroMobileMap: Record<string, () => Promise<{ default: string }>> = {
@@ -84,6 +85,7 @@ const heroMobileMap: Record<string, () => Promise<{ default: string }>> = {
   hero_datenschutz: () => import("@assets/hero_mobile/hero_datenschutz.webp"),
   hero_agb: () => import("@assets/hero_mobile/hero_agb.webp"),
   hero_cookie: () => import("@assets/hero_mobile/hero_cookie.webp"),
+  hero_barrierefreiheit: () => import("@assets/hero_mobile/hero_barrierefreiheit.webp"),
 };
 
 function useHeroImages(heroKey: string) {

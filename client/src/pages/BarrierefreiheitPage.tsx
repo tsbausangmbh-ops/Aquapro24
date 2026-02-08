@@ -79,7 +79,7 @@ export default function BarrierefreiheitPage() {
 
       <main id="main-content">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70" />
+          <HeroPicture heroKey="hero_barrierefreiheit" alt="Barrierefreiheit AquaPro 24 München – WCAG 2.1 AA konform" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
