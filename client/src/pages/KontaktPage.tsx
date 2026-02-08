@@ -114,8 +114,8 @@ export default function KontaktPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Kontakt AquaPro 24 München – Kostenlose Beratung | AquaPro 24"
-        description="Kontaktieren Sie AquaPro 24 in München. Tel: 089 444438872. Hardenbergstr. 4, 80992 München. Kostenlose Beratung für Sanitär & Heizung."
+        title="Sanitär AquaPro 24 Kontakt München | Angebot anfordern"
+        description="Kontakt AquaPro 24 München: Anfrage stellen, Angebot erhalten & Termin vereinbaren – schnell & unverbindlich."
         canonical="https://aquapro24.de/kontakt"
         keywords="Sanitär Kontakt München kostenlos, Heizung Anfrage Festpreis, Klempner Notdienst 089 444438872, Kostenvoranschlag unverbindlich München, Beratungstermin Badsanierung buchen, Wärmepumpe Beratung München, Erstberatung kostenlos vor Ort"
         ogImageAlt="Kontakt AquaPro 24 München Terminbuchung Anfrage - Sanitär Heizung Beratung kostenlos"
@@ -123,10 +123,10 @@ export default function KontaktPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_kontakt" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
                 <Phone className="w-3 h-3" />

@@ -263,8 +263,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Klempner München – Sanitär & Heizung Notdienst 24/7 | AquaPro 24"
-        description="AquaPro 24 - Ihr Partner für Sanitär, Heizung und Badsanierung in München. 24/7 Notdienst. Festpreise. 2.847+ zufriedene Kunden. Jetzt anrufen: 089 444438872"
+        title="Münchner Sanitär und Heizung – Klempner Notdienst 24/7"
+        description="Klempner & Sanitär in München – 24h Notdienst bei Rohrbruch & Heizungsausfall. Faire Festpreise, schnelle Hilfe vom Partnernetzwerk. Jetzt anfragen!"
         canonical="https://aquapro24.de"
         keywords="Klempner München Notdienst 24h, Sanitär Festpreis ab 92€, Rohrreinigung ab 81€ Festpreis, Heizung Notdienst München sofort, Rohrbruch Soforthilfe 60 Minuten, Badsanierung Komplettpreis München, Wärmepumpe BAFA 70% Förderung"
         speakable={{ cssSelector: ["h1", "[data-testid='button-call-hero']", ".text-white\\/90", ".text-white\\/80"] }}
@@ -291,11 +291,11 @@ export default function Home() {
       <Header />
       
       <main id="main-content">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_home" alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2 mb-4">
                 <Badge className="bg-destructive text-destructive-foreground gap-1">

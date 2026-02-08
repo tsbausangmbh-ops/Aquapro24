@@ -153,8 +153,8 @@ export default function BadPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Badsanierung München – Komplettumbau vom Profi | AquaPro 24"
-        description="Badsanierung in München: Komplettumbau, barrierefreies Bad mit KfW-Förderung, Badmodernisierung. Festpreis. Jetzt beraten: 089 444438872"
+        title="Badsanierung München | Komplett & hochwertig"
+        description="Badsanierung in München: Komplett, modern & stressfrei. Planung, Ausführung & Koordination aus einer Hand. Jetzt beraten lassen!"
         canonical="https://aquapro24.de/bad"
         keywords="Badsanierung München Komplettpreis, Barrierefreies Bad KfW Förderung, Walk-in Dusche bodengleich, Badumbau Festpreis 14 Tage, Villeroy Boch Duravit Keramag, Freistehende Badewanne München, Bad renovieren Altbau München"
         ogImageAlt="Badsanierung München Komplett Badezimmer renovieren modern barrierefrei - Festpreis Villeroy Boch Duravit"
@@ -187,11 +187,11 @@ export default function BadPage() {
       
       <main id="main-content">
         {/* Hero Section */}
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_bad" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-2xl">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Sparkles className="w-3 h-3 mr-1" />

@@ -140,8 +140,8 @@ export default function RohrreinigungPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Rohrreinigung München – Abfluss verstopft Notdienst 24/7 | AquaPro 24"
-        description="Rohrreinigung München ab 81€: Abfluss verstopft, WC verstopft, Kanalreinigung. 24/7 Notdienst. Sofort-Termin: 089 444438872"
+        title="Rohrreinigung München | Abfluss verstopft 24/7"
+        description="Rohrreinigung München: Abfluss verstopft, WC verstopft? 60 Min. Notdienst, Festpreis ab 81€. Jetzt anrufen!"
         canonical="https://aquapro24.de/rohrreinigung"
         keywords="Rohrreinigung München ab 81€, Abfluss verstopft Notdienst 24h, WC verstopft Soforthilfe München, Kanalreinigung Hochdruckspülung, Kamerainspektion Rohr München, Verstopfung lösen ohne Chemie, Rohrbruch Notfall 60 Minuten"
         breadcrumbs={[
@@ -170,11 +170,11 @@ export default function RohrreinigungPage() {
       <Header />
       
       <main id="main-content">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_rohrreinigung" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-2xl">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Wrench className="w-3 h-3 mr-1" />

@@ -112,10 +112,10 @@ export default function SanitaerNotdienst24Page() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_sanitaer_notdienst" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-red-600 text-white">
                 <AlertTriangle className="w-3 h-3 mr-1" />

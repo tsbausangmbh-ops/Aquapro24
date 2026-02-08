@@ -225,8 +225,8 @@ export default function FoerderungPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderung Heizung München: BAFA, KfW & Steuerbonus 2025 | AquaPro 24"
-        description="Heizungsförderung 2025: Bis zu 70% BAFA-Zuschuss, KfW-Kredit, Steuerbonus. Wärmepumpe, Heizungstausch. Kostenlose Beratung: 089 444438872"
+        title={`Förderung Heizung München: KfW 458, BAFA & Steuerbonus ${currentYear} | AquaPro 24`}
+        description={`Bis zu 70% Förderung für Ihre neue Heizung in München (Stand ${standDatum}). KfW 458 Wärmepumpe, BAFA Dämmung, KfW 455-B Bad. Kostenlose Beratung. Tel: 089 444438872`}
         canonical="https://aquapro24.de/foerderung"
         keywords={keywords.join(", ")}
         aiSummary={`AquaPro 24 München: Förderberatung Heizung & Wasser Stand ${standDatum}. KfW 458 bis 70% für Wärmepumpe, BAFA 15-20% Dämmung, KfW 455-B 12,5% Bad, KfW 358 Kredit bis 120.000€. Kostenloser Antragsservice. Kontakt: 089 444438872`}
@@ -278,10 +278,10 @@ export default function FoerderungPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_foerderung" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
                 <Gift className="w-3 h-3 mr-1" />

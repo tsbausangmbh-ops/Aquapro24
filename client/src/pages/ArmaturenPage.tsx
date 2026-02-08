@@ -139,8 +139,8 @@ export default function ArmaturenPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Wasserhahn wechseln München – Armaturen Montage & Reparatur | AquaPro 24"
-        description="Armaturen-Service München: Wasserhahn wechseln, Mischbatterie montieren, tropfende Armatur reparieren. Festpreise. Tel: 089 444438872"
+        title="Wasserhahn wechseln München | Armaturen Montage"
+        description="Wasserhahn wechseln München: Armaturen montieren & reparieren. Grohe, Hansgrohe, Geberit. Festpreis ab 80€."
         canonical="https://aquapro24.de/armaturen"
         keywords="Wasserhahn wechseln ab 80€ München, Grohe Hansgrohe Armatur montieren, Wasserhahn tropft Reparatur, Unterputz Armatur Installation München, Thermostat Mischbatterie einbauen, Duscharmatur austauschen München, Wasserhahn Kartusche wechseln"
         ogImageAlt="Wasserhahn wechseln München Armatur montieren Grohe Hansgrohe - Festpreis Sanitär Reparatur ab 80 Euro"
@@ -169,11 +169,11 @@ export default function ArmaturenPage() {
       <Header />
       
       <main id="main-content">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_armaturen" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-2xl">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Droplets className="w-3 h-3 mr-1" />

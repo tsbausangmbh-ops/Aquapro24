@@ -9,18 +9,18 @@ export default function AGBPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="AGB Sanitär München – Festpreis & Garantie | AquaPro 24"
-        description="Allgemeine Geschäftsbedingungen von AquaPro 24. Festpreisgarantie, 2 Jahre Gewährleistung, transparente Konditionen."
+        title="AGB Sanitär München – Festpreis & Garantie"
+        description="AGB Sanitär München: Festpreis Garantie und transparente Geschäftsbedingungen. 2 Jahre Garantie, faire Regeln für alle Kunden."
         canonical="https://aquapro24.de/agb"
         keywords="AGB Sanitär Heizung München, Allgemeine Geschäftsbedingungen Handwerker, Festpreis Garantie Klempner, Gewährleistung Sanitärarbeiten München, Geschäftsbedingungen Notdienst, Vertragsbedingungen Installateur München, AGB Badsanierung Heizungsinstallation"
         ogImageAlt="AGB Allgemeine Geschäftsbedingungen AquaPro 24 Sanitär Heizung München - Festpreis Garantie transparente Konditionen"
       />
       <Header />
       <main id="main-content">
-        <section className="hero-section relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_agb" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
                 <FileText className="w-3 h-3" />

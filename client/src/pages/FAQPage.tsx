@@ -197,18 +197,18 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="FAQ Sanitär & Heizung München – Preise & Tipps | AquaPro 24"
-        description="Häufige Fragen zu Sanitär & Heizung: Preise, Notdienst-Kosten, Förderung. Rohrreinigung ab 81€, Heizungsreparatur ab 154€."
+        title="AquaPro 24 FAQ Sanitär & Heizung München – Preise & Tipps"
+        description="Sanitär FAQ München: Antworten zu Preisen, Notdienst & Reparaturen – verständlich erklärt vom Fachbetrieb."
         canonical="https://aquapro24.de/faq"
         keywords="Klempner Preise München Festpreis, Sanitär Kosten transparent erklärt, Heizung Reparatur was kostet, Notdienst München Kosten vorab, Badsanierung Preise Komplettpaket, Wärmepumpe BAFA Förderung 2025, Kostenvoranschlag verbindlich gratis"
         ogImageAlt="FAQ Sanitär Heizung München häufige Fragen Preise Kosten Notdienst - AquaPro 24 Antworten"
       />
       <Header />
       <main id="main-content">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_faq" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
                 <HelpCircle className="w-3 h-3" />

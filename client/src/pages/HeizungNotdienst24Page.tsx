@@ -67,8 +67,8 @@ export default function HeizungNotdienst24Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Heizung Notdienst 24h München – Heizungsreparatur Soforthilfe | AquaPro 24"
-        description="Heizung Notdienst 24 Stunden München: Heizung ausgefallen, kein Warmwasser. Anfahrt 45-60 Min. Tel: 089 444438872"
+        title="Heizung Notdienst München | 24h Reparatur"
+        description="Heizung Notdienst München: Schnelle Hilfe bei Ausfall, Störung oder Kälte – 24h erreichbar."
         canonical="https://aquapro24.de/heizung-notdienst-24"
         keywords="Heizung Notdienst 24h München, Heizungsausfall Soforthilfe Winter, Therme defekt Brenner Störung, Viessmann Vaillant Junkers Notdienst, Keine Wärme Notfall Festpreis, Heizung reparieren Wochenende, Gasheizung ausgefallen 24h Hilfe"
         aiSummary="AquaPro 24 Heizung Notdienst 24h München: Sofortige Hilfe bei Heizungsausfall, Thermendefekt, Brennerstörung und Heizungsproblemen. 24/7 erreichbar, Festpreisgarantie. Kontakt: 089 444438872"
@@ -113,10 +113,10 @@ export default function HeizungNotdienst24Page() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_heizung_notdienst" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-red-600 text-white">
                 <AlertTriangle className="w-3 h-3 mr-1" />

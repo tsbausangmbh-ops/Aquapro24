@@ -178,8 +178,8 @@ export default function FoerderantragPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderantrag Heizung München – Kostenloser Service | AquaPro 24"
-        description="Kostenloser Förderantrag-Service für BAFA & KfW. Wir helfen beim Antrag für Wärmepumpe & Heizungstausch. Tel: 089 444438872"
+        title="Förderantrag München: BAFA & KfW Antrag kostenlos | AquaPro 24"
+        description="BAFA & KfW Förderantrag kostenlos für Sie. Wir übernehmen die komplette Antragstellung für Ihre Heizungsförderung in München. 100% Erfolgsquote. Tel: 089 444438872"
         canonical="https://aquapro24.de/foerderantrag"
         keywords={keywords.join(", ")}
         ogImageAlt="BAFA KfW Förderantrag München kostenloser Service Heizungsförderung - 100 Prozent Erfolgsquote"
@@ -207,10 +207,10 @@ export default function FoerderantragPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_foerderantrag" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
                 <Shield className="w-3 h-3 mr-1" />

@@ -43,7 +43,7 @@ Preferred communication style: Simple, everyday language.
 - **Lead Capture**: Multi-step conversational chatbot widget with webhook integration.
 - **German Localization**: All UI text is in German, targeting the Munich local market.
 - **Mobile-First**: Responsive design with mobile breakpoint detection.
-- **Hero Image System**: All pages use `HeroPicture` component from `@/components/ResponsiveHero` with native `<picture>` element and `<source media>` for responsive image selection. Browser loads mobile WebP (~27KB) from `hero_mobile/` on screens <768px, desktop WebP (~74KB) from `hero_webp/` on larger screens. **Mobile layout**: stacked (image block on top 200px, text below in foreground colors, gradient hidden). **Desktop layout**: classic overlay (absolute background, gradient, white text). CSS classes: `.hero-image-wrapper`, `.hero-gradient`, `.hero-text-content` control layout switching.
+- **Hero Image System**: All pages use `useHeroImage("hero_key")` hook from `@/components/ResponsiveHero`. Hook loads WebP images from `attached_assets/hero_webp/` (desktop) or `attached_assets/hero_mobile/` (mobile <768px). Total size: ~3MB WebP (down from 44MB PNG). Background pattern: `bg-cover bg-center` with `backgroundColor: '#1a1a1a'`.
 - **Mobile Optimizations**: Floating call button (`MobileCallButton`), compact spacing (py-6→py-4), smaller mobile headings (h1: 1.75rem, h2: 1.375rem), reduced header height, scrollable mobile menu with max-h-[70vh].
 - **Appointment Booking**: Configured for specific business hours, slot durations (90 mins), simulated occupancy (60%), and a maximum of 2 appointments per day.
 

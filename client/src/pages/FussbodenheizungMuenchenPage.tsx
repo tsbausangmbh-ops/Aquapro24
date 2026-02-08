@@ -60,8 +60,8 @@ export default function FussbodenheizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Fußbodenheizung München – Installation & Reparatur Profi | AquaPro 24"
-        description="Fußbodenheizung München: Installation, Reparatur, Spülung, Entlüftung. Festpreise. Tel: 089 444438872"
+        title="Fußbodenheizung München | Nachrüsten & Einbau"
+        description="Fußbodenheizung in München: Nachrüsten oder Neubau – effiziente Wärme & hoher Komfort. Jetzt Angebot anfordern!"
         canonical="https://aquapro24.de/fussbodenheizung-muenchen"
         keywords="Fußbodenheizung München, Fußbodenheizung nachrüsten München, Fußbodenheizung verlegen München, Fußbodenheizung Altbau München, Fußbodenheizung Kosten München, Flächenheizung München"
         aiSummary="AquaPro 24 Fußbodenheizung München: Nachrüstung, Umbau, Integration in moderne Systeme. Prüfung Aufbauhöhe, Regelung, Untergrund. Kontakt: 089 444438872"
@@ -106,10 +106,10 @@ export default function FussbodenheizungMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_fussbodenheizung" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-amber-600 text-white">
                 <Thermometer className="w-3 h-3 mr-1" />

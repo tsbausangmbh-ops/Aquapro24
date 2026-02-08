@@ -276,8 +276,8 @@ export default function FoerderrechnerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Förderrechner Heizung München – Zuschuss berechnen | AquaPro 24"
-        description="Berechnen Sie Ihre BAFA-Förderung für Heizungstausch. Bis zu 70% Zuschuss möglich. Tel: 089 444438872"
+        title={`Förderrechner München | KfW 458, BAFA & Energieberater ${currentYear}`}
+        description={`Förderrechner München Stand ${standDatum}: KfW 458 Heizung bis 70%, BAFA Dämmung 15-20%, KfW 455-B Bad 12,5%, Energieberater 80% – jetzt berechnen.`}
         canonical="https://aquapro24.de/foerderrechner"
         keywords={`Förderrechner München, KfW 458 Heizungsförderung, BAFA Dämmung, KfW 358 Kredit, KfW 455-B Barrierefreies Bad, Energieberater Förderung, Wärmepumpe 70% Förderung, iSFP Sanierungsfahrplan, BEG Förderung ${currentYear}`}
         ogImageAlt="Förderrechner Heizung München BAFA KfW Zuschuss berechnen - Wärmepumpe Pellet Solar Förderung"
@@ -301,10 +301,10 @@ export default function FoerderrechnerPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_foerderrechner" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-green-500 text-white">
                 <Calculator className="w-3 h-3 mr-1" />

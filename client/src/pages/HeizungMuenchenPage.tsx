@@ -61,8 +61,8 @@ export default function HeizungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Heizung München – Reparatur, Wartung & Modernisierung | AquaPro 24"
-        description="Heizungs-Service München: Reparatur ab 154€, Wartung, Heizungsaustausch mit Förderung. Tel: 089 444438872"
+        title="Heizungsservice München | Reparatur & Modernisierung"
+        description="Heizungsservice München: Reparatur, Modernisierung & Effizienzsteigerung. Kompetente Beratung vom Partnernetzwerk."
         canonical="https://aquapro24.de/heizung-muenchen"
         keywords="Heizung München, Heizungsreparatur München, Heizungsmodernisierung München, Heizungstausch München, Gasheizung München, Heizung Wartung München, Heizungsinstallateur München"
         aiSummary="AquaPro 24 Heizung München: Reparatur, Modernisierung, Austausch aller Heizungssysteme. Planbare Lösungen, transparentes Vorgehen. Kontakt: 089 444438872"
@@ -107,10 +107,10 @@ export default function HeizungMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_heizung_muenchen" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-red-600 text-white">
                 <Flame className="w-3 h-3 mr-1" />

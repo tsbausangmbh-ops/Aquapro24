@@ -363,8 +363,8 @@ export default function TerminPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Termin online buchen München – Handwerker Wunschtermin | AquaPro 24"
-        description="Buchen Sie Ihren Handwerker-Termin online. Sanitär, Heizung, Badsanierung in München. Wunschtermin Mo-Fr 8-17 Uhr. Jetzt buchen!"
+        title="Handwerker Termin München | Online buchen"
+        description="Online Termin buchen in München: Sanitär & Heizung einfach online anfragen – Wunschzeit auswählen & bestätigen."
         canonical="https://aquapro24.de/termin"
         keywords="Klempner Termin online buchen München, Sanitär Wunschtermin Echtzeit, Heizung Termin Wochenende möglich, Handwerker Terminbestätigung sofort, Badsanierung Beratungstermin München, Wärmepumpe Vor-Ort-Termin, Notdienst Termin 24h verfügbar"
         ogImageAlt="Termin buchen AquaPro 24 München Sanitär Heizung - Online Terminvereinbarung kostenlos"
@@ -372,10 +372,10 @@ export default function TerminPage() {
       <Header />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_termin" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4">
                 <CalendarIcon className="w-3 h-3 mr-1" />

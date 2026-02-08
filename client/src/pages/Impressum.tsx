@@ -12,18 +12,18 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Impressum AquaPro 24 München – Mustafa Sakar"
-        description="Impressum AquaPro 24. Inhaber: Mustafa Sakar. Hardenbergstr. 4, 80992 München. Tel: 089 444438872."
+        title="Impressum AquaPro 24 – Sanitär Heizung München | Mustafa Sakar"
+        description="Impressum und rechtliche Angaben: AquaPro 24, Inhaber Mustafa Sakar, Hardenbergstr. 4, 80992 München. Kontakt und Ansprechpartner."
         canonical="https://aquapro24.de/impressum"
         keywords="Impressum AquaPro 24 München, Mustafa Sakar Inhaber, Hardenbergstr 4 München 80992, Partnernetzwerk Sanitär Heizung, Kontakt Klempner München, Einzelunternehmer Handwerk, Angaben DDG Pflichtangaben"
         ogImageAlt="Impressum AquaPro 24 München Hardenbergstr 4 - Sanitär Heizung Inhaber Mustafa Sakar"
       />
       <Header />
       <main id="main-content">
-        <section className="hero-section relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_impressum" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <Badge variant="secondary" className="mb-4 gap-1">
                 <FileText className="w-3 h-3" />

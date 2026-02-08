@@ -9,18 +9,18 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Datenschutz DSGVO München – Ihre Rechte | AquaPro 24"
-        description="Datenschutzerklärung von AquaPro 24. DSGVO-konform. Ihre Rechte auf Auskunft, Löschung, Widerspruch."
+        title="Datenschutz DSGVO München – Ihre Rechte"
+        description="Datenschutz DSGVO konform: Ihre Rechte und unsere Datenverarbeitung transparent erklärt. So schützen wir Ihre persönlichen Daten."
         canonical="https://aquapro24.de/datenschutz"
         keywords="Datenschutzerklärung DSGVO München, Datenschutz Sanitär Heizung Handwerker, personenbezogene Daten Schutz, DSGVO konform Handwerksbetrieb, Datenschutzbeauftragter München, Datenverarbeitung transparent Installateur, Datenschutzrechte Kunden München"
         ogImageAlt="Datenschutzerklärung AquaPro 24 München - DSGVO konformer Schutz Ihrer persönlichen Daten"
       />
       <Header />
       <main id="main-content">
-        <section className="hero-section relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
+        <section className="relative py-4 sm:py-6 lg:py-8 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_datenschutz" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-4">
                 <Badge variant="secondary" className="gap-1">

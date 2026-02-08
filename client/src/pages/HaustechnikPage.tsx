@@ -140,8 +140,8 @@ export default function HaustechnikPage() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Haustechnik München – Gas, Wasser, Lüftung komplett | AquaPro 24"
-        description="Haustechnik-Service in München: Gasinstallation, Wasserinstallation, Lüftungsanlagen, Smart Home. Komplettlösungen. Tel: 089 444438872"
+        title="Haustechnik München | Gas, Wasser, Lüftung komplett"
+        description="Haustechnik München: Wasser-, Gas- & Lüftungsinstallation vom Fachbetrieb. Alles aus einer Hand. Jetzt beraten lassen!"
         canonical="https://aquapro24.de/haustechnik"
         keywords="Haustechnik München komplett, Gasinstallation DVGW zertifiziert, Lüftungsanlage KWL BAFA Förderung, Smart Home Tado Netatmo, Wasserinstallation Neubau München, Gebäudetechnik aus einer Hand, Haustechnik Planung Festpreis"
         breadcrumbs={[
@@ -170,11 +170,11 @@ export default function HaustechnikPage() {
       <Header />
       
       <main id="main-content">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_haustechnik" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-2xl">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Settings className="w-3 h-3 mr-1" />

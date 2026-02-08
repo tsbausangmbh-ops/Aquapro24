@@ -62,8 +62,8 @@ export default function NotdienstMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Notdienst Sanitär & Heizung München – 24h Soforthilfe | AquaPro 24"
-        description="24/7 Notdienst für Sanitär & Heizung in München. Rohrbruch, Wasserschaden, Heizungsausfall. Anfahrt in 45-60 Min. Jetzt: 089 444438872"
+        title="Notdienst München 24h | Rohrbruch & Heizungsausfall"
+        description="Notdienst München 24h: Rohrbruch, Wasserschaden oder Heizungsausfall? Soforthilfe vom Sanitär- & Heizungsprofi."
         canonical="https://aquapro24.de/notdienst-muenchen"
         keywords="Notdienst München 24h Soforthilfe, Rohrbruch Wasserschaden sofort, Heizungsausfall Notfall München, Klempner Notdienst 60 Minuten, WC verstopft Soforthilfe München, Leckortung Wärmebild München, Sanitär Heizung Notdienst Festpreis"
         aiSummary="AquaPro 24 Notdienst München: Schnelle Hilfe bei Rohrbruch, Wasseraustritt, Heizungsausfall. Fotos senden für schnelle Priorisierung. Kontakt: 089 444438872"
@@ -134,10 +134,10 @@ export default function NotdienstMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_notdienst" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-red-600 text-white">
                 <AlertTriangle className="w-3 h-3 mr-1" />

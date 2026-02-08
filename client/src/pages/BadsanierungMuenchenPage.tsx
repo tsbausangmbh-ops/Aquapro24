@@ -61,8 +61,8 @@ export default function BadsanierungMuenchenPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Badsanierung München – Komplettumbau aus einer Hand | AquaPro 24"
-        description="Badsanierung in München: Komplettumbau, barrierefreies Bad mit KfW-Förderung. Beratung vor Ort. Tel: 089 444438872"
+        title="Badumbau München | Stressfrei vom Partnernetzwerk"
+        description="Badumbau in München ohne Stress: Modernes Design, feste Abläufe & klare Kosten. Jetzt kostenlos beraten lassen!"
         canonical="https://aquapro24.de/badsanierung-muenchen"
         keywords="Badsanierung München, Bad renovieren München, Badezimmer sanieren München, Komplettbad München, Bad modernisieren München, Badumbau München, Badsanierung Kosten München"
         ogImageAlt="Badumbau München stressfrei Badsanierung Komplettbad renovieren - Partnernetzwerk Festpreis Garantie"
@@ -107,10 +107,10 @@ export default function BadsanierungMuenchenPage() {
       <Header />
       
       <main id="main-content" className="flex-1">
-        <section className="hero-section relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative py-6 lg:py-8 overflow-hidden">
           <HeroPicture heroKey="hero_badsanierung" alt="" />
-          <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="hero-text-content relative max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
             <div className="max-w-4xl">
               <Badge className="mb-4 bg-cyan-600 text-white">
                 <Droplets className="w-3 h-3 mr-1" />
