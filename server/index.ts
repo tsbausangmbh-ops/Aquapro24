@@ -49,14 +49,31 @@ app.use((req, res, next) => {
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   
   const path = req.path;
-  if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
-    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-  } else if (path === '/sitemap.xml' || path === '/robots.txt') {
-    res.setHeader('Cache-Control', 'public, max-age=86400');
-  } else if (path.startsWith('/api')) {
-    res.setHeader('Cache-Control', 'no-store');
+  if (!isProduction) {
+    if (path.match(/\.(js|css|mjs|ts|tsx)$/) || path.includes('.vite/') || path.startsWith('/@') || path.startsWith('/node_modules/')) {
+      res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+      res.setHeader('Pragma', 'no-cache');
+      res.setHeader('Expires', '0');
+    } else if (path.match(/\.(png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
+      res.setHeader('Cache-Control', 'public, max-age=3600');
+    } else if (path === '/sitemap.xml' || path === '/robots.txt') {
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+    } else if (path.startsWith('/api')) {
+      res.setHeader('Cache-Control', 'no-store');
+    } else {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+      res.setHeader('Pragma', 'no-cache');
+    }
   } else {
-    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$/)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (path === '/sitemap.xml' || path === '/robots.txt') {
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+    } else if (path.startsWith('/api')) {
+      res.setHeader('Cache-Control', 'no-store');
+    } else {
+      res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    }
   }
   
   res.setHeader('Vary', 'User-Agent, Accept-Encoding');
