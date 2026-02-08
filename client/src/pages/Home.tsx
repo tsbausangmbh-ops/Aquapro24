@@ -291,7 +291,7 @@ export default function Home() {
       <Header />
       
       <main id="main-content">
-        <section className="relative py-6 lg:py-8 overflow-hidden">
+        <section className="relative pt-8 pb-6 lg:pt-10 lg:pb-8 overflow-hidden">
           <HeroPicture heroKey="hero_home" alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
