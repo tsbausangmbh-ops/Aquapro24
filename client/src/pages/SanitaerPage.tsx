@@ -176,7 +176,7 @@ export default function SanitaerPage() {
       
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative overflow-hidden" style={{paddingTop: "4rem", paddingBottom: "1.5rem"}}>
+        <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "1.5rem"}}>
           <HeroPicture heroKey="hero_sanitaer" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           

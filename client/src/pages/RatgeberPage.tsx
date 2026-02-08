@@ -256,7 +256,7 @@ export default function RatgeberPage() {
       />
       <Header />
       <main id="main-content">
-        <section className="relative overflow-hidden" style={{paddingTop: "4rem", paddingBottom: "1.5rem"}}>
+        <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "1.5rem"}}>
           <HeroPicture heroKey="hero_ratgeber" alt="" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
