@@ -980,23 +980,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
           }
         }}
         ogImageAlt="Sanitär Heizung Notdienst München Stadtteil lokal - Klempner Installateur in Ihrer Nähe"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": data.faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.frage,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.antwort
-              }
-            }))
-          })
-        }}
+        faqSchema={data.faqs.map(faq => ({ question: faq.frage, answer: faq.antwort }))}
       />
       <Header />
       
@@ -1194,7 +1178,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                    <span><Link href="/foerderung" className="text-primary hover:underline">BAFA/KfW-Förderberatung</Link> für Heizungstausch</span>
+                    <span><Link href="/foerderung" className="text-primary underline">BAFA/KfW-Förderberatung</Link> für Heizungstausch</span>
                   </li>
                 </ul>
               </div>
@@ -1230,59 +1214,71 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <h2 className="text-xl font-bold mb-4">Unsere Leistungen in {data.name}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              <Link href="/sanitaer">
-                <div className="flex items-center gap-2 p-3 rounded-md border bg-card hover-elevate cursor-pointer" data-testid="link-sanitaer-stadtteil">
-                  <Wrench className="w-4 h-4 text-primary shrink-0" />
-                  <div>
-                    <span className="font-medium">Sanitär-Service {data.name}</span>
-                    <p className="text-xs text-muted-foreground">Rohrreinigung, Armaturen, WC ab 81€</p>
-                  </div>
-                </div>
+              <Link href="/sanitaer" data-testid="link-sanitaer-stadtteil">
+                <Card className="hover-elevate cursor-pointer">
+                  <CardContent className="p-3 flex items-center gap-2">
+                    <Wrench className="w-4 h-4 text-primary shrink-0" />
+                    <div>
+                      <span className="font-medium">Sanitär-Service {data.name}</span>
+                      <p className="text-xs text-muted-foreground">Rohrreinigung, Armaturen, WC ab 81€</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
-              <Link href="/heizung">
-                <div className="flex items-center gap-2 p-3 rounded-md border bg-card hover-elevate cursor-pointer" data-testid="link-heizung-stadtteil">
-                  <Flame className="w-4 h-4 text-primary shrink-0" />
-                  <div>
-                    <span className="font-medium">Heizung {data.name}</span>
-                    <p className="text-xs text-muted-foreground">Wartung, Reparatur, Austausch</p>
-                  </div>
-                </div>
+              <Link href="/heizung" data-testid="link-heizung-stadtteil">
+                <Card className="hover-elevate cursor-pointer">
+                  <CardContent className="p-3 flex items-center gap-2">
+                    <Flame className="w-4 h-4 text-primary shrink-0" />
+                    <div>
+                      <span className="font-medium">Heizung {data.name}</span>
+                      <p className="text-xs text-muted-foreground">Wartung, Reparatur, Austausch</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
-              <Link href="/bad">
-                <div className="flex items-center gap-2 p-3 rounded-md border bg-card hover-elevate cursor-pointer" data-testid="link-bad-stadtteil">
-                  <Bath className="w-4 h-4 text-primary shrink-0" />
-                  <div>
-                    <span className="font-medium">Badsanierung {data.name}</span>
-                    <p className="text-xs text-muted-foreground">Komplettsanierung aus einer Hand</p>
-                  </div>
-                </div>
+              <Link href="/bad" data-testid="link-bad-stadtteil">
+                <Card className="hover-elevate cursor-pointer">
+                  <CardContent className="p-3 flex items-center gap-2">
+                    <Bath className="w-4 h-4 text-primary shrink-0" />
+                    <div>
+                      <span className="font-medium">Badsanierung {data.name}</span>
+                      <p className="text-xs text-muted-foreground">Komplettsanierung aus einer Hand</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
-              <Link href="/waermepumpe">
-                <div className="flex items-center gap-2 p-3 rounded-md border bg-card hover-elevate cursor-pointer" data-testid="link-waermepumpe-stadtteil">
-                  <Zap className="w-4 h-4 text-primary shrink-0" />
-                  <div>
-                    <span className="font-medium">Wärmepumpe {data.name}</span>
-                    <p className="text-xs text-muted-foreground">Bis 70% BAFA-Förderung</p>
-                  </div>
-                </div>
+              <Link href="/waermepumpe" data-testid="link-waermepumpe-stadtteil">
+                <Card className="hover-elevate cursor-pointer">
+                  <CardContent className="p-3 flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-primary shrink-0" />
+                    <div>
+                      <span className="font-medium">Wärmepumpe {data.name}</span>
+                      <p className="text-xs text-muted-foreground">Bis 70% BAFA-Förderung</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
-              <Link href="/notdienst-muenchen">
-                <div className="flex items-center gap-2 p-3 rounded-md border bg-card hover-elevate cursor-pointer" data-testid="link-notdienst-stadtteil">
-                  <Phone className="w-4 h-4 text-primary shrink-0" />
-                  <div>
-                    <span className="font-medium">24h Notdienst {data.name}</span>
-                    <p className="text-xs text-muted-foreground">Sofort-Hilfe in {data.anfahrt}</p>
-                  </div>
-                </div>
+              <Link href="/notdienst-muenchen" data-testid="link-notdienst-stadtteil">
+                <Card className="hover-elevate cursor-pointer">
+                  <CardContent className="p-3 flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-primary shrink-0" />
+                    <div>
+                      <span className="font-medium">24h Notdienst {data.name}</span>
+                      <p className="text-xs text-muted-foreground">Sofort-Hilfe in {data.anfahrt}</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
-              <Link href="/kontakt">
-                <div className="flex items-center gap-2 p-3 rounded-md border bg-card hover-elevate cursor-pointer" data-testid="link-kontakt-stadtteil">
-                  <ArrowRight className="w-4 h-4 text-primary shrink-0" />
-                  <div>
-                    <span className="font-medium">Kostenlose Beratung</span>
-                    <p className="text-xs text-muted-foreground">Jetzt unverbindlich anfragen</p>
-                  </div>
-                </div>
+              <Link href="/kontakt" data-testid="link-kontakt-stadtteil">
+                <Card className="hover-elevate cursor-pointer">
+                  <CardContent className="p-3 flex items-center gap-2">
+                    <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+                    <div>
+                      <span className="font-medium">Kostenlose Beratung</span>
+                      <p className="text-xs text-muted-foreground">Jetzt unverbindlich anfragen</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
             </div>
           </div>
