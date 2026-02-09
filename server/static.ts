@@ -338,19 +338,60 @@ export async function serveStatic(app: Express) {
     }
   }));
 
-  app.use(express.static(distPath));
-
-  // SPA Fallback mit 404-Status für unbekannte Routen
-  app.use("*", (req: Request, res) => {
-    let requestPath = req.path;
+  // Bot-SSR-Middleware VOR express.static - damit Googlebot immer
+  // vorgerendertes HTML bekommt statt der leeren SPA-Shell
+  app.use((req: Request, res: Response, next) => {
     const userAgent = req.headers['user-agent'] || '';
     
-    // Normalize: remove trailing slash (except for root)
+    // Nur für HTML-Seiten-Anfragen, nicht für Assets
+    if (req.path.includes('.') || req.path.startsWith('/api') || req.path.startsWith('/assets')) {
+      return next();
+    }
+    
+    if (!isBot(userAgent)) {
+      return next();
+    }
+
+    let requestPath = req.path;
+    if (requestPath !== '/' && requestPath.endsWith('/')) {
+      requestPath = requestPath.slice(0, -1);
+    }
+
+    if (!isValidRoute(requestPath)) {
+      return next();
+    }
+
+    console.log(`[SSR-Prod] Bot: ${userAgent.substring(0, 40)}... → ${requestPath}`);
+
+    if (serveCachedSSR(req, res, requestPath)) {
+      return;
+    }
+
+    console.log(`[SSR-Cache] MISS: ${requestPath}`);
+    const seoHtml = generateStaticHTML(requestPath, indexHtml);
+    ssrCache.set(requestPath, seoHtml).catch(console.error);
+
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('X-SEO-Rendered', 'true');
+    res.setHeader('X-SSR-Cache', 'MISS');
+    res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+    res.setHeader('Vary', 'User-Agent, Accept-Encoding');
+    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
+    res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+    return res.send(seoHtml);
+  });
+
+  app.use(express.static(distPath));
+
+  // SPA Fallback für normale User und 404
+  app.use("*", (req: Request, res) => {
+    let requestPath = req.path;
+    
     if (requestPath !== '/' && requestPath.endsWith('/')) {
       requestPath = requestPath.slice(0, -1);
     }
     
-    // API-Routen, die nicht gefunden wurden -> 404 JSON
     if (requestPath.startsWith('/api')) {
       console.log(`[404] API nicht gefunden: ${requestPath}`);
       return res.status(404).json({ 
@@ -360,51 +401,16 @@ export async function serveStatic(app: Express) {
       });
     }
     
-    // Prüfe ob die Route bekannt ist
     if (isValidRoute(requestPath)) {
-      // Check if request is from a search engine bot
-      if (isBot(userAgent)) {
-        console.log(`[SEO] Bot: ${userAgent.substring(0, 30)}... → ${requestPath}`);
-        
-        // Try cached response first (fast path)
-        if (serveCachedSSR(req, res, requestPath)) {
-          return;
-        }
-        
-        // Cache miss - generate and cache
-        console.log(`[SSR-Cache] MISS: ${requestPath}`);
-        const seoHtml = generateStaticHTML(requestPath, indexHtml);
-        
-        // Cache for future requests (async, don't wait)
-        ssrCache.set(requestPath, seoHtml).catch(console.error);
-        
-        // Optimale Header für Crawler
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.setHeader('X-SEO-Rendered', 'true');
-        res.setHeader('X-SSR-Cache', 'MISS');
-        res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
-        res.setHeader('Vary', 'User-Agent');
-        
-        // Canonical Link Header
-        const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
-        res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
-        
-        return res.send(seoHtml);
-      }
-      
-      // Bekannte Route für normale User -> 200 OK
       res.sendFile(path.resolve(distPath, "index.html"));
     } else {
-      // Unbekannte Route -> prüfe auf intelligente Weiterleitung
       const redirectTarget = findBestRedirect(requestPath);
       
       if (redirectTarget) {
-        // 301 Permanent Redirect zu passender Seite
         console.log(`[301] Redirect: ${requestPath} → ${redirectTarget}`);
         return res.redirect(301, redirectTarget);
       }
       
-      // Keine passende Seite gefunden -> 404 Status + SPA (zeigt 404-Seite)
       console.log(`[404] Seite nicht gefunden: ${requestPath}`);
       res.status(404).sendFile(path.resolve(distPath, "index.html"));
     }
