@@ -193,7 +193,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/ueber-uns': {
-    title: 'AquaPro 24 München | Sanitär Heizung Partnernetzwerk seit 2005',
+    title: 'AquaPro 24 München | Sanitär & Heizung seit 2005',
     description: 'AquaPro 24 München ✓ Partnernetzwerk seit 2005 ✓ Geprüfte Fachbetriebe ✓ Sanitärinstallateure ✓ Heizungsbauer ✓ Festpreisgarantie ✓ 2.800+ zufriedene Kunden.',
     h1: 'AquaPro 24 – Ihr Sanitär & Heizung Partnernetzwerk seit 2005',
     keywords: [
