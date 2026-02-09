@@ -431,7 +431,11 @@ export default function HaustechnikPage() {
           { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
           { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% BAFA-Förderung sichern" },
           { href: "/bad", text: "Badsanierung komplett", description: "Komplettsanierung aus einer Hand" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung München", description: "Installation & Nachrüstung" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
           { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Förderberatung" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst München", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/ratgeber", text: "Haustechnik-Ratgeber", description: "Tipps & Wissen" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />

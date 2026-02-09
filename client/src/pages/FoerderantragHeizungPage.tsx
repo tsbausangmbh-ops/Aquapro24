@@ -565,9 +565,13 @@ export default function FoerderantragHeizungPage() {
           { href: "/foerderung", text: "Alle Förderungen", description: "BAFA, KfW & Steuerbonus" },
           { href: "/foerderantrag", text: "Förderantrag allgemein", description: "Schritt-für-Schritt Anleitung" },
           { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
-          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% BAFA-Förderung" },
-          { href: "/heizung", text: "Heizung München", description: "Wartung & Modernisierung" },
-          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% Förderung sichern" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/heizung-muenchen", text: "Heizung in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Installation & Nachrüstung" },
+          { href: "/waermepumpe-muenchen", text: "Wärmepumpe München", description: "Installation in allen Bezirken" },
+          { href: "/ratgeber", text: "Heizungs-Ratgeber", description: "Tipps zur Heizungsmodernisierung" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
         ]}
       />
       <Footer />

@@ -1315,9 +1315,13 @@ export default function TerminPage() {
           { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC" },
           { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur, Austausch" },
           { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit Förderung" },
           { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Beratung" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
           { href: "/faq", text: "Häufige Fragen", description: "Preise, Ablauf & mehr" },
           { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
+          { href: "/ueber-uns", text: "Über AquaPro 24", description: "Erfahrung & Kompetenz seit 2005" },
         ]}
       />
       <Footer />

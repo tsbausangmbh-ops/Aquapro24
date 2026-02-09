@@ -297,14 +297,18 @@ export default function FussbodenheizungMuenchenPage() {
       </main>
 
       <InternalLinks
-        title="Heizung & Fußbodenheizung in München"
+        title="Heizung & verwandte Services"
         variant="footer-cta"
         links={[
-          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Modernisierung" },
-          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Ideal kombiniert mit Fußbodenheizung" },
-          { href: "/waermepumpe-muenchen", text: "Wärmepumpe installieren", description: "Bis 70% BAFA-Förderung" },
-          { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW Zuschüsse" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Ideal mit Fußbodenheizung" },
+          { href: "/heizung-muenchen", text: "Heizung München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/waermepumpe-muenchen", text: "Wärmepumpe München", description: "Installation in allen Bezirken" },
+          { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW: Bis 70% Zuschuss" },
+          { href: "/foerderantrag-heizung", text: "Förderantrag Heizung", description: "BAFA-Antrag Schritt für Schritt" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
           { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/ratgeber", text: "Heizungs-Ratgeber", description: "Tipps zur Heizungsmodernisierung" },
           { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
         ]}
       />

@@ -525,8 +525,12 @@ export default function RatgeberPage() {
         links={[
           { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services" },
           { href: "/heizung", text: "Heizungs-Service", description: "Wartung bis Neuinstallation" },
-          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung" },
+          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit Förderung" },
           { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Beratung" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
           { href: "/faq", text: "Häufige Fragen", description: "Preise, Ablauf & mehr" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}

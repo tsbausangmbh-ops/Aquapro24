@@ -331,6 +331,10 @@ export default function NotdienstMuenchenPage() {
           { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Leistungen" },
           { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
           { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/heizung-muenchen", text: "Heizung in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Notdienst-Preise", description: "Transparente Notdienst-Kosten" },
           { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
         ]}
       />

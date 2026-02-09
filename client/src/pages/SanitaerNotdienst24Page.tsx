@@ -296,14 +296,18 @@ export default function SanitaerNotdienst24Page() {
       </main>
 
       <InternalLinks
-        title="Weitere Sanitär-Services"
+        title="Notdienst & Sanitär-Services"
         variant="footer-cta"
         links={[
-          { href: "/notdienst-muenchen", text: "Notdienst München", description: "24/7 Soforthilfe für alle Notfälle" },
-          { href: "/sanitaer", text: "Sanitär komplett", description: "Alle Sanitär-Leistungen im Überblick" },
-          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung ab 81€" },
-          { href: "/armaturen", text: "Armaturen-Service", description: "Austausch & Reparatur" },
-          { href: "/kontakt", text: "Jetzt anfragen", description: "Kostenlose Erstberatung" },
+          { href: "/notdienst-muenchen", text: "Notdienst München 24/7", description: "Alle Notdienst-Leistungen" },
+          { href: "/heizung-notdienst-24", text: "Heizung-Notdienst 24/7", description: "Heizungsausfall? Sofort-Hilfe!" },
+          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Leistungen" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/armaturen", text: "Armaturen & Wasserhähne", description: "Austausch & Reparatur" },
+          { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Notdienst-Kosten transparent" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />
       <Footer />

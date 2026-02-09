@@ -297,14 +297,19 @@ export default function HeizungNotdienst24Page() {
       </main>
 
       <InternalLinks
-        title="Weitere Heizungs-Services"
+        title="Notdienst & Heizungs-Services"
         variant="footer-cta"
         links={[
-          { href: "/notdienst-muenchen", text: "Notdienst München", description: "24/7 Soforthilfe für alle Notfälle" },
-          { href: "/heizung", text: "Heizung komplett", description: "Wartung, Reparatur & Modernisierung" },
-          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit bis zu 70% Förderung" },
-          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Installation & Nachrüstung" },
-          { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW: Bis 70% Zuschuss" },
+          { href: "/notdienst-muenchen", text: "Notdienst München 24/7", description: "Alle Notdienst-Leistungen" },
+          { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Rohrbruch? Soforthilfe!" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/heizung-muenchen", text: "Heizung in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit Förderung" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung München", description: "Installation & Nachrüstung" },
+          { href: "/foerderung", text: "Heizungsförderung", description: "BAFA & KfW: Bis 70% Zuschuss" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Notdienst-Kosten transparent" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />
       <Footer />

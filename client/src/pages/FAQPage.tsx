@@ -345,10 +345,15 @@ export default function FAQPage() {
         title="Unsere Leistungen im Detail"
         variant="footer-cta"
         links={[
-          { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services" },
-          { href: "/heizung", text: "Heizungs-Service", description: "Wartung bis Neuinstallation" },
-          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung" },
+          { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services ab 81€" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung bis Neuinstallation ab 154€" },
+          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% Förderung sichern" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
           { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Beratung" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/ratgeber", text: "Ratgeber & Tipps", description: "Expertenwissen für Ihr Zuhause" },
+          { href: "/ueber-uns", text: "Über AquaPro 24", description: "Erfahrung & Kompetenz seit 2005" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />

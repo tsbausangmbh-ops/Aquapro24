@@ -480,6 +480,11 @@ export default function SanitaerPage() {
           { href: "/bad", text: "Badsanierung komplett", description: "Komplettumbau aus einer Hand" },
           { href: "/warmwasser", text: "Warmwasser-Lösungen", description: "Boiler, Durchlauferhitzer, Speicher" },
           { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Rohrbruch & Wasserschaden Soforthilfe" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima aus einer Hand" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "KfW-Zuschüsse für barrierefreies Bad" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Häufige Fragen & transparente Preise" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />
       <Footer />

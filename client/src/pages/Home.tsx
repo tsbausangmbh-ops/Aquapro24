@@ -618,6 +618,10 @@ export default function Home() {
           { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% BAFA-Förderung sichern" },
           { href: "/notdienst-muenchen", text: "24/7 Notdienst München", description: "Soforthilfe in 45-60 Minuten" },
           { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Förderberatung" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima aus einer Hand" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Transparente Preise & häufige Fragen" },
+          { href: "/ratgeber", text: "Ratgeber & Tipps", description: "Expertenwissen für Ihr Zuhause" },
         ]}
       />
       <Footer />

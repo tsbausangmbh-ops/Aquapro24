@@ -300,11 +300,15 @@ export default function SanitaerMuenchenPage() {
         title="Sanitär-Services in München"
         variant="footer-cta"
         links={[
-          { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services im Überblick" },
+          { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services im Detail" },
           { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung ab 81€" },
           { href: "/armaturen", text: "Armaturen & Wasserhähne", description: "Grohe, Hansgrohe & mehr" },
           { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
-          { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Soforthilfe bei Rohrbruch" },
+          { href: "/warmwasser", text: "Warmwasser-Lösungen", description: "Boiler & Durchlauferhitzer" },
+          { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Rohrbruch? Soforthilfe!" },
+          { href: "/notdienst-muenchen", text: "Notdienst München", description: "24/7 Soforthilfe vor Ort" },
+          { href: "/heizung-muenchen", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Transparente Preise ab 81€" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />

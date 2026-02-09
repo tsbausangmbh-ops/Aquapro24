@@ -301,15 +301,19 @@ export default function BadsanierungMuenchenPage() {
       </main>
 
       <InternalLinks
-        title="Rund um Ihr Bad in München"
+        title="Badsanierung & verwandte Services"
         variant="footer-cta"
         links={[
-          { href: "/bad", text: "Badsanierung komplett", description: "Ihr neues Traumbad aus einer Hand" },
-          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Leistungen" },
+          { href: "/bad", text: "Badsanierung Leistungen", description: "Komplettsanierung im Detail" },
+          { href: "/sanitaer", text: "Sanitär-Installationen", description: "Armaturen, WC, Waschbecken" },
           { href: "/armaturen", text: "Premium-Armaturen", description: "Grohe, Hansgrohe, Duravit" },
           { href: "/warmwasser", text: "Warmwasser-Systeme", description: "Boiler & Durchlauferhitzer" },
-          { href: "/foerderung", text: "Förderung barrierefreies Bad", description: "KfW-Zuschüsse sichern" },
-          { href: "/kontakt", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
+          { href: "/foerderung", text: "Förderung Badsanierung", description: "KfW-Zuschüsse barrierefreies Bad" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss sofort berechnen" },
+          { href: "/sanitaer-muenchen", text: "Sanitär München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Badsanierung Kosten & Ablauf" },
+          { href: "/termin", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
         ]}
       />
       <Footer />

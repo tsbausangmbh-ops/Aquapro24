@@ -463,6 +463,11 @@ export default function WarmwasserPage() {
           { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Modernisierung" },
           { href: "/armaturen", text: "Armaturen & Wasserhähne", description: "Grohe, Hansgrohe & mehr" },
           { href: "/bad", text: "Badsanierung komplett", description: "Ihr neues Traumbad" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Effiziente Warmwasserbereitung" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "KfW & BAFA für Warmwasser" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Warmwasser Kosten & Beratung" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />

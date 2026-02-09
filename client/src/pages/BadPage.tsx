@@ -717,8 +717,13 @@ export default function BadPage() {
           { href: "/sanitaer", text: "Sanitär-Installationen", description: "Armaturen, WC, Waschbecken" },
           { href: "/armaturen", text: "Premium-Armaturen", description: "Grohe, Hansgrohe, Duravit" },
           { href: "/warmwasser", text: "Warmwasser-Systeme", description: "Boiler & Durchlauferhitzer" },
+          { href: "/badsanierung-muenchen", text: "Badsanierung München", description: "Alle Stadtteile & Bezirke" },
           { href: "/foerderung", text: "Förderung für Badsanierung", description: "KfW-Zuschüsse für barrierefreies Bad" },
-          { href: "/kontakt", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss sofort berechnen" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Badsanierung Kosten & Ablauf" },
+          { href: "/termin", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
         ]}
       />
       <Footer />

@@ -459,9 +459,14 @@ export default function WaermepumpePage() {
         variant="footer-cta"
         links={[
           { href: "/heizung", text: "Heizungs-Service", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Ideal kombiniert mit Wärmepumpe" },
           { href: "/foerderung", text: "Förderung 2026", description: "BAFA bis 70%, KfW-Kredit" },
           { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
           { href: "/foerderantrag-heizung", text: "Förderantrag Heizung", description: "Schritt-für-Schritt zum Zuschuss" },
+          { href: "/waermepumpe-muenchen", text: "Wärmepumpe München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/ratgeber", text: "Energie-Ratgeber", description: "Tipps zur Heizungsmodernisierung" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Wärmepumpe Kosten & Förderung" },
           { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
         ]}
       />

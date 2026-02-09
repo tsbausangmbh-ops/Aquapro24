@@ -535,6 +535,11 @@ export default function FoerderantragPage() {
           { href: "/foerderantrag-heizung", text: "Heizungs-Förderantrag", description: "BAFA-Antrag für Heizungstausch" },
           { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
           { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% Förderung sichern" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/bad", text: "Badsanierung München", description: "KfW-Förderung barrierefreies Bad" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Förderung für Fußbodenheizung" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/ratgeber", text: "Förderungs-Ratgeber", description: "Tipps & Wissen zur Förderung" },
           { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
         ]}
       />

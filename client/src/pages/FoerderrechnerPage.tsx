@@ -1464,14 +1464,18 @@ export default function FoerderrechnerPage() {
       </main>
 
       <InternalLinks
-        title="Förderung & verwandte Leistungen"
+        title="Förderung & verwandte Services"
         variant="footer-cta"
         links={[
-          { href: "/foerderung", text: "Alle Förderungen", description: "BAFA, KfW & Steuerbonus im Überblick" },
-          { href: "/foerderantrag", text: "Förderantrag stellen", description: "Schritt-für-Schritt zum Zuschuss" },
-          { href: "/foerderantrag-heizung", text: "Heizungs-Förderantrag", description: "BAFA-Antrag für Heizungstausch" },
+          { href: "/foerderung", text: "Alle Förderungen", description: "BAFA, KfW & Steuerbonus" },
+          { href: "/foerderantrag", text: "Förderantrag stellen", description: "Schritt-für-Schritt Anleitung" },
+          { href: "/foerderantrag-heizung", text: "Heizungs-Förderantrag", description: "BAFA-Antrag Heizungstausch" },
           { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% Förderung sichern" },
-          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/heizung", text: "Heizungs-Service", description: "Wartung & Modernisierung" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Installation & Nachrüstung" },
+          { href: "/bad", text: "Badsanierung München", description: "KfW-Förderung barrierefreies Bad" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/ratgeber", text: "Förderungs-Ratgeber", description: "Tipps & Wissen zur Förderung" },
           { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
         ]}
       />

@@ -652,6 +652,10 @@ export default function FoerderungPage() {
           { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
           { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% Förderung sichern" },
           { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung München", description: "Installation & Nachrüstung" },
+          { href: "/bad", text: "Badsanierung München", description: "KfW-Förderung barrierefreies Bad" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/ratgeber", text: "Förderungs-Ratgeber", description: "Tipps & Wissen zur Förderung" },
           { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
         ]}
       />

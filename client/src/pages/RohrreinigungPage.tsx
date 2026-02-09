@@ -428,7 +428,11 @@ export default function RohrreinigungPage() {
           { href: "/sanitaer-notdienst-24", text: "24h Notdienst Sanitär", description: "Sofort-Hilfe bei Verstopfung" },
           { href: "/armaturen", text: "Armaturen-Service", description: "Austausch & Reparatur" },
           { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
-          { href: "/kontakt", text: "Jetzt anfragen", description: "Kostenlose Erstberatung" },
+          { href: "/warmwasser", text: "Warmwasser-Lösungen", description: "Boiler & Durchlauferhitzer" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/notdienst-muenchen", text: "Notdienst München 24/7", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Rohrreinigung Kosten & Ablauf" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />
       <Footer />

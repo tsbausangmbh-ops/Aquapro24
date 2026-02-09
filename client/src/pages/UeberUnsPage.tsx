@@ -696,12 +696,16 @@ export default function UeberUnsPage() {
         title="Unsere Leistungen"
         variant="footer-cta"
         links={[
-          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC-Reparatur" },
-          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur, Austausch" },
           { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
-          { href: "/waermepumpe", text: "Wärmepumpe", description: "Bis 70% BAFA-Förderung" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit Förderung" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Beratung" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Transparente Preise" },
+          { href: "/ratgeber", text: "Ratgeber & Tipps", description: "Expertenwissen für Ihr Zuhause" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
-          { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
         ]}
       />
       <Footer />

@@ -301,11 +301,15 @@ export default function HeizungMuenchenPage() {
         title="Heizungs-Services in München"
         variant="footer-cta"
         links={[
-          { href: "/heizung", text: "Heizungs-Leistungen", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/heizung", text: "Heizungs-Leistungen", description: "Alle Heizungs-Services im Detail" },
           { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit bis zu 70% Förderung" },
-          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Installation & Nachrüstung" },
+          { href: "/waermepumpe-muenchen", text: "Wärmepumpe in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung München", description: "Installation & Nachrüstung" },
           { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW: Bis 70% Zuschuss" },
+          { href: "/foerderantrag-heizung", text: "Förderantrag Heizung", description: "BAFA-Antrag Schritt für Schritt" },
           { href: "/heizung-notdienst-24", text: "Heizung-Notdienst 24/7", description: "Heizungsausfall? Sofort-Hilfe!" },
+          { href: "/sanitaer-muenchen", text: "Sanitär München", description: "Rohrreinigung & Installationen" },
+          { href: "/ratgeber", text: "Heizungs-Ratgeber", description: "Tipps & Wissen rund um Heizung" },
           { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
         ]}
       />

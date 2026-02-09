@@ -462,7 +462,11 @@ export default function ArmaturenPage() {
           { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
           { href: "/warmwasser", text: "Warmwasser-Lösungen", description: "Boiler, Durchlauferhitzer, Speicher" },
           { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung ab 81€" },
-          { href: "/kontakt", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/badsanierung-muenchen", text: "Badsanierung München", description: "Barrierefreie Badgestaltung" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/faq", text: "FAQ & Preisübersicht", description: "Armaturen Kosten & Beratung" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Jetzt unverbindlich anfragen" },
         ]}
       />
       <Footer />
