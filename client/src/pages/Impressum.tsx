@@ -350,10 +350,15 @@ export default function Impressum() {
         title="Unsere Leistungen"
         variant="footer-cta"
         links={[
-          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Services" },
-          { href: "/heizung", text: "Heizung München", description: "Wartung & Reparatur" },
+          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Services ab 81€" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung & Reparatur ab 154€" },
+          { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit Förderung" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Beratung" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
           { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
+          { href: "/faq", text: "Häufige Fragen", description: "Preise, Ablauf & mehr" },
         ]}
       />
       <Footer />

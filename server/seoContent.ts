@@ -74,7 +74,7 @@ export const seoPages: Record<string, PageSEO> = {
           <li><a href="/bad"><strong>Badsanierung München</strong></a> – Komplettumbau, barrierefreies Bad, KfW-Förderung</li>
           <li><a href="/waermepumpe"><strong>Wärmepumpe München</strong></a> – Einbau, BAFA-Förderung bis 70%, KfW 458</li>
           <li><a href="/warmwasser"><strong>Durchlauferhitzer & Boiler München</strong></a> – Reparatur, Installation, kein Warmwasser</li>
-          <li><a href="/fussbodenheizung"><strong>Fußbodenheizung München</strong></a> – Nachrüsten, Spülung, Reparatur</li>
+          <li><a href="/fussbodenheizung-muenchen"><strong>Fußbodenheizung München</strong></a> – Nachrüsten, Spülung, Reparatur</li>
           <li><a href="/notdienst-muenchen"><strong>Klempner Notdienst München 24/7</strong></a> – Rohrbruch, Wasserschaden, Heizungsausfall</li>
         </ul>
         
@@ -209,7 +209,7 @@ export const seoPages: Record<string, PageSEO> = {
         <p>Alte Heizung austauschen? Wir beraten zu Wärmepumpe, Gasbrennwert und Förderung. <a href="/foerderung">Mehr zur Förderung</a></p>
         
         <h3><span style="background:#fff3e0;padding:2px 6px;border-radius:4px"><strong>Fußbodenheizung München</strong></span>: Installation & Reparatur</h3>
-        <p>Fußbodenheizung verlegen, spülen, entlüften, reparieren. <a href="/fussbodenheizung">Alle Infos</a></p>
+        <p>Fußbodenheizung verlegen, spülen, entlüften, reparieren. <a href="/fussbodenheizung-muenchen">Alle Infos</a></p>
         
         <h2>Heizung Preise München: Transparente Festpreise</h2>
         <ul>
@@ -1613,80 +1613,220 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   const lastUpdated = '9. Februar 2026';
   
   // Interne Verlinkung für SSR - kontextuelle Links die Googlebot sehen muss
-  const internalLinksMap: Record<string, string> = {
-    '/': `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
-      <h2 style="font-size:18px;margin-bottom:12px">Unsere Leistungen im Überblick</h2>
-      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
-        <li><a href="/sanitaer" style="color:#f97316">Sanitär München</a></li>
-        <li><a href="/heizung" style="color:#f97316">Heizung München</a></li>
-        <li><a href="/bad" style="color:#f97316">Badsanierung</a></li>
-        <li><a href="/waermepumpe" style="color:#f97316">Wärmepumpe</a></li>
-        <li><a href="/rohrreinigung" style="color:#f97316">Rohrreinigung</a></li>
-        <li><a href="/notdienst-muenchen" style="color:#f97316">Notdienst 24/7</a></li>
-        <li><a href="/foerderung" style="color:#f97316">Förderung</a></li>
-        <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
-        <li><a href="/faq" style="color:#f97316">FAQ & Preise</a></li>
-        <li><a href="/ueber-uns" style="color:#f97316">Über uns</a></li>
-      </ul>
-      <h3 style="font-size:16px;margin:12px 0 8px">Klempner in Ihrem Stadtteil</h3>
-      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px">
-        <li><a href="/schwabing">Schwabing</a></li>
-        <li><a href="/bogenhausen">Bogenhausen</a></li>
-        <li><a href="/sendling">Sendling</a></li>
-        <li><a href="/pasing">Pasing</a></li>
-        <li><a href="/maxvorstadt">Maxvorstadt</a></li>
-        <li><a href="/haidhausen">Haidhausen</a></li>
-        <li><a href="/neuhausen">Neuhausen</a></li>
-        <li><a href="/laim">Laim</a></li>
-        <li><a href="/trudering">Trudering</a></li>
-        <li><a href="/giesing">Giesing</a></li>
-        <li><a href="/solln">Solln</a></li>
-        <li><a href="/lehel">Lehel</a></li>
-        <li><a href="/moosach">Moosach</a></li>
-        <li><a href="/perlach">Perlach</a></li>
-        <li><a href="/hadern">Hadern</a></li>
-      </ul>
-    </nav>`,
-    '/sanitaer': `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
-      <h2 style="font-size:18px;margin-bottom:12px">Weitere Sanitär-Leistungen</h2>
-      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
-        <li><a href="/rohrreinigung" style="color:#f97316">Rohrreinigung München</a></li>
-        <li><a href="/armaturen" style="color:#f97316">Armaturen wechseln</a></li>
-        <li><a href="/warmwasser" style="color:#f97316">Warmwasser & Boiler</a></li>
-        <li><a href="/sanitaer-notdienst-24" style="color:#f97316">Sanitär Notdienst 24/7</a></li>
-        <li><a href="/sanitaer-muenchen" style="color:#f97316">Sanitär München</a></li>
-        <li><a href="/bad" style="color:#f97316">Badsanierung</a></li>
-        <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
-        <li><a href="/faq" style="color:#f97316">Preise & FAQ</a></li>
-      </ul>
-    </nav>`,
-    '/heizung': `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
-      <h2 style="font-size:18px;margin-bottom:12px">Weitere Heizungs-Leistungen</h2>
-      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
-        <li><a href="/waermepumpe" style="color:#f97316">Wärmepumpe München</a></li>
-        <li><a href="/fussbodenheizung-muenchen" style="color:#f97316">Fußbodenheizung</a></li>
-        <li><a href="/heizung-notdienst-24" style="color:#f97316">Heizung Notdienst 24/7</a></li>
-        <li><a href="/heizung-muenchen" style="color:#f97316">Heizung München</a></li>
-        <li><a href="/foerderung" style="color:#f97316">Förderung Heizungstausch</a></li>
-        <li><a href="/foerderantrag-heizung" style="color:#f97316">Förderantrag Heizung</a></li>
-        <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
-      </ul>
-    </nav>`,
-  };
-  
-  // Generische Verlinkung für alle Seiten ohne spezifische Links
-  const defaultInternalLinks = `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
-    <h2 style="font-size:18px;margin-bottom:12px">Unsere Leistungen</h2>
-    <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
-      <li><a href="/sanitaer" style="color:#f97316">Sanitär</a></li>
-      <li><a href="/heizung" style="color:#f97316">Heizung</a></li>
-      <li><a href="/bad" style="color:#f97316">Badsanierung</a></li>
-      <li><a href="/waermepumpe" style="color:#f97316">Wärmepumpe</a></li>
-      <li><a href="/notdienst-muenchen" style="color:#f97316">Notdienst 24/7</a></li>
-      <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
-      <li><a href="/kontakt" style="color:#f97316">Kontakt</a></li>
-    </ul>
+  const ssrLink = (href: string, text: string) => `<li><a href="${href}" style="color:#f97316">${text}</a></li>`;
+  const ssrNav = (title: string, links: string) => `<nav aria-label="${title}" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
+    <h2 style="font-size:18px;margin-bottom:12px">${title}</h2>
+    <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">${links}</ul>
   </nav>`;
+  const stadtteilLinks = `<h3 style="font-size:16px;margin:12px 0 8px">Klempner in Ihrem Stadtteil</h3>
+    <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px">
+      <li><a href="/schwabing">Schwabing</a></li><li><a href="/bogenhausen">Bogenhausen</a></li>
+      <li><a href="/sendling">Sendling</a></li><li><a href="/pasing">Pasing</a></li>
+      <li><a href="/maxvorstadt">Maxvorstadt</a></li><li><a href="/haidhausen">Haidhausen</a></li>
+      <li><a href="/neuhausen">Neuhausen</a></li><li><a href="/laim">Laim</a></li>
+      <li><a href="/trudering">Trudering</a></li><li><a href="/giesing">Giesing</a></li>
+      <li><a href="/solln">Solln</a></li><li><a href="/lehel">Lehel</a></li>
+      <li><a href="/moosach">Moosach</a></li><li><a href="/perlach">Perlach</a></li>
+      <li><a href="/hadern">Hadern</a></li><li><a href="/milbertshofen">Milbertshofen</a></li>
+      <li><a href="/nymphenburg">Nymphenburg</a></li><li><a href="/allach">Allach</a></li>
+      <li><a href="/aubing">Aubing</a></li><li><a href="/feldmoching">Feldmoching</a></li>
+      <li><a href="/thalkirchen">Thalkirchen</a></li><li><a href="/ramersdorf">Ramersdorf</a></li>
+      <li><a href="/berg-am-laim">Berg am Laim</a></li><li><a href="/schwanthalerhoehe">Schwanthalerhöhe</a></li>
+      <li><a href="/au">Au</a></li><li><a href="/freimann">Freimann</a></li>
+    </ul>`;
+
+  const internalLinksMap: Record<string, string> = {
+    '/': ssrNav('Weitere Services in München',
+      ssrLink('/sanitaer', 'Sanitär-Service München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/bad', 'Badsanierung München') + ssrLink('/waermepumpe', 'Wärmepumpe installieren') +
+      ssrLink('/notdienst-muenchen', '24/7 Notdienst München') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/ratgeber', 'Ratgeber & Tipps')
+    ) + stadtteilLinks,
+    '/sanitaer': ssrNav('Verwandte Leistungen',
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/armaturen', 'Armaturen & Wasserhähne') +
+      ssrLink('/bad', 'Badsanierung komplett') + ssrLink('/warmwasser', 'Warmwasser-Lösungen') +
+      ssrLink('/sanitaer-notdienst-24', 'Sanitär-Notdienst 24/7') + ssrLink('/sanitaer-muenchen', 'Sanitär in München') +
+      ssrLink('/haustechnik', 'Haustechnik komplett') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/heizung': ssrNav('Verwandte Leistungen',
+      ssrLink('/waermepumpe', 'Wärmepumpe München') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung') +
+      ssrLink('/foerderung', 'Heizungsförderung 2026') + ssrLink('/foerderantrag-heizung', 'Förderantrag Heizung') +
+      ssrLink('/foerderrechner', 'Förderrechner') + ssrLink('/heizung-notdienst-24', 'Heizung-Notdienst 24/7') +
+      ssrLink('/heizung-muenchen', 'Heizung in München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/ratgeber', 'Heizungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/bad': ssrNav('Passende Services zur Badsanierung',
+      ssrLink('/sanitaer', 'Sanitär-Installationen') + ssrLink('/armaturen', 'Premium-Armaturen') +
+      ssrLink('/warmwasser', 'Warmwasser-Systeme') + ssrLink('/badsanierung-muenchen', 'Badsanierung München') +
+      ssrLink('/foerderung', 'Förderung für Badsanierung') + ssrLink('/foerderrechner', 'Förderrechner') +
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Kostenlose Beratung')
+    ),
+    '/waermepumpe': ssrNav('Rund um Heizung & Förderung',
+      ssrLink('/heizung', 'Heizungs-Service') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung') +
+      ssrLink('/foerderung', 'Förderung 2026') + ssrLink('/foerderrechner', 'Förderrechner') +
+      ssrLink('/foerderantrag-heizung', 'Förderantrag Heizung') + ssrLink('/waermepumpe-muenchen', 'Wärmepumpe München') +
+      ssrLink('/haustechnik', 'Haustechnik komplett') + ssrLink('/ratgeber', 'Energie-Ratgeber') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/rohrreinigung': ssrNav('Weitere Sanitär-Leistungen',
+      ssrLink('/sanitaer', 'Sanitär komplett') + ssrLink('/sanitaer-notdienst-24', '24h Notdienst Sanitär') +
+      ssrLink('/armaturen', 'Armaturen-Service') + ssrLink('/bad', 'Badsanierung') +
+      ssrLink('/warmwasser', 'Warmwasser-Lösungen') + ssrLink('/sanitaer-muenchen', 'Sanitär in München') +
+      ssrLink('/notdienst-muenchen', 'Notdienst München 24/7') + ssrLink('/faq', 'FAQ & Preisübersicht') +
+      ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/armaturen': ssrNav('Verwandte Leistungen',
+      ssrLink('/sanitaer', 'Sanitär komplett') + ssrLink('/bad', 'Badsanierung München') +
+      ssrLink('/warmwasser', 'Warmwasser-Lösungen') + ssrLink('/rohrreinigung', 'Rohrreinigung München') +
+      ssrLink('/sanitaer-muenchen', 'Sanitär in München') + ssrLink('/badsanierung-muenchen', 'Badsanierung München') +
+      ssrLink('/haustechnik', 'Haustechnik komplett') + ssrLink('/faq', 'FAQ & Preisübersicht') +
+      ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/warmwasser': ssrNav('Verwandte Leistungen',
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/armaturen', 'Armaturen & Wasserhähne') + ssrLink('/bad', 'Badsanierung komplett') +
+      ssrLink('/waermepumpe', 'Wärmepumpe München') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/sanitaer-muenchen', 'Sanitär in München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/haustechnik': ssrNav('Weitere Services in München',
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/waermepumpe', 'Wärmepumpe installieren') + ssrLink('/bad', 'Badsanierung komplett') +
+      ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung München') + ssrLink('/rohrreinigung', 'Rohrreinigung München') +
+      ssrLink('/foerderung', 'Förderung & Zuschüsse') + ssrLink('/notdienst-muenchen', '24/7 Notdienst München') +
+      ssrLink('/ratgeber', 'Haustechnik-Ratgeber') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/notdienst-muenchen': ssrNav('Notdienst & weitere Services',
+      ssrLink('/sanitaer-notdienst-24', 'Sanitär-Notdienst 24/7') + ssrLink('/heizung-notdienst-24', 'Heizung-Notdienst 24/7') +
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/sanitaer-muenchen', 'Sanitär in München') +
+      ssrLink('/heizung-muenchen', 'Heizung in München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/faq', 'FAQ & Notdienst-Preise') + ssrLink('/kontakt', 'Kontakt aufnehmen')
+    ),
+    '/sanitaer-notdienst-24': ssrNav('Notdienst & Sanitär-Services',
+      ssrLink('/notdienst-muenchen', 'Notdienst München 24/7') + ssrLink('/heizung-notdienst-24', 'Heizung-Notdienst 24/7') +
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/rohrreinigung', 'Rohrreinigung München') +
+      ssrLink('/sanitaer-muenchen', 'Sanitär in München') + ssrLink('/armaturen', 'Armaturen & Wasserhähne') +
+      ssrLink('/bad', 'Badsanierung München') + ssrLink('/faq', 'FAQ & Preisübersicht') +
+      ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/heizung-notdienst-24': ssrNav('Notdienst & Heizungs-Services',
+      ssrLink('/notdienst-muenchen', 'Notdienst München 24/7') + ssrLink('/sanitaer-notdienst-24', 'Sanitär-Notdienst 24/7') +
+      ssrLink('/heizung', 'Heizungs-Service') + ssrLink('/heizung-muenchen', 'Heizung in München') +
+      ssrLink('/waermepumpe', 'Wärmepumpe München') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung München') +
+      ssrLink('/foerderung', 'Heizungsförderung') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/sanitaer-muenchen': ssrNav('Sanitär-Services in München',
+      ssrLink('/sanitaer', 'Sanitär-Leistungen') + ssrLink('/rohrreinigung', 'Rohrreinigung München') +
+      ssrLink('/armaturen', 'Armaturen & Wasserhähne') + ssrLink('/bad', 'Badsanierung München') +
+      ssrLink('/warmwasser', 'Warmwasser-Lösungen') + ssrLink('/sanitaer-notdienst-24', 'Sanitär-Notdienst 24/7') +
+      ssrLink('/notdienst-muenchen', 'Notdienst München') + ssrLink('/heizung-muenchen', 'Heizung München') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/heizung-muenchen': ssrNav('Heizungs-Services in München',
+      ssrLink('/heizung', 'Heizungs-Leistungen') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/waermepumpe-muenchen', 'Wärmepumpe in München') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung München') +
+      ssrLink('/foerderung', 'Heizungsförderung 2026') + ssrLink('/foerderantrag-heizung', 'Förderantrag Heizung') +
+      ssrLink('/heizung-notdienst-24', 'Heizung-Notdienst 24/7') + ssrLink('/sanitaer-muenchen', 'Sanitär München') +
+      ssrLink('/ratgeber', 'Heizungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/badsanierung-muenchen': ssrNav('Badsanierung & verwandte Services',
+      ssrLink('/bad', 'Badsanierung Leistungen') + ssrLink('/sanitaer', 'Sanitär-Installationen') +
+      ssrLink('/armaturen', 'Premium-Armaturen') + ssrLink('/warmwasser', 'Warmwasser-Systeme') +
+      ssrLink('/foerderung', 'Förderung Badsanierung') + ssrLink('/foerderrechner', 'Förderrechner') +
+      ssrLink('/sanitaer-muenchen', 'Sanitär München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Kostenlose Beratung')
+    ),
+    '/waermepumpe-muenchen': ssrNav('Wärmepumpe & Heizungs-Services',
+      ssrLink('/waermepumpe', 'Wärmepumpe Leistungen') + ssrLink('/heizung', 'Heizungs-Service') +
+      ssrLink('/heizung-muenchen', 'Heizung München') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung') +
+      ssrLink('/foerderung', 'Förderung 2026') + ssrLink('/foerderantrag-heizung', 'Förderantrag Heizung') +
+      ssrLink('/foerderrechner', 'Förderrechner') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/ratgeber', 'Energie-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/fussbodenheizung-muenchen': ssrNav('Heizung & verwandte Services',
+      ssrLink('/heizung', 'Heizungs-Service') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/heizung-muenchen', 'Heizung München') + ssrLink('/waermepumpe-muenchen', 'Wärmepumpe München') +
+      ssrLink('/foerderung', 'Heizungsförderung 2026') + ssrLink('/foerderantrag-heizung', 'Förderantrag Heizung') +
+      ssrLink('/foerderrechner', 'Förderrechner') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/ratgeber', 'Heizungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/foerderung': ssrNav('Förderung & verwandte Leistungen',
+      ssrLink('/foerderantrag', 'Förderantrag stellen') + ssrLink('/foerderantrag-heizung', 'Heizungs-Förderantrag') +
+      ssrLink('/foerderrechner', 'Förderrechner') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/heizung', 'Heizung München') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung München') +
+      ssrLink('/bad', 'Badsanierung München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/ratgeber', 'Förderungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/foerderantrag': ssrNav('Förderung & verwandte Leistungen',
+      ssrLink('/foerderung', 'Alle Förderungen') + ssrLink('/foerderantrag-heizung', 'Heizungs-Förderantrag') +
+      ssrLink('/foerderrechner', 'Förderrechner') + ssrLink('/waermepumpe', 'Wärmepumpe installieren') +
+      ssrLink('/heizung', 'Heizungs-Service') + ssrLink('/bad', 'Badsanierung München') +
+      ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/ratgeber', 'Förderungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/foerderantrag-heizung': ssrNav('Heizungsförderung & Services',
+      ssrLink('/foerderung', 'Alle Förderungen') + ssrLink('/foerderantrag', 'Förderantrag allgemein') +
+      ssrLink('/foerderrechner', 'Förderrechner') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/heizung', 'Heizungs-Service') + ssrLink('/heizung-muenchen', 'Heizung in München') +
+      ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung') + ssrLink('/waermepumpe-muenchen', 'Wärmepumpe München') +
+      ssrLink('/ratgeber', 'Heizungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/foerderrechner': ssrNav('Förderung & verwandte Services',
+      ssrLink('/foerderung', 'Alle Förderungen') + ssrLink('/foerderantrag', 'Förderantrag stellen') +
+      ssrLink('/foerderantrag-heizung', 'Heizungs-Förderantrag') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/heizung', 'Heizungs-Service') + ssrLink('/fussbodenheizung-muenchen', 'Fußbodenheizung') +
+      ssrLink('/bad', 'Badsanierung München') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+      ssrLink('/ratgeber', 'Förderungs-Ratgeber') + ssrLink('/termin', 'Beratungstermin buchen')
+    ),
+    '/faq': ssrNav('Unsere Leistungen im Detail',
+      ssrLink('/sanitaer', 'Sanitär-Leistungen') + ssrLink('/heizung', 'Heizungs-Service') +
+      ssrLink('/bad', 'Badsanierung') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/notdienst-muenchen', '24/7 Notdienst') + ssrLink('/ratgeber', 'Ratgeber & Tipps') +
+      ssrLink('/ueber-uns', 'Über AquaPro 24') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/ratgeber': ssrNav('Unsere Leistungen im Detail',
+      ssrLink('/sanitaer', 'Sanitär-Leistungen') + ssrLink('/heizung', 'Heizungs-Service') +
+      ssrLink('/bad', 'Badsanierung') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/foerderung', 'Förderung & Zuschüsse') + ssrLink('/foerderrechner', 'Förderrechner') +
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/notdienst-muenchen', '24/7 Notdienst') +
+      ssrLink('/faq', 'Häufige Fragen') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/ueber-uns': ssrNav('Unsere Leistungen',
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/bad', 'Badsanierung') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/notdienst-muenchen', '24/7 Notdienst') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/haustechnik', 'Haustechnik komplett') + ssrLink('/faq', 'FAQ & Preisübersicht') +
+      ssrLink('/ratgeber', 'Ratgeber & Tipps') + ssrLink('/termin', 'Termin vereinbaren')
+    ),
+    '/kontakt': ssrNav('Unsere Leistungen',
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/bad', 'Badsanierung') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/notdienst-muenchen', '24/7 Notdienst') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/termin', 'Online-Termin buchen') + ssrLink('/faq', 'Häufige Fragen') +
+      ssrLink('/ratgeber', 'Ratgeber & Tipps') + ssrLink('/ueber-uns', 'Über AquaPro 24')
+    ),
+    '/termin': ssrNav('Unsere Leistungen',
+      ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+      ssrLink('/bad', 'Badsanierung') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+      ssrLink('/notdienst-muenchen', '24/7 Notdienst') + ssrLink('/foerderung', 'Förderung & Zuschüsse') +
+      ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/faq', 'Häufige Fragen') +
+      ssrLink('/kontakt', 'Kontakt aufnehmen') + ssrLink('/ueber-uns', 'Über AquaPro 24')
+    ),
+  };
+
+  const defaultInternalLinks = ssrNav('Unsere Leistungen',
+    ssrLink('/sanitaer', 'Sanitär München') + ssrLink('/heizung', 'Heizung München') +
+    ssrLink('/bad', 'Badsanierung') + ssrLink('/waermepumpe', 'Wärmepumpe München') +
+    ssrLink('/rohrreinigung', 'Rohrreinigung München') + ssrLink('/notdienst-muenchen', '24/7 Notdienst') +
+    ssrLink('/foerderung', 'Förderung & Zuschüsse') + ssrLink('/haustechnik', 'Haustechnik komplett') +
+    ssrLink('/faq', 'FAQ & Preisübersicht') + ssrLink('/termin', 'Termin buchen')
+  );
   
   const pageInternalLinks = internalLinksMap[normalizedPath] || defaultInternalLinks;
 

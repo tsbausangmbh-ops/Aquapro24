@@ -1374,11 +1374,15 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         title="Unsere Leistungen in München"
         variant="footer-cta"
         links={[
-          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC-Reparatur" },
-          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC-Reparatur ab 81€" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch ab 154€" },
           { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
-          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
           { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% Förderung sichern" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/sanitaer-muenchen", text: "Sanitär in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/heizung-muenchen", text: "Heizung in München", description: "Alle Stadtteile & Bezirke" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Förderberatung" },
           { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
         ]}
       />
