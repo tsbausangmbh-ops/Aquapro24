@@ -1566,13 +1566,130 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     `<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />`
   );
 
+  // Geo-Meta-Tags für SSR (kritisch - JS-generierte Tags sieht Googlebot NICHT)
+  const stadtteilGeoForMeta = stadtteilGeoData[normalizedPath];
+  const geoLat = stadtteilGeoForMeta ? stadtteilGeoForMeta.lat : '48.1351';
+  const geoLng = stadtteilGeoForMeta ? stadtteilGeoForMeta.lng : '11.5820';
+  const geoPlacename = stadtteilGeoForMeta ? `${stadtteilGeoForMeta.name}, München` : 'München';
+  
+  const geoMetaTags = `
+    <meta name="geo.region" content="DE-BY" />
+    <meta name="geo.placename" content="${geoPlacename}" />
+    <meta name="geo.position" content="${geoLat};${geoLng}" />
+    <meta name="ICBM" content="${geoLat}, ${geoLng}" />
+    <meta name="geo.country" content="DE" />
+    <meta name="geo.a1" content="Bayern" />
+    <meta name="geo.a2" content="München" />
+    <meta property="place:location:latitude" content="${geoLat}" />
+    <meta property="place:location:longitude" content="${geoLng}" />
+    <meta property="business:contact_data:street_address" content="Hardenbergstr. 4" />
+    <meta property="business:contact_data:locality" content="München" />
+    <meta property="business:contact_data:region" content="Bayern" />
+    <meta property="business:contact_data:postal_code" content="80992" />
+    <meta property="business:contact_data:country_name" content="Deutschland" />
+    <meta property="business:contact_data:phone_number" content="+49 89 444438872" />
+    <meta name="author" content="Mustafa Sakar - AquaPro 24" />
+    <meta name="publisher" content="AquaPro 24 - Mustafa Sakar" />
+    <meta name="content-language" content="de-DE" />
+    <meta name="language" content="de" />
+    <meta name="revisit-after" content="3 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="coverage" content="München, Landkreis München, Bayern, Deutschland" />
+    <meta name="DC.coverage" content="München, Bayern, Deutschland" />
+    <meta name="DC.coverage.spatial" content="München" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  `;
+  html = html.replace('</head>', `${geoMetaTags}</head>`);
+
   // Inject content into root div
   const lastUpdated = '9. Februar 2026';
+  
+  // Interne Verlinkung für SSR - kontextuelle Links die Googlebot sehen muss
+  const internalLinksMap: Record<string, string> = {
+    '/': `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
+      <h2 style="font-size:18px;margin-bottom:12px">Unsere Leistungen im Überblick</h2>
+      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+        <li><a href="/sanitaer" style="color:#f97316">Sanitär München</a></li>
+        <li><a href="/heizung" style="color:#f97316">Heizung München</a></li>
+        <li><a href="/bad" style="color:#f97316">Badsanierung</a></li>
+        <li><a href="/waermepumpe" style="color:#f97316">Wärmepumpe</a></li>
+        <li><a href="/rohrreinigung" style="color:#f97316">Rohrreinigung</a></li>
+        <li><a href="/notdienst-muenchen" style="color:#f97316">Notdienst 24/7</a></li>
+        <li><a href="/foerderung" style="color:#f97316">Förderung</a></li>
+        <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
+        <li><a href="/faq" style="color:#f97316">FAQ & Preise</a></li>
+        <li><a href="/ueber-uns" style="color:#f97316">Über uns</a></li>
+      </ul>
+      <h3 style="font-size:16px;margin:12px 0 8px">Klempner in Ihrem Stadtteil</h3>
+      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px">
+        <li><a href="/schwabing">Schwabing</a></li>
+        <li><a href="/bogenhausen">Bogenhausen</a></li>
+        <li><a href="/sendling">Sendling</a></li>
+        <li><a href="/pasing">Pasing</a></li>
+        <li><a href="/maxvorstadt">Maxvorstadt</a></li>
+        <li><a href="/haidhausen">Haidhausen</a></li>
+        <li><a href="/neuhausen">Neuhausen</a></li>
+        <li><a href="/laim">Laim</a></li>
+        <li><a href="/trudering">Trudering</a></li>
+        <li><a href="/giesing">Giesing</a></li>
+        <li><a href="/solln">Solln</a></li>
+        <li><a href="/lehel">Lehel</a></li>
+        <li><a href="/moosach">Moosach</a></li>
+        <li><a href="/perlach">Perlach</a></li>
+        <li><a href="/hadern">Hadern</a></li>
+      </ul>
+    </nav>`,
+    '/sanitaer': `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
+      <h2 style="font-size:18px;margin-bottom:12px">Weitere Sanitär-Leistungen</h2>
+      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+        <li><a href="/rohrreinigung" style="color:#f97316">Rohrreinigung München</a></li>
+        <li><a href="/armaturen" style="color:#f97316">Armaturen wechseln</a></li>
+        <li><a href="/warmwasser" style="color:#f97316">Warmwasser & Boiler</a></li>
+        <li><a href="/sanitaer-notdienst-24" style="color:#f97316">Sanitär Notdienst 24/7</a></li>
+        <li><a href="/sanitaer-muenchen" style="color:#f97316">Sanitär München</a></li>
+        <li><a href="/bad" style="color:#f97316">Badsanierung</a></li>
+        <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
+        <li><a href="/faq" style="color:#f97316">Preise & FAQ</a></li>
+      </ul>
+    </nav>`,
+    '/heizung': `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
+      <h2 style="font-size:18px;margin-bottom:12px">Weitere Heizungs-Leistungen</h2>
+      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+        <li><a href="/waermepumpe" style="color:#f97316">Wärmepumpe München</a></li>
+        <li><a href="/fussbodenheizung-muenchen" style="color:#f97316">Fußbodenheizung</a></li>
+        <li><a href="/heizung-notdienst-24" style="color:#f97316">Heizung Notdienst 24/7</a></li>
+        <li><a href="/heizung-muenchen" style="color:#f97316">Heizung München</a></li>
+        <li><a href="/foerderung" style="color:#f97316">Förderung Heizungstausch</a></li>
+        <li><a href="/foerderantrag-heizung" style="color:#f97316">Förderantrag Heizung</a></li>
+        <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
+      </ul>
+    </nav>`,
+  };
+  
+  // Generische Verlinkung für alle Seiten ohne spezifische Links
+  const defaultInternalLinks = `<nav aria-label="Verwandte Seiten" style="padding:20px;max-width:1200px;margin:20px auto;border-top:1px solid #eee">
+    <h2 style="font-size:18px;margin-bottom:12px">Unsere Leistungen</h2>
+    <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+      <li><a href="/sanitaer" style="color:#f97316">Sanitär</a></li>
+      <li><a href="/heizung" style="color:#f97316">Heizung</a></li>
+      <li><a href="/bad" style="color:#f97316">Badsanierung</a></li>
+      <li><a href="/waermepumpe" style="color:#f97316">Wärmepumpe</a></li>
+      <li><a href="/notdienst-muenchen" style="color:#f97316">Notdienst 24/7</a></li>
+      <li><a href="/termin" style="color:#f97316">Termin buchen</a></li>
+      <li><a href="/kontakt" style="color:#f97316">Kontakt</a></li>
+    </ul>
+  </nav>`;
+  
+  const pageInternalLinks = internalLinksMap[normalizedPath] || defaultInternalLinks;
+
   const fullContent = `
     ${baseContent}
     <main style="font-family:system-ui,-apple-system,sans-serif;color:#333">
       <h1 style="font-size:32px;padding:40px 20px 0;max-width:1200px;margin:0 auto">${page.h1}</h1>
       ${page.content}
+      ${pageInternalLinks}
       <p style="max-width:1200px;margin:20px auto 0;padding:0 20px;font-size:13px;color:#888">Zuletzt aktualisiert: ${lastUpdated}</p>
     </main>
     ${footerContent}
