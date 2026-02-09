@@ -432,6 +432,7 @@ export const seoPages: Record<string, PageSEO> = {
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        "@id": "https://aquapro24.de/faq#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -1290,7 +1291,98 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   // Note: LocalBusiness and WebSite schemas are already defined in index.html
   // SSR only adds BreadcrumbList for page-specific navigation
 
-  const webPageSchema = {
+  const breadcrumbNameMap: Record<string, string> = {
+    'sanitaer': 'Sanitär',
+    'heizung': 'Heizung',
+    'bad': 'Badsanierung',
+    'waermepumpe': 'Wärmepumpe',
+    'haustechnik': 'Haustechnik',
+    'rohrreinigung': 'Rohrreinigung',
+    'armaturen': 'Armaturen',
+    'warmwasser': 'Warmwasser',
+    'sanitaer-muenchen': 'Sanitär München',
+    'heizung-muenchen': 'Heizung München',
+    'badsanierung-muenchen': 'Badsanierung München',
+    'waermepumpe-muenchen': 'Wärmepumpe München',
+    'fussbodenheizung-muenchen': 'Fußbodenheizung München',
+    'sanitaer-notdienst-24': 'Sanitär Notdienst 24h',
+    'heizung-notdienst-24': 'Heizung Notdienst 24h',
+    'notdienst-muenchen': 'Notdienst München',
+    'foerderung': 'Förderung',
+    'foerderantrag': 'Förderantrag',
+    'foerderantrag-heizung': 'Förderantrag Heizung',
+    'foerderrechner': 'Förderrechner',
+    'termin': 'Termin buchen',
+    'kontakt': 'Kontakt',
+    'ueber-uns': 'Über uns',
+    'faq': 'FAQ & Preise',
+    'ratgeber': 'Ratgeber',
+    'impressum': 'Impressum',
+    'agb': 'AGB',
+    'datenschutz': 'Datenschutz',
+    'cookie-richtlinie': 'Cookie-Richtlinie',
+    'barrierefreiheit': 'Barrierefreiheit',
+    'schwabing': 'Schwabing',
+    'bogenhausen': 'Bogenhausen',
+    'maxvorstadt': 'Maxvorstadt',
+    'haidhausen': 'Haidhausen',
+    'nymphenburg': 'Nymphenburg',
+    'lehel': 'Lehel',
+    'solln': 'Solln',
+    'sendling': 'Sendling',
+    'pasing': 'Pasing',
+    'neuhausen': 'Neuhausen',
+    'trudering': 'Trudering',
+    'laim': 'Laim',
+    'giesing': 'Giesing',
+    'moosach': 'Moosach',
+    'milbertshofen': 'Milbertshofen',
+    'perlach': 'Perlach',
+    'hadern': 'Hadern',
+    'allach': 'Allach',
+    'aubing': 'Aubing',
+    'feldmoching': 'Feldmoching',
+    'thalkirchen': 'Thalkirchen',
+    'ramersdorf': 'Ramersdorf',
+    'berg-am-laim': 'Berg am Laim',
+    'schwanthalerhoehe': 'Schwanthalerhöhe',
+    'au': 'Au',
+    'freimann': 'Freimann',
+    'muenchen-nord': 'München Nord',
+    'muenchen-sued': 'München Süd',
+    'muenchen-west': 'München West',
+    'muenchen-ost': 'München Ost'
+  };
+
+  const breadcrumbParts = pagePath.split('/').filter(p => p);
+  const breadcrumbItems = [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE_URL}
+  ];
+  let currentPath = '';
+  breadcrumbParts.forEach((part, index) => {
+    currentPath += '/' + part;
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": breadcrumbNameMap[part] || part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' '),
+      "item": BASE_URL + currentPath
+    });
+  });
+
+  const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+  const breadcrumbSchema = breadcrumbParts.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": breadcrumbId,
+    "itemListElement": breadcrumbItems
+  } : null;
+
+  if (breadcrumbSchema) {
+    const breadcrumbScript = `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`;
+    html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
+  }
+
+  const webPageSchema: Record<string, any> = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${canonicalUrl}#webpage`,
@@ -1299,6 +1391,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     "description": page.description,
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "about": { "@id": `${BASE_URL}/#localbusiness` },
+    ...(breadcrumbSchema ? { "breadcrumb": { "@id": breadcrumbId } } : {}),
     "author": {
       "@type": "Person",
       "@id": `${BASE_URL}/#founder`,
@@ -1308,11 +1401,11 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     "publisher": { "@id": `${BASE_URL}/#organization` },
     "inLanguage": "de-DE",
     "datePublished": "2024-01-01",
-    "dateModified": "2026-02-07",
-    "lastReviewed": "2026-02-07",
+    "dateModified": "2026-02-09",
+    "lastReviewed": "2026-02-09",
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", "h2", ".hero-text", ".service-description"]
+      "cssSelector": ["h1", ".hero-subtitle", ".emergency-phone", ".service-summary"]
     },
     "mainContentOfPage": {
       "@type": "WebPageElement",
@@ -1321,30 +1414,6 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   };
   const webPageScript = `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`;
   html = html.replace('</head>', `${webPageScript}\n</head>`);
-
-  const breadcrumbParts = pagePath.split('/').filter(p => p);
-  if (breadcrumbParts.length > 0) {
-    const breadcrumbItems = [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL}
-    ];
-    let currentPath = '';
-    breadcrumbParts.forEach((part, index) => {
-      currentPath += '/' + part;
-      breadcrumbItems.push({
-        "@type": "ListItem",
-        "position": index + 2,
-        "name": part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' '),
-        "item": BASE_URL + currentPath
-      });
-    });
-    const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbItems
-    };
-    const breadcrumbScript = `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`;
-    html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
-  }
 
   // Stadtteil-spezifische Geo-Schemas für hyper-lokale Signale
   const stadtteilGeoData: Record<string, { lat: string; lng: string; plz: string[]; name: string }> = {
@@ -1472,11 +1541,11 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     html = html.replace('</head>', `${serviceScript}\n</head>`);
   }
 
-  // Add FAQPage schema if page has FAQs
   if (page.faqs && page.faqs.length > 0) {
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
       "mainEntity": page.faqs.map(faq => ({
         "@type": "Question",
         "name": faq.question,
@@ -1498,7 +1567,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   );
 
   // Inject content into root div
-  const lastUpdated = '7. Februar 2026';
+  const lastUpdated = '9. Februar 2026';
   const fullContent = `
     ${baseContent}
     <main style="font-family:system-ui,-apple-system,sans-serif;color:#333">
