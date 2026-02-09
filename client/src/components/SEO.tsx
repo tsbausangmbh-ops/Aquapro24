@@ -941,7 +941,7 @@ export default function SEO({
         "width": 1200,
         "height": 630
       },
-      "breadcrumb": { "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb` },
+      ...(breadcrumbs && breadcrumbs.length > 0 ? { "breadcrumb": { "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb` } } : {}),
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", "h2", ".hero-text", ".service-description", ".price-info", ".faq-question", ".faq-answer", "[data-speakable]"]
@@ -1030,18 +1030,15 @@ export default function SEO({
       const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb`,
         "itemListElement": breadcrumbs.map((item, index, arr) => {
           const listItem: Record<string, unknown> = {
             "@type": "ListItem",
             "position": index + 1,
             "name": item.name
           };
-          // Nur item hinzufügen wenn nicht das letzte Element (aktuelle Seite)
           if (index < arr.length - 1) {
-            listItem["item"] = {
-              "@type": "WebPage",
-              "@id": item.url
-            };
+            listItem["item"] = item.url;
           }
           return listItem;
         })
