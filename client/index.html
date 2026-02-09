@@ -59,11 +59,14 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     
-    <!-- Erweitertes Schema.org: Multi-Type LocalBusiness + Plumber + HVACBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Plumber", "HVACBusiness"],
+      "@type": "Plumber",
+      "additionalType": [
+        "https://schema.org/HVACBusiness",
+        "https://schema.org/HomeAndConstructionBusiness"
+      ],
       "@id": "https://aquapro24.de/#localbusiness",
       "name": "AquaPro24 - Sanitär & Heizung München",
       "alternateName": ["AquaPro24", "AquaPro 24", "Klempner München AquaPro24", "Sanitär München AquaPro24"],
@@ -475,35 +478,7 @@
     }
     </script>
 
-    <!-- Google Speakable Schema für Voice Search -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "https://aquapro24.de/#webpage",
-      "url": "https://aquapro24.de",
-      "name": "AquaPro24 - Klempner & Heizung München | 24h Notdienst",
-      "isPartOf": {"@id": "https://aquapro24.de/#website"},
-      "about": {"@id": "https://aquapro24.de/#organization"},
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://aquapro24.de/favicon.png"
-      },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [
-          "h1",
-          ".hero-subtitle",
-          ".emergency-phone",
-          ".service-summary"
-        ]
-      },
-      "mainContentOfPage": {
-        "@type": "WebPageElement",
-        "cssSelector": "main"
-      }
-    }
-    </script>
+    <!-- WebPage Schema wird seitenspezifisch via SSR/Client generiert -->
   </head>
   <body>
     <div id="root"></div>

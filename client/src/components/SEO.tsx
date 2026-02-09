@@ -241,7 +241,11 @@ const MUNICH_DISTRICTS = [
 
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": ["HomeAndConstructionBusiness", "Plumber", "HVACBusiness", "LocalBusiness"],
+  "@type": "Plumber",
+  "additionalType": [
+    "https://schema.org/HVACBusiness",
+    "https://schema.org/HomeAndConstructionBusiness"
+  ],
   "@id": "https://aquapro24.de/#localbusiness",
   "name": "AquaPro 24",
   "alternateName": ["AquaPro24", "Aqua Pro 24", "Sanitär München", "Heizung München", "Notdienst Sanitär München", "Klempner München", "Badsanierung München"],

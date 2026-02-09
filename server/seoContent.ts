@@ -1459,7 +1459,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   if (stadtteilGeo) {
     const stadtteilSchema = {
       "@context": "https://schema.org",
-      "@type": ["Plumber", "HVACBusiness"],
+      "@type": "Plumber",
       "name": `AquaPro24 – Klempner & Heizung ${stadtteilGeo.name} München`,
       "description": `Sanitär, Heizung und Notdienst in ${stadtteilGeo.name} München. Festpreise, schnelle Anfahrt, 24/7 erreichbar.`,
       "url": `${BASE_URL}${pagePath}`,
