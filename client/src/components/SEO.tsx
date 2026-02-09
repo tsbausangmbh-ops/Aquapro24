@@ -368,7 +368,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": 4.9,
-    "reviewCount": 2847,
+    "ratingCount": 847,
+    "reviewCount": 847,
     "bestRating": 5,
     "worstRating": 1
   },
@@ -933,7 +934,7 @@ export default function SEO({
         "width": 1200,
         "height": 630
       },
-      ...(breadcrumbs && breadcrumbs.length > 0 ? { "breadcrumb": { "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb` } } : {}),
+      "breadcrumb": { "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb` },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", "h2", ".hero-text", ".service-description", ".price-info", ".faq-question", ".faq-answer", "[data-speakable]"]
@@ -1008,12 +1009,8 @@ export default function SEO({
       document.head.appendChild(serviceScript);
     }
 
-    if (breadcrumbs && breadcrumbs.length > 0) {
-      const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb`,
-        "itemListElement": breadcrumbs.map((item, index, arr) => {
+    const breadcrumbItemList = (breadcrumbs && breadcrumbs.length > 0)
+      ? breadcrumbs.map((item, index, arr) => {
           const listItem: Record<string, unknown> = {
             "@type": "ListItem",
             "position": index + 1,
@@ -1024,12 +1021,18 @@ export default function SEO({
           }
           return listItem;
         })
-      };
-      const breadcrumbScript = document.createElement("script");
-      breadcrumbScript.type = "application/ld+json";
-      breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
-      document.head.appendChild(breadcrumbScript);
-    }
+      : [{"@type": "ListItem", "position": 1, "name": "Startseite"}];
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb`,
+      "itemListElement": breadcrumbItemList
+    };
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
 
     if (faqSchema && faqSchema.length > 0) {
       const faqPageSchema = {

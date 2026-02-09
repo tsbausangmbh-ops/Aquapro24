@@ -1361,36 +1361,38 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   };
 
   const breadcrumbParts = pagePath.split('/').filter(p => p);
-  const breadcrumbItems: Record<string, any>[] = [
-    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE_URL}
-  ];
-  let currentPath = '';
-  breadcrumbParts.forEach((part, index) => {
-    currentPath += '/' + part;
-    const isLast = index === breadcrumbParts.length - 1;
-    const listItem: Record<string, any> = {
-      "@type": "ListItem",
-      "position": index + 2,
-      "name": breadcrumbNameMap[part] || part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' ')
-    };
-    if (!isLast) {
-      listItem["item"] = BASE_URL + currentPath;
-    }
-    breadcrumbItems.push(listItem);
-  });
+  const breadcrumbItems: Record<string, any>[] = [];
+
+  if (breadcrumbParts.length === 0) {
+    breadcrumbItems.push({"@type": "ListItem", "position": 1, "name": "Startseite"});
+  } else {
+    breadcrumbItems.push({"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE_URL});
+    let currentPath = '';
+    breadcrumbParts.forEach((part, index) => {
+      currentPath += '/' + part;
+      const isLast = index === breadcrumbParts.length - 1;
+      const listItem: Record<string, any> = {
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": breadcrumbNameMap[part] || part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' ')
+      };
+      if (!isLast) {
+        listItem["item"] = BASE_URL + currentPath;
+      }
+      breadcrumbItems.push(listItem);
+    });
+  }
 
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
-  const breadcrumbSchema = breadcrumbParts.length > 0 ? {
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "@id": breadcrumbId,
     "itemListElement": breadcrumbItems
-  } : null;
+  };
 
-  if (breadcrumbSchema) {
-    const breadcrumbScript = `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`;
-    html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
-  }
+  const breadcrumbScript = `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`;
+  html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
 
   const webPageSchema: Record<string, any> = {
     "@context": "https://schema.org",
@@ -1401,7 +1403,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     "description": page.description,
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "about": { "@id": `${BASE_URL}/#localbusiness` },
-    ...(breadcrumbSchema ? { "breadcrumb": { "@id": breadcrumbId } } : {}),
+    "breadcrumb": { "@id": breadcrumbId },
     "author": {
       "@type": "Person",
       "@id": `${BASE_URL}/#founder`,
@@ -1505,7 +1507,8 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
         "ratingValue": "4.9",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingCount": "2847"
+        "ratingCount": "847",
+        "reviewCount": "847"
       }
     };
     const stadtteilScript = `<script type="application/ld+json">${JSON.stringify(stadtteilSchema)}</script>`;
