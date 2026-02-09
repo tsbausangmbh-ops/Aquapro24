@@ -1,0 +1,153 @@
+1. Robots.txt prüfen (kritischer Punkt)
+
+Rufe direkt auf:
+
+https://aquapro24.de/robots.txt
+
+
+Erwarteter Inhalt (Minimal-Version):
+
+User-agent: *
+Allow: /
+
+
+Wenn dort steht:
+
+Disallow: /
+
+oder gar nichts
+
+oder ein Framework-Default (z. B. Next / SSR / Builder)
+
+→ Google darf dann nicht crawlen.
+Das ist einer der häufigsten Gründe.
+
+2. Meta-Robots & HTTP-Header prüfen
+
+Öffne die Startseite und eine Unterseite (z. B. /sanitaer) und prüfe im HTML-Head:
+
+❌ Darf NICHT vorhanden sein
+
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+
+
+Auch prüfen per Terminal:
+
+curl -I https://aquapro24.de
+
+
+Wenn dort ein Header steht wie:
+
+X-Robots-Tag: noindex
+
+
+→ Google crawlt, indexiert aber bewusst nicht.
+
+3. JavaScript / Rendering-Problem (sehr wahrscheinlich)
+
+Deine Seite ist JS-basiert (React / Next / Builder-Framework).
+
+Google sieht initial:
+
+wenig oder keinen HTML-Content
+
+Inhalte werden erst clientseitig geladen
+
+Typisches Ergebnis in Search Console:
+
+„Gecrawlt – derzeit nicht indexiert“
+
+Lösung (eine davon ist Pflicht):
+
+echtes SSR (Server Side Rendering) aktivieren
+oder
+
+prerender / static export
+oder
+
+mindestens HTML-Fallback mit Textinhalt
+
+Ohne das → kein Ranking, egal wie gut der Text ist.
+
+4. Sitemap fehlt oder ist nicht bekannt
+
+Prüfe:
+
+https://aquapro24.de/sitemap.xml
+
+
+Wenn:
+
+404
+
+leer
+
+nicht eingereicht
+
+→ Google findet deine Seiten nur zufällig.
+
+Pflicht-Sitemap (Beispiel):
+
+/
+ /sanitaer
+ /heizung
+ /bad
+ /waermepumpe
+ /kontakt
+
+5. Google Search Console – Status (entscheidend)
+
+In der Search Console siehst du aktuell sehr wahrscheinlich:
+
+❌ „Nicht indexiert“
+
+❌ „Gefunden – derzeit nicht indexiert“
+
+❌ „Gecrawlt – derzeit nicht indexiert“
+
+Das bedeutet:
+
+Google WAR da, hat aber entschieden: kein Mehrwert / technisch problematisch.
+
+6. Inhaltlich: Google sieht „lokale Service-Hülle“
+
+Aktuell sehr wahrscheinlich:
+
+viele Service-Keywords
+
+wenig echte Tiefe
+
+keine klaren Entitäten (Adresse, Betrieb, Nachweise, Struktur)
+
+Google bewertet das als:
+
+austauschbare Dienstleister-Landingpage
+
+Folge: niedrige Crawl-Priorität.
+
+7. Was Google zusätzlich vermisst
+
+strukturierte Daten (LocalBusiness, Service)
+
+echte Standort-Signale (Adresse, Einzugsgebiet)
+
+externe Signale (auch nur 1–2 Links)
+
+Ohne das → Google wartet oder ignoriert.
+
+KONKRETER FIX-PLAN (empfohlen)
+
+robots.txt sofort freigeben
+
+noindex / X-Robots-Tag ausschließen
+
+SSR oder Prerender aktivieren
+
+Sitemap erstellen & einreichen
+
+Startseite + 2 Unterseiten manuell indexieren
+
+eine Seite inhaltlich deutlich aufwerten (700–1.000 Wörter, klar strukturiert)
+
+LocalBusiness-Schema setzen
