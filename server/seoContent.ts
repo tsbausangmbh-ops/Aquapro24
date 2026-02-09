@@ -1060,32 +1060,32 @@ export const seoPages: Record<string, PageSEO> = {
 // === STADTTEIL SEITEN (synchronisiert mit sitemap.xml) ===
 export const stadtteileData = [
   // Premium Stadtteile
-  { slug: 'schwabing', name: 'Schwabing', plz: '80796' },
+  { slug: 'schwabing', name: 'Schwabing', plz: '80799' },
   { slug: 'bogenhausen', name: 'Bogenhausen', plz: '81675' },
   { slug: 'maxvorstadt', name: 'Maxvorstadt', plz: '80333' },
   { slug: 'haidhausen', name: 'Haidhausen', plz: '81667' },
   { slug: 'nymphenburg', name: 'Nymphenburg', plz: '80638' },
   { slug: 'lehel', name: 'Lehel', plz: '80538' },
-  { slug: 'solln', name: 'Solln', plz: '81479' },
+  { slug: 'solln', name: 'Solln', plz: '81477' },
   // Standard Stadtteile
-  { slug: 'sendling', name: 'Sendling', plz: '81371' },
+  { slug: 'sendling', name: 'Sendling', plz: '81369' },
   { slug: 'pasing', name: 'Pasing', plz: '81241' },
-  { slug: 'neuhausen', name: 'Neuhausen', plz: '80636' },
+  { slug: 'neuhausen', name: 'Neuhausen', plz: '80634' },
   { slug: 'trudering', name: 'Trudering', plz: '81825' },
   { slug: 'laim', name: 'Laim', plz: '80686' },
   { slug: 'giesing', name: 'Giesing', plz: '81539' },
-  { slug: 'moosach', name: 'Moosach', plz: '80993' },
+  { slug: 'moosach', name: 'Moosach', plz: '80992' },
   { slug: 'milbertshofen', name: 'Milbertshofen', plz: '80807' },
-  { slug: 'perlach', name: 'Perlach', plz: '81737' },
-  { slug: 'hadern', name: 'Hadern', plz: '81375' },
+  { slug: 'perlach', name: 'Perlach', plz: '81669' },
+  { slug: 'hadern', name: 'Hadern', plz: '80689' },
   { slug: 'allach', name: 'Allach', plz: '80999' },
-  { slug: 'aubing', name: 'Aubing', plz: '81245' },
-  { slug: 'feldmoching', name: 'Feldmoching', plz: '80995' },
-  { slug: 'thalkirchen', name: 'Thalkirchen', plz: '81371' },
-  { slug: 'ramersdorf', name: 'Ramersdorf', plz: '81737' },
-  { slug: 'berg-am-laim', name: 'Berg am Laim', plz: '81671' },
+  { slug: 'aubing', name: 'Aubing', plz: '81243' },
+  { slug: 'feldmoching', name: 'Feldmoching', plz: '80933' },
+  { slug: 'thalkirchen', name: 'Thalkirchen', plz: '81379' },
+  { slug: 'ramersdorf', name: 'Ramersdorf', plz: '81735' },
+  { slug: 'berg-am-laim', name: 'Berg am Laim', plz: '81675' },
   { slug: 'schwanthalerhoehe', name: 'Schwanthalerhöhe', plz: '80339' },
-  { slug: 'au', name: 'Au', plz: '81541' },
+  { slug: 'au', name: 'Au', plz: '81671' },
   { slug: 'freimann', name: 'Freimann', plz: '80939' },
   // Regionen
   { slug: 'muenchen-nord', name: 'München-Nord', plz: '80807' },
@@ -1097,8 +1097,8 @@ export const stadtteileData = [
 // Add all Stadtteil pages to seoPages
 stadtteileData.forEach(st => {
   seoPages[`/${st.slug}`] = {
-    title: `Klempner ${st.name} München | Sanitärinstallateur Notdienst 24/7 Festpreis 2026 | AquaPro 24`,
-    description: `Klempner ${st.name} München ✓ Sanitärinstallateur ✓ Notdienst 24/7 ✓ Rohrreinigung ab 81€ ✓ Heizungsreparatur ab 154€ ✓ Armaturen ✓ 30 Min Anfahrt ${st.plz}. Tel: 089 444438872`,
+    title: `Klempner ${st.name} München | 24/7 ab 81€ | AquaPro 24`,
+    description: `Klempner ${st.name} München ✓ Sanitärinstallateur ✓ Notdienst 24/7 ✓ Rohrreinigung ab 81€ ✓ Heizung ab 154€ ✓ 30 Min Anfahrt ${st.plz}. Tel: 089 444438872`,
     h1: `Klempner ${st.name} München – Sanitärinstallateur & Notdienst 24/7`,
     keywords: [
       `Klempner ${st.name}`, `Klempner ${st.name} München`, `Klempner München ${st.name}`,
@@ -1457,9 +1457,12 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
 
   const stadtteilGeo = stadtteilGeoData[pagePath];
   if (stadtteilGeo) {
+    const slugPart = pagePath.replace('/', '');
     const stadtteilSchema = {
       "@context": "https://schema.org",
-      "@type": "Plumber",
+      "@type": "LocalBusiness",
+      "additionalType": "https://schema.org/Plumber",
+      "@id": `${BASE_URL}/#localbusiness-${slugPart}`,
       "name": `AquaPro24 – Klempner & Heizung ${stadtteilGeo.name} München`,
       "description": `Sanitär, Heizung und Notdienst in ${stadtteilGeo.name} München. Festpreise, schnelle Anfahrt, 24/7 erreichbar.`,
       "url": `${BASE_URL}${pagePath}`,

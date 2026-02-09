@@ -7,8 +7,8 @@ export interface SEOMeta {
 
 export const seoMeta: Record<string, SEOMeta> = {
   '/': {
-    title: 'Klempner München 24h Notdienst | Sanitär & Heizung Festpreis 2026 | AquaPro 24',
-    description: 'Klempner München ✓ 24/7 Notdienst ✓ Sanitärinstallateur ✓ Festpreis ab 81€ ✓ 30 Min Anfahrt ✓ Rohrbruch, WC verstopft, Heizung defekt. 2.800+ zufriedene Kunden seit 2005. Jetzt anrufen: 089 444438872',
+    title: 'Klempner München 24h Notdienst | Sanitär ab 81€ | AquaPro 24',
+    description: 'Klempner München ✓ 24/7 Notdienst ✓ Sanitärinstallateur ✓ Festpreis ab 81€ ✓ 30 Min Anfahrt ✓ Rohrbruch & Heizung. Tel: 089 444438872',
     h1: 'Klempner München – Sanitär & Heizung Notdienst 24/7',
     keywords: [
       'Klempner München', 'Sanitär München', 'Sanitärinstallateur München', 'Sanitärinstallateure München',
@@ -30,8 +30,8 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/sanitaer': {
-    title: 'Sanitär München | Sanitärinstallateur Rohrbruch Armaturen Festpreis 2026 | AquaPro 24',
-    description: 'Sanitär München ✓ Sanitärinstallateur ✓ Rohrbruch Soforthilfe ✓ Armaturen Austausch ✓ WC Reparatur ✓ Kleinteile-Service ✓ Festpreis ab 81€. Termin in 24h. Tel: 089 444438872',
+    title: 'Sanitär München | Rohrbruch & Armaturen ab 81€ | AquaPro 24',
+    description: 'Sanitär München ✓ Sanitärinstallateur ✓ Rohrbruch Soforthilfe ✓ Armaturen Austausch ✓ WC Reparatur ✓ Festpreis ab 81€. Tel: 089 444438872',
     h1: 'Sanitär München – Sanitärinstallateur für Rohrbruch, Armaturen & WC',
     keywords: [
       'Sanitär München', 'Sanitärinstallateur München', 'Sanitärinstallateure München',
@@ -60,8 +60,8 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/heizung': {
-    title: 'Heizung München | Heizungsreparatur Wartung Austausch Festpreis 2026 | AquaPro 24',
-    description: 'Heizung München ✓ Heizungsreparatur ✓ Wartung ✓ Austausch ✓ Gasheizung ✓ Ölheizung ✓ Festpreis ab 154€ ✓ Alle Marken: Viessmann, Vaillant, Buderus. Tel: 089 444438872',
+    title: 'Heizung München | Reparatur & Wartung ab 154€ | AquaPro 24',
+    description: 'Heizung München ✓ Heizungsreparatur ✓ Wartung ✓ Austausch ✓ Gasheizung ✓ Ölheizung ✓ Festpreis ab 154€ ✓ Viessmann, Vaillant, Buderus. Tel: 089 444438872',
     h1: 'Heizung München – Reparatur, Wartung & Modernisierung 2026',
     keywords: [
       'Heizung München', 'Heizungsreparatur München', 'Heizungswartung München',
@@ -89,7 +89,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/bad': {
-    title: 'Badsanierung München | Badumbau Komplett barrierefreies Bad 2026 | AquaPro 24',
+    title: 'Badsanierung München | Badumbau ab 16.000€ | AquaPro 24',
     description: 'Badsanierung München ✓ Komplettumbau ✓ barrierefreies Bad ✓ KfW-Förderung ✓ Festpreis ab 16.000€ ✓ Planung & Ausführung aus einer Hand. Tel: 089 444438872',
     h1: 'Badsanierung München – Komplettumbau vom Profi 2026',
     keywords: [
@@ -110,7 +110,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/waermepumpe': {
-    title: 'Wärmepumpe München | Einbau BAFA-Förderung bis 70% 2026 | AquaPro 24',
+    title: 'Wärmepumpe München | Einbau & BAFA 70% | AquaPro 24',
     description: 'Wärmepumpe München ✓ Einbau vom Profi ✓ BAFA-Förderung bis 70% ✓ KfW 458 Kredit ✓ Luft-Wasser-Wärmepumpe ✓ Kostenlose Beratung 2026. Tel: 089 444438872',
     h1: 'Wärmepumpe München – Einbau & Förderung bis 70% 2026',
     keywords: [
@@ -134,7 +134,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/notdienst-muenchen': {
-    title: 'Notdienst München 24/7 | Klempner Sanitär Heizung Soforthilfe 2026 | AquaPro 24',
+    title: 'Notdienst München 24/7 | Klempner Sanitär Soforthilfe | AquaPro 24',
     description: 'Notdienst München 24/7 ✓ Rohrbruch ✓ Wasserschaden ✓ Heizungsausfall ✓ 30 Min Anfahrt ✓ Festpreis ✓ Kein Aufschlag nachts & Wochenende. Sofort: 089 444438872',
     h1: 'Notdienst München 24/7 – Rohrbruch & Heizungsausfall Soforthilfe',
     keywords: [
@@ -155,7 +155,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/termin': {
-    title: 'Handwerker Termin München online buchen | Klempner Sanitär 2026 | AquaPro 24',
+    title: 'Termin München online buchen | Klempner Sanitär | AquaPro 24',
     description: 'Handwerker Termin München ✓ Online buchen ✓ Klempner ✓ Sanitärinstallateur ✓ Heizungsmonteur ✓ Wunschtermin wählen ✓ Bestätigung sofort. Tel: 089 444438872',
     h1: 'Termin München – Klempner & Sanitär online buchen',
     keywords: [
@@ -167,7 +167,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/kontakt': {
-    title: 'AquaPro 24 Kontakt München | Klempner Sanitär Angebot anfordern 2026',
+    title: 'Kontakt AquaPro 24 München | Angebot anfordern | AquaPro 24',
     description: 'Kontakt AquaPro 24 München ✓ Klempner Anfrage ✓ Sanitär Angebot ✓ Kostenlose Beratung ✓ Schnelle Antwort ✓ Tel: 089 444438872 ✓ info@aquapro24.de',
     h1: 'Kontakt AquaPro 24 München – Sanitär & Heizung',
     keywords: [
@@ -178,7 +178,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/faq': {
-    title: 'FAQ Klempner München | Sanitär Heizung Preise Kosten 2026 | AquaPro 24',
+    title: 'FAQ Klempner München | Sanitär & Heizung Preise | AquaPro 24',
     description: 'FAQ Klempner München ✓ Was kostet Sanitär? ✓ Notdienst Preise ✓ Heizung Kosten ✓ Rohrreinigung Preise ✓ Alle Antworten verständlich erklärt.',
     h1: 'FAQ – Häufige Fragen zu Klempner, Sanitär & Heizung München 2026',
     keywords: [
@@ -204,7 +204,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/impressum': {
-    title: 'Impressum AquaPro 24 – Sanitär Heizung Klempner München | Mustafa Sakar',
+    title: 'Impressum AquaPro 24 München | Mustafa Sakar',
     description: 'Impressum AquaPro 24: Mustafa Sakar, Hardenbergstr. 4, 80992 München. Ihr Sanitär & Heizung Partnernetzwerk seit 2005.',
     h1: 'Impressum AquaPro 24',
     keywords: ['Impressum AquaPro 24', 'Mustafa Sakar', 'München 80992', 'Hardenbergstr 4'],
@@ -222,7 +222,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     keywords: ['AGB', 'Geschäftsbedingungen', 'AquaPro 24', 'Festpreis'],
   },
   '/foerderung': {
-    title: 'Förderung Heizung München 2026 | BAFA KfW 458 Steuerbonus | AquaPro 24',
+    title: 'Förderung Heizung München | BAFA KfW bis 70% | AquaPro 24',
     description: 'Förderung Heizung München 2026 ✓ BAFA bis 70% ✓ KfW 458 Kredit ✓ Steuerbonus ✓ Wärmepumpe ✓ Heizungstausch ✓ Kostenlose Förderberatung. Tel: 089 444438872',
     h1: 'Förderung Heizung München 2026 – BAFA bis 70% + KfW 458',
     keywords: [
@@ -237,7 +237,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/haustechnik': {
-    title: 'Haustechnik München | Gas Wasser Lüftung Smart Home 2026 | AquaPro 24',
+    title: 'Haustechnik München | Gas Wasser Lüftung | AquaPro 24',
     description: 'Haustechnik München ✓ Gasinstallation ✓ Wasserinstallation ✓ Lüftung ✓ Smart Home ✓ Sanitärtechnik komplett ✓ Festpreise. Tel: 089 444438872',
     h1: 'Haustechnik München – Gas, Wasser, Lüftung komplett 2026',
     keywords: [
@@ -253,7 +253,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/armaturen': {
-    title: 'Armaturen München | Wasserhahn wechseln Montage Austausch 2026 | AquaPro 24',
+    title: 'Armaturen München | Wasserhahn wechseln ab 89€ | AquaPro 24',
     description: 'Armaturen München ✓ Wasserhahn wechseln ab 89€ ✓ Grohe ✓ Hansgrohe ✓ HANSA ✓ Mischbatterie ✓ Küchenarmatur ✓ Festpreis. Tel: 089 444438872',
     h1: 'Armaturen München – Wasserhahn wechseln & Montage 2026',
     keywords: [
@@ -275,7 +275,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/rohrreinigung': {
-    title: 'Rohrreinigung München 24/7 | Abfluss verstopft WC verstopft ab 81€ 2026 | AquaPro 24',
+    title: 'Rohrreinigung München 24/7 | ab 81€ Festpreis | AquaPro 24',
     description: 'Rohrreinigung München ✓ Abfluss verstopft ✓ WC verstopft ✓ Notdienst 24/7 ✓ Festpreis ab 81€ ✓ 30 Min Anfahrt ✓ Kanalreinigung. Tel: 089 444438872',
     h1: 'Rohrreinigung München – Abfluss verstopft? Soforthilfe 24/7',
     keywords: [
@@ -296,7 +296,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/warmwasser': {
-    title: 'Durchlauferhitzer München | Boiler Reparatur Warmwasser 2026 | AquaPro 24',
+    title: 'Durchlauferhitzer München | Boiler & Warmwasser | AquaPro 24',
     description: 'Durchlauferhitzer München ✓ Boiler Reparatur ✓ Warmwasserspeicher ✓ kein Warmwasser Soforthilfe ✓ Installation ab 120€ ✓ Festpreis. Tel: 089 444438872',
     h1: 'Warmwasser München – Durchlauferhitzer, Boiler & Speicher 2026',
     keywords: [
@@ -316,7 +316,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/badsanierung': {
-    title: 'Badsanierung München Komplett | Badumbau barrierefreies Bad 2026 | AquaPro 24',
+    title: 'Badsanierung Komplett München | ab 16.000€ | AquaPro 24',
     description: 'Badsanierung München ✓ Komplettumbau ✓ barrierefreies Bad ✓ KfW-Förderung ✓ Festpreis ab 16.000€ ✓ Beratung vor Ort ✓ Alle Gewerke. Tel: 089 444438872',
     h1: 'Badsanierung München – Komplettumbau aus einer Hand 2026',
     keywords: [
@@ -336,7 +336,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/sanitaer-notdienst-24': {
-    title: 'Sanitär Notdienst München 24/7 | Klempner Soforthilfe Rohrbruch 2026 | AquaPro 24',
+    title: 'Sanitär Notdienst München 24/7 | Soforthilfe | AquaPro 24',
     description: 'Sanitär Notdienst München 24/7 ✓ Rohrbruch ✓ Wasserschaden ✓ WC verstopft ✓ Festpreis ✓ 30 Min Anfahrt ✓ seriös & ohne Abzocke. Jetzt: 089 444438872',
     h1: 'Sanitär Notdienst München 24/7 – Soforthilfe bei Rohrbruch',
     keywords: [
@@ -357,7 +357,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/heizung-notdienst-24': {
-    title: 'Heizung Notdienst München 24/7 | Heizungsausfall Soforthilfe 2026 | AquaPro 24',
+    title: 'Heizung Notdienst München 24/7 | Soforthilfe | AquaPro 24',
     description: 'Heizung Notdienst München 24/7 ✓ Heizung ausgefallen ✓ Heizung wird nicht warm ✓ Gastherme Störung ✓ Festpreis ✓ 30 Min. Jetzt: 089 444438872',
     h1: 'Heizung Notdienst München 24/7 – Soforthilfe bei Heizungsausfall',
     keywords: [
@@ -376,7 +376,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/sanitaer-muenchen': {
-    title: 'Sanitärinstallateur München | Klempner Sanitär schnell & zuverlässig 2026 | AquaPro 24',
+    title: 'Sanitärinstallateur München | Festpreis | AquaPro 24',
     description: 'Sanitärinstallateur München ✓ Klempner ✓ Reparatur ✓ Installation ✓ Wartung ✓ Sanitärtechnik ✓ Festpreis ✓ Termin in 24h. Tel: 089 444438872',
     h1: 'Sanitärinstallateur München – Klempner schnell & zuverlässig',
     keywords: [
@@ -393,7 +393,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/heizung-muenchen': {
-    title: 'Heizungsservice München | Heizung Reparatur Wartung Modernisierung 2026 | AquaPro 24',
+    title: 'Heizungsservice München | Reparatur & Wartung | AquaPro 24',
     description: 'Heizungsservice München ✓ Reparatur ✓ Wartung ✓ Modernisierung ✓ alle Marken ✓ Festpreis ab 154€ ✓ Termin in 24h. Tel: 089 444438872',
     h1: 'Heizung München – Reparatur, Wartung & Modernisierung 2026',
     keywords: [
@@ -410,7 +410,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/waermepumpe-muenchen': {
-    title: 'Wärmepumpe München installieren | BAFA Förderung 70% 2026 | AquaPro 24',
+    title: 'Wärmepumpe München installieren | BAFA 70% | AquaPro 24',
     description: 'Wärmepumpe München ✓ Installation vom Profi ✓ BAFA bis 70% ✓ KfW 458 ✓ Luft-Wasser ✓ Erdwärme ✓ Kostenlose Beratung. Tel: 089 444438872',
     h1: 'Wärmepumpe München – Installation & Förderung 2026',
     keywords: [
@@ -423,7 +423,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/fussbodenheizung-muenchen': {
-    title: 'Fußbodenheizung München | Nachrüsten Einbau Reparatur 2026 | AquaPro 24',
+    title: 'Fußbodenheizung München | Nachrüsten & Einbau | AquaPro 24',
     description: 'Fußbodenheizung München ✓ Nachrüsten ✓ Einbau ✓ Reparatur ✓ Spülung ✓ Festpreis ✓ alle Systeme. Tel: 089 444438872',
     h1: 'Fußbodenheizung München – Nachrüsten & Einbau 2026',
     keywords: [
@@ -436,7 +436,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/badsanierung-muenchen': {
-    title: 'Badumbau München | Badsanierung barrierefreies Bad KfW 2026 | AquaPro 24',
+    title: 'Badumbau München | Badsanierung & KfW-Förderung | AquaPro 24',
     description: 'Badumbau München ✓ Badsanierung ✓ barrierefreies Bad ✓ KfW-Förderung ✓ Komplettpreis ✓ stressfrei ✓ alle Gewerke. Tel: 089 444438872',
     h1: 'Badsanierung München – Komplettumbau stressfrei & modern 2026',
     keywords: [
@@ -449,7 +449,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/fussbodenheizung': {
-    title: 'Fußbodenheizung München | Installation Reparatur Spülung 2026 | AquaPro 24',
+    title: 'Fußbodenheizung München | Installation & Reparatur | AquaPro 24',
     description: 'Fußbodenheizung München ✓ Installation ✓ Reparatur ✓ Spülung ✓ Entlüftung ✓ hydraulischer Abgleich ✓ Festpreis ab 154€. Tel: 089 444438872',
     h1: 'Fußbodenheizung München – Installation & Reparatur 2026',
     keywords: [
@@ -464,7 +464,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/foerderantrag': {
-    title: 'Förderantrag München | BAFA KfW Antrag kostenlos 2026 | AquaPro 24',
+    title: 'Förderantrag München | BAFA KfW kostenlos | AquaPro 24',
     description: 'Förderantrag München ✓ BAFA Antrag ✓ KfW 458 ✓ kostenloser Service ✓ bis 70% Zuschuss ✓ Wärmepumpe ✓ Heizungstausch. Tel: 089 444438872',
     h1: 'Förderantrag München – BAFA & KfW kostenlos 2026',
     keywords: [
@@ -475,7 +475,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/foerderantrag-heizung': {
-    title: 'Förderantrag Heizung München | Wärmepumpe BAFA bis 70% 2026 | AquaPro 24',
+    title: 'Förderantrag Heizung München | BAFA bis 70% | AquaPro 24',
     description: 'Förderantrag Heizung München ✓ Wärmepumpe BAFA ✓ bis 70% Zuschuss ✓ kostenloser Förderservice ✓ Heizungstausch 2026. Tel: 089 444438872',
     h1: 'Förderantrag Heizung München – BAFA Wärmepumpe bis 70% 2026',
     keywords: [
@@ -485,7 +485,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     ],
   },
   '/foerderrechner': {
-    title: 'Förderrechner München | BAFA KfW Förderung berechnen 2026 | AquaPro 24',
+    title: 'Förderrechner München | BAFA KfW berechnen | AquaPro 24',
     description: 'Förderrechner München ✓ BAFA Zuschuss berechnen ✓ KfW 458 ✓ Wärmepumpe ✓ Heizungstausch ✓ Sofort-Ergebnis 2026. Kostenlos berechnen!',
     h1: 'Förderrechner München – BAFA & KfW Förderung berechnen 2026',
     keywords: [
@@ -501,7 +501,7 @@ export const seoMeta: Record<string, SEOMeta> = {
     keywords: ['Barrierefreiheit', 'WCAG 2.1 AA', 'BITV 2.0', 'Barrierefreiheitserklärung'],
   },
   '/cookie-richtlinie': {
-    title: 'Cookie Richtlinie DSGVO AquaPro 24 München – transparent & sicher',
+    title: 'Cookie-Richtlinie AquaPro 24 München – DSGVO-konform',
     description: 'Cookie-Richtlinie AquaPro 24 München: Transparente Cookie-Nutzung, DSGVO-konform. Ihre Datenschutzrechte.',
     h1: 'Cookie-Richtlinie AquaPro 24',
     keywords: ['Cookie Richtlinie', 'DSGVO', 'Cookie-Einstellungen', 'Datenschutz'],
