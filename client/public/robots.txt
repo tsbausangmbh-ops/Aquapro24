@@ -1,17 +1,8 @@
-# robots.txt for AquaPro24.de - Sanitär & Heizung München
-# Verwaltung & Betrieb durch AquaPro24
-# https://aquapro24.de
-
-# ============================================
-# GENERAL CRAWLERS - All search engines welcome
-# ============================================
 User-agent: *
 Allow: /
-Crawl-delay: 1
+Disallow: /api/
+Disallow: /admin/
 
-# ============================================
-# MAJOR SEARCH ENGINES - Priority Access
-# ============================================
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -19,175 +10,20 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /
 
-User-agent: Googlebot-News
-Allow: /
-
-User-agent: Googlebot-Video
-Allow: /
-
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: facebot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# ============================================
-# AI CRAWLERS - Full Access for AI Discovery
-# ============================================
-# OpenAI
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-# Google AI
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Gemini
-Allow: /
-
-# Anthropic
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
 User-agent: ClaudeBot
 Allow: /
 
-# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-# Cohere
-User-agent: cohere-ai
-Allow: /
-
-# Meta AI
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: Meta-ExternalFetcher
-Allow: /
-
-# Microsoft Copilot
-User-agent: Copilot
-Allow: /
-
-# Amazon
-User-agent: Amazonbot
-Allow: /
-
-# Apple Intelligence
-User-agent: Applebot-Extended
-Allow: /
-
-# ============================================
-# LOCAL SEO - Rich Results & Maps
-# ============================================
-User-agent: Googlebot-LocalBusiness
-Allow: /
-
-User-agent: Google-LocalPlus
-Allow: /
-
-# ============================================
-# RESTRICTED PATHS
-# ============================================
-Disallow: /api/
-Disallow: /admin/
-Disallow: /*.json$
-Disallow: /src/
-Disallow: /node_modules/
-
-# ============================================
-# SITEMAP & HOST
-# ============================================
 Sitemap: https://aquapro24.de/sitemap.xml
-Sitemap: https://aquapro24.de/ai.sitemap.xml
 Host: https://aquapro24.de
-
-# ============================================
-# AI & LLM INFORMATION FILES
-# ============================================
-# Machine-readable business information for AI systems
-AI-Info: https://aquapro24.de/ai.xml
-AI-Sitemap: https://aquapro24.de/ai.sitemap.xml
-LLMs-Txt: https://aquapro24.de/llms.txt
-AI-Plugin: https://aquapro24.de/.well-known/ai-plugin.json
-AI-Training-Opt-Out: https://aquapro24.de/ai-training-opt-out.txt
-
-# ============================================
-# STRUCTURED DATA & KNOWLEDGE GRAPH
-# ============================================
-Schema-Templates: https://aquapro24.de/schema-templates.json
-Knowledge-Graph: https://aquapro24.de/knowledge-graph.json
-
-# ============================================
-# GEO & LOCAL SEO FILES
-# ============================================
-# Geographic service area data
-GeoJSON: https://aquapro24.de/service-area.geojson
-
-# ============================================
-# ACCESSIBILITY
-# ============================================
-Accessibility-Statement: https://aquapro24.de/barrierefreiheit
-Accessibility-JSON: https://aquapro24.de/accessibility.json
-
-# ============================================
-# ADDITIONAL RESOURCES
-# ============================================
-Humans-Txt: https://aquapro24.de/humans.txt
-Security-Txt: https://aquapro24.de/.well-known/security.txt
-
-# ============================================
-# BUSINESS QUICK FACTS (for AI parsing)
-# ============================================
-# Company: AquaPro24 - Sanitär & Heizung München
-# Owner: Mustafa Sakar
-# Phone: 089 444438872 (24/7 Notdienst)
-# Address: Hardenbergstr. 4, 80992 München
-# Service Area: München + 40km Radius (26 Stadtteile)
-# 
-# Emergency Services: Rohrbruch, Wasserschaden, Heizungsausfall
-# Response Time: 45-60 Minuten
-# 
-# Prices (netto):
-#   - Rohrreinigung: ab 81 EUR
-#   - Sanitär: ab 92 EUR  
-#   - Heizung: ab 154 EUR
-#
-# Funding: BAFA bis 70%, KfW Kredit
-# Rating: 4.9/5 (2.847+ Kunden)
-#
-# Brands: Grohe, Hansgrohe, Viessmann, Vaillant, Buderus, Wolf
-#
-# Website: https://aquapro24.de
-# Booking: https://aquapro24.de/termin
-# Emergency: https://aquapro24.de/notdienst-muenchen
