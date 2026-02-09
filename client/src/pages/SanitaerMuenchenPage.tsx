@@ -86,11 +86,7 @@ export default function SanitaerMuenchenPage() {
             { name: "Leckage-Check & Reparaturen" },
             { name: "WC/Waschtisch/Spülkasten Austausch" },
             { name: "Vorbereitung Badsanierung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 127
-          }
+          ]
         }}
         faqSchema={[
           {

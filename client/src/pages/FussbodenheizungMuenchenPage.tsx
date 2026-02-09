@@ -86,11 +86,7 @@ export default function FussbodenheizungMuenchenPage() {
             { name: "Umbau bestehender Systeme" },
             { name: "Integration in Wärmepumpe" },
             { name: "Regelung & Steuerung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.8,
-            reviewCount: 45
-          }
+          ]
         }}
         faqSchema={[
           {

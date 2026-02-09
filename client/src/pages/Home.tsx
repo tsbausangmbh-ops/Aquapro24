@@ -281,11 +281,7 @@ export default function Home() {
             { name: "Heizungsreparatur & Wartung" },
             { name: "Badsanierung Komplettservice" },
             { name: "Wärmepumpen-Installation" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 2847
-          }
+          ]
         }}
         ogImageAlt="AquaPro 24 Sanitär Heizung München 24/7 Notdienst - Klempner Installateur Meisterbetrieb seit 2005"
       />

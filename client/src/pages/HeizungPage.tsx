@@ -162,11 +162,7 @@ export default function HeizungPage() {
             { name: "Heizungswartung" },
             { name: "Heizungsreparatur" },
             { name: "Heizungsmodernisierung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 178
-          }
+          ]
         }}
         ogImageAlt="Heizungsinstallation München Gasheizung Ölheizung Wartung Reparatur - alle Marken Festpreis"
       />

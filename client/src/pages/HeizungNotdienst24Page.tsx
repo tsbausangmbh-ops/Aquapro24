@@ -91,11 +91,7 @@ export default function HeizungNotdienst24Page() {
             { name: "Keine Wärme Notfall-Hilfe" },
             { name: "Heizung Wasserverlust Soforthilfe" },
             { name: "Therme/Brenner Schnellreparatur" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 287
-          }
+          ]
         }}
         faqSchema={[
           {

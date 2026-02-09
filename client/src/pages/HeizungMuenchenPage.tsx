@@ -86,11 +86,7 @@ export default function HeizungMuenchenPage() {
             { name: "Heizungsmodernisierung" },
             { name: "Heizungsoptimierung" },
             { name: "Heizungstausch komplett" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 156
-          }
+          ]
         }}
         faqSchema={[
           {

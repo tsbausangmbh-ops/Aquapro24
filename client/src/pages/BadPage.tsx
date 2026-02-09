@@ -174,11 +174,7 @@ export default function BadPage() {
             { name: "Komplettsanierung in 2-4 Wochen" },
             { name: "Barrierefreies Bad mit KfW-Förderung" },
             { name: "3D-Planung & Visualisierung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 127
-          }
+          ]
         }}
       />
       <Header />

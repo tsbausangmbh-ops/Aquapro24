@@ -88,11 +88,7 @@ export default function WaermepumpeMuenchenPage() {
             { name: "Heizlastberechnung & Planung" },
             { name: "Vorbereitung Verteilung/Regelung" },
             { name: "Installation & Inbetriebnahme" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 67
-          }
+          ]
         }}
         faqSchema={[
           {

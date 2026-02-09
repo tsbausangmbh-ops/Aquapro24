@@ -163,11 +163,7 @@ export default function WarmwasserPage() {
             { name: "Boiler Reparatur" },
             { name: "Warmwasserspeicher" },
             { name: "Wartung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 86
-          }
+          ]
         }}
         ogImageAlt="Warmwasser München Boiler Durchlauferhitzer Speicher - Installation Reparatur Festpreis sofort"
       />

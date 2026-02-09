@@ -248,11 +248,7 @@ export default function FoerderungPage() {
             { name: "BAFA Dämmung Beratung", price: "Kostenlos" },
             { name: "KfW 455-B Barrierefreies Bad", price: "Kostenlos" },
             { name: "Förderantrag Service", price: "Inklusive" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 127
-          }
+          ]
         }}
         faqSchema={[
           {

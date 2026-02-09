@@ -163,11 +163,7 @@ export default function HaustechnikPage() {
             { name: "Gasinstallation" },
             { name: "Lüftungsanlage" },
             { name: "Smart Home" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.8,
-            reviewCount: 67
-          }
+          ]
         }}
         ogImageAlt="Haustechnik München Gasinstallation Lüftung Smart Home - Gebäudetechnik Meisterbetrieb"
       />

@@ -45,13 +45,6 @@ interface HowToSchema {
   steps: HowToStep[];
 }
 
-interface AggregateRatingSchema {
-  ratingValue: number;
-  reviewCount: number;
-  bestRating?: number;
-  worstRating?: number;
-}
-
 interface SpeakableContent {
   cssSelector?: string[];
   xpath?: string[];
@@ -79,7 +72,6 @@ interface SEOProps {
     areaServed?: string[];
     offers?: OfferSchema[];
     reviews?: ReviewSchema[];
-    aggregateRating?: AggregateRatingSchema;
   };
   faqSchema?: FAQItem[];
   howToSchema?: HowToSchema;
@@ -990,16 +982,6 @@ export default function SEO({
           }))
         }
       };
-
-      if (serviceSchema.aggregateRating) {
-        serviceSchemaData["aggregateRating"] = {
-          "@type": "AggregateRating",
-          "ratingValue": serviceSchema.aggregateRating.ratingValue,
-          "reviewCount": serviceSchema.aggregateRating.reviewCount,
-          "bestRating": serviceSchema.aggregateRating.bestRating || 5,
-          "worstRating": serviceSchema.aggregateRating.worstRating || 1
-        };
-      }
 
       if (serviceSchema.reviews && serviceSchema.reviews.length > 0) {
         serviceSchemaData["review"] = serviceSchema.reviews.map(review => ({

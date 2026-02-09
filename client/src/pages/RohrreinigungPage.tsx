@@ -162,11 +162,7 @@ export default function RohrreinigungPage() {
             { name: "Hochdruckspülung" },
             { name: "Kamerainspektion" },
             { name: "Kanalreinigung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 112
-          }
+          ]
         }}
         ogImageAlt="Rohrreinigung München Abfluss verstopft Kanalreinigung Rohrbruch - Notdienst Festpreis sofort"
       />

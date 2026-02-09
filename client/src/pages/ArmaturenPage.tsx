@@ -163,11 +163,7 @@ export default function ArmaturenPage() {
             { name: "Wasserhahn Reparatur" },
             { name: "Duschsystem Installation" },
             { name: "Thermostat Einbau" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.8,
-            reviewCount: 94
-          }
+          ]
         }}
       />
       <Header />

@@ -162,11 +162,7 @@ export default function SanitaerPage() {
             { name: "Abfluss entstopfen" },
             { name: "Wasserinstallation" },
             { name: "Armaturen austauschen" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 156
-          }
+          ]
         }}
         ogImageAlt="Sanitärinstallation München Wasserhahn Toilette Abfluss - Klempner Installateur alle Arbeiten Festpreis"
       />

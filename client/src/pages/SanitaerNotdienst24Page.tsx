@@ -90,11 +90,7 @@ export default function SanitaerNotdienst24Page() {
             { name: "Wasserschaden Notfall-Hilfe" },
             { name: "Verstopfung 24h Soforthilfe" },
             { name: "WC-Notfall Schnellreparatur" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 312
-          }
+          ]
         }}
         faqSchema={[
           {

@@ -161,11 +161,7 @@ export default function WaermepumpePage() {
             { name: "Erdwärmepumpe" },
             { name: "BAFA/KfW Förderantrag" },
             { name: "Wärmepumpe Wartung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 89
-          }
+          ]
         }}
         ogImageAlt="Wärmepumpe Installation München Luft Wasser Erdwärme - Heizung modernisieren Förderung Festpreis"
       />

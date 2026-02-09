@@ -85,11 +85,7 @@ export default function NotdienstMuenchenPage() {
             { name: "Wasseraustritt Leckortung" },
             { name: "Heizungsausfall Notdienst" },
             { name: "Verstopfung Sofortbeseitigung" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 234
-          }
+          ]
         }}
         faqSchema={[
           {

@@ -229,11 +229,7 @@ export default function FoerderantragHeizungPage() {
             { name: "Pelletheizung Förderantrag", price: "Inklusive" },
             { name: "Solarthermie Förderantrag", price: "Inklusive" },
             { name: "Fußbodenheizung Förderantrag", price: "Inklusive" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 98
-          }
+          ]
         }}
         faqSchema={[
           {

@@ -88,11 +88,7 @@ export default function BadsanierungMuenchenPage() {
             { name: "Ablaufplanung & Koordination" },
             { name: "Teil- und Komplettsanierung" },
             { name: "Umsetzung mit geprüften Gewerken" }
-          ],
-          aggregateRating: {
-            ratingValue: 4.8,
-            reviewCount: 89
-          }
+          ]
         }}
         faqSchema={[
           {

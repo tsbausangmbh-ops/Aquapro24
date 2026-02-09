@@ -974,11 +974,7 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
             { name: `Heizungs-Service ${data.name}` },
             { name: `Badsanierung ${data.name}` },
             { name: `24h Notdienst ${data.name}` }
-          ],
-          aggregateRating: {
-            ratingValue: 4.9,
-            reviewCount: 127
-          }
+          ]
         }}
         ogImageAlt="Sanitär Heizung Notdienst München Stadtteil lokal - Klempner Installateur in Ihrer Nähe"
         faqSchema={data.faqs.map(faq => ({ question: faq.frage, answer: faq.antwort }))}
