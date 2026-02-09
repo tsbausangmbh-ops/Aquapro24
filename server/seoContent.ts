@@ -1361,18 +1361,22 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   };
 
   const breadcrumbParts = pagePath.split('/').filter(p => p);
-  const breadcrumbItems = [
+  const breadcrumbItems: Record<string, any>[] = [
     {"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE_URL}
   ];
   let currentPath = '';
   breadcrumbParts.forEach((part, index) => {
     currentPath += '/' + part;
-    breadcrumbItems.push({
+    const isLast = index === breadcrumbParts.length - 1;
+    const listItem: Record<string, any> = {
       "@type": "ListItem",
       "position": index + 2,
-      "name": breadcrumbNameMap[part] || part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' '),
-      "item": BASE_URL + currentPath
-    });
+      "name": breadcrumbNameMap[part] || part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' ')
+    };
+    if (!isLast) {
+      listItem["item"] = BASE_URL + currentPath;
+    }
+    breadcrumbItems.push(listItem);
   });
 
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
@@ -1500,6 +1504,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "bestRating": "5",
+        "worstRating": "1",
         "ratingCount": "2847"
       }
     };
