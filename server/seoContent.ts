@@ -1861,8 +1861,10 @@ export function isBot(userAgent: string): boolean {
     'google-inspectiontool',
     'google-extended',
     'adsbot-google',
+    'apis-google',
     'mediapartners-google',
     'storebot-google',
+    'feedfetcher-google',
     // Bing bots
     'bingbot',
     'msnbot',

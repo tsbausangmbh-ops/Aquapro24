@@ -2,6 +2,7 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import { isBot } from "./seoContent";
 
 const app = express();
 const httpServer = createServer(app);
@@ -50,7 +51,7 @@ app.use((req, res, next) => {
   
   const path = req.path;
   const ua = (req.headers['user-agent'] || '').toLowerCase();
-  const isCrawler = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebot|ia_archiver|sogou|exabot|semrush|ahref|mj12bot|dotbot|petalbot|gptbot|chatgpt|claudebot|perplexitybot/i.test(ua);
+  const isCrawler = isBot(ua);
   
   res.setHeader('Content-Language', 'de-DE');
   
