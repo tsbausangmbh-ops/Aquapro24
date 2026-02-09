@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -421,7 +422,19 @@ export default function HaustechnikPage() {
         
         <RelatedServices currentService="haustechnik" />
       </main>
-      
+
+      <InternalLinks
+        title="Weitere Services in München"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC-Reparatur" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% BAFA-Förderung sichern" },
+          { href: "/bad", text: "Badsanierung komplett", description: "Komplettsanierung aus einer Hand" },
+          { href: "/foerderung", text: "Förderung & Zuschüsse", description: "BAFA & KfW Förderberatung" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
+        ]}
+      />
       <Footer />
     </div>
   );

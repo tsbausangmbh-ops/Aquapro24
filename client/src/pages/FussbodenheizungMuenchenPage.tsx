@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -294,7 +295,19 @@ export default function FussbodenheizungMuenchenPage() {
         <KeywordLinks currentPage="heizung" />
         <RelatedServices currentService="heizung" />
       </main>
-      
+
+      <InternalLinks
+        title="Heizung & Fußbodenheizung in München"
+        variant="footer-cta"
+        links={[
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Ideal kombiniert mit Fußbodenheizung" },
+          { href: "/waermepumpe-muenchen", text: "Wärmepumpe installieren", description: "Bis 70% BAFA-Förderung" },
+          { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW Zuschüsse" },
+          { href: "/haustechnik", text: "Haustechnik komplett", description: "Sanitär, Heizung, Klima" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
+        ]}
+      />
       <Footer />
     </div>
   );

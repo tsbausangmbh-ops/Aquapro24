@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -525,6 +526,18 @@ export default function FoerderantragPage() {
           </div>
         </section>
       </main>
+
+      <InternalLinks
+        title="Förderung & verwandte Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/foerderung", text: "Alle Förderungen", description: "BAFA, KfW & Steuerbonus im Überblick" },
+          { href: "/foerderantrag-heizung", text: "Heizungs-Förderantrag", description: "BAFA-Antrag für Heizungstausch" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
+          { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% Förderung sichern" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
+        ]}
+      />
       <Footer />
     </div>
   );

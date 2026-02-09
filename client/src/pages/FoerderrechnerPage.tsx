@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -1461,7 +1462,19 @@ export default function FoerderrechnerPage() {
           ]}
         />
       </main>
-      
+
+      <InternalLinks
+        title="Förderung & verwandte Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/foerderung", text: "Alle Förderungen", description: "BAFA, KfW & Steuerbonus im Überblick" },
+          { href: "/foerderantrag", text: "Förderantrag stellen", description: "Schritt-für-Schritt zum Zuschuss" },
+          { href: "/foerderantrag-heizung", text: "Heizungs-Förderantrag", description: "BAFA-Antrag für Heizungstausch" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% Förderung sichern" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
+        ]}
+      />
       <Footer />
     </div>
   );

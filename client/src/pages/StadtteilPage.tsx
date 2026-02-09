@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import TrustBar from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
@@ -1369,6 +1370,18 @@ export default function StadtteilPage({ stadtteil }: StadtteilPageProps) {
         </section>
       </main>
 
+      <InternalLinks
+        title="Unsere Leistungen in München"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC-Reparatur" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/waermepumpe", text: "Wärmepumpe installieren", description: "Bis 70% Förderung sichern" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
+        ]}
+      />
       <Footer />
     </div>
   );

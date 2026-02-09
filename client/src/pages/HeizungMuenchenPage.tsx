@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -295,7 +296,19 @@ export default function HeizungMuenchenPage() {
         <KeywordLinks currentPage="heizung" />
         <RelatedServices currentService="heizung" />
       </main>
-      
+
+      <InternalLinks
+        title="Heizungs-Services in München"
+        variant="footer-cta"
+        links={[
+          { href: "/heizung", text: "Heizungs-Leistungen", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit bis zu 70% Förderung" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Installation & Nachrüstung" },
+          { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW: Bis 70% Zuschuss" },
+          { href: "/heizung-notdienst-24", text: "Heizung-Notdienst 24/7", description: "Heizungsausfall? Sofort-Hilfe!" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
+        ]}
+      />
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -641,6 +642,19 @@ export default function FoerderungPage() {
           </div>
         </section>
       </main>
+
+      <InternalLinks
+        title="Förderung & verwandte Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/foerderantrag", text: "Förderantrag stellen", description: "Schritt-für-Schritt zum Zuschuss" },
+          { href: "/foerderantrag-heizung", text: "Heizungs-Förderantrag", description: "BAFA-Antrag für Heizungstausch" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Bis 70% Förderung sichern" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Förderberatung" },
+        ]}
+      />
       <Footer />
     </div>
   );

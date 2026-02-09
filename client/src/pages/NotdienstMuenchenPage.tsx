@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -320,7 +321,19 @@ export default function NotdienstMuenchenPage() {
         <KeywordLinks currentPage="notdienst" />
         <RelatedServices currentService="sanitaer" />
       </main>
-      
+
+      <InternalLinks
+        title="Notdienst & weitere Services"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Rohrbruch & Wasserschaden Soforthilfe" },
+          { href: "/heizung-notdienst-24", text: "Heizung-Notdienst 24/7", description: "Heizungsausfall? Sofort-Hilfe!" },
+          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Leistungen" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung" },
+          { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
+        ]}
+      />
       <Footer />
     </div>
   );

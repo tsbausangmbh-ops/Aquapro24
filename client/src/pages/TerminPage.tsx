@@ -7,6 +7,7 @@ import { format, addDays, isBefore, startOfToday } from "date-fns";
 import { de } from "date-fns/locale";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -1306,6 +1307,19 @@ export default function TerminPage() {
           </div>
         </section>
       </main>
+
+      <InternalLinks
+        title="Unsere Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär München", description: "Rohrreinigung, Armaturen, WC" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur, Austausch" },
+          { href: "/bad", text: "Badsanierung", description: "Komplettsanierung aus einer Hand" },
+          { href: "/notdienst-muenchen", text: "24/7 Notdienst", description: "Soforthilfe in 45-60 Minuten" },
+          { href: "/faq", text: "Häufige Fragen", description: "Preise, Ablauf & mehr" },
+          { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
+        ]}
+      />
       <Footer />
     </div>
   );

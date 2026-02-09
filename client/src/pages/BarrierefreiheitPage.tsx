@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -320,6 +321,16 @@ export default function BarrierefreiheitPage() {
         </div>
       </main>
 
+      <InternalLinks
+        title="Unsere Leistungen"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Services" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung & Reparatur" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
+          { href: "/kontakt", text: "Kontakt aufnehmen", description: "Jetzt unverbindlich anfragen" },
+        ]}
+      />
       <Footer />
     </div>
   );

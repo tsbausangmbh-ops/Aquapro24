@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -294,7 +295,19 @@ export default function SanitaerMuenchenPage() {
         <KeywordLinks currentPage="sanitaer" />
         <RelatedServices currentService="sanitaer" />
       </main>
-      
+
+      <InternalLinks
+        title="Sanitär-Services in München"
+        variant="footer-cta"
+        links={[
+          { href: "/sanitaer", text: "Sanitär-Leistungen", description: "Alle Sanitär-Services im Überblick" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung ab 81€" },
+          { href: "/armaturen", text: "Armaturen & Wasserhähne", description: "Grohe, Hansgrohe & mehr" },
+          { href: "/bad", text: "Badsanierung München", description: "Komplettsanierung aus einer Hand" },
+          { href: "/sanitaer-notdienst-24", text: "Sanitär-Notdienst 24/7", description: "Soforthilfe bei Rohrbruch" },
+          { href: "/termin", text: "Termin vereinbaren", description: "Online-Buchung in 2 Minuten" },
+        ]}
+      />
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -293,7 +294,18 @@ export default function SanitaerNotdienst24Page() {
           ]}
         />
       </main>
-      
+
+      <InternalLinks
+        title="Weitere Sanitär-Services"
+        variant="footer-cta"
+        links={[
+          { href: "/notdienst-muenchen", text: "Notdienst München", description: "24/7 Soforthilfe für alle Notfälle" },
+          { href: "/sanitaer", text: "Sanitär komplett", description: "Alle Sanitär-Leistungen im Überblick" },
+          { href: "/rohrreinigung", text: "Rohrreinigung München", description: "Professionelle Abflussreinigung ab 81€" },
+          { href: "/armaturen", text: "Armaturen-Service", description: "Austausch & Reparatur" },
+          { href: "/kontakt", text: "Jetzt anfragen", description: "Kostenlose Erstberatung" },
+        ]}
+      />
       <Footer />
     </div>
   );

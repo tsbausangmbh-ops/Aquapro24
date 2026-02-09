@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -298,7 +299,19 @@ export default function BadsanierungMuenchenPage() {
         <KeywordLinks currentPage="bad" />
         <RelatedServices currentService="bad" />
       </main>
-      
+
+      <InternalLinks
+        title="Rund um Ihr Bad in München"
+        variant="footer-cta"
+        links={[
+          { href: "/bad", text: "Badsanierung komplett", description: "Ihr neues Traumbad aus einer Hand" },
+          { href: "/sanitaer", text: "Sanitär München", description: "Alle Sanitär-Leistungen" },
+          { href: "/armaturen", text: "Premium-Armaturen", description: "Grohe, Hansgrohe, Duravit" },
+          { href: "/warmwasser", text: "Warmwasser-Systeme", description: "Boiler & Durchlauferhitzer" },
+          { href: "/foerderung", text: "Förderung barrierefreies Bad", description: "KfW-Zuschüsse sichern" },
+          { href: "/kontakt", text: "Kostenlose Beratung", description: "Jetzt unverbindlich anfragen" },
+        ]}
+      />
       <Footer />
     </div>
   );

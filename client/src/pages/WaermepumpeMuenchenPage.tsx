@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -299,7 +300,19 @@ export default function WaermepumpeMuenchenPage() {
         <KeywordLinks currentPage="waermepumpe" />
         <RelatedServices currentService="waermepumpe" />
       </main>
-      
+
+      <InternalLinks
+        title="Wärmepumpe & Heizung in München"
+        variant="footer-cta"
+        links={[
+          { href: "/waermepumpe", text: "Wärmepumpe-Leistungen", description: "Luft-Wasser, Sole-Wasser & mehr" },
+          { href: "/heizung", text: "Heizung München", description: "Wartung, Reparatur & Austausch" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Ideal für Wärmepumpen" },
+          { href: "/foerderung", text: "BAFA-Förderung 2026", description: "Bis 70% Zuschuss sichern" },
+          { href: "/foerderrechner", text: "Förderrechner", description: "Ihren Zuschuss berechnen" },
+          { href: "/termin", text: "Beratungstermin buchen", description: "Persönliche Vor-Ort-Beratung" },
+        ]}
+      />
       <Footer />
     </div>
   );

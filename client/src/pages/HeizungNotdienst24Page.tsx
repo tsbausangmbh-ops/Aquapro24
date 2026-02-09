@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { seoMeta } from "@shared/seoMeta";
 import TrustBar from "@/components/TrustBar";
@@ -294,7 +295,18 @@ export default function HeizungNotdienst24Page() {
           ]}
         />
       </main>
-      
+
+      <InternalLinks
+        title="Weitere Heizungs-Services"
+        variant="footer-cta"
+        links={[
+          { href: "/notdienst-muenchen", text: "Notdienst München", description: "24/7 Soforthilfe für alle Notfälle" },
+          { href: "/heizung", text: "Heizung komplett", description: "Wartung, Reparatur & Modernisierung" },
+          { href: "/waermepumpe", text: "Wärmepumpe München", description: "Installation mit bis zu 70% Förderung" },
+          { href: "/fussbodenheizung-muenchen", text: "Fußbodenheizung", description: "Installation & Nachrüstung" },
+          { href: "/foerderung", text: "Heizungsförderung 2026", description: "BAFA & KfW: Bis 70% Zuschuss" },
+        ]}
+      />
       <Footer />
     </div>
   );
