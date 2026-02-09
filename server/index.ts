@@ -49,6 +49,11 @@ app.use((req, res, next) => {
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   
   const path = req.path;
+  const ua = (req.headers['user-agent'] || '').toLowerCase();
+  const isCrawler = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebot|ia_archiver|sogou|exabot|semrush|ahref|mj12bot|dotbot|petalbot|gptbot|chatgpt|claudebot|perplexitybot/i.test(ua);
+  
+  res.setHeader('Content-Language', 'de-DE');
+  
   if (!isProduction) {
     if (path.match(/\.(js|css|mjs|ts|tsx)$/) || path.includes('.vite/') || path.startsWith('/@') || path.startsWith('/node_modules/')) {
       res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
@@ -60,6 +65,8 @@ app.use((req, res, next) => {
       res.setHeader('Cache-Control', 'public, max-age=86400');
     } else if (path.startsWith('/api')) {
       res.setHeader('Cache-Control', 'no-store');
+    } else if (isCrawler) {
+      res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
     } else {
       res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       res.setHeader('Pragma', 'no-cache');
@@ -387,7 +394,12 @@ app.use((req, res, next) => {
             return res.redirect(301, redirectTarget);
           }
           console.log(`[SSR-DEV] 404: ${reqPath}`);
-          return next(); // Vite zeigt 404-Seite
+          const notFoundHtml = generateStaticHTML('/', template)
+            .replace(/<title>[^<]*<\/title>/, '<title>404 - Seite nicht gefunden | AquaPro 24</title>')
+            .replace(/<meta name="robots" content="[^"]*"[^>]*>/, '<meta name="robots" content="noindex, follow" />');
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.setHeader('X-Robots-Tag', 'noindex, follow');
+          return res.status(404).send(notFoundHtml);
         }
         
         // Try cached response first (fast path)

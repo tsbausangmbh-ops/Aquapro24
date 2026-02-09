@@ -1287,7 +1287,13 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   `;
   html = html.replace('</head>', `${twitterTags}</head>`);
 
-  // Note: hreflang and preconnect tags are already defined in index.html
+  // Seitenspezifische hreflang-Tags injizieren
+  const hreflangTags = `
+    <link rel="alternate" hreflang="de" href="${canonicalUrl}" />
+    <link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />
+  `;
+  html = html.replace('</head>', `${hreflangTags}</head>`);
+
   // Note: LocalBusiness and WebSite schemas are already defined in index.html
   // SSR only adds BreadcrumbList for page-specific navigation
 
