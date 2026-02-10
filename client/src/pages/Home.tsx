@@ -461,7 +461,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </a>
-              <a href="https://komplettsanierungen-haus-wohnungen.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-kshw">
+              <a href="https://komplettsanierungen-haus-wohnung.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-kshw">
                 <Card className="h-full hover-elevate text-center">
                   <CardContent className="p-4">
                     <Hammer className="w-6 h-6 text-primary mx-auto mb-2" />
@@ -488,7 +488,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </a>
-              <a href="https://sanitaer-muenchen.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-sanitaer">
+              <a href="https://sanitär-muenchen.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-sanitaer">
                 <Card className="h-full hover-elevate text-center">
                   <CardContent className="p-4">
                     <Droplets className="w-6 h-6 text-primary mx-auto mb-2" />

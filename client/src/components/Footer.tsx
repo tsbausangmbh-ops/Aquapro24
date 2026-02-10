@@ -107,7 +107,7 @@ export default function Footer() {
             Im Bereich Innenausbau und Komplettsanierung kooperieren wir mit{' '}
             <a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-089sanierer">089-Sanierer</a>
             {' '}und{' '}
-            <a href="https://komplettsanierungen-haus-wohnungen.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-kshw">KSHW München</a>.
+            <a href="https://komplettsanierungen-haus-wohnung.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-kshw">KSHW München</a>.
             {' '}Dachdecker- und Spenglerarbeiten werden durch die{' '}
             <a href="https://089dach.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-089dach">089Dach GmbH</a>
             {' '}umgesetzt. Estricharbeiten übernimmt{' '}
