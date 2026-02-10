@@ -440,6 +440,81 @@ export default function Home() {
         </section>
 
         <section className="py-4 sm:py-6 lg:py-8 bg-muted/30 content-auto">
+          <div className="max-w-5xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-4 sm:mb-6">
+              <Badge className="mb-3">Starkes Netzwerk, reibungslose Projekte</Badge>
+              <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
+                Unser Partnernetzwerk in München
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Wir arbeiten mit geprüften Fachbetrieben aus Sanitär, Heizung, Klima und Elektro zusammen – für effiziente Abläufe aus einer Hand.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+              <a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-089sanierer">
+                <Card className="h-full hover-elevate text-center">
+                  <CardContent className="p-4">
+                    <Users className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">089-Sanierer</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Innenausbau & Komplettsanierung</p>
+                  </CardContent>
+                </Card>
+              </a>
+              <a href="https://komplettsanierungen-haus-wohnungen.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-kshw">
+                <Card className="h-full hover-elevate text-center">
+                  <CardContent className="p-4">
+                    <Hammer className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">KSHW München</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Innenausbau & Komplettsanierung</p>
+                  </CardContent>
+                </Card>
+              </a>
+              <a href="https://089dach.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-089dach">
+                <Card className="h-full hover-elevate text-center">
+                  <CardContent className="p-4">
+                    <Shield className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">089Dach GmbH</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Dachdecker- & Spenglerarbeiten</p>
+                  </CardContent>
+                </Card>
+              </a>
+              <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-extrucon">
+                <Card className="h-full hover-elevate text-center">
+                  <CardContent className="p-4">
+                    <Wrench className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">Extrucon GmbH</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Webdesign & Digitalagentur</p>
+                  </CardContent>
+                </Card>
+              </a>
+              <a href="https://sanitaer-muenchen.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-sanitaer">
+                <Card className="h-full hover-elevate text-center">
+                  <CardContent className="p-4">
+                    <Droplets className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">Sanitär München</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Sanitär & Badinstallation</p>
+                  </CardContent>
+                </Card>
+              </a>
+              <a href="/" data-testid="link-partner-card-aquapro24">
+                <Card className="h-full hover-elevate text-center ring-2 ring-primary">
+                  <CardContent className="p-4">
+                    <Flame className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">Aquapro24</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Sanitär, Heizung & Klima</p>
+                  </CardContent>
+                </Card>
+              </a>
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground mt-4">
+              Koordinierte Abwicklung von Ausbau, Haustechnik & energetischer Sanierung im Raum München
+            </p>
+          </div>
+        </section>
+
+        <section className="py-4 sm:py-6 lg:py-8 content-auto">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl lg:text-3xl font-bold mb-2">
