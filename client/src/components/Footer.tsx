@@ -99,9 +99,18 @@ export default function Footer() {
   return (
     <>
       <div className="bg-muted/50 py-3 border-t">
-        <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto px-4">
-          Wir arbeiten mit einem Netzwerk an geprüften Fachbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
-        </p>
+        <div className="text-xs text-muted-foreground text-center max-w-4xl mx-auto px-4 space-y-2">
+          <p>
+            Wir arbeiten mit einem Netzwerk an geprüften Fachbetrieben im Bereich Sanitär, Heizung, Klima und Elektro zusammen.
+          </p>
+          <p>
+            Im Bereich Innenausbau und Komplettsanierung kooperieren wir mit{' '}
+            <a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-089sanierer">089-Sanierer</a>
+            {' '}und{' '}
+            <a href="https://komplettsanierungen-haus-wohnungen.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-kshw">KSHW München</a>.
+            {' '}Während wir Dach- und Spenglerarbeiten umsetzen, übernimmt der Partner die Koordination von Ausbau, Haustechnik und energetischer Sanierung im Raum München. Das ermöglicht effiziente Abläufe aus einer Hand.
+          </p>
+        </div>
       </div>
       <footer className="bg-foreground text-background" role="contentinfo" aria-label="Fußbereich">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-6">
