@@ -93,6 +93,7 @@ function useHeroImages(heroKey: string) {
   const [mobileSrc, setMobileSrc] = useState<string>("");
 
   useEffect(() => {
+    if (!heroKey) return;
     const desktopLoader = heroDesktopMap[heroKey];
     const mobileLoader = heroMobileMap[heroKey];
     if (desktopLoader) {
@@ -124,10 +125,15 @@ export function useHeroImage(heroKey: string) {
 interface HeroPictureProps {
   heroKey: string;
   alt?: string;
+  staticDesktopSrc?: string;
+  staticMobileSrc?: string;
 }
 
-export function HeroPicture({ heroKey, alt = "" }: HeroPictureProps) {
-  const { desktopSrc, mobileSrc } = useHeroImages(heroKey);
+export function HeroPicture({ heroKey, alt = "", staticDesktopSrc, staticMobileSrc }: HeroPictureProps) {
+  const hasStatic = !!(staticDesktopSrc && staticMobileSrc);
+  const { desktopSrc: dynamicDesktop, mobileSrc: dynamicMobile } = useHeroImages(hasStatic ? "" : heroKey);
+  const desktopSrc = staticDesktopSrc || dynamicDesktop;
+  const mobileSrc = staticMobileSrc || dynamicMobile;
 
   return (
     <div
@@ -150,6 +156,7 @@ export function HeroPicture({ heroKey, alt = "" }: HeroPictureProps) {
             role={alt ? undefined : "presentation"}
             loading="eager"
             decoding="async"
+            fetchPriority="high"
             width="1920"
             height="1080"
             style={{

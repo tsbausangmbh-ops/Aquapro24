@@ -33,6 +33,19 @@ button, a, [role="button"], input, select, textarea {
   backface-visibility: hidden;
 }
 
+/* Image Fade-in: Sanftes Einblenden nach dem Laden */
+img {
+  opacity: 1;
+}
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+img[loading="lazy"].loaded,
+img[loading="lazy"][data-loaded="true"] {
+  opacity: 1;
+}
+
 /* Mobile Performance: Reduzierte Bewegung */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

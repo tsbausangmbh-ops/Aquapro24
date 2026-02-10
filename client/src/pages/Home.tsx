@@ -34,6 +34,8 @@ import heizungImage from "@assets/stock_images/white_radiator_heate_2e8a306c.web
 import warmwasserImage from "@assets/generated_images/low_pressure_water_heater_boiler.webp";
 import waermepumpeImage from "@assets/generated_images/vaillant_heat_pump_outdoor_unit.webp";
 import haustechnikImage from "@assets/stock_images/smart_home_technolog_409ecefa.webp";
+import heroHomeDesktop from "@assets/hero_webp/hero_home.webp";
+import heroHomeMobile from "@assets/hero_mobile/hero_home.webp";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 const SimpleFAQ = lazy(() => import("@/components/SimpleFAQ"));
@@ -289,7 +291,7 @@ export default function Home() {
       
       <main id="main-content">
         <section className="relative overflow-hidden" style={{paddingTop: "2rem", paddingBottom: "2rem"}}>
-          <HeroPicture heroKey="hero_home" alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24" />
+          <HeroPicture heroKey="hero_home" alt="Klempner München - Sanitär und Heizung Notdienst AquaPro 24" staticDesktopSrc={heroHomeDesktop} staticMobileSrc={heroHomeMobile} />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
           
           <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
@@ -394,8 +396,9 @@ export default function Home() {
                       <img 
                         src={service.image} 
                         alt={service.alt}
-                        loading="lazy"
+                        loading={index < 3 ? "eager" : "lazy"}
                         decoding="async"
+                        fetchPriority={index < 3 ? "high" : "auto"}
                         width="400"
                         height="128"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
