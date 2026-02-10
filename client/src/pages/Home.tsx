@@ -497,12 +497,12 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </a>
-              <a href="/" data-testid="link-partner-card-aquapro24">
-                <Card className="h-full hover-elevate text-center ring-2 ring-primary">
+              <a href="https://estriche-muenchen.de" target="_blank" rel="noopener noreferrer" data-testid="link-partner-card-estriche">
+                <Card className="h-full hover-elevate text-center">
                   <CardContent className="p-4">
-                    <Flame className="w-6 h-6 text-primary mx-auto mb-2" />
-                    <h3 className="font-semibold text-sm sm:text-base">Aquapro24</h3>
-                    <p className="text-xs text-muted-foreground mt-1">Sanitär, Heizung & Klima</p>
+                    <Hammer className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm sm:text-base">Estriche München</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Estricharbeiten & Bodenbau</p>
                   </CardContent>
                 </Card>
               </a>
