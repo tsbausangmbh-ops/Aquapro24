@@ -108,7 +108,9 @@ export default function Footer() {
             <a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-089sanierer">089-Sanierer</a>
             {' '}und{' '}
             <a href="https://komplettsanierungen-haus-wohnungen.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-kshw">KSHW München</a>.
-            {' '}Während wir Dach- und Spenglerarbeiten umsetzen, übernimmt der Partner die Koordination von Ausbau, Haustechnik und energetischer Sanierung im Raum München. Das ermöglicht effiziente Abläufe aus einer Hand.
+            {' '}Dachdecker- und Spenglerarbeiten werden durch die{' '}
+            <a href="https://089dach.de" target="_blank" rel="noopener noreferrer" className="underline hover-elevate" data-testid="link-partner-089dach">089Dach GmbH</a>
+            {' '}umgesetzt, während die Partner die Koordination von Ausbau, Haustechnik und energetischer Sanierung im Raum München übernehmen. Das ermöglicht effiziente Abläufe aus einer Hand.
           </p>
         </div>
       </div>
