@@ -77,7 +77,7 @@ export default function Testimonials() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <Badge variant="secondary" className="gap-1">
               <Star className="w-3 h-3 fill-current" />
-              4.9 Sterne bei Google (312 Bewertungen)
+              4.9 Sterne bei Google (847 Bewertungen)
             </Badge>
             <Badge variant="outline" className="gap-1">
               <CheckCircle2 className="w-3 h-3" />
