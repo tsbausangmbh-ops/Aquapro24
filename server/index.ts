@@ -368,7 +368,7 @@ app.use((req, res, next) => {
     app.use(devPrerenderMiddleware);
     
     // ============================================
-    // STUFE 2: Eigene SSR (Fallback) - DEV
+    // STUFE 2: Eigene SSR (für ALLE Besucher) - DEV
     // ============================================
     app.use((req, res, next) => {
       if (req.method !== 'GET') return next();
@@ -388,15 +388,16 @@ app.use((req, res, next) => {
       }
       
       const userAgent = req.headers['user-agent'] || '';
+      const botRequest = isBotFn(userAgent);
       
-      if (isBotFn(userAgent)) {
-        if (!validRoutes.has(reqPath)) {
+      if (!validRoutes.has(reqPath)) {
+        if (botRequest) {
           const redirectTarget = findBestRedirect(reqPath);
           if (redirectTarget) {
-            console.log(`[SSR-DEV-Fallback] 301: ${reqPath} → ${redirectTarget}`);
+            console.log(`[SSR-DEV] 301: ${reqPath} → ${redirectTarget}`);
             return res.redirect(301, redirectTarget);
           }
-          console.log(`[SSR-DEV-Fallback] 404: ${reqPath}`);
+          console.log(`[SSR-DEV] 404: ${reqPath}`);
           const notFoundHtml = generateStaticHTML('/', template)
             .replace(/<title>[^<]*<\/title>/, '<title>404 - Seite nicht gefunden | AquaPro 24</title>')
             .replace(/<meta name="robots" content="[^"]*"[^>]*>/, '<meta name="robots" content="noindex, follow" />');
@@ -404,62 +405,61 @@ app.use((req, res, next) => {
           res.setHeader('X-Robots-Tag', 'noindex, follow');
           return res.status(404).send(notFoundHtml);
         }
-        
-        const cached = ssrCache.get(reqPath);
-        if (cached) {
-          const clientEtag = req.headers['if-none-match'];
-          if (clientEtag === cached.etag) {
-            return res.status(304).end();
-          }
-          
-          console.log(`[SSR-DEV-Fallback] Cache HIT: ${reqPath}`);
-          
-          res.setHeader('Content-Type', 'text/html; charset=utf-8');
-          res.setHeader('X-SEO-Rendered', 'true');
-          res.setHeader('X-SSR-Source', 'own-fallback');
-          res.setHeader('X-SSR-Cache', 'HIT');
-          res.setHeader('ETag', cached.etag);
-          res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
-          res.setHeader('Vary', 'User-Agent, Accept-Encoding');
-          
-          const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
-          res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
-          
-          const acceptEncoding = (req.headers['accept-encoding'] || '').toString();
-          if (acceptEncoding.includes('br')) {
-            res.setHeader('Content-Encoding', 'br');
-            return res.send(cached.brotli);
-          } else if (acceptEncoding.includes('gzip')) {
-            res.setHeader('Content-Encoding', 'gzip');
-            return res.send(cached.gzipped);
-          }
-          return res.send(cached.minified);
-        }
-        
-        console.log(`[SSR-DEV-Fallback] Cache MISS: ${reqPath}`);
-        
-        try {
-          const seoHtml = generateStaticHTML(reqPath, template);
-          ssrCache.set(reqPath, seoHtml).catch(console.error);
-          
-          res.setHeader('Content-Type', 'text/html; charset=utf-8');
-          res.setHeader('X-SEO-Rendered', 'true');
-          res.setHeader('X-SSR-Source', 'own-fallback');
-          res.setHeader('X-SSR-Cache', 'MISS');
-          res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
-          res.setHeader('Vary', 'User-Agent');
-          
-          const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
-          res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
-          
-          return res.status(200).send(seoHtml);
-        } catch (e) {
-          console.error('[SSR-DEV-Fallback] Fehler:', e);
-          return next();
-        }
+        return next();
       }
       
-      next();
+      const cached = ssrCache.get(reqPath);
+      if (cached) {
+        const clientEtag = req.headers['if-none-match'];
+        if (clientEtag === cached.etag) {
+          return res.status(304).end();
+        }
+        
+        console.log(`[SSR-DEV] ${botRequest ? 'Bot' : 'User'} Cache HIT: ${reqPath}`);
+        
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.setHeader('X-SEO-Rendered', 'true');
+        res.setHeader('X-SSR-Source', 'own-ssr');
+        res.setHeader('X-SSR-Cache', 'HIT');
+        res.setHeader('ETag', cached.etag);
+        res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+        res.setHeader('Vary', 'User-Agent, Accept-Encoding');
+        
+        const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
+        res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+        
+        const acceptEncoding = (req.headers['accept-encoding'] || '').toString();
+        if (acceptEncoding.includes('br')) {
+          res.setHeader('Content-Encoding', 'br');
+          return res.send(cached.brotli);
+        } else if (acceptEncoding.includes('gzip')) {
+          res.setHeader('Content-Encoding', 'gzip');
+          return res.send(cached.gzipped);
+        }
+        return res.send(cached.minified);
+      }
+      
+      console.log(`[SSR-DEV] ${botRequest ? 'Bot' : 'User'} Cache MISS: ${reqPath}`);
+      
+      try {
+        const seoHtml = generateStaticHTML(reqPath, template);
+        ssrCache.set(reqPath, seoHtml).catch(console.error);
+        
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.setHeader('X-SEO-Rendered', 'true');
+        res.setHeader('X-SSR-Source', 'own-ssr');
+        res.setHeader('X-SSR-Cache', 'MISS');
+        res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+        res.setHeader('Vary', 'User-Agent');
+        
+        const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
+        res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+        
+        return res.status(200).send(seoHtml);
+      } catch (e) {
+        console.error('[SSR-DEV] Fehler:', e);
+        return next();
+      }
     });
     
     const { setupVite } = await import("./vite");

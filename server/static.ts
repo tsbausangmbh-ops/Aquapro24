@@ -347,19 +347,13 @@ export async function serveStatic(app: Express) {
   app.use(prerenderMiddleware);
 
   // ============================================
-  // STUFE 2: Eigene SSR (Fallback/Sicherheitsnetz)
+  // STUFE 2: Eigene SSR (für ALLE Besucher)
   // ============================================
-  // Greift NUR wenn Prerender.io nicht geliefert hat (cancelRender).
-  // Für Crawler: Liefert vollständiges HTML mit JSON-LD und Meta-Tags.
-  // Für normale Besucher: Wird übersprungen (next() → SPA).
+  // Liefert allen Besuchern (Bots UND normale User) fertig gerendertes HTML
+  // mit SEO-Meta-Tags, JSON-LD und vollständigem Content.
+  // React hydratisiert anschließend clientseitig für Interaktivität.
   app.use((req: Request, res: Response, next) => {
-    const userAgent = req.headers['user-agent'] || '';
-    
     if (req.path.includes('.') || req.path.startsWith('/api') || req.path.startsWith('/assets')) {
-      return next();
-    }
-    
-    if (!isBot(userAgent)) {
       return next();
     }
 
@@ -372,19 +366,21 @@ export async function serveStatic(app: Express) {
       return next();
     }
 
-    console.log(`[SSR-Fallback] Bot erkannt, eigene SSR für: ${requestPath}`);
+    const userAgent = req.headers['user-agent'] || '';
+    const botRequest = isBot(userAgent);
+    console.log(`[SSR] ${botRequest ? 'Bot' : 'User'} SSR für: ${requestPath}`);
 
     if (serveCachedSSR(req, res, requestPath)) {
       return;
     }
 
-    console.log(`[SSR-Fallback] Cache MISS: ${requestPath}`);
+    console.log(`[SSR] Cache MISS: ${requestPath}`);
     const seoHtml = generateStaticHTML(requestPath, indexHtml);
     ssrCache.set(requestPath, seoHtml).catch(console.error);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.setHeader('X-SEO-Rendered', 'true');
-    res.setHeader('X-SSR-Source', 'own-fallback');
+    res.setHeader('X-SSR-Source', 'own-ssr');
     res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
     res.setHeader('Vary', 'User-Agent, Accept-Encoding');
     res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
