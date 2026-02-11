@@ -371,7 +371,7 @@ export default function CookieRichtliniePage() {
                 regulatorischen Gründen widerzuspiegeln.
               </p>
               <p className="text-muted-foreground">
-                Die aktuelle Version finden Sie immer auf dieser Seite. Letzte Aktualisierung: Dezember 2025.
+                Die aktuelle Version finden Sie immer auf dieser Seite. Letzte Aktualisierung: Februar 2026.
               </p>
             </section>
 

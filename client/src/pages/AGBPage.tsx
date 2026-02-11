@@ -325,7 +325,7 @@ export default function AGBPage() {
                 dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt.
               </p>
               <p className="text-muted-foreground">
-                Stand: Dezember 2025
+                Stand: Februar 2026
               </p>
             </section>
             </div>

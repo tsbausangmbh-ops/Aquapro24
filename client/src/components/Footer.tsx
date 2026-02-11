@@ -173,7 +173,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4">
             <a href="/notdienst-muenchen" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">Notdienst 24h</a>
             <a href="/termin" className="text-xs text-background/70 hover:text-primary transition-colors">Termin buchen</a>
-            <a href="/foerderung" className="text-xs text-green-400 hover:text-green-300 transition-colors">Förderung 2025</a>
+            <a href="/foerderung" className="text-xs text-green-400 hover:text-green-300 transition-colors">Förderung 2026</a>
             <a href="/sanitaer-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Sanitär München</a>
             <a href="/heizung-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Heizung München</a>
             <a href="/waermepumpe-muenchen" className="text-xs text-background/70 hover:text-primary transition-colors">Wärmepumpe München</a>
@@ -202,7 +202,7 @@ export default function Footer() {
         <div className="border-t border-background/10 mt-4 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <div className="text-sm text-background/50 text-center md:text-left">
-              <p>© 2025 AquaPro 24 – Verwaltung & Betrieb durch Mustafa Sakar.</p>
+              <p>© 2026 AquaPro 24 – Verwaltung & Betrieb durch Mustafa Sakar.</p>
             </div>
             <div className="text-sm text-background/50 text-center md:text-right">
               <p>Webdesign: <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ExtruCon GmbH</a> & <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">KSHWmont d.o.o.</a></p>

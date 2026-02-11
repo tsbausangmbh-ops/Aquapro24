@@ -257,7 +257,7 @@ const faqItems = [
   },
   {
     question: "Bieten Sie BAFA-Förderung für Wärmepumpen?",
-    answer: "Ja, bis 70% BAFA-Förderung für Wärmepumpen 2025. Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm. Wir übernehmen den kompletten Förderantrag."
+    answer: "Ja, bis 70% BAFA-Förderung für Wärmepumpen 2026. Viessmann Vitocal, Vaillant aroTHERM, Buderus Logatherm. Wir übernehmen den kompletten Förderantrag."
   }
 ];
 

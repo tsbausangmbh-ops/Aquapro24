@@ -62,418 +62,411 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Plumber",
-      "additionalType": [
-        "https://schema.org/HVACBusiness",
-        "https://schema.org/HomeAndConstructionBusiness"
-      ],
-      "@id": "https://aquapro24.de/#localbusiness",
-      "name": "AquaPro24 - Sanitär & Heizung München",
-      "alternateName": ["AquaPro24", "AquaPro 24", "Klempner München AquaPro24", "Sanitär München AquaPro24"],
-      "description": "Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen in München und Umgebung. Seit 2005 mit über 2.847 zufriedenen Kunden. 24/7 Notdienst.",
-      "url": "https://aquapro24.de",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://aquapro24.de/images/logo-fast.webp",
-        "width": 180,
-        "height": 60
-      },
-      "image": [
-        "https://aquapro24.de/images/hero-fast.webp",
-        "https://aquapro24.de/images/logo-fast.webp"
-      ],
-      "telephone": "+49 89 444438872",
-      "email": "info@aquapro24.de",
-      "priceRange": "€€-€€€",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Cash, EC-Karte, Überweisung, Rechnung",
-      "hasMap": "https://www.google.com/maps/search/?api=1&query=Hardenbergstr.+4,+80992+München",
-      "foundingDate": "2005",
-      "vatID": "DE356852204",
-      "legalName": "AquaPro 24 - Mustafa Sakar",
-      "founder": {
-        "@type": "Person",
-        "name": "Mustafa Sakar",
-        "jobTitle": "Inhaber & Geschäftsführer",
-        "url": "https://aquapro24.de/ueber-uns"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hardenbergstr. 4",
-        "addressLocality": "München",
-        "addressRegion": "Bayern",
-        "postalCode": "80992",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "48.1748",
-        "longitude": "11.5134"
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
+          "@type": "Plumber",
+          "additionalType": [
+            "https://schema.org/HVACBusiness",
+            "https://schema.org/HomeAndConstructionBusiness"
+          ],
+          "@id": "https://aquapro24.de/#localbusiness",
+          "name": "AquaPro24 - Sanitär & Heizung München",
+          "alternateName": ["AquaPro24", "AquaPro 24", "Klempner München AquaPro24", "Sanitär München AquaPro24"],
+          "description": "Partnernetzwerk für Sanitär, Heizung, Badsanierung und Wärmepumpen in München und Umgebung. Seit 2005 mit über 2.847 zufriedenen Kunden. 24/7 Notdienst.",
+          "url": "https://aquapro24.de",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://aquapro24.de/images/logo-fast.webp",
+            "width": 180,
+            "height": 60
+          },
+          "image": [
+            "https://aquapro24.de/images/hero-fast.webp",
+            "https://aquapro24.de/images/logo-fast.webp"
+          ],
+          "telephone": "+49 89 444438872",
+          "email": "info@aquapro24.de",
+          "priceRange": "€€-€€€",
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Cash, EC-Karte, Überweisung, Rechnung",
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=Hardenbergstr.+4,+80992+München",
+          "foundingDate": "2005",
+          "vatID": "DE356852204",
+          "legalName": "AquaPro 24 - Mustafa Sakar",
+          "founder": { "@id": "https://aquapro24.de/#founder" },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hardenbergstr. 4",
+            "addressLocality": "München",
+            "addressRegion": "Bayern",
+            "postalCode": "80992",
+            "addressCountry": "DE"
+          },
+          "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "48.137154",
-            "longitude": "11.576124"
+            "latitude": "48.1748",
+            "longitude": "11.5134"
           },
-          "geoRadius": "40000"
-        },
-        {
-          "@type": "City",
-          "name": "München",
-          "@id": "https://www.wikidata.org/wiki/Q1726",
-          "sameAs": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
-        },
-        {"@type": "City", "name": "Fürstenfeldbruck"},
-        {"@type": "City", "name": "Dachau"},
-        {"@type": "City", "name": "Starnberg"},
-        {"@type": "City", "name": "Freising"},
-        {"@type": "City", "name": "Erding"},
-        {"@type": "City", "name": "Garching bei München"},
-        {"@type": "City", "name": "Unterschleißheim"},
-        {"@type": "AdministrativeArea", "name": "Oberbayern"}
-      ],
-      "serviceArea": {
-        "@type": "GeoShape",
-        "polygon": "48.25,11.35 48.25,11.78 48.06,11.78 48.06,11.35 48.25,11.35"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "07:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "14:00"
-        }
-      ],
-      "specialOpeningHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59",
-        "description": "24/7 Notdienst für Rohrbruch, Wasserschaden und Heizungsausfall"
-      }],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Sanitär & Heizung Dienstleistungen München",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Rohrreinigung München",
-              "description": "Professionelle Rohrreinigung mit Spirale oder Hochdruck bei verstopftem Abfluss",
-              "serviceType": "PlumbingService"
+          "areaServed": [
+            {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "48.137154",
+                "longitude": "11.576124"
+              },
+              "geoRadius": "40000"
             },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "81",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "ab 81€ netto"
+            {
+              "@type": "City",
+              "name": "München",
+              "@id": "https://www.wikidata.org/wiki/Q1726",
+              "sameAs": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
+            },
+            {"@type": "City", "name": "Fürstenfeldbruck"},
+            {"@type": "City", "name": "Dachau"},
+            {"@type": "City", "name": "Starnberg"},
+            {"@type": "City", "name": "Freising"},
+            {"@type": "City", "name": "Erding"},
+            {"@type": "City", "name": "Garching bei München"},
+            {"@type": "City", "name": "Unterschleißheim"},
+            {"@type": "AdministrativeArea", "name": "Oberbayern"}
+          ],
+          "serviceArea": {
+            "@type": "GeoShape",
+            "polygon": "48.25,11.35 48.25,11.78 48.06,11.78 48.06,11.35 48.25,11.35"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "07:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "14:00"
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Sanitär-Reparatur München",
-              "description": "Armaturen, Wasserhahn, WC, Spülkasten – alle Sanitärreparaturen",
-              "serviceType": "PlumbingService"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "92",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "ab 92€ netto"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Heizungsreparatur München",
-              "description": "Reparatur aller Hersteller: Viessmann, Buderus, Vaillant, Wolf, Junkers",
-              "serviceType": "HVACBusiness"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "154",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "ab 154€ netto"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Heizungswartung München",
-              "description": "Jährliche Wartung mit Brennercheck, Abgasmessung und Sicherheitsprüfung",
-              "serviceType": "HVACBusiness"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "119",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "ab 119€ netto"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Badsanierung München",
-              "description": "Komplette Badsanierung aus einer Hand – Planung, Umbau, Fertigstellung",
-              "serviceType": "PlumbingService"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "16000",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "Komplettsanierung ab 16.000€"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Wärmepumpe München",
-              "description": "Luft-Wasser, Erdwärme, Hybrid – mit bis zu 70% BAFA-Förderung",
-              "serviceType": "HVACBusiness"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "15000",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "ab 15.000€ (bis 70% BAFA-Förderung möglich)"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "24/7 Notdienst München",
-              "description": "Soforthilfe bei Rohrbruch, Wasserschaden und Heizungsausfall – Anfahrt in 45-60 Min.",
-              "serviceType": "EmergencyService"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "69",
-              "priceCurrency": "EUR",
-              "valueAddedTaxIncluded": false,
-              "description": "Notdienst-Anfahrt ab 69€"
-            },
-            "availableAtOrFrom": {
-              "@type": "Place",
-              "name": "München und 40km Umkreis"
-            },
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2024-01-01"
-          }
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "847",
-        "reviewCount": "847"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Stefan M."},
-          "datePublished": "2025-11-15",
-          "reviewBody": "Sonntag Abend Rohrbruch in der Küche. In 40 Minuten war der Techniker da. Alles repariert, fairer Preis. Absolut empfehlenswert!",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
-        },
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Maria K."},
-          "datePublished": "2025-10-22",
-          "reviewBody": "Badsanierung in 3 Wochen komplett fertig. Qualität top, alles wie besprochen. Das Team war super freundlich und pünktlich.",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
-        },
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Thomas W."},
-          "datePublished": "2025-09-08",
-          "reviewBody": "Heizung ausgefallen im Dezember. AquaPro24 war innerhalb einer Stunde da und hat alles repariert. Festpreis eingehalten. Danke!",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
-        },
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Claudia R."},
-          "datePublished": "2025-12-03",
-          "reviewBody": "Wärmepumpe installiert mit BAFA-Förderung. Herr Sakar hat alles organisiert, sogar den Förderantrag. 70% Zuschuss bekommen!",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
-        },
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Andreas B."},
-          "datePublished": "2026-01-14",
-          "reviewBody": "Verstopfter Abfluss in Schwabing. Anruf um 8 Uhr, um 9 Uhr war der Techniker da. Problem gelöst für 95€. Sehr fair!",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
-        }
-      ],
-      "sameAs": [
-        "https://www.google.com/maps/search/?api=1&query=AquaPro24+Hardenbergstr+4+80992+München",
-        "https://www.facebook.com/aquapro24",
-        "https://www.instagram.com/aquapro24_muenchen"
-      ],
-      "slogan": "Ihr Sanitär & Heizung Partner in München seit 2005",
-      "knowsAbout": [
-        "Klempner München", "Sanitär München", "Heizung München",
-        "Sanitär Notdienst München", "Heizung Notdienst München",
-        "Rohrreinigung München", "Rohrbruch München",
-        "Badsanierung München", "Wärmepumpe München",
-        "Fußbodenheizung München", "Haustechnik München",
-        "Wasserschaden München", "WC verstopft München",
-        "Wasserhahn wechseln München", "Therme reparieren München",
-        "Heizungswartung München", "Heizungsaustausch München",
-        "BAFA Förderung Heizung", "KfW Förderung Bad",
-        "Barrierefreies Bad München", "Bodengleiche Dusche München",
-        "Grohe Montage München", "Hansgrohe Installation",
-        "Viessmann Heizung München", "Vaillant Reparatur München",
-        "Buderus Wartung München", "Wolf Heizung München"
-      ],
-      "knowsLanguage": ["de", "tr", "en"],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "name": "Kostenlose Erstberatung",
-          "description": "Unverbindliche Beratung und Kostenschätzung",
-          "price": "0",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "name": "Anfahrt München",
-          "description": "Pauschale Anfahrtskosten im Stadtgebiet München",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "39",
-            "priceCurrency": "EUR",
-            "valueAddedTaxIncluded": false
-          }
-        }
-      ],
-      "isAccessibleForFree": false,
-      "actionableFeedbackPolicy": "https://aquapro24.de/kontakt"
-    }
-    </script>
-    <!-- Alte große Font-Anfrage entfernt - jetzt nur 2 Schriftarten via preload oben -->
-    
-    <!-- Google WebSite Schema für Sitelinks Searchbox -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://aquapro24.de/#website",
-      "name": "AquaPro24 - Sanitär & Heizung München",
-      "alternateName": ["AquaPro 24", "AquaPro24", "Klempner München"],
-      "url": "https://aquapro24.de",
-      "inLanguage": "de-DE",
-      "publisher": {
-        "@id": "https://aquapro24.de/#organization"
-      },
-      "potentialAction": [
-        {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://aquapro24.de/?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        },
-        {
-          "@type": "ReadAction",
-          "target": "https://aquapro24.de/ratgeber"
-        }
-      ],
-      "about": [
-        {"@type": "Thing", "name": "Sanitär München"},
-        {"@type": "Thing", "name": "Heizung München"},
-        {"@type": "Thing", "name": "Klempner München"},
-        {"@type": "Thing", "name": "Badsanierung München"},
-        {"@type": "Thing", "name": "Wärmepumpe München"}
-      ],
-      "keywords": "Klempner München, Sanitär Notdienst, Heizung Reparatur, Badsanierung, Wärmepumpe, Rohrreinigung, 24h Notdienst",
-      "datePublished": "2005-01-01",
-      "dateModified": "2026-02-09"
-    }
-    </script>
-
-    <!-- Google Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://aquapro24.de/#organization",
-      "name": "AquaPro24",
-      "legalName": "AquaPro 24 - Mustafa Sakar",
-      "url": "https://aquapro24.de",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://aquapro24.de/images/logo-fast.webp",
-        "width": 180,
-        "height": 60
-      },
-      "image": "https://aquapro24.de/images/logo-fast.webp",
-      "description": "Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005.",
-      "foundingDate": "2005",
-      "founder": {
-        "@type": "Person",
-        "name": "Mustafa Sakar"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hardenbergstr. 4",
-        "addressLocality": "München",
-        "addressRegion": "Bayern",
-        "postalCode": "80992",
-        "addressCountry": "DE"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+49-89-444438872",
-          "contactType": "customer service",
-          "areaServed": "DE-BY",
-          "availableLanguage": ["German", "Turkish", "English"],
-          "hoursAvailable": {
+          ],
+          "specialOpeningHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
             "opens": "00:00",
-            "closes": "23:59"
-          }
+            "closes": "23:59",
+            "description": "24/7 Notdienst für Rohrbruch, Wasserschaden und Heizungsausfall"
+          }],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Sanitär & Heizung Dienstleistungen München",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Rohrreinigung München",
+                  "description": "Professionelle Rohrreinigung mit Spirale oder Hochdruck bei verstopftem Abfluss",
+                  "serviceType": "PlumbingService"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "81",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "ab 81€ netto"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sanitär-Reparatur München",
+                  "description": "Armaturen, Wasserhahn, WC, Spülkasten – alle Sanitärreparaturen",
+                  "serviceType": "PlumbingService"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "92",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "ab 92€ netto"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Heizungsreparatur München",
+                  "description": "Reparatur aller Hersteller: Viessmann, Buderus, Vaillant, Wolf, Junkers",
+                  "serviceType": "HVACBusiness"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "154",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "ab 154€ netto"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Heizungswartung München",
+                  "description": "Jährliche Wartung mit Brennercheck, Abgasmessung und Sicherheitsprüfung",
+                  "serviceType": "HVACBusiness"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "119",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "ab 119€ netto"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Badsanierung München",
+                  "description": "Komplette Badsanierung aus einer Hand – Planung, Umbau, Fertigstellung",
+                  "serviceType": "PlumbingService"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "16000",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "Komplettsanierung ab 16.000€"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Wärmepumpe München",
+                  "description": "Luft-Wasser, Erdwärme, Hybrid – mit bis zu 70% BAFA-Förderung",
+                  "serviceType": "HVACBusiness"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "15000",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "ab 15.000€ (bis 70% BAFA-Förderung möglich)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "24/7 Notdienst München",
+                  "description": "Soforthilfe bei Rohrbruch, Wasserschaden und Heizungsausfall – Anfahrt in 45-60 Min.",
+                  "serviceType": "EmergencyService"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "69",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": false,
+                  "description": "Notdienst-Anfahrt ab 69€"
+                },
+                "availableAtOrFrom": {
+                  "@type": "Place",
+                  "name": "München und 40km Umkreis"
+                },
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2024-01-01"
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "847",
+            "reviewCount": "847"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Stefan M."},
+              "datePublished": "2025-11-15",
+              "reviewBody": "Sonntag Abend Rohrbruch in der Küche. In 40 Minuten war der Techniker da. Alles repariert, fairer Preis. Absolut empfehlenswert!",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+            },
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Maria K."},
+              "datePublished": "2025-10-22",
+              "reviewBody": "Badsanierung in 3 Wochen komplett fertig. Qualität top, alles wie besprochen. Das Team war super freundlich und pünktlich.",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+            },
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Thomas W."},
+              "datePublished": "2025-09-08",
+              "reviewBody": "Heizung ausgefallen im Dezember. AquaPro24 war innerhalb einer Stunde da und hat alles repariert. Festpreis eingehalten. Danke!",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+            },
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Claudia R."},
+              "datePublished": "2025-12-03",
+              "reviewBody": "Wärmepumpe installiert mit BAFA-Förderung. Herr Sakar hat alles organisiert, sogar den Förderantrag. 70% Zuschuss bekommen!",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+            },
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Andreas B."},
+              "datePublished": "2026-01-14",
+              "reviewBody": "Verstopfter Abfluss in Schwabing. Anruf um 8 Uhr, um 9 Uhr war der Techniker da. Problem gelöst für 95€. Sehr fair!",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+            }
+          ],
+          "sameAs": [
+            "https://www.google.com/maps/search/?api=1&query=AquaPro24+Hardenbergstr+4+80992+München",
+            "https://www.facebook.com/aquapro24",
+            "https://www.instagram.com/aquapro24_muenchen"
+          ],
+          "slogan": "Ihr Sanitär & Heizung Partner in München seit 2005",
+          "knowsAbout": [
+            "Klempner München", "Sanitär München", "Heizung München",
+            "Sanitär Notdienst München", "Heizung Notdienst München",
+            "Rohrreinigung München", "Rohrbruch München",
+            "Badsanierung München", "Wärmepumpe München",
+            "Fußbodenheizung München", "Haustechnik München",
+            "Wasserschaden München", "WC verstopft München",
+            "Wasserhahn wechseln München", "Therme reparieren München",
+            "Heizungswartung München", "Heizungsaustausch München",
+            "BAFA Förderung Heizung", "KfW Förderung Bad",
+            "Barrierefreies Bad München", "Bodengleiche Dusche München",
+            "Grohe Montage München", "Hansgrohe Installation",
+            "Viessmann Heizung München", "Vaillant Reparatur München",
+            "Buderus Wartung München", "Wolf Heizung München"
+          ],
+          "knowsLanguage": ["de", "tr", "en"],
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "name": "Kostenlose Erstberatung",
+              "description": "Unverbindliche Beratung und Kostenschätzung",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Anfahrt München",
+              "description": "Pauschale Anfahrtskosten im Stadtgebiet München",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "39",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": false
+              }
+            }
+          ],
+          "isAccessibleForFree": false,
+          "actionableFeedbackPolicy": "https://aquapro24.de/kontakt"
         },
         {
-          "@type": "ContactPoint",
-          "telephone": "+49-89-444438872",
-          "contactType": "emergency",
-          "contactOption": "TollFree",
-          "areaServed": "München",
-          "availableLanguage": "German"
+          "@type": "WebSite",
+          "@id": "https://aquapro24.de/#website",
+          "name": "AquaPro24 - Sanitär & Heizung München",
+          "alternateName": ["AquaPro 24", "AquaPro24", "Klempner München"],
+          "url": "https://aquapro24.de",
+          "inLanguage": "de-DE",
+          "publisher": { "@id": "https://aquapro24.de/#organization" },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://aquapro24.de/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            },
+            {
+              "@type": "ReadAction",
+              "target": "https://aquapro24.de/ratgeber"
+            }
+          ],
+          "about": [
+            {"@type": "Thing", "name": "Sanitär München"},
+            {"@type": "Thing", "name": "Heizung München"},
+            {"@type": "Thing", "name": "Klempner München"},
+            {"@type": "Thing", "name": "Badsanierung München"},
+            {"@type": "Thing", "name": "Wärmepumpe München"}
+          ],
+          "keywords": "Klempner München, Sanitär Notdienst, Heizung Reparatur, Badsanierung, Wärmepumpe, Rohrreinigung, 24h Notdienst",
+          "datePublished": "2005-01-01",
+          "dateModified": "2026-02-11",
+          "copyrightYear": 2026,
+          "mainEntity": { "@id": "https://aquapro24.de/#localbusiness" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://aquapro24.de/#organization",
+          "name": "AquaPro24",
+          "legalName": "AquaPro 24 - Mustafa Sakar",
+          "url": "https://aquapro24.de",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://aquapro24.de/images/logo-fast.webp",
+            "width": 180,
+            "height": 60
+          },
+          "image": "https://aquapro24.de/images/logo-fast.webp",
+          "description": "Partnernetzwerk für Sanitär, Heizung und Badsanierung in München. Seit 2005.",
+          "foundingDate": "2005",
+          "founder": { "@id": "https://aquapro24.de/#founder" },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hardenbergstr. 4",
+            "addressLocality": "München",
+            "addressRegion": "Bayern",
+            "postalCode": "80992",
+            "addressCountry": "DE"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+49-89-444438872",
+              "contactType": "customer service",
+              "areaServed": "DE-BY",
+              "availableLanguage": ["German", "Turkish", "English"],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+49-89-444438872",
+              "contactType": "emergency",
+              "contactOption": "TollFree",
+              "areaServed": "München",
+              "availableLanguage": "German"
+            }
+          ],
+          "sameAs": [
+            "https://www.google.com/maps/search/?api=1&query=AquaPro24+Hardenbergstr+4+80992+München",
+            "https://www.facebook.com/aquapro24",
+            "https://www.instagram.com/aquapro24_muenchen"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://aquapro24.de/#founder",
+          "name": "Mustafa Sakar",
+          "jobTitle": "Inhaber & Geschäftsführer",
+          "url": "https://aquapro24.de/ueber-uns",
+          "worksFor": { "@id": "https://aquapro24.de/#organization" }
         }
-      ],
-      "sameAs": [
-        "https://www.google.com/maps/search/?api=1&query=AquaPro24+Hardenbergstr+4+80992+München",
-        "https://www.facebook.com/aquapro24",
-        "https://www.instagram.com/aquapro24_muenchen"
       ]
     }
     </script>

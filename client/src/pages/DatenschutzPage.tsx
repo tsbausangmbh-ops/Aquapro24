@@ -712,7 +712,7 @@ export default function DatenschutzPage() {
                   genannten Preisschätzungen enthalten einen Beratungsaufschlag von 30% gegenüber den auf 
                   unserer Website angegebenen Basispreisen. Dies dient der Vergütung der KI-gestützten 
                   Beratungsleistung. Die endgültigen Preise werden erst nach einer persönlichen Besichtigung 
-                  vor Ort verbindlich festgelegt. Stand: Dezember 2025.
+                  vor Ort verbindlich festgelegt. Stand: Februar 2026.
                 </p>
               </div>
               <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4">

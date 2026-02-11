@@ -1294,8 +1294,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   `;
   html = html.replace('</head>', `${hreflangTags}</head>`);
 
-  // Note: LocalBusiness and WebSite schemas are already defined in index.html
-  // SSR only adds BreadcrumbList for page-specific navigation
+  const ssrGraphEntities: Record<string, any>[] = [];
 
   const breadcrumbNameMap: Record<string, string> = {
     'sanitaer': 'Sanitär',
@@ -1384,18 +1383,13 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   }
 
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
+  ssrGraphEntities.push({
     "@type": "BreadcrumbList",
     "@id": breadcrumbId,
     "itemListElement": breadcrumbItems
-  };
+  });
 
-  const breadcrumbScript = `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`;
-  html = html.replace('</head>', `${breadcrumbScript}\n</head>`);
-
-  const webPageSchema: Record<string, any> = {
-    "@context": "https://schema.org",
+  ssrGraphEntities.push({
     "@type": "WebPage",
     "@id": `${canonicalUrl}#webpage`,
     "url": canonicalUrl,
@@ -1404,17 +1398,13 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "about": { "@id": `${BASE_URL}/#localbusiness` },
     "breadcrumb": { "@id": breadcrumbId },
-    "author": {
-      "@type": "Person",
-      "@id": `${BASE_URL}/#founder`,
-      "name": "Mustafa Sakar",
-      "url": `${BASE_URL}/ueber-uns`
-    },
+    "author": { "@id": `${BASE_URL}/#founder` },
+    "creator": { "@id": `${BASE_URL}/#founder` },
     "publisher": { "@id": `${BASE_URL}/#organization` },
     "inLanguage": "de-DE",
     "datePublished": "2024-01-01",
-    "dateModified": "2026-02-09",
-    "lastReviewed": "2026-02-09",
+    "dateModified": "2026-02-11",
+    "lastReviewed": "2026-02-11",
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", ".hero-subtitle", ".emergency-phone", ".service-summary"]
@@ -1423,9 +1413,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
       "@type": "WebPageElement",
       "cssSelector": "main"
     }
-  };
-  const webPageScript = `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`;
-  html = html.replace('</head>', `${webPageScript}\n</head>`);
+  });
 
   // Stadtteil-spezifische Geo-Schemas für hyper-lokale Signale
   const stadtteilGeoData: Record<string, { lat: string; lng: string; plz: string[]; name: string }> = {
@@ -1464,8 +1452,7 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
   const stadtteilGeo = stadtteilGeoData[pagePath];
   if (stadtteilGeo) {
     const slugPart = pagePath.replace('/', '');
-    const stadtteilSchema = {
-      "@context": "https://schema.org",
+    ssrGraphEntities.push({
       "@type": "LocalBusiness",
       "additionalType": "https://schema.org/Plumber",
       "@id": `${BASE_URL}/#localbusiness-${slugPart}`,
@@ -1510,32 +1497,16 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
         "ratingCount": "847",
         "reviewCount": "847"
       }
-    };
-    const stadtteilScript = `<script type="application/ld+json">${JSON.stringify(stadtteilSchema)}</script>`;
-    html = html.replace('</head>', `${stadtteilScript}\n</head>`);
+    });
   }
 
-  // Add Service schema if page has one
   if (page.serviceSchema) {
-    const serviceSchema = {
-      "@context": "https://schema.org",
+    ssrGraphEntities.push({
       "@type": "Service",
       "name": page.serviceSchema.name,
       "description": page.serviceSchema.description,
       "serviceType": page.serviceSchema.serviceType,
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": `${BASE_URL}/#localbusiness`,
-        "name": "AquaPro 24",
-        "telephone": "+49 89 444438872",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Hardenbergstr. 4",
-          "addressLocality": "München",
-          "postalCode": "80992",
-          "addressCountry": "DE"
-        }
-      },
+      "provider": { "@id": `${BASE_URL}/#localbusiness` },
       "areaServed": {
         "@type": "City",
         "name": page.serviceSchema.areaServed || "München",
@@ -1553,14 +1524,11 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
           "availableLanguage": ["de", "en", "tr"]
         }
       }
-    };
-    const serviceScript = `<script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>`;
-    html = html.replace('</head>', `${serviceScript}\n</head>`);
+    });
   }
 
   if (page.faqs && page.faqs.length > 0) {
-    const faqSchema = {
-      "@context": "https://schema.org",
+    ssrGraphEntities.push({
       "@type": "FAQPage",
       "@id": `${canonicalUrl}#faq`,
       "mainEntity": page.faqs.map(faq => ({
@@ -1571,11 +1539,11 @@ export function generateStaticHTML(pagePath: string, indexHtml: string): string 
           "text": faq.answer
         }
       }))
-    };
-    const faqScript = `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`;
-    html = html.replace('</head>', `${faqScript}\n</head>`);
+    });
   }
 
+  const ssrGraphScript = `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": ssrGraphEntities })}</script>`;
+  html = html.replace('</head>', `${ssrGraphScript}\n</head>`);
 
   // Replace robots meta tag with extended version
   html = html.replace(

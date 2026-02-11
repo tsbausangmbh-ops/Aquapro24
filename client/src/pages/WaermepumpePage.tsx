@@ -117,7 +117,7 @@ const faqItems = [
     answer: "Luft-Wasser ab 12.000€, Erdwärme ab 18.000€ (vor Förderung). Mit bis zu 70% Förderung zahlen Sie nur 30-50% der Kosten."
   },
   {
-    question: "Wie hoch ist die Wärmepumpen-Förderung 2025?",
+    question: "Wie hoch ist die Wärmepumpen-Förderung 2026?",
     answer: "Bis zu 70%: 30% Grundförderung + 30% Einkommensbonus + 20% Geschwindigkeitsbonus + 5% Effizienzbonus."
   },
   {
@@ -186,7 +186,7 @@ export default function WaermepumpePage() {
               </div>
               
               <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight leading-tight text-white mb-2 sm:mb-4">
-                Wärmepumpe München – bis 70% BAFA Förderung 2025
+                Wärmepumpe München – bis 70% BAFA Förderung 2026
               </h1>
               
               <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-1 sm:mb-3">

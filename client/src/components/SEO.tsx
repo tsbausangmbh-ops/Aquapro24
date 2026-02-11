@@ -248,7 +248,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "Sanitärinstallation", "Heizungsmodernisierung", "Badsanierung",
     "Wärmepumpe", "Fußbodenheizung", "Rohrbruch", "Wasserschaden", "Notdienst",
     "Rohrreinigung", "Armaturen", "Warmwasser", "Gasheizung", "Haustechnik",
-    "BAFA Förderung 2025", "KfW Förderung", "Energieeffizienz",
+    "BAFA Förderung 2026", "KfW Förderung", "Energieeffizienz",
     "Trinkwasserhygiene", "Gebäudeenergiegesetz GEG", "Wärmewende"
   ],
   "url": "https://aquapro24.de",
@@ -744,13 +744,16 @@ export default function SEO({
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
 
-    const localBusinessScript = document.createElement("script");
-    localBusinessScript.type = "application/ld+json";
-    localBusinessScript.textContent = JSON.stringify(LOCAL_BUSINESS_SCHEMA);
-    document.head.appendChild(localBusinessScript);
+    const today = new Date().toISOString().split('T')[0];
 
-    const organizationSchema = {
-      "@context": "https://schema.org",
+    const graphEntities: Record<string, unknown>[] = [];
+
+    graphEntities.push({
+      ...LOCAL_BUSINESS_SCHEMA,
+      "@context": undefined
+    });
+
+    graphEntities.push({
       "@type": "Organization",
       "@id": "https://aquapro24.de/#organization",
       "name": "AquaPro 24",
@@ -836,40 +839,24 @@ export default function SEO({
       "ethicsPolicy": "https://aquapro24.de/agb",
       "diversityPolicy": "https://aquapro24.de/barrierefreiheit",
       "actionableFeedbackPolicy": "https://aquapro24.de/kontakt"
-    };
-    const orgScript = document.createElement("script");
-    orgScript.type = "application/ld+json";
-    orgScript.textContent = JSON.stringify(organizationSchema);
-    document.head.appendChild(orgScript);
-
-    const founderPersonScript = document.createElement("script");
-    founderPersonScript.type = "application/ld+json";
-    founderPersonScript.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      ...FOUNDER_PERSON_SCHEMA
     });
-    document.head.appendChild(founderPersonScript);
 
-    const profilePageSchema = {
-      "@context": "https://schema.org",
+    graphEntities.push(FOUNDER_PERSON_SCHEMA);
+
+    graphEntities.push({
       "@type": "ProfilePage",
       "@id": "https://aquapro24.de/ueber-uns/#profilepage",
       "mainEntity": { "@id": "https://aquapro24.de/#founder" },
       "dateCreated": "2005-01-01",
-      "dateModified": new Date().toISOString().split('T')[0],
+      "dateModified": today,
       "about": { "@id": "https://aquapro24.de/#founder" },
       "significantLink": [
         "https://aquapro24.de/ueber-uns",
         "https://aquapro24.de/impressum"
       ]
-    };
-    const profilePageScript = document.createElement("script");
-    profilePageScript.type = "application/ld+json";
-    profilePageScript.textContent = JSON.stringify(profilePageSchema);
-    document.head.appendChild(profilePageScript);
+    });
 
-    const websiteSchema = {
-      "@context": "https://schema.org",
+    graphEntities.push({
       "@type": "WebSite",
       "@id": "https://aquapro24.de/#website",
       "url": "https://aquapro24.de",
@@ -881,7 +868,7 @@ export default function SEO({
       "inLanguage": "de-DE",
       "copyrightYear": 2026,
       "datePublished": "2005-01-01",
-      "dateModified": new Date().toISOString().split('T')[0],
+      "dateModified": today,
       "potentialAction": [
         {
           "@type": "SearchAction",
@@ -906,16 +893,11 @@ export default function SEO({
           "sameAs": "https://de.wikipedia.org/wiki/München"
         }
       }
-    };
-    const websiteScript = document.createElement("script");
-    websiteScript.type = "application/ld+json";
-    websiteScript.textContent = JSON.stringify(websiteSchema);
-    document.head.appendChild(websiteScript);
+    });
 
-    const webpageSchema = {
-      "@context": "https://schema.org",
+    graphEntities.push({
       "@type": "WebPage",
-      "@id": `https://aquapro24.de${window.location.pathname}#webpage`,
+      "@id": `https://aquapro24.de${currentPath}#webpage`,
       "url": effectiveCanonical,
       "name": title,
       "description": description,
@@ -926,15 +908,15 @@ export default function SEO({
       "publisher": { "@id": "https://aquapro24.de/#organization" },
       "inLanguage": "de-DE",
       "datePublished": "2024-01-01",
-      "dateModified": new Date().toISOString().split('T')[0],
-      "lastReviewed": new Date().toISOString().split('T')[0],
+      "dateModified": today,
+      "lastReviewed": today,
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://aquapro24.de/og-image.jpg",
         "width": 1200,
         "height": 630
       },
-      "breadcrumb": { "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb` },
+      "breadcrumb": { "@id": `https://aquapro24.de${currentPath}#breadcrumb` },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", "h2", ".hero-text", ".service-description", ".price-info", ".faq-question", ".faq-answer", "[data-speakable]"]
@@ -951,16 +933,11 @@ export default function SEO({
       ],
       "specialty": "Sanitär, Heizung, Badsanierung, Wärmepumpe, Notdienst",
       "reviewedBy": { "@id": "https://aquapro24.de/#founder" },
-      "contentReferenceTime": new Date().toISOString().split('T')[0]
-    };
-    const webpageScript = document.createElement("script");
-    webpageScript.type = "application/ld+json";
-    webpageScript.textContent = JSON.stringify(webpageSchema);
-    document.head.appendChild(webpageScript);
+      "contentReferenceTime": today
+    });
 
     if (serviceSchema) {
       const serviceSchemaData: Record<string, unknown> = {
-        "@context": "https://schema.org",
         "@type": "Service",
         "@id": `https://aquapro24.de/${serviceSchema.urlSlug}/#service`,
         "name": serviceSchema.name,
@@ -1003,10 +980,7 @@ export default function SEO({
         }));
       }
 
-      const serviceScript = document.createElement("script");
-      serviceScript.type = "application/ld+json";
-      serviceScript.textContent = JSON.stringify(serviceSchemaData);
-      document.head.appendChild(serviceScript);
+      graphEntities.push(serviceSchemaData);
     }
 
     const breadcrumbItemList = (breadcrumbs && breadcrumbs.length > 0)
@@ -1023,22 +997,16 @@ export default function SEO({
         })
       : [{"@type": "ListItem", "position": 1, "name": "Startseite"}];
 
-    const breadcrumbSchema = {
-      "@context": "https://schema.org",
+    graphEntities.push({
       "@type": "BreadcrumbList",
-      "@id": `https://aquapro24.de${window.location.pathname}#breadcrumb`,
+      "@id": `https://aquapro24.de${currentPath}#breadcrumb`,
       "itemListElement": breadcrumbItemList
-    };
-    const breadcrumbScript = document.createElement("script");
-    breadcrumbScript.type = "application/ld+json";
-    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
-    document.head.appendChild(breadcrumbScript);
+    });
 
     if (faqSchema && faqSchema.length > 0) {
-      const faqPageSchema = {
-        "@context": "https://schema.org",
+      graphEntities.push({
         "@type": "FAQPage",
-        "@id": "https://aquapro24.de/#faq",
+        "@id": `https://aquapro24.de${currentPath}#faq`,
         "mainEntity": faqSchema.map(item => ({
           "@type": "Question",
           "name": item.question,
@@ -1047,16 +1015,11 @@ export default function SEO({
             "text": item.answer
           }
         }))
-      };
-      const faqScript = document.createElement("script");
-      faqScript.type = "application/ld+json";
-      faqScript.textContent = JSON.stringify(faqPageSchema);
-      document.head.appendChild(faqScript);
+      });
     }
 
     if (howToSchema) {
       const howToSchemaData: Record<string, unknown> = {
-        "@context": "https://schema.org",
         "@type": "HowTo",
         "name": howToSchema.name,
         "description": howToSchema.description,
@@ -1085,39 +1048,22 @@ export default function SEO({
       if (howToSchema.tool && howToSchema.tool.length > 0) {
         howToSchemaData["tool"] = howToSchema.tool.map(t => ({ "@type": "HowToTool", "name": t }));
       }
-      const howToScript = document.createElement("script");
-      howToScript.type = "application/ld+json";
-      howToScript.textContent = JSON.stringify(howToSchemaData);
-      document.head.appendChild(howToScript);
+      graphEntities.push(howToSchemaData);
     }
 
     if (speakable) {
-      const speakableSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": effectiveCanonical,
-        "name": title,
-        "speakable": {
+      const webpageEntity = graphEntities.find(e => e["@type"] === "WebPage" && e["@id"] === `https://aquapro24.de${currentPath}#webpage`) as Record<string, unknown> | undefined;
+      if (webpageEntity) {
+        webpageEntity["speakable"] = {
           "@type": "SpeakableSpecification",
           ...(speakable.cssSelector && { "cssSelector": speakable.cssSelector }),
           ...(speakable.xpath && { "xpath": speakable.xpath })
-        },
-        "inLanguage": "de-DE",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "AquaPro 24 München",
-          "url": "https://aquapro24.de"
-        }
-      };
-      const speakableScript = document.createElement("script");
-      speakableScript.type = "application/ld+json";
-      speakableScript.textContent = JSON.stringify(speakableSchema);
-      document.head.appendChild(speakableScript);
+        };
+      }
     }
 
     if (stadttteil) {
-      const stadtteilSchema = {
-        "@context": "https://schema.org",
+      graphEntities.push({
         "@type": "LocalBusiness",
         "@id": `https://aquapro24.de/${stadttteil.toLowerCase()}/#localbusiness`,
         "name": `AquaPro 24 ${stadttteil}`,
@@ -1130,12 +1076,22 @@ export default function SEO({
         },
         "telephone": "+49-89-444438872",
         "url": `https://aquapro24.de/${stadttteil.toLowerCase()}`
-      };
-      const stadtteilScript = document.createElement("script");
-      stadtteilScript.type = "application/ld+json";
-      stadtteilScript.textContent = JSON.stringify(stadtteilSchema);
-      document.head.appendChild(stadtteilScript);
+      });
     }
+
+    const graphSchema = {
+      "@context": "https://schema.org",
+      "@graph": graphEntities.map(entity => {
+        const cleaned = { ...entity };
+        delete cleaned["@context"];
+        return cleaned;
+      })
+    };
+
+    const graphScript = document.createElement("script");
+    graphScript.type = "application/ld+json";
+    graphScript.textContent = JSON.stringify(graphSchema);
+    document.head.appendChild(graphScript);
 
     if (structuredData) {
       const customScript = document.createElement("script");

@@ -216,7 +216,7 @@ export default function Impressum() {
                   <p>
                     Alle genannten Preise sind unverbindliche Schätzungen (netto zzgl. 19% MwSt.) und dienen 
                     nur zur Orientierung. Verbindliche Preise werden erst nach einer persönlichen Besichtigung 
-                    vor Ort festgelegt. Stand: Dezember 2025.
+                    vor Ort festgelegt. Stand: Februar 2026.
                   </p>
                 </div>
                 <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg">
