@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { generateStaticHTML, isBot, seoPages, stadtteileData } from "./seoContent";
 import { ssrCache, warmSSRCache } from "./ssrCache";
+import { createPrerenderMiddleware, recachePrerenderUrls } from "./prerenderSetup";
 
 // Bekannte Routen der SPA (aus sitemap.xml - alle Seiten synchronisiert)
 const KNOWN_ROUTES = new Set([
@@ -254,7 +255,6 @@ function isValidRoute(routePath: string): boolean {
   return false;
 }
 
-// Serve cached SSR response with ETag, Brotli and Gzip support
 function serveCachedSSR(req: Request, res: Response, requestPath: string): boolean {
   const cached = ssrCache.get(requestPath);
   
@@ -262,16 +262,15 @@ function serveCachedSSR(req: Request, res: Response, requestPath: string): boole
     return false;
   }
   
-  // ETag-based caching
   const clientEtag = req.headers['if-none-match'];
   if (clientEtag === cached.etag) {
     res.status(304).end();
     return true;
   }
   
-  // Optimale Header für Crawler
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.setHeader('X-SEO-Rendered', 'true');
+  res.setHeader('X-SSR-Source', 'own-fallback');
   res.setHeader('X-SSR-Cache', 'HIT');
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
   res.setHeader('ETag', cached.etag);
@@ -338,12 +337,24 @@ export async function serveStatic(app: Express) {
     }
   }));
 
-  // Bot-SSR-Middleware VOR express.static - damit Googlebot immer
-  // vorgerendertes HTML bekommt statt der leeren SPA-Shell
+  // ============================================
+  // STUFE 1: Prerender.io (Primärer Bot-Handler)
+  // ============================================
+  // Prerender.io fängt Bot-Anfragen ab und liefert fertig gerendertes HTML.
+  // afterRender prüft ob JSON-LD und Meta-Description vorhanden sind.
+  // Bei Fehler/unvollständigem Content → cancelRender → Fallback auf eigene SSR.
+  const prerenderMiddleware = createPrerenderMiddleware();
+  app.use(prerenderMiddleware);
+
+  // ============================================
+  // STUFE 2: Eigene SSR (Fallback/Sicherheitsnetz)
+  // ============================================
+  // Greift NUR wenn Prerender.io nicht geliefert hat (cancelRender).
+  // Für Crawler: Liefert vollständiges HTML mit JSON-LD und Meta-Tags.
+  // Für normale Besucher: Wird übersprungen (next() → SPA).
   app.use((req: Request, res: Response, next) => {
     const userAgent = req.headers['user-agent'] || '';
     
-    // Nur für HTML-Seiten-Anfragen, nicht für Assets
     if (req.path.includes('.') || req.path.startsWith('/api') || req.path.startsWith('/assets')) {
       return next();
     }
@@ -361,19 +372,19 @@ export async function serveStatic(app: Express) {
       return next();
     }
 
-    console.log(`[SSR-Prod] Bot: ${userAgent.substring(0, 40)}... → ${requestPath}`);
+    console.log(`[SSR-Fallback] Bot erkannt, eigene SSR für: ${requestPath}`);
 
     if (serveCachedSSR(req, res, requestPath)) {
       return;
     }
 
-    console.log(`[SSR-Cache] MISS: ${requestPath}`);
+    console.log(`[SSR-Fallback] Cache MISS: ${requestPath}`);
     const seoHtml = generateStaticHTML(requestPath, indexHtml);
     ssrCache.set(requestPath, seoHtml).catch(console.error);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.setHeader('X-SEO-Rendered', 'true');
-    res.setHeader('X-SSR-Cache', 'MISS');
+    res.setHeader('X-SSR-Source', 'own-fallback');
     res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
     res.setHeader('Vary', 'User-Agent, Accept-Encoding');
     res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
@@ -383,6 +394,11 @@ export async function serveStatic(app: Express) {
   });
 
   app.use(express.static(distPath));
+
+  // ============================================
+  // STUFE 3: Prerender.io Cache-Refresh bei Deployment (Hintergrund)
+  // ============================================
+  recachePrerenderUrls();
 
   // SPA Fallback für normale User und 404
   app.use("*", (req: Request, res) => {

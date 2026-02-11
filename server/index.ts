@@ -3,6 +3,7 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { isBot } from "./seoContent";
+import { createPrerenderMiddleware } from "./prerenderSetup";
 
 const app = express();
 const httpServer = createServer(app);
@@ -341,15 +342,13 @@ app.use((req, res, next) => {
     // Bot-SSR-Middleware für Entwicklung (vor Vite) mit Caching
     const fs = await import("fs");
     const pathModule = await import("path");
-    const { generateStaticHTML, isBot, seoPages, stadtteileData } = await import("./seoContent");
+    const { generateStaticHTML, isBot: isBotFn, seoPages, stadtteileData } = await import("./seoContent");
     const { findBestRedirect } = await import("./static");
     const { ssrCache, warmSSRCache } = await import("./ssrCache");
     
-    // Gültige Routen für SSR (aus seoPages + Stadtteile)
     const validRoutes = new Set(Object.keys(seoPages));
     stadtteileData.forEach(st => validRoutes.add(`/${st.slug}`));
     
-    // Pre-warm SSR cache für Entwicklung
     const clientTemplate = pathModule.resolve(
       process.cwd(),
       "client",
@@ -362,18 +361,24 @@ app.use((req, res, next) => {
       return generateStaticHTML(routePath, template);
     });
     
+    // ============================================
+    // STUFE 1: Prerender.io (Primärer Bot-Handler) - DEV
+    // ============================================
+    const devPrerenderMiddleware = createPrerenderMiddleware();
+    app.use(devPrerenderMiddleware);
+    
+    // ============================================
+    // STUFE 2: Eigene SSR (Fallback) - DEV
+    // ============================================
     app.use((req, res, next) => {
-      // Nur GET-Anfragen für HTML-Seiten
       if (req.method !== 'GET') return next();
       
       let reqPath = req.path;
       
-      // Normalize: remove trailing slash (except for root)
       if (reqPath !== '/' && reqPath.endsWith('/')) {
         reqPath = reqPath.slice(0, -1);
       }
       
-      // Skip API, Assets und statische Dateien
       if (reqPath.startsWith('/api') || 
           reqPath.startsWith('/assets') || 
           reqPath.startsWith('/src') ||
@@ -384,17 +389,14 @@ app.use((req, res, next) => {
       
       const userAgent = req.headers['user-agent'] || '';
       
-      // Bot-Erkennung: SSR nur für gültige Routen
-      if (isBot(userAgent)) {
-        // Prüfe ob Route gültig ist (mit normalisiertem Pfad)
+      if (isBotFn(userAgent)) {
         if (!validRoutes.has(reqPath)) {
-          // Prüfe auf intelligente Weiterleitung
           const redirectTarget = findBestRedirect(reqPath);
           if (redirectTarget) {
-            console.log(`[SSR-DEV] 301: ${reqPath} → ${redirectTarget}`);
+            console.log(`[SSR-DEV-Fallback] 301: ${reqPath} → ${redirectTarget}`);
             return res.redirect(301, redirectTarget);
           }
-          console.log(`[SSR-DEV] 404: ${reqPath}`);
+          console.log(`[SSR-DEV-Fallback] 404: ${reqPath}`);
           const notFoundHtml = generateStaticHTML('/', template)
             .replace(/<title>[^<]*<\/title>/, '<title>404 - Seite nicht gefunden | AquaPro 24</title>')
             .replace(/<meta name="robots" content="[^"]*"[^>]*>/, '<meta name="robots" content="noindex, follow" />');
@@ -403,19 +405,18 @@ app.use((req, res, next) => {
           return res.status(404).send(notFoundHtml);
         }
         
-        // Try cached response first (fast path)
         const cached = ssrCache.get(reqPath);
         if (cached) {
-          // ETag-based caching
           const clientEtag = req.headers['if-none-match'];
           if (clientEtag === cached.etag) {
             return res.status(304).end();
           }
           
-          console.log(`[SSR-DEV] Cache HIT: ${reqPath}`);
+          console.log(`[SSR-DEV-Fallback] Cache HIT: ${reqPath}`);
           
           res.setHeader('Content-Type', 'text/html; charset=utf-8');
           res.setHeader('X-SEO-Rendered', 'true');
+          res.setHeader('X-SSR-Source', 'own-fallback');
           res.setHeader('X-SSR-Cache', 'HIT');
           res.setHeader('ETag', cached.etag);
           res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
@@ -424,7 +425,6 @@ app.use((req, res, next) => {
           const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
           res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
           
-          // Brotli > Gzip > Minified
           const acceptEncoding = (req.headers['accept-encoding'] || '').toString();
           if (acceptEncoding.includes('br')) {
             res.setHeader('Content-Encoding', 'br');
@@ -436,17 +436,15 @@ app.use((req, res, next) => {
           return res.send(cached.minified);
         }
         
-        // Cache miss - generate fresh
-        console.log(`[SSR-DEV] Cache MISS: ${reqPath}`);
+        console.log(`[SSR-DEV-Fallback] Cache MISS: ${reqPath}`);
         
         try {
           const seoHtml = generateStaticHTML(reqPath, template);
-          
-          // Cache for future (async)
           ssrCache.set(reqPath, seoHtml).catch(console.error);
           
           res.setHeader('Content-Type', 'text/html; charset=utf-8');
           res.setHeader('X-SEO-Rendered', 'true');
+          res.setHeader('X-SSR-Source', 'own-fallback');
           res.setHeader('X-SSR-Cache', 'MISS');
           res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
           res.setHeader('Vary', 'User-Agent');
@@ -456,7 +454,7 @@ app.use((req, res, next) => {
           
           return res.status(200).send(seoHtml);
         } catch (e) {
-          console.error('[SSR-DEV] Fehler:', e);
+          console.error('[SSR-DEV-Fallback] Fehler:', e);
           return next();
         }
       }

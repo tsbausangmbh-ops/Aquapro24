@@ -31,7 +31,10 @@ Preferred communication style: Simple, everyday language.
 - **Language**: TypeScript (ESM modules)
 - **API Pattern**: RESTful endpoints under `/api/*`
 - **Build**: esbuild for production bundling
-- **SSR Solution**: Custom SSR solution (`server/seoContent.ts` + `server/static.ts`) for bot-specific rendering with user-agent detection.
+- **SSR Solution**: Zweistufiges Bot-Rendering:
+    1. **Prerender.io** (Primär): `server/prerenderSetup.ts` konfiguriert prerender-node als Haupt-Bot-Handler. afterRender-Hook prüft auf JSON-LD und Meta-Description – bei unvollständigem Content → cancelRender → Fallback.
+    2. **Eigene SSR** (Fallback): `server/seoContent.ts` + `server/static.ts` + `server/ssrCache.ts` liefern fertig gerendertes HTML mit JSON-LD/Schema.org wenn Prerender.io ausfällt.
+    3. **Auto-Cache-Refresh**: Bei jedem Deployment werden alle SEO-Seiten (aus seoPages + stadtteileData) automatisch bei Prerender.io im Hintergrund neu gecacht.
 
 ### Data Storage
 - **Storage**: In-memory storage (`MemStorage`) for leads and contact messages.
@@ -69,3 +72,4 @@ Preferred communication style: Simple, everyday language.
 - Webhook URL (via `VITE_WEBHOOK_URL`) for lead submission
 - Google Calendar API for appointment booking
 - IONOS SMTP for email notifications
+- Prerender.io (via `PRERENDER_TOKEN`) for Bot-Rendering mit Auto-Cache-Refresh
