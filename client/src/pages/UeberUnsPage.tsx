@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
@@ -269,20 +268,6 @@ const aboutPageSchema = {
 };
 
 export default function UeberUnsPage() {
-  // GOOGLE 2026: ProfilePage Schema für E-E-A-T einbetten
-  useEffect(() => {
-    const profileScript = document.createElement("script");
-    profileScript.type = "application/ld+json";
-    profileScript.id = "profilepage-schema";
-    profileScript.textContent = JSON.stringify(profilePageSchema);
-    document.head.appendChild(profileScript);
-    
-    return () => {
-      const existingScript = document.getElementById("profilepage-schema");
-      if (existingScript) existingScript.remove();
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 

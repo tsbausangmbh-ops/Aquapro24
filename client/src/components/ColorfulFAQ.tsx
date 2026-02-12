@@ -58,19 +58,6 @@ export default function ColorfulFAQ({ items, title = "Häufige Fragen", subtitle
     }
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": items.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
-
   return (
     <section className="py-8 lg:py-12" data-testid="section-colorful-faq">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -113,11 +100,6 @@ export default function ColorfulFAQ({ items, title = "Häufige Fragen", subtitle
           })}
         </div>
       </div>
-      
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
     </section>
   );
 }

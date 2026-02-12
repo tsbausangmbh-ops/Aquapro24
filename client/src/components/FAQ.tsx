@@ -19,19 +19,6 @@ interface FAQProps {
 }
 
 export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQProps) {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": items.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
-
   return (
     <section className="py-8 lg:py-6" data-testid="section-faq">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
@@ -73,11 +60,6 @@ export default function FAQ({ items, title = "Häufige Fragen", subtitle }: FAQP
           </Accordion>
         </div>
       </div>
-      
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
     </section>
   );
 }

@@ -20,19 +20,6 @@ interface SimpleFAQProps {
 }
 
 export default function SimpleFAQ({ items, title = "Häufige Fragen", subtitle }: SimpleFAQProps) {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": items.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
-
   return (
     <section className="py-8 lg:py-12" data-testid="section-simple-faq">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
@@ -70,11 +57,6 @@ export default function SimpleFAQ({ items, title = "Häufige Fragen", subtitle }
           ))}
         </Accordion>
       </div>
-      
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
     </section>
   );
 }

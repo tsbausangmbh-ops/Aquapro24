@@ -427,56 +427,14 @@ export const seoPages: Record<string, PageSEO> = {
   },
   '/faq': {
     ...seoMeta['/faq'],
+    faqs: [
+      { question: "Was kostet ein Klempner in München?", answer: "Unsere Preise (netto): Rohrreinigung ab 81€, Sanitär-Reparaturen ab 92€, Heizungsreparatur ab 154€. Anfahrt München: 39€." },
+      { question: "Wie schnell kommt der Notdienst?", answer: "Im Großraum München sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen." },
+      { question: "Arbeiten Sie auch am Wochenende?", answer: "Unser Notdienst ist 24/7 erreichbar, auch an Wochenenden und Feiertagen. Reguläre Termine vergeben wir Mo-Fr 8-17 Uhr." },
+      { question: "Welche Förderung gibt es für Heizungen?", answer: "Für den Heizungstausch gibt es bis zu 70% BAFA-Förderung (30% Basis + 20% Klimabonus + 30% Einkommensbonus)." },
+      { question: "Bieten Sie Festpreise?", answer: "Ja, wir arbeiten mit transparenten Festpreisen. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Kostenvoranschlag." }
+    ],
     content: `
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "@id": "https://aquapro24.de/faq#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Was kostet ein Klempner in München?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Unsere Preise (netto): Rohrreinigung ab 81€, Sanitär-Reparaturen ab 92€, Heizungsreparatur ab 154€. Anfahrt München: 39€."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie schnell kommt der Notdienst?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Im Großraum München sind wir in der Regel innerhalb von 45-60 Minuten bei Ihnen."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Arbeiten Sie auch am Wochenende?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Unser Notdienst ist 24/7 erreichbar, auch an Wochenenden und Feiertagen. Reguläre Termine vergeben wir Mo-Fr 8-17 Uhr."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Welche Förderung gibt es für Heizungen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Für den Heizungstausch gibt es bis zu 70% BAFA-Förderung (30% Basis + 20% Klimabonus + 30% Einkommensbonus)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Bieten Sie Festpreise?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, wir arbeiten mit transparenten Festpreisen. Vor Arbeitsbeginn erhalten Sie einen verbindlichen Kostenvoranschlag."
-            }
-          }
-        ]
-      }
-      </script>
       <section style="padding:40px 20px;max-width:1200px;margin:0 auto">
         <h2>Häufige Fragen Sanitär München: Preise & Antworten</h2>
         

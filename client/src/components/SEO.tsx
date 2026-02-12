@@ -843,18 +843,20 @@ export default function SEO({
 
     graphEntities.push(FOUNDER_PERSON_SCHEMA);
 
-    graphEntities.push({
-      "@type": "ProfilePage",
-      "@id": "https://aquapro24.de/ueber-uns/#profilepage",
-      "mainEntity": { "@id": "https://aquapro24.de/#founder" },
-      "dateCreated": "2005-01-01",
-      "dateModified": today,
-      "about": { "@id": "https://aquapro24.de/#founder" },
-      "significantLink": [
-        "https://aquapro24.de/ueber-uns",
-        "https://aquapro24.de/impressum"
-      ]
-    });
+    if (currentPath === '/ueber-uns') {
+      graphEntities.push({
+        "@type": "ProfilePage",
+        "@id": "https://aquapro24.de/ueber-uns/#profilepage",
+        "mainEntity": { "@id": "https://aquapro24.de/#founder" },
+        "dateCreated": "2005-01-01",
+        "dateModified": today,
+        "about": { "@id": "https://aquapro24.de/#founder" },
+        "significantLink": [
+          "https://aquapro24.de/ueber-uns",
+          "https://aquapro24.de/impressum"
+        ]
+      });
+    }
 
     graphEntities.push({
       "@type": "WebSite",
@@ -939,7 +941,7 @@ export default function SEO({
     if (serviceSchema) {
       const serviceSchemaData: Record<string, unknown> = {
         "@type": "Service",
-        "@id": `https://aquapro24.de/${serviceSchema.urlSlug}/#service`,
+        "@id": `https://aquapro24.de${serviceSchema.urlSlug ? `/${serviceSchema.urlSlug}` : ''}/#service`,
         "name": serviceSchema.name,
         "description": serviceSchema.description,
         "serviceType": serviceSchema.serviceType,
