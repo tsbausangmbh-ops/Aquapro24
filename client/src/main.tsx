@@ -1,4 +1,4 @@
-import { createRoot, hydrateRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { initINPOptimizations } from "./lib/inp-optimizer";
@@ -20,13 +20,13 @@ if (typeof document !== 'undefined') {
   });
 }
 
-const rootElement = document.getElementById("root")!;
-
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, <App />);
-} else {
-  createRoot(rootElement).render(<App />);
+const ssrContent = document.getElementById("ssr-seo-content");
+if (ssrContent) {
+  ssrContent.remove();
 }
+
+const rootElement = document.getElementById("root")!;
+createRoot(rootElement).render(<App />);
 
 if (typeof window !== 'undefined') {
   requestIdleCallback(() => initWebVitalsReporting(), { timeout: 3000 });

@@ -368,7 +368,7 @@ app.use((req, res, next) => {
     app.use(devPrerenderMiddleware);
     
     // ============================================
-    // STUFE 2: Eigene SSR (für ALLE Besucher) - DEV
+    // STUFE 2: Eigene SSR (nur für Bots) - DEV
     // ============================================
     app.use((req, res, next) => {
       if (req.method !== 'GET') return next();
@@ -389,6 +389,10 @@ app.use((req, res, next) => {
       
       const userAgent = req.headers['user-agent'] || '';
       const botRequest = isBotFn(userAgent);
+      
+      if (!botRequest) {
+        return next();
+      }
       
       if (!validRoutes.has(reqPath)) {
         if (botRequest) {
