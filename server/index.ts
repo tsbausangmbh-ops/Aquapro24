@@ -83,7 +83,8 @@ app.use((req, res, next) => {
     } else if (path.startsWith('/api')) {
       res.setHeader('Cache-Control', 'no-store');
     } else {
-      res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+      res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
+      res.setHeader('Surrogate-Control', 'no-store');
     }
   }
   
