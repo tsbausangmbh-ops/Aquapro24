@@ -270,13 +270,12 @@ function serveCachedSSR(req: Request, res: Response, requestPath: string): boole
   
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.setHeader('X-SEO-Rendered', 'true');
-  res.setHeader('X-SSR-Source', 'own-fallback');
+  res.setHeader('X-SSR-Source', 'own-ssr');
   res.setHeader('X-SSR-Cache', 'HIT');
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
   res.setHeader('ETag', cached.etag);
   res.setHeader('Vary', 'User-Agent, Accept-Encoding');
-  res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
-  res.setHeader('Surrogate-Control', 'no-store');
+  res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   
   // Canonical Link Header + Resource Hints
   const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
@@ -339,19 +338,26 @@ export async function serveStatic(app: Express) {
   }));
 
   // ============================================
-  // STUFE 1: Prerender.io (für ALLE Besucher - Prio 1)
+  // STUFE 1: Prerender.io (nur für Bots - Prio 1)
   // ============================================
-  // Prerender.io Content wird lokal gecacht und an ALLE Besucher
-  // ausgeliefert (nicht nur Bots). So hat das IONOS-CDN immer
-  // den vollen 190KB SEO-Content im Cache.
+  // Bots (Googlebot etc.) bekommen vollen Prerender.io Content (190KB).
+  // Normale User bekommen die React-SPA mit hydratisiertem SSR-HTML.
   const prerenderMiddleware = createPrerenderMiddleware();
   app.use(prerenderMiddleware);
 
   // ============================================
-  // STUFE 2: Eigene SSR (Fallback wenn Prerender.io nicht verfügbar)
+  // STUFE 2: Eigene SSR (für Bots als Fallback)
   // ============================================
+  // Wenn Prerender.io nicht verfügbar, bekommen Bots eigenes SSR-HTML.
+  // Normale User überspringen diese Stufe und bekommen die SPA.
   app.use((req: Request, res: Response, next) => {
     if (req.path.includes('.') || req.path.startsWith('/api') || req.path.startsWith('/assets')) {
+      return next();
+    }
+
+    const userAgent = req.headers['user-agent'] || '';
+    const botRequest = isBot(userAgent);
+    if (!botRequest) {
       return next();
     }
 
@@ -364,9 +370,7 @@ export async function serveStatic(app: Express) {
       return next();
     }
 
-    const userAgent = req.headers['user-agent'] || '';
-    const botRequest = isBot(userAgent);
-    console.log(`[SSR-Fallback] ${botRequest ? 'Bot' : 'User'} für: ${requestPath}`);
+    console.log(`[SSR-Fallback] Bot für: ${requestPath}`);
 
     if (serveCachedSSR(req, res, requestPath)) {
       return;
@@ -378,11 +382,10 @@ export async function serveStatic(app: Express) {
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.setHeader('X-SEO-Rendered', 'true');
-    res.setHeader('X-SSR-Source', 'own-fallback');
+    res.setHeader('X-SSR-Source', 'own-ssr');
     res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
     res.setHeader('Vary', 'User-Agent, Accept-Encoding');
-    res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
-    res.setHeader('Surrogate-Control', 'no-store');
+    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
     const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
     res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
     return res.send(seoHtml);

@@ -35,6 +35,9 @@ function shouldServePrerender(req: Request): boolean {
   if (path.startsWith('/api/') || path.startsWith('/assets/')) return false;
   if (BLACKLISTED_EXTENSIONS.some(ext => path.endsWith(ext))) return false;
 
+  const userAgent = req.headers['user-agent'] || '';
+  if (!isBot(userAgent)) return false;
+
   return true;
 }
 
