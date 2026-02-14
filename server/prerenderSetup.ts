@@ -13,6 +13,9 @@ const BLACKLISTED_EXTENSIONS = [
   '.pdf', '.zip', '.mp3', '.mp4', '.avi', '.mov', '.webmanifest'
 ];
 
+const prerenderCache = new Map<string, { body: string; cachedAt: number }>();
+const CACHE_TTL = 6 * 60 * 60 * 1000;
+
 function getAllSeoRoutes(): string[] {
   const routes = new Set<string>();
   for (const key of Object.keys(seoPages)) {
@@ -24,9 +27,7 @@ function getAllSeoRoutes(): string[] {
   return Array.from(routes);
 }
 
-function shouldPrerender(req: Request): boolean {
-  const userAgent = req.headers['user-agent'] || '';
-  if (!userAgent) return false;
+function shouldServePrerender(req: Request): boolean {
   if (req.method !== 'GET' && req.method !== 'HEAD') return false;
   if (req.headers['x-prerender']) return false;
 
@@ -34,7 +35,7 @@ function shouldPrerender(req: Request): boolean {
   if (path.startsWith('/api/') || path.startsWith('/assets/')) return false;
   if (BLACKLISTED_EXTENSIONS.some(ext => path.endsWith(ext))) return false;
 
-  return isBot(userAgent);
+  return true;
 }
 
 function fetchFromPrerender(targetUrl: string): Promise<{ statusCode: number; body: string; headers: Record<string, string> }> {
@@ -118,20 +119,61 @@ function validatePrerenderResponse(body: string, statusCode: number): { valid: b
   return { valid: true };
 }
 
+function getCachedPrerender(path: string): string | null {
+  const cached = prerenderCache.get(path);
+  if (!cached) return null;
+  if (Date.now() - cached.cachedAt > CACHE_TTL) {
+    prerenderCache.delete(path);
+    return null;
+  }
+  return cached.body;
+}
+
+function sendPrerenderResponse(res: Response, reqPath: string, body: string, source: string) {
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.setHeader('X-SEO-Rendered', 'true');
+  res.setHeader('X-SSR-Source', source);
+  res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+  res.setHeader('Content-Language', 'de-DE');
+  res.setHeader('Vary', 'User-Agent, Accept-Encoding');
+  res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=60, stale-while-revalidate=600');
+  res.setHeader('Surrogate-Control', 'max-age=60');
+
+  const canonicalUrl = `https://aquapro24.de${reqPath === '/' ? '' : reqPath}`;
+  res.setHeader('Link', [
+    `<${canonicalUrl}>; rel="canonical"`,
+    '</assets/index.css>; rel="preload"; as="style"',
+    '<https://fonts.googleapis.com>; rel="preconnect"'
+  ].join(', '));
+
+  return res.status(200).send(body);
+}
+
 export function createPrerenderMiddleware() {
   return async function prerenderMiddleware(req: Request, res: Response, next: NextFunction) {
     if (!PRERENDER_TOKEN) {
       return next();
     }
 
-    if (!shouldPrerender(req)) {
+    if (!shouldServePrerender(req)) {
       return next();
+    }
+
+    let reqPath = req.path;
+    if (reqPath !== '/' && reqPath.endsWith('/')) {
+      reqPath = reqPath.slice(0, -1);
+    }
+
+    const cachedBody = getCachedPrerender(reqPath);
+    if (cachedBody) {
+      console.log(`[Prerender] CACHE HIT: ${Math.round(cachedBody.length / 1024)}KB für ${reqPath}`);
+      return sendPrerenderResponse(res, reqPath, cachedBody, 'prerender-cache');
     }
 
     const targetUrl = `https://${SITE_HOST}${req.originalUrl}`;
     const startTime = Date.now();
-
-    console.log(`[Prerender] Bot erkannt: ${(req.headers['user-agent'] || '').substring(0, 80)} -> ${req.path}`);
+    const ua = (req.headers['user-agent'] || '').substring(0, 60);
+    console.log(`[Prerender] LIVE fetch für ${reqPath} (${ua})`);
 
     try {
       const prerenderResponse = await fetchFromPrerender(targetUrl);
@@ -140,42 +182,67 @@ export function createPrerenderMiddleware() {
       const validation = validatePrerenderResponse(prerenderResponse.body, prerenderResponse.statusCode);
 
       if (!validation.valid) {
-        console.log(`[Prerender] FALLBACK (${duration}ms): ${validation.reason} -> eigene SSR für ${req.path}`);
+        console.log(`[Prerender] FALLBACK (${duration}ms): ${validation.reason} -> eigene SSR für ${reqPath}`);
         return next();
       }
 
-      console.log(`[Prerender] OK (${duration}ms): ${Math.round(prerenderResponse.body.length / 1024)}KB für ${req.path}`);
+      prerenderCache.set(reqPath, { body: prerenderResponse.body, cachedAt: Date.now() });
+      console.log(`[Prerender] OK (${duration}ms): ${Math.round(prerenderResponse.body.length / 1024)}KB für ${reqPath} -> gecacht`);
 
-      res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('X-SEO-Rendered', 'true');
-      res.setHeader('X-SSR-Source', 'prerender-io');
-      res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
-      res.setHeader('Content-Language', 'de-DE');
-      res.setHeader('Vary', 'User-Agent, Accept-Encoding');
-      res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
-      res.setHeader('Surrogate-Control', 'no-store');
-
-      const canonicalUrl = `https://aquapro24.de${req.path === '/' ? '' : req.path}`;
-      res.setHeader('Link', [
-        `<${canonicalUrl}>; rel="canonical"`,
-        '</assets/index.css>; rel="preload"; as="style"',
-        '<https://fonts.googleapis.com>; rel="preconnect"'
-      ].join(', '));
-
-      for (const [key, val] of Object.entries(prerenderResponse.headers)) {
-        if (key.startsWith('x-prerender')) {
-          res.setHeader(key, val);
-        }
-      }
-
-      return res.status(prerenderResponse.statusCode).send(prerenderResponse.body);
+      return sendPrerenderResponse(res, reqPath, prerenderResponse.body, 'prerender-io');
 
     } catch (err: any) {
       const duration = Date.now() - startTime;
-      console.log(`[Prerender] FEHLER (${duration}ms): ${err.message} -> eigene SSR für ${req.path}`);
+      console.log(`[Prerender] FEHLER (${duration}ms): ${err.message} -> eigene SSR für ${reqPath}`);
       return next();
     }
   };
+}
+
+export async function warmPrerenderCache(): Promise<void> {
+  if (!PRERENDER_TOKEN) {
+    console.log('[Prerender-Warm] Kein PRERENDER_TOKEN - Warming übersprungen');
+    return;
+  }
+
+  const allPaths = getAllSeoRoutes();
+  console.log(`[Prerender-Warm] Starte Vorladung von ${allPaths.length} Seiten von Prerender.io...`);
+
+  const batchSize = 3;
+  let success = 0;
+  let errors = 0;
+
+  for (let i = 0; i < allPaths.length; i += batchSize) {
+    const batch = allPaths.slice(i, i + batchSize);
+
+    const promises = batch.map(async (urlPath) => {
+      try {
+        const targetUrl = `https://${SITE_HOST}${urlPath}`;
+        const response = await fetchFromPrerender(targetUrl);
+        const validation = validatePrerenderResponse(response.body, response.statusCode);
+
+        if (validation.valid) {
+          prerenderCache.set(urlPath, { body: response.body, cachedAt: Date.now() });
+          success++;
+        } else {
+          console.log(`[Prerender-Warm] ${urlPath}: ${validation.reason}`);
+          errors++;
+        }
+      } catch (e: any) {
+        console.log(`[Prerender-Warm] ${urlPath}: ${e.message}`);
+        errors++;
+      }
+    });
+
+    await Promise.all(promises);
+
+    if (i + batchSize < allPaths.length) {
+      await new Promise(r => setTimeout(r, 500));
+    }
+  }
+
+  const totalSize = Array.from(prerenderCache.values()).reduce((sum, v) => sum + v.body.length, 0);
+  console.log(`[Prerender-Warm] Fertig: ${success}/${allPaths.length} geladen (${Math.round(totalSize / 1024 / 1024)}MB), ${errors} Fehler`);
 }
 
 export function recachePrerenderUrls(): void {

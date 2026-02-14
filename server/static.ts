@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { generateStaticHTML, isBot, seoPages, stadtteileData } from "./seoContent";
 import { ssrCache, warmSSRCache } from "./ssrCache";
-import { createPrerenderMiddleware, recachePrerenderUrls } from "./prerenderSetup";
+import { createPrerenderMiddleware, warmPrerenderCache, recachePrerenderUrls } from "./prerenderSetup";
 
 // Bekannte Routen der SPA (aus sitemap.xml - alle Seiten synchronisiert)
 const KNOWN_ROUTES = new Set([
@@ -275,7 +275,8 @@ function serveCachedSSR(req: Request, res: Response, requestPath: string): boole
   res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
   res.setHeader('ETag', cached.etag);
   res.setHeader('Vary', 'User-Agent, Accept-Encoding');
-  res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
+  res.setHeader('Surrogate-Control', 'no-store');
   
   // Canonical Link Header + Resource Hints
   const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
@@ -338,20 +339,17 @@ export async function serveStatic(app: Express) {
   }));
 
   // ============================================
-  // STUFE 1: Prerender.io (Primärer Bot-Handler)
+  // STUFE 1: Prerender.io (für ALLE Besucher - Prio 1)
   // ============================================
-  // Prerender.io fängt Bot-Anfragen ab und liefert fertig gerendertes HTML.
-  // afterRender prüft ob JSON-LD und Meta-Description vorhanden sind.
-  // Bei Fehler/unvollständigem Content → cancelRender → Fallback auf eigene SSR.
+  // Prerender.io Content wird lokal gecacht und an ALLE Besucher
+  // ausgeliefert (nicht nur Bots). So hat das IONOS-CDN immer
+  // den vollen 190KB SEO-Content im Cache.
   const prerenderMiddleware = createPrerenderMiddleware();
   app.use(prerenderMiddleware);
 
   // ============================================
-  // STUFE 2: Eigene SSR (für ALLE Besucher)
+  // STUFE 2: Eigene SSR (Fallback wenn Prerender.io nicht verfügbar)
   // ============================================
-  // Liefert allen Besuchern (Bots UND normale User) fertig gerendertes HTML
-  // mit SEO-Meta-Tags, JSON-LD und vollständigem Content.
-  // React hydratisiert anschließend clientseitig für Interaktivität.
   app.use((req: Request, res: Response, next) => {
     if (req.path.includes('.') || req.path.startsWith('/api') || req.path.startsWith('/assets')) {
       return next();
@@ -368,22 +366,23 @@ export async function serveStatic(app: Express) {
 
     const userAgent = req.headers['user-agent'] || '';
     const botRequest = isBot(userAgent);
-    console.log(`[SSR] ${botRequest ? 'Bot' : 'User'} SSR für: ${requestPath}`);
+    console.log(`[SSR-Fallback] ${botRequest ? 'Bot' : 'User'} für: ${requestPath}`);
 
     if (serveCachedSSR(req, res, requestPath)) {
       return;
     }
 
-    console.log(`[SSR] Cache MISS: ${requestPath}`);
+    console.log(`[SSR-Fallback] Cache MISS: ${requestPath}`);
     const seoHtml = generateStaticHTML(requestPath, indexHtml);
     ssrCache.set(requestPath, seoHtml).catch(console.error);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.setHeader('X-SEO-Rendered', 'true');
-    res.setHeader('X-SSR-Source', 'own-ssr');
+    res.setHeader('X-SSR-Source', 'own-fallback');
     res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
     res.setHeader('Vary', 'User-Agent, Accept-Encoding');
-    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
+    res.setHeader('Surrogate-Control', 'no-store');
     const canonicalUrl = `https://aquapro24.de${requestPath === '/' ? '' : requestPath}`;
     res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
     return res.send(seoHtml);
@@ -392,8 +391,11 @@ export async function serveStatic(app: Express) {
   app.use(express.static(distPath));
 
   // ============================================
-  // STUFE 3: Prerender.io Cache-Refresh bei Deployment (Hintergrund)
+  // STUFE 3: Prerender.io Cache-Warming + Refresh (Hintergrund)
   // ============================================
+  warmPrerenderCache().catch(err => {
+    console.error('[Prerender-Warm] Fehler beim Warming:', err.message);
+  });
   recachePrerenderUrls();
 
   // SPA Fallback für normale User und 404
