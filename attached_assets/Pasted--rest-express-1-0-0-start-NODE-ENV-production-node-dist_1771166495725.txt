@@ -1,0 +1,87 @@
+ rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.cjs
+[SSR] Eigene SSR-Lösung aktiv (Production)
+[SSR-Cache] Warming 123 pages...
+[SSR-Cache] Warmed 123 pages in 298ms
+[SSR-Cache] Total size: 3918KB, Avg: 42KB/page
+[Prerender-Warm] Kein PRERENDER_TOKEN - Warming übersprungen
+[Prerender-Cache] Kein PRERENDER_TOKEN gesetzt - Cache-Refresh übersprungen
+1:07:48 PM [express] serving on port 3006
+[301] Legacy: /fussbodenheizung -> /fussbodenheizung-muenchen
+[301] Legacy: /stadtteil/schwabing -> /schwabing
+[301] Legacy: /stadtteil/bogenhausen -> /bogenhausen
+[301] Legacy: /stadtteil/maxvorstadt -> /maxvorstadt
+npm warn config production Use `--omit=dev` instead.
+(node:20) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[301] Legacy: /stadtteil/haidhausen -> /haidhausen
+[301] Legacy: /stadtteil/lehel -> /lehel
+[301] Legacy: /stadtteil/nymphenburg -> /nymphenburg
+[301] Legacy: /stadtteil/solln -> /solln
+[301] Legacy: /stadtteil/sendling -> /sendling
+[301] Legacy: /stadtteil/pasing -> /pasing
+[301] Legacy: /stadtteil/neuhausen -> /neuhausen
+[301] Legacy: /stadtteil/trudering -> /trudering
+[301] Legacy: /stadtteil/laim -> /laim
+[301] Legacy: /stadtteil/giesing -> /giesing
+[301] Legacy: /stadtteil/moosach -> /moosach
+[301] Legacy: /stadtteil/milbertshofen -> /milbertshofen
+[301] Legacy: /stadtteil/perlach -> /perlach
+[301] Legacy: /stadtteil/allach -> /allach
+[301] Legacy: /stadtteil/hadern -> /hadern
+[301] Legacy: /stadtteil/aubing -> /aubing
+[301] Legacy: /stadtteil/thalkirchen -> /thalkirchen
+[301] Legacy: /stadtteil/feldmoching -> /feldmoching
+[301] Legacy: /stadtteil/ramersdorf -> /ramersdorf
+[301] Legacy: /stadtteil/berg-am-laim -> /berg-am-laim
+[301] Legacy: /stadtteil/schwanthalerhoehe -> /schwanthalerhoehe
+[301] Legacy: /stadtteil/au -> /au
+[301] Legacy: /stadtteil/freimann -> /freimann
+[Crawler] AhrefsBot -> /robots.txt
+[Crawler] MJ12Bot -> /robots.txt
+[Crawler] MJ12Bot -> /
+[SSR-Fallback] Bot für: /
+[Crawler] AhrefsBot -> /robots.txt
+[Crawler] AhrefsBot -> /ai.sitemap.xml
+2:08:45 PM [express] POST /api/web-vitals 204 in 3ms
+2:08:45 PM [express] POST /api/web-vitals 204 in 0ms
+2:09:40 PM [express] POST /api/web-vitals 204 in 1ms
+[301] Legacy: /fussbodenheizung -> /fussbodenheizung-muenchen
+[301] Legacy: /stadtteil/schwabing -> /schwabing
+2:12:05 PM [express] POST /api/web-vitals 204 in 1ms
+[301] Legacy: /stadtteil/bogenhausen -> /bogenhausen
+[301] Legacy: /stadtteil/maxvorstadt -> /maxvorstadt
+[301] Legacy: /stadtteil/haidhausen -> /haidhausen
+[301] Legacy: /stadtteil/nymphenburg -> /nymphenburg
+[301] Legacy: /stadtteil/lehel -> /lehel
+[301] Legacy: /stadtteil/solln -> /solln
+[301] Legacy: /stadtteil/pasing -> /pasing
+[301] Legacy: /stadtteil/sendling -> /sendling
+[301] Legacy: /stadtteil/neuhausen -> /neuhausen
+[301] Legacy: /stadtteil/trudering -> /trudering
+[301] Legacy: /stadtteil/laim -> /laim
+[301] Legacy: /stadtteil/giesing -> /giesing
+[301] Legacy: /stadtteil/moosach -> /moosach
+[301] Legacy: /stadtteil/milbertshofen -> /milbertshofen
+[301] Legacy: /stadtteil/perlach -> /perlach
+[301] Legacy: /stadtteil/allach -> /allach
+[301] Legacy: /stadtteil/hadern -> /hadern
+[301] Legacy: /stadtteil/aubing -> /aubing
+[301] Legacy: /stadtteil/feldmoching -> /feldmoching
+[301] Legacy: /stadtteil/thalkirchen -> /thalkirchen
+[301] Legacy: /stadtteil/ramersdorf -> /ramersdorf
+[301] Legacy: /stadtteil/berg-am-laim -> /berg-am-laim
+[301] Legacy: /stadtteil/schwanthalerhoehe -> /schwanthalerhoehe
+[301] Legacy: /stadtteil/au -> /au
+[301] Legacy: /stadtteil/freimann -> /freimann
+2:15:13 PM [express] POST /api/web-vitals 204 in 0ms
+2:15:13 PM [express] POST /api/web-vitals 204 in 0ms
+2:17:43 PM [express] POST /api/web-vitals 204 in 0ms
+2:17:43 PM [express] POST /api/web-vitals 204 in 0ms
+2:17:43 PM [express] POST /api/web-vitals 204 in 1ms
+2:22:53 PM [express] POST /api/web-vitals 204 in 0ms
+2:25:48 PM [express] POST /api/web-vitals 204 in 1ms
+2:25:48 PM [express] POST /api/web-vitals 204 in 0ms
+2:25:48 PM [express] POST /api/web-vitals 204 in 0ms
+2:25:59 PM [express] POST /api/web-vitals 204 in 0ms
+[Crawler] AhrefsBot -> /sitemap.xml
