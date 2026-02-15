@@ -82,9 +82,10 @@ app.use((req, res, next) => {
       res.setHeader('Cache-Control', 'public, max-age=86400');
     } else if (path.startsWith('/api')) {
       res.setHeader('Cache-Control', 'no-store');
+    } else if (isCrawler) {
+      res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=60, stale-while-revalidate=600');
     } else {
-      res.setHeader('Cache-Control', 'private, no-store, must-revalidate');
-      res.setHeader('Surrogate-Control', 'no-store');
+      res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=600');
     }
   }
   
