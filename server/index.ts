@@ -14,9 +14,14 @@ declare module "http" {
   }
 }
 
-// SSR wird durch eigene Lösung gehandhabt (server/ssrCache.ts)
 const isProduction = process.env.NODE_ENV === 'production';
+const hasPrerender = !!process.env.PRERENDER_TOKEN;
 console.log(`[SSR] Eigene SSR-Lösung aktiv (${isProduction ? 'Production' : 'Entwicklung'})`);
+console.log(`[Prerender] Token: ${hasPrerender ? 'GESETZT (' + process.env.PRERENDER_TOKEN!.substring(0, 4) + '...)' : 'FEHLT!'}`);
+if (!hasPrerender) {
+  console.log('[Prerender] WARNUNG: Ohne PRERENDER_TOKEN werden Bots nur SSR-Fallback (30KB statt 190KB) erhalten!');
+  console.log('[Prerender] Setze PRERENDER_TOKEN=dein_token als Umgebungsvariable.');
+}
 
 app.use(
   express.json({
@@ -27,6 +32,18 @@ app.use(
 );
 
 app.use(express.urlencoded({ extended: false }));
+
+// ============================================
+// DEBUG: Prerender-Status prüfen (temporär)
+// ============================================
+app.get('/api/prerender-status', (req, res) => {
+  res.json({
+    prerenderToken: hasPrerender ? 'SET' : 'MISSING',
+    tokenLength: (process.env.PRERENDER_TOKEN || '').length,
+    nodeEnv: process.env.NODE_ENV || 'not-set',
+    envKeys: Object.keys(process.env).filter(k => k.includes('PRERENDER') || k.includes('TOKEN')).sort(),
+  });
+});
 
 // ============================================
 // SECURITY HEADERS - Google 2026 Trust Signals
