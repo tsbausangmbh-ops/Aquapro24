@@ -394,12 +394,15 @@ export async function serveStatic(app: Express) {
   app.use(express.static(distPath));
 
   // ============================================
-  // STUFE 3: Prerender.io Cache-Warming + Refresh (Hintergrund)
+  // STUFE 3: Prerender.io Cache-Warming + Refresh (verzögert im Hintergrund)
   // ============================================
-  warmPrerenderCache().catch(err => {
-    console.error('[Prerender-Warm] Fehler beim Warming:', err.message);
-  });
-  recachePrerenderUrls();
+  // Verzögerung damit der Server zuerst den Health-Check bestehen kann
+  setTimeout(() => {
+    warmPrerenderCache().catch(err => {
+      console.error('[Prerender-Warm] Fehler beim Warming:', err.message);
+    });
+    recachePrerenderUrls();
+  }, 15000);
 
   // SPA Fallback für normale User und 404
   app.use("*", (req: Request, res) => {
